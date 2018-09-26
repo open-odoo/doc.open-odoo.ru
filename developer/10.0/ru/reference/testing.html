@@ -1,0 +1,271 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Тестирование модулей &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Web контроллеры" href="http.html" />
+    <link rel="prev" title="Модель безопасности в Odoo" href="security.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (10.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Тестирование модулей</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/10.0/en/reference/testing.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/reference/testing.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/reference/testing.html">9.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/testing.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/ru/">Пользователю</a></li>
+<li><a href="/developer/10.0/ru/">Разработчику</a></li>
+<li><a href="/developer/10.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/testing_modules.jpg');"></span>
+      <div class="container text-center">
+        <h1> Тестирование модулей - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#running-tests" class="ripple internal reference">Выполнение тестов</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/10.0/doc/reference/testing.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="testing-modules"><i id="reference-testing"></i><p >Odoo обеспечивает поддержку тестирования модулей с использованием unittest.</p><p >Чтобы написать тесты, просто определите подпакет <code >tests</code> в вашем модуле, он будет автоматически запущен для тестирования модулей. Модули тестирования должны иметь имя, начинающееся с <code >test_</code>, и должны быть импортированы из <code >tests/__init__.py</code>, например.</p><div class="highlight-text"><div class="highlight"><pre><span></span>your_module
+|-- ...
+`-- tests
+    |-- __init__.py
+    |-- test_bar.py
+    `-- test_foo.py
+</pre></div>
+</div>
+<p >а <code >__init__.py</code> содержит:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">test_foo</span><span class="p">,</span> <span class="n">test_bar</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Тестовые модули, которые импортируются не из <code >tests/__init__.py</code> запускаться не будут</p></div><div class="versionchanged"><p ><span class="versionmodified">Изменено в версии 8.0: </span>Ранее для тестирования запускались только модули, добавленные в два списка <code >fast_suite</code> и <code >checks</code> в <code >tests/__init__.py</code>. В Odoo 8.0 при тестировании запускаются все импортированные модули</p></div><p >При тестировании будет запускаться любой тест, как описано в официальной <a href="https://docs.python.org/2/library/unittest.html" class="external reference">unittest documentation</a>, но Odoo предоставляет ряд утилит и помощников, связанных с тестированием контента Odoo (главным образом модулей):</p><section class="code-class"><h6 id="odoo.tests.common.TransactionCase"><code><em >class </em>odoo.tests.common.TransactionCase(<em>methodName='runTest'</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L138" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >TestCase, в котором каждый тестовый метод запускается в своей транзакции и с собственным курсором. Откат транзакции и закрытие курсора после каждого теста.</p><section class="code-method"><h6 id="odoo.tests.common.TransactionCase.browse_ref"><code>browse_ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L107" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Возвращает объект записи для предоставленного: term: [UNKNOWN NODE title_reference]</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >xid</strong> -- Полностью квалифицированный: термин: «внешний идентификатор», в форме: samp: [UNKNOWN NODE title_reference]</div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body"><p >ValueError если не найден</p></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">: Класс: [UNKNOWN NODE title_reference]</div></div></div></section><section class="code-method"><h6 id="odoo.tests.common.TransactionCase.ref"><code>ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L96" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Возвращает ID базы данных для предоставленного: term: [UNKNOWN NODE title_reference], ярлык для` [UNKNOWN NODE title_reference]</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >xid</strong> -- Полностью квалифицированный: термин: «внешний идентификатор», в форме: samp: [UNKNOWN NODE title_reference]</div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body"><p >ValueError если не найден</p></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Зарегистрированный идентификатор</div></div></div></section></section><section class="code-class"><h6 id="odoo.tests.common.SingleTransactionCase"><code><em >class </em>odoo.tests.common.SingleTransactionCase(<em>methodName='runTest'</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L173" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >TestCase, в которой все тестовые методы запускаются в одной транзакции, транзакция запускается с помощью первого метода тестирования и сворачивается в конце последнего.</p><section class="code-method"><h6 id="odoo.tests.common.SingleTransactionCase.browse_ref"><code>browse_ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L107" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Возвращает объект записи для предоставленного: term: [UNKNOWN NODE title_reference]</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >xid</strong> -- Полностью квалифицированный: термин: «внешний идентификатор», в форме: samp: [UNKNOWN NODE title_reference]</div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body"><p >ValueError если не найден</p></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">: Класс: [UNKNOWN NODE title_reference]</div></div></div></section><section class="code-method"><h6 id="odoo.tests.common.SingleTransactionCase.ref"><code>ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L96" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Возвращает ID базы данных для предоставленного: term: [UNKNOWN NODE title_reference], ярлык для` [UNKNOWN NODE title_reference]</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >xid</strong> -- Полностью квалифицированный: термин: «внешний идентификатор», в форме: samp: [UNKNOWN NODE title_reference]</div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body"><p >ValueError если не найден</p></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Зарегистрированный идентификатор</div></div></div></section></section><section class="code-class"><h6 id="odoo.tests.common.SavepointCase"><code><em >class </em>odoo.tests.common.SavepointCase(<em>methodName='runTest'</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L196" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Similar to <code class="py xref py-class">SingleTransactionCase</code> in that all test methods
+are run in a single transaction <em >but</em> each test case is run inside a
+rollbacked savepoint (sub-transaction).</p><p >Useful for test cases containing fast tests but with significant database
+setup common to all cases (complex in-db test data): <code class="py py-meth xref">setUpClass()</code>
+can be used to generate db test data once, then all test cases use the
+same data without influencing one another but without having to recreate
+the test data either.</p></section><section class="code-class"><h6 id="odoo.tests.common.HttpCase"><code><em >class </em>odoo.tests.common.HttpCase(<em>methodName='runTest'</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L236" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Transactional HTTP TestCase with url_open and phantomjs helpers.</p><section class="code-method"><h6 id="odoo.tests.common.HttpCase.browse_ref"><code>browse_ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L107" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Возвращает объект записи для предоставленного: term: [UNKNOWN NODE title_reference]</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >xid</strong> -- Полностью квалифицированный: термин: «внешний идентификатор», в форме: samp: [UNKNOWN NODE title_reference]</div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body"><p >ValueError если не найден</p></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">: Класс: [UNKNOWN NODE title_reference]</div></div></div></section><section class="code-method"><h6 id="odoo.tests.common.HttpCase.phantom_js"><code>phantom_js(<em>url_path</em>, <em>code</em>, <em>ready='window'</em>, <em>login=None</em>, <em>timeout=60</em>, <em>**kw</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L415" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Test js code running in the browser
+- optionnally log as 'login'
+- load page given by url_path
+- wait for ready object to be available
+- eval(code) inside the page</p><p >To signal success test do:
+console.log('ok')</p><p >To signal failure do:
+console.log('error')</p><p >If neither are done before timeout test fails.</p></section><section class="code-method"><h6 id="odoo.tests.common.HttpCase.ref"><code>ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L96" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Возвращает ID базы данных для предоставленного: term: [UNKNOWN NODE title_reference], ярлык для` [UNKNOWN NODE title_reference]</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >xid</strong> -- Полностью квалифицированный: термин: «внешний идентификатор», в форме: samp: [UNKNOWN NODE title_reference]</div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body"><p >ValueError если не найден</p></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Зарегистрированный идентификатор</div></div></div></section></section><p >По умолчанию тесты запускаются сразу после установки соответствующего модуля. Но можно настроить, чтобы тестирование запускалось после установки всех модулей, а не после установки одного модуля:</p><section class="code-function"><h6 id="odoo.tests.common.at_install"><code>odoo.tests.common.at_install(<em>flag</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L57" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Устанавливает состояние at-install для теста, флаг является логическим значением, указывающим, должен ли тест (`` True``) или не должен (`` False``) выполняться во время установки модуля.</p><p >По умолчанию тесты запускаются сразу после установки модуля перед началом установки следующего модуля.</p></section><section class="code-function"><h6 id="odoo.tests.common.post_install"><code>odoo.tests.common.post_install(<em>flag</em>)<a href="https://github.com/odoo/odoo/blob/10.0/odoo/tests/common.py#L70" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Устанавливает состояние после установки теста. Флаг является логическим параметром, определяющим, должен ли тест запускаться или не запускаться после набора установок модуля.</p><p >По умолчанию тесты не * запускаются * после установки всех модулей в текущем установочном наборе.</p></section><p >Наиболее распространенная ситуация заключается в использовании <a href="#odoo.tests.common.TransactionCase" class="internal reference" title="odoo.tests.common.TransactionCase"><code class="py xref py-class">TransactionCase</code></a> и проверять свойство модели в каждом методе:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestModelA</span><span class="p">(</span><span class="n">common</span><span class="o">.</span><span class="n">TransactionCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_some_action</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;model.a&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">({</span><span class="s1">&#39;field&#39;</span><span class="p">:</span> <span class="s1">&#39;value&#39;</span><span class="p">})</span>
+        <span class="n">record</span><span class="o">.</span><span class="n">some_action</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">field</span><span class="p">,</span>
+            <span class="n">expected_field_value</span><span class="p">)</span>
+
+    <span class="c1"># other tests...</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Test methods must start with <code >test_</code></p></div></section><section id="running-tests"><h2 >Выполнение тестов</h2><p >Тесты автоматически запускаются при установке или обновлении модулей, если <a href="cmdline.html#cmdoption-odoo-bin--test-enable" class="internal reference"><code class="std xref std-option">--test-enable</code></a> была включена при запуске сервера Odoo.</p><p >Начиная с версии 8, запуск тестов за пределами цикла установки/обновления не поддерживается.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

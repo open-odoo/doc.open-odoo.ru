@@ -1,0 +1,629 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600" rel="stylesheet">
+  
+    <title>Создание модуля &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '11.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Учебные пособия" href="../tutorials.html" />
+    <link rel="next" title="Customizing the web client" href="web.html" />
+    <link rel="prev" title="Создание веб-сайта" href="website.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+  <div class="o_main_header_main">
+    <a class="pull-left o_logo" href="/"></a>
+    <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="mdi-navigation-menu"></span>
+    </a>
+    <ul class="o_primary_nav">
+      <li><a href="/">Документация</a></li>
+    </ul>
+  </div>
+  <nav class="navbar o_sub_nav">
+    <div class="container">
+      <div class="navbar-header visible-xs">
+          <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+            Меню
+            <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+          </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="o_sub-menu">
+        <ol class="o_breadcrumb breadcrumb nav navbar-left">
+            
+            
+            
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (11.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Создание модуля</a></li>
+
+            
+        </ol>
+
+        <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/11.0/en/howtos/backend.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/howtos/backend.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/howtos/backend.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/howtos/backend.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+<li><a href="/developer/11.0/ru/python3.html">Python 3</a></li>
+          
+
+          
+            <li class="divider"></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/build_a_module.jpg');"></span>
+      <div class="container text-center">
+        <h1> Создание модуля - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+      <main class="container ">
+        
+        <div class="o_content row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#start-stop-the-odoo-server" class="ripple internal reference">Запуск и остановка сервера Odoo</a></li><li class="list-group-item"><a href="#build-an-odoo-module" class="ripple internal reference">Создание модуля в Odoo</a><ul ><li class="list-group-item"><a href="#composition-of-a-module" class="ripple internal reference">Состав модуля</a></li><li class="list-group-item"><a href="#module-structure" class="ripple internal reference">Структура модуля</a></li><li class="list-group-item"><a href="#object-relational-mapping" class="ripple internal reference">Объектно-реляционное отображение</a></li><li class="list-group-item"><a href="#model-fields" class="ripple internal reference">Поля модели данных</a><ul ><li class="list-group-item"><a href="#common-attributes" class="ripple internal reference">Базовые атрибуты</a></li><li class="list-group-item"><a href="#simple-fields" class="ripple internal reference">Простые поля</a></li><li class="list-group-item"><a href="#reserved-fields" class="ripple internal reference">Зарезервированные поля</a></li><li class="list-group-item"><a href="#special-fields" class="ripple internal reference">Специальные поля</a></li></ul></li><li class="list-group-item"><a href="#data-files" class="ripple internal reference">Данные</a></li><li class="list-group-item"><a href="#actions-and-menus" class="ripple internal reference">Действия и пункты меню</a></li></ul></li><li class="list-group-item"><a href="#basic-views" class="ripple internal reference">Базовые представления данных</a><ul ><li class="list-group-item"><a href="#generic-view-declaration" class="ripple internal reference">Стандартное использование представления</a></li><li class="list-group-item"><a href="#tree-views" class="ripple internal reference">Преставления в виде Tree</a></li><li class="list-group-item"><a href="#form-views" class="ripple internal reference">Преставления в виде Form</a></li><li class="list-group-item"><a href="#search-views" class="ripple internal reference">Преставления в виде Search</a></li></ul></li><li class="list-group-item"><a href="#relations-between-models" class="ripple internal reference">Отношения между моделями данных</a><ul ><li class="list-group-item"><a href="#relational-fields" class="ripple internal reference">Реляционные поля</a></li></ul></li><li class="list-group-item"><a href="#inheritance" class="ripple internal reference">Наследование</a><ul ><li class="list-group-item"><a href="#model-inheritance" class="ripple internal reference">Наследование моделей данных</a></li><li class="list-group-item"><a href="#view-inheritance" class="ripple internal reference">Наследование представления</a><ul ><li class="list-group-item"><a href="#domains" class="ripple internal reference">Домены</a></li></ul></li></ul></li><li class="list-group-item"><a href="#computed-fields-and-default-values" class="ripple internal reference">Вычисляемые поля и значения по умолчанию</a><ul ><li class="list-group-item"><a href="#dependencies" class="ripple internal reference">Зависимости</a></li><li class="list-group-item"><a href="#default-values" class="ripple internal reference">Значения по умолчанию</a></li></ul></li><li class="list-group-item"><a href="#onchange" class="ripple internal reference">Onchange</a></li><li class="list-group-item"><a href="#model-constraints" class="ripple internal reference">Ограничения модели данных</a></li><li class="list-group-item"><a href="#advanced-views" class="ripple internal reference">Расширенные представления</a><ul ><li class="list-group-item"><a href="#id3" class="ripple internal reference">Преставления в виде Tree</a></li><li class="list-group-item"><a href="#calendars" class="ripple internal reference">Представления вида Calendar</a></li><li class="list-group-item"><a href="#id4" class="ripple internal reference">Преставления в виде Search</a></li><li class="list-group-item"><a href="#gantt" class="ripple internal reference">Представление вида Gantt</a></li><li class="list-group-item"><a href="#graph-views" class="ripple internal reference">Представление вида Graph</a></li><li class="list-group-item"><a href="#kanban" class="ripple internal reference">Представление вида Kanban</a></li></ul></li><li class="list-group-item"><a href="#security" class="ripple internal reference">Безопасность</a><ul ><li class="list-group-item"><a href="#group-based-access-control-mechanisms" class="ripple internal reference">Контроль доступа, основанный на группах пользователей</a></li><li class="list-group-item"><a href="#access-rights" class="ripple internal reference">Права доступа</a></li><li class="list-group-item"><a href="#record-rules" class="ripple internal reference">Правила записи</a></li></ul></li><li class="list-group-item"><a href="#wizards" class="ripple internal reference">Помощники</a><ul ><li class="list-group-item"><a href="#launching-wizards" class="ripple internal reference">Запуск помощников</a></li></ul></li><li class="list-group-item"><a href="#internationalization" class="ripple internal reference">Переводы</a></li><li class="list-group-item"><a href="#reporting" class="ripple internal reference">Отчеты</a><ul ><li class="list-group-item"><a href="#printed-reports" class="ripple internal reference">Отчеты для печати</a></li><li class="list-group-item"><a href="#dashboards" class="ripple internal reference">Сводные отчеты</a></li></ul></li><li class="list-group-item"><a href="#webservices" class="ripple internal reference">Веб сервисы</a><ul ><li class="list-group-item"><a href="#xml-rpc-library" class="ripple internal reference">Библиотека XML-RPC</a></li><li class="list-group-item"><a href="#json-rpc-library" class="ripple internal reference">Библиотека JSON-RPC</a></li></ul></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/11.0/doc/howtos/backend.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+		  <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+          <article class="doc-body ">
+            
+            
+            
+  <section id="building-a-module"><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >Это руководство требует <a href="../setup/install.html#setup-install" class="internal alert-link reference"><span class="std std-ref">установленную Odoo</span></a></p></div></section><section id="start-stop-the-odoo-server"><h2 >Запуск и остановка сервера Odoo</h2><p >Odoo использует клиент-серверную архитектуру, где клиентами являются web браузеры, которые работают с Odoo сервером через RPC протокол.</p><p >Бизнес-логика и расширение обычно выполняются на стороне сервера, хотя к клиенту могут быть добавлены поддерживающие клиентские функции (например, новые представления данных, такие как интерактивные карты).</p><p >Чтобы запустить сервер, просто вызовите команду <a href="../reference/cmdline.html#reference-cmdline" class="internal reference"><span class="std std-ref">odoo-bin</span></a> в командной строке, добавив при необходимости полный путь к файлу:</p><div class="highlight-default code bash"><div class="highlight"><pre><span></span><span class="n">odoo</span><span class="o">-</span><span class="nb">bin</span>
+</pre></div>
+</div>
+<p >Сервер можно остановить двойным нажатием <code >Ctrl-C</code> в консоли, или убив соответствующий процесс в операционной системе.</p></section><section id="build-an-odoo-module"><h2 >Создание модуля в Odoo</h2><p >Расширения как сервера, так и клиента представляют собой <em >модули</em>, которые могут быть загружены в <em >базу данных</em>.</p><p >Odoo модули могут, как добавлять абсолютно новую бизнес-логику, так и расширять существующую: модуль может быть создан для того, чтобы добавить план счетов соответствующей страны таким образом, чтобы Odoo мог поддерживать именно ваш тип бухгалтерского учета. В тоже время, другой модуль добавляет поддержку отображения состояния вашего автобусного парка в режиме реального времени.</p><p >Таким образом, все в Odoo начинается и заканчивается модулями.</p></section><section id="composition-of-a-module"><h3 >Состав модуля</h3><p >Модуль Odoo может содержать следующие элементы:</p><dl ><dt >Бизнес-объекты:</dt><dd ><p >объявленные как Python классы, эти ресурсы автоматически сохраняются в Odoo в соответствии с ее конфигурацией</p></dd><dt >Данные</dt><dd ><p >XML или CSV файлы объявляют метаданные (представления или бизнес-процессы), данные конфигурации (параметризация модулей), демонстрационные данные и многое другое</p></dd><dt >Веб-контроллеры</dt><dd ><p >Обрабатывать запросы от веб-браузеров</p></dd><dt >Статические ресурсы</dt><dd ><p >Изображения, CSS или javascript-файлы, используемые веб-интерфейсом или веб-сайтом</p></dd></dl></section><section id="module-structure"><h3 >Структура модуля</h3><p >Каждый модуль является каталогом в <em >каталоге модулей</em>. Каталоги модулей задаются с помощью параметра <a href="../reference/cmdline.html#cmdoption-odoo-bin--addons-path" class="internal reference"><code class="std xref std-option">--addons-path</code></a>.</p><div role="alert" class="alert-info aphorism alert"><h3 class="alert-title">Совет</h3><p >большинство параметров командной строки так же могут быть указаны в <a href="../reference/cmdline.html#reference-cmdline-config" class="internal alert-link reference"><span class="std std-ref">файле конфигурации</span></a></p></div><p >Содержимое Odoo модуля описывается в его <a href="../reference/module.html#reference-module-manifest" class="internal reference"><span class="std std-ref">манифесте</span></a>. Подробное описание манифеста находится <a href="../reference/module.html#reference-module-manifest" class="internal reference"><span class="std std-ref">здесь</span></a>.</p><p >Модуль так же является <a href="http://docs.python.org/2/tutorial/modules.html#packages" class="external reference">Python пакетом</a> с файлом <code >__init__.py</code>, содержащим инструкции импорта для различных Python файлов в модуле.</p><p >Например, если в модуле есть только <code >mymodule.py</code>, тогда файл <code >__init__.py</code> должен содержать:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">mymodule</span>
+</pre></div>
+</div>
+<p >Odoo предоставляет механизм, который помогает установить новый модуль, <a href="../reference/cmdline.html#reference-cmdline-server" class="internal reference"><span class="std std-ref">odoo.py</span></a> имеет команду <a href="../reference/cmdline.html#reference-cmdline-scaffold" class="internal reference"><span class="std std-ref">scaffold</span></a>, которая может создать пустой модуль:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> odoo-bin scaffold &lt;module name&gt; &lt;where to put it&gt;
+</pre></div>
+</div>
+<p >Команда создаст подкаталог для вашего модуля, и автоматически создаст группу стандартных файлов для модуля. Большинство из них содержит закомментированный Python код или XML. Об использование большинства этих файлов будет рассказано в данном руководстве.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Создание модуля</p><p >Используйте командную строку, чтобы создать пустой модуль Open Academy и установить его в Odoo.</p></div></section><section id="object-relational-mapping"><h3 >Объектно-реляционное отображение</h3><p >Ключевой компонент Odoo это <abbr title="Object-Relational Mapping - Объектно-реляционное отображение">ORM</abbr>. Этот слой избавляет от необходимости писать самому <abbr title="Structured Query Language">SQL</abbr> запросы руками и предоставляет гибкие и безопасные сервисы <a href="#rawsql" class="footnote-ref" id="id1">2</a>.</p><p >Бизнес-объекты объявляются как расширяемые классы Python <a href="../reference/orm.html#odoo.models.Model" class="internal reference" title="odoo.models.Model"><code class="py xref py-class">Model</code></a>, которая автоматически интегрирует их в систему хранения данных.</p><p >Модели данных могут быть сконфигурированы настройкой некоторого количества атрибутов в их описании. Наиболее важный атрибут это <a href="../reference/orm.html#odoo.models.Model._name" class="internal reference" title="odoo.models.Model._name"><code class="py xref py-attr">_name</code></a>. Он необходим и определяет название модели данных в системе Odoo. Вот пример минимального описания модели данных:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="k">import</span> <span class="n">models</span>
+<span class="k">class</span> <span class="nc">MinimalModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;test.model&#39;</span>
+</pre></div>
+</div>
+</section><section id="model-fields"><h3 >Поля модели данных</h3><p >Поля используются для определения того, что модель данных может хранить и где. Поля определяются как атрибуты в классе модели:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="k">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">fields</span>
+
+<span class="k">class</span> <span class="nc">LessMinimalModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;test.model2&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+</pre></div>
+</div>
+</section><section id="common-attributes"><h4 >Базовые атрибуты</h4><p >Подобно самой модели данных, ее поля могут быть настроены путем передачи значений атрибутов в качестве параметров:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >Некоторые атрибуты доступны во всех полях, вот самые распространенные из них:</p><dl ><dt ><code class="py xref py-attr">string</code> (<code >unicode</code>, по умолчанию: field's name)</dt><dd ><p >Надпись для поля в UI (пользовательском интерфейсе).</p></dd><dt ><code class="py xref py-attr">required</code> (<code >bool</code>, по умолчанию: <code >False</code>)</dt><dd ><p >Если <code >True</code>, поле не может быть пустым оно должно иметь значение по умолчанию или всегда быть заполнено при создании записи.</p></dd><dt ><code class="py xref py-attr">help</code> (<code >unicode</code>, по умолчанию: <code >''</code>)</dt><dd ><p >Портянка, показывает всплывающее поле с описанием объекта для пользователей в UI.</p></dd><dt ><code class="py xref py-attr">index</code> (<code >bool</code>, по умолчанию: <code >False</code>)</dt><dd ><p >Просит у Odoo создать <a href="http://use-the-index-luke.com/sql/preface" class="external reference">database index</a> для колонки</p></dd></dl></section><section id="simple-fields"><h4 >Простые поля</h4><p >Есть два наиболее распространенных вида полей: «простые» поля, которые представляют собой атомарные значения, хранящиеся непосредственно в таблице модели, и «реляционные» поля, связывающие записи (одной модели данных или разных моделей данных).</p><p >Пример простых полей <a href="../reference/orm.html#odoo.fields.Boolean" class="internal reference" title="odoo.fields.Boolean"><code class="py xref py-class">Boolean</code></a>, <a href="../reference/orm.html#odoo.fields.Date" class="internal reference" title="odoo.fields.Date"><code class="py xref py-class">Date</code></a>, <a href="../reference/orm.html#odoo.fields.Char" class="internal reference" title="odoo.fields.Char"><code class="py xref py-class">Char</code></a>.</p></section><section id="reserved-fields"><h4 >Зарезервированные поля</h4><p >Odoo создает несколько полей, которые есть во всех моделях данных<a href="#autofields" class="footnote-ref" id="id2">1</a>. Эти поля управляются системой и их не нужно прописывать, но их можно прочитать если существует такая необходимость:</p><dl ><dt ><code class="py xref py-attr">id</code> (<code class="py xref py-class">Id</code>)</dt><dd ><p >уникальные идентификатор записи в этой модели данных</p></dd><dt ><code class="py xref py-attr">create_date</code> (<a href="../reference/orm.html#odoo.fields.Datetime" class="internal reference" title="odoo.fields.Datetime"><code class="py xref py-class">Datetime</code></a>)</dt><dd ><p >дата создания записи</p></dd><dt ><code class="py xref py-attr">create_uid</code> (<a href="../reference/orm.html#odoo.fields.Many2one" class="internal reference" title="odoo.fields.Many2one"><code class="py xref py-class">Many2one</code></a>)</dt><dd ><p >пользователь, который создал запись</p></dd><dt ><code class="py xref py-attr">write_date</code> (<a href="../reference/orm.html#odoo.fields.Datetime" class="internal reference" title="odoo.fields.Datetime"><code class="py xref py-class">Datetime</code></a>)</dt><dd ><p >дата последней модификации записи</p></dd><dt ><code class="py xref py-attr">write_uid</code> (<a href="../reference/orm.html#odoo.fields.Many2one" class="internal reference" title="odoo.fields.Many2one"><code class="py xref py-class">Many2one</code></a>)</dt><dd ><p >Пользователь, который последний модифицировал запись</p></dd></dl></section><section id="special-fields"><h4 >Специальные поля</h4><p >По умолчанию Odoo так же требует поле <code >name</code> для всех моделей данных для различных типов отображения и поиска. Поле, используемое для этих целей может быть отменено <a href="../reference/orm.html#odoo.models.Model._rec_name" class="internal reference" title="odoo.models.Model._rec_name"><code class="py xref py-attr">_rec_name</code></a>.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Определить модель данных</p><p >Определите новую модель данных в модуле <em >Course</em> в модуле <em >openacademy</em>. Курс имеет небольшое описание. Курсы должны иметь названия.</p></div></section><section id="data-files"><h3 >Данные</h3><p >Odoo - система со сверхточным механизмом управления данными. Несмотря на то что ее поведение управляется при помощи кода <a href="http://python.org" class="external reference">Python</a>, часть значений модуля находится в данных, которые он устанавливает при загрузке.</p><div role="alert" class="alert-info aphorism alert"><h3 class="alert-title">Совет</h3><p >Существуют модули, которые существуют только для добавления данных в Odoo.</p></div><p >Данные модуля описываются через <a href="../reference/data.html#reference-data" class="internal reference"><span class="std std-ref">data files</span></a>, XML файлы с элементами <code >&lt;record&gt;</code>. Каждый элемент <code >&lt;record&gt;</code> создает или модифицирует записи в базе данных.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;odoo&gt;</span>
+
+        <span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">&quot;{model name}&quot;</span> <span class="na">id=</span><span class="s">&quot;{record identifier}&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;{a field name}&quot;</span><span class="nt">&gt;</span>{a value}<span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;/odoo&gt;</span>
+</pre></div>
+</div>
+<ul ><li ><p ><code >model</code> это имя модели данных Odoo записи</p></li><li ><p ><code >id</code> это <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a>, который позволяет видеть к какой записи эти данные относятся (без необходимости знать их идентификаторы в базе данных)</p></li><li ><p ><code >&lt;field&gt;</code> элементы имеют параметр <code >name</code> который является именем поля в модели данных (например <code >description</code>). Тело элемента и есть значение поля.</p></li></ul><p >Файлы данных должны быть описаны в файле манифеста, для того, чтобы они были загружены их нужно записать в <code >'data'</code> список (загрузка данных происходит всегда) или в <code >'demo'</code> список (загрузка данных происходит только в режиме &quot;Загрузка демо-данных&quot;).</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Описать демонстрационные данные</p><p >Создать демонстрационные данные для заполнения модели данных <em >Courses</em> некоторым количеством Курсов.</p></div><div role="alert" class="alert-info alert"><h3 class="alert-title">Совет</h3><p >The content of the data files is only loaded when a module is
+installed or updated.</p><p >After making some changes, do not forget to use
+<a href="../reference/cmdline.html#reference-cmdline" class="internal alert-link reference"><span class="std std-ref">odoo-bin -u openacademy</span></a> to save the changes
+to your database.</p></div></section><section id="actions-and-menus"><h3 >Действия и пункты меню</h3><p >Действия и пункты меню являются регулярными записями в базе данных, обычно объявляемыми через файлы данных. Действия могут быть инициированы тремя способами:</p><ol ><li ><p >нажатием на пункт меню (который связан с конкретным действием)</p></li><li ><p >нажатием на кнопки в формах представлений данных (если они связаны с конкретным действием)</p></li><li ><p >как контекстное действие над объектом</p></li></ol><p >Поскольку пункты меню могут иметь сложную структуру для их описания есть параметр <code >&lt;menuitem&gt;</code> это наиболее простой способ создать описание меню в <code >ir.ui.menu</code> и подключить его к соответствующему действию.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">&quot;ir.actions.act_window&quot;</span> <span class="na">id=</span><span class="s">&quot;action_list_ideas&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Ideas<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;res_model&quot;</span><span class="nt">&gt;</span>idea.idea<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;view_mode&quot;</span><span class="nt">&gt;</span>tree,form<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+<span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;menu_ideas&quot;</span> <span class="na">parent=</span><span class="s">&quot;menu_root&quot;</span> <span class="na">name=</span><span class="s">&quot;Ideas&quot;</span> <span class="na">sequence=</span><span class="s">&quot;10&quot;</span>
+          <span class="na">action=</span><span class="s">&quot;action_list_ideas&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-danger aphorism alert"><h3 class="alert-title">Опасно</h3><p >Действие должно быть объявлено перед его соответствующим меню в XML-файле.</p><p >Файлы данных выполняются последовательно, <code >id</code> действия должно присутствовать в базе данных до того, как пункт меню будет создан.</p></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Создайте новый пункт меню</p><p >Определите новые пункты меню для доступа к курсам в меню OpenAcademy. Пользователь должен уметь:</p><ul ><li ><p >Отобразить список всех курсов</p></li><li ><p >Создать/модифицировать курс</p></li></ul></div></section><section id="basic-views"><h2 >Базовые представления данных</h2><p >Базовые представления данных (далее представления). Представления определяют каким образом записи или модель данных будут отображены. Каждый тип представлений являет собой некий заранее оформленный внешний вид для данных, которые находятся в базе данных Odoo (например в виде списка записей или календаря, и т.д. …). Представления могут быть запрошены через вызов их типа (например <em >список контрагентов</em>) или напрямую через их идентификатор. Для общих запросов будет использовано представление с правильным типом и низким приоритетом (таким образом, представление с наименьшим приоритетом каждого типа, будет являться им по умолчанию</p><p ><a href="../reference/views.html#reference-views-inheritance" class="internal reference"><span class="std std-ref">Наследование представлений</span></a> позволяет изменять представления, объявленные в другом месте (добавлять или удалять содержимое).</p></section><section id="generic-view-declaration"><h3 >Стандартное использование представления</h3><p >Представление создается как запись модели данных `` ir.ui.view``. Тип преставления назначается корневым элементом поля <code >arch</code>:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span> <span class="na">id=</span><span class="s">&quot;view_id&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>view.name<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>object_name<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;priority&quot;</span> <span class="na">eval=</span><span class="s">&quot;16&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- view content: &lt;form&gt;, &lt;tree&gt;, &lt;graph&gt;, ... --&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-danger aphorism alert"><h3 class="alert-title">Опасно</h3><p >Содержимое представления это XML.</p><p >Таким образом, поле `` arch`` должно быть объявлено как <code >type = &quot;xml &quot;</code>,для того, чтобы его правильно распознал парсер.</p></div></section><section id="tree-views"><h3 >Преставления в виде Tree</h3><p >Преставления в виде Tree, так же называются преставлениями в виде списков, отражают записи в табличной форме</p><p >Их корневой элемент <code >&lt;tree&gt;</code>. Самая простая форма преставления в виде tree это список всех полей таблицы, которые мы хотим показать на экране (каждое поле это колонка):</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;tree</span> <span class="na">string=</span><span class="s">&quot;Idea list&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inventor_id&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/tree&gt;</span>
+</pre></div>
+</div>
+</section><section id="form-views"><h3 >Преставления в виде Form</h3><p >Преставления в виде Form используются для создания и модификации единичных записей.</p><p >Корневым элементом является <code >&lt;form&gt;</code>, который состоит из высокоуровневых элементов (группы, поля для записей) и интерактивных элементов (кнопки и поля):</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;form</span> <span class="na">string=</span><span class="s">&quot;Idea form&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;group</span> <span class="na">colspan=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;group</span> <span class="na">colspan=</span><span class="s">&quot;2&quot;</span> <span class="na">col=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;separator</span> <span class="na">string=</span><span class="s">&quot;General stuff&quot;</span> <span class="na">colspan=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inventor_id&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/group&gt;</span>
+
+        <span class="nt">&lt;group</span> <span class="na">colspan=</span><span class="s">&quot;2&quot;</span> <span class="na">col=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;separator</span> <span class="na">string=</span><span class="s">&quot;Dates&quot;</span> <span class="na">colspan=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;active&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;invent_date&quot;</span> <span class="na">readonly=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/group&gt;</span>
+
+        <span class="nt">&lt;notebook</span> <span class="na">colspan=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;page</span> <span class="na">string=</span><span class="s">&quot;Description&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">nolabel=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/page&gt;</span>
+        <span class="nt">&lt;/notebook&gt;</span>
+
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;state&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/group&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Настройте преставление в виде Form используя XML.</p><p >Создайте ваше собственное преставление в виде Form для объекта <em >Course</em>. Что нужно показать: имя и описание курса.</p></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Notebooks</p><p >В преставлении в виде Form для объекта Курс расположите поле для описания под закладкой, таким образом, что в дальнейшем можно будет добавить еще закладки с дополнительной информацией.</p></div><p >Представления формы могут также использовать простой HTML для создания своих макетов:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;form</span> <span class="na">string=</span><span class="s">&quot;Idea Form&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;header&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">string=</span><span class="s">&quot;Confirm&quot;</span> <span class="na">type=</span><span class="s">&quot;object&quot;</span> <span class="na">name=</span><span class="s">&quot;action_confirm&quot;</span>
+                <span class="na">states=</span><span class="s">&quot;draft&quot;</span> <span class="na">class=</span><span class="s">&quot;oe_highlight&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">string=</span><span class="s">&quot;Mark as done&quot;</span> <span class="na">type=</span><span class="s">&quot;object&quot;</span> <span class="na">name=</span><span class="s">&quot;action_done&quot;</span>
+                <span class="na">states=</span><span class="s">&quot;confirmed&quot;</span> <span class="na">class=</span><span class="s">&quot;oe_highlight&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">string=</span><span class="s">&quot;Reset to draft&quot;</span> <span class="na">type=</span><span class="s">&quot;object&quot;</span> <span class="na">name=</span><span class="s">&quot;action_draft&quot;</span>
+                <span class="na">states=</span><span class="s">&quot;confirmed,done&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;state&quot;</span> <span class="na">widget=</span><span class="s">&quot;statusbar&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;sheet&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_title&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;name&quot;</span> <span class="na">class=</span><span class="s">&quot;oe_edit_only&quot;</span> <span class="na">string=</span><span class="s">&quot;Idea Name&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;h1&gt;&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="nt">/&gt;&lt;/h1&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;separator</span> <span class="na">string=</span><span class="s">&quot;General&quot;</span> <span class="na">colspan=</span><span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;group</span> <span class="na">colspan=</span><span class="s">&quot;2&quot;</span> <span class="na">col=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Idea description...&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/group&gt;</span>
+    <span class="nt">&lt;/sheet&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></div>
+</div>
+</section><section id="search-views"><h3 >Преставления в виде Search</h3><p >Преставления в виде Search настраивают поля search для связи с преставлением в виде списка (а так же другими совокупными представлениями). Их корневой элемент <code >&lt;search&gt;</code>  и он состоит из полей определяющих какие поля могут участвовать в поиске:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;search&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inventor_id&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/search&gt;</span>
+</pre></div>
+</div>
+<p >Если для модели данных не существует поискового представления, Odoo генерирует одно, которое позволяет только поиск в поле `` name``.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Поиск курсов</p><p >Позволить поиск по курсам, основанный на их названии или их описании.</p></div></section><section id="relations-between-models"><h2 >Отношения между моделями данных</h2><p >Запись из одной модели данных может быть связана с записью в другой модели данных. Например запись коммерческого предложения связана с записью клиента, которая содержит данные о клиента; и она (запись клиента) так же связана с записями коммерческого предложения.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Создайте модель данных для занятий</p><p >Для модуля Open Academy, мы рассматриваем модель данных sessions: Занятия это возникновение преподаваемого Отношения между моделями данных курса в заданное время для заданной аудитории.</p><p >Создайте модель данных для <em >sessions</em>. Занятия имеют имя, дату начала, продолжительность и количество мест. Добавьте действие и пункт меню, чтобы отобразить их. Сделайте новую модель видимой через пункт меню.</p></div></section><section id="relational-fields"><h3 >Реляционные поля</h3><p >Реляционные поля связывают записи, как внутри самой модели данных (иерархические), так и между записями в разных моделях данных.</p><p >Типы реляционных полей:</p><dl ><dt ><a href="../reference/orm.html#odoo.fields.Many2one" class="internal reference" title="odoo.fields.Many2one"><code class="py xref py-class">Many2one(other_model, ondelete='set null')</code></a></dt><dd ><p >Простая ссылка на другой объект:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">foo</span><span class="o">.</span><span class="n">other_id</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-go_to alert"><h3 class="alert-title">См.также</h3><p ><a href="http://www.postgresql.org/docs/9.3/static/tutorial-fk.html" class="external reference alert-link">Внешние ключи</a></p></div></dd><dt ><a href="../reference/orm.html#odoo.fields.One2many" class="internal reference" title="odoo.fields.One2many"><code class="py xref py-class">One2many(other_model, related_field)</code></a></dt><dd ><p >Виртуальная связь обратная <a href="../reference/orm.html#odoo.fields.Many2one" class="internal reference" title="odoo.fields.Many2one"><code class="py xref py-class">Many2one</code></a>. Это <a href="../reference/orm.html#odoo.fields.One2many" class="internal reference" title="odoo.fields.One2many"><code class="py xref py-class">One2many</code></a> ведет себя как контейнер записей и предоставляет доступ (возможно пустой) к набору записей:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">other</span> <span class="ow">in</span> <span class="n">foo</span><span class="o">.</span><span class="n">other_ids</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-danger alert"><h3 class="alert-title">Опасно</h3><p >В связи с тем, что <a href="../reference/orm.html#odoo.fields.One2many" class="internal alert-link reference" title="odoo.fields.One2many"><code class="py xref py-class">One2many</code></a> является виртуальной связью, просто <em >обязано</em> быть поле <a href="../reference/orm.html#odoo.fields.Many2one" class="internal alert-link reference" title="odoo.fields.Many2one"><code class="py xref py-class">Many2one</code></a> в <code class="samp"><em >other_model</em></code>, и его имя <em >обязано</em> быть <code class="samp"><em >related_field</em></code></p></div></dd><dt ><a href="../reference/orm.html#odoo.fields.Many2many" class="internal reference" title="odoo.fields.Many2many"><code class="py xref py-class">Many2many(other_model)</code></a></dt><dd ><p >Двунаправленная множественная связь, любая запись на одной стороне может быть связана с любым количеством записей на другой стороне. Ведет себя как контейнер записей, предоставляя доступ, возможно пустой, к набору записей:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">other</span> <span class="ow">in</span> <span class="n">foo</span><span class="o">.</span><span class="n">other_ids</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</dd></dl><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Many2one связи</p><p >Используя many2one, измените модели данных <em >Course</em> и <em >Session</em>, для того чтобы отразить их связи с остальными моделями данных:</p><ul ><li ><p >Курс имеет <em >ответственного</em> пользователя; Значение этого поля является записью встроенной модели <code >res.users</code>.</p></li><li ><p >У занятия есть <em >инструктор</em>; значение этого поля является записью во встроенной модели данных <code >res.partner</code>.</p></li><li ><p >Занятие относится к <em >course</em>; значение этого поля является записью в  <code >openacademy.course</code> и является необходимым.</p></li><li ><p >Адаптируйте представления.</p></li></ul></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Обратные связи one2many</p><p >Используя одно обратное реляционное поле one2many, модифицируйте модели, чтобы отразить связь между курсами и занятиями.</p></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Множественные many2many связи</p><p >Используя поле many2many, модифицируйте Session модель данных, чтобы связать каждое занятие с присутствующими. Присутствующие будут представлены в виде записей контрагентов, поэтому мы свяжем их со встроенной моделью данных <code >res.partner</code>. Внесите соответствующие изменения в представления.</p></div></section><section id="inheritance"><h2 >Наследование</h2></section><section id="model-inheritance"><h3 >Наследование моделей данных</h3><p >Odoo предлагает механизм <em >наследования</em> в двух вариантах для расширения существующей модели данных путем создания дополнительного модуля</p><p >Первый механизм наследования позволяет модулю изменять поведение модели данных, определенной в другом модуле:</p><ul ><li ><p >добавлять поля к модели данных</p></li><li ><p >Переопределить определения полей в модели данных</p></li><li ><p >Добавить ограничения в модель данных</p></li><li ><p >Добавить методы в модель данных</p></li><li ><p >Переопределить существующие методы в модели данных.</p></li></ul><p >Второй механизм наследования (делегирование) позволяет связать каждую запись модели с записью в родительской модели и обеспечивает прозрачный доступ к полям родительской записи.</p><img src="../_images/inheritance_methods.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><h3 class="alert-title">См.также</h3><ul ><li ><a href="../reference/orm.html#odoo.models.Model._inherit" class="internal alert-link reference" title="odoo.models.Model._inherit"><code class="py xref py-attr">_inherit</code></a></li><li ><a href="../reference/orm.html#odoo.models.Model._inherits" class="internal alert-link reference" title="odoo.models.Model._inherits"><code class="py xref py-attr">_inherits</code></a></li></ul></div></section><section id="view-inheritance"><h3 >Наследование представления</h3><p >Помимо модификации существующих представлений (путем перезаписи), Odoo позволяет наследовать представления где дочерние &quot;расширения&quot; представлений могут быть быть закреплены над корневыми представлениями и могут добавлять или удалять содержимое своего родителя.</p><p >Расширение представления соотносится со своим родителем, используя поле <code >inherit_id</code>, и во отличии от одиночного представления его поле <code >arch</code> состоит из любого количества элементов <code >xpath</code>, предоставляя возможность выбора альтернативного наполнения родительского представления:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="c">&lt;!-- improved idea categories list --&gt;</span>
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;idea_category_list2&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>id.category.list2<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>idea.category<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inherit_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;id_category_list&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- find field description and add the field</span>
+<span class="c">             idea_ids after it --&gt;</span>
+        <span class="nt">&lt;xpath</span> <span class="na">expr=</span><span class="s">&quot;//field[@name=&#39;description&#39;]&quot;</span> <span class="na">position=</span><span class="s">&quot;after&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;idea_ids&quot;</span> <span class="na">string=</span><span class="s">&quot;Number of ideas&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/xpath&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<dl ><dt ><code >expr</code></dt><dd ><p >Выражение <a href="http://w3.org/TR/xpath" class="external reference">XPath</a>, выбирает определенный элемент родительского представления. Вызывает ошибку, если он не соответствует ни одному элементу или более одного.</p></dd><dt ><code >position</code></dt><dd ><p >Команда для применения к конкретному элементу:</p><dl ><dt ><code >inside</code></dt><dd ><p >присоединяет тело внутри контейнера <code >xpath</code> после выбранного элемента</p></dd><dt ><code >replace</code></dt><dd >replaces the matched element with the <code >xpath</code>'s body, replacing any <code >$0</code> node occurrence
+in the new body with the original element</dd><dt ><code >before</code></dt><dd ><p >вставляет контейнер <code >xpath</code>, как неотъемлемую часть в начале выбранного элемента</p></dd><dt ><code >after</code></dt><dd ><p >вставляет контейнер <code >xpaths</code>, как неотъемлемую часть в конце выбранного элемента</p></dd><dt ><code >attributes</code></dt><dd ><p >предоставляет альтенативные атрибуты выбранного элемента используя специальную команду <code >attribute</code> внутри контейнера <code >xpath</code></p></dd></dl></dd></dl><div role="alert" class="alert-info alert"><h3 class="alert-title">Совет</h3><p >При выборе одиночного элемента атрибут <code >position</code> может быть напрямую назначен искомому элементу. В примере указаны два наследования с одинаковым результатом.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;xpath</span> <span class="na">expr=</span><span class="s">&quot;//field[@name=&#39;description&#39;]&quot;</span> <span class="na">position=</span><span class="s">&quot;after&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;idea_ids&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/xpath&gt;</span>
+
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">position=</span><span class="s">&quot;after&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;idea_ids&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+</pre></div>
+</div>
+</div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Измените существующий проект</p><ul ><li ><p >Используя модель наследования, измените существующую модель <em >Partner</em>, добавив туда поле boolean <code >instructor</code>, и поле many2many, которое соответствует отношению «занятие-партнер»</p></li><li ><p >Используя наследование представлений, отобразите эти поля в представлении вида Form партнера</p></li></ul></div></section><section id="domains"><h4 >Домены</h4><p >В Odoo, <a href="../reference/orm.html#reference-orm-domains" class="internal reference"><span class="std std-ref">Домены</span></a> это значения в которых закодировано состояние записей. Домен это список критериев используемых для выбора из подмножества записей в модели данных. Каждый критерий представляет собой треугольник где вершинами являются имя поля, оператор и значение.</p><p >К примеру, при использовании в модели данных <em >Product</em> домен выбирает все <em >services</em> цена которых выше <em >1000</em> за одну позицию:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="s1">&#39;product_type&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;service&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;unit_price&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p >По умолчанию, критерии тесно взаимосвязаны с безусловным AND. Логические операторы <code >&amp;</code> (AND), <code >|</code> (OR) и <code >!</code> (NOT) могут использоваться для явного объединения критериев. Они используются в позиции префикса (оператор вставляется перед своими аргументами, а не между ними). Например, чтобы выбрать продукты &quot;которые являются услугами <em >ИЛИ</em> имеют цену за единицу, которая <em >НЕ</em> попадает между 1000 и 2000&quot;:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span>
+    <span class="p">(</span><span class="s1">&#39;product_type&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;service&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;!&#39;</span><span class="p">,</span> <span class="s1">&#39;&amp;&#39;</span><span class="p">,</span>
+        <span class="p">(</span><span class="s1">&#39;unit_price&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;=&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;unit_price&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p >Параметр <code >domain</code> может быть добавлен к зависимым полям, с целью отделения действительных записей для работы, в процессе выбора записей в базе для работы с клиентским интерфейсом.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Домены в зависимых полях</p><p >При выборе instructor для <em >Session</em> должны быть видны только инструкторы (партнеры с параметром <code >instructor</code>, установленными на <code >True</code>).</p></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Более сложные домены</p><p >Создайте новые категории партнеров <em >Teacher / Level 1</em> и <em >Teacher / Level 2</em>. Инструктором для занятия может быть как инструктор, так и преподаватель (любого уровня).</p></div></section><section id="computed-fields-and-default-values"><h2 >Вычисляемые поля и значения по умолчанию</h2><p >Помимо того, что поля могут сохраняться и быть в прямом доступе непосредственно из базы данных, они также могут вычислены. В этом случае, значения полей не извлекаются непосредственно из базы, а вычисляются 'на лету' путем вызова метода модели данных.</p><p >Для создания вычисляемого поля вам нужно создать поле, установив атрибут <code class="py xref py-attr">compute</code> в его метод. Метод вычисления должен просто устанавливать значение поля в вычисляемое в любой записи <code >self</code>.</p><div role="alert" class="alert-danger aphorism alert"><h3 class="alert-title">Опасно</h3><p ><code >self</code> это собирательный операнд</p><p >Объект <code >self</code> это <em >recordset</em>, то есть упорядоченный набор записей. Он поддерживает стандартные операции с Python над коллекциями, такие как <code >len(self)</code> и <code >iter(self)</code>, плюс дополнительные операции с наборами, такие как <code >recs1 + recs2</code>.</p><p >Во взаимодействии с <code >self</code> можно собрать записи одна за одной, где каждая представляет собой комплект размера 1. Вы можете объединять, разделять записи при помощи точки <code >record.name</code>.</p></div><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">api</span>
+
+<span class="k">class</span> <span class="nc">ComputedModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;test.computed&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">compute</span><span class="o">=</span><span class="s1">&#39;_compute_name&#39;</span><span class="p">)</span>
+
+    <span class="nd">@api.multi</span>
+    <span class="k">def</span> <span class="nf">_compute_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">))</span>
+</pre></div>
+</div>
+</section><section id="dependencies"><h3 >Зависимости</h3><p >Значение вычисленного поля обычно зависит от значений других полей в вычисляемой записи. ORM подразумевает, что разработчик укажет эти зависимости для метода <em >compute</em> с помощью декоратора <a href="../reference/orm.html#odoo.api.depends" class="internal reference" title="odoo.api.depends"><code class="py xref py-func">depends()</code></a>. Данные зависимости используются ORM для инициирования перерасчета поля при изменении некоторых его зависимостей:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="k">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">api</span>
+
+<span class="k">class</span> <span class="nc">ComputedModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;test.computed&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">compute</span><span class="o">=</span><span class="s1">&#39;_compute_name&#39;</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">()</span>
+
+    <span class="nd">@api</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_compute_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Record with value </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">record</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Вычисляемые поля</p><ul ><li ><p >Добавьте процент занятых мест к модели данных <em >Session</em></p></li><li ><p >Отобразите поле в виде <em >Tree</em> и в виде <em >Form</em></p></li><li ><p >Отобразите поле как индикатор выполнения</p></li></ul></div></section><section id="default-values"><h3 >Значения по умолчанию</h3><p >Любому полю может быть присвоено значение по умолчанию. В определении поля добавьте опцию <code >default=X</code>, где <code >X</code> является либо литеральным значением Python (логическое, целочисленное, float, string), либо функцией, берущей набор записей и возвращающей значение:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;Unknown&quot;</span><span class="p">)</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.users&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >Объект <code >self.env</code> предоставляет доступ к параметрам запроса и другим полезным вещам:</p><ul ><li ><p ><code >self.env.cr</code> или <code >self._cr</code> это объект <em >Курсор</em> базы данных, который используется для формирования запросов к базе.</p></li><li ><p ><code >self.env.uid</code> или <code >self._uid</code> является идентификатором текущего пользователя базы данных</p></li><li ><p ><code >self.env.user</code> запись текущего пользователя</p></li><li ><p ><code >self.env.context</code> или <code >self._context</code> это контекстная директория</p></li><li ><p ><code >self.env.ref(xml_id)</code> возвращает запись, соответствующую XML id</p></li><li ><p ><code >self.env[model_name]</code> возвращает окружение данной модели данных</p></li></ul></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Активные объекты - Значения по умолчанию</p><ul ><li ><p >Определите значение по умолчанию start_date как сегодня (см. <a href="../reference/orm.html#odoo.fields.Date" class="internal alert-link reference" title="odoo.fields.Date"><code class="py xref py-class">Date</code></a>).</p></li><li ><p >Добавьте поле <code >active</code> в классе <em >Session</em> установив значение <em >sessions</em> активным по умолчанию.</p></li></ul></div></section><section id="onchange"><h2 >Onchange</h2><p >Механизм «onchange» предоставляет возможность для клиентского интерфейса обновлять форму, когда пользователь заполняет значение в поле, не сохраняя ничего в базе данных.</p><p >Например, предположим, что модель имеет три поля <code >amount</code>, <code >unit_price</code> и <code >price</code>, и вы хотите обновить цену в форме, когда какие-либо другие поля изменены. Для этого определите метод, в котором <code >self</code> представляет запись в виде формы, и обозначьте его при помощи функции <a href="../reference/orm.html#odoo.api.onchange" class="internal reference" title="odoo.api.onchange"><code class="py xref py-func">onchange()</code></a>, чтобы указать, в каком поле она должна быть запущена. Любые изменения, внесенные вами в <code >self</code>, будут отражены в форме.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="c">&lt;!-- content of form view --&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;amount&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;unit_price&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;price&quot;</span> <span class="na">readonly=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># onchange handler</span>
+<span class="nd">@api.onchange</span><span class="p">(</span><span class="s1">&#39;amount&#39;</span><span class="p">,</span> <span class="s1">&#39;unit_price&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_onchange_price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># set auto-changing field</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amount</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_price</span>
+    <span class="c1"># Can optionally return a warning and domains</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;warning&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;Something bad happened&quot;</span><span class="p">,</span>
+            <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s2">&quot;It was very bad indeed&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p >Поведение вычисляемых полей, обозначенных тегом <code >onchange</code> ет быть предугадано путем отслеживания изменений в форме <em >Session</em> измените количество мест или присутствующих, и <code >taken_seats</code> индикатор прогресса обновиться автоматически.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Предупреждение</p><p >Добавьте явный <code >onchange</code>, чтобы предупредить о недопустимых значениях, таких как отрицательное количество мест или большее количество участников, чем места.</p></div></section><section id="model-constraints"><h2 >Ограничения модели данных</h2><p >Odoo предоставляет два способа настройки автоматической проверки инвариантов: <a href="../reference/orm.html#odoo.api.constrains" class="internal reference" title="odoo.api.constrains"><code class="py xref py-func">Python constraints</code></a> и <a href="../reference/orm.html#odoo.models.Model._sql_constraints" class="internal reference" title="odoo.models.Model._sql_constraints"><code class="py xref py-attr">SQL constraints</code></a>.</p><p >Ограничение Python определяется как метод с декоратором <a href="../reference/orm.html#odoo.api.constrains" class="internal reference" title="odoo.api.constrains"><code class="py xref py-func">constrains()</code></a>, и вызывается в наборе записей. Декоратор определяет, какие поля участвуют в ограничении, так что ограничение автоматически оценивается, когда одно из этих полей изменяется. Подразумевается, что метод вернет ошибку, если его инвариант не выполняется:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo.exceptions</span> <span class="k">import</span> <span class="n">ValidationError</span>
+
+<span class="nd">@api</span><span class="o">.</span><span class="n">constrains</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_check_something</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="s2">&quot;Your record is too old: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">record</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+    <span class="c1"># all records passed the test, don&#39;t return anything</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Добавьте ограничения Python</p><p >Добавьте ограничение, которое проверяет, что преподаватель не присутствует в списке посетителей его собственного занятия.</p></div><p >Ограничения SQL определяются с помощью атрибута модели данных <a href="../reference/orm.html#odoo.models.Model._sql_constraints" class="internal reference" title="odoo.models.Model._sql_constraints"><code class="py xref py-attr">_sql_constraints</code></a>. Последнему присваивается список троек из строк <code >(name, sql_definition, message)</code>, где <code >name</code> является допустимым именем ограничения SQL, <code >sql_definition</code> является выражением <a href="http://www.postgresql.org/docs/9.3/static/ddl-constraints.html" class="external reference">table_constraint</a> и <code >message</code> - сообщением об ошибке.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Добавить ограничения SQL</p><p >С помощью <a href="http://www.postgresql.org/docs/9.3/static/ddl-constraints.html" class="external reference alert-link">PostgreSQL's documentation</a> добавьте следующие ограничения:</p><ol ><li ><p >Проверьте, что описание курса и название курса различны</p></li><li ><p >Укажите <strong >уникальное</strong> название курса</p></li></ol></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Упражнение 6 - Добавьте механизм дублирования записи</p><p >Поскольку мы добавили ограничение уникальности названия курса, невозможно использовать функцию дублирования (<span class="menuselection">Form ‣ Duplicate</span>).</p><p >Переопределите метод <code >copy</code>, который позволяет дублировать объект <em >Course</em>, изменяя исходное имя на &quot;Copy of [original name]&quot;.</p></div></section><section id="advanced-views"><h2 >Расширенные представления</h2></section><section id="id3"><h3 >Преставления в виде Tree</h3><p >Представления вида Tree могут принимать дополнительные атрибуты для дальнейшей настройки их поведения:</p><dl ><dt ><code >decoration-{$name}</code></dt><dd ><p >Позволяют изменять стиль текста строки на основе атрибутов соответствующей записи.</p><p >Значения - это выражения Python. Для каждой записи выражение оценивается с атрибутами записи как значения контекста и если <code >true</code>, соответствующий стиль применяется к строке. Другими контекстными значениями являются <code >uid</code> (id текущего пользователя) и <code >current_date</code> (текущая дата в виде строки формата <code >yyyy-MM-dd</code>).</p><p ><code >{$name}</code> can be <code >bf</code> (<code >font-weight: bold</code>), <code >it</code>
+(<code >font-style: italic</code>), or any <a href="https://getbootstrap.com/docs/3.3/components/#available-variations" class="external reference">bootstrap contextual color</a> (<code >danger</code>,
+<code >info</code>, <code >muted</code>, <code >primary</code>, <code >success</code> or <code >warning</code>).</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;tree</span> <span class="na">string=</span><span class="s">&quot;Idea Categories&quot;</span> <span class="na">decoration-info=</span><span class="s">&quot;state==&#39;draft&#39;&quot;</span>
+    <span class="na">decoration-danger=</span><span class="s">&quot;state==&#39;trashed&#39;&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;state&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/tree&gt;</span>
+</pre></div>
+</div>
+</dd><dt ><code >editable</code></dt><dd ><p ><code >&quot;top&quot;</code> или <code >&quot;bottom&quot;</code>. Делает представления вида Tree доступным для редактирования в самих строках (вместо того, чтобы просматривать форму), значение - это позиция, где появляются новые строки.</p></dd></dl><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Использование цветов</p><p >Измените представление вида Tree модели данных <em >Session</em> таким образом, чтобы курсы продолжительностью менее 5 дней были окрашены в синий цвет, а длящиеся более 15 дней, окрашены в красный цвет.</p></div></section><section id="calendars"><h3 >Представления вида Calendar</h3><p >Отображает записи, как события календаря. Их корневым элементом является <code >&lt;calendar&gt;</code>, а их наиболее распространенными атрибутами являются:</p><dl ><dt ><code >color</code></dt><dd ><p >Имя поля, используемое для <em >сегментации цветом</em>. Цвета автоматически распределяются по событиям. События в одном цветовом сегменте (записи, имеющие одинаковое значение для их поля <code >@color</code>) будут иметь одинаковый цвет.</p></dd><dt ><code >date_start</code></dt><dd ><p >Поле записи, содержащее дату/время начала события</p></dd><dt ><code >date_stop</code> (опционально)</dt><dd ><p >Поле записи, содержащее конечную дату/время события</p></dd><dt ><code >string</code></dt><dd >record's field to define the label for each calendar event</dd></dl><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;calendar</span> <span class="na">string=</span><span class="s">&quot;Ideas&quot;</span> <span class="na">date_start=</span><span class="s">&quot;invent_date&quot;</span> <span class="na">color=</span><span class="s">&quot;inventor_id&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/calendar&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Представление вида Calendar</p><p >Добавьте представление вида Calendar к модели данных <em >Session</em>, чтобы пользователь мог просматривать события, связанные с Open Academy.</p></div></section><section id="id4"><h3 >Преставления в виде Search</h3><p >Элементы <code >&lt;field&gt;</code> представления вида Search могут иметь <code >filter_domain</code>, который переопределяет домен, сгенерированный для поиска по данному полю. В данной области <code >self</code> представляет собой значение, введенное пользователем. В приведенном ниже примере он используется для поиска по обоим полям <code >name</code> и``description``.</p><p >Представление вида Search также могут содержать элементы <code >&lt;filter&gt;</code>, которые действуют как кнопки предопределенных поисков. Фильтры должны иметь один из следующих атрибутов:</p><dl ><dt ><code >domain</code></dt><dd ><p >Добавит данный домен в текущий поиск</p></dd><dt ><code >context</code></dt><dd ><p >Добавит некоторый контекст в текущий поиск; Используйте ключ <code >group_by</code> для группировки результатов по данному имени поля</p></dd></dl><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;search</span> <span class="na">string=</span><span class="s">&quot;Ideas&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">string=</span><span class="s">&quot;Name and description&quot;</span>
+           <span class="na">filter_domain=</span><span class="s">&quot;[&#39;|&#39;, (&#39;name&#39;, &#39;ilike&#39;, self), (&#39;description&#39;, &#39;ilike&#39;, self)]&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inventor_id&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;country_id&quot;</span> <span class="na">widget=</span><span class="s">&quot;selection&quot;</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;filter</span> <span class="na">name=</span><span class="s">&quot;my_ideas&quot;</span> <span class="na">string=</span><span class="s">&quot;My Ideas&quot;</span>
+            <span class="na">domain=</span><span class="s">&quot;[(&#39;inventor_id&#39;, &#39;=&#39;, uid)]&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;group</span> <span class="na">string=</span><span class="s">&quot;Group By&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;filter</span> <span class="na">name=</span><span class="s">&quot;group_by_inventor&quot;</span> <span class="na">string=</span><span class="s">&quot;Inventor&quot;</span>
+                <span class="na">context=</span><span class="s">&quot;{&#39;group_by&#39;: &#39;inventor_id&#39;}&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/group&gt;</span>
+<span class="nt">&lt;/search&gt;</span>
+</pre></div>
+</div>
+<p >Чтобы использовать в действии нестандартное представление вида Search, нужно указать связь, используя поле <code >search_view_id</code> в записи действия.</p><p >Действие также может устанавливать значения по умолчанию для полей поиска через поле <code >context</code>: контекстные ключи формы <code class="samp">search_default_<em >field_name</em></code> будут инициализировать <em >field_name</em> с предоставленным значением. Чтобы иметь значение по умолчанию и вести себя как логические значения (их можно включить только по умолчанию), в фильтре поиска должно быть определено необязательное <code >@name</code>.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Преставления в виде Search</p><ol ><li ><p >Добавьте кнопку для фильтрации курсов, для которых текущий пользователь является ответственным в представлении вида Search курса. Сделайте его выбранным по умолчанию.</p></li><li ><p >Добавьте кнопку для группировки Курсов по ответственному пользователю.</p></li></ol></div></section><section id="gantt"><h3 >Представление вида Gantt</h3><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >Для представление вида Gantt требуется модуль web_gantt который присутствует в <a href="../setup/install.html#setup-install-editions" class="internal alert-link reference"><span class="std std-ref">редакции Enterprise</span></a></p></div><p >Горизонтальные гистограммы, которые обычно используются для отображения планирования и продвижения проекта, их корневым элементом является <code >&lt;gantt&gt;</code>.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;gantt</span> <span class="na">string=</span><span class="s">&quot;Ideas&quot;</span>
+       <span class="na">date_start=</span><span class="s">&quot;invent_date&quot;</span>
+       <span class="na">date_stop=</span><span class="s">&quot;date_finished&quot;</span>
+       <span class="na">progress=</span><span class="s">&quot;progress&quot;</span>
+       <span class="na">default_group_by=</span><span class="s">&quot;inventor_id&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Диаграммы Ганта</p><p >Добавьте диаграмму Ганта, чтобы пользователь мог просматривать планирование сеансов, связанное с модулем Open Academy. Курсы должны быть сгруппированы по инструкторам.</p></div></section><section id="graph-views"><h3 >Представление вида Graph</h3><p >Представления вида Graph позволяют делать сборный обзор и анализ моделей данных, их корневым элементом является <code >&lt;graph&gt;</code>.</p><div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >Сводные представления (элемент <code >&lt;pivot&gt;</code>) - это многомерная таблица позволяют выбирать фильтры и измерения, чтобы получить правильный агрегированный набор данных, прежде чем переходить к более графическому обзору. В сводном представлении используется одно и то же определение содержимого в виде графиков.</p></div><p >Представления вида Graph имеют 4 режима отображения, режим по умолчанию выбирается с помощью атрибута <code >@type</code>.</p><dl ><dt >Bar (по умолчанию)</dt><dd ><p >Гистограмма, первое измерение используется для определения групп по горизонтальной оси, другие измерения определяют агрегированные бары внутри каждой группы.</p><p >По умолчанию столбцы расположены бок о бок, они могут быть сложены с помощью <code >@stacked=&quot;True&quot;</code> на <code >&lt;graph&gt;</code></p></dd><dt >Line</dt><dd ><p >2-мерная линейная диаграмма</p></dd><dt >Pie</dt><dd ><p >2-мерный круговая диаграмма, разделенная на сектора</p></dd></dl><p >Представления вида Graph содержат <code >&lt;field&gt;</code> с обязательным атрибутом <code >@type</code>, принимающим значения:</p><dl ><dt ><code >row</code> (по умолчанию)</dt><dd ><p >Поле по умолчанию, в отношении которого будет совершен сбор данных</p></dd><dt ><code >measure</code></dt><dd ><p >объединяет значения величин всех дочерних объектов, игнорируя их группы</p></dd></dl><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;graph</span> <span class="na">string=</span><span class="s">&quot;Total idea score by Inventor&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inventor_id&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;score&quot;</span> <span class="na">type=</span><span class="s">&quot;measure&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/graph&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >Представления вида Graph выполняют сбор значений из базы данных, они не работают с несохраненными вычисленными полями.</p></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Представления вида Graph</p><p >Добавьте представление вида Graph в объект «Session», отображающий для каждого курса количество участников в виде гистограммы.</p></div></section><section id="kanban"><h3 >Представление вида Kanban</h3><p >Используется для организации задач, производственных процессов и т.д ... их корневым элементом является <code >&lt;kanban&gt;</code>.</p><p >Представление вида Kanban показывает набор карточек, которые могут быть сгруппированы в столбцы. Каждая карточка представляет собой запись, а в каждом столбце - значения поля состояния.</p><p >Например, задачи проекта могут быть организованы поэтапно (каждый столбец - это этап) или ответственным (каждый столбец является пользователем) и т.д.</p><p >Представления вида Kanban определяют структуру каждой карточки, как сочетание элементов формы (включая базовый HTML) и <a href="../reference/qweb.html#reference-qweb" class="internal reference"><span class="std std-ref">Qweb</span></a>.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Представление вида Kanban</p><p >Добавьте представление вида Kanban, в котором отображаются занятия, сгруппированные по курсу (столбцы, таким образом, являются курсами).</p></div></section><section id="security"><h2 >Безопасность</h2><p >Чтобы политика безопасности была согласована (без противоречий), необходимо правильно настроить контроль доступа.</p></section><section id="group-based-access-control-mechanisms"><h3 >Контроль доступа, основанный на группах пользователей</h3><p >Группы создаются как записи модели данных <code >res.groups</code>, и предоставляют доступ к меню через определение меню (в соответствующем XML файле). Однако даже без меню объекты могут все еще быть доступны косвенно, поэтому для групп должны быть определены разрешения на уровне объекта (чтение, запись, создание, отключение). Они обычно вставляются через CSV-файлы внутри модулей. Также можно ограничить доступ к определенным полям для представления или объекта, используя атрибут групп полей.</p></section><section id="access-rights"><h3 >Права доступа</h3><p >Права доступа определяются, как записи в `` ir.model.access``. каждое правило связано с определенной моделью данных, группой (или же <em >no group</em> для глобальных ресурсов), а также набором разрешений: чтение, запись, создание, отключение. Обычно, такие правила заданы в файле CSV, названном по имени модели данных: <code >ir.model.access.csv</code>.</p><div class="highlight-text"><div class="highlight"><pre><span></span>id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_idea_idea,idea.idea,model_idea_idea,base.group_user,1,1,1,0
+access_idea_vote,idea.vote,model_idea_vote,base.group_user,1,1,1,0
+</pre></div>
+</div>
+<div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Добавить управление доступом через интерфейс Odoo</p><p >Создайте нового пользователя &quot;John Smith&quot;. Затем создайте группу &quot;OpenAcademy/Session Read&quot; с доступом на чтение к модели <em >Session</em>.</p></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Добавление контроля доступа с помощью файлов данных в вашем модуле</p><p >Используя файлы данных,</p><ul ><li ><p >Создайте группу <em >OpenAcademy/Manager</em> с полным доступом ко всем моделям данных OpenAcademy</p></li><li ><p >Сделайте <em >Session</em> и <em >Course</em> доступными для чтения для всех пользователей</p></li></ul></div></section><section id="record-rules"><h3 >Правила записи</h3><p >Права записи определяют ограничения доступа к списку записей конкретной модели данных. Правило представляет собой запись модели данных <code >ir.rule</code> и связано с моделью данных, группами (поле many2many), разрешениями, к которым применяется ограничение, а также с <em >domain</em>. <em >Domain</em> указывает, к каким записям права доступа ограничены.</p><p >Ниже приведен пример правила, которое предотвращает удаление записей, в котором не указан атрибут <code >cancel</code>. Обратите внимание, что значение поля <code >groups</code> должно соответствовать тому же соглашению, что и метод <a href="../reference/orm.html#odoo.models.Model.write" class="internal reference" title="odoo.models.Model.write"><code class="py py-meth xref">write()</code></a> в ORM.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;delete_cancelled_only&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.rule&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Only cancelled leads may be deleted<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;crm.model_crm_lead&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;groups&quot;</span> <span class="na">eval=</span><span class="s">&quot;[(4, ref(&#39;sales_team.group_sale_manager&#39;))]&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;perm_read&quot;</span> <span class="na">eval=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;perm_write&quot;</span> <span class="na">eval=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;perm_create&quot;</span> <span class="na">eval=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;perm_unlink&quot;</span> <span class="na">eval=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;domain_force&quot;</span><span class="nt">&gt;</span>[(&#39;state&#39;,&#39;=&#39;,&#39;cancel&#39;)]<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Правило записи</p><p >Добавьте правило записи для модели данных «Course» и группу «OpenAcademy/Manager», которая ограничивает <code >write</code> и <code >unlink</code> доступ к ответственным за курс. Если у курса нет ответственного, все пользователи группы должны иметь возможность изменить его.</p></div></section><section id="wizards"><h2 >Помощники</h2><p >Помощники описывают интерактивную работу с пользователями через динамические формы. Мастер - это модель данных, которая расширяет класс: <code class="py xref py-class">TransientModel</code> вместо <a href="../reference/orm.html#odoo.models.Model" class="internal reference" title="odoo.models.Model"><code class="py xref py-class">Model</code></a>. Класс <code class="py xref py-class">TransientModel</code> расширяет <a href="../reference/orm.html#odoo.models.Model" class="internal reference" title="odoo.models.Model"><code class="py xref py-class">Model</code></a> и повторно использует все его существующие механизмы со следующими особенностями:</p><ul ><li ><p >Записи мастера не являются постоянными; Они автоматически удаляются из базы данных через определенное время. Вот почему они называются <em >transient</em> (транзитные).</p></li><li ><p >Модели помощников не нуждаются в явных объявлениях прав доступа: пользователи имеют все права доступа к записям помощников.</p></li><li ><p >Записи мастера могут относиться как к обычным записям, так и к записям полей many2one, а регулярные записи <em >не могут</em> ссылаться на записи мастера через поле many2one.</p></li></ul><p >Мы хотим создать помощника, который позволит пользователям становиться участниками определенного Курса или списка Курсов одновременно.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Определение помощника</p><p >Создайте модель помощника с отношением many2one с моделью <em >Session</em> и отношением many2many с моделью <em >Partner</em>.</p></div></section><section id="launching-wizards"><h3 >Запуск помощников</h3><p >Запустить помощника можно через <code >ir.actions.act_window</code>, указав в поле <code >target</code> значение <code >new</code>. Последний открывает окно помощника в новом  всплывающем окне. Действие может быть вызвано пунктом меню.</p><p >Также, существует и другой вариант запуска: Используйте код <code >ir.actions.act_window</code>, как указано выше, но, добавив туда еще одну инструкцию <code >src_model</code>, определяющую, в контексте какой модели действие будет доступно. Помощник появится строго при определенных условиях, расположившись поверх основного окна. В данном случае, через ORM, все это прописывается в файле XML с тэгом <code >act_window</code>.</p><div class="xml highlight-default code"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">act_window</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;launch_the_wizard&quot;</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Launch the Wizard&quot;</span>
+            <span class="n">src_model</span><span class="o">=</span><span class="s2">&quot;context.model.name&quot;</span>
+            <span class="n">res_model</span><span class="o">=</span><span class="s2">&quot;wizard.model.name&quot;</span>
+            <span class="n">view_mode</span><span class="o">=</span><span class="s2">&quot;form&quot;</span>
+            <span class="n">target</span><span class="o">=</span><span class="s2">&quot;new&quot;</span>
+            <span class="n">key2</span><span class="o">=</span><span class="s2">&quot;client_action_multi&quot;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p >Помощник использует стандартное представление, а его кнопки могут снабжаться атрибутом  <code >special = &quot;cancel &quot;</code>, чтобы закрыть окно помощника без сохранения.</p><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Запуск помощника</p><ol ><li ><p >Определите представление вида Form.</p></li><li ><p >Добавьте действие, позволяющее запуск в контексте модели данных <em >Session</em>.</p></li><li ><p >В помощнике определите значение по умолчанию для поля сессии; используйте контекстный параметр <code >self._context</code> для получения текущей сессии.</p></li></ol></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Регистрация слушателей курсов</p><p >В помощнике нужно добавить кнопки и ввести соответствующий метод для добавления слушателей в данный Курс.</p></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Регистрация слушателей на несколько курсов</p><p >Измените модель данных помощника, чтобы слушатели могли быть зарегистрированы на несколько Курсов.</p></div></section><section id="internationalization"><h2 >Переводы</h2><p >Каждый модуль может иметь несколько вариантов перевода. Все они находятся в папке i18n в виде LANG.po файлов, где LANG - код локали для языка, или же, комбинация Язык_Страна, в случае, если они отличаются (пример: pt.po или pt_BR.po). Перевод будет автоматически втянут в Odoo для всех отмеченных языков. Разработчики используют английский для создания модулей, затем экспортируют термины модуля в Odoo's через gettext POT export (<span class="menuselection">Settings ‣ Translations ‣ Import/Export ‣ Export Translation</span>  без указания языка), создавая пустой шаблон POT, добавляя затем еще и файлы  переводов PO. Множество IDE's снабжены специальными инструментами для работы с файлами PO/POT.</p><div role="alert" class="alert-info alert"><h3 class="alert-title">Совет</h3><p >Сгенерированные Odoo PO-файлы можно разместить на  <a href="https://www.transifex.com/odoo/public/" class="external reference alert-link">Transifex</a>, что облегчает перевод программного обеспечения.</p></div><div class="highlight-text"><div class="highlight"><pre><span></span>|- idea/ # The module directory
+   |- i18n/ # Translation files
+      | - idea.pot # Translation Template (exported from Odoo)
+      | - fr.po # French translation
+      | - pt_BR.po # Brazilian Portuguese translation
+      | (...)
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><h3 class="alert-title">Совет</h3><p >По умолчанию, Odoo's файлы POT представляют собой файлы типа XML с определениями в полях на языке Python, где любая строка Python может быть переведена путем окружения ее функцией <code class="py xref py-func">odoo._()</code> (например <code >_(&quot;Label&quot;)</code>)</p></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Переведите модуль</p><p >Выберите второй язык, устанавливаемый в Odoo. Переведите модуль при помощи инструментов, предоставляемых Odoo.</p></div></section><section id="reporting"><h2 >Отчеты</h2></section><section id="printed-reports"><h3 >Отчеты для печати</h3><p >В Odoo 11.0 используется механизм отчетов, основанный на <a href="../reference/qweb.html#reference-qweb" class="internal reference"><span class="std std-ref">Qweb</span></a>, <a href="http://getbootstrap.com" class="external reference">Twitter Bootstrap</a> и <a href="http://wkhtmltopdf.org" class="external reference">Wkhtmltopdf</a>.</p><p >Отчет представляет собой комбинацию двух элементов:</p><ul ><li ><p ><code >ir.actions.report.xml</code>, для которого предоставляется элемент быстрого доступа [UNKNOWN NODE problematic]&lt;report&gt; [UNKNOWN NODE problematic], он устанавливает различные базовые параметры для отчета (тип по умолчанию, должен ли отчет быть сохранен в базе данных после генерации , ...)</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;report</span>
+    <span class="na">id=</span><span class="s">&quot;account_invoices&quot;</span>
+    <span class="na">model=</span><span class="s">&quot;account.invoice&quot;</span>
+    <span class="na">string=</span><span class="s">&quot;Invoices&quot;</span>
+    <span class="na">report_type=</span><span class="s">&quot;qweb-pdf&quot;</span>
+    <span class="na">name=</span><span class="s">&quot;account.report_invoice&quot;</span>
+    <span class="na">file=</span><span class="s">&quot;account.report_invoice&quot;</span>
+    <span class="na">attachment_use=</span><span class="s">&quot;True&quot;</span>
+    <span class="na">attachment=</span><span class="s">&quot;(object.state in (&#39;open&#39;,&#39;paid&#39;)) and</span>
+<span class="s">        (&#39;INV&#39;+(object.number or &#39;&#39;).replace(&#39;/&#39;,&#39;&#39;)+&#39;.pdf&#39;)&quot;</span>
+<span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</li><li ><p >Стандартный вид <a href="../reference/views.html#reference-views-qweb" class="internal reference"><span class="std std-ref">QWeb view</span></a> для отчета:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;web.html_container&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;docs&quot;</span> <span class="na">t-as=</span><span class="s">&quot;o&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;web.external_layout&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h2&gt;</span>Report title<span class="nt">&lt;/h2&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/t&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+
+the standard rendering context provides a number of elements, the most
+important being:
+
+``docs``
+    the records for which the report is printed
+``user``
+    the user printing the report
+</pre></div>
+</div>
+</li></ul><p >Поскольку отчеты являются стандартными веб-страницами, они доступны через URL, а выходные параметры могут обрабатываться по этому URL-адресу, например, HTML-версия отчета <em >Invoice</em> доступна через <a href="http://localhost:8069/report/html/account.report_invoice/1" class="external reference">http://localhost:8069/report/html/account.report_invoice/1</a> (если установлен модуль ​​``account``) и версия PDF через <a href="http://localhost:8069/report/pdf/account.report_invoice/1" class="external reference">http://localhost:8069/report/pdf/account.report_invoice/1</a>.</p><div role="alert" class="alert-danger alert" id="reference-backend-reporting-printed-reports-pdf-without-styles"><h3 class="alert-title">Опасно</h3><p >Если кажется, что в вашем отчете PDF отсутствуют стили (т.е. Текст появляется, но стиль/макет отличается от версии html), возможно, ваш процесс <a href="http://wkhtmltopdf.org" class="external reference alert-link">wkhtmltopdf</a> не может 'достучаться' до вашего веб-сервера, чтобы загрузить их.</p><p >Проверьте логи сервера,в них можно найти проблемы с загрузкой CSS при создании отчета в формате PDF.</p><p >Процесс <a href="http://wkhtmltopdf.org" class="external reference alert-link">wkhtmltopdf</a> использует системный параметр <code >web.base.url</code> качестве корневого каталога для доступа ко всем файлам отчетов, однако, их параметр обновляется каждый раз при входе администратора. Если ваш сервер находится за прокси, он может быть недоступен. Это исправляется путем редактирования системных параметров:</p><ul ><li ><p ><code >report.url</code>, указывающих на URL доступа к серверу (возможно <code >http://localhost:8069</code> или нечто подобное). Этот адрес будет использоваться только для данной операции.</p></li><li ><p ><code >web.base.url.freeze</code>, установленный в <code >True</code>, остановит автоматическое обновление через <code >web.base.url</code>.</p></li></ul></div><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Создайте отчет для модели данных <em >Session</em></p><p >Для каждого курса в отчете должно быть отображено ее имя, время ее начала и окончания, а также список участников слушателей Курса.</p></div></section><section id="dashboards"><h3 >Сводные отчеты</h3><div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Определите сводный отчет</p><p >Определите сводный отчет, содержащий созданный вами график, вид календаря сеансов и список курсов (переключаемый на вид). Эта панель должна быть доступна через меню и автоматически отображаться в веб-клиенте, когда выбрано главное меню OpenAcademy.</p></div></section><section id="webservices"><h2 >Веб сервисы</h2><p >Модуль веб-сервиса предлагает общий интерфейс для всех веб-сервисов</p><ul ><li >XML-RPC</li><li >JSON-RPC</li></ul><p >Бизнес-объекты также могут быть доступны через механизм распределенных объектов. Все они могут быть изменены с помощью клиентского интерфейса в контекстных представлениях.</p><p >Odoo доступна через интерфейсы XML-RPC/JSON-RPC, для которых библиотеки существуют на многих языках.</p></section><section id="xml-rpc-library"><h3 >Библиотека XML-RPC</h3><p >В данном примере отражено взаимодействие программы на Python 3 с сервером Odoo по средствам библиотеки <code >xmlrpc.client</code>:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xmlrpc.client</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="s1">&#39;http://</span><span class="si">%s</span><span class="s1">:</span><span class="si">%d</span><span class="s1">/xmlrpc/&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">)</span>
+
+<span class="n">uid</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="s1">&#39;common&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">DB</span><span class="p">,</span> <span class="n">USER</span><span class="p">,</span> <span class="n">PASS</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Logged in as </span><span class="si">%s</span><span class="s2"> (uid: </span><span class="si">%d</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">USER</span><span class="p">,</span> <span class="n">uid</span><span class="p">))</span>
+
+<span class="c1"># Create a new note</span>
+<span class="n">sock</span> <span class="o">=</span> <span class="n">xmlrpc</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ServerProxy</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="s1">&#39;object&#39;</span><span class="p">)</span>
+<span class="n">args</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;color&#39;</span> <span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">&#39;memo&#39;</span> <span class="p">:</span> <span class="s1">&#39;This is a note&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;create_uid&#39;</span><span class="p">:</span> <span class="n">uid</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">note_id</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">DB</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">PASS</span><span class="p">,</span> <span class="s1">&#39;note.note&#39;</span><span class="p">,</span> <span class="s1">&#39;create&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-exercise alert"><h3 class="alert-title">Exercise</h3><p >Добавим новую службу к клиенту</p><p >Напишите программу на Python, которая может отправлять запросы XML-RPC на компьютер, на котором запущен Odoo (ваш компьютер или вашего инструктора). Эта программа должна отображать все Курсы и их соответствующее количество мест. Она также должен уметь создать новое занятие для одного из курсов.</p></div></section><section id="json-rpc-library"><h3 >Библиотека JSON-RPC</h3><p >The following example is a Python 3 program that interacts with an Odoo server
+with the standard Python libraries <code >urllib.request</code> and <code >json</code>. This
+example assumes the <strong >Productivity</strong> app (<code >note</code>) is installed:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">8069</span>
+<span class="n">DB</span> <span class="o">=</span> <span class="s1">&#39;openacademy&#39;</span>
+<span class="n">USER</span> <span class="o">=</span> <span class="s1">&#39;admin&#39;</span>
+<span class="n">PASS</span> <span class="o">=</span> <span class="s1">&#39;admin&#39;</span>
+
+<span class="k">def</span> <span class="nf">json_rpc</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="n">method</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="n">params</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000000000</span><span class="p">),</span>
+    <span class="p">}</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+    <span class="n">reply</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">reply</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">reply</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">service</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">json_rpc</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">service</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="n">method</span><span class="p">,</span> <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="n">args</span><span class="p">})</span>
+
+<span class="c1"># log in the given database</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://</span><span class="si">%s</span><span class="s2">:</span><span class="si">%s</span><span class="s2">/jsonrpc&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">)</span>
+<span class="n">uid</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="s2">&quot;common&quot;</span><span class="p">,</span> <span class="s2">&quot;login&quot;</span><span class="p">,</span> <span class="n">DB</span><span class="p">,</span> <span class="n">USER</span><span class="p">,</span> <span class="n">PASS</span><span class="p">)</span>
+
+<span class="c1"># create a new note</span>
+<span class="n">args</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">&#39;memo&#39;</span><span class="p">:</span> <span class="s1">&#39;This is another note&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;create_uid&#39;</span><span class="p">:</span> <span class="n">uid</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">note_id</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="s2">&quot;execute&quot;</span><span class="p">,</span> <span class="n">DB</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">PASS</span><span class="p">,</span> <span class="s1">&#39;note.note&#39;</span><span class="p">,</span> <span class="s1">&#39;create&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >Примеры могут быть легко адаптированы из XML-RPC в JSON-RPC.</p><div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >Существует ряд высокоуровневых API на разных языках для доступа к системам Odoo без явного обращения к XML-RPC или JSON-RPC, таких как:</p><ul ><li ><a href="https://github.com/akretion/ooor" class="external reference alert-link">https://github.com/akretion/ooor</a></li><li ><a href="https://github.com/OCA/odoorpc" class="external reference alert-link">https://github.com/OCA/odoorpc</a></li><li ><a href="https://github.com/nicolas-van/openerp-client-lib" class="external reference alert-link">https://github.com/nicolas-van/openerp-client-lib</a></li><li ><a href="http://pythonhosted.org/OdooRPC" class="external reference alert-link">http://pythonhosted.org/OdooRPC</a></li><li ><a href="https://github.com/abhishek-jaiswal/php-openerp-lib" class="external reference alert-link">https://github.com/abhishek-jaiswal/php-openerp-lib</a></li></ul></div><div class="footnote" id="autofields"><span class="footnote-label"><a class="footnote-backref" href="#id2">[1]</a></span> <p >Можно <a href="../reference/orm.html#odoo.models.Model._log_access" class="internal reference" title="odoo.models.Model._log_access"><code class="py xref py-attr">отключить автоматическое создание некоторых полей</code></a></p></div><div class="footnote" id="rawsql"><span class="footnote-label"><a class="footnote-backref" href="#id1">[2]</a></span> <p >Запись прямых SQL-запросов возможна, но требует осторожности, поскольку обходит все механизмы аутентификации и безопасности Odoo.</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+      <div id="footer" class="container o_not_editable">
+          <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+          <div class="row">
+              <div class="col-xs-12">
+                  <hr/>
+                  <p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                  <hr/>
+                  <p>
+                      <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br/> <br/>
+                      В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="o_footer_bottom o_not_editable">
+          <div class="container">
+              <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+              <div class="social-links pull-right">
+                  <a href="https://www.odoo.com/web/about/facebook">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/twitter">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/linkedin">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:info@odoo.com">
+                      <i class="fa fa-envelope"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

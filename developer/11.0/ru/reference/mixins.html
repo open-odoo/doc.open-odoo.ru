@@ -1,0 +1,578 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600" rel="stylesheet">
+  
+    <title>Смесины и полезные классы &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '11.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Соглашение об оформлении кода в Odoo" href="guidelines.html" />
+    <link rel="prev" title="Отчеты QWeb" href="reports.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+  <div class="o_main_header_main">
+    <a class="pull-left o_logo" href="/"></a>
+    <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="mdi-navigation-menu"></span>
+    </a>
+    <ul class="o_primary_nav">
+      <li><a href="/">Документация</a></li>
+    </ul>
+  </div>
+  <nav class="navbar o_sub_nav">
+    <div class="container">
+      <div class="navbar-header visible-xs">
+          <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+            Меню
+            <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+          </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="o_sub-menu">
+        <ol class="o_breadcrumb breadcrumb nav navbar-left">
+            
+            
+            
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (11.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Смесины и полезные классы</a></li>
+
+            
+        </ol>
+
+        <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/11.0/en/reference/mixins.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/reference/mixins.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/reference/mixins.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/mixins.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+<li><a href="/developer/11.0/ru/python3.html">Python 3</a></li>
+          
+
+          
+            <li class="divider"></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/mixins.jpg');"></span>
+      <div class="container text-center">
+        <h1> Смесины и полезные классы - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+      <main class="container ">
+        
+        <div class="o_content row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#messaging-features" class="ripple internal reference">Функции обмена сообщениями</a><ul ><li class="list-group-item"><a href="#messaging-integration" class="ripple internal reference">Интеграция сообщений</a><ul ><li class="list-group-item"><a href="#basic-messaging-system" class="ripple internal reference">Базовая система обмена сообщениями</a></li><li class="list-group-item"><a href="#logging-changes" class="ripple internal reference">Регистрация изменений</a></li><li class="list-group-item"><a href="#subtypes" class="ripple internal reference">Подтипы</a></li><li class="list-group-item"><a href="#customizing-notifications" class="ripple internal reference">Настройка уведомлений</a></li><li class="list-group-item"><a href="#overriding-defaults" class="ripple internal reference">Переопределение значений по умолчанию</a></li></ul></li><li class="list-group-item"><a href="#mail-alias" class="ripple internal reference">Почтовый псевдоним</a><ul ><li class="list-group-item"><a href="#aliases-vs-incoming-mail-gateway" class="ripple internal reference">Псевдонимы и входящий почтовый шлюз</a></li><li class="list-group-item"><a href="#alias-support-integration" class="ripple internal reference">Поддержка интеграции псевдонимов</a></li></ul></li><li class="list-group-item"><a href="#activities-tracking" class="ripple internal reference">Activities tracking</a></li></ul></li><li class="list-group-item"><a href="#website-features" class="ripple internal reference">Возможности веб-сайта</a><ul ><li class="list-group-item"><a href="#visitor-tracking" class="ripple internal reference">Отслеживание посетителей</a></li><li class="list-group-item"><a href="#website-visibility" class="ripple internal reference">Видимость веб-сайта</a></li><li class="list-group-item"><a href="#website-metadata" class="ripple internal reference">Метаданные веб-сайта</a></li></ul></li><li class="list-group-item"><a href="#others" class="ripple internal reference">Другие</a><ul ><li class="list-group-item"><a href="#customer-rating" class="ripple internal reference">Рейтинг клиентов</a><ul ><li class="list-group-item"><a href="#adding-rating-on-your-model" class="ripple internal reference">Добавление рейтинга вашей модели</a></li><li class="list-group-item"><a href="#send-rating-requests-by-e-mail" class="ripple internal reference">Отправить запрос на оценку по электронной почте</a></li></ul></li></ul></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/11.0/doc/reference/mixins.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+		  <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+          <article class="doc-body ">
+            
+            
+            
+  <section id="mixins-and-useful-classes"><i id="reference-mixins"></i><p >Odoo реализует некоторые полезные классы и смеси, которые упрощают добавление часто используемых поведений к вашим объектам. В этом руководстве подробно описываются большинство из них, примеры и варианты использования.</p></section><section id="messaging-features"><i id="reference-mixins-mail"></i><h2 >Функции обмена сообщениями</h2></section><section id="messaging-integration"><i id="reference-mixins-mail-chatter"></i><h3 >Интеграция сообщений</h3></section><section id="basic-messaging-system"><h4 >Базовая система обмена сообщениями</h4><p >Интеграция функций обмена сообщениями в вашу модель чрезвычайно проста. Просто наследуя модель `` mail.thread`` и добавляя поля сообщений (и соответствующие им виджеты) в ваше представление формы, вы сразу же получите и заработаете.</p><div role="alert" class="admonition-example alert"><h3 class="alert-title">Пример</h3><p >Давайте создадим упрощенную модель, представляющую командировку. Поскольку организация такого рода поездок обычно включает в себя много людей и много дискуссий, давайте добавим поддержку обмена сообщениями по модели.</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BusinessTrip</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;business.trip&#39;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mail.thread&#39;</span><span class="p">]</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Business Trip&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+    <span class="n">partner_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Responsible&#39;</span><span class="p">)</span>
+    <span class="n">guest_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2many</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Participants&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >В представлении формы:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;businness_trip_form&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>business.trip.form<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>business.trip<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;form</span> <span class="na">string=</span><span class="s">&quot;Business Trip&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Your usual form view goes here</span>
+<span class="c">            ...</span>
+<span class="c">            Then comes chatter integration --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_chatter&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;message_follower_ids&quot;</span> <span class="na">widget=</span><span class="s">&quot;mail_followers&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;message_ids&quot;</span> <span class="na">widget=</span><span class="s">&quot;mail_thread&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+</div><p >После того, как вы добавили поддержку болтовни в свою модель, пользователи могут легко добавлять сообщения или внутренние заметки на любую запись вашей модели; Каждый из них отправит уведомление (всем последователям для сообщений, сотрудникам (* base.group_user [UNKNOWN NODE problematic]) для внутренних заметок). Если ваш почтовый шлюз и полный адрес настроены правильно, эти уведомления будут отправляться по электронной почте и могут быть отправлены прямо из вашего почтового клиента; Автоматическая система маршрутизации направит ответ на правильный поток.</p><p >На стороне сервера есть несколько вспомогательных функций, которые помогут вам легко отправлять сообщения и управлять подписчиками на вашей записи:</p><h5 >Отправка сообщений</h5><section class="code-method"><h6 id="message_post"><code>message_post(<em>self</em>, <em>body=''</em>, <em>subject=None</em>, <em>message_type='notification'</em>, <em>subtype=None</em>, <em>parent_id=False</em>, <em>attachments=None</em>, <em>content_subtype='html'</em>, <em>**kwargs</em>)</code></h6><p >Опубликуйте новое сообщение в существующем потоке, возвратив новый идентификатор mail.message.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >body</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#str" class="external reference alert-link" title="(в Python v3.7)"><code >str</code></a>) -- Тело сообщения, обычно необработанный HTML, который будет дезинфицирован</li><li ><strong >message_type</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#str" class="external reference alert-link" title="(в Python v3.7)"><code >str</code></a>) -- См. Поле mail_message.type</li><li ><strong >content_subtype</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#str" class="external reference alert-link" title="(в Python v3.7)"><code >str</code></a>) -- If plaintext: преобразовать тело в html</li><li ><strong >parent_id</strong> (<a href="https://docs.python.org/3/library/functions.html#int" class="external reference alert-link" title="(в Python v3.7)"><code >int</code></a>) -- Обработать ответ на предыдущее сообщение, добавив родительских партнеров в сообщение в случае личного обсуждения</li><li ><strong >attachments</strong> (<code >list(tuple(str,str))</code>) -- Список наборов вложений в форме `` (name, content) [UNKNOWN NODE problematic], где контент НЕ кодируется base64</li><li ><strong >**kwargs</strong> -- Дополнительные аргументы ключевого слова будут использоваться как значения столбца по умолчанию для новой записи mail.message</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Идентификатор вновь созданного mail.message</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body"><a href="https://docs.python.org/3/library/functions.html#int" class="external reference alert-link" title="(в Python v3.7)">int</a></div></div></div></section><section class="code-method"><h6 ><code>message_post_with_view(views_or_xmlid, **kwargs):</code></h6><p >Вспомогательный метод для отправки почты / публикации сообщения с использованием view_id для визуализации с использованием движка ir.qweb. Этот метод является самостоятельным, потому что в шаблоне и композиторе нет ничего, что позволяет обрабатывать представления в пакетном режиме. Этот метод, вероятно, исчезнет, ​​когда шаблоны обрабатывают ir ui views.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >or ir.ui.view record</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#str" class="external reference alert-link" title="(в Python v3.7)"><code >str</code></a>) -- Внешний идентификатор или запись представления, которое должно быть отправлено</div></div></div></section><section class="code-method"><h6 id="message_post_with_template"><code>message_post_with_template(<em>template_id</em>, <em>**kwargs</em>)</code></h6><p >Вспомогательный метод для отправки почты с шаблоном</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >template_id</strong> -- Идентификатор шаблона, отображаемого для создания тела сообщения.</li><li ><strong >**kwargs</strong> -- Параметр для создания mail.compose.message wizzard (который унаследован от mail.message)</li></ul></div></div></div></section><h5 >Получение сообщений</h5><p >Эти методы вызывают, когда новое электронное письмо обрабатывается почтовым шлюзом. Эти электронные письма могут быть либо новым потоком (если они поступают через: ref: <code >alias &lt;reference / mixins / mail / alias&gt;</code>), или просто ответы из существующего потока. Их переопределение позволяет вам устанавливать значения в записи потока в зависимости от некоторых значений из самого сообщения (например, обновлять дату или адрес электронной почты, добавлять адреса CC в качестве подписчиков и т. Д.).</p><section class="code-method"><h6 id="message_new"><code>message_new(<em>msg_dict</em>, <em>custom_values=None</em>)</code></h6><p >Вызывается `` message_process`` при получении нового сообщения для данной модели потока, если сообщение не принадлежало существующему потоку.</p><p >Поведением по умолчанию является создание новой записи соответствующей модели (на основе очень простой информации, извлеченной из сообщения). Дополнительное поведение может быть реализовано переопределением этого метода.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >msg_dict</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#dict" class="external reference alert-link" title="(в Python v3.7)"><code >dict</code></a>) -- Карту, содержащую данные электронной почты и вложения. Смотрите `` message_process`` и `` mail.message.parse`` для деталей</li><li ><strong >custom_values</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#dict" class="external reference alert-link" title="(в Python v3.7)"><code >dict</code></a>) -- Дополнительный словарь дополнительных значений полей для перехода к create () при создании новой записи потока; Будьте внимательны, эти значения могут переопределять любые другие значения, поступающие из сообщения</li></ul></div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body"><a href="https://docs.python.org/3/library/functions.html#int" class="external reference alert-link" title="(в Python v3.7)">int</a></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Идентификатор вновь созданного объекта потока</div></div></div></section><section class="code-method"><h6 id="message_update"><code>message_update(<em>msg_dict</em>, <em>update_vals=None</em>)</code></h6><p >Вызывается `` message_process`` при получении нового сообщения для существующего потока. По умолчанию используется обновление `` update_vals``, взятое из входящего сообщения.</p><p >Дополнительное поведение может быть реализовано переопределением этого метода.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >msg_dict</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#dict" class="external reference alert-link" title="(в Python v3.7)"><code >dict</code></a>) -- Карта, содержащая данные электронной почты и вложения; См. `` Message_process`` и `` mail.message.parse () `` для деталей.</li><li ><strong >update_vals</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#dict" class="external reference alert-link" title="(в Python v3.7)"><code >dict</code></a>) -- Dict, содержащий значения для обновления записей с учетом их идентификаторов; Если dict - None или void, операция записи не выполняется.</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Правда</div></div></div></section><h5 >Управление подписчиками</h5><section class="code-method"><h6 id="message_subscribe"><code>message_subscribe(<em>partner_ids=None</em>, <em>channel_ids=None</em>, <em>subtype_ids=None</em>, <em>force=True</em>)</code></h6><p >Добавьте партнеров к подписчикам записей.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >partner_ids</strong> (<code >list(int)</code>) -- Идентификаторы партнеров, которые будут подписаны на запись</li><li ><strong >channel_ids</strong> (<code >list(int)</code>) -- Идентификаторы каналов, которые будут подписаны на запись</li><li ><strong >subtype_ids</strong> (<code >list(int)</code>) -- Идентификаторы подтипов, на которые будут подписаны каналы / партнеры (по умолчанию используются подтипы по умолчанию, если `` Нет``)</li><li ><strong >force</strong> -- Если «Истина», удалите существующих подписчиков перед созданием нового, используя подтипы, указанные в параметрах</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Успех / Неудача</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body"><a href="https://docs.python.org/3/library/functions.html#bool" class="external reference alert-link" title="(в Python v3.7)">bool</a></div></div></div></section><section class="code-method"><h6 id="message_subscribe_users"><code>message_subscribe_users(<em>user_ids=None</em>, <em>subtype_ids=None</em>)</code></h6><p >Wrapper на message_subscribe, используя пользователей вместо партнеров.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >user_ids</strong> (<code >list(int)</code>) -- Идентификаторы пользователей, которые будут подписаны на запись; Если `` Нет``, подпишитесь на текущего пользователя.</li><li ><strong >subtype_ids</strong> (<code >list(int)</code>) -- Идентификаторы подтипов, на которые будут подписаны каналы / партнеры</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">успех</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body"><a href="https://docs.python.org/3/library/functions.html#bool" class="external reference alert-link" title="(в Python v3.7)">bool</a></div></div></div></section><section class="code-method"><h6 id="message_unsubscribe"><code>message_unsubscribe(<em>partner_ids=None</em>, <em>channel_ids=None</em>)</code></h6><p >Удалите партнеров из подписчиков записи.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >partner_ids</strong> (<code >list(int)</code>) -- Идентификаторы партнеров, которые будут подписаны на запись</li><li ><strong >channel_ids</strong> (<code >list(int)</code>) -- Идентификаторы каналов, которые будут подписаны на запись</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Правда</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body"><a href="https://docs.python.org/3/library/functions.html#bool" class="external reference alert-link" title="(в Python v3.7)">bool</a></div></div></div></section><section class="code-method"><h6 id="message_unsubscribe_users"><code>message_unsubscribe_users(<em>user_ids=None</em>)</code></h6><p >Обертка на message_subscribe, используя пользователей.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >user_ids</strong> (<code >list(int)</code>) -- Идентификаторы пользователей, которые будут отписаны для записи; Если нет, отмените подписку на текущего пользователя.</div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Правда</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body"><a href="https://docs.python.org/3/library/functions.html#bool" class="external reference alert-link" title="(в Python v3.7)">bool</a></div></div></div></section></section><section id="logging-changes"><h4 >Регистрация изменений</h4><p >Модуль `` mail`` добавляет мощную систему отслеживания в поля, позволяя вам записывать изменения в определенные поля в болтовне записи.</p><p >Чтобы добавить отслеживание в поле, просто добавьте атрибут track_visibility со значением `` onchange`` (если он должен отображаться в уведомлении только в случае изменения поля) или `` всегда`` (если значение всегда должно отображаться в Изменять уведомления, даже если это конкретное поле не изменилось - полезно сделать пояснение более пояснительным, например, всегда добавляя поле имени).</p><div role="alert" class="admonition-example alert"><h3 class="alert-title">Пример</h3><p >Отслеживаем изменения имени и ответственных за наши командировки:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BusinessTrip</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;business.trip&#39;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mail.thread&#39;</span><span class="p">]</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Business Trip&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">track_visibility</span><span class="o">=</span><span class="s1">&#39;always&#39;</span><span class="p">)</span>
+    <span class="n">partner_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Responsible&#39;</span><span class="p">,</span>
+                                 <span class="n">track_visibility</span><span class="o">=</span><span class="s1">&#39;onchange&#39;</span><span class="p">)</span>
+    <span class="n">guest_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2many</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Participants&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >Отныне каждое изменение имени или ответственного лица, проводящего поездку, будет записывать запись в протокол. Поле `` name`` будет отображаться в уведомлении также, чтобы дать больше контекста об уведомлении (даже если имя не изменилось).</p></div></section><section id="subtypes"><h4 >Подтипы</h4><p >Подтипы дают вам более детальный контроль над сообщениями. Подтипы действуют как система классификации уведомлений, что позволяет подписчикам документа настраивать подтип уведомлений, которые они хотят получать.</p><p >Подтипы создаются как данные в вашем модуле; Модель имеет следующие поля:</p><dl ><dt >`` Имя`` (обязательно) -: класс: <code >~ odoo.fields.Char</code></dt><dd ><p >Имя подтипа, отобразится во всплывающем меню настройки уведомлений</p></dd><dt >`` Описание`` -: класс: <code >~ odoo.fields.Char</code></dt><dd ><p >Описание, которое будет добавлено в сообщение, отправленное для этого подтипа. Если void, имя будет добавлено вместо</p></dd><dt >`` Internal`` -: class: <code >~ odoo.fields.Boolean</code></dt><dd ><p >Сообщения с внутренними подтипами будут видны только сотрудникам, а также членам группы `` base.group_user``</p></dd><dt >`` Parent_id`` -: класс: <code >~ odoo.fields.Many2one</code></dt><dd ><p >Подтипы ссылок для автоматической подписки; Например, подтипы проекта связаны с подтипами задач через эту ссылку. Когда кто-то подписывается на проект, он подписывается на все задачи этого проекта с подтипами, найденными с использованием родительского подтипа</p></dd><dt >`` Relation_field`` -: class: <code >~ odoo.fields.Char</code></dt><dd ><p >В качестве примера, при связывании подтипов проектов и задач поле отношений является полем project_id задач</p></dd><dt >`` Res_model`` -: класс: <code >~ odoo.fields.Char</code></dt><dd ><p >Модель, к которой относится подтип; Если False, этот подтип применяется ко всем моделям</p></dd><dt >`` Default`` -: class: <code >~ odoo.fields.Boolean</code></dt><dd ><p >Если подтип активирован по умолчанию при подписке</p></dd><dt >`` Sequence`` -: class: <code >~ odoo.fields.Integer</code></dt><dd ><p >Используется для упорядочивания подтипов во всплывающем меню настройки уведомлений</p></dd><dt >`` Hidden`` -: класс: <code >~ odoo.fields.Boolean</code></dt><dd ><p >Если подтип скрыт в всплывающем окне настройки уведомлений</p></dd></dl><p >Взаимодействие подтипов с отслеживанием поля позволяет подписаться на различные виды уведомлений в зависимости от того, что может заинтересовать пользователей. Чтобы сделать это, вы можете переопределить функцию `` _track_subtype () [UNKNOWN NODE problematic]:</p><section class="code-method"><h6 id="_track_subtype"><code>_track_subtype(<em>init_values</em>)</code></h6><p >Дайте подтип, вызванный изменениями записи в соответствии с обновленными значениями.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >init_values</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#dict" class="external reference alert-link" title="(в Python v3.7)"><code >dict</code></a>) -- Исходные значения записи; Только модифицированные поля присутствуют в dict</div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Полный внешний идентификатор подтипа или False, если подтип не активирован</div></div></div></section><div role="alert" class="admonition-example alert"><h3 class="alert-title">Пример</h3><p >Давайте добавим поле `` state`` в нашем классе-примере и инициируем уведомление с конкретным подтипом, когда значения этого поля изменятся.</p><p >Сначала давайте определим наш подтип:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;mt_state_change&quot;</span> <span class="na">model=</span><span class="s">&quot;mail.message.subtype&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Trip confirmed<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;res_model&quot;</span><span class="nt">&gt;</span>business.trip<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;default&quot;</span> <span class="na">eval=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span><span class="nt">&gt;</span>Business Trip confirmed!<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p >Затем нам нужно переопределить функцию `` track_subtype () <code >. Эта функция вызывается системой отслеживания, чтобы узнать, какой подтип должен использоваться в зависимости от применяемого в настоящее время изменения. В нашем случае мы хотим использовать наш новый новый подтип, когда поле `</code> state`` меняется с * draft * на * confirmed [UNKNOWN NODE problematic]:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BusinessTrip</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;business.trip&#39;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mail.thread&#39;</span><span class="p">]</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Business Trip&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">track_visibility</span><span class="o">=</span><span class="s1">&#39;onchange&#39;</span><span class="p">)</span>
+    <span class="n">partner_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Responsible&#39;</span><span class="p">,</span>
+                                 <span class="n">track_visibility</span><span class="o">=</span><span class="s1">&#39;onchange&#39;</span><span class="p">)</span>
+    <span class="n">guest_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2many</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Participants&#39;</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Selection</span><span class="p">([(</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;New&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;confirmed&#39;</span><span class="p">,</span> <span class="s1">&#39;Confirmed&#39;</span><span class="p">)],</span>
+                             <span class="n">track_visibility</span><span class="o">=</span><span class="s1">&#39;onchange&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_track_subtype</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">init_values</span><span class="p">):</span>
+        <span class="c1"># init_values contains the modified fields&#39; values before the changes</span>
+        <span class="c1">#</span>
+        <span class="c1"># the applied values can be accessed on the record as they are already</span>
+        <span class="c1"># in cache</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ensure_one</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s1">&#39;state&#39;</span> <span class="ow">in</span> <span class="n">init_values</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="s1">&#39;confirmed&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;my_module.mt_state_change&#39;</span>  <span class="c1"># Full external id</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">BusinessTrip</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_track_subtype</span><span class="p">(</span><span class="n">init_values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></section><section id="customizing-notifications"><h4 >Настройка уведомлений</h4><p >При отправке уведомлений подписчикам очень удобно добавлять кнопки в шаблон, чтобы разрешить быстрые действия непосредственно из электронной почты. Может оказаться полезной даже простая кнопка для прямой ссылки на вид формы записи; Однако в большинстве случаев вы не хотите отображать эти кнопки для пользователей портала.</p><p >Система уведомлений позволяет настраивать шаблоны уведомлений следующими способами:</p><ul ><li ><p >Дисплей * Кнопки доступа [UNKNOWN NODE problematic]: эти кнопки видны в верхней части уведомления по электронной почте и позволяют получателю напрямую обращаться к виду формы записи</p></li><li ><p >Дисплей * Follow Buttons [UNKNOWN NODE problematic]: эти кнопки позволяют получателю непосредственно быстро подписаться на запись</p></li><li ><p >Дисплей * Отменить подписку на кнопки [UNKNOWN NODE problematic]: эти кнопки позволяют получателю сразу быстро отписаться от записи</p></li><li ><p >Дисплей * Кнопки пользовательского действия [UNKNOWN NODE problematic]: эти кнопки являются вызовами определенных маршрутов и позволяют вам делать некоторые полезные действия, непосредственно доступные из электронной почты (то есть, преобразовывая опцию в возможность, проверяя лист расходов для диспетчера расходов и т. Д.),</p></li></ul><p >Эти настройки кнопок можно применять к различным группам, которые вы можете определить самостоятельно, переопределив функцию `` _notification_recipients``.</p><section class="code-method"><h6 id="_notification_recipients"><code>_notification_recipients(<em>message</em>, <em>groups</em>)</code></h6><p >Дайте подтип, вызванный изменениями записи в соответствии с обновленными значениями.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >message</strong> (<code >record</code>) -- В настоящее время отправляется запись `` mail.message``</li><li ><strong >groups</strong> (<code >list(tuple)</code>) -- Список кортежей формы (group_name, group_func, group_data) where: group_name - это идентификатор, используемый только для возможности переопределения и манипулирования группами. Группы по умолчанию - это «пользователь» (получатели, связанные с пользователем-сотрудником), «портал» (получатели, связанные с пользователем портала) и «клиент» (получатели не связаны ни с одним пользователем). Примером переопределения может быть добавление группы, связанной с res.groups, например Hr Officers, для установки на них специальных кнопок действий. Group_func - это указатель на функцию, принимающий запись партнера как параметр. Этот метод будет применяться к получателям, чтобы знать, принадлежат они к данной группе или нет. Сохраняется только первая совпадающая группа. Порядок оценки - это порядок списка. Group_data - это dict, содержащий параметры для электронной почты уведомления со следующими возможными ключами - values: - has_button_access отображать ли Access &lt;Document&gt; в электронной почте. Истина по умолчанию для новых групп, False для портала / клиента. - button_access dict с url и названием кнопки - has_button_follow отображать ли сообщение Follow в электронной почте (если получатель в данный момент не следует за потоком). Истина по умолчанию для новых групп, False для портала / клиента. - button_follow dict с url и названием кнопки - has_button_unfollow отображать ли Unfollow в электронной почте (если получатель в настоящее время следует за потоком). Истина по умолчанию для новых групп, False для портала / клиента. - button_unfollow dict с url и названием кнопки - список действий кнопок действий для отображения в уведомлении по электронной почте. Каждое действие - это текст, содержащий URL и заголовок кнопки.</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Полный внешний идентификатор подтипа или False, если подтип не активирован</div></div></div></section><p >URL-адреса в списке действий могут быть сгенерированы автоматически, вызывая функцию `` _notification_link_helper () [UNKNOWN NODE problematic]:</p><section class="code-method"><h6 id="_notification_link_helper"><code>_notification_link_helper(<em>self</em>, <em>link_type</em>, <em>**kwargs</em>)</code></h6><p >Создайте ссылку для данного типа на текущей записи (или на определенной записи, если заданы kwargs `` model`` и `` res_id``).</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >link_type</strong> (<a href="https://docs.python.org/3/library/stdtypes.html#str" class="external reference alert-link" title="(в Python v3.7)"><code >str</code></a>) -- <p >Тип связи, которая будет создана; Может быть любым из следующих значений:</p><dl ><dt >Посмотреть</dt><dd ><p >Ссылка для формирования вида записи</p></dd><dt ><code >assign</code></dt><dd ><p >Назначить зарегистрированного пользователя в поле `` user_id`` записи (если оно существует)</p></dd><dt >[UNKNOWN NODE problematic]follow`</dt><dd ><p >сам за себя</p></dd><dt ><code >Unfollow</code></dt><dd ><p >сам за себя</p></dd><dt >МЕТОД</dt><dd ><p >Вызов метода в записи; Имя метода должно быть указано как метод <code >kwarg`</code></p></dd><dt ><code >new</code></dt><dd ><p >Открыть пустой вид формы для новой записи; Вы можете указать конкретное действие, указав его id (идентификатор базы данных или полностью разрешенный внешний идентификатор) в kwarg `` action_id``</p></dd></dl></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Ссылка типа, выбранного для записи</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body"><a href="https://docs.python.org/3/library/stdtypes.html#str" class="external reference alert-link" title="(в Python v3.7)">str</a></div></div></div></section><div role="alert" class="admonition-example alert"><h3 class="alert-title">Пример</h3><p >Давайте добавим пользовательскую кнопку в уведомление об изменении состояния командировки; Эта кнопка сбросит состояние в черновик и будет видна только члену группы (воображаемой) Travel Manager (`` business.group_trip_manager``)</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BusinessTrip</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;business.trip&#39;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mail.thread&#39;</span><span class="p">,</span> <span class="s1">&#39;mail.alias.mixin&#39;</span><span class="p">]</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Business Trip&#39;</span>
+
+    <span class="c1"># Pevious code goes here</span>
+
+    <span class="k">def</span> <span class="nf">action_cancel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">({</span><span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;draft&#39;</span><span class="p">})</span>
+
+    <span class="k">def</span> <span class="nf">_notification_recipients</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">groups</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Handle Trip Manager recipients that can cancel the trip at the last</span>
+<span class="sd">        minute and kill all the fun. &quot;&quot;&quot;</span>
+        <span class="n">groups</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">BusinessTrip</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_notification_recipients</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">groups</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ensure_one</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="s1">&#39;confirmed&#39;</span><span class="p">:</span>
+            <span class="n">app_action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_notification_link_helper</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">,</span>
+                                <span class="n">method</span><span class="o">=</span><span class="s1">&#39;action_cancel&#39;</span><span class="p">)</span>
+            <span class="n">trip_actions</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="n">app_action</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Cancel&#39;</span><span class="p">)}]</span>
+
+        <span class="n">new_group</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s1">&#39;group_trip_manager&#39;</span><span class="p">,</span>
+            <span class="k">lambda</span> <span class="n">partner</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">partner</span><span class="o">.</span><span class="n">user_ids</span><span class="p">)</span> <span class="ow">and</span>
+            <span class="nb">any</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">has_group</span><span class="p">(</span><span class="s1">&#39;business.group_trip_manager&#39;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">partner</span><span class="o">.</span><span class="n">user_ids</span><span class="p">),</span>
+            <span class="p">{</span>
+                <span class="s1">&#39;actions&#39;</span><span class="p">:</span> <span class="n">trip_actions</span><span class="p">,</span>
+            <span class="p">})</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">new_group</span><span class="p">]</span> <span class="o">+</span> <span class="n">groups</span>
+</pre></div>
+</div>
+<p >Обратите внимание, что я мог бы определить свою оценочную функцию вне этого метода и определить глобальную функцию, чтобы сделать это вместо лямбда, но для того, чтобы быть более кратким и менее многословным в этих файлах документации, которые иногда могут быть скучными, я выбираю Первый вместо последнего.</p></div></section><section id="overriding-defaults"><h4 >Переопределение значений по умолчанию</h4><p >Существует несколько способов настроить поведение моделей `` mail.thread``, включая (но не ограничиваясь ими):</p><dl ><dt >Атрибут `` _mail_post_access``:: class: <code >~ odoo.models.Model</code></dt><dd ><p >Требуемые права доступа, чтобы иметь возможность публиковать сообщение на модели; По умолчанию необходим доступ `` write``, можно также установить `` read``</p></dd><dt >Контекстные клавиши:</dt><dd ><p >Эти ключи контекста можно использовать для частичного контроля функций `` mail.thread``, таких как автоподписка или отслеживание полей во время вызовов `` create () <code >или</code> <code >write ()</code> [UNKNOWN NODE problematic](или любого другого метода, где он может быть полезным).</p><ul ><li ><p >`` Mail_create_nosubscribe``: при создании или message_post не подписывайте текущего пользователя на поток записи</p></li><li ><p >`` Mail_create_nolog``: при создании не записывайте автоматическое сообщение «&lt;Документ&gt; создано»</p></li><li ><p >`` Mail_notrack``: при создании и записи не выполняйте отслеживание значений, создавая сообщения</p></li><li ><p >`` Tracking_disable``: при создании и записи не выполняйте никаких функций MailThread (автоматическая подписка, отслеживание, публикация, ...)</p></li><li ><p >`` Mail_auto_delete``: автоматическое удаление почтовых уведомлений; Истина по умолчанию</p></li><li ><p >`` Mail_notify_force_send``: если менее 50 уведомлений электронной почты для отправки, отправьте их напрямую вместо использования очереди; Истина по умолчанию</p></li><li ><p >`` Mail_notify_user_signature``: добавить текущую подпись пользователя в уведомлениях по электронной почте; Истина по умолчанию</p></li></ul></dd></dl></section><section id="mail-alias"><i id="reference-mixins-mail-alias"></i><h3 >Почтовый псевдоним</h3><p >Псевдонимы - настраиваемые адреса электронной почты, которые связаны с определенной записью (которая обычно наследует модель `` mail.alias.mixin`), которая будет создавать новые записи при обращении по электронной почте. Это простой способ сделать вашу систему доступной извне, что позволяет пользователям или клиентам быстро создавать записи в базе данных без необходимости прямого подключения к Odoo.</p></section><section id="aliases-vs-incoming-mail-gateway"><h4 >Псевдонимы и входящий почтовый шлюз</h4><p >Некоторые люди используют этот шлюз для этой же цели. Для использования псевдонимов вам по-прежнему нужен правильно сконфигурированный почтовый шлюз, однако достаточно одного единого домена, так как вся маршрутизация будет производиться внутри Odoo. Псевдонимы имеют несколько преимуществ по сравнению с Mail Gateways:</p><ul ><li ><dl ><dt >Легче настроить</dt><dd ><ul ><li ><p >Один входящий шлюз может использоваться многими псевдонимами; Это избавляет от необходимости настраивать несколько электронных писем на вашем доменном имени (вся конфигурация выполняется внутри Odoo)</p></li><li ><p >Нет необходимости в правах доступа к системе для настройки псевдонимов</p></li></ul></dd></dl></li><li ><dl ><dt >Более последовательная</dt><dd ><ul ><li ><p >Настраивается в связанной записи, а не в подменю Параметры.</p></li></ul></dd></dl></li><li ><dl ><dt >Легче переопределить серверную часть</dt><dd ><ul ><li ><p >Модель Mixin построена для расширения с самого начала, что позволяет извлекать полезные данные из входящих сообщений электронной почты легче, чем с помощью почтового шлюза.</p></li></ul></dd></dl></li></ul></section><section id="alias-support-integration"><h4 >Поддержка интеграции псевдонимов</h4><p >Aliases are usually configured on a parent model which will then create specific
+record when contacted by e-mail. For example, Project have aliases to create tasks
+or issues, Sales Channel have aliases to generate Leads.</p><div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >Модель, которая будет создана псевдонимом [UNKNOWN NODE problematic], должна ** наследовать модель `` mail_thread``.</p></div><p >Поддержка псевдонимов добавляется наследованием `` mail.alias.mixin``; Этот mixin будет генерировать новую запись `` mail.alias`` для каждой записи родительского класса, который будет создан (например, каждая запись <code >project.project`</code>, имеющая свою запись` <code >mail.alias`</code>, инициализированную при создании ).</p><div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >Псевдонимы также могут быть созданы вручную и поддерживаться простым: class: <code >~ odoo.fields.Many2one</code>. В этом руководстве предполагается, что вам нужна более полная интеграция с автоматическим созданием псевдонима, значений по умолчанию для записи и т. Д.</p></div><p >В отличие от наследования `` mail.thread``, `` mail.alias.mixin`` ** требует ** некоторых определенных переопределений для правильной работы. Эти переопределения будут указывать значения созданного псевдонима, такие как тип записи, которую он должен создать, и, возможно, некоторые значения по умолчанию, которые могут иметь эти записи в зависимости от родительского объекта:</p><section class="code-method"><h6 id="get_alias_model_name"><code>get_alias_model_name(<em>vals</em>)</code></h6><p >Верните имя модели для псевдонима. Входящие письма, которые не отвечают на существующие записи, приведут к созданию новой записи этой модели псевдонимов. Значение может зависеть от `` vals``, dict значений, переданных `` create``, когда запись этой модели создана.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >dict</strong> (<code >vals</code>) -- Значения вновь созданной записи, которые будут содержать псевдоним</div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">название модели</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body"><a href="https://docs.python.org/3/library/stdtypes.html#str" class="external reference alert-link" title="(в Python v3.7)">str</a></div></div></div></section><section class="code-method"><h6 id="get_alias_values"><code>get_alias_values()</code></h6><p >Возвращает значения для создания псевдонима или для записи в псевдониме после его создания. Хотя это и не является полностью обязательным, обычно требуется убедиться, что вновь созданные записи будут связаны с родительским псевдонимом (т.е. задачами, создаваемыми в правильном проекте), путем установки словаря значений по умолчанию в псевдониме `` <code >alias_defaults`</code> поле.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Словари значений, которые будут записаны в новый псевдоним</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body"><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="external reference alert-link" title="(в Python v3.7)">dict</a></div></div></div></section><p >Переопределение `` get_alias_values ​​() `` особенно интересно, так как оно позволяет вам легко изменять поведение ваших псевдонимов. Среди полей, которые могут быть установлены в псевдониме, особый интерес представляют следующие:</p><dl ><dt >`` Alias_name`` -: class: <code >~ odoo.fields.Char</code></dt><dd ><p >Имя псевдонима электронной почты, например, «jobs», если вы хотите перехватывать электронные сообщения для &lt;<a href="mailto:jobs@example.odoo.com" class="external reference">jobs@example.odoo.com</a>&gt;</p></dd><dt >`` Alias_user_id`` -: class: <code >~ odoo.fields.Many2one</code> (` <code >res.users`</code>)</dt><dd ><p >Владелец записей, созданных при получении электронных писем по этому псевдониму; Если это поле не установлено, система попытается найти подходящего владельца на основе адреса отправителя (From) или будет использовать учетную запись администратора, если для этого адреса не найден ни один пользователь системы</p></dd><dt >`` Alias_defaults``:: class: <code >~ odoo.fields.Text</code></dt><dd ><p >Словарь Python, который будет оцениваться для предоставления значений по умолчанию при создании новых записей для этого псевдонима</p></dd><dt >`` Alias_force_thread_id`` -: class: <code >~ odoo.fields.Integer</code></dt><dd ><p >Необязательный идентификатор потока (записи), к которому будут прикреплены все входящие сообщения, даже если они не ответили на него; Если установлено, это полностью отключит создание новых записей</p></dd><dt >`` Alias_contact``:: class: <code >~ odoo.fields.Selection</code></dt><dd ><p >Политика отправки сообщения в документ с помощью mailgateway</p><ul ><li ><em >everyone</em>: everyone can post</li><li ><em >partners</em>: only authenticated partners</li><li ><em >followers</em>: only followers of the related document or members of following channels</li></ul></dd></dl><p >Обратите внимание, что псевдонимы используют: ref: <code >delegant inheritance &lt;reference / orm / inheritance&gt;</code>, что означает, что, хотя псевдоним хранится в другой таблице, у вас есть доступ ко всем этим полям непосредственно из вашего родительского объекта. Это позволяет вам легко настроить ваш псевдоним из вида формы записи.</p><div role="alert" class="admonition-example alert"><h3 class="alert-title">Пример</h3><p >Давайте добавим псевдонимы в наш класс командировки для создания расходов «на лету» по электронной почте.</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BusinessTrip</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;business.trip&#39;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mail.thread&#39;</span><span class="p">,</span> <span class="s1">&#39;mail.alias.mixin&#39;</span><span class="p">]</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Business Trip&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">track_visibility</span><span class="o">=</span><span class="s1">&#39;onchange&#39;</span><span class="p">)</span>
+    <span class="n">partner_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Responsible&#39;</span><span class="p">,</span>
+                                 <span class="n">track_visibility</span><span class="o">=</span><span class="s1">&#39;onchange&#39;</span><span class="p">)</span>
+    <span class="n">guest_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2many</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Participants&#39;</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Selection</span><span class="p">([(</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;New&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;confirmed&#39;</span><span class="p">,</span> <span class="s1">&#39;Confirmed&#39;</span><span class="p">)],</span>
+                             <span class="n">track_visibility</span><span class="o">=</span><span class="s1">&#39;onchange&#39;</span><span class="p">)</span>
+    <span class="n">expense_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">One2many</span><span class="p">(</span><span class="s1">&#39;business.expense&#39;</span><span class="p">,</span> <span class="s1">&#39;trip_id&#39;</span><span class="p">,</span> <span class="s1">&#39;Expenses&#39;</span><span class="p">)</span>
+    <span class="n">alias_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;mail.alias&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Alias&#39;</span><span class="p">,</span> <span class="n">ondelete</span><span class="o">=</span><span class="s2">&quot;restrict&quot;</span><span class="p">,</span>
+                               <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_alias_model_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Specify the model that will get created when the alias receives a message &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;business.expense&#39;</span>
+
+    <span class="k">def</span> <span class="nf">get_alias_values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Specify some default values that will be set in the alias at its creation &quot;&quot;&quot;</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">BusinessTrip</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">get_alias_values</span><span class="p">()</span>
+        <span class="c1"># alias_defaults holds a dictionnary that will be written</span>
+        <span class="c1"># to all records created by this alias</span>
+        <span class="c1">#</span>
+        <span class="c1"># in this case, we want all expense records sent to a trip alias</span>
+        <span class="c1"># to be linked to the corresponding business trip</span>
+        <span class="n">values</span><span class="p">[</span><span class="s1">&#39;alias_defaults&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;trip_id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">}</span>
+        <span class="c1"># we only want followers of the trip to be able to post expenses</span>
+        <span class="c1"># by default</span>
+        <span class="n">values</span><span class="p">[</span><span class="s1">&#39;alias_contact&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;followers&#39;</span>
+        <span class="k">return</span> <span class="n">values</span>
+
+<span class="k">class</span> <span class="nc">BusinessExpense</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;business.expense&#39;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mail.thread&#39;</span><span class="p">]</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Business Expense&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+    <span class="n">amount</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Float</span><span class="p">(</span><span class="s1">&#39;Amount&#39;</span><span class="p">)</span>
+    <span class="n">trip_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;business.trip&#39;</span><span class="p">,</span> <span class="s1">&#39;Business Trip&#39;</span><span class="p">)</span>
+    <span class="n">partner_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Created by&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >Мы хотели бы, чтобы наш псевдоним легко настраивался из формы в наших командировках, поэтому добавим следующее в наш вид формы:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;page</span> <span class="na">string=</span><span class="s">&quot;Emails&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;group</span> <span class="na">name=</span><span class="s">&quot;group_alias&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;alias_name&quot;</span> <span class="na">string=</span><span class="s">&quot;Email Alias&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">name=</span><span class="s">&quot;alias_def&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- display a link while in view mode and a configurable field</span>
+<span class="c">            while in edit mode --&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;alias_id&quot;</span> <span class="na">class=</span><span class="s">&quot;oe_read_only oe_inline&quot;</span>
+                    <span class="na">string=</span><span class="s">&quot;Email Alias&quot;</span> <span class="na">required=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_edit_only oe_inline&quot;</span> <span class="na">name=</span><span class="s">&quot;edit_alias&quot;</span>
+                 <span class="na">style=</span><span class="s">&quot;display: inline;&quot;</span> <span class="nt">&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;alias_name&quot;</span> <span class="na">class=</span><span class="s">&quot;oe_inline&quot;</span><span class="nt">/&gt;</span>
+                @
+                <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;alias_domain&quot;</span> <span class="na">class=</span><span class="s">&quot;oe_inline&quot;</span> <span class="na">readonly=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;alias_contact&quot;</span> <span class="na">class=</span><span class="s">&quot;oe_inline&quot;</span>
+                <span class="na">string=</span><span class="s">&quot;Accept Emails From&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/group&gt;</span>
+<span class="nt">&lt;/page&gt;</span>
+</pre></div>
+</div>
+<p >Теперь мы можем изменить адрес псевдонима непосредственно из формы и изменить, кто может отправлять электронные письма в псевдоним.</p><p >Затем мы можем переопределить `` message_new () `` в нашей модели расхода, чтобы получать значения из нашей электронной почты, когда будут созданы расходы:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BusinessExpense</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="c1"># Previous code goes here</span>
+    <span class="c1"># ...</span>
+
+    <span class="k">def</span> <span class="nf">message_new</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">custom_values</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Override to set values according to the email.</span>
+
+<span class="sd">        In this simple example, we simply use the email title as the name</span>
+<span class="sd">        of the expense, try to find a partner with this email address and</span>
+<span class="sd">        do a regex match to find the amount of the expense.&quot;&quot;&quot;</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">msg_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subject&#39;</span><span class="p">,</span> <span class="s1">&#39;New Expense&#39;</span><span class="p">)</span>
+        <span class="c1"># Match the last occurence of a float in the string</span>
+        <span class="c1"># Example: &#39;50.3 bar 34.5&#39; becomes &#39;34.5&#39;. This is potentially the price</span>
+        <span class="c1"># to encode on the expense. If not, take 1.0 instead</span>
+        <span class="n">amount_pattern</span> <span class="o">=</span> <span class="s1">&#39;(\d+(\.\d*)?|\.\d+)&#39;</span>
+        <span class="n">expense_price</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">amount_pattern</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="n">expense_price</span> <span class="ow">and</span> <span class="nb">float</span><span class="p">(</span><span class="n">expense_price</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="mf">1.0</span>
+        <span class="c1"># find the partner by looking for it&#39;s email</span>
+        <span class="n">partner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;res.partner&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">search</span><span class="p">([(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;ilike&#39;</span><span class="p">,</span> <span class="n">email_address</span><span class="p">)],</span>
+                                                 <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">defaults</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+            <span class="s1">&#39;amount&#39;</span><span class="p">:</span> <span class="n">price</span><span class="p">,</span>
+            <span class="s1">&#39;partner_id&#39;</span><span class="p">:</span> <span class="n">partner</span><span class="o">.</span><span class="n">id</span>
+        <span class="p">}</span>
+        <span class="n">defaults</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_values</span> <span class="ow">or</span> <span class="p">{})</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">BusinessExpense</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">message_new</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">custom_values</span><span class="o">=</span><span class="n">defaults</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div></section><section id="activities-tracking"><i id="reference-mixins-mail-activities"></i><h3 >Activities tracking</h3><p >Activities are actions users have to take on a document like making a phone call
+or organizing a meeting. Activities come with the mail module as they are
+integrated in the Chatter but are <em >not bundled with mail.thread</em>. Activities
+are records of the <code >mail.activity</code> class, which have a type (<code >mail.activity.type</code>),
+name, description, scheduled time (among others). Pending activities are visible
+above the message history in the chatter widget.</p><p >You can integrate activities using the <code >mail.activity.mixin</code> class on your object
+and the specific widgets to display them (via the field <code >activity_ids</code>) in the form
+view and kanban view of your records (<code >mail_activity</code> and <code >kanban_activity</code>
+widgets, respectively).</p><div role="alert" class="admonition-example alert"><h3 class="alert-title">Пример</h3><p >Organizing a business trip is a tedious process and tracking needed activities
+like ordering plane tickets or a cab for the airport could be useful. To do so,
+we will add the activities mixin on our model and display the next planned activities
+in the message history of our trip.</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BusinessTrip</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;business.trip&#39;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mail.thread&#39;</span><span class="p">,</span> <span class="s1">&#39;mail.activity.mixin&#39;</span><span class="p">]</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Business Trip&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+    <span class="c1"># [...]</span>
+</pre></div>
+</div>
+<p >We modify the form view of our trips to display their next activites:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;businness_trip_form&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>business.trip.form<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>business.trip<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;form</span> <span class="na">string=</span><span class="s">&quot;Business Trip&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Your usual form view goes here --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_chatter&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;message_follower_ids&quot;</span> <span class="na">widget=</span><span class="s">&quot;mail_followers&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;activity_ids&quot;</span> <span class="na">widget=</span><span class="s">&quot;mail_activity&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;message_ids&quot;</span> <span class="na">widget=</span><span class="s">&quot;mail_thread&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+</div><p >Вы можете найти конкретные примеры интеграции в следующих моделях:</p><ul ><li ><p >`` Crm.lead`` в приложении CRM (* crm [UNKNOWN NODE problematic])</p></li><li ><code >sale.order</code> in the Sales (<em >sale</em>) Application</li><li ><code >project.task</code> in the Project (<em >poject</em>) Application</li></ul></section><section id="website-features"><i id="reference-mixins-website"></i><h2 >Возможности веб-сайта</h2></section><section id="visitor-tracking"><i id="reference-mixins-website-utm"></i><h3 >Отслеживание посетителей</h3><p >Класс `` utm.mixin`` можно использовать для отслеживания онлайновых маркетинговых / коммуникационных кампаний с помощью аргументов в ссылках на указанные ресурсы. Mixin добавляет 3 поля к вашей модели:</p><ul ><li ><p >Поле `` campaign_id``:: class: <code >~ odoo.fields.Many2one</code> добавляется к объекту` <code >utm.campaign`</code> (т.е. Christmas_Special, Fall_Collection и т. Д.).</p></li><li ><p >`` Source_id``:: class: <code >~ odoo.fields.Many2one</code> в объект` <code >utm.source`</code> (т.е. поисковая система, список рассылки и т. Д.),</p></li><li ><p ><code >Medium_id`</code>:: class:` ~ odoo.fields.Many2one` на объект `` utm.medium`` (т.е. Уличная почта, электронная почта, обновление социальной сети и т. Д.)</p></li></ul><p >Эти модели имеют одно поле `` name`` (т.е. они просто существуют, чтобы отличать кампании, но не имеют определенного поведения).</p><p >Когда клиент посещает ваш сайт с указанными в URL-адресе параметрами (например, <a href="http://www.odoo.com/?campaign_id=mixin_talk&amp;source_id=www.odoo.com&amp;medium_id=website" class="external reference">http://www.odoo.com/?campaign_id=mixin_talk&amp;source_id=www.odoo.com&amp;medium_id=website</a>), на веб-сайте посетителя для этих параметров устанавливаются три куки-файла , Как только объект, который наследует utm.mixin, создается с веб-сайта (например, ведущая форма, приложение задания и т. Д.), Код utm.mixin запускается и извлекает значения из файлов cookie, чтобы установить их в новой записи. После этого вы можете использовать поля кампании / источника / среды как любое другое поле при определении отчетов и представлений (группировка по и т. Д.).</p><p >Чтобы расширить это поведение, просто добавьте реляционное поле в простую модель (модель должна поддерживать * быстрое создание * (то есть вызов `` create () `` с единственным значением `` name``) и расширить функцию ` <code >tracking_fields ()</code> [UNKNOWN NODE problematic]:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UtmMyTrack</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;my_module.my_track&#39;</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;My Tracking Object&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">MyModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Models</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;my_module.my_model&#39;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;utm.mixin&#39;</span><span class="p">]</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;My Tracked Object&#39;</span>
+
+    <span class="n">my_field</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;my_module.my_track&#39;</span><span class="p">,</span> <span class="s1">&#39;My Field&#39;</span><span class="p">)</span>
+
+    <span class="nd">@api.model</span>
+    <span class="k">def</span> <span class="nf">tracking_fields</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">MyModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">tracking_fields</span><span class="p">()</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+        <span class="c1"># (&quot;URL_PARAMETER&quot;, &quot;FIELD_NAME_MIXIN&quot;, &quot;NAME_IN_COOKIES&quot;)</span>
+            <span class="p">(</span><span class="s1">&#39;my_field&#39;</span><span class="p">,</span> <span class="s1">&#39;my_field&#39;</span><span class="p">,</span> <span class="s1">&#39;odoo_utm_my_field&#39;</span><span class="p">)</span>
+        <span class="p">])</span>
+        <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p >Это скажет системе создать cookie с именем * odoo_utm_my_field * со значением, найденным в параметре url `` my_field``; Как только новая запись этой модели создается вызовом из формы веб-сайта, общее переопределение метода `` create () `` utm.mixin`` будет получать значения по умолчанию для этого поля из файла cookie ( И запись `` my_module.my_track`` будет создаваться на лету, если она еще не существует).</p><p >Вы можете найти конкретные примеры интеграции в следующих моделях:</p><ul ><li ><p >`` Crm.lead`` в приложении CRM (* crm [UNKNOWN NODE problematic])</p></li><li ><p >`` Hr.applicant`` в Заявлении о приеме на работу (* hr_recruitment [UNKNOWN NODE problematic])</p></li><li ><p >`` Helpdesk.ticket`` в приложении Helpdesk (* helpdesk * - только для приложения «Одо»).</p></li></ul></section><section id="website-visibility"><i id="reference-mixins-website-published"></i><h3 >Видимость веб-сайта</h3><p >Вы можете легко добавить видимость на сайте для любой записи. Хотя этот mixin довольно легко реализовать вручную, он наиболее часто используется после наследования `` mail.thread``; Свидетельствует о его полезности. Типичным примером использования этого mixin является любой объект, который имеет интерфейсную страницу; Возможность контролировать видимость страницы позволяет вам не торопиться при редактировании страницы и публиковать ее только тогда, когда вы удовлетворены.</p><p >Чтобы включить функциональность, вам нужно только наследовать `` website.published.mixin``:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BlogPost</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s2">&quot;blog.post&quot;</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s2">&quot;Blog Post&quot;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;website.published.mixin&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p >Этот mixin добавляет 2 поля на вашей модели:</p><ul ><li ><p >`` Site_published``:: класс: поле `` odoo.fields.Boolean`, которое представляет статус публикации</p></li><li ><p >Поле `` website_url``:: class: <code >~ odoo.fields.Char</code>, которое представляет URL-адрес, по которому осуществляется доступ к объекту</p></li></ul><p >Обратите внимание, что это последнее поле является вычисляемым полем и должно быть реализовано для вашего класса:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_compute_website_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">blog_post</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+        <span class="n">blog_post</span><span class="o">.</span><span class="n">website_url</span> <span class="o">=</span> <span class="s2">&quot;/blog/</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">log_post</span><span class="o">.</span><span class="n">blog_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >Как только механизм на месте, вам просто нужно адаптировать ваши интерфейсы и backend view, чтобы сделать его доступным. В бэкэнд, добавление кнопки в окошке кнопки обычно - путь:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;oe_stat_button&quot;</span> <span class="na">name=</span><span class="s">&quot;website_publish_button&quot;</span>
+    <span class="na">type=</span><span class="s">&quot;object&quot;</span> <span class="na">icon=</span><span class="s">&quot;fa-globe&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;website_published&quot;</span> <span class="na">widget=</span><span class="s">&quot;website_button&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</pre></div>
+</div>
+<p >Во внешнем интерфейсе необходимы некоторые проверки безопасности, чтобы избежать появления кнопок «Издание» для посетителей сайта:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;website_published_button&quot;</span> <span class="na">class=</span><span class="s">&quot;pull-right&quot;</span>
+     <span class="na">groups=</span><span class="s">&quot;base.group_website_publisher&quot;</span><span class="nt">&gt;</span> <span class="c">&lt;!-- or any other meaningful group --&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;website.publish_management&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;object&quot;</span> <span class="na">t-value=</span><span class="s">&quot;blog_post&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;publish_edit&quot;</span> <span class="na">t-value=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;action&quot;</span> <span class="na">t-value=</span><span class="s">&quot;&#39;blog.blog_post_action&#39;&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p >Обратите внимание, что вы должны передать свой объект в качестве переменной `` object`` в шаблон; В этом примере запись `` blog.post`` была передана в качестве переменной `` blog_post`` в механизм визуализации `` qweb``, необходимо указать это для шаблона управления публикацией. Переменная `` publish_edit`` позволяет интерфейсной кнопке связываться с бэкэнд (позволяя легко переключаться между интерфейсом и бэкэнд и наоборот); Если установлено, вы должны указать полный внешний идентификатор действия, которое вы хотите вызвать в бэкэнд в переменной `` action`` (обратите внимание, что для модели должен существовать Form View).</p><p >Действие `` website_publish_button`` определено в mixin и адаптирует его поведение к вашему объекту: если у класса есть действительная вычислительная функция `` website_url``, пользователь перенаправляется на интерфейс, когда нажимает на кнопку; Пользователь может затем опубликовать страницу непосредственно из интерфейса. Это гарантирует, что никакая онлайн-публикация не может произойти случайно. Если нет вычислительной функции, булевое `` web_published`` просто запускается.</p></section><section id="website-metadata"><i id="reference-mixins-website-seo"></i><h3 >Метаданные веб-сайта</h3><p >Этот простой mixin просто позволяет вам легко вводить метаданные в ваши интерфейсные страницы.</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BlogPost</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s2">&quot;blog.post&quot;</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s2">&quot;Blog Post&quot;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;website.seo.metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;website.published.mixin&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p >Этот mixin добавляет 3 поля на вашей модели:</p><ul ><li ><p >`` Website_meta_title``:: класс: <code >~ odoo.fields.Char</code> поле, которое позволяет вам установить дополнительный заголовок на свою страницу</p></li><li ><p >`` Website_meta_description``:: класс: поле `` odoo.fields.Char`, которое содержит краткое описание страницы (иногда используется в результатах поисковых систем)</p></li><li ><p >`` Site_meta_keywords``:: класс: поле `` odoo.fields.Char`, которое содержит несколько ключевых слов, чтобы помочь вашей странице более точно классифицироваться поисковыми системами; Инструмент «Повысить» поможет вам легко выбрать лексически связанные ключевые слова.</p></li></ul><p >Эти поля можно редактировать во внешнем интерфейсе с помощью инструмента «Повысить» на панели инструментов «Редактор». Настройка этих полей может помочь поисковым системам лучше индексировать ваши страницы. Обратите внимание, что поисковые системы не основывают свои результаты только на этих метаданных; Лучшая практика SEO должна все еще быть, чтобы быть отсылаемой надежными источниками.</p></section><section id="others"><i id="reference-mixins-misc"></i><h2 >Другие</h2></section><section id="customer-rating"><i id="reference-mixins-misc-rating"></i><h3 >Рейтинг клиентов</h3><p >Микширование рейтинга позволяет отправлять электронную почту для запроса рейтинга клиента, автоматического перехода в процессы канбана и агрегирования статистики по вашим рейтингам.</p></section><section id="adding-rating-on-your-model"><h4 >Добавление рейтинга вашей модели</h4><p >Чтобы добавить поддержку рейтинга, просто наследуйте модель `` rating.mixin``:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Models</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;my_module.my_model&#39;</span>
+    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rating.mixin&#39;</span><span class="p">,</span> <span class="s1">&#39;mail.thread&#39;</span><span class="p">]</span>
+
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.users&#39;</span><span class="p">,</span> <span class="s1">&#39;Responsible&#39;</span><span class="p">)</span>
+    <span class="n">partner_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Customer&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >Поведение mixin адаптируется к вашей модели:</p><ul ><li ><p >Запись <code >rating.rating`</code> будет связана с полем` <code >partner_id`</code> вашей модели (если это поле присутствует).</p><ul ><li ><p >Это поведение может быть переопределено функцией `` rating_get_partner_id () <code >, если вы используете другое поле, чем `` partner_id</code></p></li></ul></li><li ><p >Запись `` rating.rating`` будет связана с партнером поля `` user_id`` вашей модели (если поле присутствует) (то есть, партнер, который оценивается)</p><ul ><li ><p >Это поведение может быть переопределено функцией `` rating_get_rated_partner_id () <code >, если вы используете другое поле, чем `` user_id</code> (обратите внимание, что функция должна возвращать <code >res.partner`</code>, для` <code >user_id`</code> системы Автоматически выбирает партнера пользователя)</p></li></ul></li><li ><p >История чата будет отображать рейтинговое событие (если ваша модель наследует от `` mail.thread``)</p></li></ul></section><section id="send-rating-requests-by-e-mail"><h4 >Отправить запрос на оценку по электронной почте</h4><p >Если вы хотите отправить электронную почту для запроса рейтинга, просто сгенерируйте сообщение электронной почты со ссылками на объект рейтинга. Самый простой шаблон электронной почты может выглядеть так:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;rating_my_model_email_template&quot;</span> <span class="na">model=</span><span class="s">&quot;mail.template&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>My Model: Rating Request<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;email_from&quot;</span><span class="nt">&gt;</span>${object.rating_get_rated_partner_id().email or &#39;&#39; | safe}<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;subject&quot;</span><span class="nt">&gt;</span>Service Rating Request<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;my_module.model_my_model&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;partner_to&quot;</span> <span class="nt">&gt;</span>${object.rating_get_partner_id().id}<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;auto_delete&quot;</span> <span class="na">eval=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;body_html&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">% set access_token = object.rating_get_access_token()</span>
+<span class="cp">&lt;p&gt;Hi,&lt;/p&gt;</span>
+<span class="cp">&lt;p&gt;How satsified are you?&lt;/p&gt;</span>
+<span class="cp">&lt;ul&gt;</span>
+<span class="cp">    &lt;li&gt;&lt;a href=&quot;/rating/${access_token}/10&quot;&gt;Satisfied&lt;/a&gt;&lt;/li&gt;</span>
+<span class="cp">    &lt;li&gt;&lt;a href=&quot;/rating/${access_token}/5&quot;&gt;Not satisfied&lt;/a&gt;&lt;/li&gt;</span>
+<span class="cp">    &lt;li&gt;&lt;a href=&quot;/rating/${access_token}/1&quot;&gt;Very unsatisfied&lt;/a&gt;&lt;/li&gt;</span>
+<span class="cp">&lt;/ul&gt;</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p >Затем ваш клиент получит электронное письмо со ссылками на простой веб-сайт, позволяющий им предоставить обратную связь об их взаимодействии с вашими пользователями (включая бесплатное текстовое сообщение с отзывами).</p><p >Затем вы можете легко интегрировать свои рейтинги в представление формы, определив действие для рейтингов:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;rating_rating_action_my_model&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.actions.act_window&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Customer Ratings<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;res_model&quot;</span><span class="nt">&gt;</span>rating.rating<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;view_mode&quot;</span><span class="nt">&gt;</span>kanban,pivot,graph<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;domain&quot;</span><span class="nt">&gt;</span>[(&#39;res_model&#39;, &#39;=&#39;, &#39;my_module.my_model&#39;), (&#39;res_id&#39;, &#39;=&#39;, active_id), (&#39;consumed&#39;, &#39;=&#39;, True)]<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;my_module_my_model_view_form_inherit_rating&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>my_module.my_model.view.form.inherit.rating<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>my_module.my_model<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inherit_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;my_module.my_model_view_form&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;xpath</span> <span class="na">expr=</span><span class="s">&quot;//div[@name=&#39;button_box&#39;]&quot;</span> <span class="na">position=</span><span class="s">&quot;inside&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">name=</span><span class="s">&quot;%(rating_rating_action_my_model)d&quot;</span> <span class="na">type=</span><span class="s">&quot;action&quot;</span>
+                    <span class="na">class=</span><span class="s">&quot;oe_stat_button&quot;</span> <span class="na">icon=</span><span class="s">&quot;fa-smile-o&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;rating_count&quot;</span> <span class="na">string=</span><span class="s">&quot;Rating&quot;</span> <span class="na">widget=</span><span class="s">&quot;statinfo&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/xpath&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p >Обратите внимание, что существуют рейтинги по умолчанию (канбан, стержень, график) для рейтингов, которые позволяют вам быстро просматривать свои оценки клиентов с высоты птичьего полета.</p><p >Вы можете найти конкретные примеры интеграции в следующих моделях:</p><ul ><li ><p >`` Project.task`` в приложении Project (* rating_project [UNKNOWN NODE problematic])</p></li><li ><p >`` Helpdesk.ticket`` в приложении Helpdesk (* helpdesk * - только для приложения «Одо»).</p></li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+      <div id="footer" class="container o_not_editable">
+          <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+          <div class="row">
+              <div class="col-xs-12">
+                  <hr/>
+                  <p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                  <hr/>
+                  <p>
+                      <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br/> <br/>
+                      В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="o_footer_bottom o_not_editable">
+          <div class="container">
+              <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+              <div class="social-links pull-right">
+                  <a href="https://www.odoo.com/web/about/facebook">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/twitter">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/linkedin">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:info@odoo.com">
+                      <i class="fa fa-envelope"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

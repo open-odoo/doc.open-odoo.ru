@@ -1,0 +1,303 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to process delivery orders in three steps (pick + pack + ship)? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Delivery Orders" href="../delivery.html" />
+    <link rel="next" title="How is the scheduled delivery date computed?" href="scheduled_dates.html" />
+    <link rel="prev" title="How to process delivery orders in two steps (pick + ship)?" href="two_steps.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../inventory.html">Inventory</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to process delivery orders in three steps (pick + pack + ship)?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/inventory/management/delivery/three_steps.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/inventory/management/delivery/three_steps.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/inventory/management/delivery/three_steps.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to process delivery orders in three steps (pick + pack + ship)? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-inventory-module" class="ripple internal reference">Install the Inventory module</a></li><li class="list-group-item"><a href="#allow-managing-routes" class="ripple internal reference">Allow managing routes</a></li><li class="list-group-item"><a href="#configure-the-warehouse-for-pick-pack-ship" class="ripple internal reference">Configure the warehouse for Pick + Pack + Ship</a></li></ul></li><li class="list-group-item"><a href="#create-a-sale-order" class="ripple internal reference">Create a Sale Order</a></li><li class="list-group-item"><a href="#process-a-delivery" class="ripple internal reference">Process a Delivery</a><ul ><li class="list-group-item"><a href="#how-to-process-the-picking-step" class="ripple internal reference">How to Process the Picking Step?</a></li><li class="list-group-item"><a href="#how-to-process-the-packing-step" class="ripple internal reference">How to Process the Packing Step?</a></li><li class="list-group-item"><a href="#how-to-process-the-shipping-step" class="ripple internal reference">How to Process the Shipping Step?</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/inventory/management/delivery/three_steps.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-process-delivery-orders-in-three-steps-pick-pack-ship"></section><section id="overview"><h2 >Overview</h2><p >When an order goes to the shipping department for final delivery, Odoo
+is set up by default on a <strong >one-step</strong> operation: once all goods are
+available, they can be shipped in bulk in a single delivery order.
+However, that process may not reflect the reality and your company may
+require more steps before shipping.</p><p >With the <strong >three steps</strong> process (<strong >Pick + Pack + Ship</strong>), the items are
+transferred to a packing area, where they will be assembled by area of
+destination, and then set to outbound trucks for final delivery to the
+customers.</p><p >A few configuration steps are necessary in order to accomplish <strong >Pick +
+Pack + Ship</strong> in Odoo. These steps create some additional locations, which
+by default are called <strong >Output</strong> and <strong >Packing Zone</strong>. So, if your warehouse's
+code is <code >WH</code>, this configuration will create a location called <code >WH/Output</code>
+and another one called <code >WH/Packing Zone</code>.</p><p >Goods will move from <strong >WH/Stock</strong> to <strong >WH/Packing Zone</strong> in the first step.
+Then move from <strong >WH/Packing Zone</strong> to <strong >WH/Output</strong>. Then finally it will be
+delivered from <strong >WH/Output</strong> to its <strong >final destination</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Check out <a href="inventory_flow.html" class="internal alert-link reference"><span class="doc">How to choose the right inventory flow to handle delivery orders?</span></a> to determine if this inventory flow is
+the correct method for your needs.</p></div></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-inventory-module"><h3 >Install the Inventory module</h3><p >From the <strong >App</strong> menu, search and install the <strong >Inventory</strong> module.</p><img src="../../../_images/three_steps07.png" class="img-responsive center-block"><p >You will also need to install the <strong >Sales</strong> module to be able to issue sales
+orders.</p></section><section id="allow-managing-routes"><h3 >Allow managing routes</h3><p >Odoo configures movement of delivery orders via <strong >routes</strong>. Routes
+provide a mechanism to link different actions together. In this case, we
+will link the picking step to the shipping step.</p><p >To allow management of routes, go to <span class="menuselection">Configuration ‣ Settings</span></p><p >Under <span class="menuselection">Location &amp; Warehouse ‣ Routes</span>, activate the radio button
+<strong >Advanced routing of products using rules</strong>. Make sure that the option
+<strong >Manage several locations per warehouse</strong> is activated as well.</p><img src="../../../_images/three_steps05.png" class="img-responsive center-block"></section><section id="configure-the-warehouse-for-pick-pack-ship"><h3 >Configure the warehouse for Pick + Pack + Ship</h3><p >Go to <span class="menuselection">Configuration ‣ Warehouses</span> and edit the warehouse that will be
+used.</p><p >For outgoing shippings, set the option to <strong >Make packages into a
+dedicated location, bring them to the output location for shipping (Pick
++ Pack + Ship).</strong></p><img src="../../../_images/three_steps01.png" class="img-responsive center-block"></section><section id="create-a-sale-order"><h2 >Create a Sale Order</h2><p >From the <strong >Sale</strong> module, create a sales order with some products to deliver.</p><p >Notice that we now see <code >3</code> transfers associated with this sales order
+in the <strong >stat button</strong> above the sales order.</p><img src="../../../_images/three_steps06.png" class="img-responsive center-block"><p >If you click the button, you should now see three different pickings:</p><ol ><li >The first with a reference <strong >PICK</strong> to designate the picking process,</li><li >The second one with the reference <strong >PACK</strong> that is the packing process,</li><li >The last with a reference <strong >OUT</strong> to designate the shipping process.</li></ol><img src="../../../_images/three_steps04.png" class="img-responsive center-block"></section><section id="process-a-delivery"><h2 >Process a Delivery</h2></section><section id="how-to-process-the-picking-step"><h3 >How to Process the Picking Step?</h3><p >Ensure that you have enough product in stock and Go to <strong >Inventory</strong>
+and click on the <strong >Waiting</strong> link under the <strong >Pick</strong> kanban card.</p><img src="../../../_images/three_steps08.png" class="img-responsive center-block"><p >Click on the picking that you want to process.</p><p >Click on <strong >Reserve</strong> to reserve the products if they are available.</p><p >Click on <strong >Validate</strong> to complete the move from <strong >WH/Stock</strong> to <strong >WH/Packing Zone</strong>.</p><p >This has completed the picking Step and the <strong >WH/PICK</strong> should now show
+<strong >Done</strong> in the status column at the top of the page. The product has
+been moved from <strong >WH/Stock</strong> to <strong >WH/Packing Zone</strong> location, which makes the
+product available for the next step (Packing).</p></section><section id="how-to-process-the-packing-step"><h3 >How to Process the Packing Step?</h3><p >Go to <strong >Inventory</strong> and click on the <strong ># TRANSFERS</strong> link under the
+<strong >Pack</strong> kanban card.</p><img src="../../../_images/three_steps03.png" class="img-responsive center-block"><p >Click on the picking that you want to process.</p><p >Click on <strong >Validate</strong> to complete the move from <strong >WH/Packing Zone</strong> to
+<strong >WH/Output</strong>.</p><p >This has completed the packing step and the <strong >WH/PACK</strong> should now show
+<strong >Done</strong> in the status column at the top of the page. The product has
+been moved from <strong >WH/Packing Zone</strong> to <strong >WH/Output location</strong>, which makes the
+product available for the next step (Shipping).</p></section><section id="how-to-process-the-shipping-step"><h3 >How to Process the Shipping Step?</h3><p >Go to <strong >Inventory</strong> and click on the <strong ># TO DO</strong> link under the
+<strong >Delivery Orders</strong> kanban card.</p><img src="../../../_images/three_steps02.png" class="img-responsive center-block"><p >Click on the picking that you want to process.</p><p >Click on <strong >Validate</strong> to complete the move from <strong >WH/Output</strong> to the
+<strong >customer</strong> (Click <strong >Apply</strong> to assign the quantities based on the
+quantities listed in the <strong >To Do</strong> column).</p><p >This has completed the shipping step and the <strong >WH/OUT</strong> should now show
+<strong >Done</strong> in the status column at the top of the page. The product has
+been shipped to the customer.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

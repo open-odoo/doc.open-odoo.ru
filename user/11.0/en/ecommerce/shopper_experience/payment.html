@@ -1,0 +1,281 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to get paid with payment acquirers &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" />
+    <link rel="up" title="Get paid" href="../shopper_experience.html" />
+    <link rel="next" title="How to get paid with Paypal" href="paypal.html" />
+    <link rel="prev" title="Get paid" href="../shopper_experience.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../ecommerce.html">eCommerce</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to get paid with payment acquirers</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/ecommerce/shopper_experience/payment.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/ecommerce/shopper_experience/payment.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/ecommerce/shopper_experience/payment.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to get paid with payment acquirers - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#what-are-the-payment-methods-available" class="ripple internal reference">What are the payment methods available</a><ul ><li class="list-group-item"><a href="#wire-transfer" class="ripple internal reference">Wire transfer</a></li><li class="list-group-item"><a href="#payment-acquirers" class="ripple internal reference">Payment acquirers</a></li></ul></li><li class="list-group-item"><a href="#how-to-go-live" class="ripple internal reference">How to go live</a></li><li class="list-group-item"><a href="#how-to-let-customers-save-and-reuse-credit-cards" class="ripple internal reference">How to let customers save and reuse credit cards</a></li><li class="list-group-item"><a href="#how-to-debit-credit-cards-to-pay-subscriptions" class="ripple internal reference">How to debit credit cards to pay subscriptions</a></li><li class="list-group-item"><a href="#how-to-use-other-acquirers-advanced" class="ripple internal reference">How to use other acquirers (advanced)</a></li><li class="list-group-item"><a href="#other-configurations" class="ripple internal reference">Other configurations</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/ecommerce/shopper_experience/payment.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-get-paid-with-payment-acquirers"><p >Odoo embeds several payment methods to get paid on eCommerce, Sales
+and Invoicing apps.</p></section><section id="what-are-the-payment-methods-available"><h2 >What are the payment methods available</h2></section><section id="wire-transfer"><h3 >Wire transfer</h3><p >Wire Transfer is the default payment method available. The aim is providing your
+customers with your bank details so they can pay on their own via their bank.
+This is very easy to start with but slow and inefficient process-wise.
+Opt for online acquirers as soon as you can!</p></section><section id="payment-acquirers"><h3 >Payment acquirers</h3><p >Redirect your customers to payment platforms to collect money effortless
+and track the payment status (call-back).
+Odoo supports more and more platforms over time:</p><ul ><li ><a href="paypal.html" class="external reference">Paypal</a></li><li >Ingenico</li><li >Authorize.net</li><li >Adyen</li><li >Buckaroo</li><li >PayUmoney</li><li >Sips</li><li >Stripe</li></ul></section><section id="how-to-go-live"><h2 >How to go live</h2><p >Once the payment method ready, make it visible in the payment interface
+and activate the <strong >Production</strong> mode.</p><img src="../../_images/paypal_live.png" class="img-responsive center-block"></section><section id="how-to-let-customers-save-and-reuse-credit-cards"><h2 >How to let customers save and reuse credit cards</h2><p >To ease the payment of returning customers, you can let them
+save and reuse a credit card if they want to.
+If so, a payment token will be saved in Odoo.
+This option is available with Ingenico and Authorize.net.</p><p >You can turn this on from the acquirer configuration form.</p><img src="../../_images/payment_save_card.png" class="img-responsive center-block"></section><section id="how-to-debit-credit-cards-to-pay-subscriptions"><h2 >How to debit credit cards to pay subscriptions</h2><p ><a href="https://www.odoo.com/page/subscriptions" class="external reference">Odoo Subscription</a> allows to
+bill services automatically on a recurring basis.
+Along with it, you can have an automatic debit of the customer's credit card.</p><p >This option is available with Ingenico and Authorize.net.</p><p >You can turn this on from the acquirer configuration form.</p><img src="../../_images/payment_recurring.png" class="img-responsive center-block"><p >That way a payment token will be recorded when the customer
+goes for the subscription and an automatic debit will occur
+whenever an invoice is issued from the subscription.</p></section><section id="how-to-use-other-acquirers-advanced"><h2 >How to use other acquirers (advanced)</h2><p >Odoo can submit single payment requests and redirect to any payment acquirer.
+But there is no call-back, i.e. Odoo doesn't track the transaction status.
+So you will confirm orders manually once you get paid.</p><p >How to:</p><ul ><li >Switch to developer mode.</li><li >Take the <strong >Custom</strong> payment method.</li><li >Set up the payment form (S2S Form Template) as instructed by your payment acquirer.
+You can start from <em >default_acquirer_button</em> that you can duplicate.</li></ul></section><section id="other-configurations"><h2 >Other configurations</h2><p >Odoo can also be used for more advanced payment processes
+like installment plans (e.g.
+<a href="https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/installment_buttons" class="external reference">Paypal Installment Plans</a>).</p><p >Such a customization service is made on-demand by our technical experts
+based on your own requirements. A business advisor can reach you out for
+such matter. <a href="https://www.odoo.com/page/contactus" class="external reference">Contact us.</a></p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="paypal.html" class="internal alert-link reference"><span class="doc">How to get paid with Paypal</span></a></li><li ><a href="wire_transfer.html" class="internal alert-link reference"><span class="doc">How to get paid with wire transfers</span></a></li><li ><a href="payment_acquirer.html" class="internal alert-link reference"><span class="doc">How to manage orders paid with payment acquirers</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

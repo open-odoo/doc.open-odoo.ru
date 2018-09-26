@@ -1,0 +1,288 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Getting started with Odoo Point of Sale &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" />
+    <link rel="up" title="Overview" href="../overview.html" />
+    <link rel="next" title="Point of Sale Hardware Setup" href="setup.html" />
+    <link rel="prev" title="Overview" href="../overview.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../point_of_sale.html">Point of Sale</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Getting started with Odoo Point of Sale</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/point_of_sale/overview/start.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/point_of_sale/overview/start.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/point_of_sale/overview/start.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Getting started with Odoo Point of Sale - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-point-of-sale-application" class="ripple internal reference">Install the Point of Sale application</a></li><li class="list-group-item"><a href="#make-products-available-in-the-point-of-sale" class="ripple internal reference">Make products available in the Point of Sale</a></li><li class="list-group-item"><a href="#configure-your-payment-methods" class="ripple internal reference">Configure your payment methods</a></li><li class="list-group-item"><a href="#configure-your-point-of-sale" class="ripple internal reference">Configure your Point of Sale</a></li></ul></li><li class="list-group-item"><a href="#create-your-first-pos-session" class="ripple internal reference">Create your first PoS session</a><ul ><li class="list-group-item"><a href="#your-first-order" class="ripple internal reference">Your first order</a></li><li class="list-group-item"><a href="#close-the-pos-session" class="ripple internal reference">Close the PoS session</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/point_of_sale/overview/start.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="getting-started-with-odoo-point-of-sale"></section><section id="overview"><h2 >Overview</h2><p >Odoo's online Point of Sale application is based on a simple, user
+friendly interface. The Point of Sale application can be used online or
+offline on iPads, Android tablets or laptops.</p><p >Odoo Point of Sale is fully integrated with the Inventory and Accounting
+applications. Any transaction in your point of sale will be
+automatically registered in your stock and accounting entries but also
+in your CRM as the customer can be identified from the app.</p><p >You will be able to run real time statistics and consolidations across
+all your shops without the hassle of integrating several external
+applications.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-point-of-sale-application"><h3 >Install the Point of Sale application</h3><p >Go to Apps and install the Point of Sale application.</p><img src="../../_images/start01.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you are using Odoo Accounting, do not forget to install a chart of
+accounts if it's not already done. This can be achieved in the
+accounting settings.</p></div></section><section id="make-products-available-in-the-point-of-sale"><h3 >Make products available in the Point of Sale</h3><p >To make products available for sale in the Point of Sale, open a
+product, go in the tab Sales and tick the box &quot;Available in Point of
+Sale&quot;.</p><img src="../../_images/start02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can also define there if the product has to be weighted with a
+scale.</p></div></section><section id="configure-your-payment-methods"><h3 >Configure your payment methods</h3><p >To add a new payment method for a Point of Sale, go to
+<span class="menuselection">Point of Sale ‣ Configuration ‣ Point of Sale ‣ Choose
+a Point of Sale ‣ Go to the Payments section</span> and click on the link
+&quot;Payment Methods&quot;.</p><img src="../../_images/start03.png" class="img-responsive center-block"><p >Now, you can create new payment methods. Do not forget to tick the box
+&quot;Use in Point of Sale&quot;.</p><img src="../../_images/start04.png" class="img-responsive center-block"><p >Once your payment methods are created, you can decide in which Point of
+Sale you want to make them available in the Point of Sale configuration.</p><img src="../../_images/start05.png" class="img-responsive center-block"></section><section id="configure-your-point-of-sale"><h3 >Configure your Point of Sale</h3><p >Go to <span class="menuselection">Point of Sale ‣ Configuration ‣ Point of Sale</span>
+and select the Point of Sale you want to configure. From this menu, you
+can edit all the settings of your Point of Sale.</p></section><section id="create-your-first-pos-session"><h2 >Create your first PoS session</h2></section><section id="your-first-order"><h3 >Your first order</h3><p >You are now ready to make your first sales through the PoS. From the PoS
+dashboard, you see all your points of sale and you can start a new
+session.</p><img src="../../_images/start06.png" class="img-responsive center-block"><p >You now arrive on the PoS interface.</p><img src="../../_images/start07.png" class="img-responsive center-block"><p >Once an order is completed, you can register the payment. All the
+available payment methods appear on the left of the screen. Select the
+payment method and enter the received amount. You can then validate the
+payment.</p><p >You can register the next orders.</p></section><section id="close-the-pos-session"><h3 >Close the PoS session</h3><p >At the end of the day, you will close your PoS session. For this, click
+on the close button that appears on the top right corner and confirm.
+You can now close the session from the dashboard.</p><img src="../../_images/start08.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >It's strongly advised to close your PoS session at the end of each day.</p></div><p >You will then see a summary of all transactions per payment method.</p><img src="../../_images/start09.png" class="img-responsive center-block"><p >You can click on a line of that summary to see all the orders that have
+been paid by this payment method during that PoS session.</p><p >If everything is correct, you can validate the PoS session and post the
+closing entries.</p><p >It's done, you have now closed your first PoS session.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

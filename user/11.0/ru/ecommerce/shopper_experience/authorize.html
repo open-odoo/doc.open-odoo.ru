@@ -1,0 +1,261 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как получать оплату с Authorize.Net &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" />
+    <link rel="up" title="Онлайн оплата" href="../shopper_experience.html" />
+    <link rel="next" title="Как получать деньги банковским переводом" href="wire_transfer.html" />
+    <link rel="prev" title="Как получать оплаты с PayPal" href="paypal.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../ecommerce.html">Интернет-магазин</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как получать оплату с Authorize.Net</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/ecommerce/shopper_experience/authorize.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/ecommerce/shopper_experience/authorize.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/ecommerce/shopper_experience/authorize.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как получать оплату с Authorize.Net - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-an-authorize-net-account" class="ripple internal reference">Создайте учетную запись Authorize.Net</a></li><li class="list-group-item"><a href="#set-up-odoo" class="ripple internal reference">Настройка Odoo</a></li><li class="list-group-item"><a href="#go-live" class="ripple internal reference">Запуск</a></li><li class="list-group-item"><a href="#assess-authorize-net-as-payment-solution" class="ripple internal reference">Оцените Authorize.Net как платежное решение</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/ecommerce/shopper_experience/authorize.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-get-paid-with-authorize-net"><p >Authorize.Net это одна из самых популярных платежных платформ электронной коммерции в Северной Америке. В отличие от большинства других платформ совместим с Odoo, Authorize.Net можно использовать в качестве только платежного шлюза &lt;<a href="https://www.authorize.net/solutions/merchantsolutions/pricing/?p=gwo" class="external reference">https://www.authorize.net/solutions/merchantsolutions/pricing/?p=gwo</a>&gt;`__ . Таким образом, Вы можете использовать <a href="https://www.authorize.net/partners/resellerprogram/processorlist/" class="external reference">payment processor or merchant</a>.</p></section><section id="create-an-authorize-net-account"><h2 >Создайте учетную запись Authorize.Net</h2><ul ><li ><p >Создайте учетную запись <a href="https://www.authorize.net" class="external reference">Authorize.Net</a> нажав &quot;Get Started&quot;.</p></li><li ><p >В прайс-листе, нажмите <em >Sign up now</em> если вы хотите использовать Authorize.net как платежный шлюз и merchant. Если вы хотите использовать свой собственный merchant, нажмите соответствующую опцию.</p><img src="../../_images/authorize01.png" class="img-responsive center-block"></li><li ><p >Пройдите шаги регистрации.</p></li><li ><p >По умолчанию учетная запись устанавливается как тестовая учетная запись. Вы можете использовать эту тестовую учетную запись для проверки тестовой транзакции в Odoo.</p></li><li ><p >Как только вы будете готовы, переключайтесь в режим <strong >Production</strong>.</p></li></ul></section><section id="set-up-odoo"><h2 >Настройка Odoo</h2><ul ><li ><p >Активируйте Authorize.Net в Odoo в меню <span class="menuselection">Website or Sales or Accounting ‣ Settings ‣ Payment Acquirers</span>.</p></li><li ><p >Введите Ваш <strong >Login ID</strong> и <strong >API Transaction Key</strong>.</p><img src="../../_images/authorize02.png" class="img-responsive center-block"><p >Чтобы узнать, как получить эти данные в Authorize.Net, вы можете посмотреть видео <em >API Login ID and Transaction Key</em> видео <a href="https://www.authorize.net/videos/" class="external reference">Authorize.Net видеоуроки</a>. Такие видео дают содержательные руководс о том, как настроить учетную запись Authorize.Net в соответствии с вашими потребностями.</p></li></ul></section><section id="go-live"><h2 >Запуск</h2><p >Настройка закончена! Вы можете сделать активным Authorize.Net в &quot;Личном кабинете&quot; и активировать <strong >Production</strong> режим.</p><img src="../../_images/paypal_live.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Учетные данные, предоставленные Authorize.net, различны для тестового и производственного режимов. Не забудьте обновить их в Odoo при включении режима Production.</p></div></section><section id="assess-authorize-net-as-payment-solution"><h2 >Оцените Authorize.Net как платежное решение</h2><p >Вы можете протестировать и оценить Authorize.Net бесплатно путем создания <a href="https://developer.authorize.net" class="external reference">учетной записи разработчика</a>.</p><p >После создания учетной записи вы получите учетные данные sandbox. Вводить их в Odoo как описано здесь выше, и убедитесь, что вы все еще в <em >Test</em> режиме.</p><p >Вы также можете войти в <a href="https://sandbox.authorize.net/" class="external reference">платформу Authorize.Net sandbox</a> для настройки учетной записи sandbox.</p><p >Для выполнения фиктивных транзакций вы можете использовать номера поддельных карточек, указанные в <a href="https://developer.authorize.net/hello_world/testing_guide/" class="external reference">Руководстве по тестированию Authorize.Net</a>.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="payment.html" class="internal alert-link reference"><span class="doc">Как получить оплату с помощью эквайринга</span></a></li><li ><a href="payment_acquirer.html" class="internal alert-link reference"><span class="doc">Как управлять заказами, оплаченными покупателями</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

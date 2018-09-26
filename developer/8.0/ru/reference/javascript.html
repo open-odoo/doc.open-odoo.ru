@@ -1,0 +1,534 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Javascript &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Перевод Модулей" href="translations.html" />
+    <link rel="prev" title="Qweb" href="qweb.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Javascript</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/en/reference/javascript.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/ru/reference/javascript.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/javascript.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/javascript.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/ru/">Пользователю</a></li>
+<li><a href="/developer/8.0/ru/">Разработчику</a></li>
+<li><a href="/developer/8.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/javascript.jpg');"></span>
+      <div class="container text-center">
+        <h1> Javascript - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#widgets" class="ripple internal reference">Виджеты</a><ul ><li class="list-group-item"><a href="#dom-root" class="ripple internal reference">DOM Root</a><ul ><li class="list-group-item"><a href="#using-a-widget" class="ripple internal reference">Использование виджета</a></li><li class="list-group-item"><a href="#accessing-dom-content" class="ripple internal reference">Доступ к содержимому DOM</a></li><li class="list-group-item"><a href="#resetting-the-dom-root" class="ripple internal reference">Сброс корня DOM</a></li></ul></li><li class="list-group-item"><a href="#dom-events-handling" class="ripple internal reference">Обработка событий DOM</a></li><li class="list-group-item"><a href="#subclassing-widget" class="ripple internal reference">Виджет подкласса</a></li><li class="list-group-item"><a href="#development-guidelines" class="ripple internal reference">Руководство по разработке</a></li></ul></li><li class="list-group-item"><a href="#rpc" class="ripple internal reference">R∞(pc) = . (14)</a><ul ><li class="list-group-item"><a href="#high-level-api-calling-into-odoo-models" class="ripple internal reference">API высокого уровня: вызов моделей Odoo</a><ul ><li class="list-group-item"><a href="#aggregation-grouping" class="ripple internal reference">Агрегация (группировка)</a></li></ul></li><li class="list-group-item"><a href="#low-level-api-rpc-calls-to-python-side" class="ripple internal reference">Низкоуровневый API: вызовы RPC со стороны Python</a></li></ul></li><li class="list-group-item"><a href="#web-client" class="ripple internal reference">Веб-клиент</a></li><li class="list-group-item"><a href="#testing-in-odoo-web-client" class="ripple internal reference">Тестирование в веб-клиенте Odoo</a><ul ><li class="list-group-item"><a href="#javascript-unit-testing" class="ripple internal reference">Тестирование модуля Javascript</a></li><li class="list-group-item"><a href="#writing-a-test-case" class="ripple internal reference">Написание тестового примера</a></li><li class="list-group-item"><a href="#assertions" class="ripple internal reference">Утверждения</a></li><li class="list-group-item"><a href="#getting-an-odoo-instance" class="ripple internal reference">Получение экземпляра Odoo</a></li><li class="list-group-item"><a href="#dom-scratchpad" class="ripple internal reference">DOM Scratchpad</a></li><li class="list-group-item"><a href="#loading-templates" class="ripple internal reference">Загрузка шаблонов</a></li><li class="list-group-item"><a href="#asynchronous-cases" class="ripple internal reference">Асинхронные случаи</a></li><li class="list-group-item"><a href="#id3" class="ripple internal reference">R∞(pc) = . (14)</a></li><li class="list-group-item"><a href="#testing-api" class="ripple internal reference">Тестирование API</a></li><li class="list-group-item"><a href="#running-through-python" class="ripple internal reference">Выполнение через Python</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/javascript.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="javascript"></section><section id="widgets"><h2 >Виджеты</h2><section class="code-class"><h6 id="openerp.Widget"><code><em >class </em>openerp.Widget()</code></h6><p >Базовый класс для всех визуальных компонентов. Он соответствует представлению MVC и предоставляет ряд услуг, упрощающих обработку раздела страницы:</p><ul ><li ><p >Обрабатывает родительские / дочерние отношения между виджетами</p></li><li ><p >Обеспечивает расширенное управление жизненным циклом с функциями безопасности (например, автоматически уничтожая дочерние виджеты во время уничтожения родителя)</p></li><li ><p >Автоматический рендеринг с: ref: [UNKNOWN NODE title_reference]</p></li><li ><p >Совместимые с базовой сетью ярлыки</p></li></ul></section></section><section id="dom-root"><h3 >DOM Root</h3><p >A: класс: [UNKNOWN NODE title_reference] отвечает за раздел страницы, материализованный корнем DOM виджета.</p><p >DOM-корень виджета доступен через два атрибута:</p><section class="code-attribute"><h6 id="openerp.Widget.el"><code>openerp.Widget.el</code></h6><p >Необработанный элемент DOM, установленный как root в виджет</p></section><section class="code-attribute"><h6 id="openerp.Widget._S_el"><code>openerp.Widget.$el</code></h6><p >Оболочка jQuery: attr: [UNKNOWN NODE title_reference]</p></section><p >Существует два основных способа определить и создать этот корень DOM:</p><section class="code-attribute"><h6 id="openerp.Widget.template"><code>openerp.Widget.template</code></h6><p >Должно быть указано имя a: ref: [UNKNOWN NODE title_reference]. Если установлено, шаблон будет отображаться после инициализации виджета, но до его запуска. Корневой элемент, сгенерированный шаблоном, будет установлен как корень DOM виджета.</p></section><section class="code-attribute"><h6 id="openerp.Widget.tagName"><code>openerp.Widget.tagName</code></h6><p >Используется, если виджет не имеет определенного шаблона. По умолчанию `` div``, будет использоваться как имя тега для создания элемента DOM, который будет установлен в качестве корня DOM для виджета. Можно дополнительно настроить этот сгенерированный корень DOM со следующими атрибутами:</p><section class="code-attribute"><h6 id="openerp.Widget.id"><code>openerp.Widget.id</code></h6><p >Используется для генерации атрибута `` id`` для сгенерированного корня DOM.</p></section><section class="code-attribute"><h6 id="openerp.Widget.className"><code>openerp.Widget.className</code></h6><p >Используется для генерации атрибута `` class`` для сгенерированного DOM-корня.</p></section><section class="code-attribute"><h6 id="openerp.Widget.attributes"><code>openerp.Widget.attributes</code></h6><p >Сопоставление (литерал объекта) имен атрибутов с значениями атрибутов. Каждая из этих пар k: v будет установлена ​​как атрибут DOM в сгенерированном корне DOM.</p></section><p >Ни один из них не используется, если шаблон указан в виджете.</p></section><p >Корень DOM также может быть определен программно путем перевыбора</p><section class="code-function"><h6 id="openerp.Widget.renderElement"><code>openerp.Widget.renderElement()</code></h6><p >Отображает корень DOM виджета и устанавливает его. Реализация по умолчанию создаст заданный шаблон или создаст элемент, как описано выше, и выведет: func: [UNKNOWN NODE title_reference] на результат.</p><p >Любые переопределения для: func: [UNKNOWN NODE title_reference], который не вызывает его` [UNKNOWN NODE title_reference] [UNKNOWN NODE problematic], должен ** вызывать: func:` ~ openerp.Widget.setElement` с тем, что он сгенерировал, или поведение виджета не определено.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >По умолчанию: func: [UNKNOWN NODE title_reference] может быть вызван повторно, он * заменит * прежний корень DOM (используя` [UNKNOWN NODE title_reference]). Однако это требует, чтобы виджет правильно устанавливал и отменял свои события (и дочерние виджеты). В общем случае: func: [UNKNOWN NODE title_reference] не следует вызывать многократно, если виджет не рекламирует эту функцию.</p></div></section></section><section id="using-a-widget"><h4 >Использование виджета</h4><p >Жизненный цикл виджета состоит из трех основных этапов:</p><ul ><li ><p >Создание и инициализация экземпляра виджета</p><section class="code-function"><h6 id="openerp.Widget.init"><code>openerp.Widget.init(<em>parent</em>)</code></h6><p >Метод инициализации виджетов, синхронный, может быть переопределен для получения большего количества параметров от создателя / родителя виджета</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >parent</strong> (<a href="#openerp.Widget" class="internal alert-link reference" title="openerp.Widget"><code class="js-class xref js">Widget()</code></a>) -- Родитель нового виджета, используемый для автоматического уничтожения и распространения событий. Может быть `` null`` для того, чтобы у виджета не было родителя.</li></ul></div></div></div></section></li><li ><p >DOM injection и startup, это делается путем вызова одного из:</p><section class="code-function"><h6 id="openerp.Widget.appendTo"><code>openerp.Widget.appendTo(<em>element</em>)</code></h6><p >Визуализирует виджет и вставляет его в качестве последнего потомка цели, использует [UNKNOWN NODE title_reference] _</p></section><section class="code-function"><h6 id="openerp.Widget.prependTo"><code>openerp.Widget.prependTo(<em>element</em>)</code></h6><p >Визуализирует виджет и вставляет его в качестве первого потомка цели, использует [UNKNOWN NODE title_reference] _</p></section><section class="code-function"><h6 id="openerp.Widget.insertAfter"><code>openerp.Widget.insertAfter(<em>element</em>)</code></h6><p >Визуализирует виджет и вставляет его в качестве предыдущего сиблинга цели, использует [UNKNOWN NODE title_reference] _</p></section><section class="code-function"><h6 id="openerp.Widget.insertBefore"><code>openerp.Widget.insertBefore(<em>element</em>)</code></h6><p >Визуализирует виджет и вставляет его как следующий родственник цели, использует [UNKNOWN NODE title_reference] _</p></section><p >Все эти методы принимают то, что принимает соответствующий метод jQuery (селектор CSS, узлы DOM или объекты jQuery). Все они возвращают <a href="http://api.jquery.com/category/deferred-object/" class="external reference">deferred</a> и отвечают за три задачи:</p><ul ><li ><p >Рендеринг корневого элемента виджета с помощью: func: [UNKNOWN NODE title_reference]</p></li><li ><p >Вставка корневого элемента виджета в DOM с использованием любого подходящего метода jQuery</p></li><li ><p >Запуск виджета и возврат результата его запуска</p><section class="code-function"><h6 id="openerp.Widget.start"><code>openerp.Widget.start()</code></h6><p >Асинхронный запуск виджета, как только он был введен в DOM, обычно используется для выполнения асинхронных вызовов RPC для получения любых удаленных данных, необходимых для работы виджета.</p><p >Необходимо вернуть <a href="http://api.jquery.com/category/deferred-object/" class="external reference alert-link">deferred</a>, чтобы указать, когда его работа выполнена.</p><p >Виджет * не гарантирован * корректно работает до тех пор, пока его метод func: [UNKNOWN NODE title_reference] не завершится. Родитель / создатель виджета должен дождаться полного запуска виджетов, прежде чем взаимодействовать с ним</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Объект <a href="http://api.jquery.com/category/deferred-object/" class="external reference alert-link">deferred</a></div></div></div></section></li></ul></li><li ><p >Уничтожение и очистка виджета</p><section class="code-function"><h6 id="openerp.Widget.destroy"><code>openerp.Widget.destroy()</code></h6><p >Уничтожает дочерние элементы виджета, развязывает его события и удаляет его корень из DOM. Автоматически вызываемый при разрушении родительского элемента виджета должен быть вызван явно, если у виджета нет родителей или если он удален, но его родительский элемент остается.</p><p >Виджет, уничтожаемый автоматически, отключается от родителя.</p></section></li></ul><p >Важное значение имеет утилита, связанная с уничтожением виджетов:</p><section class="code-function"><h6 id="openerp.Widget.alive"><code>openerp.Widget.alive(<em>deferred</em>[, <em>reject=false</em>])</code></h6><p >Существенной проблемой RPC и разрушения является то, что вызов RPC может занять много времени, чтобы выполнить и вернуть в то время, когда виджет уничтожается или после его уничтожения, пытаясь выполнить свои операции над виджетами в сломанном / недопустимом состоянии.</p><p >Это частый источник ошибок или странного поведения.</p><p >: Func: [UNKNOWN NODE title_reference] может использоваться для обертывания вызова RPC, гарантируя, что любые операции должны выполняться, когда завершение вызова выполняются, только если виджет все еще жив:</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">alive</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">query</span><span class="p">().</span><span class="nx">all</span><span class="p">()).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">records</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// would break if executed after the widget is destroyed, wrapping</span>
+    <span class="c1">// rpc in alive() prevents execution</span>
+    <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">records</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">record</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">record</span><span class="p">));</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >deferred</strong> -- Объект <a href="http://api.jquery.com/category/deferred-object/" class="external reference alert-link">deferred</a> для переноса</li><li ><strong >reject</strong> -- По умолчанию, если вызов RPC вернется после уничтожения виджета, возвращенный <a href="http://api.jquery.com/category/deferred-object/" class="external reference alert-link">deferred</a> останется в подвешенном состоянии (не будет разрешен или отклонен). Если `` reject`` установлено на `` true``, то <a href="http://api.jquery.com/category/deferred-object/" class="external reference alert-link">deferred</a> будет отклонена.</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Объект <a href="http://api.jquery.com/category/deferred-object/" class="external reference alert-link">deferred</a></div></div></div></section><section class="code-function"><h6 id="openerp.Widget.isDestroyed"><code>openerp.Widget.isDestroyed()</code></h6><div class="code-fields"><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">`` True``, если виджет был или был уничтожен, `` false`` в противном случае</div></div></div></section></section><section id="accessing-dom-content"><h4 >Доступ к содержимому DOM</h4><dl ><dt >Поскольку виджет отвечает только за содержимое, расположенное ниже корня DOM,</dt><dd >is a shortcut for selecting sub-sections of a widget's DOM:</dd></dl><section class="code-function"><h6 id="openerp.Widget._S_"><code>openerp.Widget.$(<em>selector</em>)</code></h6><p >Применяет CSS-селектор, указанный в качестве параметра к корню DOM виджета</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">);</span>
+</pre></div>
+</div>
+<p >Функционально идентичен</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">selector</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >selector</strong> (<code >String</code>) -- Селектор CSS</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Объект jQuery</div></div></div><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Этот вспомогательный метод похож на `` Backbone.View. $ ``</p></div></section></section><section id="resetting-the-dom-root"><h4 >Сброс корня DOM</h4><section class="code-function"><h6 id="openerp.Widget.setElement"><code>openerp.Widget.setElement(<em>element</em>)</code></h6><p >Переустанавливает корень DOM виджета на предоставленный элемент, также обрабатывает повторную установку различных псевдонимов корня DOM, а также отмену и переустановку делегированных событий.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >element</strong> (<code >Element</code>) -- Элемент DOM или объект jQuery для установки в качестве корня DOM виджета</li></ul></div></div></div><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Должен быть в основном совместим с [UNKNOWN NODE title_reference]</p></div></section></section><section id="dom-events-handling"><h3 >Обработка событий DOM</h3><p >Виджет обычно должен реагировать на действия пользователя в пределах своего раздела страницы. Это влечет за собой связывание событий с элементами DOM.</p><p >Для этого: class: [UNKNOWN NODE title_reference] предоставляет ярлык:</p><section class="code-attribute"><h6 id="openerp.Widget.events"><code>openerp.Widget.events</code></h6><p >События - это отображение селектора событий (имя события и необязательный селектор CSS, разделенные пробелом) на обратный вызов. Обратный вызов может быть именем метода виджета или функционального объекта. В любом случае, `` this`` будет установлен в widget</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s1">&#39;click p.oe_some_class a&#39;</span><span class="o">:</span> <span class="s1">&#39;some_method&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;change input&#39;</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p >Селектор используется для «делегирования событий» jQuery, обратный вызов будет инициирован только для потомков корня DOM, соответствующих селектору [#eventsdelegation] _. Если селектор не указан (указывается только имя события), событие будет установлено непосредственно в корне DOM виджета.</p></section><section class="code-function"><h6 id="openerp.Widget.delegateEvents"><code>openerp.Widget.delegateEvents()</code></h6><p >Этот метод отвечает за привязку: attr: [UNKNOWN NODE title_reference] для DOM. Он автоматически вызывается после установки корня DOM в виджете.</p><p >Он может быть переопределен для создания более сложных событий, чем позволяет карта: attr: [UNKNOWN NODE title_reference], но родитель должен всегда вызываться (или: attr:` ~ openerp.Widget.events` не будет Обрабатываются правильно).</p></section><section class="code-function"><h6 id="openerp.Widget.undelegateEvents"><code>openerp.Widget.undelegateEvents()</code></h6><p >Этот метод отвечает за развязывание: attr: [UNKNOWN NODE title_reference] из корня DOM при уничтожении виджета или перезагрузке корня DOM, чтобы избежать выхода из« фантомных »событий.</p><p >Он должен быть переопределен, чтобы отменить любое установленное событие в переопределении: func: [UNKNOWN NODE title_reference].</p></section><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Это поведение должно быть совместимо с <a href="http://backbonejs.org/#View-delegateEvents" class="external reference alert-link">Backbone's delegateEvents</a>, за исключением того, что вы не принимаете никаких аргументов.</p></div></section><section id="subclassing-widget"><h3 >Виджет подкласса</h3><p >: Class: [UNKNOWN NODE title_reference] подклассифицируется стандартным образом (с помощью метода: func:` ~ openerp.Class.extend`) и предоставляет ряд абстрактных свойств и конкретных методов (которые вы можете или не захотеть переопределить). Создание подкласса выглядит так:</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">MyWidget</span> <span class="o">=</span> <span class="nx">openerp</span><span class="p">.</span><span class="nx">Widget</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+    <span class="c1">// QWeb template to use when rendering the object</span>
+    <span class="nx">template</span><span class="o">:</span> <span class="s2">&quot;MyQWebTemplate&quot;</span><span class="p">,</span>
+    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">// events binding example</span>
+        <span class="s1">&#39;click .my-button&#39;</span><span class="o">:</span> <span class="s1">&#39;handle_click&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+
+    <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">parent</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_super</span><span class="p">(</span><span class="nx">parent</span><span class="p">);</span>
+        <span class="c1">// insert code to execute before rendering, for object</span>
+        <span class="c1">// initialization</span>
+    <span class="p">},</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">sup</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_super</span><span class="p">();</span>
+        <span class="c1">// post-rendering initialization code, at this point</span>
+
+        <span class="c1">// allows multiplexing deferred objects</span>
+        <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">when</span><span class="p">(</span>
+            <span class="c1">// propagate asynchronous signal from parent class</span>
+            <span class="nx">sup</span><span class="p">,</span>
+            <span class="c1">// return own&#39;s asynchronous signal</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">rpc</span><span class="p">(</span><span class="cm">/* … */</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p >Новый класс можно затем использовать следующим образом:</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// Create the instance</span>
+<span class="kd">var</span> <span class="nx">my_widget</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyWidget</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="c1">// Render and insert into DOM</span>
+<span class="nx">my_widget</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;.some-div&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p >После выполнения этих двух строк (и любое обещание, возвращенное функцией: func: [UNKNOWN NODE title_reference] было разрешено, если необходимо), виджет готов к использованию.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Методы вставки будут запускать сам виджет и возвратят результат: func: [UNKNOWN NODE title_reference].</p><p >Если по каким-то причинам вы не хотите вызывать эти методы, вам сначала нужно вызвать: func: [UNKNOWN NODE title_reference] на виджете, затем вставить его в DOM и запустить.</p></div><p >Если виджет больше не нужен (потому что он кратковременный), просто завершите его</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">my_widget</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+</pre></div>
+</div>
+<p >Отменит все события DOM, удалит содержимое виджета из DOM и уничтожит все данные виджета.</p></section><section id="development-guidelines"><h3 >Руководство по разработке</h3><ul ><li ><p >Идентификаторы (атрибут `` id``) следует избегать. В общих приложениях и модулях `` id`` ограничивает возможность повторного использования компонентов и делает код более хрупким. В большинстве случаев они могут быть заменены ничем, классами или содержать ссылку на узел DOM или элемент jQuery.</p><p >Если `` id`` абсолютно необходимо (потому что сторонняя библиотека требует одно), id должен быть частично сгенерирован с помощью `` _uniqueId () `` eg</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">uniqueId</span><span class="p">(</span><span class="s1">&#39;my-widget-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li><li ><p >Избегайте предсказуемых / общих имен классов CSS. Имена классов, такие как «контент» или «навигация», могут соответствовать желаемому смыслу / семантике, но, вероятно, другой разработчик будет иметь такую ​​же потребность, создавая конфликт имен и непреднамеренное поведение. Имена универсальных классов должны начинаться с префикса, например, именем компонента, к которому они принадлежат (создание «неформальных» пространств имен, как в C или Objective-C).</p></li><li ><p >Следует избегать глобальных селекторов. Так как компонент может использоваться несколько раз на одной странице (пример в Odoo - панели мониторинга), запросы должны быть ограничены областью заданного компонента. Неотфильтрованные варианты, такие как `` (селектор) `` или `` document.querySelectorAll (селектор) [UNKNOWN NODE problematic], обычно приводят к непреднамеренному или неправильному поведению. Odoo Web: class: [UNKNOWN NODE title_reference] имеет атрибут, обеспечивающий его корень DOM (: attr:` ~ openerp.web.Widget. $ El`), и ярлык для выбора узлов напрямую (: func: [UNKNOWN NODE problematic]~ openerp.web.Widget. $ [UNKNOWN NODE problematic]).</p></li><li ><p >В более общем плане, никогда не предполагайте, что ваши компоненты владеют или контролируют что-либо за пределами своего личного: attr: [UNKNOWN NODE title_reference]</p></li><li ><p >Html шаблонизатор / рендеринг должен использовать QWeb, если он не является абсолютно тривиальным.</p></li><li ><p >Все интерактивные компоненты (компоненты, отображающие информацию на экран или перехватывающие события DOM) должны наследовать от: class: [UNKNOWN NODE title_reference] и правильно реализовывать и использовать свой API и жизненный цикл.</p></li></ul></section><section id="rpc"><h2 >R∞(pc) = . (14)</h2><p >Для отображения и взаимодействия с данными необходимы вызовы на сервере Odoo. Это выполняется с помощью: abbr: [UNKNOWN NODE title_reference].</p><p >Odoo Web предоставляет два основных API для этого: низкоуровневый API на базе JSON-RPC, взаимодействующий с секцией Python в Odoo Web (и с вашим модулем, если у вас есть часть Python), и с API более высокого уровня, который выше вашего Код для прямого общения с высокоуровневыми моделями Odoo.</p><p >Все сетевые API: ref: [UNKNOWN NODE title_reference]. В результате все они будут возвращать объекты <a href="http://api.jquery.com/category/deferred-object/" class="external reference">Deferred</a> (разрешают ли они те, которые имеют значения или нет). Понимание того, как это работает до того, как двигаться дальше, вероятно, необходимо.</p></section><section id="high-level-api-calling-into-odoo-models"><h3 >API высокого уровня: вызов моделей Odoo</h3><p >Доступ к объектным методам Odoo (предоставляемым через XML-RPC с сервера) осуществляется через: class: [UNKNOWN NODE title_reference]. Он отображает объекты сервера Odoo с помощью двух основных методов: func: [UNKNOWN NODE title_reference] и: func:` ~ openerp.Model.query`.</p><p >: Func: [UNKNOWN NODE title_reference] - это прямое сопоставление с соответствующим методом объекта сервера Odoo. Его использование аналогично использованию API-интерфейса Odoo Model с тремя отличиями:</p><ul ><li ><p >Интерфейс: ref: [UNKNOWN NODE title_reference], поэтому вместо возвращения результатов напрямую вызовы методов RPC будут возвращать экземпляры <a href="http://api.jquery.com/category/deferred-object/" class="external reference">Deferred</a>, которые сами будут решать результат соответствующего вызова RPC.</p></li><li ><p >Поскольку ECMAScript 3 / Javascript 1.5 не имеет эквивалента `` __getattr__`` или `` method_missing``, должен быть явный метод для отправки методов RPC.</p></li><li ><p >Нет понятия pooler, модель прокси при необходимости создается, а не извлекается из другого (несколько глобального) объекта</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">Users</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">openerp</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="s1">&#39;res.users&#39;</span><span class="p">);</span>
+
+<span class="nx">Users</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">&#39;change_password&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;oldpassword&#39;</span><span class="p">,</span> <span class="s1">&#39;newpassword&#39;</span><span class="p">],</span>
+                  <span class="p">{</span><span class="nx">context</span><span class="o">:</span> <span class="nx">some_context</span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do something with change_password result</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</li></ul><p >: Func: [UNKNOWN NODE title_reference] - это ярлык для интерфейса в стиле конструктора для поиска (` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` Он возвращает объект: class: [UNKNOWN NODE title_reference], который является неизменяемым, но позволяет создавать новые экземпляры: class:` ~ openerp.web.Query` из первого, добавляя новые свойства или изменяя родительский объект</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">Users</span><span class="p">.</span><span class="nx">query</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="s1">&#39;user_email&#39;</span><span class="p">,</span> <span class="s1">&#39;signature&#39;</span><span class="p">])</span>
+     <span class="p">.</span><span class="nx">filter</span><span class="p">([[</span><span class="s1">&#39;active&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;company_id&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="nx">main_company</span><span class="p">]])</span>
+     <span class="p">.</span><span class="nx">limit</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+     <span class="p">.</span><span class="nx">all</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">users</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do work with users records</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p >Запрос выполняется только при вызове одного из методов сериализации запроса: func: [UNKNOWN NODE title_reference] и: func:` ~ openerp.web.Query.first`. Эти методы будут выполнять новый вызов RPC при каждом вызове.</p><p >По этой причине на самом деле можно оставить «промежуточные» запросы и использовать их по-разному / добавлять новые спецификации на них.</p><section class="code-class"><h6 id="openerp.Model"><code><em >class </em>openerp.Model(<em>name</em>)</code></h6><section class="code-attribute"><h6 id="openerp.Model.name"><code>openerp.Model.name</code></h6><p >Имя модели OpenERP, с которой этот объект связан</p></section><section class="code-function"><h6 id="openerp.Model.call"><code>openerp.Model.call(<em>method[, args][, kwargs]</em>)</code></h6><p >Вызывает метод `` method`` текущей модели с предоставленными позиционными и ключевыми аргументами.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >method</strong> (<code >String</code>) -- Метод для вызова rpc: attr: [UNKNOWN NODE title_reference]</li><li ><strong >args</strong> (<code >Array&lt;&gt;</code>) -- Позиционные аргументы для передачи методу, необязательный</li><li ><strong >kwargs</strong> (<code >Object&lt;&gt;</code>) -- Аргументы ключевого слова для передачи методу, необязательный</li></ul></div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body">Отложенный &lt;&gt;</div></div></div></section><section class="code-function"><h6 id="openerp.Model.query"><code>openerp.Model.query(<em>fields</em>)</code></h6><div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >fields</strong> (<code >Array&lt;String&gt;</code>) -- Список полей для извлечения во время поиска</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">A: класс: объект [UNKNOWN NODE title_reference], представляющий поиск для выполнения</div></div></div></section></section><section class="code-class"><h6 id="openerp.web.Query"><code><em >class </em>openerp.web.Query(<em>fields</em>)</code></h6><p >Первым набором методов является метод «выборки». Они выполняют RPC-запросы, используя внутренние данные объекта, к которому они обращаются.</p><section class="code-function"><h6 id="openerp.web.Query.all"><code>openerp.web.Query.all()</code></h6><p >Получает результат текущего: class: поиск объекта ~~ openerp.web.Query`.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body">Отложенный &lt;Массив &lt;&gt;&gt;</div></div></div></section><section class="code-function"><h6 id="openerp.web.Query.first"><code>openerp.web.Query.first()</code></h6><p >Получает ** первый ** результат текущего: class: [UNKNOWN NODE title_reference] или` [UNKNOWN NODE title_reference], если текущий: class:` ~ openerp.web.Query` имеет какой-либо результат.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body">Отложено &lt;Объект | нуль&gt;</div></div></div></section><section class="code-function"><h6 id="openerp.web.Query.count"><code>openerp.web.Query.count()</code></h6><p >Выбирает количество записей текущего: class: [UNKNOWN NODE title_reference] будет извлекаться.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body">Отложенный &lt;Number&gt;</div></div></div></section><section class="code-function"><h6 id="openerp.web.Query.group_by"><code>openerp.web.Query.group_by(<em>grouping...</em>)</code></h6><p >Выбирает группы для запроса, используя первый заданный параметр группировки.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >grouping</strong> (<code >Array&lt;String&gt;</code>) -- Список уровней группировки, запрошенных сервером. Группировка может фактически быть массивом или varargs.</li></ul></div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body">Отложенный &lt;Array &lt;openerp.web.QueryGroup &gt;&gt; | ноль</div></div></div></section><p >Второй набор методов - это методы «мутатора», они создают ** новый объект [UNKNOWN NODE problematic]: class: [UNKNOWN NODE title_reference] с соответствующим (внутренним) атрибутом, который либо дополняется, либо заменяется.</p><section class="code-function"><h6 id="openerp.web.Query.context"><code>openerp.web.Query.context(<em>ctx</em>)</code></h6><p >Добавляет предоставленный `` ctx`` в запрос, поверх любого существующего контекста</p></section><section class="code-function"><h6 id="openerp.web.Query.filter"><code>openerp.web.Query.filter(<em>domain</em>)</code></h6><p >Добавляет предоставленный домен к запросу, этот домен является `` AND``-ed к существующей области запросов.</p></section><section class="code-function"><h6 id="opeenrp.web.Query.offset"><code>opeenrp.web.Query.offset(<em>offset</em>)</code></h6><p >Устанавливает предоставленное смещение для запроса. Новое смещение * заменяет * прежнее.</p></section><section class="code-function"><h6 id="openerp.web.Query.limit"><code>openerp.web.Query.limit(<em>limit</em>)</code></h6><p >Устанавливает предоставленный предел для запроса. Новый предел * заменяет * старый.</p></section><section class="code-function"><h6 id="openerp.web.Query.order_by"><code>openerp.web.Query.order_by(<em>fields…</em>)</code></h6><p >Переопределяет естественный порядок модели с предоставленными спецификациями полей. Ведет себя так же, как Django: py: meth: [UNKNOWN NODE title_reference]:</p><ul ><li ><p >Принимает имена полей 1..n, по порядку наибольшей или наименьшей важности (первое поле является первым ключом сортировки). Поля предоставляются в виде строк.</p></li><li ><p >Поле задает восходящий порядок, если он не имеет префикса со знаком минус &quot;<code >-</code>&quot;, в этом случае поле используется в порядке убывания</p></li></ul><p >Отклонения от сортировки Django включают отсутствие случайной сортировки (<code >?</code> Field) и невозможность «развернуть» отношения для сортировки.</p></section></section></section><section id="aggregation-grouping"><h4 >Агрегация (группировка)</h4><p >Одо имеет мощные возможности группирования, но они выглядят странно, поскольку они рекурсивны, а уровень n + 1 зависит от данных, предоставляемых непосредственно группировкой на уровне n. В результате, в то время как: py: meth: [UNKNOWN NODE title_reference] работает, это не очень интуитивный API.</p><p >Odoo Web избегает прямых обращений к: py: meth: [UNKNOWN NODE title_reference] в пользу вызова метода: class:` ~ openerp.web.Query`,: py: meth: [UNKNOWN NODE problematic]много в пути Это одно в SQLAlchemy &lt;sqlalchemy.orm.query.Query.group_by&gt; [UNKNOWN NODE problematic][#terminal] _</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">some_query</span><span class="p">.</span><span class="nx">group_by</span><span class="p">([</span><span class="s1">&#39;field1&#39;</span><span class="p">,</span> <span class="s1">&#39;field2&#39;</span><span class="p">]).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">groups</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do things with the fetched groups</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p >Этот метод является асинхронным, если в качестве аргумента он содержит поля 1..n (для группирования), но его также можно вызывать без какого-либо поля (пустая коллекция полей или вообще ничего). В этом случае, вместо возвращения отложенного объекта, он возвратит `` null``.</p><p >Если критерий группировки исходит от стороннего и может включать или не отображать поля (например, может быть пустым списком), это дает два способа проверить наличие фактических подгрупп (по сравнению с необходимостью выполнять регулярный запрос для записей):</p><ul ><li ><p >Проверка результата `` group_by`` и двух полностью отдельных путей кода</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">groups</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">groups</span> <span class="o">=</span> <span class="nx">some_query</span><span class="p">.</span><span class="nx">group_by</span><span class="p">(</span><span class="nx">gby</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">groups</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">gs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// groups</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+<span class="c1">// no groups</span>
+</pre></div>
+</div>
+</li><li ><p >Или более согласованный путь к коду, используя: func: способность [UNKNOWN NODE title_reference] принудительно переносить значения в deferreds</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="nx">some_query</span><span class="p">.</span><span class="nx">group_by</span><span class="p">(</span><span class="nx">gby</span><span class="p">)).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">groups</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">groups</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// No grouping</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// grouping, even if there are no groups (groups</span>
+        <span class="c1">// itself could be an empty array)</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</li></ul><p >Результат (успешно): func: [UNKNOWN NODE title_reference] представляет собой массив: class:` ~ openerp.web.QueryGroup`:</p><section class="code-class"><h6 id="openerp.web.QueryGroup"><code><em >class </em>openerp.web.QueryGroup()</code></h6><section class="code-function"><h6 id="openerp.web.QueryGroup.get"><code>openerp.web.QueryGroup.get(<em>key</em>)</code></h6><p >Возвращает атрибут группы `` key``. Известные атрибуты:</p><dl ><dt >`` grouped_on``</dt><dd ><p >Какое группирующее поле появилось из этой группы</p></dd><dt ><code >value</code></dt><dd ><p >Значение [UNKNOWN NODE title_reference] для этой группы</p></dd><dt >Длина</dt><dd ><p >Количество записей в группе</p></dd><dt >`` aggregates``</dt><dd ><p >A {поле: значение} отображение агрегатов для группы</p></dd></dl></section><section class="code-function"><h6 id="openerp.web.QueryGroup.query"><code>openerp.web.QueryGroup.query([<em>fields...</em>])</code></h6><p >Эквивалентно: func: [UNKNOWN NODE title_reference], но предварительно фильтруется, чтобы включать записи только в эту группу. Возвращает a: class: [UNKNOWN NODE title_reference], который может быть дополнительно обработан, как обычно.</p></section><section class="code-function"><h6 id="openerp.web.QueryGroup.subgroups"><code>openerp.web.QueryGroup.subgroups()</code></h6><p >Возвращает отложенный к массиву: class: [UNKNOWN NODE title_reference] ниже этого</p></section></section></section><section id="low-level-api-rpc-calls-to-python-side"><h3 >Низкоуровневый API: вызовы RPC со стороны Python</h3><p >Хотя предыдущий раздел отлично подходит для вызова основного кода OpenERP (код модели), он не работает, если вы хотите вызвать сторону Python в Odoo Web.</p><p >Для этого API нижнего уровня существует на объектах: class: [UNKNOWN NODE title_reference] (обычно доступных через` [UNKNOWN NODE title_reference]): метод` [UNKNOWN NODE title_reference].</p><p >Этот метод просто принимает абсолютный путь (абсолютный URL-адрес JSON: ref: [UNKNOWN NODE title_reference] для вызова) и отображение атрибутов в значения (переданные как аргументы ключевого слова для метода Python). Эта функция извлекает возвращаемое значение методов Python, преобразованное в JSON.</p><p >Например, чтобы вызвать `` resequence`` контроллера: class: [UNKNOWN NODE title_reference]:</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">openerp</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">rpc</span><span class="p">(</span><span class="s1">&#39;/web/dataset/resequence&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">model</span><span class="o">:</span> <span class="nx">some_model</span><span class="p">,</span>
+    <span class="nx">ids</span><span class="o">:</span> <span class="nx">array_of_ids</span><span class="p">,</span>
+    <span class="nx">offset</span><span class="o">:</span> <span class="mi">42</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// resequence didn&#39;t error out</span>
+<span class="p">},</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// an error occured during during call</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section><section id="web-client"><i id="reference-javascript-client"></i><h2 >Веб-клиент</h2></section><section id="testing-in-odoo-web-client"><h2 >Тестирование в веб-клиенте Odoo</h2></section><section id="javascript-unit-testing"><h3 >Тестирование модуля Javascript</h3><p >Odoo Web включает средства для юнит-тестирования как основного кода Odoo Web, так и ваших собственных модулей javascript. На стороне javascript модульное тестирование основано на <a href="http://qunitjs.com/" class="external reference">QUnit</a> с рядом помощников и расширений для лучшей интеграции с Odoo.</p><p >Чтобы посмотреть, как выглядит бегун, найдите (или запустите) сервер Odoo с включенным веб-клиентом и перейдите в `` / web / tests``. Это покажет селектор бегуна, в котором перечислены все модули с javascript модульными тестами и Позволяет запускать любой из них (или все тесты javascript во всех модулях сразу).</p><img src="../_images/runner.png" class="img-responsive center-block"><p >Щелчок по любой кнопке бегуна вызовет соответствующие тесты в комплекте <a href="http://qunitjs.com/" class="external reference">QUnit</a> runner:</p><img src="../_images/tests.png" class="img-responsive center-block"></section><section id="writing-a-test-case"><h3 >Написание тестового примера</h3><p >Первым шагом является перечислить тестовый файл (ы). Это делается с помощью ключа `` test`` манифеста Odoo, добавляя к нему файлы javascript:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s2">&quot;Demonstration of web/javascript tests&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;depends&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;web&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;static/test/demo.js&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p >И создать соответствующий тестовый файл (ы)</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Файлы тестов, которые не существуют, будут проигнорированы, если все тестовые файлы модуля будут проигнорированы (не могут быть найдены), тестировщик будет считать, что у модуля нет тестов javascript.</p></div><p >После этого обновление селектора бегунов покажет новый модуль и позволит запустить все его тесты (до сих пор):</p><img src="../_images/runner2.png" class="img-responsive center-block"><p >Следующим шагом будет создание тестового примера</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">openerp</span><span class="p">.</span><span class="nx">testing</span><span class="p">.</span><span class="nx">section</span><span class="p">(</span><span class="s1">&#39;basic section&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;my first test&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">ok</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="s2">&quot;this test has run&quot;</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p >Все хелперы и структуры тестирования живут в модуле `` openerp.testing``. Тесты Odoo живут в: func: [UNKNOWN NODE title_reference], который сам является частью модуля. Первый аргумент секции - это имя раздела, второе - тело раздела.</p><p >: Func: [UNKNOWN NODE title_reference], предоставляемый функцией: func: [UNKNOWN NODE title_reference] для обратного вызова, используется для регистрации заданного тестового примера, который будет выполняться всякий раз, когда тестировщик действительно выполняет Его работу. В тестовом случае Odoo используются стандартные <a href="http://api.qunitjs.com/category/assert/" class="external reference">QUnit assertions</a> внутри них.</p><p >Запуск тестового бегуна в этот момент запустит тест и отобразит соответствующее сообщение об утверждении с красными цветами, указывающими на неудачный тест:</p><img src="../_images/tests2.png" class="img-responsive center-block"><p >Фиксация теста (путем замены `` false`` на `` true`` в утверждении) заставит его пройти:</p><img src="../_images/tests3.png" class="img-responsive center-block"></section><section id="assertions"><h3 >Утверждения</h3><p >Как отмечалось выше, тесты Odoo Web используют <a href="http://api.qunitjs.com/category/assert/" class="external reference">qunit assertions</a>. Они доступны в глобальном масштабе (поэтому их можно просто назвать без ссылок на что-либо). Доступен следующий список:</p><section class="code-function"><h6 id="ok"><code>ok(<em>state</em>[, <em>message</em>])</code></h6><p >Проверяет, что `` состояние`` является истинным (в смысле javascript)</p></section><section class="code-function"><h6 id="strictEqual"><code>strictEqual(<em>actual</em>, <em>expected</em>[, <em>message</em>])</code></h6><p >Проверяет, что фактическое (произведенное тестируемым методом) и ожидаемые значения идентичны (примерно эквивалентно `` ok (actual === expected, message) [UNKNOWN NODE problematic])</p></section><section class="code-function"><h6 id="notStrictEqual"><code>notStrictEqual(<em>actual</em>, <em>expected</em>[, <em>message</em>])</code></h6><p >Проверяет, что фактические и ожидаемые значения не * идентичны (примерно эквивалентны `` ok (actual! == expected, message) [UNKNOWN NODE problematic])</p></section><section class="code-function"><h6 id="deepEqual"><code>deepEqual(<em>actual</em>, <em>expected</em>[, <em>message</em>])</code></h6><p >Глубокое сравнение между фактическим и ожидаемым: рекурсивно переходить в контейнеры (объекты и массивы), чтобы гарантировать, что они имеют одинаковые ключи / количество элементов, а значения совпадают.</p></section><section class="code-function"><h6 id="notDeepEqual"><code>notDeepEqual(<em>actual</em>, <em>expected</em>[, <em>message</em>])</code></h6><p >Обратная операция к: func: [UNKNOWN NODE title_reference]</p></section><section class="code-function"><h6 id="throws"><code>throws(<em>block[, expected][, message]</em>)</code></h6><p >Проверяет, что при вызове `` block`` выдает ошибку. Необязательно проверяет эту ошибку на `` expected``.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >block</strong> (<code >Function</code>) -- </li><li ><strong >expected</strong> (<code >Error | RegExp</code>) -- Если регулярное выражение, проверяет, что сообщение с запросом об ошибке совпадает с регулярным выражением. Если тип ошибки, проверяет, имеет ли эта ошибка такого типа.</li></ul></div></div></div></section><section class="code-function"><h6 id="equal"><code>equal(<em>actual</em>, <em>expected</em>[, <em>message</em>])</code></h6><p >Проверяет, что `` actual`` и `` expected`` не зависят друг от друга, используя оператор [UNKNOWN NODE title_reference] [UNKNOWN NODE problematic]и его правила принуждения.</p></section><section class="code-function"><h6 id="notEqual"><code>notEqual(<em>actual</em>, <em>expected</em>[, <em>message</em>])</code></h6><p >Обратная операция: func: [UNKNOWN NODE title_reference]</p></section></section><section id="getting-an-odoo-instance"><h3 >Получение экземпляра Odoo</h3><p >Экземпляр Odoo является базой, через которую осуществляется доступ к большинству моделей поведения модулей Одо (функции, объекты, ...). В результате, платформа тестирования автоматически создает одну и загружает тестируемый модуль и все его зависимости внутри него. Этот новый экземпляр предоставляется в качестве первого позиционного параметра для ваших тестовых примеров. Давайте посмотрим, добавив в тестовый модуль код javascript (не тестовый код):</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s2">&quot;Demonstration of web/javascript tests&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;depends&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;web&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;js&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;static/src/js/demo.js&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;static/test/demo.js&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// src/js/demo.js</span>
+<span class="nx">openerp</span><span class="p">.</span><span class="nx">web_tests_demo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">instance</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">instance</span><span class="p">.</span><span class="nx">web_tests_demo</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">value_true</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">SomeType</span><span class="o">:</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">Class</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+            <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">})</span>
+    <span class="p">};</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p >А затем добавив новый тестовый пример, который просто проверяет, что `` экземпляр`` содержит все ожидаемые вещи, которые мы создали в модуле</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// test/demo.js</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;module content&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">instance</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">ok</span><span class="p">(</span><span class="nx">instance</span><span class="p">.</span><span class="nx">web_tests_demo</span><span class="p">.</span><span class="nx">value_true</span><span class="p">,</span> <span class="s2">&quot;should have a true value&quot;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">type_instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web_tests_demo</span><span class="p">.</span><span class="nx">SomeType</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+    <span class="nx">strictEqual</span><span class="p">(</span><span class="nx">type_instance</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;should have provided value&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section><section id="dom-scratchpad"><h3 >DOM Scratchpad</h3><p >Как и в случае с более широким клиентом, во время тестов произвольный доступ к содержимому документа категорически не рекомендуется. Но доступ к DOM по-прежнему необходим, например, для полной инициализации: class: [UNKNOWN NODE title_reference] перед их тестированием.</p><p >Таким образом, тестовый случай получает блокнот DOM в качестве второго позиционного параметра в экземпляре jQuery. Этот блокнот полностью очищается перед каждым тестом, и пока он ничего не делает за пределами блокнота, ваш код может делать все, что он хочет:</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// test/demo.js</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;DOM content&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">instance</span><span class="p">,</span> <span class="nx">$scratchpad</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$scratchpad</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;&lt;div&gt;&lt;span class=&quot;foo bar&quot;&gt;ok&lt;/span&gt;&lt;/div&gt;&#39;</span><span class="p">);</span>
+    <span class="nx">ok</span><span class="p">(</span><span class="nx">$scratchpad</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">),</span>
+       <span class="s2">&quot;should have provided class&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;clean scratchpad&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">instance</span><span class="p">,</span> <span class="nx">$scratchpad</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">ok</span><span class="p">(</span><span class="o">!</span><span class="nx">$scratchpad</span><span class="p">.</span><span class="nx">children</span><span class="p">().</span><span class="nx">length</span><span class="p">,</span> <span class="s2">&quot;should have no content&quot;</span><span class="p">);</span>
+    <span class="nx">ok</span><span class="p">(</span><span class="o">!</span><span class="nx">$scratchpad</span><span class="p">.</span><span class="nx">text</span><span class="p">(),</span> <span class="s2">&quot;should have no text&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Элемент верхнего уровня в блокноте не очищен, тестовые примеры могут добавлять текст или детей DOM, но не следует изменять `` $ scratchpad``.</p></div></section><section id="loading-templates"><h3 >Загрузка шаблонов</h3><p >Чтобы избежать соответствующих затрат на обработку, шаблоны по умолчанию не загружаются в QWeb. Если вам нужно отображать, например, виджеты с использованием шаблонов QWeb, вы можете запросить их загрузку через параметр: attr: [UNKNOWN NODE title_reference] в функцию: func:` test case function &lt;openerp.testing.case&gt; [UNKNOWN NODE problematic].</p><p >Это автоматически загрузит все соответствующие шаблоны в qweb экземпляра перед запуском тестового примера:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s2">&quot;Demonstration of web/javascript tests&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;depends&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;web&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;js&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;static/src/js/demo.js&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;static/test/demo.js&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;qweb&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;static/src/xml/demo.xml&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="c">&lt;!-- src/xml/demo.xml --&gt;</span>
+<span class="nt">&lt;templates</span> <span class="na">id=</span><span class="s">&quot;template&quot;</span> <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-name=</span><span class="s">&quot;DemoTemplate&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;5&quot;</span> <span class="na">t-as=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;value&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;/t&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/templates&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// test/demo.js</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;templates&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">templates</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">instance</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">qweb</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;DemoTemplate&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">texts</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">s</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
+    <span class="p">}).</span><span class="nx">get</span><span class="p">();</span>
+
+    <span class="nx">deepEqual</span><span class="p">(</span><span class="nx">texts</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">]);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section><section id="asynchronous-cases"><h3 >Асинхронные случаи</h3><p >До сих пор примеры тестовых примеров были синхронны, они выполняются от первой до последней строки, и после того, как последняя строка выполнила тест, это делается. Но веб-клиент полон: ref: [UNKNOWN NODE title_reference], и, таким образом, тестовые примеры должны быть асинхронными.</p><p >Это делается возвратом: class: [UNKNOWN NODE title_reference] из casebackback</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// test/demo.js</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;asynchronous&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">asserts</span><span class="o">:</span> <span class="mi">1</span>
+<span class="p">},</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">Deferred</span><span class="p">();</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">ok</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="nx">d</span><span class="p">.</span><span class="nx">resolve</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">d</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p >В этом примере также используется параметр: class: [UNKNOWN NODE title_reference], чтобы указать количество утверждений, которые должен ожидать случай, если указано меньше или больше утверждений, случай будет считаться неудачным.</p><p >Асинхронные тестовые примеры * должны * указывать количество утверждений, которые они будут запускать. Это позволяет более легко ловить ситуации, когда, например, тестовая архитектура не предупреждалась об асинхронных операциях.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Асинхронные тесты также имеют тайм-аут продолжительностью 2 секунды: если тест не завершится в течение 2 секунд, он будет считаться неудачным. Это почти всегда означает, что тест не будет разрешен. Этот таймаут * only * применяется только к самому тесту, а не к процессам установки и удаления.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если возвращенное отложенное отклонено, тест будет неудачным, если: attr: [UNKNOWN NODE title_reference] не установлено в` [UNKNOWN NODE title_reference].</p></div></section><section id="id3"><h3 >R∞(pc) = . (14)</h3><p >Важным подмножеством асинхронных тестовых примеров являются тестовые примеры, которые должны выполнять (и цепочки, в определенной степени) вызовы RPC.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Поскольку они являются подмножеством асинхронных случаев, RPC-случаи также должны обеспечивать допустимый: attr: [UNKNOWN NODE title_reference].</p></div><p >Чтобы включить mock RPC, установите: attr: [UNKNOWN NODE title_reference] to `` mock``. Это добавит третий параметр к обратному вызову тестового примера:</p><section class="code-function"><h6 id="mock"><code>mock(<em>rpc_spec</em>, <em>handler</em>)</code></h6><p >Может использоваться двумя способами в зависимости от формы первого параметра:</p><ul ><li ><p >Если он соответствует шаблону `` model: method`` (если он содержит двоеточие, по существу), вызов будет настроить насмешку над вызовом RPC прямо на сервер Odoo (через XMLRPC), как это делается, например, с помощью: func: [UNKNOWN NODE title_reference].</p><p >В этом случае `` handler`` должна быть функцией, принимающей два аргумента `` args`` и `` kwargs``, соответствующие соответствующим аргументам на стороне сервера и должна просто вернуть значение, как если бы оно было возвращено Python Обработчик XMLRPC</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;XML-RPC&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">rpc</span><span class="o">:</span> <span class="s1">&#39;mock&#39;</span><span class="p">,</span> <span class="nx">asserts</span><span class="o">:</span> <span class="mi">3</span><span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">instance</span><span class="p">,</span> <span class="nx">$s</span><span class="p">,</span> <span class="nx">mock</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// set up mocking</span>
+    <span class="nx">mock</span><span class="p">(</span><span class="s1">&#39;people.famous:name_search&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">kwargs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">strictEqual</span><span class="p">(</span><span class="nx">kwargs</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Microsoft Bob&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Bob the Builder&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Silent Bob&quot;</span><span class="p">]</span>
+        <span class="p">];</span>
+    <span class="p">});</span>
+
+    <span class="c1">// actual test code</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="s1">&#39;people.famous&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">&#39;name_search&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;bob&#39;</span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">strictEqual</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;shoud return 3 people&quot;</span><span class="p">);</span>
+            <span class="nx">strictEqual</span><span class="p">(</span><span class="nx">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;Microsoft Bob&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;the most famous bob should be Microsoft Bob&quot;</span><span class="p">);</span>
+        <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</li><li ><p >В противном случае, если он соответствует абсолютному пути (например, `` / a / b / c``), он будет дразнить вызов JSON-RPC для контроллера веб-клиента, например `` / web / webclient / translations``. В этом случае обработчик принимает один аргумент `` params``, содержащий все параметры, предоставляемые над JSON-RPC.</p><p >Как и ранее, обработчик должен просто вернуть результат, как если бы он был возвращен исходным обработчиком JSON-RPC</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;JSON-RPC&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">rpc</span><span class="o">:</span> <span class="s1">&#39;mock&#39;</span><span class="p">,</span> <span class="nx">asserts</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">templates</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">instance</span><span class="p">,</span> <span class="nx">$s</span><span class="p">,</span> <span class="nx">mock</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">fetched_dbs</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">fetched_langs</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="nx">mock</span><span class="p">(</span><span class="s1">&#39;/web/database/get_list&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">fetched_dbs</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">];</span>
+    <span class="p">});</span>
+    <span class="nx">mock</span><span class="p">(</span><span class="s1">&#39;/web/session/get_lang_list&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">fetched_langs</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">[[</span><span class="s1">&#39;vo_IS&#39;</span><span class="p">,</span> <span class="s1">&#39;Hopelandic / Vonlenska&#39;</span><span class="p">]];</span>
+    <span class="p">});</span>
+
+    <span class="c1">// widget needs that or it blows up</span>
+    <span class="nx">instance</span><span class="p">.</span><span class="nx">webclient</span> <span class="o">=</span> <span class="p">{</span><span class="nx">toggle_bars</span><span class="o">:</span> <span class="nx">openerp</span><span class="p">.</span><span class="nx">testing</span><span class="p">.</span><span class="nx">noop</span><span class="p">};</span>
+    <span class="kd">var</span> <span class="nx">dbm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">DatabaseManager</span><span class="p">({});</span>
+    <span class="k">return</span> <span class="nx">dbm</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">$s</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">ok</span><span class="p">(</span><span class="nx">fetched_dbs</span><span class="p">,</span> <span class="s2">&quot;should have fetched databases&quot;</span><span class="p">);</span>
+        <span class="nx">ok</span><span class="p">(</span><span class="nx">fetched_langs</span><span class="p">,</span> <span class="s2">&quot;should have fetched languages&quot;</span><span class="p">);</span>
+        <span class="nx">deepEqual</span><span class="p">(</span><span class="nx">dbm</span><span class="p">.</span><span class="nx">db_list</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">]);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</li></ul></section><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Мокторы могут содержать утверждения, эти утверждения должны быть частью подсчета утверждений (и если в обработчик, содержащий утверждения, поступает несколько вызовов, он умножает эффективное количество утверждений).</p></div></section><section id="testing-api"><h3 >Тестирование API</h3><section class="code-function"><h6 id="openerp.testing.section"><code>openerp.testing.section(<em>name</em>, [<em>options</em>, ]<em>body</em>)</code></h6><p >Секция тестирования, служит общим пространством имен для связанных тестов (для констант или значений только один раз). Функция `` body`` должна содержать сами тесты.</p><p >Обратите внимание, что порядок, в котором выполняются тесты, по существу не определен, do * not * полагаться на него.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >name</strong> (<code >String</code>) -- </li><li ><strong >options</strong> (<a href="#TestOptions" class="internal alert-link reference" title="TestOptions"><code >TestOptions</code></a>) -- </li><li ><strong >body</strong> (Function&lt;<a href="#openerp.testing.case" class="internal alert-link reference" title="openerp.testing.case"><code class="js-func xref js">case()</code></a>, void&gt;) -- </li></ul></div></div></div></section><section class="code-function"><h6 id="openerp.testing.case"><code>openerp.testing.case(<em>name</em>, [<em>options</em>, ]<em>callback</em>)</code></h6><p >Регистрирует обратный вызов тестового примера в тестовом бегуне, обратный вызов будет выполняться только после запуска бегуна (или, может быть, вообще не будет, если тест отфильтрован).</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Аргументы</div><div class="code-field-body"><ul ><li ><strong >name</strong> (<code >String</code>) -- </li><li ><strong >options</strong> (<a href="#TestOptions" class="internal alert-link reference" title="TestOptions"><code >TestOptions</code></a>) -- </li><li ><strong >callback</strong> (<code >Function&lt;instance, $, Function&lt;String, Function, void&gt;&gt;</code>) -- </li></ul></div></div></div></section><section class="code-class"><h6 id="TestOptions"><code><em >class </em>TestOptions()</code></h6><p >Различные параметры, которые могут быть переданы: func: [UNKNOWN NODE title_reference] или: func:` ~ openerp.testing.case`. Кроме: attr: [UNKNOWN NODE title_reference] и: attr:` ~ TestOptions.teardown`, опция на: func: [UNKNOWN NODE title_reference] перезапишет соответствующую опцию на: func:` ~ openerp.testing .section`, например: attr: [UNKNOWN NODE title_reference] можно установить для: func:` ~ openerp.testing.section`, а затем по-другому установить для некоторых: func: [UNKNOWN NODE title_reference] из этого: FUNC: [UNKNOWN NODE title_reference]</p><section class="code-attribute"><h6 id="TestOptions.asserts"><code>TestOptions.asserts</code></h6><p >Целое число - количество утверждений, которые должны выполняться во время нормального выполнения теста. Обязательный для асинхронных тестов.</p></section><section class="code-attribute"><h6 id="TestOptions.setup"><code>TestOptions.setup</code></h6><p >Настройка тестового примера, запустить перед каждым тестовым случаем. Раздел: func: [UNKNOWN NODE title_reference] запускается перед собственным случаем, если указаны оба.</p></section><section class="code-attribute"><h6 id="TestOptions.teardown"><code>TestOptions.teardown</code></h6><p >Тестирование case case, case's: func: [UNKNOWN NODE title_reference] запускается перед соответствующим разделом, если оба присутствуют.</p></section><section class="code-attribute"><h6 id="TestOptions.fail_on_rejection"><code>TestOptions.fail_on_rejection</code></h6><p >Если тест является асинхронным и его обещание отвергается, проваливайте тест. По умолчанию для `` true``, установите `` false``, чтобы не выходить из теста в случае отклонения</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// test/demo.js</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;unfail rejection&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">asserts</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">fail_on_rejection</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">},</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">Deferred</span><span class="p">();</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">ok</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="nx">d</span><span class="p">.</span><span class="nx">reject</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">d</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section><section class="code-attribute"><h6 id="TestOptions.rpc"><code>TestOptions.rpc</code></h6><p >Метод RPC для использования во время тестов, один из <code >&quot;mock&quot;` или ``&quot;rpc&quot;</code>. Любое другое значение отключит RPC для теста (если они были включены, например, в комплекте).</p></section><section class="code-attribute"><h6 id="TestOptions.templates"><code>TestOptions.templates</code></h6><p >Следует ли загружать шаблоны текущего модуля (и его зависимостей) в QWeb перед началом тестирования. Логическое, `` false`` по умолчанию.</p></section></section><p >Тестер также может использовать два глобальных значения конфигурации, установленные непосредственно в объекте `` window``:</p><ul ><li ><p >`` Oe_all_dependencies`` является `` Массив`` всех модулей с веб-компонентом, упорядоченным по зависимости (для модуля `` A`` с зависимостями `` A```, любой модуль `` A``` Должен стоять перед `` A`` в массиве)</p></li></ul></section><section id="running-through-python"><h3 >Выполнение через Python</h3><p >Веб-клиент включает средства для запуска этих тестов в командной строке (или в системе CI), но в то время как фактически выполняется довольно просто, настройка необходимых частей имеет некоторые сложности.</p><ol ><li ><p >Установите <a href="http://pypi.python.org/pypi/unittest2" class="external reference">unittest2</a> в среде Python. Оба варианта можно установить тривиально с помощью команды [UNKNOWN NODE title_reference] _ или [UNKNOWN NODE title_reference] _.</p></li><li ><p >Установите <a href="http://phantomjs.org/" class="external reference">PhantomJS</a>. Это безмозглый браузер, который позволяет автоматизировать работу и тестирование веб-страниц. <a href="http://pypi.python.org/pypi/QUnitSuite/" class="external reference">QUnitSuite</a> использует его для фактического запуска набора тестов <a href="http://qunitjs.com/" class="external reference">qunit</a>.</p><p >На веб-сайте <a href="http://phantomjs.org/" class="external reference">PhantomJS</a> имеются готовые двоичные файлы для некоторых платформ, и, вероятно, его также предоставляет управление пакетами ОС.</p><p >Если вы создаете <a href="http://phantomjs.org/" class="external reference">PhantomJS</a> из исходных текстов, я рекомендую подготовиться к вязанию, поскольку это не совсем быстро (нужно скомпилировать как &lt;Qt &lt;<a href="http://qt-project.org/" class="external reference">http://qt-project.org/</a>&gt; [UNKNOWN NODE title_reference] Webkit &lt;http: / /www.webkit.org/&gt;`_, оба - довольно большие проекты).</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Поскольку <a href="http://phantomjs.org/" class="external reference alert-link">PhantomJS</a> основан на webkit, он не сможет проверить, правильно ли Firefox, Opera или Internet Explorer запускает тестовый набор (и это только приблизительная версия для Safari и Chrome). Поэтому рекомендуется * также * запускать тестовые наборы в реальных браузерах время от времени.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Версия <a href="http://phantomjs.org/" class="external reference alert-link">PhantomJS</a>, с которой была создана версия 1.7, предыдущие версии * должны * работать, но на самом деле не поддерживаются (и имеют тенденцию к простому segfault, когда что-то не так в <a href="http://phantomjs.org/" class="external reference alert-link">PhantomJS</a>, поэтому их боль для отладки).</p></div></li><li ><p >Установите новую базу данных со всеми соответствующими модулями (все модули с веб-компонентом как минимум), затем перезапустите сервер</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Для некоторых тестов исходная база данных должна дублироваться. Эта операция требует, чтобы не было никакого соединения с дублирующейся базой данных, но Odoo в настоящий момент не разбивает существующие / невыполненные соединения, поэтому перезапуск сервера является самым простым способом гарантировать, что все находится в правильном состоянии.</p></div></li><li ><p >Запустите `` oe run-tests -d $ DATABASE -mweb``, указав правильный путь addons-path (и заменив `` $ DATABASE`` исходной базой данных, которую вы создали выше)</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы не укажете `` -mweb``, бегун попытается запустить все тесты во всех модулях, которые могут работать или не работать.</p></div></li></ol><p >Если все пошло правильно, вы должны увидеть список тестов с (надеюсь) `` ок`` рядом с их именами, закрывшись с сообщением о количестве запусков тестов и времени, которое потребовалось:</p><div class="highlight-text"><div class="highlight"><pre><span></span>test_empty_find (openerp.addons.web.tests.test_dataset.TestDataSetController) ... ok
+test_ids_shortcut (openerp.addons.web.tests.test_dataset.TestDataSetController) ... ok
+test_regular_find (openerp.addons.web.tests.test_dataset.TestDataSetController) ... ok
+web.testing.stack: direct, value, success ... ok
+web.testing.stack: direct, deferred, success ... ok
+web.testing.stack: direct, value, error ... ok
+web.testing.stack: direct, deferred, failure ... ok
+web.testing.stack: successful setup ... ok
+web.testing.stack: successful teardown ... ok
+web.testing.stack: successful setup and teardown ... ok
+
+[snip ~150 lines]
+
+test_convert_complex_context (openerp.addons.web.tests.test_view.DomainsAndContextsTest) ... ok
+test_convert_complex_domain (openerp.addons.web.tests.test_view.DomainsAndContextsTest) ... ok
+test_convert_literal_context (openerp.addons.web.tests.test_view.DomainsAndContextsTest) ... ok
+test_convert_literal_domain (openerp.addons.web.tests.test_view.DomainsAndContextsTest) ... ok
+test_retrieve_nonliteral_context (openerp.addons.web.tests.test_view.DomainsAndContextsTest) ... ok
+test_retrieve_nonliteral_domain (openerp.addons.web.tests.test_view.DomainsAndContextsTest) ... ok
+
+----------------------------------------------------------------------
+Ran 181 tests in 15.706s
+
+OK
+</pre></div>
+</div>
+<p >Поздравляем, вы только что успешно выполнили «автономный» запуск набора тестов OpenERP Web.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Обратите внимание, что здесь выполняются все тесты Python для модуля `` web``, но все веб-тесты для всех Odoo. Это может быть удивительно.</p></div><div class="footnote" id="eventsdelegation"><span class="footnote-label"><a class="footnote-backref" href="#id1">[1]</a></span> <p >Не все события DOM совместимы с делегированием событий</p></div><div class="footnote" id="terminal"><span class="footnote-label"><a class="footnote-backref" href="#id2">[2]</a></span> <p >С небольшим завихрением:: py: meth: [UNKNOWN NODE title_reference] не является терминалом, он возвращает запрос, который все еще может быть изменен.</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

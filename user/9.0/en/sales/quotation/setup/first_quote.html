@@ -1,0 +1,306 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to create my first quotation? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Setup" href="../setup.html" />
+    <link rel="next" title="How to use different invoice and delivery addresses?" href="different_addresses.html" />
+    <link rel="prev" title="Setup" href="../setup.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../sales.html">Sales</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to create my first quotation?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/sales/quotation/setup/first_quote.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/sales/quotation/setup/first_quote.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/sales/quotation/setup/first_quote.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to create my first quotation? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-sales-management-module" class="ripple internal reference">Install the Sales Management module</a></li><li class="list-group-item"><a href="#allow-discounts-on-sales-order-line" class="ripple internal reference">Allow discounts on sales order line</a></li></ul></li><li class="list-group-item"><a href="#create-your-quotation" class="ripple internal reference">Create your quotation</a><ul ><li class="list-group-item"><a href="#customer-and-products" class="ripple internal reference">Customer and Products</a></li><li class="list-group-item"><a href="#taxes" class="ripple internal reference">Taxes</a></li><li class="list-group-item"><a href="#terms-and-conditions" class="ripple internal reference">Terms and conditions</a></li></ul></li><li class="list-group-item"><a href="#preview-and-send-quotation" class="ripple internal reference">Preview and send quotation</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/sales/quotation/setup/first_quote.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-create-my-first-quotation"></section><section id="overview"><h2 >Overview</h2><p >Quotations are documents sent to customers to offer an estimated cost
+for a particular set of goods or services. The customer can accept the
+quotation, in which case the seller will have to issue a sales order, or
+refuse it.</p><p >For example, my company sells electronic products and my client
+Agrolait showed interest in buying <code >3 iPads</code> to facilitate their
+operations. I would like to send them a quotation for those iPads with
+a sales price of <code >320 USD</code> by iPad with a <code >5%</code> discount.</p><p >This section will show you how to proceed.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-sales-management-module"><h3 >Install the Sales Management module</h3><p >In order to be able to issue your first quotation, you'll need to
+install the <strong >Sales Management</strong> module from the app module in the Odoo
+backend.</p><img src="../../../_images/first_quote01.png" class="img-responsive center-block"></section><section id="allow-discounts-on-sales-order-line"><h3 >Allow discounts on sales order line</h3><p >Allowing discounts on quotations is a common sales practice to improve
+the chances to convert the prospect into a client.</p><p >In our example, we wanted to grant <code >Agrolait</code> with a <code >5%</code> discount on the
+sale price. To enable the feature, go into the <strong >Sales</strong> application, select
+<span class="menuselection">Configuration ‣ Settings</span> and, under <strong >Quotations and Sales</strong>, tick
+<strong >Allow discounts on sales order line</strong> (see picture below) and apply your
+changes.</p><img src="../../../_images/first_quote02.png" class="img-responsive center-block"></section><section id="create-your-quotation"><h2 >Create your quotation</h2><p >To create your first quotation, click on <span class="menuselection">Sales ‣ Quotations</span> and
+click on <strong >Create</strong>. Then, complete your quotation as follows:</p></section><section id="customer-and-products"><h3 >Customer and Products</h3><p >The basic elements to add to any quotation are the customer (the person
+you will send your quotation to) and the products you want to sell. From
+the quotation view, choose the prospect from the <strong >Customer</strong> drop-down list
+and under <strong >Order Lines</strong>, click on <strong >Add an item</strong> and select your product.
+Do not forget to manually add the number of items under <strong >Ordered
+Quantity</strong> and the discount if applicable.</p><img src="../../../_images/first_quote03.png" class="img-responsive center-block"><p >If you don't have any customer or product recorded on your Odoo
+environment yet, you can create them on the fly directly from your
+quotations :</p><ul ><li >To add a new customer, click on the <strong >Customer</strong> drop-down menu and click
+on <strong >Create and edit</strong>. In this new window, you will be able to
+record all the customer details, such as the address, website,
+phone number and person of contact.</li><li >To add a new product, under <strong >Order line</strong>, click on add an item and on
+<strong >Create and Edit</strong> from the drop-down list. You will be able to
+record your product information (product type, cost, sale price,
+invoicing policy, etc.) along with a picture.</li></ul></section><section id="taxes"><h3 >Taxes</h3><p >To parameter taxes, simply go on the taxes section of the product line
+and click on <strong >Create and Edit</strong>. Fill in the details (for example if you
+are subject to a <code >21%</code> taxe on your sales, simply fill in the right amount
+in percentage) and save.</p><img src="../../../_images/first_quote04.png" class="img-responsive center-block"></section><section id="terms-and-conditions"><h3 >Terms and conditions</h3><p >You can select the expiration date of your quotation and add your
+company's terms and conditions directly in your quotation (see picture
+below).</p><img src="../../../_images/first_quote05.png" class="img-responsive center-block"></section><section id="preview-and-send-quotation"><h2 >Preview and send quotation</h2><p >If you want to see what your quotation looks like before sending it,
+click on the <strong >Print</strong> button (upper left corner). It will give you a
+printable PDF version with all your quotation details.</p><img src="../../../_images/first_quote06.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Update your company's details (address, website, logo, etc) appearing
+on your quotation from the the <strong >Settings</strong> menu on the app switcher, and
+on click on the link
+<span class="menuselection">Settings ‣ General settings ‣ Configure company data</span>.</p></div><p >Click on <strong >Send by email</strong> to automatically send an email to your customer
+with the quotation as an attachment. You can adjust the email body
+before sending it and even save it as a template if you wish to reuse
+it.</p><img src="../../../_images/first_quote07.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="recurring.html" class="internal alert-link reference"><span class="doc">How to create recurring quotations?</span></a></li><li ><a href="../online/creation.html" class="internal alert-link reference"><span class="doc">How to create and edit an online quotation?</span></a></li><li ><a href="optional.html" class="internal alert-link reference"><span class="doc">How to display optional products on a quotation?</span></a></li><li ><a href="terms_conditions.html" class="internal alert-link reference"><span class="doc">How to link terms and conditions to a quotation?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

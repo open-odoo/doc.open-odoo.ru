@@ -1,0 +1,310 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to re-invoice expenses to your customers? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Services" href="../services.html" />
+    <link rel="next" title="How to invoice a support contract (prepaid hours)?" href="support.html" />
+    <link rel="prev" title="How to invoice milestones of a project?" href="milestones.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../sales.html">Sales</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to re-invoice expenses to your customers?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/sales/invoicing/services/reinvoice.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/sales/invoicing/services/reinvoice.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/sales/invoicing/services/reinvoice.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to re-invoice expenses to your customers? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#use-case-1-simple-expense-invoicing" class="ripple internal reference">Use case 1: Simple expense invoicing</a><ul ><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#create-product-to-be-expensed" class="ripple internal reference">Create product to be expensed</a></li><li class="list-group-item"><a href="#create-a-sale-order" class="ripple internal reference">Create a sale order</a></li><li class="list-group-item"><a href="#invoice-expense-to-your-client" class="ripple internal reference">Invoice expense to your client</a></li></ul></li><li class="list-group-item"><a href="#use-case-2-invoice-expenses-via-the-expense-module" class="ripple internal reference">Use case 2: Invoice expenses via the expense module</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#create-a-product-to-be-expensed" class="ripple internal reference">Create a product to be expensed</a></li><li class="list-group-item"><a href="#create-a-sales-order" class="ripple internal reference">Create a sales order</a></li><li class="list-group-item"><a href="#create-expense-and-link-it-to-so" class="ripple internal reference">Create expense and link it to SO</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">Invoice expense to your client</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/sales/invoicing/services/reinvoice.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-re-invoice-expenses-to-your-customers"><p >It often happens that your employees have to spend their personal money
+while working on a project for your client. Let's take the example of an
+employee paying a parking spot for a meeting with your client. As a
+company, you would like to be able to invoice that expense to your
+client.</p><p >In this documentation we will see two use cases. The first, very basic,
+consists of invoicing a simple expense to your client like you would do
+for a product. The second, more advanced, will consist of invoicing
+expenses entered in your expense system by your employees directly to
+your customer.</p></section><section id="use-case-1-simple-expense-invoicing"><h2 >Use case 1: Simple expense invoicing</h2><p >Let's take the following example. You are working on a promotion
+campaign for one of your customers (<code >Agrolait</code>) and you have to print a
+lot of copies. Those copies are an expense for your company and you
+would like to invoice them.</p></section><section id="configuration"><h3 >Configuration</h3><p >In order to sell services and to send invoices, you need to install the
+<strong >Sales</strong> application, from the <strong >Apps</strong> icon.</p><img src="../../../_images/reinvoice01.png" class="img-responsive center-block"></section><section id="create-product-to-be-expensed"><h3 >Create product to be expensed</h3><p >You will need now to create a product called <code >Copies</code>.</p><p >From your <strong >Sales</strong> module, go to <span class="menuselection">Sales ‣ Products</span>
+and create a product as follows:</p><ul ><li ><strong >Product type</strong>: consumable</li><li ><strong >Invoicing policy</strong>: on delivered quantities (you will manually
+set the quantities to invoice on the sale order)</li></ul><img src="../../../_images/reinvoice02.png" class="img-responsive center-block"></section><section id="create-a-sale-order"><h3 >Create a sale order</h3><p >Now that your product is correctly set up, you can create a sale order
+for that product (from the menu <span class="menuselection">Sales ‣ Sales Orders</span>)
+with the ordered quantities set to 0.
+Click on <strong >Confirm the Sale</strong> to create the sale
+order. You will be able then to manually change the delivered quantities
+on the sale order to reinvoice the copies to your customer.</p><img src="../../../_images/reinvoice03.png" class="img-responsive center-block"></section><section id="invoice-expense-to-your-client"><h3 >Invoice expense to your client</h3><p >At the end of the month, you have printed <code >1000</code> copies on behalf of your
+client and you want to re-invoice them. From the related sale order,
+click on <strong >Delivered Quantities</strong>, manually enter the correct amount of
+copies and click on <strong >Save</strong>. Your order line will turn blue, meaning that
+it is ready to be invoiced. Click on <strong >Create invoice</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The total amount on your sale order will be of 0 as it is computed on
+the ordered quantities. It is your invoice which will compute the
+correct amount due by your customer.</p></div><p >The invoice generated is in draft, so you can always control the
+quantities and change the amount if needed. You will notice that the
+amount to be invoiced is based here on the delivered quantities.</p><img src="../../../_images/reinvoice04.png" class="img-responsive center-block"><p >Click on validate to issue the payment to your customer.</p></section><section id="use-case-2-invoice-expenses-via-the-expense-module"><h2 >Use case 2: Invoice expenses via the expense module</h2><p >To illustrate this case, let's imagine that your company sells some
+consultancy service to your customer <code >Agrolait</code> and both parties agreed
+that the distance covered by your consultant will be re-invoiced at
+cost.</p></section><section id="id1"><h3 >Configuration</h3><p >Here, you will need to install two more modules:</p><ul ><li >Expense Tracker</li><li >Accounting, where you will need to activate the analytic accounting
+from the settings</li></ul><img src="../../../_images/reinvoice05.png" class="img-responsive center-block"></section><section id="create-a-product-to-be-expensed"><h3 >Create a product to be expensed</h3><p >You will now need to create a product called <code >Kilometers</code>.</p><p >From your <strong >Sales</strong> module, go to <span class="menuselection">Sales ‣ Products</span>
+and create a product as follows:</p><ul ><li >Product can be expensed</li><li >Product type: Service</li><li >Invoicing policy: invoice based on time and material</li><li >Expense invoicing policy: At cost</li><li >Track service: manually set quantities on order</li></ul><img src="../../../_images/reinvoice06.png" class="img-responsive center-block"></section><section id="create-a-sales-order"><h3 >Create a sales order</h3><p >Still from the Sales module, go to <span class="menuselection">Sales ‣ Sales Orders</span>
+and add your product <strong >Consultancy</strong> on the order line.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If your product doesn't exist yet, you can configure it on the fly
+from the SO. Just type the name on the <strong >product</strong> field and click
+on <strong >Create and edit</strong> to configure it.</p></div><p >Depending on your product configuration, an <strong >Analytic Account</strong> may have
+been generated automatically. If not, you can easily create one in order
+to link your expenses to the sale order. Do not forget to confirm the
+sale order.</p><img src="../../../_images/reinvoice07.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Refer to the documentation <a href="../../../accounting/others/analytic/usage.html" class="internal alert-link reference"><span class="doc">Analytic account use cases</span></a>
+to learn more about that concept.</p></div></section><section id="create-expense-and-link-it-to-so"><h3 >Create expense and link it to SO</h3><p >Let's assume that your consultant covered <code >1.000km</code> in October as part
+of his consultancy project. We will create a expense for it and link
+it to the related sales order thanks to the analytic account.</p><p >Go to the <strong >Expenses</strong> module and click on <strong >Create</strong>. Record your expense
+as follows:</p><ul ><li ><strong >Expense description</strong>: Kilometers October 2015</li><li ><strong >Product</strong>: Kilometers</li><li ><strong >Quantity</strong>: 1.000</li><li ><strong >Analytic account</strong>: SO0019 - Agrolait</li></ul><img src="../../../_images/reinvoice08.png" class="img-responsive center-block"><p >Click on <strong >Submit to manager</strong>. As soon as the expense has been validated
+and posted to the journal entries, a new line corresponding to the
+expense will automatically be generated on the sale order.</p></section><section id="id2"><h3 >Invoice expense to your client</h3><p >You can now invoice the invoiceable lines to your customer.</p><img src="../../../_images/reinvoice09.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="support.html" class="internal alert-link reference"><span class="doc">How to invoice a support contract (prepaid hours)?</span></a></li><li ><a href="time_materials.html" class="internal alert-link reference"><span class="doc">How to invoice based on time and material?</span></a></li><li ><a href="milestones.html" class="internal alert-link reference"><span class="doc">How to invoice milestones of a project?</span></a></li><li ><a href="../products/delivery.html" class="internal alert-link reference"><span class="doc">How to invoice based on delivery orders?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

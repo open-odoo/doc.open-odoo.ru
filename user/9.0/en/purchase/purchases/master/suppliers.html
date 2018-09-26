@@ -1,0 +1,304 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to set several suppliers on a product? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Master Data" href="../master.html" />
+    <link rel="next" title="How to import supplier pricelists?" href="import.html" />
+    <link rel="prev" title="How to purchase in different unit of measures than sales?" href="uom.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../purchase.html">Purchase</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to set several suppliers on a product?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/purchase/purchases/master/suppliers.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/purchase/purchases/master/suppliers.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/purchase/purchases/master/suppliers.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to set several suppliers on a product? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-purchase-module" class="ripple internal reference">Install the purchase module</a></li><li class="list-group-item"><a href="#create-a-vendor" class="ripple internal reference">Create a Vendor</a></li><li class="list-group-item"><a href="#create-a-product" class="ripple internal reference">Create a product</a></li><li class="list-group-item"><a href="#add-vendors-to-the-product" class="ripple internal reference">Add Vendors to the product</a><ul ><li class="list-group-item"><a href="#by-issuing-a-first-purchase-order-to-new-vendor" class="ripple internal reference">By issuing a first Purchase Order to new vendor</a></li><li class="list-group-item"><a href="#by-adding-manually" class="ripple internal reference">By adding manually</a></li></ul></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/purchase/purchases/master/suppliers.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-set-several-suppliers-on-a-product"><p >Keeping track of your vendors can be a real burden in day-to-day
+business life. Prices can change and you might have several suppliers
+for one product. With Odoo you have the possibility to directly link
+vendors with the corresponding product and specify prices automatically
+the first time you purchase them.</p><p >We will take the following example: We need to buy <code >5 t-shirts</code>. We found
+a <strong >Vendor</strong>; called <code >Bob&amp;Jerry's</code> and we want to issue a request for
+quotation.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-purchase-module"><h3 >Install the purchase module</h3><p >The first step to set your suppliers on your products is to install the
+purchase module. Go into your <strong >App</strong> module and install the
+<strong >Purchase</strong> module.</p><img src="../../../_images/suppliers01.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >By installing the purchase module, the inventory and invoicing module
+will be installed as well.</p></div></section><section id="create-a-vendor"><h3 >Create a Vendor</h3><p >The second step is to create a vendor. In this case we'll create the
+vendor <code >Bob&amp;Jerry's</code>. Enter the purchase module, select
+<span class="menuselection">Purchase ‣ Vendors</span> and create a new vendor.</p><p >You can choose if the contact is a company or a person, fill in basic
+information such as address, phone, email,...</p><p >If you did not create the contact from the purchase module you will need
+to go in the <strong >Sales and Purchases</strong> tab as well and indicate that the
+contact is a <strong >Vendor</strong> (see picture below). If the contact is created from
+the purchase module this box will be ticked automatically.</p><img src="../../../_images/suppliers02.png" class="img-responsive center-block"></section><section id="create-a-product"><h3 >Create a product</h3><p >Next we can create the product we want to buy. We don't know the price
+of the t-shirt yet because we still need to issue our <strong >Request for
+Quotation</strong>.</p><p >To create a product enter your purchase module select
+<span class="menuselection">Purchase ‣ Products</span> and create a new product.</p><p >We will call our product <code >T-shirt</code> and specify that the product can be
+sold and purchased.</p><img src="../../../_images/suppliers03.png" class="img-responsive center-block"></section><section id="add-vendors-to-the-product"><h3 >Add Vendors to the product</h3><p >The next action is to add vendors to the product. There are two ways to
+handle this. If you issue a purchase order for the first time Odoo will
+automatically link the vendor and its price to the product. You can also
+add vendors manually</p></section><section id="by-issuing-a-first-purchase-order-to-new-vendor"><h4 >By issuing a first Purchase Order to new vendor</h4><p >When issuing a purchase order for the first time to a vendor, he will
+automatically be linked to the product by Odoo. For our example let's
+say that we issue a first purchase order to <code >Bob&amp;Jerry's</code> for <code >5 t-shirts</code>
+at <code >12.35 euros / piece</code>.</p><p >First create your purchase order with the correct product and
+supplier (see picture below, or the documentation page
+<a href="../rfq/create.html" class="internal reference"><span class="doc">How to create a Request for Quotation?</span></a> for more information)</p><img src="../../../_images/suppliers04.png" class="img-responsive center-block"><p >When we save and validate the purchase order the vendor will
+automatically be added to the product's vendors list. To check this
+enter the purchase module, select <span class="menuselection">Purchase ‣ Products</span> and
+select our T-shirt product. By opening the <strong >Inventory</strong> tab we notice that our
+vendor and its price has automatically been added.</p><img src="../../../_images/suppliers05.png" class="img-responsive center-block"><p >Note that every first time the product is purchased from a new
+vendor, Odoo will automatically link the contact and price with the
+product.</p></section><section id="by-adding-manually"><h4 >By adding manually</h4><p >We can of course also add vendors and vendors information manually. On
+the same page than previously, simply click on <strong >Edit</strong> and click the <strong >Add
+an item</strong> button.</p><img src="../../../_images/suppliers06.png" class="img-responsive center-block"><p >When adding a new <strong >Vendor</strong> you are also able to add extra information such
+as the vendor product name or code, the validity of the price and the eventual
+minimum quantity required. These informations can be added and modified
+for existing vendors by simply clicking on the vendors line.</p><img src="../../../_images/suppliers07.png" class="img-responsive center-block"></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

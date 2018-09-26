@@ -1,0 +1,267 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как импортировать контакты в CRM? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Генерация лидов" href="../generate.html" />
+    <link rel="next" title="Как генерировать лиды из входящих писем?" href="emails.html" />
+    <link rel="prev" title="Как создать контакт в Odoo CRM?" href="manual.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../crm.html">CRM</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как импортировать контакты в CRM?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/crm/leads/generate/import.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/crm/leads/generate/import.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/ru/crm/leads/generate/import.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/ru/">Пользователю</a></li>
+<li><a href="/developer/10.0/ru/">Разработчику</a></li>
+<li><a href="/developer/10.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как импортировать контакты в CRM? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#activate-the-lead-stage" class="ripple internal reference">Активация этапа лидов</a></li><li class="list-group-item"><a href="#import-your-csv-file" class="ripple internal reference">Импорт вашего файла CSV</a></li><li class="list-group-item"><a href="#select-rows-to-import" class="ripple internal reference">Выбор строк для импорта</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/crm/leads/generate/import.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-import-contacts-to-the-crm"><p >В Odoo CRM вы можете импортировать базу данных потенциальных клиентов, например, для &quot;холодной&quot; рассылки писем или для &quot;холодного&quot; обзвона, через CSV-файл. Вы можете выбрать более подходящий для себя вариант, импортировать контакты в виде лидов или возможностей. Выбор зависит от особенностей вашего бизнеса  и ваших бизнес-процессов:</p><ul ><li ><p >Некоторые компании могут решить пропускать этап лидов, а вместо этого сразу считать контакты непосредственно возможностями. Для некоторых компаний привлечение клиентов - всего лишь дополнительный шаг в процессе продаж. Вы могли бы назвать это расширенное (начало с лида) или упрощенное (начать с возможности) управление взаимоотношениями с клиентами.</p></li><li ><p >Odoo позволяет выбрать один из этих подходов. Если ваша компания обрабатывает свои продажи с этапа предварительной квалификации, активируйте первый этап, как описано ниже, чтобы импортировать вашу базу данных в качестве лидов</p></li></ul></section><section id="activate-the-lead-stage"><h2 >Активация этапа лидов</h2><p >По умолчанию начальный этап не активирован в Odoo CRM. Если вы хотите импортировать свои контакты в качестве лидов, а не в возможности, перейдите к <span class="menuselection">Configuration ‣ Settings</span>, выберите опцию <strong >use leads if…</strong>, как показано ниже, и нажмите <strong >Применить</strong>.</p><img src="../../../_images/import01.jpg" class="img-responsive center-block"><p >Эта активация создаст новое подменю <span class="menuselection">Sales ‣ Leads</span>, из которого вы сможете импортировать ваши контакты с помощью кнопки <strong >Import</strong> (если вы хотите создать Лида вручную - <a href="manual.html" class="internal reference"><span class="doc">смотрите здесь</span></a>)</p><img src="../../../_images/import02.jpg" class="img-responsive center-block"></section><section id="import-your-csv-file"><h2 >Импорт вашего файла CSV</h2><p >В новом подменю <span class="menuselection">Sales ‣ Leads</span>, щелкните <strong >Import</strong> и выберите файл Excel для импорта нажав кнопку <strong >Выбрать файл</strong>. Убедитесь, что его расширение <strong >.csv</strong> и не забудьте установить правильные параметры формата файла (<strong >Кодирование</strong> и <strong >разделитель</strong>) в соответствии с данным файлом.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если ваша база данных потенциальных клиентов храниться в отличном от CSV формате, вы можете легко преобразовать ее в формат CSV с помощью Microsoft Excel, OpenOffice/LibreOffice Calc, Google Docs и т.д.</p></div><img src="../../../_images/import03.jpg" class="img-responsive center-block"></section><section id="select-rows-to-import"><h2 >Выбор строк для импорта</h2><p >Odoo автоматически сопоставляет заголовки столбцов из вашего CSV-файла в соответствующие поля, если вы отметите [UNKNOWN NODE problematic]Первая строка файла содержит метку параметра column [UNKNOWN NODE problematic]. Это упрощает импорт, особенно когда файл имеет много столбцов. Конечно, вы можете переназначить заголовки столбцов, чтобы указать поле, в которое вы импортируете данные (имя, фамилия, адрес электронной почты и т.д.).</p><img src="../../../_images/import04.jpg" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если вы хотите импортировать свои контакты в качестве возможностей, а не потенциальных клиентов, обязательно добавьте столбец <em >Type</em> в свой файл CSV. Этот столбец используется для указания, будет ли ваш импорт отмечен как Lead (type = Lead) или как возможность (type = Opportunity).</p></div><p >Нажмите кнопку <strong >Validate</strong>, если вы хотите, чтобы Odoo подтвердил, что перед импортом все корректно. В противном случае вы можете сразу нажать кнопку «Импорт»: будут выполнены те же проверки.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Для получения дополнительной технической информации о том, как импортировать контакты в Odoo CRM, прочитайте раздел <strong >Часто задаваемые вопросы</strong>, расположенный ниже инструмента импорта в том же окне.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="manual.html" class="internal alert-link reference"><span class="doc">Как создать контакт в Odoo CRM?</span></a></li><li ><a href="emails.html" class="internal alert-link reference"><span class="doc">Как генерировать лиды из входящих писем?</span></a></li><li ><a href="website.html" class="internal alert-link reference"><span class="doc">Генерация Лидов c вашего сайта?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

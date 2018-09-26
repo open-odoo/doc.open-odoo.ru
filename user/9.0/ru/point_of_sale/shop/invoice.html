@@ -1,0 +1,261 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как выставить счет из интерфейса РМК? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../index.html" />
+    <link rel="up" title="Расширенные возможности для магазина" href="../shop.html" />
+    <link rel="next" title="Как организовать возврат товара?" href="refund.html" />
+    <link rel="prev" title="Расширенные возможности для магазина" href="../shop.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../point_of_sale.html">Рабочее Место Кассира</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как выставить счет из интерфейса РМК?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/point_of_sale/shop/invoice.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/point_of_sale/shop/invoice.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/ru/point_of_sale/shop/invoice.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/ru/">Пользователю</a></li>
+<li><a href="/developer/9.0/ru/">Разработчику</a></li>
+<li><a href="/developer/9.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как выставить счет из интерфейса РМК? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#register-an-order" class="ripple internal reference">Перейдите в оплату чека</a></li><li class="list-group-item"><a href="#add-a-customer" class="ripple internal reference">Добавление клиента</a><ul ><li class="list-group-item"><a href="#by-selecting-in-the-customer-list" class="ripple internal reference">Выбрав из списка клиентов</a></li><li class="list-group-item"><a href="#by-using-a-barcode-for-customer" class="ripple internal reference">Используя штрих-код для клиента</a></li></ul></li><li class="list-group-item"><a href="#payment-and-invoicing" class="ripple internal reference">Оплата и выставление счета</a></li><li class="list-group-item"><a href="#retrieve-invoices-of-a-specific-customer" class="ripple internal reference">Получение счета для конкретного заказчика</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/point_of_sale/shop/invoice.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-invoice-from-the-pos-interface"></section><section id="register-an-order"><h2 >Перейдите в оплату чека</h2><p >На <strong >Инфо-панели</strong>, вы можете увидеть ваши Рабочие Места Кассира, нажмите на кнопку <strong >Новая смена</strong>:</p><img src="../../_images/invoice012.png" class="img-responsive center-block"><p >Вы находитесь на <code >главном</code> экране Рабочего Места Кассира :</p><img src="../../_images/invoice022.png" class="img-responsive center-block"><p >Справа вы можете увидеть список ваших товаров с категориями над ними. Переключить категорию можно, нажав на нее.</p><p >Если Вы нажмете на товар, он будет добавлен в вашу чек. Вы можете самостоятельно установить необходимые <strong >Количество/Вес</strong> путем ввода их с клавиатуры.</p></section><section id="add-a-customer"><h2 >Добавление клиента</h2></section><section id="by-selecting-in-the-customer-list"><h3 >Выбрав из списка клиентов</h3><p >На главном экране, нажмите на <strong >Клиент</strong> (над <strong >Оплата</strong>):</p><img src="../../_images/invoice032.png" class="img-responsive center-block"><p >Вы должны выбрать клиента, чтобы иметь возможность выставить счет.</p><img src="../../_images/invoice042.png" class="img-responsive center-block"><p >Вы можете найти клиента в списке уже записанных или создать нового, нажав на значок.</p><img src="../../_images/invoice052.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Для получения дополнительной информации о добавлении нового клиента, вы можете прочитать здесь <a href="../advanced/register.html" class="internal alert-link reference"><span class="doc">Как добавлять клиентов?</span></a>.</p></div></section><section id="by-using-a-barcode-for-customer"><h3 >Используя штрих-код для клиента</h3><p >На главном экране, нажмите на <strong >Клиент</strong> (над <strong >Оплата</strong>):</p><img src="../../_images/invoice032.png" class="img-responsive center-block"><p >Выберите клиента и нажмите на иконку карандаша для редактирования его карточки.</p><img src="../../_images/invoice092.png" class="img-responsive center-block"><p >Установите штрих-код для этого клиента.</p><img src="../../_images/invoice101.png" class="img-responsive center-block"><p >Сохраните изменения и теперь когда вы отсканируете этот штрих-код, данный клиент будет сопоставлен с чеком</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Будьте осторожны с <strong >Настройками штрих-кодов</strong>. По умолчанию, штрих-коды клиентов должны начинаться с 042. Для проверки настроек, штрих-кодов по умолчанию, перейдите в <span class="menuselection">Рабочее Место Кассира ‣ Конфигурация ‣ Настройки штрих-кодов</span>.</p><img src="../../_images/invoice111.png" class="img-responsive center-block"></div></section><section id="payment-and-invoicing"><h2 >Оплата и выставление счета</h2><p >После того, как чек наполнен, нажмите на <strong >Оплата</strong>. Вы можете выбрать способ оплаты. В этом примере, клиент должен вам <code >10.84</code> и платит с помощью <code >VISA</code>.</p><p >Перед нажатием на <strong >Утвердить</strong>, вам нужно нажать на <strong >Счет</strong> для того, чтобы создать счет для этого заказа.</p><img src="../../_images/invoice062.png" class="img-responsive center-block"><p >Ваш счет печатается и вы можете продолжать обрабатывать заказы.</p></section><section id="retrieve-invoices-of-a-specific-customer"><h2 >Получение счета для конкретного заказчика</h2><p >Для получения счета для клиента, перейдите в приложение <strong >Продажи</strong>, нажмите на <span class="menuselection">Продажи ‣ Клиенты</span>.</p><p >В карточке клиента, нажмите на кнопку <strong >Выставленные Счета</strong> :</p><img src="../../_images/invoice072.png" class="img-responsive center-block"><p >Вы получите список всех его счетов. Нажмите на счет, чтобы узнать подробности.</p><img src="../../_images/invoice082.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="cash_control.html" class="internal alert-link reference"><span class="doc">Как настроить учет наличных средств?</span></a></li><li ><a href="../advanced/register.html" class="internal alert-link reference"><span class="doc">Как добавлять клиентов?</span></a></li><li ><a href="refund.html" class="internal alert-link reference"><span class="doc">Как организовать возврат товара?</span></a></li><li ><a href="seasonal_discount.html" class="internal alert-link reference"><span class="doc">Как применять сезонные скидки а так же скидки на ограниченное время или?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

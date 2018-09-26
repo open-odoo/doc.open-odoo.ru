@@ -1,0 +1,322 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to invoice a support contract (prepaid hours)? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Services" href="../services.html" />
+    <link rel="next" title="Products &amp; Prices" href="../../products_prices.html" />
+    <link rel="prev" title="How to re-invoice expenses to your customers?" href="reinvoice.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../sales.html">Sales</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to invoice a support contract (prepaid hours)?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/sales/invoicing/services/support.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/sales/invoicing/services/support.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/sales/invoicing/services/support.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to invoice a support contract (prepaid hours)? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-sales-and-timesheet-applications" class="ripple internal reference">Install the Sales and Timesheet applications</a></li><li class="list-group-item"><a href="#create-products" class="ripple internal reference">Create Products</a></li></ul></li><li class="list-group-item"><a href="#managing-support-contract" class="ripple internal reference">Managing support contract</a><ul ><li class="list-group-item"><a href="#quotations-and-sales-orders" class="ripple internal reference">Quotations and Sales Orders</a></li><li class="list-group-item"><a href="#timesheets" class="ripple internal reference">Timesheets</a></li><li class="list-group-item"><a href="#control-delivered-support-on-the-sales-order" class="ripple internal reference">Control delivered support on the sales order</a></li><li class="list-group-item"><a href="#upselling-and-renewal" class="ripple internal reference">Upselling and renewal</a></li></ul></li><li class="list-group-item"><a href="#special-configuration" class="ripple internal reference">Special Configuration</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/sales/invoicing/services/support.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-invoice-a-support-contract-prepaid-hours"><p >There are different kinds of service sales: prepaid volume of hours/days
+(e.g. support contract), billing based on time and material (e.g.
+billing consulting hours) and a fixed price contract (e.g. a project).</p><p >In this section, we will have a look at how to sell and keep track of a
+pre-paid support contract.</p><p >As an example, you may sell a pack of <code >50 Hours</code> of support at <code >$25,000</code>.
+The price is fixed and charged initially. But you want to keep track of
+the support service you did for the customer.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-sales-and-timesheet-applications"><h3 >Install the Sales and Timesheet applications</h3><p >In order to sell services, you need to install the <strong >Sales</strong> application,
+from the <strong >Apps</strong> icon. Install also the <strong >Timesheets</strong> application if you want
+to track support services you worked on every contract.</p><img src="../../../_images/support01.png" class="img-responsive center-block"><img src="../../../_images/support02.png" class="img-responsive center-block"></section><section id="create-products"><h3 >Create Products</h3><p >By default, products are sold by number of units. In order to sell
+services <code >per hour</code>, you must allow using multiple unit of measures.
+From the <strong >Sales</strong> application, go to the menu
+<span class="menuselection">Configuration ‣ Settings</span>.
+From this screen, activate the multiple <strong >Unit of Measures</strong> option.</p><img src="../../../_images/support03.png" class="img-responsive center-block"><p >In order to sell a support contract, you must create a product for every
+support contract you sell. From the <strong >Sales</strong> application, use the menu
+<span class="menuselection">Sales ‣ Products</span>, create a new product with the following setup:</p><ul ><li ><strong >Name</strong>: Technical Support</li><li ><strong >Product Type</strong>: Service</li><li ><strong >Unit of Measure</strong>: Hours</li><li ><strong >Invoicing Policy</strong>: Ordered Quantities, since the service is
+prepaid, we will invoice the service based on what has been
+ordered, not based on delivered quantities.</li><li ><strong >Track Service</strong>: Timesheet on contracts. An analytic account will
+automatically be created for every order containing this service
+so that you can track hours in the related account.</li></ul><img src="../../../_images/support04.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >There are different ways to track the service related to a sales
+order or product sold. With the above configuration, you can only
+sell one support contract per order. If your customer orders
+several service contracts on timesheet, you will have to split
+the quotation into several orders.</p></div><p >Note that you can sell in different unit of measure than hours, example:
+days, pack of 40h, etc. To do that, just create a new unit of measure in
+the <strong >Unit of Measure</strong> category and set a conversion ratio compared to
+<strong >Hours</strong> (example: <code >1 day = 8 hours</code>).</p></section><section id="managing-support-contract"><h2 >Managing support contract</h2></section><section id="quotations-and-sales-orders"><h3 >Quotations and Sales Orders</h3><p >Once the product is created, you can create a quotation or a sales order
+with the related product. Once the quotation is confirmed and
+transformed into a sales order, your users will be able to record
+services related to this support contract using the timesheet
+application.</p><img src="../../../_images/support05.png" class="img-responsive center-block"></section><section id="timesheets"><h3 >Timesheets</h3><p >To track the service you do on a specific contract, you should use the
+timesheet application. An analytic account related to the sale order has
+been automatically created (<code >SO009 - Agrolait</code> on the screenshot here
+above), so you can start tracking services as soon as it has been sold.</p><img src="../../../_images/support06.png" class="img-responsive center-block"></section><section id="control-delivered-support-on-the-sales-order"><h3 >Control delivered support on the sales order</h3><p >From the <strong >Sales</strong> application, use the menu
+<span class="menuselection">Sales ‣ Sales Orders</span>  to control
+the progress of every order. On the sales order line related to the
+support contract, you should see the <strong >Delivered Quantities</strong> that are
+updated automatically, based on the number of hours in the timesheet.</p><img src="../../../_images/support07.png" class="img-responsive center-block"></section><section id="upselling-and-renewal"><h3 >Upselling and renewal</h3><p >If the number of hours you performed on the support contract is bigger
+or equal to the number of hours the customer purchased, you are
+suggested to sell an extra contract to the customer since they
+used all their quota of service.
+Periodically (ideally once every two weeks), you should check the sales
+order that are in such a case.
+To do so, go to <span class="menuselection">Sales ‣ Invoicing ‣ Orders to Upsell</span>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you use Odoo CRM, a good practice is to create an opportunity for
+every sale order in upselling invoice status so that you easily track
+your upselling effort.</p></div><p >If you sell an extra support contract, you can either add a new line on
+the existing sales order (thus, you continue to timesheet on the same
+order) or create a new order (thus, people will timesheet their hours on
+the new contract). To unmark the sales order as <strong >Upselling</strong>, you can set
+the sales order as done and it will disappear from your upselling list.</p></section><section id="special-configuration"><h2 >Special Configuration</h2><p >When creating the product form, you may set a different approach to
+track the service:</p><ul ><li ><strong >Create task and track hours</strong>: in this mode, a task is created for
+every sales order line. Then when you do the timesheet, you don't
+record hours on a sales order/contract, but you record hours on a
+task (that represents the contract). The advantage of this
+solution is that it allows to sell several service contracts
+within the same sales order.</li><li ><strong >Manually</strong>: you can use this mode if you don't record timesheets in
+Odoo. The number of hours you worked on a specific contract can
+be recorded manually on the sales order line directly, in the
+delivered quantity field.</li></ul><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../../../inventory/settings/products/uom.html" class="internal alert-link reference"><span class="doc">How to use different units of measure?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

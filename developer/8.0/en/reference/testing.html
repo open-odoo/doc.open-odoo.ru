@@ -1,0 +1,307 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Testing Modules &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="Web Controllers" href="http.html" />
+    <link rel="prev" title="Security in Odoo" href="security.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Testing Modules</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/reference/testing.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/en/reference/testing.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/en/reference/testing.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/en/reference/testing.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/en/">Пользователю</a></li>
+<li><a href="/developer/8.0/en/">Разработчику</a></li>
+<li><a href="/developer/8.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/testing_modules.jpg');"></span>
+      <div class="container text-center">
+        <h1> Testing Modules - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#running-tests" class="ripple internal reference">Running tests</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/testing.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="testing-modules"><i id="reference-testing"></i><p >Odoo provides support for testing modules using <a href="http://pypi.python.org/pypi/unittest2" class="external reference">unittest2</a>.</p><p >To write tests, simply define a <code >tests</code> sub-package in your module, it will
+be automatically inspected for test modules. Test modules should have a name
+starting with <code >test_</code> and should be imported from <code >tests/__init__.py</code>,
+e.g.</p><div class="highlight-text"><div class="highlight"><pre><span></span>your_module
+|-- ...
+`-- tests
+    |-- __init__.py
+    |-- test_bar.py
+    `-- test_foo.py
+</pre></div>
+</div>
+<p >and <code >__init__.py</code> contains:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">test_foo</span><span class="p">,</span> <span class="n">test_bar</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >test modules which are not imported from <code >tests/__init__.py</code> will not be
+run</p></div><div class="versionchanged"><p ><span class="versionmodified">Changed in version 8.0: </span>previously, the test runner would only run modules added to two lists
+<code >fast_suite</code> and <code >checks</code> in <code >tests/__init__.py</code>. In 8.0 it will
+run all imported modules</p></div><p >The test runner will simply run any test case, as described in the official
+<a href="https://docs.python.org/2/library/unittest.html" class="external reference">unittest documentation</a>, but Odoo provides a number of utilities and helpers
+related to testing Odoo content (modules, mainly):</p><section class="code-class"><h6 id="openerp.tests.common.TransactionCase"><code><em >class </em>openerp.tests.common.TransactionCase(<em>methodName='runTest'</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L135" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >TestCase in which each test method is run in its own transaction,
+and with its own cursor. The transaction is rolled back and the cursor
+is closed after each test.</p><section class="code-method"><h6 id="openerp.tests.common.TransactionCase.browse_ref"><code>browse_ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L107" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Returns a record object for the provided
+<a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a></p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><strong >xid</strong> -- fully-qualified <a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a>, in the form
+<code class="samp"><em >module</em>.<em >identifier</em></code></div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body">ValueError if not found</div></div><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body"><code class="py xref py-class">BaseModel</code></div></div></div></section><section class="code-method"><h6 id="openerp.tests.common.TransactionCase.ref"><code>ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L93" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Returns database ID for the provided <a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a>,
+shortcut for <code >get_object_reference</code></p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><strong >xid</strong> -- fully-qualified <a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a>, in the form
+<code class="samp"><em >module</em>.<em >identifier</em></code></div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body">ValueError if not found</div></div><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body">registered id</div></div></div></section></section><section class="code-class"><h6 id="openerp.tests.common.SingleTransactionCase"><code><em >class </em>openerp.tests.common.SingleTransactionCase(<em>methodName='runTest'</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L169" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >TestCase in which all test methods are run in the same transaction,
+the transaction is started with the first test method and rolled back at
+the end of the last.</p><section class="code-method"><h6 id="openerp.tests.common.SingleTransactionCase.browse_ref"><code>browse_ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L107" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Returns a record object for the provided
+<a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a></p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><strong >xid</strong> -- fully-qualified <a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a>, in the form
+<code class="samp"><em >module</em>.<em >identifier</em></code></div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body">ValueError if not found</div></div><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body"><code class="py xref py-class">BaseModel</code></div></div></div></section><section class="code-method"><h6 id="openerp.tests.common.SingleTransactionCase.ref"><code>ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L93" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Returns database ID for the provided <a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a>,
+shortcut for <code >get_object_reference</code></p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><strong >xid</strong> -- fully-qualified <a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a>, in the form
+<code class="samp"><em >module</em>.<em >identifier</em></code></div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body">ValueError if not found</div></div><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body">registered id</div></div></div></section></section><section class="code-class"><h6 id="openerp.tests.common.SavepointCase"><code><em >class </em>openerp.tests.common.SavepointCase(<em>methodName='runTest'</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L191" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Similar to <code class="py xref py-class">SingleTransactionCase</code> in that all test methods
+are run in a single transaction <em >but</em> each test case is run inside a
+rollbacked savepoint (sub-transaction).</p><p >Useful for test cases containing fast tests but with significant database
+setup common to all cases (complex in-db test data): <code class="py py-meth xref">setUpClass()</code>
+can be used to generate db test data once, then all test cases use the
+same data without influencing one another but without having to recreate
+the test data either.</p></section><section class="code-class"><h6 id="openerp.tests.common.HttpCase"><code><em >class </em>openerp.tests.common.HttpCase(<em>methodName='runTest'</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L231" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Transactional HTTP TestCase with url_open and phantomjs helpers.</p><section class="code-method"><h6 id="openerp.tests.common.HttpCase.browse_ref"><code>browse_ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L107" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Returns a record object for the provided
+<a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a></p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><strong >xid</strong> -- fully-qualified <a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a>, in the form
+<code class="samp"><em >module</em>.<em >identifier</em></code></div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body">ValueError if not found</div></div><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body"><code class="py xref py-class">BaseModel</code></div></div></div></section><section class="code-method"><h6 id="openerp.tests.common.HttpCase.phantom_js"><code>phantom_js(<em>url_path</em>, <em>code</em>, <em>ready='window'</em>, <em>login=None</em>, <em>timeout=60</em>, <em>**kw</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L373" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Test js code running in the browser
+- optionnally log as 'login'
+- load page given by url_path
+- wait for ready object to be available
+- eval(code) inside the page</p><p >To signal success test do:
+console.log('ok')</p><p >To signal failure do:
+console.log('error')</p><p >If neither are done before timeout test fails.</p></section><section class="code-method"><h6 id="openerp.tests.common.HttpCase.ref"><code>ref(<em>xid</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L93" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Returns database ID for the provided <a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a>,
+shortcut for <code >get_object_reference</code></p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><strong >xid</strong> -- fully-qualified <a href="../glossary.html#term-external-identifier" class="internal alert-link reference"><span class="std std-term xref">external identifier</span></a>, in the form
+<code class="samp"><em >module</em>.<em >identifier</em></code></div></div><div class="code-field"><div class="code-field-name">Raise</div><div class="code-field-body">ValueError if not found</div></div><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body">registered id</div></div></div></section></section><p >By default, tests are run once right after the corresponding module has been
+installed. Test cases can also be configured to run after all modules have
+been installed, and not run right after the module installation:</p><section class="code-function"><h6 id="openerp.tests.common.at_install"><code>openerp.tests.common.at_install(<em>flag</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L54" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Sets the at-install state of a test, the flag is a boolean specifying
+whether the test should (<code >True</code>) or should not (<code >False</code>) run during
+module installation.</p><p >By default, tests are run right after installing the module, before
+starting the installation of the next module.</p></section><section class="code-function"><h6 id="openerp.tests.common.post_install"><code>openerp.tests.common.post_install(<em>flag</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/tests/common.py#L67" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Sets the post-install state of a test. The flag is a boolean
+specifying whether the test should or should not run after a set of
+module installations.</p><p >By default, tests are <em >not</em> run after installation of all modules in the
+current installation set.</p></section><p >The most common situation is to use
+<a href="#openerp.tests.common.TransactionCase" class="internal reference" title="openerp.tests.common.TransactionCase"><code class="py xref py-class">TransactionCase</code></a> and test a property of a model
+in each method:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestModelA</span><span class="p">(</span><span class="n">common</span><span class="o">.</span><span class="n">TransactionCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_some_action</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;model.a&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">({</span><span class="s1">&#39;field&#39;</span><span class="p">:</span> <span class="s1">&#39;value&#39;</span><span class="p">})</span>
+        <span class="n">record</span><span class="o">.</span><span class="n">some_action</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">field</span><span class="p">,</span>
+            <span class="n">expected_field_value</span><span class="p">)</span>
+
+    <span class="c1"># other tests...</span>
+</pre></div>
+</div>
+</section><section id="running-tests"><h2 >Running tests</h2><p >Tests are automatically run when installing or updating modules if
+<a href="cmdline.html#cmdoption-odoo.py--test-enable" class="internal reference"><code class="std xref std-option">--test-enable</code></a> was enabled when starting the
+Odoo server.</p><p >As of Odoo 8, running tests outside of the install/update cycle is not
+supported.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

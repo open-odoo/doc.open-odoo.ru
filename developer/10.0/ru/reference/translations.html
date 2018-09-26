@@ -1,0 +1,250 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Перевод Модулей &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Отчеты QWeb" href="reports.html" />
+    <link rel="prev" title="Javascript" href="javascript.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (10.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Перевод Модулей</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/10.0/en/reference/translations.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/reference/translations.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/reference/translations.html">9.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/translations.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/ru/">Пользователю</a></li>
+<li><a href="/developer/10.0/ru/">Разработчику</a></li>
+<li><a href="/developer/10.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/translate.jpg');"></span>
+      <div class="container text-center">
+        <h1> Перевод Модулей - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#exporting-translatable-term" class="ripple internal reference">Экспорт переводимых терминов</a></li><li class="list-group-item"><a href="#implicit-exports" class="ripple internal reference">Неявный экспорт</a></li><li class="list-group-item"><a href="#explicit-exports" class="ripple internal reference">Явный экспорт</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/10.0/doc/reference/translations.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="translating-modules"><i id="reference-translations"></i></section><section id="exporting-translatable-term"><h2 >Экспорт переводимых терминов</h2><p >Ряд терминов в модулях &quot;косвенно переводимые&quot;, даже если Вы специально не выделяли какие-нибудь термины для перевода можно экспортировать переводимые термины модуля. В файле экспорта будут все слова и выражения, которые можно перевести.</p><p >Экспорт переводов осуществляется через интерфейс администрирования путем входа в интерфейс бэкэнда и открытия <span class="menuselection">Settings ‣ Translations ‣ Import / Export ‣ Export Translations</span></p><ul ><li ><p >Оставьте язык по умолчанию (новый язык / пустой шаблон)</p></li><li ><p >Выберите формат <a href="http://en.wikipedia.org/wiki/Gettext#Translating" class="external reference">PO File</a></p></li><li ><p >Выберите свой модуль</p></li><li ><p >Нажмите <span class="guilabel">Export</span> и загрузите файл</p></li></ul><a href="../_images/po-export.png" class="internal reference"><img src="../_images/po-export.png" class="img-responsive center-block"></a><p >Это даст вам файл с именем <code class="file"><em >ваш_модуль</em>.pot</code>, который должен быть перемещен в каталог <code class="file"><em >ваш_модуль</em>/i18n/</code>. Файл представляет собой <em >Шаблон PO</em>, который просто перечисляет переводимые строки и из которых могут быть созданы фактические переводы (PO-файлы). PO-файлы могут быть созданы с помощью <a href="http://www.gnu.org/software/gettext/manual/gettext.html#Creating" class="external reference">msginit</a>, с помощью специального инструмента перевода, такого как <a href="http://poedit.net/" class="external reference">POEdit</a>, или путем простого копирования шаблона в новый файл с именем <code class="file"><em >language</em>.po</code>. Файлы перевода должны быть перенесены в директорию <code class="file"><em >ваш_модуль</em>/i18n/</code>, рядом с файлом <code class="file"><em >ваш_модуль</em>.pot</code>, и они будут автоматически загружены Odoo при установке соответствующего языка (через <span class="menuselection">Settings ‣ Translations ‣ Load a Translation</span>)</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Переводы для всех загруженных языков также устанавливаются или обновляются при установке или обновлении модуля</p></div></section><section id="implicit-exports"><h2 >Неявный экспорт</h2><p >Odoo автоматически экспортирует переводимые строки из содержимого типа &quot;data&quot;:</p><ul ><li ><p >В представлениях, отличных от QWeb, экспортируются все текстовые узлы, а также атрибуты <code >string</code>, <code >help</code>, <code >sum</code>, <code >confirm</code> и <code >placeholder</code></p></li><li ><p >Шаблоны QWeb (как на стороне сервера, так и на стороне клиента), все текстовые узлы экспортируются, кроме блоков <code >t-translation = &quot;off&quot;</code>, также экспортируются содержимое атрибутов <code >title</code>, <code >alt</code> , <code >label</code> и <code >placeholder</code>.</p></li><li ><p >For <a href="orm.html#odoo.fields.Field" class="internal reference" title="odoo.fields.Field"><code class="py xref py-class">Field</code></a>, если их модель не отмечена <code >_translate = False</code>:</p><ul ><li ><p >Их атрибуты <code >string</code> и <code >help</code> экспортируются</p></li><li ><p >Если <code >selection</code> присутствует и список (или кортеж), он экспортируется</p></li><li ><p >Если их атрибут <code >translate</code> установлен в <code >True</code>, все их существующие значения (во всех записях) экспортируются</p></li></ul></li><li ><p >Сообщения о помощи и об ошибках <a href="orm.html#odoo.models.Model._constraints" class="internal reference" title="odoo.models.Model._constraints"><code class="py xref py-attr">_constraints</code></a> и <a href="orm.html#odoo.models.Model._sql_constraints" class="internal reference" title="odoo.models.Model._sql_constraints"><code class="py xref py-attr">_sql_constraints</code></a> экспортируются</p></li></ul></section><section id="explicit-exports"><h2 >Явный экспорт</h2><p >Когда дело доходит до более &quot;императивных&quot; ситуаций в коде Python или кодексе Javascript, Odoo не может автоматически экспортировать переводимые термины, поэтому они должны быть отмечены явно для экспорта. Это делается путем упаковки литеральной строки в вызов функции.</p><p >В Python функция обертывания - <code class="py xref py-func">odoo._()</code>:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Bank Accounts&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >В JavaScript функция обертывания обычно <code class="js-func xref js">odoo.web._t()</code>:</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">title</span> <span class="o">=</span> <span class="nx">_t</span><span class="p">(</span><span class="s2">&quot;Bank Accounts&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Для экспорта могут быть отмечены только строки, а не выражения или переменные. В ситуациях, когда строки форматируются, это означает, что помечать необходимо только строку, которую форматируете, а не результат форматирования:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># bad, the extract may work but it will not translate the text correctly</span>
+<span class="n">_</span><span class="p">(</span><span class="s2">&quot;Scheduled meeting with </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">invitee</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># good</span>
+<span class="n">_</span><span class="p">(</span><span class="s2">&quot;Scheduled meeting with </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">invitee</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

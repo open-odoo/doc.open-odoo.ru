@@ -1,0 +1,274 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как управлять ценами для B2B (без учета налогов) и B2C (включая налоги)? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Управление ценами" href="../prices.html" />
+    <link rel="next" title="eBay" href="../../sale_ebay.html" />
+    <link rel="prev" title="Управление ценами" href="../prices.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../sales.html">Продажи</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как управлять ценами для B2B (без учета налогов) и B2C (включая налоги)?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/sales/products_prices/prices/B2B_B2C.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/sales/products_prices/prices/B2B_B2C.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/ru/sales/products_prices/prices/B2B_B2C.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/ru/">Пользователю</a></li>
+<li><a href="/developer/9.0/ru/">Разработчику</a></li>
+<li><a href="/developer/9.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как управлять ценами для B2B (без учета налогов) и B2C (включая налоги)? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Введение</a></li><li class="list-group-item"><a href="#setting-your-products" class="ripple internal reference">Настройка продуктов</a></li><li class="list-group-item"><a href="#setting-the-b2c-fiscal-position" class="ripple internal reference">Настройка бюджетной позиции B2C</a></li></ul></li><li class="list-group-item"><a href="#test-by-creating-a-quotation" class="ripple internal reference">Тестирование путем создания котировки</a></li><li class="list-group-item"><a href="#avoid-changing-every-sale-order" class="ripple internal reference">Избегайте изменения каждого заказа на продажу</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/sales/products_prices/prices/B2B_B2C.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-manage-prices-for-b2b-tax-excluded-and-b2c-tax-included"><p >При работе с потребителями цены обычно выражаются с учетом налогов, включенных в цену (например, в большинстве электронных торгов). Но, когда вы работаете в среде B2B, компании обычно ведут переговоры о ценах без вычета налогов.</p><p >Odoo управляет обоими вариантами использования с легкостью, при условии если вы регистрируете свои цены на продукт с включая налоги или без учета налогов, но не вместе. Если вы управляете всеми ценами с налогом или без, вы все равно можете легко оформить заказ клиента с ценой, исключая (или включенные) налоги: это просто.</p><p >Эта документация предназначена только для конкретного случая использования, когда вам необходимо иметь две ссылки на цену (включая или исключая налоги) для одного и того же продукта. Причина сложности заключается в том, что не существует симметричной взаимосвязи с ценами,включающими налог и ценами,исключающие налог, как показано в данном случае использования, в Бельгии с налогом 21%:</p><ul ><li ><p >Ваша электронная коммерция имеет продукт в размере ** 10 € (включая налоги) **</p></li><li ><p >Это сделало бы ** 8.26 € (без налогов) ** и ** налог в размере 1.74 € **</p></li></ul><p >Но для одного и того же варианта использования, если вы зарегистрируете цену без налогов на продукт (8.26 €), вы получите цену с включенным налогом в 9.99 €, потому что:</p><ul ><li ><p >** 8.26 € * 1.21 = 9.99 € **</p></li></ul><p >Таким образом, в зависимости от того, как вы регистрируете свои цены в форме продукта, у вас будут разные результаты по цене, включая налоги и цену без учета налогов:</p><ul ><li ><p >Исключенные налоги: ** 8.26 € и 10.00 € **</p></li><li ><p >Включенные налоги: ** 8.26 € и 9.99 € **</p></li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Обратите внимание: если вы покупаете 100 штук при включенных налогах на 10 €, это становится еще более сложным. Вы получите: ** 1000 € (включая налоги) = 826.45 € (цена) + 173.55 € (налоги) ** Это очень отличается от цены за штуку при 8.26 € без налогов.</p></div><p >В этой документации объясняется, как обращаться с конкретным вариантом использования, когда вам нужно обрабатывать две цены (без учета налогов и с учетом налогов) в форму продукта в пределах одной компании.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Что касается финансов, у вас больше нет доходов от продажи вашего продукта на 10 € вместо 9.99 € (для 21% налога), потому что ваш доход будет точно таким же на уровне 9.99 €, только налог на 0,01 евро выше. Итак, если вы запустите eCommerce в Бельгии, сделайте для своего клиента услугу и установите свою цену в размере 9.99 € вместо 10 €. Обратите внимание, что это не относится к 20 € или 30 € или другим налоговым ставкам или количеству&gt; 1. Вы также сделаете одолжение, так как вы можете управлять всем без учета налогов, что менее подвержено ошибкам и легче для ваших продавцов.</p></div></section><section id="configuration"><h2 >Настройка</h2></section><section id="introduction"><h3 >Введение</h3><p >Лучший способ избежать этой сложности - выбрать только один способ управления ценами и придерживаться его: цена без налогов или цены с включенными налогами. Определите, какой из них по умолчанию хранится в форме продукта (по умолчанию налог, связанный с продуктом), и пусть Odoo автоматически вычисляет другую, основываясь на прейскуранте и фискальной позиции. Соответствующим образом согласовывайте свои контракты с клиентами. Это прекрасно работает в готовом виде, и у вам не надо создавать конкретную конфигурацию.</p><p >Если вы не можете этого сделать, и если вы действительно договорились о некоторых ценах без включения налогов, а для других клиентов другие цены с включенным налогом, вы должны:</p><ol ><li ><p >Всегда сохраняйте цену по умолчанию БЕЗ НАЛОГА в форме продукта и применяйте налог (цена включена в форму продукта)</p></li><li ><p >Создать прейскурант с ценами в TAX INCLUDED(с учетом налога) , для конкретных клиентов</p></li><li ><p >Создать налоговую позицию, которая включает налог, не включенный в налог</p></li><li ><p >Назначит как прейскурант, так и фискальную позицию клиентам, которые хотят воспользоваться этим прейскурантом и фискальной позицией</p></li></ol><p >Для назначения этой документации мы будем использовать приведенный выше вариант:</p><ul ><li >your product default sale price is 8.26€ tax excluded</li><li >but we want to sell it at 10€, tax included, in our shops or
+eCommerce website</li></ul></section><section id="setting-your-products"><h3 >Настройка продуктов</h3><p >Your company must be configured with tax excluded by default. This is
+usually the default configuration, but you can check your <strong >Default Sale
+Tax</strong> from the menu <span class="menuselection">Configuration ‣ Settings</span>
+of the Accounting application.</p><img src="../../../_images/price_B2C_B2B01.png" class="img-responsive center-block"><p >После этого вы можете создать прейскурант ** B2C [UNKNOWN NODE problematic]. Вы можете активировать функцию прайслиста для каждого клиента из меню:: menuselection: [UNKNOWN NODE title_reference] приложения Продажа. Выберите вариант ** разные цены для каждого сегмента клиента [UNKNOWN NODE problematic].</p><p >После этого создайте прейскурант B2C из меню: menuselection: «Конфигурация -&gt; Прейскуранты». Также полезно переименовать прейскурант по умолчанию в B2B, чтобы избежать путаницы.</p><p >Затем создайте продукт в размере 8.26 € с налогом в размере 21% (определяется как налог, не включенный в цену) и установите цену на этот продукт для клиентов B2C в 10 €, из: menuselection: [UNKNOWN NODE title_reference] Меню приложения «Продажи»:</p><img src="../../../_images/price_B2C_B2B02.png" class="img-responsive center-block"></section><section id="setting-the-b2c-fiscal-position"><h3 >Настройка бюджетной позиции B2C</h3><p >Из приложения учета создайте в этом пункте бюджетную позицию B2C:: menuselection: [UNKNOWN NODE title_reference]. Эта налоговая позиция должна отображать НДС 21% (без налога на прибыль) с НДС 21% (налог включен в цену)</p><img src="../../../_images/price_B2C_B2B03.png" class="img-responsive center-block"></section><section id="test-by-creating-a-quotation"><h2 >Тестирование путем создания котировки</h2><p >Создайте предложение из приложения «Продажа», используя меню menuselection: «Sales -&gt; Quotations». Вы должны иметь следующий результат: 8.26 € + 1.73 € = 9.99 €.</p><img src="../../../_images/price_B2C_B2B04.png" class="img-responsive center-block"><p >Затем создайте котировку, но ** измените прейскурант на B2C и фискальное положение на B2C ** в котировке перед добавлением своего продукта. У вас должен быть ожидаемый результат, который составляет 10 € для клиента: 8.26 € + 1.74 € = 10.00 €.</p><img src="../../../_images/price_B2C_B2B05.png" class="img-responsive center-block"><p >Это ожидаемое поведение для клиента вашего магазина.</p></section><section id="avoid-changing-every-sale-order"><h2 >Избегайте изменения каждого заказа на продажу</h2><p >If you negotiate a contract with a customer, whether you negotiate tax
+included or tax excluded, you can set the pricelist and the fiscal
+position on the customer form so that it will be applied automatically
+at every sale of this customer.</p><p >Прейскурант находится на вкладке ** Sales &amp; Purchases ** в форме клиента, а фискальная позиция находится на вкладке учета.</p><p >Обратите внимание, что это ошибка: если вы устанавливаете фискальную позицию с включенным в цены налогом, но используете прейскурант, который не включен, возможно, для вас могут быть рассчитаны неверные цены. Именно поэтому мы обычно рекомендуем компаниям работать только с одной ценовой ссылкой.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

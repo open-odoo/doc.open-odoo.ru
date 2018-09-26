@@ -1,0 +1,305 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to track costs of purchases, expenses, subcontracting? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Analytic" href="../analytic.html" />
+    <link rel="next" title="Taxes" href="../taxes.html" />
+    <link rel="prev" title="How to track costs of human resources with timesheets?" href="timesheets.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to track costs of purchases, expenses, subcontracting?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/accounting/others/analytic/purchases_expenses.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/accounting/others/analytic/purchases_expenses.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/ru/accounting/others/analytic/purchases_expenses.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/ru/">Пользователю</a></li>
+<li><a href="/developer/10.0/ru/">Разработчику</a></li>
+<li><a href="/developer/10.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to track costs of purchases, expenses, subcontracting? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#enable-analytical-accounting" class="ripple internal reference">Enable Analytical accounting</a></li></ul></li><li class="list-group-item"><a href="#create-an-analytical-account" class="ripple internal reference">Create an Analytical account.</a></li><li class="list-group-item"><a href="#record-an-expense" class="ripple internal reference">Record an expense</a><ul ><li class="list-group-item"><a href="#create-an-expense-product" class="ripple internal reference">Create an expense product</a></li><li class="list-group-item"><a href="#book-the-expense" class="ripple internal reference">Book the expense</a></li></ul></li><li class="list-group-item"><a href="#create-a-purchase-order-linked-to-the-analytical-account" class="ripple internal reference">Create a Purchase Order linked to the analytical account</a><ul ><li class="list-group-item"><a href="#purchase-product" class="ripple internal reference">Purchase Product</a></li><li class="list-group-item"><a href="#subcontracting" class="ripple internal reference">Subcontracting</a></li></ul></li><li class="list-group-item"><a href="#track-costs-in-accounting" class="ripple internal reference">Track costs in accounting</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/accounting/others/analytic/purchases_expenses.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-track-costs-of-purchases-expenses-subcontracting"></section><section id="overview"><h2 >Overview</h2><p >Thanks to analytical accounting we can track costs of purchases,
+expenses and subcontracting in the accounting module.</p><p >We'll take the following example. We sold a consulting package for a
+customer. The package is all inclusive meaning no extra cost can be
+added. We would however like to follow which cost were attached to this
+transaction as we need to pay for purchases, expenses, and
+subcontracting costs related to the project.</p></section><section id="configuration"><h2 >Configuration</h2><p >The following modules needs to be installed to track cost. Enter the app
+module and install the following apps:</p><table class="table"><thead ><tr ><th ><img src="../../../_images/purchase01.png" class="img-responsive"></th><th ><img src="../../../_images/purchase02.png" class="img-responsive"></th><th ><img src="../../../_images/purchase03.png" class="img-responsive"></th></tr></thead><tbody ><tr ><td ></td><td ></td><td ></td></tr></tbody></table><p >Please note that the applications provided by these apps only allows us
+to <strong >track</strong> the costs. We won't be able to automatically re invoice
+those costs to our customers. To track and <strong >re invoice costs</strong> you
+should install the Sales management app as well.</p><img src="../../../_images/purchase04.png" class="img-responsive center-block"></section><section id="enable-analytical-accounting"><h3 >Enable Analytical accounting</h3><p >Next step is to activate the analytical accounting. In the accounting
+app, select <span class="menuselection">Configuration ‣ Settings</span> and thick the Analytic
+accounting box.</p><img src="../../../_images/purchase05.png" class="img-responsive center-block"><p >Moreover, scroll down and tick the <strong >Analytic accounting for purchases</strong>
+box.</p><img src="../../../_images/purchase06.png" class="img-responsive center-block"><p >Don't forget to save your changes.</p></section><section id="create-an-analytical-account"><h2 >Create an Analytical account.</h2><p >First of all you should create an Analytical account on which you can
+point all your expenses. Enter the accounting app, select
+<span class="menuselection">Configuration ‣ Analytic Accounts</span>. Create a new one. In this
+case we will call it &quot;consulting pack&quot; for our customer Smith&amp;Co.</p><img src="../../../_images/purchase07.png" class="img-responsive center-block"><p >We will point all our costs to this account to keep track of them.</p></section><section id="record-an-expense"><h2 >Record an expense</h2><p >We start by booking an expense. Our
+IT technician had to take a train to go see our customer. He paid for
+his ticket himself.</p></section><section id="create-an-expense-product"><h3 >Create an expense product</h3><p >We first need to create an expense product. Enter the <strong >Expense</strong> module,
+Click on <span class="menuselection">Configuration ‣ Expense Products</span>. Create a new product
+called Train ticket and set the cost price to 15.50 euros. Make sure the <strong >Can be
+expensed</strong> box is ticked.</p><img src="../../../_images/purchase08.png" class="img-responsive center-block"></section><section id="book-the-expense"><h3 >Book the expense</h3><p >Enter the Expense module, click on <span class="menuselection">My expenses ‣ Create</span>. Select the
+Train ticket product and link it to the analytical account discussed
+above.</p><img src="../../../_images/purchase09.png" class="img-responsive center-block"><p >Submit to manager and wait for the manager to approve and post the
+journal entries.</p></section><section id="create-a-purchase-order-linked-to-the-analytical-account"><h2 >Create a Purchase Order linked to the analytical account</h2></section><section id="purchase-product"><h3 >Purchase Product</h3><p >We also need to buy a software for our customers. In the purchase app
+create a purchase order for the software product. (please
+refer to the following document: <a href="../../../purchase/overview/process/from_po_to_invoice.html" class="internal reference"><span class="doc">От формирования заказа поставщику до получения счета и приема товара</span></a>).
+Within the line we can link the product's cost with the analytical
+account. Specify the order line and select the correct analytical
+account. Confirm the sale.</p><img src="../../../_images/purchase10.png" class="img-responsive center-block"><p >Accept the delivery and enter the invoice. Once the invoice is entered the cost
+price (<strong >Vendor Price</strong> field) will be booked in the analytical account.</p></section><section id="subcontracting"><h3 >Subcontracting</h3><p >The purchase module can be used in the same way as seen previously to
+handle subcontracting. if we purchase a service from another company we
+can re invoice this cost by linking the purchase order line to the
+correct analytical account. We simply need to create the correct vendors
+product.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >You can also track cost with timesheets, see: <a href="timesheets.html" class="internal alert-link reference"><span class="doc">How to track costs of human resources with timesheets?</span></a></p></div></section><section id="track-costs-in-accounting"><h2 >Track costs in accounting</h2><p >Now that everything is booked and points to the analytical account.
+Simply open it to check the costs related to that account.</p><p >Enter the accounting module, click on <span class="menuselection">Advisers ‣ Analytic Accounts
+‣ Open Charts</span>.</p><p >Select &quot;consulting pack - Smith&quot; and click on the cost and revenue
+button to have an overview of all cost linked to the account.</p><img src="../../../_images/purchase11.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >If you would like to have the revenue as well you should
+invoice the Consulting Pack in the Invoice menu and link the invoice
+line to this same analytical account.</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

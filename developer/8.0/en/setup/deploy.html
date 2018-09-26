@@ -1,0 +1,331 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Deploying Odoo &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Setting Up" href="../setup.html" />
+    <link rel="next" title="Reference" href="../reference.html" />
+    <link rel="prev" title="Installing Odoo" href="install.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Deploying Odoo</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/setup/deploy.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/en/setup/deploy.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/en/setup/deploy.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/en/setup/deploy.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/en/">Пользователю</a></li>
+<li><a href="/developer/8.0/en/">Разработчику</a></li>
+<li><a href="/developer/8.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/deploying_odoo.jpg');"></span>
+      <div class="container text-center">
+        <h1> Deploying Odoo - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#dbfilter" class="ripple internal reference">dbfilter</a></li><li class="list-group-item"><a href="#postgresql" class="ripple internal reference">PostgreSQL</a><ul ><li class="list-group-item"><a href="#configuring-odoo" class="ripple internal reference">Configuring Odoo</a></li></ul></li><li class="list-group-item"><a href="#https" class="ripple internal reference">HTTPS</a></li><li class="list-group-item"><a href="#builtin-server" class="ripple internal reference">Builtin server</a><ul ><li class="list-group-item"><a href="#livechat" class="ripple internal reference">LiveChat</a></li></ul></li><li class="list-group-item"><a href="#odoo-as-a-wsgi-application" class="ripple internal reference">Odoo as a WSGI Application</a><ul ><li class="list-group-item"><a href="#cron-workers" class="ripple internal reference">Cron Workers</a></li><li class="list-group-item"><a href="#id4" class="ripple internal reference">LiveChat</a></li></ul></li><li class="list-group-item"><a href="#serving-static-files" class="ripple internal reference">Serving Static Files</a></li><li class="list-group-item"><a href="#security" class="ripple internal reference">Security</a><ul ><li class="list-group-item"><a href="#super-admin-password" class="ripple internal reference">&quot;Super-admin&quot; password</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/setup/deploy.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="deploying-odoo"><p >This document describes basic steps to set up Odoo in production. It follows
+<a href="install.html#setup-install" class="internal reference"><span class="std std-ref">installation</span></a>, but should not be used for development
+systems.</p></section><section id="dbfilter"><h2 >dbfilter</h2><p >Odoo is a multi-tenant system: a single Odoo system may run and serve a number
+of database instances. It is also highly customizable, with customizations
+(starting from the modules being loaded) depending on the &quot;current database&quot;.</p><p >This is not an issue when working with the backend (web client) as a logged-in
+company user: the database can be selected when logging in, and customizations
+loaded afterwards.</p><p >However it is an issue for non-logged users (portal, website) which aren't
+bound to a database: Odoo need to know which database should be used for the
+operations or to get the data. If multi-tenancy is not used that is not an
+issue, there's only one database to use, but if there are multiple databases
+accessible Odoo needs a rule to know which one it should use.</p><p >That is one of the purposes of <a href="../reference/cmdline.html#cmdoption-odoo.py--db-filter" class="internal reference"><code class="std xref std-option">--db-filter</code></a>:
+it specifies the default database for the Odoo system. The value is a
+<a href="https://docs.python.org/2/library/re.html" class="external reference">regular expression</a>, possibly including the dynamically injected hostname
+or subdomain through which the Odoo system is accessed.</p><p >If an Odoo hosts multiple databases in production, especially if <code >website</code>
+is used, it <strong >must</strong> use a dbfilter or a number of features will not work
+correctly or not use at all.</p></section><section id="postgresql"><h2 >PostgreSQL</h2><p >By default, PostgreSQL only allows connection over UNIX sockets and loopback
+connections (from &quot;localhost&quot;, the same machine the PostgreSQL server is
+installed on).</p><p >UNIX socket is fine if you want Odoo and PostgreSQL to execute on the same
+machine, and is the default when no host is provided, but if you want Odoo and
+PostgreSQL to execute on different machines <a href="#different-machines" class="footnote-ref" id="id1">1</a> it will
+need to <a href="http://www.postgresql.org/docs/9.3/static/runtime-config-connection.html" class="external reference">listen to network interfaces</a> <a href="#remote-socket" class="footnote-ref" id="id2">2</a>, either:</p><ul ><li >only accept loopback connections and <a href="http://www.postgresql.org/docs/9.3/static/ssh-tunnels.html" class="external reference">use an SSH tunnel</a> between the
+machine on which Odoo runs and the one on which PostgreSQL runs, then
+configure Odoo to connect to its end of the tunnel</li><li >accept connections to the machine on which Odoo is installed, possibly
+over ssl (see <a href="http://www.postgresql.org/docs/9.3/static/runtime-config-connection.html" class="external reference">PostgreSQL connection settings</a> for details), then configure
+Odoo to connect over the network</li></ul></section><section id="configuring-odoo"><i id="setup-deploy-odoo"></i><h3 >Configuring Odoo</h3><p >Out of the box, Odoo connects to a local postgres over UNIX socket via port
+5432. This can be overridden using <a href="../reference/cmdline.html#reference-cmdline-server-database" class="internal reference"><span class="std std-ref">the database options</span></a> when your Postgres deployment is not
+local and/or does not use the installation defaults.</p><p >The <a href="install.html#setup-install-packaged" class="internal reference"><span class="std std-ref">packaged installers</span></a> will automatically
+create a new user (<code >odoo</code>) and set it as the database user.</p><ul ><li >The database management screens are protected by the <code >admin_passwd</code>
+setting. This setting can only be set using configuration files, and is
+simply checked before performing database alterations. It should be set to
+a randomly generated value to ensure third parties can not use this
+interface.</li><li >all database operations use the <a href="../reference/cmdline.html#reference-cmdline-server-database" class="internal reference"><span class="std std-ref">database options</span></a>, including the database management
+screen. For the database management screen to work requires that the user
+have <code >createdb</code> right.</li><li ><p >users can always drop databases they own. For the database management screen
+to be completely non-functional, the user needs to be created with
+<code >no-createdb</code> and the database must be owned by a different user.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >the user <em >must not</em> be a superuser</p></div></li></ul></section><section id="https"><h2 >HTTPS</h2><p >Whether it's accessed via website/web client or the webservice, Odoo transmits
+authentication information in cleatext. This means a secure deployment of
+Odoo must use HTTPS<a href="#switching" class="footnote-ref" id="id3">3</a>. SSL termination can be implemented via
+just about any SSL termination proxy, but requires the following setup:</p><ul ><li >enable Odoo's <a href="../reference/cmdline.html#cmdoption-odoo.py--proxy-mode" class="internal reference"><code class="std xref std-option">proxy mode</code></a>. This should only
+be enabled when Odoo is behind a reverse proxy</li><li >set up the SSL termination proxy (<a href="http://nginx.com/resources/admin-guide/nginx-ssl-termination/" class="external reference">Nginx termination example</a>)</li><li >set up the proxying itself (<a href="http://nginx.com/resources/admin-guide/reverse-proxy/" class="external reference">Nginx proxying example</a>)</li><li >your SSL termination proxy should also automatically redirect non-secure
+connections to the secure port</li></ul></section><section id="builtin-server"><h2 >Builtin server</h2><p >Odoo includes built-in HTTP servers, using either multithreading or
+multiprocessing.</p><p >For production use, it is recommended to use the multiprocessing server as it
+increases stability, makes somewhat better use of computing resources and can
+be better monitored and resource-restricted.</p><ul ><li >Multiprocessing is enabled by configuring <a href="../reference/cmdline.html#cmdoption-odoo.py--workers" class="internal reference"><code class="std xref std-option">a non-zero number of
+worker processes</code></a>, the number of workers should be based
+on the number of cores in the machine (possibly with some room for cron
+workers depending on how much cron work is predicted)</li><li >Worker limits can be configured based on the hardware configuration to avoid
+resources exhaustion</li></ul><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >multiprocessing mode currently isn't available on Windows</p></div></section><section id="livechat"><h3 >LiveChat</h3><p >In multiprocessing, a dedicated LiveChat worker is automatically started and
+listening on <a href="../reference/cmdline.html#cmdoption-odoo.py--longpolling-port" class="internal reference"><code class="std xref std-option">the longpolling port</code></a> but
+the client will not connect to it.</p><p >Instead you must have a proxy redirecting requests whose URL starts with
+<code >/longpolling/</code> to the longpolling port. Other request should be proxied to
+the <a href="../reference/cmdline.html#cmdoption-odoo.py--xmlrpc-port" class="internal reference"><code class="std xref std-option">normal HTTP port</code></a></p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >The livechat worker requires the <code >psycogreen</code> Python module,
+which is not always included with all installation packages.
+It can be manually installed with <code >pip install psycogreen</code>.</p></div></section><section id="odoo-as-a-wsgi-application"><h2 >Odoo as a WSGI Application</h2><p >It is also possible to mount Odoo as a standard <a href="http://wsgi.readthedocs.org/" class="external reference">WSGI</a> application. Odoo
+provides the base for a WSGI launcher script as <code >openerp-wsgi.py</code>. That
+script should be customized (possibly after copying it) to correctly set the
+configuration directly in <code class="py xref py-mod">openerp.tools.config</code> rather than through the
+command-line or a configuration file.</p><p >However the WSGI server will only expose the main HTTP endpoint for the web
+client, website and webservice API. Because Odoo does not control the creation
+of workers anymore it can not setup cron or livechat workers</p></section><section id="cron-workers"><h3 >Cron Workers</h3><p >To run cron jobs for an Odoo deployment as a WSGI application requires</p><ul ><li >a classical Odoo (run via <code >odoo.py</code>)</li><li >connected to the database in which cron jobs have to be run (via
+<a href="../reference/cmdline.html#cmdoption-odoo.py-d" class="internal reference"><code class="std xref std-option">odoo.py -d</code></a>)</li><li >which should not be exposed to the network. To ensure cron runners are not
+network-accessible, it is possible to disable the built-in HTTP server
+entirely with <a href="../reference/cmdline.html#cmdoption-odoo.py--no-xmlrpc" class="internal reference"><code class="std xref std-option">odoo.py --no-xmlrpc</code></a> or setting <code >xmlrpc = False</code>
+in the configuration file</li></ul></section><section id="id4"><h3 >LiveChat</h3><p >The second problematic subsystem for WSGI deployments is the LiveChat: where
+most HTTP connections are relatively short and quickly free up their worker
+process for the next request, LiveChat require a long-lived connection for
+each client in order to implement near-real-time notifications.</p><p >This is in conflict with the process-based worker model, as it will tie
+up worker processes and prevent new users from accessing the system. However,
+those long-lived connections do very little and mostly stay parked waiting for
+notifications.</p><p >The solutions to support livechat/motifications in a WSGI application are:</p><ul ><li >deploy a threaded version of Odoo (instread of a process-based preforking
+one) and redirect only requests to URLs starting with <code >/longpolling/</code> to
+that Odoo, this is the simplest and the longpolling URL can double up as
+the cron instance.</li><li >deploy an evented Odoo via <code >openerp-gevent</code> and proxy requests starting
+with <code >/longpolling/</code> to
+<a href="../reference/cmdline.html#cmdoption-odoo.py--longpolling-port" class="internal reference"><code class="std xref std-option">the longpolling port</code></a>.</li></ul></section><section id="serving-static-files"><h2 >Serving Static Files</h2><p >For development convenience, Odoo directly serves all static files in its
+modules. This may not be ideal when it comes to performances, and static
+files should generally be served by a static HTTP server.</p><p >Odoo static files live in each module's <code >static/</code> folder, so static files
+can be served by intercepting all requests to <code class="samp">/<em >MODULE</em>/static/<em >FILE</em></code>,
+and looking up the right module (and file) in the various addons paths.</p></section><section id="security"><h2 >Security</h2></section><section id="super-admin-password"><h3 >&quot;Super-admin&quot; password</h3><p ><a href="#setup-deploy-odoo" class="internal reference"><span class="std std-ref">Configuring Odoo</span></a> mentioned <code >admin_passwd</code> in passing.</p><p >This setting is used on all database management screens (to create, delete,
+dump or restore databases).</p><p >If the management screens must not be accessible, or must only be accessible
+from a selected set of machines, use the proxy server's features to block
+access to all routes starting with <code >/web/database</code> except (maybe)
+<code >/web/database/selector</code> which displays the database-selection screen.</p><p >If the database-management screen should be left accessible, the
+<code >admin_passwd</code> setting must be changed from its <code >admin</code> default: this
+password is checked before allowing database-alteration operations.</p><p >It should be stored securely, and should be generated randomly e.g.</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> python -c <span class="s1">&#39;import base64, os; print(base64.b64encode(os.urandom(24)))&#39;</span>
+</pre></div>
+</div>
+<p >which will generate a 32 characters pseudorandom printable string.</p><div class="footnote" id="different-machines"><span class="footnote-label"><a class="footnote-backref" href="#id1">[1]</a></span> to have multiple Odoo installations use the same PostgreSQL database,
+or to provide more computing resources to both software.</div><div class="footnote" id="remote-socket"><span class="footnote-label"><a class="footnote-backref" href="#id2">[2]</a></span> technically a tool like <a href="http://www.dest-unreach.org/socat/" class="external reference">socat</a> can be used to proxy UNIX sockets across
+networks, but that is mostly for software which can only be used over
+UNIX sockets</div><div class="footnote" id="switching"><span class="footnote-label"><a class="footnote-backref" href="#id3">[3]</a></span> or be accessible only over an internal packet-switched network, but that
+requires secured switches, protections against <a href="http://en.wikipedia.org/wiki/ARP_spoofing" class="external reference">ARP spoofing</a> and
+precludes usage of WiFi. Even over secure packet-switched networks,
+deployment over HTTPS is recommended, and possible costs are lowered as
+&quot;self-signed&quot; certificates are easier to deploy on a controlled
+environment than over the internet.</div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

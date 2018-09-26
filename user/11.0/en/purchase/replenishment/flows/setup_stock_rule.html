@@ -1,0 +1,311 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to setup a minimum stock rule? &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Replenishment Flows" href="../flows.html" />
+    <link rel="next" title="How to trigger the purchase of products based on sales?" href="purchase_triggering.html" />
+    <link rel="prev" title="How to setup drop-shipping?" href="dropshipping.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../purchase.html">Purchase</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to setup a minimum stock rule?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/purchase/replenishment/flows/setup_stock_rule.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/purchase/replenishment/flows/setup_stock_rule.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/purchase/replenishment/flows/setup_stock_rule.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to setup a minimum stock rule? - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#when-should-i-use-reordering-rules" class="ripple internal reference">When should I use Reordering Rules?</a></li><li class="list-group-item"><a href="#when-should-i-avoid-reordering-rules" class="ripple internal reference">When should I avoid Reordering Rules?</a></li><li class="list-group-item"><a href="#example" class="ripple internal reference">Example</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#set-up-your-product" class="ripple internal reference">Set up your product</a></li><li class="list-group-item"><a href="#create-a-reordering-rule" class="ripple internal reference">Create a reordering rule</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/purchase/replenishment/flows/setup_stock_rule.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-setup-a-minimum-stock-rule"><p >For some items you hold in stock, it might be useful to have rules
+making sure you never run out of stocks (for example, products with a
+high demand, or large items requiring a lot of storage space meaning
+they're harder to stock).</p><p >Odoo allows you to set up rules so that an automatic replenishment for
+those items is made, based on minimum stocks available.</p></section><section id="when-should-i-use-reordering-rules"><h2 >When should I use Reordering Rules?</h2><p >Reordering Rules work best for items that have a high demand and high
+flow. It will relieve you from a lot of work to focus on the rest of
+your activities knowing that stocks will always be right.</p><p >It can also be used when you have limited storage space and you need to
+keep large items in stock. In this case, you can keep as little as 1
+item in stock, and have a new one ordered as a stock replenishment as
+soon as the item in stock is sold.</p></section><section id="when-should-i-avoid-reordering-rules"><h2 >When should I avoid Reordering Rules?</h2><p >If you are offering a new product and don't know yet how fast it will
+go, you should handle stocks yourself first, and setup reordering rules
+only a few months into the sale to have better forecasts of the demand.</p><p >If you sell items that have a limited lifetime, such as fashion items,
+technology items, or products working together with a system that is
+meant to evolve, you have to be very well informed on when to stop
+automated replenishments, in order to avoid having to sell these items
+at a price that will not allow you to break even.</p></section><section id="example"><h2 >Example</h2><p >My company sells modern furniture. We sell a set of table and chairs
+that are available in 4 seatings and 6 seatings.</p><p >To keep things simple, we stock tables and chairs separately, but sell
+them all together to our clients as a kit. In order to make sure we can
+always deliver a complete set of table and chairs, I setup a Reordering
+Rule for the chairs to make sure I always have at least 10 chairs in
+stock, but no more than 20. This way, I can sell up to 5 sets of table
+at once while keeping my stock low enough not to eat up all my storage
+space.</p><p >The last table I sold was a 4 seatings, and there were 12 chairs left in
+my stock. Because the stock in chairs is now only 8 chairs, Odoo will
+automatically order 12 new chairs to fill up my stock to the maximum
+amount.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="set-up-your-product"><h3 >Set up your product</h3><p >In the Purchases module, open the Purchase menu and click on Products.
+Open the product to which you would like to add a Reordering Rule (or
+create a new one).</p><p >3 conditions for correct reordering rule :</p><ol ><li >In <span class="menuselection">General information ‣ Product type</span>, make the product
+stockable (as soon as this is done, the icon &quot;Reordering rule will appear)</li><li >In <span class="menuselection">Inventory ‣ route</span>, tick the &quot;Buy&quot; box (and untick the
+Make To Order box)</li><li >Select a vendor (don't forget to put a minimal quantity greater than 0)</li></ol></section><section id="create-a-reordering-rule"><h3 >Create a reordering rule</h3><p >Click on the Reordering Rules tab, click on Create. A new page opens.</p><img src="../../../_images/setup016.png" class="img-responsive center-block"><p >By default, Reordering Rules in Odoo are named as &quot;OP/XXXXX&quot; but you are
+free to use any nomenclature. You can modify it via the <strong >Name</strong> field.</p><p >The <strong >Product</strong> field is the product you are creating the rule for.</p><p >Select the warehouse to which the product should be delivered in the
+<strong >Warehouse</strong> field.</p><p >If you have configured multiple warehouses and location, specify the
+location in which the product will be stored in the <strong >Location</strong> field.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><p ><a href="../../../inventory/settings/warehouses/difference_warehouse_location.html" class="internal alert-link reference"><span class="doc">What is the difference between warehouses and locations?</span></a></p></div><img src="../../../_images/setup026.png" class="img-responsive center-block"><p >In the <strong >Minimum Quantity</strong> field, insert the quantity to which the
+system will trigger a new order for replenishment.</p><p >In the <strong >Maximum Quantity</strong> field, insert the maximum of items that has
+to be stocked. The replenishing order will be based on that quantity to
+reorder.</p><p >The <strong >Quantity Multiple</strong> is the lowest number of items that can be
+ordered at once. For instance, some items may be only available for
+purchase in a set of 2.</p><p >In the Misc section, the <strong >Active</strong> box allows you to activate or
+deactivate the rule.</p><p >In the <strong >Lead Time</strong> section, you can enter:</p><ul ><li >the number of Day(s) to purchase: correspond to the number of days
+for the supplier to receive the order</li><li >the number of Day(s) to get the products</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >By default, the lead times are in calendar days. You can change that
+in <span class="menuselection">Inventory ‣ Configuration ‣ Settings ‣ Minimum Stock Rules</span></p></div><p >When you have entered all the info, click on Save.</p><p >From now on, every time a product with a reordering rule reaches the
+minimum stock, the system will automatically send a RfQ to your supplier
+based on your maximum quantity to replenish your stock.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The replenishments will take place when the scheduler in the Inventory
+module runs. By default in Odoo, the schedulers will run every night at
+12:00PM.</p><p >To know how to configure and run the schedulers manually, read the
+document on <a href="../../../inventory/management/misc/schedulers.html" class="internal alert-link reference"><span class="doc">How to configure and run schedulers?</span></a></p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><p ><a href="../../../inventory/management/misc/schedulers.html" class="internal alert-link reference"><span class="doc">How to configure and run schedulers?</span></a></p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

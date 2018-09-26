@@ -1,0 +1,301 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to do a bank wire transfer from one bank to another? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Miscellaneous" href="../misc.html" />
+    <link rel="next" title="Bank Reconciliation" href="../reconciliation.html" />
+    <link rel="prev" title="How to manage batch deposits of checks?" href="batch.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to do a bank wire transfer from one bank to another?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/accounting/bank/misc/interbank.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/accounting/bank/misc/interbank.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/accounting/bank/misc/interbank.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to do a bank wire transfer from one bank to another? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#check-your-chart-of-accounts-and-default-transfer-account" class="ripple internal reference">Check your Chart of Accounts and default transfer account</a></li><li class="list-group-item"><a href="#create-a-second-bank-account-journal" class="ripple internal reference">Create a second bank account / Journal</a></li></ul></li><li class="list-group-item"><a href="#register-an-internal-transfer-from-one-bank-to-another" class="ripple internal reference">Register an internal transfer from one bank to another.</a><ul ><li class="list-group-item"><a href="#log-an-internal-transfer" class="ripple internal reference">Log an internal transfer</a></li><li class="list-group-item"><a href="#import-bank-statements-and-reconcile" class="ripple internal reference">Import bank statements and reconcile</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/accounting/bank/misc/interbank.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-do-a-bank-wire-transfer-from-one-bank-to-another"><p >A company might have several bank accounts or cash registers. Within
+odoo it is possible to handle internal transfers of money with only a
+couple of clicks.</p><p >We will take the following example to illustrate. My company has two
+bank accounts and I want to transfer 50.000 euros from one of our bank
+accounts to the another one.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="check-your-chart-of-accounts-and-default-transfer-account"><h3 >Check your Chart of Accounts and default transfer account</h3><p >To handle internal transfers you need a transfer account in your charts
+of account. Odoo will generate an account automatically based on the
+country of your chart of account. To parameter your chart of account and
+check the default transfer account go into your the accounting module,
+select <span class="menuselection">Configuration ‣ Settings</span>.</p><p >Your chart of accounts will be pre-installed depending on the country
+specified during your registration, it cannot be changed.</p><img src="../../../_images/interbank04.png" class="img-responsive center-block"><p >The default transfer account will automatically be generated as well
+depending on your country's legislation. If necessary it can be modified
+from the same page.</p><img src="../../../_images/interbank05.png" class="img-responsive center-block"></section><section id="create-a-second-bank-account-journal"><h3 >Create a second bank account / Journal</h3><p >Before we can register an internal transfer we need to add a new bank to
+our accounting dashboard. To do so enter the accounting module, click on
+<span class="menuselection">Configuration ‣ Bank Accounts</span>. Create a new bank account. You should
+fill in the <strong >Account Number</strong>. You can also create and edit your bank to
+specify your bank's details.</p><img src="../../../_images/interbank03.png" class="img-responsive center-block"><p >By saving the changes you now have 2 bank accounts.</p><img src="../../../_images/interbank06.png" class="img-responsive center-block"></section><section id="register-an-internal-transfer-from-one-bank-to-another"><h2 >Register an internal transfer from one bank to another.</h2><p >We will now transfer 50.000 euros from our <strong >Bank</strong> to our <strong >Bank BE57 0633
+9533 1498</strong> account.</p></section><section id="log-an-internal-transfer"><h3 >Log an internal transfer</h3><p >The first step is to register the internal paiement. To do so, go into
+your accounting dashboard. click on the <strong >more</strong> button of one of your banks
+and select <span class="menuselection">New ‣ Internal transfer</span>.</p><img src="../../../_images/interbank01.png" class="img-responsive center-block"><p >Create a new payment. The payment type will automatically be set to
+internal transfer. Select the <strong >Bank</strong> you want to transfer to, specify the
+<strong >Amount</strong> and add a <strong >Memo</strong> if you wish.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The memo is important if you wish to automatically reconcile (<a href="#reconcile" class="internal alert-link reference">see</a>).</p></div><img src="../../../_images/interbank02.png" class="img-responsive center-block"><p >Save and confirm the changes to register the payment.</p><p >In terms of accounting the money is now booked in the transfer account.
+We'll need to import bank statements to book the money in the final
+accounts.</p></section><section id="import-bank-statements-and-reconcile"><i id="reconcile"></i><h3 >Import bank statements and reconcile</h3><p >Note that the bank balance computed by Odoo is different that the last
+statement of your bank.</p><img src="../../../_images/interbank11.png" class="img-responsive center-block"><p >That is because we did not import the bank statement confirming the
+departure and arrival of the money. It's thus necessary to import your
+bank statement and reconcile the payment with the correct bank statement
+line. Once you receive your bank statements click the <strong >new statement</strong>
+button of the corresponding bank to import them.</p><img src="../../../_images/interbank07.png" class="img-responsive center-block"><p >Fill in your <strong >Transactions line</strong>. Once done, Odoo will display a <strong >Computed
+Balance</strong>. that computed balance is the theorical end balance of your
+bank account. If it's corresponding to the bank statement, it means that no errors were
+made. Fill in the <strong >Ending balance</strong> and click on the <strong >Reconcile</strong> button.</p><img src="../../../_images/interbank10.png" class="img-responsive center-block"><p >The following window will open:</p><img src="../../../_images/interbank09.png" class="img-responsive center-block"><p >You need to choose counterparts for the paiement. Select the correct
+bank statement line corresponding to the paiement and click on the
+<strong >reconcile</strong> button. Close the statement to finish the transaction</p><img src="../../../_images/interbank08.png" class="img-responsive center-block"><p >The same steps will need to be repeated once you receive your second
+bank statement. Note that if you specify the correct amount, and the
+same memo in both bank statement and payment transaction then the
+reconciliation will happen automatically.</p><img src="../../../_images/interbank12.png" class="img-responsive center-block"></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

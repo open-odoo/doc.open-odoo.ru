@@ -1,0 +1,267 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как выставит счет по договору на поддержку (за оплаченные ранее часы)? &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Услуги" href="../services.html" />
+    <link rel="next" title="Продукты и цены" href="../../products_prices.html" />
+    <link rel="prev" title="Как выставить дополнительный счет за расходы вашим клиентам?" href="reinvoice.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../sales.html">Продажи</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как выставит счет по договору на поддержку (за оплаченные ранее часы)?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/sales/invoicing/services/support.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/sales/invoicing/services/support.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/sales/invoicing/services/support.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как выставит счет по договору на поддержку (за оплаченные ранее часы)? - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#install-the-sales-and-timesheet-applications" class="ripple internal reference">Установите приложения <strong >Продажи (Sales)</strong> and <strong >Табели (Timesheet)</strong></a></li><li class="list-group-item"><a href="#create-products" class="ripple internal reference">Создание продуктов</a></li></ul></li><li class="list-group-item"><a href="#managing-support-contract" class="ripple internal reference">Отслеживание договора на поддержку</a><ul ><li class="list-group-item"><a href="#quotations-and-sales-orders" class="ripple internal reference">Котировки и заказы на продажу</a></li><li class="list-group-item"><a href="#timesheets" class="ripple internal reference">Табели (Timesheets)</a></li><li class="list-group-item"><a href="#control-delivered-support-on-the-sales-order" class="ripple internal reference">Контроль предоставленной поддержки по заказу клиента</a></li><li class="list-group-item"><a href="#upselling-and-renewal" class="ripple internal reference">Переработка и продление</a></li></ul></li><li class="list-group-item"><a href="#special-configuration" class="ripple internal reference">Специальная конфигурация</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/sales/invoicing/services/support.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-invoice-a-support-contract-prepaid-hours"><p >Существуют различные виды продажи услуг: предоплаченный объем часов/дней (например, контракт на поддержку), выставление счетов по затраченному времени и материалам (например, затраченное время на консультации) или с фиксированной ценой по договору (например, создание сайта).</p><p >В этом разделе мы рассмотрим, как продавать и отслеживать предоплаченный договор на поддержку.</p><p >Например, вы можете продать пакет «50 часов» поддержки за <code >$25000</code>. Цена фиксируется и берется авансом. Вам необходимо отслеживать время поддержки, которую вы потратили при выполнении условий договора.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="install-the-sales-and-timesheet-applications"><h3 >Установите приложения <strong >Продажи (Sales)</strong> and <strong >Табели (Timesheet)</strong></h3><p >Чтобы продавать услуги, вам необходимо установить приложение <strong >Продажи (Sales)</strong> в модуле <strong >Приложения (Apps)</strong>. Также установите приложение <strong >Табели (Timesheets)</strong>, если вы хотите отслеживать время поддержки, которое вы затратили по каждому договору.</p><img src="../../../_images/support01.png" class="img-responsive center-block"><img src="../../../_images/support02.png" class="img-responsive center-block"></section><section id="create-products"><h3 >Создание продуктов</h3><p >По умолчанию продукты продаются поштучно. Чтобы продавать услуги <code >в час</code>, вы должны разрешить использование нескольких единиц измерения. В приложении <strong >Продажи (Sales)</strong> перейдите в меню <span class="menuselection">Configuration (Конфигурация) ‣ Settings (Настройки)</span>. На этом экране разрешите использовать несколько единиц измерения для продукта (опция <strong >Единицы измерения (Unit of Measures)</strong>).</p><img src="../../../_images/support03.png" class="img-responsive center-block"><p >Чтобы продать контракт на поддержку, вы должны создать продукт для каждого из них. В приложении <strong >Продажи (Sales)</strong> используйте меню <span class="menuselection">Sales (Продажи) ‣ Products (Продукция)</span>, создайте новый продукт со следующими параметрами:</p><ul ><li ><p ><strong >Название</strong>: Техническая поддержка</p></li><li ><p ><strong >Тип продукта</strong>: Услуга</p></li><li ><p ><strong >Единица измерения</strong>: Часы</p></li><li ><p ><strong >Порядок выставления счетов</strong>: заказываемые количества, так как услуга поставляется по предоплате. Мы будем выставлять счет за услугу на основании заказанного товара, а не исходя из доставленного количества.</p></li><li ><p ><strong >Отслеживание выполнения (Track Service)</strong>: расписание по контрактам (Timesheet on contracts). Аналитический счет будет автоматически создан для каждого заказа, содержащего эту услугу, чтобы вы могли отслеживать часы в соответствующем счете.</p></li></ul><img src="../../../_images/support04.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Существуют различные способы отслеживания обслуживания, связанного с заказом клиента или проданным продуктом. В приведенной выше конфигурации вы можете продавать только один контракт поддержки на заказ. Если ваш клиент заказывает несколько контрактов на обслуживание в расписании, вам придется разделить котировку на несколько заказов.</p></div><p >Обратите внимание, что вы можете продавать в разных единицах измерения,  например: <code >дни</code>, <code >пакет 40 часов</code> и т.д. Для этого просто создайте новую единицу измерения в категории <strong >Единица измерения</strong> и установите коэффициент конверсии по сравнению с часами (пример: <code >1 день = 8 часов</code>).</p></section><section id="managing-support-contract"><h2 >Отслеживание договора на поддержку</h2></section><section id="quotations-and-sales-orders"><h3 >Котировки и заказы на продажу</h3><p >После создания продукта вы можете создать предложение или заказ на продажу связанного с продуктом. Как только котировка будет подтверждена и преобразована в заказ клиента, ваши пользователи смогут записывать службы, связанные с этим контрактом на поддержку, с помощью приложения расписания.</p><img src="../../../_images/support05.png" class="img-responsive center-block"></section><section id="timesheets"><h3 >Табели (Timesheets)</h3><p >Чтобы отслеживать обслуживание, которое вы выполняете по конкретному договору, вы должны использовать приложение <strong >Табели (Timesheet)</strong>. Аналитическая учетная запись, связанная с заказом на продажу, была автоматически создана («SO009 - Agrolait`` на снимке экрана выше), поэтому вы можете начать отслеживать оказанные услуги сразу после оплаты.</p><img src="../../../_images/support06.png" class="img-responsive center-block"></section><section id="control-delivered-support-on-the-sales-order"><h3 >Контроль предоставленной поддержки по заказу клиента</h3><p >В приложении <strong >Продажи (Sales)</strong> в меню <span class="menuselection">Sales (Продажи)‣ Sales Orders (Заказы клиентов)</span> можно контролировать ход каждого заказа. В строке заказа клиента, относящейся к договору поддержки видно <strong >Доставлено</strong>, которые обновляются автоматически, в зависимости от количества оказанных услуг из приложения <strong >Табели (Timesheet)</strong>.</p><img src="../../../_images/support07.png" class="img-responsive center-block"></section><section id="upselling-and-renewal"><h3 >Переработка и продление</h3><p >Если количество часов, которое вы предоставили в контракте на поддержку, больше или равно количеству часов, которые клиент купил, вам предлагается продать дополнительный контракт клиенту, поскольку они использовали всю свою квоту на обслуживание. Периодически (желательно один раз в две недели) вы должны проверить заказ клиента, который находится в таком случае. Для этого перейдите к: menuselection: [UNKNOWN NODE title_reference].</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если вы используете Odoo CRM, хорошей практикой является создание возможности для каждого заказа на продажу в статусе выставления счета-фактуры, чтобы вы могли легко отслеживать свои достижения по увеличению продаж.</p></div><p >Если вы продаете дополнительный контракт на поддержку, вы можете либо добавить новую строку в существующий заказ на продажу (таким образом, вы продолжаете размещать заказ в том же самом расписании), либо создать новый заказ (таким образом, люди будут размещать в расписании свои часы по новому контракту) , Чтобы отменить заказ клиента как ** Upselling [UNKNOWN NODE problematic], вы можете установить заказ клиента как готовый, и он исчезнет из вашего списка.</p></section><section id="special-configuration"><h2 >Специальная конфигурация</h2><p >При создании формы продукта вы можете установить другой подход для отслеживания сервиса:</p><ul ><li ><p >** Создание задания и отслеживаниемчасов [UNKNOWN NODE problematic]: в этом режиме создается задача для каждой строки заказа клиента. Затем, когда вы делаете расписание, вы не записываете часы по заказу / контракту на продажу, но записываете часы на задание (которое представляет собой контракт). Преимущество этого решения заключается в том, что он позволяет продавать несколько контрактов на обслуживание в рамках одного и того же заказа клиента.</p></li><li ><p >** Вручную [UNKNOWN NODE problematic]: вы можете использовать этот режим, если вы не записываете расписания в Odoo. Количество часов, с которыми вы работали в конкретном контракте, можно записывать вручную в строке заказа клиента непосредственно в поле доставленного количества.</p></li></ul><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><p >: Документ: [UNKNOWN NODE title_reference]</p></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

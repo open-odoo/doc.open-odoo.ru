@@ -1,0 +1,275 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to manage a cash register? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Setup" href="../setup.html" />
+    <link rel="next" title="How to manage a bank in a foreign currency?" href="foreign_currency.html" />
+    <link rel="prev" title="How to setup a new bank account?" href="create_bank_account.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to manage a cash register?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/accounting/bank/setup/manage_cash_register.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/accounting/bank/setup/manage_cash_register.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/accounting/bank/setup/manage_cash_register.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to manage a cash register? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#usage" class="ripple internal reference">Usage</a><ul ><li class="list-group-item"><a href="#how-to-register-cash-payments" class="ripple internal reference">How to register cash payments?</a></li><li class="list-group-item"><a href="#put-money-in" class="ripple internal reference">Put money in</a></li><li class="list-group-item"><a href="#take-money-out" class="ripple internal reference">Take money out</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/accounting/bank/setup/manage_cash_register.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-manage-a-cash-register"><p >The cash register is a journal to register receivings and payments transactions.
+It calculates the total money in and out, computing the total balance.</p></section><section id="configuration"><h2 >Configuration</h2><img src="../../../_images/journal.png" class="img-responsive center-block"><ol ><li >Configure the Cash journal in <span class="menuselection">Accounting ‣ Configuration ‣
+Journals</span>.</li><li >In the tab Journal Entries, the Default Debit and Credit Account can be
+configured as well as the currency of the journal</li></ol><div class="code-fields"><div class="code-field"><div class="code-field-name">Active</div><div class="code-field-body"><div class="line-block"><div class="line">Set active to false to hide the Journal without removing it.</div></div></div></div><div class="code-field"><div class="code-field-name">Type</div><div class="code-field-body"><div class="line-block"><div class="line">Select 'Sale' for customer invoices journals.</div><div class="line">Select 'Purchase' for vendor bills journals.</div><div class="line">Select 'Cash' or 'Bank' for journals that are used in customer or vendor payments.</div><div class="line">Select 'General' for miscellaneous operations journals.</div></div></div></div><div class="code-field"><div class="code-field-name">Use in Point of Sale</div><div class="code-field-body"><div class="line-block"><div class="line">Check this box if this journal define a payment method that can be used in a point of sale.</div></div></div></div><div class="code-field"><div class="code-field-name">Company</div><div class="code-field-body"><div class="line-block"><div class="line">Company related to this journal</div></div></div></div><div class="code-field"><div class="code-field-name">Short Code</div><div class="code-field-body"><div class="line-block"><div class="line">The journal entries of this journal will be named using this prefix.</div></div></div></div><div class="code-field"><div class="code-field-name">Next Number</div><div class="code-field-body"><div class="line-block"><div class="line">The next sequence number will be used for the next invoice.</div></div></div></div><div class="code-field"><div class="code-field-name">Entry Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">This field contains the information related to the numbering of the journal entries of this journal.</div></div></div></div><div class="code-field"><div class="code-field-name">Dedicated Credit Note Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">Check this box if you don't want to share the same sequence for invoices and credit notes made from this journal</div></div></div></div><div class="code-field"><div class="code-field-name">Credit Notes: Next Number</div><div class="code-field-body"><div class="line-block"><div class="line">The next sequence number will be used for the next credit note.</div></div></div></div><div class="code-field"><div class="code-field-name">Credit Note Entry Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">This field contains the information related to the numbering of the credit note entries of this journal.</div></div></div></div><div class="code-field"><div class="code-field-name">Default Debit Account</div><div class="code-field-body"><div class="line-block"><div class="line">It acts as a default account for debit amount</div></div></div></div><div class="code-field"><div class="code-field-name">Default Credit Account</div><div class="code-field-body"><div class="line-block"><div class="line">It acts as a default account for credit amount</div></div></div></div><div class="code-field"><div class="code-field-name">Currency</div><div class="code-field-body"><div class="line-block"><div class="line">The currency used to enter statement</div></div></div></div><div class="code-field"><div class="code-field-name">Debit Methods</div><div class="code-field-body"><div class="line-block"><div class="line">Manual: Get paid by cash, check or any other method outside of Odoo.</div><div class="line">Electronic: Get paid automatically through a payment acquirer by requesting a transaction on a card saved by the customer when buying or subscribing online (payment token).</div><div class="line">Batch Deposit: Encash several customer checks at once by generating a batch deposit to submit to your bank. When encoding the bank statement in Odoo,you are suggested to reconcile the transaction with the batch deposit. Enable this option from the settings.</div></div></div></div><div class="code-field"><div class="code-field-name">Payment Methods</div><div class="code-field-body"><div class="line-block"><div class="line">Manual:Pay bill by cash or any other method outside of Odoo.</div><div class="line">Check:Pay bill by check and print it from Odoo.</div><div class="line">SEPA Credit Transfer: Pay bill from a SEPA Credit Transfer file you submit to your bank. Enable this option from the settings.</div></div></div></div><div class="code-field"><div class="code-field-name">Group Invoice Lines</div><div class="code-field-body"><div class="line-block"><div class="line">If this box is checked, the system will try to group the accounting lines when generating them from invoices.</div></div></div></div><div class="code-field"><div class="code-field-name">Profit Account</div><div class="code-field-body"><div class="line-block"><div class="line">Used to register a profit when the ending balance of a cash register differs from what the system computes</div></div></div></div><div class="code-field"><div class="code-field-name">Loss Account</div><div class="code-field-body"><div class="line-block"><div class="line">Used to register a loss when the ending balance of a cash register differs from what the system computes</div></div></div></div><div class="code-field"><div class="code-field-name">Show journal on dashboard</div><div class="code-field-body"><div class="line-block"><div class="line">Whether this journal should be displayed on the dashboard or not</div></div></div></div><div class="code-field"><div class="code-field-name">Check Printing Payment Method Selected</div><div class="code-field-body"><div class="line-block"><div class="line">Technical feature used to know whether check printing was enabled as payment method.</div></div></div></div><div class="code-field"><div class="code-field-name">Check Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">Checks numbering sequence.</div></div></div></div><div class="code-field"><div class="code-field-name">Manual Numbering</div><div class="code-field-body"><div class="line-block"><div class="line">Check this option if your pre-printed checks are not numbered.</div></div></div></div><div class="code-field"><div class="code-field-name">Next Check Number</div><div class="code-field-body"><div class="line-block"><div class="line">Sequence number of the next printed check.</div></div></div></div><div class="code-field"><div class="code-field-name">Creation of bank statement</div><div class="code-field-body"><div class="line-block"><div class="line">This field is used for the online synchronization:</div><div class="line">                                                    depending on the option selected, newly fetched transactions</div><div class="line">                                                    will be put inside previous statement or in a new one</div></div></div></div><div class="code-field"><div class="code-field-name">Amount Authorized Difference</div><div class="code-field-body"><div class="line-block"><div class="line">This field depicts the maximum difference allowed between the ending balance and the theoretical cash when closing a session, for non-POS managers. If this maximum is reached, the user will have an error message at the closing of his session saying that he needs to contact his manager.</div></div></div></div></div></section><section id="usage"><h2 >Usage</h2></section><section id="how-to-register-cash-payments"><h3 >How to register cash payments?</h3><p >To register a cash payment specific to another customer, you should follow
+these steps:</p><ol ><li >Go to <span class="menuselection">Accounting ‣ Dashboard ‣ Cash ‣ Register
+Transactions</span></li><li >Fill in the start and ending balance</li><li >Register the transactions, specifying the customers linked to the transaction</li></ol></section><section id="put-money-in"><h3 >Put money in</h3><p >Put money in is used to placed your cash manually before starting your
+transactions. From the Register Transactions window, go to <span class="menuselection">More
+‣ Put money in</span></p><img src="../../../_images/put-money-in.png" class="img-responsive center-block"></section><section id="take-money-out"><h3 >Take money out</h3><p >Take money out is used to collect/get yor your cash manually after
+ending all your transactions. From the Register Transaction windows, go to <span class="menuselection">More
+‣ Take money out</span></p><img src="../../../_images/put-money-out.png" class="img-responsive center-block"><p >The transactions will be added to the current cash payment registration.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

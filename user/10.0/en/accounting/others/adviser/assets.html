@@ -1,0 +1,311 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Manage your fixed assets &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Adviser" href="../adviser.html" />
+    <link rel="next" title="How to do a year end in Odoo? (close a fiscal year)" href="fiscalyear.html" />
+    <link rel="prev" title="Adviser" href="../adviser.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Manage your fixed assets</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/accounting/others/adviser/assets.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting/others/adviser/assets.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/accounting/others/adviser/assets.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Manage your fixed assets - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-asset-module" class="ripple internal reference">Install the Asset module</a></li><li class="list-group-item"><a href="#defining-asset-types" class="ripple internal reference">Defining Asset Types</a></li></ul></li><li class="list-group-item"><a href="#create-assets-manually" class="ripple internal reference">Create assets manually</a></li><li class="list-group-item"><a href="#create-assets-automatically-from-a-supplier-bill" class="ripple internal reference">Create assets automatically from a supplier bill</a></li><li class="list-group-item"><a href="#how-to-depreciate-an-asset" class="ripple internal reference">How to depreciate an asset?</a></li><li class="list-group-item"><a href="#how-to-modify-an-existing-asset" class="ripple internal reference">How to modify an existing asset?</a></li><li class="list-group-item"><a href="#how-to-record-the-sale-or-disposal-of-an-asset" class="ripple internal reference">How to record the sale or disposal of an asset?</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/accounting/others/adviser/assets.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="manage-your-fixed-assets"><p >The &quot;Assets&quot; module allows you to keep track of your fixed assets like
+machinery, land and building. The module allows you to generate monthly
+depreciation entries automatically, get depreciation board, sell or
+dispose assets and perform reports on your company assets.</p><p >As an example, you may buy a car for $36,000 (gross value) and you plan
+to amortize it over 36 months (3 years). Every months (periodicity),
+Odoo will create a depreciation entry automatically reducing your assets
+value by $1,000 and passing $1,000 as an expense. After 3 years, this
+assets accounts for $0 (salvage value) in your balance sheet.</p><p >The different types of assets are grouped into &quot;Assets Types&quot; that
+describe how to deprecate an asset. Here are two examples of assets
+types:</p><ul ><li >Building: 10 years, yearly linear depreciation</li><li >Car: 5 years, monthly linear depreciation</li></ul></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-asset-module"><h3 >Install the Asset module</h3><p >Start by <em >installing the Asset module.</em></p><p >Once the module is installed, you should see two new menus in the
+accounting application:</p><ul ><li ><span class="menuselection">Adviser ‣ Assets</span></li><li ><span class="menuselection">Configuration ‣ Asset Types</span></li></ul><p >Before registering your first asset, you must <a href="#accounting-adviser-assets-management-defining" class="internal reference"><span class="std std-ref">define your Asset
+Types</span></a>.</p></section><section id="defining-asset-types"><i id="accounting-adviser-assets-management-defining"></i><h3 >Defining Asset Types</h3><p >Asset type are used to configure all information about an assets: asset
+and deprecation accounts, amortization method, etc. That way, advisers
+can configure asset types and users can further record assets without
+having to provide any complex accounting information. They just need to
+provide an asset type on the supplier bill.</p><p >You should create asset types for every group of assets you frequently
+buy like &quot;Cars: 5 years&quot;, &quot;Computer Hardware: 3 years&quot;. For all other
+assets, you can create generic asset types. Name them according to the
+duration of the asset like &quot;36 Months&quot;, &quot;10 Years&quot;, ...</p><p >To define asset types, go to <span class="menuselection">Configuration ‣ Asset
+Types</span></p><img src="../../../_images/image01.png" class="img-responsive center-block"></section><section id="create-assets-manually"><h2 >Create assets manually</h2><p >To register an asset manually, go to the menu <span class="menuselection">Adviser
+‣ Assets</span>.</p><img src="../../../_images/image08.png" class="img-responsive center-block"><p >Once your asset is created, don't forget to Confirm it. You can also
+click on the Compute Depreciation button to check the depreciation board
+before confirming the asset.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >if you create asset manually, you still need to create the supplier
+bill for this asset. The asset document will only produce the
+depreciation journal entries, not those related to the supplier
+bill.</p></div><p >Explanation of the fields:</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Status</div><div class="code-field-body"><div class="line-block"><div class="line">When an asset is created, the status is 'Draft'.</div><div class="line">If the asset is confirmed, the status goes in 'Running' and the depreciation lines can be posted in the accounting.</div><div class="line">You can manually close an asset when the depreciation is over. If the last line of depreciation is posted, the asset automatically goes in that status.</div></div></div></div><div class="code-field"><div class="code-field-name">Asset Category</div><div class="code-field-body"><div class="line-block"><div class="line">Category of asset</div></div></div></div><div class="code-field"><div class="code-field-name">Date</div><div class="code-field-body"><div class="line-block"><div class="line">Date of asset</div></div></div></div><div class="code-field"><div class="code-field-name">Depreciation Dates</div><div class="code-field-body"><div class="line-block"><div class="line">The way to compute the date of the first depreciation.</div><div class="line">  * Based on last day of purchase period: The depreciation dates will be based on the last day of the purchase month or the purchase year (depending on the periodicity of the depreciations).</div><div class="line">  * Based on purchase date: The depreciation dates will be based on the purchase date.</div><div class="line"><br /></div></div></div></div><div class="code-field"><div class="code-field-name">First Depreciation Date</div><div class="code-field-body"><div class="line-block"><div class="line">Note that this date does not alter the computation of the first journal entry in case of prorata temporis assets. It simply changes its accounting date</div></div></div></div><div class="code-field"><div class="code-field-name">Gross Value</div><div class="code-field-body"><div class="line-block"><div class="line">Gross value of asset</div></div></div></div><div class="code-field"><div class="code-field-name">Salvage Value</div><div class="code-field-body"><div class="line-block"><div class="line">It is the amount you plan to have that you cannot depreciate.</div></div></div></div><div class="code-field"><div class="code-field-name">Computation Method</div><div class="code-field-body"><div class="line-block"><div class="line">Choose the method to use to compute the amount of depreciation lines.</div><div class="line">  * Linear: Calculated on basis of: Gross Value / Number of Depreciations</div><div class="line">  * Degressive: Calculated on basis of: Residual Value * Degressive Factor</div></div></div></div><div class="code-field"><div class="code-field-name">Time Method Based On</div><div class="code-field-body"><div class="line-block"><div class="line">Choose the method to use to compute the dates and number of entries.</div><div class="line">  * Number of Entries: Fix the number of entries and the time between 2 depreciations.</div><div class="line">  * Ending Date: Choose the time between 2 depreciations and the date the depreciations won't go beyond.</div></div></div></div><div class="code-field"><div class="code-field-name">Prorata Temporis</div><div class="code-field-body"><div class="line-block"><div class="line">Indicates that the first depreciation entry for this asset have to be done from the asset date (purchase date) instead of the first January / Start date of fiscal year</div></div></div></div><div class="code-field"><div class="code-field-name">Number of Depreciations</div><div class="code-field-body"><div class="line-block"><div class="line">The number of depreciations needed to depreciate your asset</div></div></div></div><div class="code-field"><div class="code-field-name">Number of Months in a Period</div><div class="code-field-body"><div class="line-block"><div class="line">The amount of time between two depreciations, in months</div></div></div></div></div><a href="https://demo.odoo.com?module=account_asset.action_account_asset_asset_form" class="center-block reference btn-lg btn-primary external btn-block btn">Try creating an <em >Asset</em> in our online demonstration</a></section><section id="create-assets-automatically-from-a-supplier-bill"><h2 >Create assets automatically from a supplier bill</h2><p >Assets can be automatically created from supplier bills. All you need to
+do is to set an asset category on your bill line. When the user will
+validate the bill, an asset will be automatically created, using the
+information of the supplier bill.</p><img src="../../../_images/image09.png" class="img-responsive"><p >Depending on the information on the asset category, the asset will be
+created in draft or directly validated<em >.</em> It's easier to confirm
+assets directly so that you won't forget to confirm it afterwards.
+(check the field <em >Skip Draft State</em> on <em >Asset Category)</em> Generate assets
+in draft only when you want your adviser to control all the assets
+before posting them to your accounts.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >if you put the asset on the product, the asset category will
+automatically be filled in the supplier bill.</p></div></section><section id="how-to-depreciate-an-asset"><h2 >How to depreciate an asset?</h2><p >Odoo will create depreciation journal entries automatically at the right
+date for every confirmed asset. (not the draft ones). You can control in
+the depreciation board: a green bullet point means that the journal
+entry has been created for this line.</p><p >But you can also post journal entries before the expected date by
+clicking on the green bullet and forcing the creation of related
+depreciation entry.</p><img src="../../../_images/image11.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >In the Depreciation board, click on the red bullet to post
+the journal entry. Click on the <span class="guilabel">Items</span> button on
+the top to see the journal entries which are already posted.</p></div></section><section id="how-to-modify-an-existing-asset"><h2 >How to modify an existing asset?</h2><ul ><li >Click on <span class="guilabel">Modify Depreciation</span></li><li >Change the number of depreciation</li></ul><p >Odoo will automatically recompute a new depreciation board.</p></section><section id="how-to-record-the-sale-or-disposal-of-an-asset"><h2 >How to record the sale or disposal of an asset?</h2><p >If you sell or dispose an asset, you need to deprecate completly this
+asset. Click on the button <span class="guilabel">Sell or Dispose</span>. This action
+will post the full costs of this assets but it will not record the
+sales transaction that should be registered through a customer
+invoice.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

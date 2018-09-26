@@ -1,0 +1,313 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to apply specific taxes by country, state or city? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Taxes" href="../taxes.html" />
+    <link rel="next" title="How to define new taxes?" href="create.html" />
+    <link rel="prev" title="Taxes" href="../taxes.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to apply specific taxes by country, state or city?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting/others/taxes/application.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/accounting/others/taxes/application.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/ru/accounting/others/taxes/application.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/ru/">Пользователю</a></li>
+<li><a href="/developer/9.0/ru/">Разработчику</a></li>
+<li><a href="/developer/9.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to apply specific taxes by country, state or city? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#set-the-right-taxes-on-your-products" class="ripple internal reference">Set the right taxes on your products</a></li><li class="list-group-item"><a href="#defining-fiscal-positions" class="ripple internal reference">Defining Fiscal Positions</a></li><li class="list-group-item"><a href="#apply-fiscal-positions-automatically" class="ripple internal reference">Apply fiscal positions automatically</a></li><li class="list-group-item"><a href="#specific-use-cases" class="ripple internal reference">Specific use cases</a></li></ul></li><li class="list-group-item"><a href="#using-fiscal-positions" class="ripple internal reference">Using fiscal positions</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/accounting/others/taxes/application.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-apply-specific-taxes-by-country-state-or-city"><p >In Odoo, the default tax to apply on a product/service is set on the
+<strong >product form</strong>. But, some customers may have specific tax rates because of
+their status (in some countries, construction companies are VAT exempts)
+or their location (customers in a different country, state and/or city
+may be subjected to another tax rate).</p><p >In order to select the right tax to apply according to the customer or
+product, Odoo uses the concept of <strong >fiscal positions</strong>. If a customer has a
+specific fiscal position, the default tax may be replaced by another
+one. (as an example, construction companies have 0% instead of 21% in
+Belgium for construction related work).</p><p >As an example, in Belgium, for the VAT tax, there are 3 fiscal positions
+that depend on on the country of the customer and some companies (like
+construction companies) benefit from a specific fiscal treatments:</p><ul ><li ><strong >Belgian companies:</strong> with 21% VAT (default, on product form)</li><li ><strong >European companies:</strong> with 0% VAT (intra-EU)</li><li ><strong >Other countries:</strong> 0% (but a different tax since it uses different
+accounts)</li><li ><strong >Construction companies:</strong> with 0% VAT, only for construction companies
+in Belgium</li></ul></section><section id="configuration"><h2 >Configuration</h2></section><section id="set-the-right-taxes-on-your-products"><h3 >Set the right taxes on your products</h3><p >The main taxes are automatically configured according to the chart of
+accounts of your country.</p><p >But if you want to set a specific tax on a specific product, you can set
+the <strong >sales and purchases taxes</strong> on the <strong >product form</strong>, under the <strong >Accounting
+tab</strong>. These taxes are the default one (used when you sell to companies
+that are in the same country/state than you)</p><img src="../../../_images/application05.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >If you work in a multi-company environment, the sales and
+purchase taxes may have a different value according to the
+company you work for. You can login into two different companies
+and change this field for each company.</p></div></section><section id="defining-fiscal-positions"><h3 >Defining Fiscal Positions</h3><p >The main fiscal positions are automatically created according to the
+chart of accounts of your country. But you may have to create fiscal
+positions manually for specific use cases.</p><p >To define fiscal positions, from the <strong >Accounting</strong> application, go to
+<span class="menuselection">Configuration ‣ Fiscal Positions</span>.</p><p >Fiscal position is just a set of rules that maps default taxes (as defined on
+product form) into other taxes. In the screenshot below, european
+customers have a VAT of 0% instead of the default 15%, for both sales
+and purchases.</p><img src="../../../_images/application02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >You can also map the <strong >income / expense account</strong> according to the fiscal
+position. For example, in Belgium, revenues from sales are not posted in
+the same account than revenues from sales in foreign countries.</p></div></section><section id="apply-fiscal-positions-automatically"><h3 >Apply fiscal positions automatically</h3><p >If you check the box <strong >Detect Automatically</strong>, the fiscal position will be
+applied automatically if the <strong >Country</strong>, <strong >State</strong>, <strong >City</strong> or even the
+<strong >Country Group</strong> matches. You can also apply the fiscal position only
+to companies having a valid <strong >VAT number</strong>.</p><p >You can also set a target <strong >Country/State/City</strong>. The fiscal position will
+be applied if the destination address of the customer matches these
+criteria.</p><img src="../../../_images/application04.png" class="img-responsive center-block"></section><section id="specific-use-cases"><h3 >Specific use cases</h3><p >If, for some fiscal positions, you want to remove a tax, instead of
+replacing by another, just keep the <strong >Tax to Apply</strong> field empty.</p><img src="../../../_images/application03.png" class="img-responsive center-block"><p >If, for some fiscal positions, you want to replace a tax by two other
+taxes, just create two lines having the same <strong >Tax on Product</strong>. You can
+also create one that is a grouping of two other taxes, depending on how
+you want to make them appear on the invoice.</p></section><section id="using-fiscal-positions"><h2 >Using fiscal positions</h2><p >If you keep the field <strong >Fiscal Position</strong> empty on customers
+<span class="menuselection">Accounting ‣ Sales ‣ Customers</span>, the fiscal position
+is applied automatically on sales order, purchase orders, web orders and invoices.</p><img src="../../../_images/application01.png" class="img-responsive center-block"><p >But, if you set the fiscal position, Odoo will use this specific fiscal
+position for this customer on orders (example: construction companies).
+In such a case, it's recommended to set the fiscal position on the
+customer form. Odoo will automatically reuse this value for orders and
+invoices, without trying to auto-detect the fiscal position.</p><p >If you set the fiscal position at the sale order or invoice level, it
+will only apply to this document only and not to future orders/invoices
+of the same customer.</p><p >For eCommerce orders, the tax of the visitor's cart will automatically
+update and apply the new tax after the visitor has logged in or filled
+in his shipping address.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="create.html" class="internal alert-link reference"><span class="doc">How to define new taxes?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

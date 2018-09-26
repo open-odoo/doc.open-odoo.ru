@@ -1,0 +1,240 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Интерфейс командной строки: odoo.py &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Модель безопасности в Odoo" href="security.html" />
+    <link rel="prev" title="Модули" href="module.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Интерфейс командной строки: odoo.py</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/en/reference/cmdline.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/ru/reference/cmdline.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/cmdline.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/cmdline.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/ru/">Пользователю</a></li>
+<li><a href="/developer/8.0/ru/">Разработчику</a></li>
+<li><a href="/developer/8.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/cmdline.jpg');"></span>
+      <div class="container text-center">
+        <h1> Интерфейс командной строки: odoo.py - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#running-the-server" class="ripple internal reference">Запуск сервера</a><ul ><li class="list-group-item"><a href="#database" class="ripple internal reference">Параметры для работы базы данных</a></li><li class="list-group-item"><a href="#built-in-http" class="ripple internal reference">Встроенный HTTP-сервер</a></li><li class="list-group-item"><a href="#logging" class="ripple internal reference">Ведение логов</a></li><li class="list-group-item"><a href="#advanced-options" class="ripple internal reference">Расширенные настройки</a></li></ul></li><li class="list-group-item"><a href="#scaffolding" class="ripple internal reference">Scaffolding</a></li><li class="list-group-item"><a href="#configuration-file" class="ripple internal reference">Файл конфигурации</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/cmdline.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="command-line-interface-odoo-py"><i id="reference-cmdline"></i></section><section id="running-the-server"><i id="reference-cmdline-server"></i><h2 >Запуск сервера</h2><section class="code-option"><h6 id="cmdoption-odoo.py-d"><i id="cmdoption-odoo.py--database"></i><code>-d &lt;database&gt;, --database &lt;database&gt;</code></h6><p >База данных, используемая при установке или обновлении модулей.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py-i"><i id="cmdoption-odoo.py--init"></i><code>-i &lt;modules&gt;, --init &lt;modules&gt;</code></h6><p >Список модулей, разделенных через запятую, для установки перед запуском сервера (требуется параметр <a href="#cmdoption-odoo.py-d" class="internal alert-link reference"><code class="std xref std-option">-d</code></a>).</p></section><section class="code-option"><h6 id="cmdoption-odoo.py-u"><i id="cmdoption-odoo.py--update"></i><code>-u &lt;modules&gt;, --update &lt;modules&gt;</code></h6><p >Список модулей, подлежащих обновлению до запуска сервера (требуется параметр <a href="#cmdoption-odoo.py-d" class="internal alert-link reference"><code class="std xref std-option">-d</code></a>).</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--addons-path"><code>--addons-path &lt;directories&gt;</code></h6><p >Список каталогов, разделенных запятыми, в которых хранятся модули. Эти каталоги сканируются для поиска в них модулей.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--workers"><code>--workers &lt;count&gt;</code></h6><p >Если <code >count</code> не равно 0 (по умолчанию), то включается многопроцессорная обработка и устанавливается указанное количество HTTP обработчиков (которые обрабатывают HTTP и RPC-запросы).</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Режим многопроцессорности доступен только в Unix-системах</p></div><p >Ряд параметров позволяет ограничивать и перезапускать обработчики:</p><section class="code-option"><h6 id="cmdoption-odoo.py--limit-request"><code>--limit-request &lt;limit&gt;</code></h6><p >Количество запросов, обрабатываемых обработчиком до его повторного использования и перезапуска.</p><p >По умолчанию - 8196.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--limit-memory-soft"><code>--limit-memory-soft &lt;limit&gt;</code></h6><p >Максимально допустимая виртуальная память на одного обработчика. Если предел превышен, обработчик будет убит и перезапущен в конце текущего запроса.</p><p >По умолчанию 640 Мб.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--limit-memory-hard"><code>--limit-memory-hard &lt;limit&gt;</code></h6><p >Жесткий лимит на виртуальную память, любой обработчик, превысивший лимит, будет немедленно убит, не дожидаясь завершения текущей обработки запроса.</p><p >По умолчанию - 768 Мб.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--limit-time-cpu"><code>--limit-time-cpu &lt;limit&gt;</code></h6><p >Предотвращает использование обработчиком больше, чем &lt;limit&gt; секунд процессорного времени для каждого запроса. Если предел превышен, обработчик будет убит.</p><p >По умолчанию 60.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--limit-time-real"><code>--limit-time-real &lt;limit&gt;</code></h6><p >Препятствует тому, чтобы обработчик работал с запросом дольше &lt;limit&gt; секунд. Если предел превышен, обработчик будет убит.</p><p >Отличается от <a href="#cmdoption-odoo.py--limit-time-cpu" class="internal alert-link reference"><code class="std xref std-option">--limit-time-cpu</code></a> тем, что это предел &quot;wall time&quot;, включая, например, SQL-запросы.</p><p >По умолчанию 120.</p></section></section><section class="code-option"><h6 id="cmdoption-odoo.py--max-cron-threads"><code>--max-cron-threads &lt;count&gt;</code></h6><p >Количество обработчиков, занятых заданиями в cron. По умолчанию 2. Обработчики - это потоки в многопоточном режиме и процессы в режиме многопроцессорной обработки.</p><p >Касаемо многопроцессорного режима, это количество идет в дополнение к процессам HTTP обработчиков.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py-c"><i id="cmdoption-odoo.py--config"></i><code>-c &lt;config&gt;, --config &lt;config&gt;</code></h6><p >Предоставляет альтернативный файл конфигурации</p></section><section class="code-option"><h6 id="cmdoption-odoo.py-s"><i id="cmdoption-odoo.py--save"></i><code>-s, --save</code></h6><p >Сохраняет конфигурацию сервера в текущий файл конфигурации (<code class="file"><em >$HOME</em>/.openerp_serverrc</code> по умолчанию, чтобы поменять это значение используйте параметр <a href="#cmdoption-odoo.py-c" class="internal alert-link reference"><code class="std xref std-option">-c</code></a>)</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--proxy-mode"><code>--proxy-mode</code></h6><p >Позволяет использовать заголовки <code >X-Forwarded-*</code> через поддержку прокси Werkzeug (<a href="http://werkzeug.pocoo.org/docs/0.9/contrib/fixers/#werkzeug.contrib.fixers.ProxyFix" class="external reference alert-link">Werkzeug's proxy support</a>.)</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Режим прокси <em >не должен быть</em> включен , если используется внешний обратный прокси-сервер (например <em >nginx</em>)</p></div></section><section class="code-option"><h6 id="cmdoption-odoo.py--test-enable"><code>--test-enable</code></h6><p >Запускает тесты после установки модулей</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--debug"><code>--debug</code></h6><p >Когда возникает непредвиденная ошибка (не предупреждение или ошибка доступа), автоматически запускается <a href="https://docs.python.org/2/library/pdb.html#module-pdb" class="external reference alert-link" title="(в Python v2.7)"><code >pdb</code></a> перед записью и возвратом ошибки</p></section></section><section id="database"><i id="reference-cmdline-server-database"></i><h3 >Параметры для работы базы данных</h3><section class="code-option"><h6 id="cmdoption-odoo.py-r"><i id="cmdoption-odoo.py--db_user"></i><code>-r &lt;user&gt;, --db_user &lt;user&gt;</code></h6><p >Имя пользователя базы данных, используемое для подключения к PostgreSQL.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py-w"><i id="cmdoption-odoo.py--db_password"></i><code>-w &lt;password&gt;, --db_password &lt;password&gt;</code></h6><p >Пароль пользователя базы данных, если используется <a href="http://www.postgresql.org/docs/9.3/static/auth-methods.html#AUTH-PASSWORD" class="external reference alert-link">password authentication</a>.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--db_host"><code>--db_host &lt;hostname&gt;</code></h6><p >Адрес сервера базы данных</p><ul ><li ><p ><code >localhost</code> в Windows</p></li><li ><p >UNIX сокет для других систем</p></li></ul></section><section class="code-option"><h6 id="cmdoption-odoo.py--db_port"><code>--db_port &lt;port&gt;</code></h6><p >Порт, который прослушивает база данных, по умолчанию 5432</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--db-filter"><code>--db-filter &lt;filter&gt;</code></h6><p >Скрывает базы данных, имена которые не соответствуют <code >&lt;filter&gt;</code>. Фильтр является &quot;регулярным выражением&quot;, с дополнениями, которые:</p><ul ><li ><p ><code >%h</code> заменяется на полное имя хоста, к которому сделан запрос. (при запросе на www.site.ru - отобразиться только база данных с именем &quot;www.site.ru&quot;)</p></li><li ><p ><code >%d</code> заменяется на имя первого субдомена, к которому сделан запрос, за исключением <code >www</code> (домен <code >odoo.com</code> и  <code >www.odoo.com</code> оба соответствуют базе данных <code >odoo</code>) (Например при обращении к <em >subdomain.site.ru</em> будет показана база с именем <code >subdomain</code>)</p></li></ul></section><section class="code-option"><h6 id="cmdoption-odoo.py--db-template"><code>--db-template &lt;template&gt;</code></h6><p >При создании новых баз данных на экране управления базами данных указанная база будет использована в качестве шаблона (<a href="http://www.postgresql.org/docs/9.3/static/manage-ag-templatedbs.html" class="external reference alert-link">template database</a>). По умолчанию используется шаблон <code >template1</code>.</p></section></section><section id="built-in-http"><h3 >Встроенный HTTP-сервер</h3><section class="code-option"><h6 id="cmdoption-odoo.py--no-xmlrpc"><code>--no-xmlrpc</code></h6><p >Не запускать обработчиков HTTP или long-polling запросов (при этом остается возможным запустить обработчики в cron)</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Не действует, если используется параметр <a href="#cmdoption-odoo.py--test-enable" class="internal alert-link reference"><code class="std xref std-option">--test-enable</code></a> ,так как для тестов требуется доступный HTTP-сервер</p></div></section><section class="code-option"><h6 id="cmdoption-odoo.py--xmlrpc-interface"><code>--xmlrpc-interface &lt;interface&gt;</code></h6><p >TCP/IP-адрес, который слушает HTTP-сервер, по умолчанию равен <code >0.0.0.0</code> (все адреса)</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--xmlrpc-port"><code>--xmlrpc-port &lt;port&gt;</code></h6><p >Порт, который слушает HTTP-сервер, по умолчанию равен 8069.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--longpolling-port"><code>--longpolling-port &lt;port&gt;</code></h6><p >TCP-порт для long-polling соединений в многопроцессорном или gevent-режиме, по умолчанию 8072. Не используется в режиме по умолчанию.</p></section></section><section id="logging"><h3 >Ведение логов</h3><p >По умолчанию Odoo отображает все логи <a href="https://docs.python.org/2/library/logging.html#logging.Logger.setLevel" class="external reference">level</a> <code >info</code>, за исключением логов бизнес-процессов (только <code >warning</code>), и вывод потока логов отправляется в <code >stdout</code>. Доступны различные опции для перенаправления потока логов в другие места и для настройки объема выходных данных логов.</p><section class="code-option"><h6 id="cmdoption-odoo.py--logfile"><code>--logfile &lt;file&gt;</code></h6><p >отправляет поток логов в указанный файл, а не в <code >stdout</code>. В Unix-системах  файл может управляться <a href="https://docs.python.org/2/library/logging.handlers.html#watchedfilehandler" class="external reference alert-link">внешними программами управления логов</a> и автоматически будет вновь открыт при замене</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--logrotate"><code>--logrotate</code></h6><p >включает <a href="https://docs.python.org/2/library/logging.handlers.html#timedrotatingfilehandler" class="external reference alert-link">ротацию логов</a> ежедневно, хранит логи за последние 30 дней. Частота ротации и количество резервных копий не настраивается.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--syslog"><code>--syslog</code></h6><p >отправляет логи в журнал системных событий: <a href="https://docs.python.org/2/library/logging.handlers.html#sysloghandler" class="external reference alert-link">syslog на Unix-системах</a> и <a href="https://docs.python.org/2/library/logging.handlers.html#nteventloghandler" class="external reference alert-link">Event Log на Windows</a>.</p><p >Не настраивается</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--log-db"><code>--log-db &lt;dbname&gt;</code></h6><p >пишет логи в модели данных <code >ir.logging</code> (таблица <code >ir_logging</code>) текущей базы данных. База данных может иметь имя &quot;current&quot; PostgreSQL, или <a href="http://www.postgresql.org/docs/9.2/static/libpq-connect.html#AEN38208" class="external reference alert-link">a PostgreSQL URI</a> для, например, сбора логов в одной базе из нескольких установок Odoo.</p></section><section class="code-option"><h6 id="cmdoption-odoo.py--log-handler"><code>--log-handler &lt;handler-spec&gt;</code></h6><p ><code class="samp"><em >LOGGER</em>:<em >LEVEL</em></code>, включает <code >LOGGER</code> на указанном уровне <code >LEVEL</code>, например <code >openerp.models:DEBUG</code> включает вывод всех логов уровня <code >DEBUG</code> в моделях данных.</p><ul ><li ><p >Двоеточие <code >:</code> обязательно</p></li><li ><p >Поток логов может быть пропущен при настройки обработчика root (по умолчанию)</p></li><li ><p >Если уровень не указан, то по умолчанию устанавливается <code >INFO</code></p></li></ul><p >Данный параметр может быть повторен для настройки нескольких потоков логов, например:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> odoo.py --log-handler :DEBUG --log-handler werkzeug:CRITICAL --log-handler openerp.fields:WARNING
+</pre></div>
+</div>
+</section><section class="code-option"><h6 id="cmdoption-odoo.py--log-request"><code>--log-request</code></h6><p >Включить ведение логов уровня DEBUG для запросов RPC, параметр эквивалентен <code >--log-handler=openerp.http.rpc.request:DEBUG</code></p></section><section class="code-option"><h6 id="cmdoption-odoo.py--log-response"><code>--log-response</code></h6><p >Включить ведение логов уровня DEBUG для ответов RPC, эквивалентен параметру <code >--log-handler=openerp.http.rpc.response:DEBUG</code></p></section><section class="code-option"><h6 id="cmdoption-odoo.py--log-web"><code>--log-web</code></h6><p >Включает ведение логов уровня DEBUG для HTTP-запросов и ответов, параметр эквивалентен <code >--log-handler=openerp.http:DEBUG</code></p></section><section class="code-option"><h6 id="cmdoption-odoo.py--log-sql"><code>--log-sql</code></h6><p >Включает ведение логов уровня DEBUG для SQL-запросов, эквивалентен <code >--log-handler=openerp.sql_db:DEBUG</code></p></section><section class="code-option"><h6 id="cmdoption-odoo.py--log-level"><code>--log-level &lt;level&gt;</code></h6><p >Ярлык для более простого задания предопределенных уровней определенных потоков логов. &quot;Real &quot; уровни (<code >critical</code>, <code >error</code>, <code >warn</code>, <code >debug</code>) устанавливаются и для <code >openerp</code>, и для <code >werkzeug</code> (кроме <code >debug</code>, который устанавливается только для <code >openerp</code>).</p><p >Odoo также предоставляет отладочные псевдоуровни, которые применяются к различным наборам потоков логов:</p><dl ><dt ><code >debug_sql</code></dt><dd ><p >Устанавливает уровень <code >debug</code> для потока логов SQL</p><p >Эквивалентен параметру <code >--log-sql</code></p></dd><dt ><code >debug_rpc</code></dt><dd ><p >Устанавливает уровень <code >debug</code> для <code >openerp</code> и HTTP-запросов</p><p >Эквивалентен параметру <code >--log-level debug --log-request</code></p></dd><dt ><code >debug_rpc_answer</code></dt><dd ><p >Устанавливает уровень <code >debug</code> для <code >openerp</code> и HTTP-запросов и ответов</p><p >Эквивалентен параметру <code >--log-level debug --log-request --log-response</code></p></dd></dl><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >В случае конфликта между <a href="#cmdoption-odoo.py--log-level" class="internal alert-link reference"><code class="std xref std-option">--log-level</code></a> и  <a href="#cmdoption-odoo.py--log-handler" class="internal alert-link reference"><code class="std xref std-option">--log-handler</code></a> используется последний</p></div></section></section><section id="advanced-options"><h3 >Расширенные настройки</h3><section class="code-option"><h6 id="cmdoption-odoo.py--auto-reload"><code>--auto-reload</code></h6><p >Включить автоматическую перезагрузку файлов python и xml-файлов без перезапуска сервера. Требуется <a href="https://github.com/seb-m/pyinotify/wiki" class="external reference alert-link">pyinotify</a>.</p></section></section><section id="scaffolding"><i id="reference-cmdline-scaffold"></i><h2 >Scaffolding</h2><p >Scaffolding - это автоматизированное создание каркасной структуры для упрощения первоначальной настройки (создание новых модулей, в случае с Odoo). Хотя это и не является необходимым, он позволяет избежать утомительной настройки базовых структур и поиска того, что входит в необходимые требования.</p><p >Scaffolding доступен с помощью параметра командной строки  <strong class="command">odoo.py scaffold</strong>.</p><section class="code-option"><h6 id="cmdoption-odoo.py-scaffold-t"><code>-t &lt;template&gt;</code></h6><p >каталог шаблона, файлы пропускаются через  <a href="http://jinja.pocoo.org" class="external reference alert-link">jinja2</a>, затем копируются в каталог <code >destination</code> (каталог назначения)</p></section><section class="code-option"><h6 id="cmdoption-odoo.py-scaffold-arg-name"><code>name</code></h6><p >Имя создаваемого модуля. Может быть &quot;собрано&quot; по определенному вами алгоритму (например: имя каталога модуля, имена моделей данных, ...)</p></section><section class="code-option"><h6 id="cmdoption-odoo.py-scaffold-arg-destination"><code>destination</code></h6><p >Каталог, в котором создается новый модуль, по умолчанию используется текущий каталог</p></section></section><section id="configuration-file"><i id="reference-cmdline-config"></i><h2 >Файл конфигурации</h2><p >Большинство параметров командной строки также можно указать через файл конфигурации. В большинстве случаев они используют похожие имена без префикса <code >-</code> и с заменой других <code >-</code> на <code >_</code>. Например <code class="std xref std-option">--db-template</code> заменяется на <code >db_template</code>.</p><p >Некоторые параметры не соответствуют шаблону, описанному выше:</p><ul ><li ><p ><code class="std xref std-option">--db-filter</code> становится <code >dbfilter</code></p></li><li ><p ><code class="std xref std-option">--no-xmlrpc</code> соответствует <code >xmlrpc</code> boolean</p></li><li ><p >(Все параметры, начинающиеся с <code >--log-</code>, за исключением <code class="std xref std-option">--log-handler</code> и  <code class="std xref std-option">--log-db</code>) добавляются в содержимое <code >log_handler</code></p></li><li ><p ><code class="std xref std-option">--smtp</code> записывается как <code >smtp_server</code></p></li><li ><p ><code class="std xref std-option">--database</code> записывается как <code >db_name</code></p></li><li ><p ><code class="std xref std-option">--debug</code> записывается как <code >debug_mode</code> (boolean)</p></li><li ><p ><code class="std xref std-option">--i18n-import</code> и <code class="std xref std-option">--i18n-export</code> не доступны в файле конфигурации</p></li></ul><p >По умолчанию файл конфигурации находится в <code class="file"><em >$HOME</em>/.openerp_serverrc</code>. Можно использовать файл конфигурации из другого места с помощью параметра  <a href="#cmdoption-odoo.py-c" class="internal reference"><code class="std xref std-option">--config</code></a>. При использовании параметра <a href="#cmdoption-odoo.py-s" class="internal reference"><code class="std xref std-option">--save</code></a> произойдет сохранение текущей конфигурации в этот файл.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

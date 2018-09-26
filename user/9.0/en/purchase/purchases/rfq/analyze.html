@@ -1,0 +1,301 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to analyze the performance of my vendors? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Request for Quotations" href="../rfq.html" />
+    <link rel="next" title="Purchase Tenders" href="../tender.html" />
+    <link rel="prev" title="How to setup two levels of approval for purchase orders?" href="approvals.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../purchase.html">Purchase</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to analyze the performance of my vendors?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/purchase/purchases/rfq/analyze.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/purchase/purchases/rfq/analyze.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/purchase/purchases/rfq/analyze.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to analyze the performance of my vendors? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-purchase-management-module" class="ripple internal reference">Install the Purchase Management module</a></li><li class="list-group-item"><a href="#issue-some-purchase-orders" class="ripple internal reference">Issue some purchase orders</a></li></ul></li><li class="list-group-item"><a href="#analyzing-your-vendors" class="ripple internal reference">Analyzing your vendors</a><ul ><li class="list-group-item"><a href="#generate-flexible-reports" class="ripple internal reference">Generate flexible reports</a></li></ul></li><li class="list-group-item"><a href="#customize-reports" class="ripple internal reference">Customize reports</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/purchase/purchases/rfq/analyze.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-analyze-the-performance-of-my-vendors"><p >If your company regularly buys products from several suppliers, it would
+be useful to get statistics on your purchases. There are several reasons
+to track and analyze your vendor's performance :</p><ul ><li >You can see how dependant from a supplier your company is;</li><li >you can negotiate discounts on prices;</li><li >You can check the average delivery time per supplier;</li><li >Etc.</li></ul><p >For example, an IT products reseller that issues dozens of purchase
+orders to several suppliers each week may want to measure for each
+product the total price paid for each vendor and the delivery delay. The
+insights gathered by the company will help it to better analyze,
+forecast and plan their future orders.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-purchase-management-module"><h3 >Install the Purchase Management module</h3><p >From the <strong >Apps</strong> menu, search and install the <strong >Purchase Management</strong>
+module.</p><img src="../../../_images/analyze03.png" class="img-responsive center-block"></section><section id="issue-some-purchase-orders"><h3 >Issue some purchase orders</h3><p >Of course, in order to analyze your vendors' performance, you need to
+issue some <strong >Request For Quotations</strong> (RfQ) and confirm some <strong >Purchase
+Orders</strong>. If you want to know how to generate a purchase order, please
+read the documentation <a href="../../overview/process/from_po_to_invoice.html" class="internal reference"><span class="doc">From purchase order to invoice and receptions</span></a>.</p></section><section id="analyzing-your-vendors"><h2 >Analyzing your vendors</h2></section><section id="generate-flexible-reports"><h3 >Generate flexible reports</h3><p >You have access to your vendors' performances on the Reports menu.
+By default, the report groups all your purchase orders on a pivot table
+by <strong >total price</strong>, <strong >product quantity</strong> and <strong >average price</strong> for the <strong >each month</strong>
+and for <strong >each supplier</strong>. Simply by accessing this basic report, you can
+get a quick overview of your actual performance. You can add a lot of
+extra data to your report by clicking on the <strong >Measures</strong> icon.</p><img src="../../../_images/analyze04.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >By clicking on the <strong >+</strong> and <strong >-</strong> icons, you can drill up and down
+your report in order to change the way your information is displayed.
+For example, if I want to see all the products bought for the current
+month, I need to click on the <strong >+</strong> icon on the vertical axis and
+then on &quot;Products&quot;.</p></div><p >Depending on the data you want to highlight, you may need to display
+your reports in a more visual view. You can transform your report in
+just a click in 3 graph views : a <strong >Pie Chart</strong>, a <strong >Bar Chart</strong> and a <strong >Line
+Chart</strong>: These views are accessible through the icons highlighted on the
+screenshot below.</p><img src="../../../_images/analyze02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >On the contrary to the pivot table, a graph can only
+be computed with one dependent and one independent measure.</p></div></section><section id="customize-reports"><h2 >Customize reports</h2><p >You can easily customize your purchase reports depending on your needs.
+To do so, use the <strong >Advanced search view</strong> located in the right hand side
+of your screen, by clicking on the magnifying glass icon at the end of
+the search bar button. This function allows you to highlight only
+selected data on your report. The <strong >filters</strong> option is very useful in
+order to display some categories of datas, while the <strong >Group by</strong> option
+improves the readability of your reports. Note that you can filter and
+group by any existing field, making your customization very flexible and
+powerful.</p><img src="../../../_images/analyze01.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can save and reuse any customized filter by clicking
+on <strong >Favorites</strong> from the <strong >Advanced search view</strong> and
+then on <strong >Save current search</strong>. The saved filter will
+then be accessible from the <strong >Favorites</strong> menu.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../../overview/process/from_po_to_invoice.html" class="internal alert-link reference"><span class="doc">From purchase order to invoice and receptions</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

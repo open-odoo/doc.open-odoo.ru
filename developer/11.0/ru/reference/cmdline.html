@@ -1,0 +1,276 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600" rel="stylesheet">
+  
+    <title>Интерфейс командной строки: odoo-bin &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '11.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Модель безопасности в Odoo" href="security.html" />
+    <link rel="prev" title="Module Manifests" href="module.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+  <div class="o_main_header_main">
+    <a class="pull-left o_logo" href="/"></a>
+    <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="mdi-navigation-menu"></span>
+    </a>
+    <ul class="o_primary_nav">
+      <li><a href="/">Документация</a></li>
+    </ul>
+  </div>
+  <nav class="navbar o_sub_nav">
+    <div class="container">
+      <div class="navbar-header visible-xs">
+          <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+            Меню
+            <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+          </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="o_sub-menu">
+        <ol class="o_breadcrumb breadcrumb nav navbar-left">
+            
+            
+            
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (11.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Интерфейс командной строки: odoo-bin</a></li>
+
+            
+        </ol>
+
+        <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/11.0/en/reference/cmdline.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/reference/cmdline.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/reference/cmdline.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/cmdline.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+<li><a href="/developer/11.0/ru/python3.html">Python 3</a></li>
+          
+
+          
+            <li class="divider"></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/cmdline.jpg');"></span>
+      <div class="container text-center">
+        <h1> Интерфейс командной строки: odoo-bin - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+      <main class="container ">
+        
+        <div class="o_content row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#running-the-server" class="ripple internal reference">Запуск сервера</a><ul ><li class="list-group-item"><a href="#database" class="ripple internal reference">Параметры для работы базы данных</a></li><li class="list-group-item"><a href="#internationalisation" class="ripple internal reference">Internationalisation</a></li><li class="list-group-item"><a href="#built-in-http" class="ripple internal reference">Встроенный HTTP-сервер</a></li><li class="list-group-item"><a href="#logging" class="ripple internal reference">Ведение логов</a></li><li class="list-group-item"><a href="#emails" class="ripple internal reference">Электронная почта</a></li></ul></li><li class="list-group-item"><a href="#scaffolding" class="ripple internal reference">Scaffolding</a></li><li class="list-group-item"><a href="#configuration-file" class="ripple internal reference">Файл конфигурации</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/11.0/doc/reference/cmdline.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+		  <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+          <article class="doc-body ">
+            
+            
+            
+  <section id="command-line-interface-odoo-bin"><i id="reference-cmdline"></i></section><section id="running-the-server"><i id="reference-cmdline-server"></i><h2 >Запуск сервера</h2><section class="code-option"><h6 id="cmdoption-odoo-bin-d"><i id="cmdoption-odoo-bin--database"></i><code>-d &lt;database&gt;, --database &lt;database&gt;</code></h6><p >database(s) used when installing or updating modules.
+Providing a comma-separated list restrict access to databases provided in
+list.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin-i"><i id="cmdoption-odoo-bin--init"></i><code>-i &lt;modules&gt;, --init &lt;modules&gt;</code></h6><p >Список модулей, разделенных через запятую, для установки перед запуском сервера (требуется параметр <a href="#cmdoption-odoo-bin-d" class="internal alert-link reference"><code class="std xref std-option">-d</code></a>).</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin-u"><i id="cmdoption-odoo-bin--update"></i><code>-u &lt;modules&gt;, --update &lt;modules&gt;</code></h6><p >Список модулей, подлежащих обновлению до запуска сервера (требуется параметр <a href="#cmdoption-odoo-bin-d" class="internal alert-link reference"><code class="std xref std-option">-d</code></a>).</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--addons-path"><code>--addons-path &lt;directories&gt;</code></h6><p >Список каталогов, разделенных запятыми, в которых хранятся модули. Эти каталоги сканируются для поиска в них модулей.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--workers"><code>--workers &lt;count&gt;</code></h6><p >Если <code >count</code> не равно 0 (по умолчанию), то включается многопроцессорная обработка и устанавливается указанное количество HTTP обработчиков (которые обрабатывают HTTP и RPC-запросы).</p><div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >Режим многопроцессорности доступен только в Unix-системах</p></div><p >Ряд вариантов позволяет ограничить и переработать работников:</p><section class="code-option"><h6 id="cmdoption-odoo-bin--limit-request"><code>--limit-request &lt;limit&gt;</code></h6><p >Количество запросов, обрабатываемых обработчиком до его повторного использования и перезапуска.</p><p >По умолчанию - 8196.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--limit-memory-soft"><code>--limit-memory-soft &lt;limit&gt;</code></h6><p >Максимально допустимая виртуальная память на одного обработчика. Если предел превышен, обработчик будет убит и перезапущен в конце текущего запроса.</p><p >Defaults to 2048MiB.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--limit-memory-hard"><code>--limit-memory-hard &lt;limit&gt;</code></h6><p >Жесткий лимит на виртуальную память, любой обработчик, превысивший лимит, будет немедленно убит, не дожидаясь завершения текущей обработки запроса.</p><p >Defaults to 2560MiB.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--limit-time-cpu"><code>--limit-time-cpu &lt;limit&gt;</code></h6><p >Предотвращает использование обработчиком больше, чем &lt;limit&gt; секунд процессорного времени для каждого запроса. Если предел превышен, обработчик будет убит.</p><p >По умолчанию 60.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--limit-time-real"><code>--limit-time-real &lt;limit&gt;</code></h6><p >Препятствует тому, чтобы обработчик работал с запросом дольше &lt;limit&gt; секунд. Если предел превышен, обработчик будет убит.</p><p >Отличается от <a href="#cmdoption-odoo-bin--limit-time-cpu" class="internal alert-link reference"><code class="std xref std-option">--limit-time-cpu</code></a> тем, что это предел &quot;wall time&quot;, включая, например, SQL-запросы.</p><p >По умолчанию 120.</p></section></section><section class="code-option"><h6 id="cmdoption-odoo-bin--max-cron-threads"><code>--max-cron-threads &lt;count&gt;</code></h6><p >Количество работников, занятых заданиями в cron. По умолчанию 2. Рабочие - это потоки в многопоточном режиме и процессы в режиме мультиобработки.</p><p >В режиме мультиобработки это в дополнение к рабочим процессам HTTP.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin-c"><i id="cmdoption-odoo-bin--config"></i><code>-c &lt;config&gt;, --config &lt;config&gt;</code></h6><p >Предоставляет альтернативный файл конфигурации</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin-s"><i id="cmdoption-odoo-bin--save"></i><code>-s, --save</code></h6><p >Сохраняет конфигурацию сервера в текущий файл конфигурации (<code class="file"><em >$HOME</em>/.odoorc</code> по умолчанию и может быть переопределена с помощью <a href="#cmdoption-odoo-bin-c" class="internal alert-link reference"><code class="std xref std-option">-c</code></a>)</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--proxy-mode"><code>--proxy-mode</code></h6><p >Позволяет использовать заголовки <code >X-Forwarded-*</code> через поддержку прокси Werkzeug (<a href="http://werkzeug.pocoo.org/docs/contrib/fixers/#werkzeug.contrib.fixers.ProxyFix" class="external reference alert-link">Werkzeug's proxy support</a>.)</p><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >Режим прокси <em >не должен быть</em> включен , если используется внешний обратный прокси-сервер (например <em >nginx</em>)</p></div></section><section class="code-option"><h6 id="cmdoption-odoo-bin--test-enable"><code>--test-enable</code></h6><p >Запускает тесты после установки модулей</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--dev"><code>--dev &lt;feature,feature,...,feature&gt;</code></h6><ul ><li ><p ><code >all</code>: все перечисленные ниже функции активированы</p></li><li ><p ><code >xml</code>: читать шаблон qweb из XML-файла напрямую вместо базы данных. После того, как шаблон был изменен в базе данных, он не будет считан из файла xml до следующего обновления / инициализации.</p></li><li ><p ><code >reload</code>: перезапустить сервер при обновлении файла python (возможно, не будет обнаружен в зависимости от используемого текстового редактора)</p></li><li ><p ><code >qweb</code>: перерыв в оценке шаблона qweb, когда узел содержит <code >t-debug='debugger'</code></p></li><li ><p ><code >(i)p(u)db</code>: запуск выбранного отладчика python в коде при возникновении непредвиденной ошибки перед входом в систему и возвратом ошибки.</p></li></ul></section></section><section id="database"><i id="reference-cmdline-server-database"></i><h3 >Параметры для работы базы данных</h3><section class="code-option"><h6 id="cmdoption-odoo-bin-r"><i id="cmdoption-odoo-bin--db_user"></i><code>-r &lt;user&gt;, --db_user &lt;user&gt;</code></h6><p >Имя пользователя базы данных, используемое для подключения к PostgreSQL.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin-w"><i id="cmdoption-odoo-bin--db_password"></i><code>-w &lt;password&gt;, --db_password &lt;password&gt;</code></h6><p >Пароль пользователя базы данных, если используется <a href="http://www.postgresql.org/docs/9.3/static/auth-methods.html#AUTH-PASSWORD" class="external reference alert-link">password authentication</a>.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--db_host"><code>--db_host &lt;hostname&gt;</code></h6><p >Адрес сервера базы данных</p><ul ><li ><p ><code >localhost</code> в Windows</p></li><li ><p >UNIX сокет для других систем</p></li></ul></section><section class="code-option"><h6 id="cmdoption-odoo-bin--db_port"><code>--db_port &lt;port&gt;</code></h6><p >Порт, который прослушивает база данных, по умолчанию 5432</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--db-filter"><code>--db-filter &lt;filter&gt;</code></h6><p >Скрывает базы данных, имена которые не соответствуют <code >&lt;filter&gt;</code>. Фильтр является &quot;регулярным выражением&quot;, с дополнениями, которые:</p><ul ><li ><p ><code >%h</code> заменяется на полное имя хоста, к которому сделан запрос. (при запросе на www.site.ru - отобразиться только база данных с именем &quot;www.site.ru&quot;)</p></li><li ><p ><code >%d</code> заменяется на имя первого субдомена, к которому сделан запрос, за исключением <code >www</code> (домен <code >odoo.com</code> и <code >www.odoo.com</code> оба соответствуют базе данных <code >odoo</code>, например при обращении к <em >subdomain.site.ru</em> будет показана база с именем <code >subdomain</code>).</p><p >Эти операции являются чувствительными к регистру. Добавлена опция <code >(?i)</code> чтобы найти все базы данных (так домен <code >odoo.com</code> при использовании <code >(?i)%d</code> соотствует базе данных <code >Odoo</code>).</p></li></ul><p >Since version 11, it's also possible to restrict access to a given database
+listen by using the --database parameter and specifying a comma-separated
+list of databases</p><p >When combining the two parameters, db-filter superseed the comma-separated
+database list for restricting database list, while the comma-separated list
+is used for performing requested operations like upgrade of modules.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>odoo-bin --db-filter ^11.*$
+</pre></div>
+</div>
+<p >Restrict access to databases whose name starts with 11</p><div class="highlight-bash"><div class="highlight"><pre><span></span>odoo-bin --database 11firstdatabase,11seconddatabase
+</pre></div>
+</div>
+<p >Restrict access to only two databases, 11firstdatabase and 11seconddatabase</p><div class="highlight-bash"><div class="highlight"><pre><span></span>odoo-bin --database 11firstdatabase,11seconddatabase -u base
+</pre></div>
+</div>
+<p >Restrict access to only two databases, 11firstdatabase and 11seconddatabase,
+and update base module on one database: 11firstdatabase
+If database 11seconddatabase doesn't exist, the database is created and base modules
+is installed</p><div class="highlight-bash"><div class="highlight"><pre><span></span>odoo-bin --db-filter ^11.*$ --database 11firstdatabase,11seconddatabase -u base
+</pre></div>
+</div>
+<p >Restrict access to databases whose name starts with 11,
+and update base module on one database: 11firstdatabase
+If database 11seconddatabase doesn't exist, the database is created and base modules
+is installed</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--db-template"><code>--db-template &lt;template&gt;</code></h6><p >При создании новых баз данных на экране управления базами данных указанная база будет использована в качестве шаблона (<a href="http://www.postgresql.org/docs/9.3/static/manage-ag-templatedbs.html" class="external reference alert-link">template database</a>). По умолчанию используется шаблон <code >template1</code>.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--no-database-list"><code>--no-database-list</code></h6><p >Выключает вывод списка доступных баз данных в системе</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--db_sslmode"><code>--db_sslmode</code></h6><p >Control the SSL security of the connection between Odoo and PostgreSQL.
+Value should bve one of 'disable', 'allow', 'prefer', 'require',
+'verify-ca' or 'verify-full'
+Default value is 'prefer'</p></section></section><section id="internationalisation"><i id="reference-cmdline-server-internationalisation"></i><h3 >Internationalisation</h3><p >Use these options to translate Odoo to another language. See i18n section of
+the user manual. Option '-d' is mandatory. Option '-l' is mandatory in case
+of importation</p><section class="code-option"><h6 id="cmdoption-odoo-bin--load-language"><code>--load-language &lt;languages&gt;</code></h6><p >specifies the languages (separated by commas) for the translations you
+want to be loaded</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin-l"><i id="cmdoption-odoo-bin--language"></i><code>-l, --language &lt;language&gt;</code></h6><p >specify the language of the translation file. Use it with --i18n-export
+or --i18n-import</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--i18n-export"><code>--i18n-export &lt;filename&gt;</code></h6><p >export all sentences to be translated to a CSV file, a PO file or a TGZ
+archive and exit.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--i18n-import"><code>--i18n-import &lt;filename&gt;</code></h6><p >import a CSV or a PO file with translations and exit. The '-l' option is
+required.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--i18n-overwrite"><code>--i18n-overwrite</code></h6><p >overwrites existing translation terms on updating a module or importing
+a CSV or a PO file.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--modules"><code>--modules</code></h6><p >specify modules to export. Use in combination with --i18n-export</p></section></section><section id="built-in-http"><h3 >Встроенный HTTP-сервер</h3><section class="code-option"><h6 id="cmdoption-odoo-bin--no-http"><code>--no-http</code></h6><p >Не запускать обработчиков HTTP или long-polling запросов (при этом остается возможным запустить обработчики в cron)</p><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >Не действует, если используется параметр <a href="#cmdoption-odoo-bin--test-enable" class="internal alert-link reference"><code class="std xref std-option">--test-enable</code></a> ,так как для тестов требуется доступный HTTP-сервер</p></div></section><section class="code-option"><h6 id="cmdoption-odoo-bin--http-interface"><code>--http-interface &lt;interface&gt;</code></h6><p >TCP/IP-адрес, который слушает HTTP-сервер, по умолчанию равен <code >0.0.0.0</code> (все адреса)</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--http-port"><code>--http-port &lt;port&gt;</code></h6><p >Порт, который слушает HTTP-сервер, по умолчанию равен 8069.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--longpolling-port"><code>--longpolling-port &lt;port&gt;</code></h6><p >TCP-порт для long-polling соединений в многопроцессорном или gevent-режиме, по умолчанию 8072. Не используется в режиме по умолчанию.</p></section></section><section id="logging"><h3 >Ведение логов</h3><p >По умолчанию Odoo отображает все протоколирование уровня <code >info`</code>, за исключением регистрации рабочего процесса (только` <code >warning`</code>), а вывод журнала отправляется в` <code >stdout`</code>. Доступны различные опции для перенаправления ведения журнала в другие пункты назначения и для настройки объема выходных данных протоколирования</p><section class="code-option"><h6 id="cmdoption-odoo-bin--logfile"><code>--logfile &lt;file&gt;</code></h6><p >отправляет поток логов в указанный файл, а не в <code >stdout</code>. В Unix-системах  файл может управляться <a href="https://docs.python.org/2/library/logging.handlers.html#watchedfilehandler" class="external reference alert-link">внешними программами управления логов</a> и автоматически будет вновь открыт при замене</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--logrotate"><code>--logrotate</code></h6><p >включает <a href="https://docs.python.org/2/library/logging.handlers.html#timedrotatingfilehandler" class="external reference alert-link">ротацию логов</a> ежедневно, хранит логи за последние 30 дней. Частота ротации и количество резервных копий не настраивается.</p><div role="alert" class="alert-danger alert"><h3 class="alert-title">Опасно</h3><p >Built-in log rotation is not reliable in multi-workers scenarios
+and may incur significant data loss. It is <em >strongly recommended</em> to
+use an external log rotation utility or use system loggers (--syslog)
+instead.</p></div></section><section class="code-option"><h6 id="cmdoption-odoo-bin--syslog"><code>--syslog</code></h6><p >отправляет логи в журнал системных событий: <a href="https://docs.python.org/2/library/logging.handlers.html#sysloghandler" class="external reference alert-link">syslog на Unix-системах</a> и <a href="https://docs.python.org/2/library/logging.handlers.html#nteventloghandler" class="external reference alert-link">Event Log на Windows</a>.</p><p >Не настраивается</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--log-db"><code>--log-db &lt;dbname&gt;</code></h6><p >пишет логи в модели данных <code >ir.logging</code> (таблица <code >ir_logging</code>) текущей базы данных. База данных может иметь имя &quot;current&quot; PostgreSQL, или <a href="http://www.postgresql.org/docs/9.2/static/libpq-connect.html#AEN38208" class="external reference alert-link">a PostgreSQL URI</a> для, например, сбора логов в одной базе из нескольких установок Odoo.</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--log-handler"><code>--log-handler &lt;handler-spec&gt;</code></h6><p ><code class="samp"><em >LOGGER</em>:<em >LEVEL</em></code>, включает <code >LOGGER</code> в предоставленном <code >LEVEL</code>, например <code >odoo.models:DEBUG</code> включит все журналируемые сообщения <code >DEBUG</code> уровня в моделях.</p><ul ><li ><p >Двоеточие <code >:</code> обязательно</p></li><li ><p >Поток логов может быть пропущен при настройки обработчика root (по умолчанию)</p></li><li ><p >Если уровень не указан, то по умолчанию устанавливается <code >INFO</code></p></li></ul><p >Данный параметр может быть повторен для настройки нескольких потоков логов, например:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> odoo-bin --log-handler :DEBUG --log-handler werkzeug:CRITICAL --log-handler odoo.fields:WARNING
+</pre></div>
+</div>
+</section><section class="code-option"><h6 id="cmdoption-odoo-bin--log-request"><code>--log-request</code></h6><p >Включить ведение журнала DEBUG для запросов RPC, эквивалентно <code >--log-handler=odoo.http.rpc.request:DEBUG</code></p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--log-response"><code>--log-response</code></h6><p >Включить ведение журнала DEBUG для ответов RPC, эквивалентно <code >--log-handler=odoo.http.rpc.response:DEBUG</code></p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--log-web"><code>--log-web</code></h6><p >Позволяет DEBUG протоколировать HTTP-запросы и ответы, эквивалентно <code >--log-handler=odoo.http:DEBUG</code></p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--log-sql"><code>--log-sql</code></h6><p >Позволяет DEBUG протоколировать запросы SQL, эквивалентно <code >--log-handler=odoo.sql_db:DEBUG</code></p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--log-level"><code>--log-level &lt;level&gt;</code></h6><p >Ярлык для более простого задания предопределенных уровней для определенных регистраторов. &quot;Существующие&quot; уровни (<code >critical</code>, <code >error</code>, <code >warn</code>, <code >debug</code>) устанавливаются на <code >odoo</code> и <code >werkzeug</code> регистраторы (кроме <code >debug</code>, который установлен только для <code >odoo</code>).</p><p >Odoo также предоставляет отладочные псевдоуровни, которые применяются к различным наборам потоков логов:</p><dl ><dt ><code >debug_sql</code></dt><dd ><p >Устанавливает уровень <code >debug</code> для потока логов SQL</p><p >Эквивалентен параметру <code >--log-sql</code></p></dd><dt ><code >debug_rpc</code></dt><dd ><p >Устанавливает <code >odoo</code> и HTTP-запросы для <code >debug</code></p><p >Эквивалентен параметру <code >--log-level debug --log-request</code></p></dd><dt ><code >debug_rpc_answer</code></dt><dd ><p >Устанавливает <code >odoo</code> и HTTP-запросы и ответы для <code >debug</code></p><p >Эквивалентен параметру <code >--log-level debug --log-request --log-response</code></p></dd></dl><div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >В случае конфликта между <a href="#cmdoption-odoo-bin--log-level" class="internal alert-link reference"><code class="std xref std-option">--log-level</code></a> и  <a href="#cmdoption-odoo-bin--log-handler" class="internal alert-link reference"><code class="std xref std-option">--log-handler</code></a> используется последний</p></div></section></section><section id="emails"><h3 >Электронная почта</h3><section class="code-option"><h6 id="cmdoption-odoo-bin--email-from"><code>--email-from &lt;address&gt;</code></h6><p >Адрес электронной почты отправителя (&lt;FROM&gt;) в письмах отправленных из Odoo</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--smtp"><code>--smtp &lt;server&gt;</code></h6><p >Адрес SMTP-сервера для отправки писем</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--smtp-port"><code>--smtp-port &lt;port&gt;</code></h6></section><section class="code-option"><h6 id="cmdoption-odoo-bin--smtp-ssl"><code>--smtp-ssl</code></h6><p >Если установлен, Odoo для SMTP-соединений будет использовать SSL/STARTSSL</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--smtp-user"><code>--smtp-user &lt;name&gt;</code></h6><p >Username to connect to the SMTP server</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin--smtp-password"><code>--smtp-password &lt;password&gt;</code></h6><p >Password to connect to the SMTP server</p></section></section><section id="scaffolding"><i id="reference-cmdline-scaffold"></i><h2 >Scaffolding</h2><p >Scaffolding - это автоматизированное создание каркасной структуры для упрощения первоначальной настройки (создание новых модулей, в случае с Odoo). Хотя это и не является необходимым, он позволяет избежать утомительной настройки базовых структур и поиска того, что входит в необходимые требования.</p><p >Создание каркаса осуществляется командой <strong class="command">odoo-bin scaffold</strong>.</p><section class="code-option"><h6 id="cmdoption-odoo-bin-scaffold-t"><code>-t &lt;template&gt;</code></h6><p >каталог шаблона, файлы пропускаются через  <a href="http://jinja.pocoo.org" class="external reference alert-link">jinja2</a>, затем копируются в каталог <code >destination</code> (каталог назначения)</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin-scaffold-arg-name"><code>name</code></h6><p >Имя создаваемого модуля. Может быть &quot;собрано&quot; по определенному вами алгоритму (например: имя каталога модуля, имена моделей данных, ...)</p></section><section class="code-option"><h6 id="cmdoption-odoo-bin-scaffold-arg-destination"><code>destination</code></h6><p >Каталог, в котором создается новый модуль, по умолчанию используется текущий каталог</p></section></section><section id="configuration-file"><i id="reference-cmdline-config"></i><h2 >Файл конфигурации</h2><p >Большинство параметров командной строки также можно указать через файл конфигурации. В большинстве случаев они используют похожие имена без префикса <code >-</code> и с заменой других <code >-</code> на <code >_</code>. Например <a href="#cmdoption-odoo-bin--db-template" class="internal reference"><code class="std xref std-option">--db-template</code></a> заменяется на <code >db_template</code>.</p><p >Некоторые параметры не соответствуют шаблону, описанному выше:</p><ul ><li ><p ><a href="#cmdoption-odoo-bin--db-filter" class="internal reference"><code class="std xref std-option">--db-filter</code></a> становится <code >dbfilter</code></p></li><li ><p ><a href="#cmdoption-odoo-bin--no-http" class="internal reference"><code class="std xref std-option">--no-http</code></a> соответствует <code >http_enable</code> (boolean)</p></li><li ><p >(Все параметры, начинающиеся с <code >--log-</code>, за исключением <a href="#cmdoption-odoo-bin--log-handler" class="internal reference"><code class="std xref std-option">--log-handler</code></a> и  <a href="#cmdoption-odoo-bin--log-db" class="internal reference"><code class="std xref std-option">--log-db</code></a>) добавляются в содержимое <code >log_handler</code></p></li><li ><p ><a href="#cmdoption-odoo-bin--smtp" class="internal reference"><code class="std xref std-option">--smtp</code></a> записывается как <code >smtp_server</code></p></li><li ><p ><a href="#cmdoption-odoo-bin--database" class="internal reference"><code class="std xref std-option">--database</code></a> записывается как <code >db_name</code></p></li><li ><p ><a href="#cmdoption-odoo-bin--i18n-import" class="internal reference"><code class="std xref std-option">--i18n-import</code></a> и <a href="#cmdoption-odoo-bin--i18n-export" class="internal reference"><code class="std xref std-option">--i18n-export</code></a> не доступны в файле конфигурации</p></li></ul><p >Конфигурационный файл по умолчанию <code class="file"><em >$HOME</em>/.odoorc</code>, который может быть переопределен с помощью <a href="#cmdoption-odoo-bin-c" class="internal reference"><code class="std xref std-option">--config</code></a>. Указание <a href="#cmdoption-odoo-bin-s" class="internal reference"><code class="std xref std-option">--save</code></a> сохранит текущее состояние конфигурации обратно в этот файл.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+      <div id="footer" class="container o_not_editable">
+          <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+          <div class="row">
+              <div class="col-xs-12">
+                  <hr/>
+                  <p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                  <hr/>
+                  <p>
+                      <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br/> <br/>
+                      В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="o_footer_bottom o_not_editable">
+          <div class="container">
+              <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+              <div class="social-links pull-right">
+                  <a href="https://www.odoo.com/web/about/facebook">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/twitter">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/linkedin">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:info@odoo.com">
+                      <i class="fa fa-envelope"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

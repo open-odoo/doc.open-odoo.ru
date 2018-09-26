@@ -1,0 +1,261 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как анализировать эффективность продаж вашей команды и настраивать отчеты &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" />
+    <link rel="up" title="Отчеты" href="../reporting.html" />
+    <link rel="next" title="Как просмотреть мои личные продажи (новая панель продаж)" href="review.html" />
+    <link rel="prev" title="Отчеты" href="../reporting.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../crm.html">CRM</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как анализировать эффективность продаж вашей команды и настраивать отчеты</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/crm/reporting/analysis.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/crm/reporting/analysis.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/crm/reporting/analysis.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как анализировать эффективность продаж вашей команды и настраивать отчеты - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#review-pipelines" class="ripple internal reference">Проверка воронки продаж</a></li><li class="list-group-item"><a href="#customize-reports" class="ripple internal reference">Настройка отчетов</a><ul ><li class="list-group-item"><a href="#evaluate-the-current-pipeline-of-each-of-your-salespeople" class="ripple internal reference">Оцените текущую воронку продаж каждого из ваших продавцов</a></li><li class="list-group-item"><a href="#forecast-monthly-revenue-by-sales-team" class="ripple internal reference">Прогноз ежемесячного дохода от продаж</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/crm/reporting/analysis.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-analyze-the-sales-performance-of-your-team-and-get-customize-reports"><p >Как менеджеру, вам необходимо постоянно контролировать эффективность своей команды, это поможет вам принимать решения необходимые вашей компании. Поэтому <strong >Отчеты</strong> раздела <strong >Продажи</strong> представляет собой очень важный инструмент, который поможет вам лучше понять, где сильные и слабые стороны и возможности вашей компании, показывая вам тенденции и прогнозы для ключевых показателей, таких как Количество возможностей и ожидаемый доход с течением времени, скорость закрытия сделок по команде продаж или продолжительность цикла продаж для данного продукта или услуги.</p><p >Помимо этих очевидных показателей последовательности отслеживания продаж, есть некоторые другие KPI, которые могут быть очень ценными для вашей компании, когда дело доходит до оценки успеха менеджеров по продажам.</p></section><section id="review-pipelines"><h2 >Проверка воронки продаж</h2><p >У вас будет доступ к производительности воронки продаж из модуля <strong >Продажи</strong>, нажав на <span class="menuselection">Sales ‣ Reports ‣ Pipeline analysis</span>. По умолчанию отчет группирует все ваши возможности по этапам (подробнее о том, как создавать и настраивать этап, читайте <a href="../salesteam/setup/organize_pipeline.html" class="internal reference"><span class="doc">Настройте и организуйте свою воронку продаж</span></a>) и ожидаемые доходы за текущий месяц. Этот отчет идеально подходит для <strong >Менеджера по продажам</strong>, чтобы периодически просматривать каналы сбыта в соответствующих отделах продаж. Просто, обратившись к этому базовому отчету, вы можете получить краткий обзор фактической эффективности продаж.</p><p >Вы можете добавить в отчет много дополнительных данных, щелкнув значок <strong >measure</strong>, например:</p><ul ><li ><p >Ожидаемый доход.</p></li><li ><p >Превышенные предельные сроки.</p></li><li ><p >Задержка назначения ответственного (среднее время между созданием Лида и назначением ответственного менеджера).</p></li><li ><p >Задержка для закрытия (среднее время между назначением ответственного и закрытием сделки).</p></li><li ><p >Количество взаимодействий при каждой возможности.</p></li><li ><p >и т.п.</p></li></ul><img src="../../_images/analysis02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Нажимая на значки <strong >+</strong> и <strong >-</strong>, вы можете развернуть вверх и вниз свой отчет, чтобы изменить способ отображения вашей информации. Например, если я хочу видеть ожидаемые доходы от моей команды <strong >Direct Sales</strong>, мне нужно щелкнуть значок <strong >+</strong> на вертикальной оси, а затем на <strong >Sales Team</strong>.</p></div><p >В зависимости от данных, которые вы хотите выделить, вам может потребоваться отображать ваши отчеты в более визуальном виде. Odoo <strong >CRM</strong> позволяет вам трансформировать отчет одним щелчком, благодаря 3 графическим представлениям: <strong >Pie Chart (Круговая диаграмма)</strong>, <strong >Bar Chart (Гистограмма)</strong> и <strong >Line Chart (Линейная диаграмма)</strong>. Эти представления доступны через значки, выделенные на скриншоте ниже.</p><img src="../../_images/analysis03.png" class="img-responsive center-block"></section><section id="customize-reports"><h2 >Настройка отчетов</h2><p >Вы можете легко настроить свои аналитические отчеты в зависимости от <strong >KPI</strong> (см. <a href="../overview/main_concepts/terminologies.html" class="internal reference"><span class="doc">Терминология Odoo CRM</span></a>), к которым вы хотите получить доступ. Для этого используйте <strong >Расширенный поиск</strong>, расположенный в правой части экрана, щелкнув значок лупы в конце панели поиска. Эта функция позволяет выделить в отчете только выбранные данные. Опция <strong >filters</strong> очень полезна для отображения некоторых категорий возможностей, в то время как опция <strong >Group by</strong> улучшает читабельность ваших отчетов в соответствии с вашими потребностями. Обратите внимание, что вы можете фильтровать и группировать по любому полю из вашего CRM, что делает настройку очень гибкой и мощной.</p><img src="../../_images/analysis01.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Вы можете сохранить и повторно использовать любой настроенный фильтр, нажав <strong >Favorites (Избранное)</strong> в  окне <strong >Расширенного поиска</strong>, а затем на <strong >Сохранить текущий поиск</strong>. Сохраненный фильтр будет доступен из меню <strong >Favorites (Избранное)</strong>.</p></div><p >Вот несколько примеров настраиваемых отчетов, которые вы можете использовать для мониторинга ваших продаж:</p></section><section id="evaluate-the-current-pipeline-of-each-of-your-salespeople"><h3 >Оцените текущую воронку продаж каждого из ваших продавцов</h3><p >Для отчета по анализу воронки продаж убедитесь, что в раскрывающемся списке <strong >Measures</strong> выбрана опция <strong >Ожидаемый доход</strong>. Затем используйте значки <strong >+</strong> и <strong >-</strong> и добавьте <strong >Salesperson</strong> и <strong >Stage</strong> в вашу вертикальную ось и отфильтруйте желаемого продавца. Затем щелкните значок <strong >graph view</strong>, чтобы отобразить визуальное представление ваших продавцов по этапам. Этот пользовательский отчет позволяет легко просмотреть действия продавцов по продажам.</p><img src="../../_images/analysis05.png" class="img-responsive center-block"></section><section id="forecast-monthly-revenue-by-sales-team"><h3 >Прогноз ежемесячного дохода от продаж</h3><p >Чтобы прогнозировать ежемесячный доход и оценивать краткосрочные показатели ваших команд, вам необходимо совместить два важных показателя: <strong >ожидаемый доход</strong> и <strong >ожидаемое закрытие</strong>.</p><p >При создании отчета по вашей воронки продаж убедитесь, что в выпадающем списке <strong >Measures</strong> выбрана опция <strong >Ожидаемый доход</strong>. Затем кликните <strong >+</strong> на вертикальной оси и выберите <strong >Команда продаж</strong>. Затем на горизонтальной оси щелкните значок <strong >+</strong> и выберите <strong >Ожидаемое закрытие</strong>.</p><img src="../../_images/analysis04.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Чтобы ваши прогнозы были точными и релевантными, убедитесь, что ваши продавцы правильно настроили ожидаемое закрытие и ожидаемый доход для каждой из своих возможностей</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="../salesteam/setup/organize_pipeline.html" class="internal alert-link reference"><span class="doc">Настройте и организуйте свою воронку продаж</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

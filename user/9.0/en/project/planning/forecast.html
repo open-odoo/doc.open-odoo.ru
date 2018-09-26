@@ -1,0 +1,321 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to forecast tasks? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../index.html" />
+    <link rel="up" title="Planning your project" href="../planning.html" />
+    <link rel="next" title="Advanced" href="../advanced.html" />
+    <link rel="prev" title="How to plan and track employees&#39; assignments?" href="assignments.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../project.html">Project</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to forecast tasks?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/project/planning/forecast.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/project/planning/forecast.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/project/planning/forecast.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to forecast tasks? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction-to-forecast" class="ripple internal reference">Introduction to forecast</a></li><li class="list-group-item"><a href="#how-to-configure-the-projects" class="ripple internal reference">How to configure the projects?</a><ul ><li class="list-group-item"><a href="#configure-the-project-application" class="ripple internal reference">Configure the project application</a></li><li class="list-group-item"><a href="#configure-a-specific-project" class="ripple internal reference">Configure a specific project.</a></li><li class="list-group-item"><a href="#how-to-create-a-forecast" class="ripple internal reference">How to create a forecast?</a></li></ul></li><li class="list-group-item"><a href="#what-are-the-difference-between-the-views" class="ripple internal reference">What are the difference between the views?</a><ul ><li class="list-group-item"><a href="#by-users-people-management" class="ripple internal reference">By users : people management</a><ul ><li class="list-group-item"><a href="#plan-the-workload" class="ripple internal reference">Plan the workload</a></li><li class="list-group-item"><a href="#gantt-view-advantages" class="ripple internal reference">Gantt view advantages</a></li></ul></li><li class="list-group-item"><a href="#by-projects-project-management" class="ripple internal reference">By projects: project management</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Gantt view advantages</a></li></ul></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/project/planning/forecast.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-forecast-tasks"></section><section id="introduction-to-forecast"><h2 >Introduction to forecast</h2><p >Scheduling and forecasting tasks is another way to manage projects. In
+Odoo, the Forecast option gives you access to the Gantt chart.</p><p >So far, you've been working with the Kanban view, which shows you the
+progress of a project and its related tasks.</p><p >Now, with the Forecast option, the Gantt view gives you the big picture.
+It's highly visual which is a real plus for complex projects, and it
+helps team members to collaborate better.</p><p >This option is a real benefit in terms of planning and organizing the
+workload and human resources.</p></section><section id="how-to-configure-the-projects"><h2 >How to configure the projects?</h2></section><section id="configure-the-project-application"><h3 >Configure the project application</h3><p >The <strong >Forecast</strong> option helps you to organize your projects. This is perfect
+when you need to set up a project with a specific deadline. Therefore,
+each task is assigned a specific timeframe (amount of hours) in which
+your employee should complete it!</p><p >First you need to activate the <strong >Forecast</strong> option for the whole project
+application:</p><p >Go to <span class="menuselection">Project ‣ Configuration ‣ Settings</span>.
+Select the Forecast option and click <strong >Apply</strong>.</p><img src="../../_images/forecast011.png" class="img-responsive center-block"><p >Once this is done, you still need to activate the <strong >Forecast</strong> option
+specifically for your <strong >Project</strong> (maybe you don't need the Gantt chart for
+all the projects that you manage).</p></section><section id="configure-a-specific-project"><h3 >Configure a specific project.</h3><p >When creating a new project, make sure to select the option &quot;Allow
+Forecast&quot; in your project settings.</p><p >You'll see the <strong >Forecast</strong> option appearing in the top menu.</p><img src="../../_images/forecast021.png" class="img-responsive center-block"><p >If you add the Forecasting option to an existing project, whether there
+are task deadlines or not scheduled, the task won't be displayed.</p><p >The tasks of a project are not related to a forecast.</p></section><section id="how-to-create-a-forecast"><h3 >How to create a forecast?</h3><p >Before creating a project with forecast, list all the tasks with the
+projected time they should take. It will help you to coordinate the
+work.</p><p >In order to display the projects in the Gantt chart, you need to create
+the forecast from the task page. To create a forecast, click on the top
+left corner of the task, <strong >Create a Forecast</strong>.</p><img src="../../_images/forecast031.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can also create a new Forecast easily by directly clicking on an empty
+space in the Gantt chart calendar.</p></div><p >The Forecast interface will fill in the name of the Project and the task
+automatically. You just need to add the dates and the time the task
+should take.</p><img src="../../_images/forecast041.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The &quot;Effective hours&quot; field appears only if you have the <strong >Timesheet</strong> app
+installed on your database. This option helps you to see the progress of a
+task thanks to the integration with Timesheet.</p><p >For example: When a user fills in a Timesheet with your Project name
+(Analytic account), with 10 hours spent, the forecast will display 10 hours
+in the Effective hours field.</p></div></section><section id="what-are-the-difference-between-the-views"><h2 >What are the difference between the views?</h2><p >In the <strong >Project</strong> app menu you have a <strong >Forecast</strong> menu. This sub-menu helps
+you to see the Gantt chart from different points of view: by users or by
+projects.</p></section><section id="by-users-people-management"><h3 >By users : people management</h3><p >This option displays the Gantt chart with the people assigned. Odoo's
+Gantt chart shows you who's involved; it gives you the big picture of
+the project. It's very useful to allocate your resources effectively.</p><p >On the left side, first level, you can see which users are involved.
+Then, on the second level you see which projects they are assigned to.
+On the third, you see which tasks they're on.</p><p >Each task is represented by a coloured rectangle. This rectangle
+reflects the duration of the task in the calendar.</p><p >The top rectangle on the first level is the sum of all the tasks
+compiled from the third level. If it's green, it means that the total
+time allocated to that user is less than 100%. When it's red, it means
+that this user is assigned to multiple tasks which total more than 100%
+of his/her time.</p><img src="../../_images/forecast05.png" class="img-responsive center-block"></section><section id="plan-the-workload"><h4 >Plan the workload</h4><p >When creating a forecast, you have to select the time the user should
+spend on it. 100% means that your user should work on it full time
+during those days. He/She has no other tasks to work on. So you can
+decide from 1 to 100% how your users should organize their time between
+different tasks.</p><p >The power of integration helps you to avoid double booking an employee.
+For example, if your expert is already at 40% on another task in another
+project, you can book him/her for only 60% for that period.</p><p >In the example below, the user &quot;Administrator&quot; is working on 2 projects
+(&quot;IT1367 Delivery Phases&quot; and &quot;Implementation Process56&quot;). The user is
+assigned to both projects with a total of 110% of their time. This is
+too much so the Project Manager should change the users assigned to the
+task. Otherwise, the PM can change the dedicated time or the dates, to
+make sure that this is feasible.</p><img src="../../_images/forecast06.png" class="img-responsive center-block"></section><section id="gantt-view-advantages"><h4 >Gantt view advantages</h4><p >This Gantt view ‘by user' helps you to better plan your human resources.
+You avoid confusion about the the tasks and the assignations of the
+users. The Gantt Chart is highly visual and helps to comprehend all the
+different elements at once. Also, you immediately know what has to be
+done next. This method helps you to better understand the relations
+between the tasks.</p><p >The dynamic view of the Gantt in Odoo allows you to:</p><ul ><li >change the time and date of a forecast by clicking and sliding the
+tasks in the future or in the past</li><li >create a new forecast into the Gantt chart immediately</li><li >modify an existing forecast</li><li >change the length of a task by extending or shortening the rectangle.</li></ul></section><section id="by-projects-project-management"><h3 >By projects: project management</h3><p >The Gantt Chart is the perfect view of a project to better understand
+the interactions between the tasks. You can avoid overlapping tasks or
+starting one too early if another one isn't finished. Odoo Gantt chart
+is clear and helps you to coordinate tasks efficiently.</p><p >This option displays the Gantt chart by showing the projects on the
+first level of hierarchy.</p><p >On the left side, first level, you can see the projects. Then, on the
+second level you see which users are assigned. On the third, you see
+which tasks they're on.</p><p >This view won't show your HR time. The colours don't apply. (see <strong >By
+Users</strong> section)</p><img src="../../_images/forecast07.png" class="img-responsive center-block"></section><section id="id1"><h4 >Gantt view advantages</h4><p >The dynamic view of the Gantt in Odoo allows you to:</p><ul ><li >change the time and date of a forecast by clicking and sliding the
+tasks in the future or in the past</li><li >create a new forecast into the Gantt chart immediately</li><li >modify an existing forecast</li><li >change the length of a task by extending or shortening the rectangle.</li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

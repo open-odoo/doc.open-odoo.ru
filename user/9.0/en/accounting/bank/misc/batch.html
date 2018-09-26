@@ -1,0 +1,306 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to manage batch deposits of checks? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Miscellaneous" href="../misc.html" />
+    <link rel="next" title="How to do a bank wire transfer from one bank to another?" href="interbank.html" />
+    <link rel="prev" title="Miscellaneous" href="../misc.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to manage batch deposits of checks?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/accounting/bank/misc/batch.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/accounting/bank/misc/batch.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/accounting/bank/misc/batch.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to manage batch deposits of checks? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-batch-deposit-feature" class="ripple internal reference">Install the batch deposit feature</a></li><li class="list-group-item"><a href="#activate-the-feature-on-your-bank-accounts" class="ripple internal reference">Activate the feature on your bank accounts</a></li></ul></li><li class="list-group-item"><a href="#from-checks-received-to-the-bank" class="ripple internal reference">From checks received to the bank</a><ul ><li class="list-group-item"><a href="#receive-customer-checks" class="ripple internal reference">Receive customer checks</a></li><li class="list-group-item"><a href="#prepare-a-batch-deposit" class="ripple internal reference">Prepare a batch deposit</a></li><li class="list-group-item"><a href="#reconciling-the-deposit-with-the-bank-statement" class="ripple internal reference">Reconciling the Deposit with the Bank Statement</a></li></ul></li><li class="list-group-item"><a href="#troubleshooting" class="ripple internal reference">Troubleshooting</a><ul ><li class="list-group-item"><a href="#i-don-t-see-the-batch-deposit-link-on-bank-statements" class="ripple internal reference">I don't see the batch deposit link on bank statements?</a></li><li class="list-group-item"><a href="#what-happens-if-a-check-was-refused" class="ripple internal reference">What happens if a check was refused?</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/accounting/bank/misc/batch.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-manage-batch-deposits-of-checks"><p >When your company's collections group receives checks from customers
+they will often place this money into their bank account in batches. As
+this money has been received in a physical form, someone in your company
+must manually bring the checks to the bank.</p><p >The bank will ask for a deposit ticket (also referred to as deposit
+slip) to be filled-in with the details of the checks or cash to be
+included in the transactions.</p><p >The bank statement will reflect the total amount that was deposited and
+the reference to the deposit ticket, not the individual checks.</p><p >Odoo assists you to prepare and print your deposit tickets, and later on
+reconcile them with your bank statement easily.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-batch-deposit-feature"><h3 >Install the batch deposit feature</h3><p >In order to use the batch deposit feature, you need the module <strong >Batch
+Deposit</strong> to be installed.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Usually, this module is automatically
+installed if checks are widely used in your country.</p></div><p >To verify that the <strong >Batch Deposit</strong> feature is installed, go to the
+<span class="menuselection">Configuration ‣ Settings</span> menu of the accounting application.
+Check the feature: <strong >Allow batch deposit</strong>.</p><img src="../../../_images/batch01.png" class="img-responsive center-block"></section><section id="activate-the-feature-on-your-bank-accounts"><h3 >Activate the feature on your bank accounts</h3><p >Once you have installed this feature, Odoo automatically activate bank
+deposits on your main bank accounts.</p><p >To control which bank account can do batch deposit and which can not, go
+to the journal that you defined to pay your checks, usually called
+'Checks' or 'Bank' (see <a href="../../receivables/customer_payments/check.html" class="internal reference"><span class="doc">How to register customer payments by checks?</span></a>,
+in the Accounting apps, <span class="menuselection">Configuration ‣ Accounting ‣ Journals</span>.</p><p >In <strong >Advanced Settings</strong> tab, in section <strong >Miscellaneous</strong>, set Debit Method to
+<strong >Batch Deposit</strong>.</p><img src="../../../_images/batch02.png" class="img-responsive center-block"><p >If you check <strong >Batch Deposit</strong> in your debit method field, it means that
+payments created using this Journal (called Payment method when you want
+to make or receive a payment) will be applicable for the creation of
+Batch Deposits afterwards.</p></section><section id="from-checks-received-to-the-bank"><h2 >From checks received to the bank</h2></section><section id="receive-customer-checks"><h3 >Receive customer checks</h3><p >Once your record checks received, record them on the bank account on
+which you plan to deposit them. Once you select the bank account (or
+check journal is you configured Odoo that way), Odoo proposes you to use
+a batch deposit. Select this option if you plan to deposit the check to
+your bank.</p><img src="../../../_images/batch03.png" class="img-responsive center-block"><p >In the memo field, you can set the reference of the check.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >payments can be registered from the menu <span class="menuselection">Sales ‣ Payments</span>,
+or directly on the related invoice, using the <strong >Register Payment</strong> button.</p></div></section><section id="prepare-a-batch-deposit"><h3 >Prepare a batch deposit</h3><p >From the Accounting application, go to the menu <span class="menuselection">Sales ‣ Batch Deposit</span>,
+and create a new <strong >Batch Deposit</strong>.</p><img src="../../../_images/batch04.png" class="img-responsive center-block"><p >Select the bank, then select the payments (checks) you want to add in
+this deposit. By default, Odoo proposes you all the checks that have not
+been deposit yet. That way, you can verify that you do not forget or
+lost a check.</p><img src="../../../_images/batch05.png" class="img-responsive center-block"><p >You can then print the batch deposit, which will be very useful
+to prepare the deposit slip that the bank usually requires to complete.</p></section><section id="reconciling-the-deposit-with-the-bank-statement"><h3 >Reconciling the Deposit with the Bank Statement</h3><p >When you process the bank statement reconciliation you will see the
+deposit ticket number referenced in the statement. When the reconciliation
+process is run, the user will be able to select the batch deposit that
+matches with the bank statement line.</p><img src="../../../_images/batch06.png" class="img-responsive center-block"><p >If you select a batch deposit, Odoo will automatically fills all the
+checks contained in this deposit for the matching. (2 checks were in
+this batch deposit the example below)</p><img src="../../../_images/batch07.png" class="img-responsive center-block"></section><section id="troubleshooting"><h2 >Troubleshooting</h2></section><section id="i-don-t-see-the-batch-deposit-link-on-bank-statements"><h3 >I don't see the batch deposit link on bank statements?</h3><p >If you don't have a batch deposit link in your bank statement, there
+could be two reasons:</p><ul ><li >After having installed the batch deposit features, you need to reload
+the page so that the browser is aware of this new feature. Just
+click the reload button of your browser.</li><li >You do not have a batch deposit created for this bank account.</li></ul></section><section id="what-happens-if-a-check-was-refused"><h3 >What happens if a check was refused?</h3><p >If you have a smaller amount in your bank statement than the actual
+amount in your batch deposit, it probably means that one of your check
+has been refused.</p><p >In this case, click on the line related to this check to remove it from
+the bank statement matching.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

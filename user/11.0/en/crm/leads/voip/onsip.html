@@ -1,0 +1,266 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>OnSIP Configuration &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Odoo VOIP" href="../voip.html" />
+    <link rel="next" title="Reporting" href="../../reporting.html" />
+    <link rel="prev" title="Installation and Setup" href="setup.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../crm.html">CRM</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">OnSIP Configuration</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/crm/leads/voip/onsip.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/crm/leads/voip/onsip.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/crm/leads/voip/onsip.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> OnSIP Configuration - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#onsip-on-your-cell-phone" class="ripple internal reference">OnSIP on Your Cell Phone</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/crm/leads/voip/onsip.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="onsip-configuration"></section><section id="introduction"><h2 >Introduction</h2><p >Odoo VoIP can be set up to work together with OnSIP (www.onsip.com). In that case, the installation and setup of an Asterisk server is not necessary as the whole infrastructure is hosted and managed by OnSIP.</p><p >You will need to open an account with OnSIP to use this service. Before doing so, make sure that your area and the areas you wish to call are covered by the service. After opening an OnSIP account, follow the configuration procedure below.</p></section><section id="configuration"><h2 >Configuration</h2><p >Go to Apps and install the module <strong >VoIP OnSIP</strong>.</p><img src="../../../_images/onsip01.png" class="img-responsive center-block"><p >Go to Settings/General Settings. In the section Integrations/Asterisk (VoIP), fill in the 3 fields:</p><ul ><li ><strong >OnSIP Domain</strong> is the domain you chose when creating an account on www.onsip.com. If you don't know it, log in to <a href="https://admin.onsip.com/" class="external reference">https://admin.onsip.com/</a> and you will see it in the top right corner of the screen.</li><li ><strong >WebSocket</strong> should contain wss://edge.sip.onsip.com</li><li ><strong >Mode</strong> should be Production</li></ul><img src="../../../_images/onsip02.png" class="img-responsive center-block"><p >Go to <strong >Settings/Users</strong>. In the form view of each VoIP user, in the Preferences tab, fill in the section <strong >PBX Configuration</strong>:</p><ul ><li ><strong >SIP Login / Browser's Extension</strong>: the OnSIP 'Username'</li><li ><strong >OnSIP authorization User</strong>: the OnSIP 'Auth Username'</li><li ><strong >SIP Password</strong>: the OnSIP 'SIP Password'</li><li ><strong >Handset Extension</strong>: the OnSIP 'Extension'</li></ul><p >You can find all this information by logging in at <a href="https://admin.onsip.com/users" class="external reference">https://admin.onsip.com/users</a>, then select the user you want to configure and refer to the fields as pictured below.</p><img src="../../../_images/onsip03.png" class="img-responsive center-block"><p >You can now make phone calls by clicking the phone icon in the top right corner of Odoo (make sure you are logged in as a user properly configured in Odoo and in OnSIP).</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you see a <em >Missing Parameters</em> message in the Odoo softphone, make sure to refresh your Odoo window and try again.</p><img src="../../../_images/onsip04.png" class="img-responsive center-block"></div><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you see an <em >Incorrect Number</em> message in the Odoo softphone, make sure to use the international format, leading with the plus (+) sign followed by the international country code. E.g.: +16506913277 (where +1 is the international prefix for the United States).</p><img src="../../../_images/onsip05.png" class="img-responsive center-block"></div><p >You can now also receive phone calls. Your number is the one provided by OnSIP. Odoo will ring and display a notification.</p><img src="../../../_images/onsip06.png" class="img-responsive center-block"></section><section id="onsip-on-your-cell-phone"><h2 >OnSIP on Your Cell Phone</h2><p >In order to make and receive phone calls when you are not in front of your computer, you can use a softphone app on your cell phone in parallel of Odoo VoIP. This is useful for on-the-go calls, but also to make sure to hear incoming calls, or simply for convenience. Any SIP softphone will work.</p><p >On Android and iOS, OnSIP has been successfully tested with <a href="https://play.google.com/store/apps/details?id=com.grandstream.wave" class="external reference">Grandstream Wave</a>. When creating an account, select OnSIP in the list of carriers. You will then have to configure it as follows:</p><ul ><li ><strong >Account name</strong>: OnSIP</li><li ><strong >SIP Server</strong>: the OnSIP 'Domain'</li><li ><strong >SIP User ID</strong>: the OnSIP 'Username'</li><li ><strong >SIP Authentication ID</strong>: the OnSIP 'Auth Username'</li><li ><strong >Password</strong>: the OnSIP 'SIP Password'</li></ul><p >Aside from initiating calls from Grandstream Wave on your phone, you can also initiate calls by clicking phone numbers in your browser on your PC. This will make Grandstream Wave ring and route the call via your phone to the other party. This approach is useful to avoid wasting time dialing phone numbers. In order to do so, you will need the Chrome extension <a href="https://chrome.google.com/webstore/detail/onsip-call-assistant/pceelmncccldedfkcgjkpemakjbapnpg?hl=en" class="external reference">OnSIP Call Assistant</a>.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >The downside of using a softphone on your cell phone is that your calls will not be logged in Odoo as the softphone acts as an independent separate app.</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

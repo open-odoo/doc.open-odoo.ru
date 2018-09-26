@@ -1,0 +1,235 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Accounting &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="_static/atom.js"></script>
+    <script type="text/javascript" src="_static/immutable.js"></script>
+    <script type="text/javascript" src="_static/react.min.js"></script>
+    <script type="text/javascript" src="_static/accounts.js"></script>
+    <script type="text/javascript" src="_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="_static/entries.js"></script>
+    <script type="text/javascript" src="_static/reconciliation.js"></script>
+    <script type="text/javascript" src="_static/misc.js"></script>
+    <script type="text/javascript" src="_static/inventory.js"></script>
+    <script type="text/javascript" src="_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap.js"></script>
+    <script type="text/javascript" src="_static/doc.js"></script>
+    <script type="text/javascript" src="_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="index.html" />
+    <link rel="up" title="Приложения" href="applications.html" />
+    <link rel="next" title="Overview" href="accounting/overview.html" />
+    <link rel="prev" title="Приложения" href="applications.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="index.html">Документация  (9.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Accounting</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/accounting.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/ru/accounting.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/ru/">Пользователю</a></li>
+<li><a href="/developer/9.0/ru/">Разработчику</a></li>
+<li><a href="/developer/9.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('_static/banners/accounting.jpg');"></span>
+      <div class="container text-center">
+        <h1> Accounting - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <article class="doc-body doc-tocindex-category">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="accounting"><div class="toctree-wrapper"><ul ><li class="toctree-l1"><span >Overview</span><ul ><li class="toctree-l2"><span >Main Concepts</span><ul ><li class="toctree-l3"><a href="accounting/overview/main_concepts/intro.html" class="internal reference">Introduction to Odoo Accounting</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/overview/main_concepts/in_odoo.html" class="internal reference">The Accounting behind Odoo</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/overview/main_concepts/memento.html" class="internal reference">Accounting Memento For Entrepreneurs (US GAAP)</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/overview/main_concepts/terminologies.html" class="internal reference">Accounting Terminologies</a></li></ul></li><li class="toctree-l2"><span >Getting Started</span><ul ><li class="toctree-l3"><a href="accounting/overview/getting_started/setup.html" class="internal reference">How to setup Odoo Accounting?</a></li></ul></li><li class="toctree-l2"><span >Process overview</span><ul ><li class="toctree-l3"><a href="accounting/overview/process_overview/customer_invoice.html" class="internal reference">From Invoice to Payment Collection</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/overview/process_overview/supplier_bill.html" class="internal reference">From Vendor Bills to Payments</a><ul ></ul></li></ul></li></ul></li><li class="toctree-l1"><span >Account Receivables</span><ul ><li class="toctree-l2"><span >Customer Invoices</span><ul ><li class="toctree-l3"><a href="accounting/receivables/customer_invoices/overview.html" class="internal reference">Overview of the invoicing process</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_invoices/cash_discounts.html" class="internal reference">How to setup cash discounts?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_invoices/payment_terms.html" class="internal reference">How to setup and use payment terms</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_invoices/installment_plans.html" class="internal reference">How to define an installment plan on customer invoices?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_invoices/deferred_revenues.html" class="internal reference">Deferred revenues: how to automate them?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_invoices/refund.html" class="internal reference">How to edit or refund an invoice?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_invoices/modify_validated.html" class="internal reference">How to modify a validated invoice?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Customer Payments</span><ul ><li class="toctree-l3"><a href="accounting/receivables/customer_payments/recording.html" class="internal reference">What are the different ways to record a payment?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_payments/credit_cards.html" class="internal reference">How to register credit card payments on invoices?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_payments/paypal.html" class="internal reference">How to accept paypal payments on invoices?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_payments/check.html" class="internal reference">How to register customer payments by checks?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/receivables/customer_payments/followup.html" class="internal reference">How to get paid and organize customer follow-ups?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >How to get paid?</span><ul ><li class="toctree-l3"><a href="accounting/receivables/getting_paid/automated_followups.html" class="internal reference">How to automate customer follow-ups with plans?</a><ul ></ul></li></ul></li></ul></li><li class="toctree-l1"><span >Account Payables</span><ul ><li class="toctree-l2"><span >Supplier Bills</span><ul ><li class="toctree-l3"><a href="accounting/payables/supplier_bills/manage.html" class="internal reference">How to manage vendor Bills?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/payables/supplier_bills/bills_or_receipts.html" class="internal reference">When should I use supplier bills or purchase receipts?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Pay supplier bills</span><ul ><li class="toctree-l3"><a href="accounting/payables/pay/sepa.html" class="internal reference">Pay with SEPA</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/payables/pay/check.html" class="internal reference">Pay by Checks</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/payables/pay/multiple.html" class="internal reference">How to pay several bills at once?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Misc</span><ul ><li class="toctree-l3"><a href="accounting/payables/misc/forecast.html" class="internal reference">How to forecast future bills to pay?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/payables/misc/employee_expense.html" class="internal reference">How to keep track of employee expenses?</a><ul ></ul></li></ul></li></ul></li><li class="toctree-l1"><span >Bank &amp; Cash</span><ul ><li class="toctree-l2"><span >Setup</span><ul ><li class="toctree-l3"><a href="accounting/bank/setup/create_bank_account.html" class="internal reference">How to setup a new bank account?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/bank/setup/manage_cash_register.html" class="internal reference">How to manage a cash register?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/bank/setup/foreign_currency.html" class="internal reference">How to manage a bank in a foreign currency?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Bank Feeds</span><ul ><li class="toctree-l3"><a href="accounting/bank/feeds/synchronize.html" class="internal reference">How to synchronize Odoo with your bank?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/bank/feeds/ofx.html" class="internal reference">Import OFX statement files</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/bank/feeds/qif.html" class="internal reference">Import QIF statement files</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/bank/feeds/coda.html" class="internal reference">Import Coda statement files (Belgium only)</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/bank/feeds/paypal.html" class="internal reference">How to synchronize your PayPal account with Odoo?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/bank/feeds/manual.html" class="internal reference">Register bank statements manually</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Miscellaneous</span><ul ><li class="toctree-l3"><a href="accounting/bank/misc/batch.html" class="internal reference">How to manage batch deposits of checks?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/bank/misc/interbank.html" class="internal reference">How to do a bank wire transfer from one bank to another?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Bank Reconciliation</span><ul ><li class="toctree-l3"><a href="accounting/bank/reconciliation/use_cases.html" class="internal reference">Use cases in the bank reconciliation process?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/bank/reconciliation/configure.html" class="internal reference">Configure model of entries</a><ul ></ul></li></ul></li></ul></li><li class="toctree-l1"><span >Others</span><ul ><li class="toctree-l2"><span >Configuration</span><ul ><li class="toctree-l3"><a href="accounting/others/configuration/account_type.html" class="internal reference">What is an account type and how do I configure it?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Analytic</span><ul ><li class="toctree-l3"><a href="accounting/others/analytic/usage.html" class="internal reference">Analytic account use cases</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/others/analytic/timesheets.html" class="internal reference">How to track costs of human resources with timesheets?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/others/analytic/purchases_expenses.html" class="internal reference">How to track costs of purchases, expenses, subcontracting?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Taxes</span><ul ><li class="toctree-l3"><a href="accounting/others/taxes/application.html" class="internal reference">How to apply specific taxes by country, state or city?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/others/taxes/create.html" class="internal reference">How to define new taxes?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/others/taxes/retention.html" class="internal reference">How to manage withholding taxes?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Adviser</span><ul ><li class="toctree-l3"><a href="accounting/others/adviser/assets.html" class="internal reference">Manage your fixed assets</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/others/adviser/fiscalyear.html" class="internal reference">How to do a year end in Odoo? (close a fiscal year)</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/others/adviser/budget.html" class="internal reference">How to manage a financial budget?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Overview</span><ul ><li class="toctree-l3"><a href="accounting/others/multicurrencies/how_it_works.html" class="internal reference">How is Odoo's multi-currency working?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/others/multicurrencies/invoices_payments.html" class="internal reference">How to manage invoices &amp; payment in multiple currencies?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/others/multicurrencies/exchange.html" class="internal reference">Record exchange rates at payments</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Reporting</span><ul ><li class="toctree-l3"><a href="accounting/others/reporting/main_reports.html" class="internal reference">What are the main reports available?</a><ul ></ul></li><li class="toctree-l3"><a href="accounting/others/reporting/customize.html" class="internal reference">How to create a customized reports with your own formulas?</a><ul ></ul></li></ul></li><li class="toctree-l2"><span >Inventory</span><ul ><li class="toctree-l3"><a href="accounting/others/inventory/avg_price_valuation.html" class="internal reference">Impact on the average price valuation when returning goods</a><ul ></ul></li><li class="toctree-l3"><a href="inventory/management/reporting/valuation_methods_continental.html" class="internal reference">How to do an inventory valuation? (Continental Accounting)</a><ul ></ul></li><li class="toctree-l3"><a href="inventory/management/reporting/valuation_methods_anglo_saxon.html" class="internal reference">How to do an inventory valuation? (Anglo-Saxon Accounting)</a><ul ></ul></li></ul></li></ul></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

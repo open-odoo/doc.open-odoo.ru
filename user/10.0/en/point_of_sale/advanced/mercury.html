@@ -1,0 +1,280 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to accept credit card payments in Odoo POS using Mercury? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../index.html" />
+    <link rel="up" title="Advanced topics" href="../advanced.html" />
+    <link rel="next" title="Analyze sales" href="../analyze.html" />
+    <link rel="prev" title="How to reprint receipts?" href="reprint.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../point_of_sale.html">Point of Sale</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to accept credit card payments in Odoo POS using Mercury?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/point_of_sale/advanced/mercury.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/point_of_sale/advanced/mercury.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/point_of_sale/advanced/mercury.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to accept credit card payments in Odoo POS using Mercury? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#module-installation" class="ripple internal reference">Module installation</a></li><li class="list-group-item"><a href="#mercury-configuration" class="ripple internal reference">Mercury Configuration</a></li><li class="list-group-item"><a href="#register-a-sale" class="ripple internal reference">Register a sale</a></li><li class="list-group-item"><a href="#payment-with-credit-cards" class="ripple internal reference">Payment with credit cards</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/point_of_sale/advanced/mercury.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-accept-credit-card-payments-in-odoo-pos-using-mercury"></section><section id="overview"><h2 >Overview</h2><p >A <strong >MercuryPay</strong> account (see <a href="https://www.mercurypay.com" class="external reference">MercuryPay website</a>.)
+is required to accept credit
+card payments in Odoo 9 POS with an integrated card reader. MercuryPay
+only operates with US and Canadian banks making this procedure only
+suitable for North American businesses. An alternative to an integrated
+card reader is to work with a standalone card reader, copy the
+transaction total from the Odoo POS screen into the card reader, and
+record the transaction in Odoo POS.</p></section><section id="module-installation"><h2 >Module installation</h2><p >Go to <strong >Apps</strong> and install the <strong >Mercury Payment Services</strong> application.</p><img src="../../_images/mercury01.png" class="img-responsive center-block"></section><section id="mercury-configuration"><h2 >Mercury Configuration</h2><p >In the <strong >Point of Sale</strong> application, click on
+<span class="menuselection">Configuration ‣ Mercury Configurations</span>
+and then on <strong >Create</strong>.</p><img src="../../_images/mercury02.png" class="img-responsive center-block"><p >Introduce your <strong >credentials</strong> and then save them.</p><img src="../../_images/mercury03.png" class="img-responsive center-block"><p >Then go to <span class="menuselection">Configuration ‣ Payment methods</span>
+and click on <strong >Create</strong>. Under the <strong >Point of Sale</strong> tab you
+can set a <strong >Mercury configuration</strong> to the <strong >Payment method</strong>.</p><img src="../../_images/mercury04.png" class="img-responsive center-block"><p >Finally, go to
+<span class="menuselection">Configuration ‣ Point of Sale</span> and add
+a new payment method on the point of sale by editing it.</p><img src="../../_images/mercury05.png" class="img-responsive center-block"><p >Then select the payment method corresponding to your mercury
+configuration.</p><img src="../../_images/mercury06.png" class="img-responsive center-block"><p >Save the modifications.</p></section><section id="register-a-sale"><h2 >Register a sale</h2><p >On the dashboard, you can see your point(s) of sales, click on
+<strong >New Session</strong>:</p><img src="../../_images/mercury07.png" class="img-responsive center-block"><p >You will get the main point of sale interface:</p><img src="../../_images/mercury08.png" class="img-responsive center-block"><p >On the right you can see the list of your products with the categories
+on the top. If you click on a product, it will be added in the cart. You
+can directly set the correct quantity or weight by typing it on the
+keyboard.</p></section><section id="payment-with-credit-cards"><h2 >Payment with credit cards</h2><p >Once the order is completed, click on <strong >Payment</strong>. You can choose the credit
+card <strong >Payment Method</strong>.</p><img src="../../_images/mercury09.png" class="img-responsive center-block"><p >Type in the <strong >Amount</strong> to be paid with the credit card. Now you can swipe
+the card and validate the payment.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../shop/cash_control.html" class="internal alert-link reference"><span class="doc">How to set up cash control?</span></a></li><li ><a href="../shop/invoice.html" class="internal alert-link reference"><span class="doc">How to invoice from the POS interface?</span></a></li><li ><a href="../shop/refund.html" class="internal alert-link reference"><span class="doc">How to return and refund products?</span></a></li><li ><a href="../shop/seasonal_discount.html" class="internal alert-link reference"><span class="doc">How to apply Time-limited or seasonal discounts?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

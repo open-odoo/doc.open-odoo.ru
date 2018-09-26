@@ -1,0 +1,267 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как выставить дополнительный счет за расходы вашим клиентам? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Услуги" href="../services.html" />
+    <link rel="next" title="Как выставит счет по договору на поддержку (за оплаченные ранее часы)?" href="support.html" />
+    <link rel="prev" title="Как выставлять счета на этапы в проекте?" href="milestones.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../sales.html">Продажи</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как выставить дополнительный счет за расходы вашим клиентам?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/sales/invoicing/services/reinvoice.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/sales/invoicing/services/reinvoice.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/ru/sales/invoicing/services/reinvoice.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/ru/">Пользователю</a></li>
+<li><a href="/developer/9.0/ru/">Разработчику</a></li>
+<li><a href="/developer/9.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как выставить дополнительный счет за расходы вашим клиентам? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#use-case-1-simple-expense-invoicing" class="ripple internal reference">1 вариант: Простое выставление счетов</a><ul ><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#create-product-to-be-expensed" class="ripple internal reference">В случае продажи услуг или отправка счет-фактур,вам необходимо установить приложение &quot;Продажи&quot;, используя дополнительную иконку. Создать продукт, подлежащий расходованию</a></li><li class="list-group-item"><a href="#create-a-sale-order" class="ripple internal reference">Создайте заказ на продажу</a></li><li class="list-group-item"><a href="#invoice-expense-to-your-client" class="ripple internal reference">Счет на затраты для вашего клиента</a></li></ul></li><li class="list-group-item"><a href="#use-case-2-invoice-expenses-via-the-expense-module" class="ripple internal reference">Вариант 2: Счет на расходы подсчитывается через модуль расходов (Expense)</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#create-a-product-to-be-expensed" class="ripple internal reference">Создать продукт, подлежащий расходованию</a></li><li class="list-group-item"><a href="#create-a-sales-order" class="ripple internal reference">Создание заказа клиента</a></li><li class="list-group-item"><a href="#create-expense-and-link-it-to-so" class="ripple internal reference">Создайте расходную ведомость и свяжите ее с заказом клиент</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">Счет на затраты для вашего клиента</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/sales/invoicing/services/reinvoice.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-re-invoice-expenses-to-your-customers"><p >Часто случается, что ваши сотрудники должны тратить свои личные деньги во время работы над проектом для клиента. Возьмем, к примеру, сотрудника, оплачивающего место парковки для встречи с вашим клиентом. Как компания, вы хотели бы иметь возможность выставлять счет за это вашему клиенту.</p><p >В этой статье мы разберем два варианта, как это сделать. Первый, очень простой, состоит из выставления счетов за расходы вашему клиенту так же как и для продукта. Второй, более продвинутый, счет будет выставляться с учетом затрат сотрудников, которые они зафиксируют в системе учета расходов.</p></section><section id="use-case-1-simple-expense-invoicing"><h2 >1 вариант: Простое выставление счетов</h2><p >Давайте рассмотрим следующий пример. Вы работаете над рекламной кампанией для одного из ваших клиентов («Agrolait``), и вам приходится печатать много копий. Эти копии являются расходами для вашей компании, и вы хотели бы их выставить в виде счета на затраты.</p></section><section id="configuration"><h3 >Настройка</h3><p >Чтобы продавать услуги и отправлять счета, вам необходимо установить приложение <strong >Продажи (Sales)</strong> в модуле <strong >Приложения (Apps)</strong>.</p><img src="../../../_images/reinvoice01.png" class="img-responsive center-block"></section><section id="create-product-to-be-expensed"><h3 >В случае продажи услуг или отправка счет-фактур,вам необходимо установить приложение &quot;Продажи&quot;, используя дополнительную иконку. Создать продукт, подлежащий расходованию</h3><p >Теперь вам нужно создать продукт под названием <code >Копии (Copies)</code>.</p><p >В приложении <strong >Продажи (Sales)</strong> перейдите в <span class="menuselection">Sales (Продажи) ‣ Products (Продукция)</span> и создайте продукт следующим образом:</p><ul ><li ><p ><strong >Тип продукта</strong>: потребляемый</p></li><li ><p ><strong >Порядок выставления счетов</strong>: по доставленному количеству (вы вручную укажете количество в счете заказа на продажу)</p></li></ul><img src="../../../_images/reinvoice02.png" class="img-responsive center-block"></section><section id="create-a-sale-order"><h3 >Создайте заказ на продажу</h3><p >Теперь, когда ваш продукт настроен правильно, вы можете создать заказ на продажу для этого продукта (из меню <span class="menuselection">Sales ‣ Sales Orders</span>) с заказанными количествами, установленными на 0. Нажмите <strong >Подтвердить продажу (Confirm the Sale)</strong> для создания заказа на продажу. Затем вы сможете вручную изменить доставленное количества в заказе на продажу, чтобы повторно выставить счет на копии своему клиенту.</p><img src="../../../_images/reinvoice03.png" class="img-responsive center-block"></section><section id="invoice-expense-to-your-client"><h3 >Счет на затраты для вашего клиента</h3><p >В конце месяца вы отпечатали <code >1000</code> копий для своего своего клиента, и вы хотите повторно выставить счет. В соответствующем заказе на продажу нажмите <strong >Доставленное количество</strong>, вручную введите правильное количество копий и нажмите <strong >Сохранить</strong>. Ваша строка заказа станет синей, что означает, что она готова к выставлению счета. Нажмите <strong >Создать счет</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Общая сумма вашего заказа на продажу будет равна 0, так как она рассчитывается по заказу. Это ваш счет, который рассчитает правильную сумму, причитающуюся вашим клиентом.</p></div><p >Созданный счет находится в статусе черновика, поэтому вы всегда можете контролировать и изменять количество, а при необходимости, и сумму. Вы заметите, что сумма, готовая для выставления в счете, подсчитана на основании доставленного количества</p><img src="../../../_images/reinvoice04.png" class="img-responsive center-block"><p >Нажмите кнопку «Утвердить», чтобы отправить счет клиенту.</p></section><section id="use-case-2-invoice-expenses-via-the-expense-module"><h2 >Вариант 2: Счет на расходы подсчитывается через модуль расходов (Expense)</h2><p >Чтобы проиллюстрировать этот случай, давайте представим, что ваша компания продает консультационные услуги клиенту <code >Agrolait</code>. Вы согласовали, что к общей стоимости услуг будет добавлена стоимость проезда. Она будет вычисляться исходя из дистанции, которую проедет ваш консультант.</p></section><section id="id1"><h3 >Настройка</h3><p >Вам нужно установить еще два модуля:</p><ul ><li ><p >Учет расходов (Expense Tracker)</p></li><li ><p >Бухгалтерский учет (Accounting), в котором нужно активировать аналитический учет в настройках</p></li></ul><img src="../../../_images/reinvoice05.png" class="img-responsive center-block"></section><section id="create-a-product-to-be-expensed"><h3 >Создать продукт, подлежащий расходованию</h3><p >Создайте продукт под названием <code >Километры</code>.</p><p >В приложении <strong >Продажи (Sales)</strong> перейдите в <span class="menuselection">Sales (Продажи) ‣ Products (Продукция)</span> и создайте продукт следующим образом:</p><ul ><li ><p >Продукт может быть отнесен к расходам (can be expensed)</p></li><li ><p >Тип продукта: Услуга</p></li><li ><p >Порядок выставления счетов: счет-фактура на основе времени и материала</p></li><li ><p >Порядок выставления счетов: по стоимости</p></li><li ><p >Способ подсчета (Track service): вручную задайте количество на заказ</p></li></ul><img src="../../../_images/reinvoice06.png" class="img-responsive center-block"></section><section id="create-a-sales-order"><h3 >Создание заказа клиента</h3><p >В модуле <strong >Продажи (Sales)</strong> перейдите в <span class="menuselection">Sales ‣ Sales Orders</span> и добавьте свой продукт <strong >Консультация</strong> в строке заказа.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если ваш продукт еще не существует, вы можете создать самостоятельно. Для этого введите имя в поле <strong >Продукт (Product)</strong> и нажмите <strong >Создать и отредактировать</strong>.</p></div><p >В зависимости от конфигурации вашего продукта, <strong >Аналитическая учетная запись</strong> может быть сгенерирована автоматически. Если нет, вы можете легко создать его, чтобы связать свои расходы с заказом клиента. Не забудьте подтвердить заказ клиента.</p><img src="../../../_images/reinvoice07.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >В документации <a href="../../../accounting/others/analytic/usage.html" class="internal alert-link reference"><span class="doc">Analytic account use cases</span></a> можно узнать больше об этой концепции.</p></div></section><section id="create-expense-and-link-it-to-so"><h3 >Создайте расходную ведомость и свяжите ее с заказом клиент</h3><p >Предположим, что ваш консультант проехал <code >1.000км</code> в октябре в рамках своего консултингового проекта. Мы создадим для этого расходную ведомость и привяжем ее к соответствующему заказу клиента с помощью аналитической учетной записи.</p><p >Перейдите в модуль <strong >Затраты (Expenses)</strong> и нажмите <strong >Создать</strong>. Настройте расходную ведомость следующим образом:</p><ul ><li ><p ><strong >Описание расхода</strong>: Километры Октябрь 2015 г.</p></li><li ><p ><strong >Продукт</strong>: Километры</p></li><li ><p ><strong >Количество</strong>: 1.000</p></li><li ><p ><strong >Аналитический счет</strong>: SO0019 - Agrolait</p></li></ul><img src="../../../_images/reinvoice08.png" class="img-responsive center-block"><p >Нажмите <strong >Сохранить для менеджера (Submit to manager)</strong>. Как только затраты будут проверены и записаны в журнал учета, новая строка, соответствующая расходу, будет автоматически добавлена в заказ клиенту.</p></section><section id="id2"><h3 >Счет на затраты для вашего клиента</h3><p >Выставление счета клиенту: после этого вы можете выставлять счет вашему клиенту.</p><img src="../../../_images/reinvoice09.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="support.html" class="internal alert-link reference"><span class="doc">Как выставит счет по договору на поддержку (за оплаченные ранее часы)?</span></a></li><li ><a href="time_materials.html" class="internal alert-link reference"><span class="doc">Как выставлять счета на основе времени и материала?</span></a></li><li ><a href="milestones.html" class="internal alert-link reference"><span class="doc">Как выставлять счета на этапы в проекте?</span></a></li><li ><a href="../products/delivery.html" class="internal alert-link reference"><span class="doc">Как выставлять счета на основе заказов на доставку?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

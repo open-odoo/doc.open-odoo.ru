@@ -1,0 +1,281 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Web контроллеры &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Qweb" href="qweb.html" />
+    <link rel="prev" title="Тестирование модулей" href="testing.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Web контроллеры</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/en/reference/http.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/ru/reference/http.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/http.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/http.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/ru/">Пользователю</a></li>
+<li><a href="/developer/8.0/ru/">Разработчику</a></li>
+<li><a href="/developer/8.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/web_controllers.jpg');"></span>
+      <div class="container text-center">
+        <h1> Web контроллеры - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#routing" class="ripple internal reference">Маршрутизация</a></li><li class="list-group-item"><a href="#request" class="ripple internal reference">Запрос</a></li><li class="list-group-item"><a href="#response" class="ripple internal reference">Ответ</a></li><li class="list-group-item"><a href="#controllers" class="ripple internal reference">Контроллеры.</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/http.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="web-controllers"></section><section id="routing"><i id="reference-http-routing"></i><h2 >Маршрутизация</h2><section class="code-function"><h6 id="openerp.http.route"><code>openerp.http.route(<em>route=None</em>, <em>**kw</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L375" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Декоратор, который помечает метод как обработчик запросов. Этот метод должен быть частью подкласса <code >Controller</code>.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >route</strong> -- Строка или массив. Часть маршрута, которая будет определять, какие HTTP-запросы будут соответствовать декодируемому методу. Может быть как одной строкой, так и массивом строк. См. Документацию маршрутизации werkzeug для формата маршрута (<a href="http://werkzeug.pocoo.org/docs/routing/" class="external reference alert-link">http://werkzeug.pocoo.org/docs/routing/</a>).</li><li ><strong >type</strong> -- Тип запроса может быть как  <code >'http'</code> так и <code >'json'</code>.</li><li ><strong >auth</strong> -- Тип метода авторизации, может иметь следующие значения: * <code >user</code>: пользователь должен быть авторизован, и текущий запрос будет выполняться с правами доступа данного пользователя. * <code >public</code>: пользователь не обязан быть авторизован. Если нет, то текущий запрос будет выполнен с использованием общего общего пользователя. * <code >none</code>: В основном использоуется фреймворком и модулями авторизации. Код запроса не будет иметь никаких средств для доступа ни к базе данных ни какой либо информации указывающей на текущую базу данны и текущего пользователя</li><li ><strong >methods</strong> -- Последовательность HTTP-методов, к которым относится данный маршрут. Если ничего не указано, то разрешены все методы.</li><li ><strong >cors</strong> -- Значение директивы Access-Control-Allow-Origin cors.</li></ul></div></div></div></section></section><section id="request"><i id="reference-http-request"></i><h2 >Запрос</h2><p >Объект запроса автоматически устанавливается в <code class="py xref py-data">openerp.http.request</code> в начале запроса</p><section class="code-class"><h6 id="openerp.http.WebRequest"><code><em >class </em>openerp.http.WebRequest(<em>httprequest</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L168" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Родительский класс для всех типов Odoo Web запросов , в основном используется для инициализации и настройки объекта запроса (диспетчеризация должна быть обработана подклассами)</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><strong >httprequest</strong> (<a href="http://werkzeug.pocoo.org/docs/wrappers/#werkzeug.wrappers.BaseRequest" class="external reference alert-link" title="(в Werkzeug v0.14-dev)"><code class="py xref py-class">werkzeug.wrappers.BaseRequest</code></a>) -- Объект wrapped werkzeug Request</div></div></div><section class="code-attribute"><h6 id="WebRequest.httprequest"><code>httprequest</code></h6><p >Оригинальный объект <a href="http://werkzeug.pocoo.org/docs/wrappers/#werkzeug.wrappers.Request" class="external reference alert-link" title="(в Werkzeug v0.14-dev)"><code class="py xref py-class">werkzeug.wrappers.Request</code></a>, предоставленный запросу</p></section><section class="code-attribute"><h6 id="WebRequest.params"><code>params</code></h6><p >Класс <a href="https://docs.python.org/2/library/collections.html#collections.Mapping" class="external reference alert-link" title="(в Python v2.7)"><code class="py xref py-class">Mapping</code></a> параметров запроса, обычно не используются, поскольку они предоставляются непосредственно методу обработчика в качестве аргументов ключевого слова</p></section><section class="code-attribute"><h6 id="openerp.http.WebRequest.env"><code>env</code></h6><p >Класс <code class="py xref py-class">Environment</code>, привязанный к текущему запросу. Вызывает <code class="py xref py-class">RuntimeError</code>, если текущие запросы не привязаны к базе данных.</p></section><section class="code-attribute"><h6 id="openerp.http.WebRequest.context"><code>context</code></h6><p >Класс <a href="https://docs.python.org/2/library/collections.html#collections.Mapping" class="external reference alert-link" title="(в Python v2.7)"><code class="py xref py-class">Mapping</code></a> из контекстных значений для текущего запроса</p></section><section class="code-attribute"><h6 id="openerp.http.WebRequest.session"><code>session</code></h6><p >Класс <code class="py xref py-class">OpenERPSession</code>, содержащий данные HTTP для текущего сеанса</p></section><section class="code-attribute"><h6 id="openerp.http.WebRequest.cr"><code>cr</code></h6><p >Класс <code class="py xref py-class">Cursor</code>, инициализированный для текущего вызова метода.</p><p >Когда текущий запрос использует авторизацию <code >none</code>, доступ к курсору вызовет исключение.</p></section><section class="code-attribute"><h6 id="openerp.http.WebRequest.debug"><code>debug</code></h6><p >Указывает, находится ли текущий запрос в режиме «отладки»</p></section><section class="code-attribute"><h6 id="openerp.http.WebRequest.session_id"><code>session_id</code></h6><p >Непрозрачный идентификатор для экземпляра класса <code class="py xref py-class">OpenERPSession</code> текущего запроса</p><div class="deprecated"><p ><span class="versionmodified">Не рекомендуется, начиная с версии 8.0: </span>Используйте атрибут <code >sid</code> для <a href="#openerp.http.WebRequest.session" class="internal alert-link reference" title="openerp.http.WebRequest.session"><code class="py xref py-attr">session</code></a></p></div></section><section class="code-attribute"><h6 id="openerp.http.WebRequest.registry"><code>registry</code></h6><p >Запись в базе данных, связанной с этим запросом. Может быть <code >None</code>, если текущий запрос использует тип авторизации <code >none</code>.</p><div class="deprecated"><p ><span class="versionmodified">Не рекомендуется, начиная с версии 8.0: </span>используйте <a href="#openerp.http.WebRequest.env" class="internal alert-link reference" title="openerp.http.WebRequest.env"><code class="py xref py-attr">env</code></a></p></div></section><section class="code-attribute"><h6 id="openerp.http.WebRequest.db"><code>db</code></h6><p >База данных, связанная с этим запросом. Может быть <code >None</code>, если текущий запрос использует тип авторизации <code >none</code>.</p></section><section class="code-attribute"><h6 id="openerp.http.WebRequest.httpsession"><code>httpsession</code></h6><p >Данные сеанса HTTP</p><div class="deprecated"><p ><span class="versionmodified">Не рекомендуется, начиная с версии 8.0: </span>Используйте <a href="#openerp.http.WebRequest.session" class="internal alert-link reference" title="openerp.http.WebRequest.session"><code class="py xref py-attr">session</code></a> вместо httpsession.</p></div></section></section><section class="code-class"><h6 id="openerp.http.HttpRequest"><code><em >class </em>openerp.http.HttpRequest(<em>*args</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L641" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Обработчик для запросов типа <code >http</code>.</p><p >Параметры сопоставленной маршрутизации, параметры строки запроса, параметры <a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.2" class="external reference alert-link">form</a> и файлы передаются методу обработчика в качестве аргументов.</p><p >В случае конфликта имен приоритет имеют параметры маршрутизации.</p><p >Результатом метода-обработчика может быть:</p><ul ><li ><p >Несуществующее значение, и в этом случае HTTP-ответом будет <a href="http://tools.ietf.org/html/rfc7231#section-6.3.5" class="external reference alert-link">HTTP 204</a> (No Content)</p></li><li ><p >Объект werkzeug Response, который возвращает как есть</p></li><li ><p ><code >str</code> или <code >unicode</code>, будут заключены в объект Response и интерпретированы как HTML</p></li></ul><section class="code-method"><h6 id="openerp.http.HttpRequest.make_response"><code>make_response(<em>data</em>, <em>headers=None</em>, <em>cookies=None</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L698" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Помощник для ответов без HTML или HTML ответов с настраиваемыми заголовками ответа или файлами cookie.</p><p >В то время как обработчики могут просто вернуть разметку HTML страницы, которую они хотят отправить как строку, если возвращены не-HTML данные, им необходимо создать полный объект ответа, или возвращенные данные не будут правильно интерпретироваться клиентами.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >data</strong> (<a href="https://docs.python.org/2/library/functions.html#basestring" class="external reference alert-link" title="(в Python v2.7)"><code >basestring</code></a>) -- тело ответа</li><li ><strong >headers</strong> (<code >[(name, value)]</code>) -- Заголовки HTTP для установки ответа</li><li ><strong >cookies</strong> (<a href="https://docs.python.org/2/library/collections.html#collections.Mapping" class="external reference alert-link" title="(в Python v2.7)"><code >collections.Mapping</code></a>) -- Файлы cookie для установки на клиенте</li></ul></div></div></div></section><section class="code-method"><h6 id="openerp.http.HttpRequest.not_found"><code>not_found(<em>description=None</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L736" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Ссылка на объект для ответа  <a href="http://tools.ietf.org/html/rfc7231#section-6.5.4" class="external reference alert-link">HTTP 404</a> (не найден)</p></section><section class="code-method"><h6 id="openerp.http.HttpRequest.render"><code>render(<em>template</em>, <em>qcontext=None</em>, <em>lazy=True</em>, <em>**kw</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L718" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Отложенная визуализация шаблона QWeb.</p><p >Фактическое отображение заданного шаблона произойдет в конце отправки. Между тем template и/или qcontext могут быть изменены или даже заменены статическим ответом.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >template</strong> (<a href="https://docs.python.org/2/library/functions.html#basestring" class="external reference alert-link" title="(в Python v2.7)"><code >basestring</code></a>) -- шаблон для визуализации</li><li ><strong >qcontext</strong> (<a href="https://docs.python.org/2/library/stdtypes.html#dict" class="external reference alert-link" title="(в Python v2.7)"><code >dict</code></a>) -- отображение контекста</li><li ><strong >lazy</strong> (<a href="https://docs.python.org/2/library/functions.html#bool" class="external reference alert-link" title="(в Python v2.7)"><code >bool</code></a>) -- Следует ли откладывать отображение шаблона до последнего возможного момента</li><li ><strong >kw</strong> -- Перенаправляется в объект ответа werkzeug</li></ul></div></div></div></section></section><section class="code-class"><h6 id="openerp.http.JsonRequest"><code><em >class </em>openerp.http.JsonRequest(<em>*args</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L433" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Обработчик запросов для <a href="http://www.jsonrpc.org/specification" class="external reference alert-link">JSON-RPC 2</a> через HTTP</p><ul ><li ><p ><code >method</code> игнорируется</p></li><li ><p ><code >params</code> должен быть JSON объектом (не массивом) и передаваться как аргументы методу обработчика</p></li><li ><p >Результат метода обработчика возвращается в виде JSON-RPC <code >result</code> и входит в состав ответа <a href="http://www.jsonrpc.org/specification#response_object" class="external reference alert-link">JSON-RPC</a></p></li></ul><p >Успешный запрос:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">--&gt;</span> <span class="p">{</span><span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;call&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                <span class="s2">&quot;arg1&quot;</span><span class="p">:</span> <span class="s2">&quot;val1&quot;</span> <span class="p">},</span>
+     <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">}</span>
+
+<span class="o">&lt;--</span> <span class="p">{</span><span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;res1&quot;</span><span class="p">:</span> <span class="s2">&quot;val1&quot;</span> <span class="p">},</span>
+     <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">}</span>
+</pre></div>
+</div>
+<p >Запрос, возвращающий ошибки:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">--&gt;</span> <span class="p">{</span><span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;call&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                <span class="s2">&quot;arg1&quot;</span><span class="p">:</span> <span class="s2">&quot;val1&quot;</span> <span class="p">},</span>
+     <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">}</span>
+
+<span class="o">&lt;--</span> <span class="p">{</span><span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+               <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;End user error message.&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;codestring&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;debug&quot;</span><span class="p">:</span> <span class="s2">&quot;traceback&quot;</span> <span class="p">}</span> <span class="p">},</span>
+     <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">}</span>
+</pre></div>
+</div>
+</section></section><section id="response"><h2 >Ответ</h2><section class="code-class"><h6 id="openerp.http.Response"><code><em >class </em>openerp.http.Response(<em>*args</em>, <em>**kw</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L1193" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Объект ответа передается через цепочку маршрутов контроллера.</p><p >В дополнение к параметрам <a href="http://werkzeug.pocoo.org/docs/wrappers/#werkzeug.wrappers.Response" class="external reference alert-link" title="(в Werkzeug v0.14-dev)"><code class="py xref py-class">werkzeug.wrappers.Response</code></a>, конструктор этого класса может принимать следующие дополнительные параметры для отложенного отображения шаблона QWeb.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >template</strong> (<a href="https://docs.python.org/2/library/functions.html#basestring" class="external reference alert-link" title="(в Python v2.7)"><code >basestring</code></a>) -- шаблон для визуализации</li><li ><strong >qcontext</strong> (<a href="https://docs.python.org/2/library/stdtypes.html#dict" class="external reference alert-link" title="(в Python v2.7)"><code >dict</code></a>) -- отображение контекста</li><li ><strong >uid</strong> (<a href="https://docs.python.org/2/library/functions.html#int" class="external reference alert-link" title="(в Python v2.7)"><code >int</code></a>) -- Идентификатор пользователя для вызова отображения ir.ui.view, При <code >None</code> используется идентификатор пользователя, отправившего запрос (по умолчанию)</li></ul></div></div></div><p >эти атрибуты доступны в качестве параметров в объекте Response и могут быть изменены в любое время перед отображением</p><p >Также предоставляет все атрибуты и методы класса <a href="http://werkzeug.pocoo.org/docs/wrappers/#werkzeug.wrappers.Response" class="external reference alert-link" title="(в Werkzeug v0.14-dev)"><code class="py xref py-class">werkzeug.wrappers.Response</code></a>.</p><section class="code-method"><h6 id="openerp.http.Response.render"><code>render()<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L1237" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Возвращает результат и отображает шаблон ответа,</p></section><section class="code-method"><h6 id="openerp.http.Response.flatten"><code>flatten()<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L1246" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6><p >Принудительное отображение шаблона ответа, устанавливает результат как тело ответа и отменяет <code class="py xref py-attr">template</code></p></section></section></section><section id="controllers"><i id="reference-http-controllers"></i><h2 >Контроллеры.</h2><p >Контроллеры должны обеспечивать расширяемость, например как <code class="py xref py-class">Model</code>, но не могут использовать тот же механизм, что и предпосылки (база данных с загруженными модулями), могут быть не доступны (например, не создана или не выбрана  база данных).</p><p >Таким образом, контроллеры предоставляют свой собственный механизм расширения, отдельный от моделей данных:</p><p >Контроллеры создаются путем <a href="https://docs.python.org/2/tutorial/classes.html#tut-inheritance" class="external reference" title="(в Python v2.7)"><span class="std xref std-ref">наследования</span></a></p><section class="code-class"><h6 id="openerp.http.Controller"><code><em >class </em>openerp.http.Controller<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/http.py#L796" class="external reference alert-link"><span class="viewcode-link">[исходный код]</span></a></code></h6></section><p >и определением методов, декорируемых <a href="#openerp.http.route" class="internal reference" title="openerp.http.route"><code class="py xref py-func">route()</code></a>:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyController</span><span class="p">(</span><span class="n">openerp</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">Controller</span><span class="p">):</span>
+    <span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/some_url&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">stuff</span><span class="p">()</span>
+</pre></div>
+</div>
+<p >Чтобы <em >переопределить</em> контроллер, <a href="https://docs.python.org/2/tutorial/classes.html#tut-inheritance" class="external reference" title="(в Python v2.7)"><span class="std xref std-ref">унаследуйте</span></a> его класс и, при необходимости, переопределите соответствующие методы:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Extension</span><span class="p">(</span><span class="n">MyController</span><span class="p">):</span>
+    <span class="nd">@route</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">do_before</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">Extension</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">handler</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul ><li ><p >Декорирование с помощью <a href="#openerp.http.route" class="internal reference" title="openerp.http.route"><code class="py xref py-func">route()</code></a> необходимо для сохранения видимости метода (и маршрута): если метод переопределяется без декорирования, он не будет опубликован</p></li><li ><p >Декораторы всех методов объединены, если декоратор переопределяющего метода не имеет аргументов, все предыдущие декораторы будут сохранены, любой аргумент переопределит ранее определенные, например:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Restrict</span><span class="p">(</span><span class="n">MyController</span><span class="p">):</span>
+    <span class="nd">@route</span><span class="p">(</span><span class="n">auth</span><span class="o">=</span><span class="s1">&#39;user&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">Restrict</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">handler</span><span class="p">()</span>
+</pre></div>
+</div>
+<p >Изменит <code >/some_url</code> тип авторизации с public на user (требующего входа в систему)</p></li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

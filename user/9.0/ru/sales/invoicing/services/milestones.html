@@ -1,0 +1,267 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как выставлять счета на этапы в проекте? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Услуги" href="../services.html" />
+    <link rel="next" title="Как выставить дополнительный счет за расходы вашим клиентам?" href="reinvoice.html" />
+    <link rel="prev" title="Услуги" href="../services.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../sales.html">Продажи</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как выставлять счета на этапы в проекте?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/sales/invoicing/services/milestones.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/sales/invoicing/services/milestones.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/ru/sales/invoicing/services/milestones.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/ru/">Пользователю</a></li>
+<li><a href="/developer/9.0/ru/">Разработчику</a></li>
+<li><a href="/developer/9.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как выставлять счета на этапы в проекте? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#install-the-sales-application" class="ripple internal reference">Установите приложение «Продажи (Sales)»</a></li><li class="list-group-item"><a href="#create-products" class="ripple internal reference">Создание продуктов (товаров, услуг)</a></li></ul></li><li class="list-group-item"><a href="#managing-your-project" class="ripple internal reference">Ведение вашего проекта</a><ul ><li class="list-group-item"><a href="#quotations-and-sale-orders" class="ripple internal reference">Расценки и заказы клиента</a></li><li class="list-group-item"><a href="#invoice-milestones" class="ripple internal reference">поэтапные счета</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/sales/invoicing/services/milestones.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-invoice-milestones-of-a-project"><p >Существуют различные виды продажи услуг:  объем  предоплаты по часам/дням (например, контракт на поддержку), выставление счетов по затраченному времени и материалам (например, затраченное время на консультации) или с фиксированной ценой по договору (например, создание сайта).</p><p >В этом разделе мы рассмотрим, как составлять счета за этапы проекта.</p><p >Выставление счетов за этапы можно использовать для дорогостоящих или масштабных проектов, каждый этап которых представляет собой четкую последовательность работ, которые будут постепенно наращиваться при выполнении проекта. Например, маркетинговое агентство, нанятое для запуска нового продукта, может разбить проект на следующие этапы: каждый из них считается одной услугой с фиксированной ценой:</p><ul ><li ><p >1 этап: Аудит маркетинговой стратегии - 5000 евро</p></li><li ><p >2 этап: Создание фирменного стиля - 10000 евро</p></li><li ><p >3 этап: запуск рекламных кампании - 8500 евро</p></li></ul><p >В этом проекте счет можно выставлять клиенту после каждого завершенного этапа. Этот метод выставления счетов удобен как для исполнителя, который получает денежные средства на протяжении всего проекта, так и для клиента, который может контролировать рост проекта и оплачивать только выполненные работы</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Вы также можете использовать этапы проекта для выставления счетов в процентном соотношении от полной стоимости всего проекта. Например, стоимость проекта один миллион евро ваша компания может выставить счета на 15% предоплаты, 30% в середине и остаток при закрытии договора. В этом случае каждый платеж будет считаться закрытием одного этапа.</p></div></section><section id="configuration"><h2 >Настройка</h2></section><section id="install-the-sales-application"><h3 >Установите приложение «Продажи (Sales)»</h3><p >Чтобы продавать услуги и отправлять счета, вам необходимо установить приложение <strong >Продажи (Sales)</strong> в модуле <strong >Приложения (Apps)</strong>.</p><img src="../../../_images/milestones01.png" class="img-responsive center-block"></section><section id="create-products"><h3 >Создание продуктов (товаров, услуг)</h3><p >В Odoo каждый этап вашего проекта мы рассматриваем как продукт. В приложении <strong >Продажи (Sales)</strong> зайдите в меню <span class="menuselection">Sales (Продажи) ‣ Products (Продукция)</span>, создайте новый продукт со следующими параметрами:</p><ul ><li ><p ><strong >Название</strong>: Аудит маркетинговой стратегии</p></li><li ><p ><strong >Тип продукта</strong>: Услуга</p></li><li ><p >** Защита счет-фактуры**: Доставленное количество, так как вы будете выставлять счета после выполнения этапа</p></li><li ><p ><strong >Учет количества (Track Service)</strong>: Ручная установка количества в заказе, по мере завершения каждого этапа вы вручную вводите количество во вкладке <strong >Доставлено (Delivered)</strong> в вашем заказе клиента (sale order)</p></li></ul><img src="../../../_images/milestones02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >По такому же принципу создайте остальные этапы.</p></div></section><section id="managing-your-project"><h2 >Ведение вашего проекта</h2></section><section id="quotations-and-sale-orders"><h3 >Расценки и заказы клиента</h3><p >Теперь, когда ваши этапы (продукты) созданы, вы можете создать предложение цен или заказ клиента, в которых каждая строка будет соответствовать одному этапу. Для каждой строки установите <strong >Заказанное количество</strong> <code >1</code>, так как каждый этап выполняется один раз. Как только предложение цены будет согласовано и преобразована в заказ клиента, вы сможете изменить доставленное количество при завершении этапа.</p><img src="../../../_images/milestones03.png" class="img-responsive center-block"></section><section id="invoice-milestones"><h3 >поэтапные счета</h3><p >Предположим, что ваш первый этап (аудит стратегии) ​​был успешно завершен, и вы хотите его выставить за него счет заказчику. В заказе на продажу нажмите <strong >Вход</strong> и установите <strong >Доставленное количество</strong> соответствующего продукта <code >1</code>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Обратите внимание: как только изменения будет сохранены, цвет строки изменится на синий. Это означает, что за услугу можно выставить счет. В то же время статус счета SO (заказа клиента) изменился с <strong >Nothing To Invoice(Нет доступных позиций для счёта)</strong> на Созданный счет</p></div><p >Нажмите <strong >Создать счет</strong> и в появившемся окне выберите <strong >Доступные для счета строки (Invoiceable lines)</strong> и подтвердите. Будет создан новый счет (в статусе черновика). В счете будет только <strong >Аудит маркетинговой стратегии</strong>.</p><img src="../../../_images/milestones04.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Чтобы иметь возможность выставлять счет на продукт, вам необходимо настроить приложение <strong >Бухгалтерский учет (Accounting)</strong> и настроить журнал учета и план счетов. Нажмите ссылку, чтобы узнать больше: <a href="../../../accounting/overview/getting_started/setup.html" class="internal alert-link reference"><span class="doc">How to setup Odoo Accounting?</span></a></p></div><p >В своем заказе клиента вы заметите, что колонка <strong >Счет выставлен (Invoiced)</strong> вашей строки заказа обновлена ​​соответствующим образом и что <strong >Статус счета (Invoice Status)</strong> вернется опять к <strong >Нет позиций для счета</strong>.</p><p >Следуйте тому же алгоритму, чтобы выставить счет на оставшиеся этапы.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="recurring.html" class="internal alert-link reference"><span class="doc">Как выставлять периодическую счет-фактуру (по договорам)?</span></a></li><li ><a href="time_materials.html" class="internal alert-link reference"><span class="doc">Как выставлять счета на основе времени и материала?</span></a></li><li ><a href="reinvoice.html" class="internal alert-link reference"><span class="doc">Как выставить дополнительный счет за расходы вашим клиентам?</span></a></li><li ><a href="support.html" class="internal alert-link reference"><span class="doc">Как выставит счет по договору на поддержку (за оплаченные ранее часы)?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

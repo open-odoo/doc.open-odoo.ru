@@ -1,0 +1,291 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Users and Features &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../_static/atom.js"></script>
+    <script type="text/javascript" src="../_static/immutable.js"></script>
+    <script type="text/javascript" src="../_static/react.min.js"></script>
+    <script type="text/javascript" src="../_static/accounts.js"></script>
+    <script type="text/javascript" src="../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../_static/entries.js"></script>
+    <script type="text/javascript" src="../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../_static/misc.js"></script>
+    <script type="text/javascript" src="../_static/inventory.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../index.html" />
+    <link rel="up" title="Practical Information" href="../practical.html" />
+    <link rel="next" title="Online Database management" href="db_online.html" />
+    <link rel="prev" title="Odoo Online Implementation" href="../getting_started/documentation.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (10.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Users and Features</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/db_management/documentation.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/db_management/documentation.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/db_management/documentation.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/users.jpg');"></span>
+      <div class="container text-center">
+        <h1> Users and Features - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#deactivating-users" class="ripple internal reference">Deactivating Users</a></li><li class="list-group-item"><a href="#uninstalling-apps" class="ripple internal reference">Uninstalling Apps</a></li><li class="list-group-item"><a href="#good-to-know" class="ripple internal reference">Good to know</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/db_management/documentation.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="users-and-features"><i id="db-management-documentation"></i><p >As the administrator of your database, you are responsible for its usage.
+This includes the Apps you install as well as the number of users currently
+in use.</p><p >Odoo is many things (ERP, CMS, CRM application, e-Commerce backend, etc.)
+but it is <em >not</em> a smartphone. You should apply caution when adding/removing
+features (especially Apps) on your database since this may impact your
+subscription amount significantly (or switch you from a free account
+to a paying one on our online platform).</p><p >This page contains some information as to how you can manage your Odoo
+instances. Before carrying any of these procedures, we <strong >strongly</strong> advise
+to test them on a duplicate of your database first. That way, if something goes
+wrong, your day-to-day business is not impacted.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You can find guides on how to duplicate your databases both for
+<a href="db_online.html#duplicate-online" class="internal alert-link reference"><span class="std std-ref">online</span></a> and <a href="db_premise.html#duplicate-premise" class="internal alert-link reference"><span class="std std-ref">on premise</span></a>
+installations.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you have questions about the content of this page or if you
+encounter an issue while carrying out these procedures, please contact
+us through our <a href="https://www.odoo.com/help" class="external reference alert-link">support form</a>.</p></div></section><section id="deactivating-users"><h2 >Deactivating Users</h2><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Make sure you have sufficient <strong >administrative rights</strong> if
+you want to change the status of any of your users.</p></div><p >In your Odoo instance, click on <strong >Settings</strong>. You will have a section
+showing you the active users on your database. Click on <strong >Manage
+access rights.</strong></p><table class="table"><tbody ><tr ><td ><img src="../_images/settings_app.png" alt="settings" class="img-responsive"></td><td ><img src="../_images/browse_users.png" alt="browse_users" class="img-responsive"></td></tr></tbody></table><p >You'll then see the list of your users.</p><img src="../_images/list_users.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The pre-selected filter <em >Internal Users</em> shows your paying
+users (different from the <em >Portal Users</em> which are free). If you
+remove this filter, you'll get all your users (the ones you pay for
+and the portal ones)</p></div><p >In your list of users, click on the user you want to deactivate. As soon
+as you are on the userform, go with your mouse cursor on the status
+<strong >Active</strong> (top right). Click on Active and you will notice that the
+status will change to <strong >Inactive</strong> immediately.</p><img src="../_images/deactivate_user.gif" class="img-responsive center-block"><p >The user is now deactivated.</p><div role="alert" class="alert-danger alert"><p class="alert-title">Danger</p><p ><strong >Never</strong> deactivate the main user (<em >admin</em>)</p></div></section><section id="uninstalling-apps"><h2 >Uninstalling Apps</h2><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Make sure you first test what you are about to do on a
+<a href="db_online.html#duplicate-online" class="internal alert-link reference"><span class="std std-ref">duplicate</span></a> of your database before making any
+changes (<em >especially</em> installing/uninstalling apps).</p></div><p >In your Odoo instance click on <strong >Settings</strong>; in this app, you will be
+able to see how many applications you have installed. Click on <strong >Browse
+Apps</strong> to access the list of your installed applications.</p><table class="table"><tbody ><tr ><td ><img src="../_images/settings_app.png" alt="settings" class="img-responsive"></td><td ><img src="../_images/browse_apps.png" alt="browse_apps" class="img-responsive"></td></tr></tbody></table><p >In your applications' dashboard, you will see all the icons of your
+applications. Click on the application you want to uninstall. Then, on
+the form of the application, click on <strong >Uninstall</strong>.</p><img src="../_images/uninstall.png" class="img-responsive center-block"><div role="alert" class="alert-danger alert"><p class="alert-title">Danger</p><p >Some applications have dependencies, like Invoicing, eCommerce,
+etc. Therefore, the system will give you a warning message to advise
+you of what is about to be removed. If you uninstall your application,
+all its dependencies will be uninstalled as well (and the data in them
+will permanently disappear). If you are sure you still want to uninstall
+it, then click <strong >Confirm</strong>.</p></div><p >Last, after having checked the warning message (if any), click <strong >Confirm</strong>.</p><img src="../_images/uninstall_deps.png" class="img-responsive center-block"><p >You have finished uninstalling your application.</p></section><section id="good-to-know"><h2 >Good to know</h2><ul ><li ><strong >Uninstalling apps, managing users, etc. is up to you</strong>: no one else can
+know if your business flow is broken better than you. If we were to uninstall
+applications for you, we would never be able to tell if relevant data had
+been removed or if one of your business flow was broken because we <em >do not
+know how you work</em> and therefore cannot validate these kinds of operations.</li><li ><strong >Odoo Apps have dependencies</strong>: this means that you may need to install
+modules that you do not actively use to access some features of Odoo
+you might need. For example, the Website Builder app is needed to be
+able to show your customer their Quotes in a web page. Even though you
+might not need or use the Website itself, it is needed for the Online
+Quotes feature to work properly.</li><li ><strong >Always test app installation/removal on a duplicate</strong> (or on a
+free trial database): that way you can know what other apps may
+be required, etc. This will avoid surprises when uninstalling
+or when receiving your invoices.</li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

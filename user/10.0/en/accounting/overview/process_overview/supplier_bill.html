@@ -1,0 +1,312 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>From Vendor Bills to Payments &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Process overview" href="../process_overview.html" />
+    <link rel="next" title="Account Receivables" href="../../receivables.html" />
+    <link rel="prev" title="From Invoice to Payment Collection" href="customer_invoice.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">From Vendor Bills to Payments</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/accounting/overview/process_overview/supplier_bill.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting/overview/process_overview/supplier_bill.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/accounting/overview/process_overview/supplier_bill.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> From Vendor Bills to Payments - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#from-vendor-bill-to-payment" class="ripple internal reference">From Vendor Bill to Payment</a><ul ><li class="list-group-item"><a href="#record-a-new-vendor-bill" class="ripple internal reference">Record a new vendor bill</a></li><li class="list-group-item"><a href="#validate-the-vendor-bill" class="ripple internal reference">Validate The Vendor Bill</a></li><li class="list-group-item"><a href="#pay-a-bill" class="ripple internal reference">Pay a bill</a></li><li class="list-group-item"><a href="#printing-vendor-checks" class="ripple internal reference">Printing vendor Checks</a></li></ul></li><li class="list-group-item"><a href="#reporting" class="ripple internal reference">Reporting</a><ul ><li class="list-group-item"><a href="#aged-payable-balance" class="ripple internal reference">Aged payable balance</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/accounting/overview/process_overview/supplier_bill.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="from-vendor-bills-to-payments"><p >Once vendor bills are registered in Odoo, you can easily pay vendors for
+the correct amount and at the right time (not too late, not too early;
+depending on your vendor policy). Odoo also offers reports to track your
+aged payable balances.</p><p >If you want to control vendor bills received from your vendors, you can
+use the Odoo Purchase application that allows you to control and
+pre-complete them automatically based on past purchase orders.</p></section><section id="from-vendor-bill-to-payment"><h2 >From Vendor Bill to Payment</h2></section><section id="record-a-new-vendor-bill"><h3 >Record a new vendor bill</h3><p >When a vendor bill is received, you can record it from <span class="menuselection">Purchases ‣ Vendor Bills</span>
+in the Accounting application. As a shortcut,
+you can also use the <strong >New Bill</strong> feature on the accounting dashboard.</p><img src="../../../_images/vendor_bill05.png" class="img-responsive center-block"><p >To register a new vendor bill, start by selecting a vendor and inputting
+their invoice as the <strong >Vendor Reference</strong>, then add and confirm the product
+lines, making sure to have the right product quantities, taxes and
+prices.</p><img src="../../../_images/vendor_bill01.png" class="img-responsive center-block"><p >Save the invoice to update the pre tax and tax amounts at the bottom of
+the screen. You will most likely need to configure the prices of your
+products without taxes as Odoo will compute the tax for you.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >On the bottom left corner, Odoo shows a summary table of all taxes on the vendor bill.
+In several countries, different methods are accepted to round the totals (round per line,
+or round globally). The default rounding method in Odoo is to round the final prices
+per line (as you may have different taxes per product. E.g. Alcohol and cigarettes).
+However if your vendor has a different tax amount on their bill, you can change the
+amount in the bottom left table to adjust and match.</p></div></section><section id="validate-the-vendor-bill"><h3 >Validate The Vendor Bill</h3><p >Once the vendor bill is validated, a journal entry will be generated
+based on the configuration on the invoice. This journal entry may differ
+depending on the the accounting package you choose to use.</p><p >For most European countries, the journal entry will use the following
+accounts:</p><ul ><li ><strong >Accounts Payable:</strong> defined on the vendor form</li><li ><strong >Taxes:</strong> defined on the products and per line</li><li ><strong >Expenses:</strong> defined on the line item product used</li></ul><p >For Anglo-Saxon (US) accounting, the journal entry will use the
+following accounts:</p><ul ><li ><strong >Accounts Payable:</strong> defined on the vendor form</li><li ><strong >Taxes:</strong> defined on the products and per line</li><li ><strong >Goods Received:</strong> defined on the product form</li></ul><p >You can check your Profit &amp; Loss or the Balance Sheet reports after
+having validated a couple of vendor bills to see the impact on your
+general ledger.</p></section><section id="pay-a-bill"><h3 >Pay a bill</h3><p >To create a payment for an open vendor bill directly, you can click on <strong >Register a
+Payment</strong> at the top of the form.</p><p >From there, you select the payment method (i.e. Checking account, credit
+card, check, etc…) and the amount you wish to pay. By default, Odoo will
+propose the entire remaining balance on the bill for payment. In the
+memo field, we recommend you set the vendor invoice number as a
+reference (Odoo will auto fill this field from the from the vendor bill
+if set it correctly).</p><img src="../../../_images/vendor_bill06.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You can also register a payment to a vendor directly without applying it to a vendor bill.
+To do that, <span class="menuselection">Purchases ‣ Payments</span>. Then,
+from the vendor bill you will be able to reconcile this payment with directly.</p></div></section><section id="printing-vendor-checks"><h3 >Printing vendor Checks</h3><p >If you choose to pay your vendor bills by check, Odoo offers a method to
+do so directly from your vendor payments within Odoo. Whether you do so
+on a daily basis or prefer to do so at the end of the week, you can
+print in checks in batches.</p><p >If you have checks to print, Odoo's accounting dashboard acts as a to do
+list and reminds you of how many checks you have left to be printed.</p><img src="../../../_images/vendor_bill02.png" class="img-responsive center-block"><p >By selecting the amount of checks to be printed, you can dive right into
+a list of all payments that are ready to be processed.</p><p >Select all the checks you wish to print (use the first checkbox to
+select them all) and set the action to <strong >Print Checks</strong>. Odoo will ask you
+to set the next check number in the sequence and will then print all the
+checks at once.</p><img src="../../../_images/vendor_bill03.png" class="img-responsive center-block"></section><section id="reporting"><h2 >Reporting</h2></section><section id="aged-payable-balance"><h3 >Aged payable balance</h3><p >In order to get a list of open vendor bills and their related due dates,
+you can use the <strong >Aged Payable</strong> report, under the reporting menu, (in
+<span class="menuselection">Reporting ‣ Business Statement ‣ Aged payable</span>) to get a visual of all of
+your outstanding bills.</p><img src="../../../_images/vendor_bill04.png" class="img-responsive center-block"><p >From here, you can click directly on a vendors name to open up the
+details of all outstanding bills and the amounts due, or you can
+annotate any line for managements information. At any point in time
+while you're looking through the report, you can print directly to Excel
+or PDF and get exactly what you see on the screen.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="customer_invoice.html" class="internal alert-link reference"><span class="doc">From Invoice to Payment Collection</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

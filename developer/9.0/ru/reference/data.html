@@ -1,0 +1,261 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Файлы с данными &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Действия" href="actions.html" />
+    <link rel="prev" title="ORM API" href="orm.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (9.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Файлы с данными</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/en/reference/data.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/reference/data.html">8.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/data.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/data.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/ru/">Пользователю</a></li>
+<li><a href="/developer/9.0/ru/">Разработчику</a></li>
+<li><a href="/developer/9.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/data_files.jpg');"></span>
+      <div class="container text-center">
+        <h1> Файлы с данными - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#structure" class="ripple internal reference">Структура</a></li><li class="list-group-item"><a href="#core-operations" class="ripple internal reference">Базовые операции</a><ul ><li class="list-group-item"><a href="#record" class="ripple internal reference"><code >record</code></a><ul ><li class="list-group-item"><a href="#field" class="ripple internal reference"><code >field</code></a></li></ul></li><li class="list-group-item"><a href="#delete" class="ripple internal reference"><code >delete</code></a></li><li class="list-group-item"><a href="#function" class="ripple internal reference"><code >function</code></a></li><li class="list-group-item"><a href="#workflow" class="ripple internal reference"><code >workflow</code></a></li></ul></li><li class="list-group-item"><a href="#shortcuts" class="ripple internal reference">Ссылки</a><ul ><li class="list-group-item"><a href="#menuitem" class="ripple internal reference"><code >menuitem</code></a></li><li class="list-group-item"><a href="#template" class="ripple internal reference"><code >template</code></a></li><li class="list-group-item"><a href="#report" class="ripple internal reference">Отчёт!</a></li></ul></li><li class="list-group-item"><a href="#csv-data-files" class="ripple internal reference">Файлы данных CSV</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/9.0/doc/reference/data.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="data-files"><i id="reference-data"></i><p >Odoo это управляемая данными система и большая часть описания модуля это описание различных записей, которые управляют: Пользовательским интерфейсом (меню и представления), безопасностью (права доступа и правила доступа), печатные формы(отчеты) и обычные данные описаны через записи в таблицах базы данных,</p></section><section id="structure"><h2 >Структура</h2><p >Основной способ описать данные в Odoo это XML файлы. Структура XML файла следующая:</p><ul ><li ><p >Любое количество элементов операции в корневом элементе `` odoo``</p></li></ul><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="c">&lt;!-- the root elements of the data file --&gt;</span>
+<span class="nt">&lt;odoo&gt;</span>
+  <span class="nt">&lt;operation/&gt;</span>
+  ...
+<span class="nt">&lt;/odoo&gt;</span>
+</pre></div>
+</div>
+<p >Файлы данных выполняются последовательно, операции могут только ссылаться на результату операции, определенной ранее.</p></section><section id="core-operations"><h2 >Базовые операции</h2></section><section id="record"><i id="reference-data-record"></i><h3 ><code >record</code></h3><p ><code >record</code> надлежащим образом определяет или обновляет запись в базе данных, имеет следующие атрибуты:</p><dl ><dt ><code >model</code> (обязательный)</dt><dd ><p >имя модели данных, которую необходимо создать (или обновить)</p></dd><dt ><code >id</code></dt><dd ><p >the <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a> для этой записи. Настоятельно рекомендуется указывать, чтобы обеспечить</p><ul ><li ><p >создание записи, позволяет последующим определениям также модифицировать или ссылаться на эту запись</p></li><li ><p >модификацию записи, для того чтобы изменить ее значения</p></li></ul></dd><dt ><code >context</code></dt><dd ><p >контекст используется, когда при создании записи</p></dd><dt ><code >forcecreate</code></dt><dd ><p >В режиме обновления должна ли создаваться запись, если она не существует</p><p >Требует <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>, по умолчанию <code >True</code>.</p></dd></dl></section><section id="field"><h4 ><code >field</code></h4><p >Каждая запись может состоять из тегов <code >field</code>, определяющих значения полей при создании записи. Элемент <code >record</code> без элементов <code >field</code> будет использовать все значения по умолчанию (при создании) или ничего не делать (при обновлении).</p><p >Поле <code >field</code> имеет обязательный атрибут <code >name</code>, имя устанавливаемого поля и различные методы для определения самого значения:</p><dl ><dt >Nothing</dt><dd ><p >Если для поля не указано значение, в поле будет установлено неявное значение <code >False</code>. Может использоваться для очистки поля или для исключения использования значения по умолчанию для поля.</p></dd><dt ><code >search</code></dt><dd ><p >для <a href="orm.html#reference-orm-fields-relational" class="internal reference"><span class="std std-ref">реляционных полей</span></a>, должно быть <a href="orm.html#reference-orm-domains" class="internal reference"><span class="std std-ref">domain</span></a> в поле модели данных.</p><p >Будет оценивать домен, искать его в модели поля и задавать результат поиска в качестве значения поля. Если это поле <a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a>, то будет использовать только первый результат,</p></dd><dt ><code >ref</code></dt><dd ><p >Если указан атрибут <code >ref</code>, его значением должен быть существующий <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>, который будет находится и устанавливаться в качестве значения поля.</p><p >В основном для <a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a> и <a href="orm.html#openerp.fields.Reference" class="internal reference" title="openerp.fields.Reference"><code class="py xref py-class">Reference</code></a> полей.</p></dd><dt ><code >type</code></dt><dd ><p >Если указан атрибут <code >type</code>, он используется для интерпретации и преобразования содержимого поля. Содержимое поля может быть предоставлено через внешний файл, используя атрибут <code >file</code>, или через тело узла.</p><p >Доступные типы:</p><dl ><dt ><code >xml</code>, <code >html</code></dt><dd ><p >Извлекает дочерние элементы <code >field</code> как единый документ, Оценивает любой <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> указанный в форме <code >%(external_id)s</code>. <code >%%</code> может использоваться для вывода фактических знаков <em >%</em>.</p></dd><dt ><code >file</code></dt><dd ><p >гарантирует, что содержимое поля является правильным путем к файлу в текущей модели данных, сохраняет  <code class="samp"><em >module</em>,<em >path</em></code> как значение поля</p></dd><dt ><code >char</code></dt><dd ><p >Устанавливает содержимое поля непосредственно как значение поля без изменений</p></dd><dt ><code >base64</code></dt><dd ><p ><a href="http://tools.ietf.org/html/rfc3548.html#section-3" class="external reference">Base64</a>-кодирует содержимое поля, полезно в сочетании с атрибутом <code >file</code> * * для загрузки, например, данных изображения в вложения</p></dd><dt ><code >int</code></dt><dd ><p >преобразует содержимое поля в целое число и устанавливает его как значение поля</p></dd><dt ><code >float</code></dt><dd ><p >преобразует содержимое поля в float и устанавливает его как значение поля</p></dd><dt ><code >list</code>, <code >tuple</code></dt><dd ><p >должно содержать любое количество элементов <code >value</code> с одинаковыми свойствами, что и <code >field</code>, каждый элемент обрабатывается элементом генерируемого кортежа или списка, а сгенерированная коллекция устанавливается как значение поля</p></dd></dl></dd><dt ><code >eval</code></dt><dd ><p >для случаев, когда предыдущие методы не подходят, атрибуты <code >eval</code> просто вычисляют любое выражение Python, которое оно предоставляет, и задают результат как значение поля.</p><p >Вычисляемый контекст содержит различные модули (<code >time</code>, <code >datetime</code>, <code >timedelta</code>, <code >relativedelta</code>), функцию разрешения <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a> (<code >ref</code>) и объект модели данных для текущего поля, если это применимо (<code >obj</code>)</p></dd></dl></section><section id="delete"><h3 ><code >delete</code></h3><p >Тег <code >delete</code> может удалить любое количество ранее определенных записей. Он имеет следующие атрибуты:</p><dl ><dt ><code >model</code> (обязательный)</dt><dd ><p >модель данных, в которой должна быть удалена указанная запись</p></dd><dt ><code >id</code></dt><dd ><p ><a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> записи для удаления</p></dd><dt ><code >search</code></dt><dd ><p ><a href="orm.html#reference-orm-domains" class="internal reference"><span class="std std-ref">домен</span></a> для поиска записей удаляемых из модели данных</p></dd></dl><p ><code >Id</code> и <code >search</code> являются эксклюзивными</p></section><section id="function"><h3 ><code >function</code></h3><p >Тег <code >function</code> вызывает метод в модели данных с указанными параметрами. Он имеет два обязательных параметра <code >model</code> и <code >name</code>, с указанием модели данных и имени, вызываемого метода, соответственно.</p><p >Параметры могут быть предоставлены с помощью <code >eval</code> (необходимо правильно установить последовательность, передаваемых с методом, значений) или с <code >value</code> элементов (см. <code >list</code>).</p></section><section id="workflow"><h3 ><code >workflow</code></h3><p >Тег <code >workflow</code> отправляет сигнал в существующий бизнес-процесс. Бизнес-процесс может быть указан через атрибут <code >ref</code> (<a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> существующего бизнес-процесса) или тег <code >value</code>, возвращающий идентификатор бизнес-процесса.</p><p >Тег так же имеет два обязательных атрибута <code >model</code> (модель данных связанная с бизнес-процессом) и  <code >action</code> (имя сигнала для отправки в бизнес-процесс).</p></section><section id="shortcuts"><h2 >Ссылки</h2><p >Поскольку некоторые важные структурные модели Odoo сложны и связаны между собой, файлы данных предоставляют более короткие альтернативы их определения с использованием тегов <a href="#reference-data-record" class="internal reference"><span class="std std-ref">record</span></a>:</p></section><section id="menuitem"><h3 ><code >menuitem</code></h3><p >Определяет запись <code >ir.ui.menu</code> с некоторым рядом значений по умолчанию и выпадающих элементов:</p><dl ><dt >Родительское меню</dt><dd ><ul ><li ><p >Если установлен атрибут <code >parent</code> он должен быть <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> другого элемента меню, который будет использоваться в качестве родительского элемента нового элемента меню</p></li><li ><p >Если не указано ни одного <code >parent</code>, то система попытается интерпретировать атрибут <code >name</code> как <code >/</code>-разделяемую последовательность имен меню и найти место в иерархии меню. В этой интерпретации автоматически создаются промежуточные меню</p></li><li ><p >В противном случае меню определяется как &quot;top-level&quot; пункт меню (не меню без родителя)</p></li></ul></dd><dt >Наименование меню</dt><dd ><p >Если атрибут <code >name</code> не указан, он пытается получить имя меню из связанного действия, если оно есть. В противном случае используется <code >id</code> записи</p></dd><dt >Группы</dt><dd ><p >Атрибут <code >groups</code> интерпретируется как разделенная запятыми последовательность <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a> для модели данных <code >res.groups</code>. Если <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a> имеет префикс минус (<code >-</code>), группа удаляется из групп меню</p></dd><dt ><code >action</code></dt><dd ><p >Если указано, атрибут <code >action</code> должен быть <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> действия, выполняемого при открытии меню</p></dd><dt ><code >id</code></dt><dd ><p ><a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> элемента меню</p></dd></dl></section><section id="template"><i id="reference-data-template"></i><h3 ><code >template</code></h3><p >Создает <a href="views.html#reference-views-qweb" class="internal reference"><span class="std std-ref">QWeb view</span></a> требующее только раздел <code >arch</code> представления, и позволяет задействовать несколько дополнительных атрибутов:</p><dl ><dt ><code >id</code></dt><dd ><p ><a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a> представления</p></dd><dt ><code >name</code>, <code >inherit_id</code>, <code >priority</code></dt><dd ><p >То же, что и соответствующее поле в <code >ir.ui.view</code> (nb: <code >inherit_id</code> должен быть <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a>)</p></dd><dt ><code >primary</code></dt><dd ><p >Если установлено в <code >True</code> и объединено с <code >inherit_id</code>, определяет представление как первичное</p></dd><dt ><code >groups</code></dt><dd ><p >список <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a> групп через запятую</p></dd><dt ><code >page</code></dt><dd ><p >если установлено значение <code >True</code>, шаблон представляет собой страницу веб-сайта (с возможностью ссылаться на нее, удалять)</p></dd><dt ><code >optional</code></dt><dd ><p ><code >enabled</code> или <code >disabled</code>, можно ли отключить представление (в интерфейсе веб-сайта) и его статус по умолчанию. Если не установлен, представление всегда включено.</p></dd></dl></section><section id="report"><h3 >Отчёт!</h3><p >Создает запись <code >ir.actions.report.xml</code> с несколькими значениями по умолчанию.</p><p >В основном только присваивает атрибуты соответствующим полям в <code >ir.actions.report.xml</code>, а также автоматически создает элемент в меню <span class="guilabel">Еще</span> для модели данных, для которой создается печатная форма.</p></section><section id="csv-data-files"><h2 >Файлы данных CSV</h2><p >Файлы данных XML являются гибкими и самодостаточными, но очень избыточными при создании большого числа простых записей для одной и той же модели данных.</p><p >В этом случае файлы также могут быть и <a href="http://en.wikipedia.org/wiki/Comma-separated_values" class="external reference">csv</a> формата, данный вид файлов часто применяется при описании <a href="security.html#reference-security-acl" class="internal reference"><span class="std std-ref">прав доступа</span></a>:</p><ul ><li ><p >имя файла <code class="file"><em >model_name</em>.csv</code></p></li><li ><p >В первой строке перечисляются поля для записи со специальным полем <code >id</code> для <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a> (используются для создания или обновления записей)</p></li><li ><p >каждая последующая строка создает новую запись</p></li></ul><p >Ниже приведены первые строки файла, определяющего штаты США <code >res.country.state.csv</code></p><div class="highlight-text"><div class="highlight"><pre><span></span>&quot;id&quot;,&quot;country_id:id&quot;,&quot;name&quot;,&quot;code&quot;
+state_au_1,au,&quot;Australian Capital Territory&quot;,&quot;ACT&quot;
+state_au_2,au,&quot;New South Wales&quot;,&quot;NSW&quot;
+state_au_3,au,&quot;Northern Territory&quot;,&quot;NT&quot;
+state_au_4,au,&quot;Queensland&quot;,&quot;QLD&quot;
+state_au_5,au,&quot;South Australia&quot;,&quot;SA&quot;
+state_au_6,au,&quot;Tasmania&quot;,&quot;TAS&quot;
+state_au_7,au,&quot;Victoria&quot;,&quot;VIC&quot;
+state_au_8,au,&quot;Western Australia&quot;,&quot;WA&quot;
+state_us_1,us,&quot;Alabama&quot;,&quot;AL&quot;
+state_us_2,us,&quot;Alaska&quot;,&quot;AK&quot;
+state_us_3,us,&quot;Arizona&quot;,&quot;AZ&quot;
+state_us_4,us,&quot;Arkansas&quot;,&quot;AR&quot;
+state_us_5,us,&quot;California&quot;,&quot;CA&quot;
+state_us_6,us,&quot;Colorado&quot;,&quot;CO&quot;
+</pre></div>
+</div>
+<p >в более читаемом формате:</p><table class="table table-hover table-striped table-condensed"><thead ><tr ><th >id</th><th >country_id:id</th><th >name</th><th >code</th></tr></thead><tbody ><tr ><td >state_au_1</td><td >au</td><td >Australian Capital Territory</td><td >ACT</td></tr><tr ><td >state_au_2</td><td >au</td><td >New South Wales</td><td >NSW</td></tr><tr ><td >state_au_3</td><td >au</td><td >Northern Territory</td><td >NT</td></tr><tr ><td >state_au_4</td><td >au</td><td >Queensland</td><td >QLD</td></tr><tr ><td >state_au_5</td><td >au</td><td >South Australia</td><td >SA</td></tr><tr ><td >state_au_6</td><td >au</td><td >Tasmania</td><td >TAS</td></tr><tr ><td >state_au_7</td><td >au</td><td >Victoria</td><td >VIC</td></tr><tr ><td >state_au_8</td><td >au</td><td >Western Australia</td><td >WA</td></tr><tr ><td >state_us_1</td><td >us</td><td >Alabama</td><td >AL</td></tr><tr ><td >state_us_2</td><td >us</td><td >Alaska</td><td >AK</td></tr><tr ><td >state_us_3</td><td >us</td><td >Arizona</td><td >AZ</td></tr><tr ><td >state_us_4</td><td >us</td><td >Arkansas</td><td >AR</td></tr><tr ><td >state_us_5</td><td >us</td><td >California</td><td >CA</td></tr><tr ><td >state_us_6</td><td >us</td><td >Colorado</td><td >CO</td></tr><tr ><td >state_us_7</td><td >us</td><td >Connecticut</td><td >CT</td></tr><tr ><td >state_us_8</td><td >us</td><td >Delaware</td><td >DE</td></tr><tr ><td >state_us_9</td><td >us</td><td >District of Columbia</td><td >DC</td></tr><tr ><td >state_us_10</td><td >us</td><td >Florida</td><td >FL</td></tr><tr ><td >state_us_11</td><td >us</td><td >Georgia</td><td >GA</td></tr><tr ><td >state_us_12</td><td >us</td><td >Hawaii</td><td >HI</td></tr><tr ><td >state_us_13</td><td >us</td><td >Idaho</td><td >ID</td></tr><tr ><td >state_us_14</td><td >us</td><td >Illinois</td><td >IL</td></tr><tr ><td >state_us_15</td><td >us</td><td >Indiana</td><td >IN</td></tr><tr ><td >state_us_16</td><td >us</td><td >Iowa</td><td >IA</td></tr><tr ><td >state_us_17</td><td >us</td><td >Kansas</td><td >KS</td></tr><tr ><td >state_us_18</td><td >us</td><td >Kentucky</td><td >KY</td></tr><tr ><td >state_us_19</td><td >us</td><td >Louisiana</td><td >LA</td></tr><tr ><td >state_us_20</td><td >us</td><td >Maine</td><td >ME</td></tr><tr ><td >state_us_21</td><td >us</td><td >Montana</td><td >MT</td></tr><tr ><td >state_us_22</td><td >us</td><td >Nebraska</td><td >NE</td></tr><tr ><td >state_us_23</td><td >us</td><td >Nevada</td><td >NV</td></tr><tr ><td >state_us_24</td><td >us</td><td >New Hampshire</td><td >NH</td></tr><tr ><td >state_us_25</td><td >us</td><td >New Jersey</td><td >NJ</td></tr><tr ><td >state_us_26</td><td >us</td><td >New Mexico</td><td >NM</td></tr><tr ><td >state_us_27</td><td >us</td><td >New York</td><td >NY</td></tr><tr ><td >state_us_28</td><td >us</td><td >North Carolina</td><td >NC</td></tr><tr ><td >state_us_29</td><td >us</td><td >North Dakota</td><td >ND</td></tr><tr ><td >state_us_30</td><td >us</td><td >Ohio</td><td >OH</td></tr><tr ><td >state_us_31</td><td >us</td><td >Oklahoma</td><td >OK</td></tr><tr ><td >state_us_32</td><td >us</td><td >Oregon</td><td >OR</td></tr><tr ><td >state_us_33</td><td >us</td><td >Maryland</td><td >MD</td></tr><tr ><td >state_us_34</td><td >us</td><td >Massachusetts</td><td >MA</td></tr><tr ><td >state_us_35</td><td >us</td><td >Michigan</td><td >MI</td></tr><tr ><td >state_us_36</td><td >us</td><td ><p >Миннесота</p></td><td >MN</td></tr><tr ><td >state_us_37</td><td >us</td><td >Mississippi</td><td >MS</td></tr><tr ><td >state_us_38</td><td >us</td><td >Missouri</td><td >MO</td></tr><tr ><td >state_us_39</td><td >us</td><td >Pennsylvania</td><td >PA</td></tr><tr ><td >state_us_40</td><td >us</td><td >Rhode Island</td><td >RI</td></tr><tr ><td >state_us_41</td><td >us</td><td >South Carolina</td><td >SC</td></tr><tr ><td >state_us_42</td><td >us</td><td >South Dakota</td><td >SD</td></tr><tr ><td >state_us_43</td><td >us</td><td >Tennessee</td><td >TN</td></tr><tr ><td >state_us_44</td><td >us</td><td >Texas</td><td >TX</td></tr><tr ><td >state_us_45</td><td >us</td><td >Utah</td><td >UT</td></tr><tr ><td >state_us_46</td><td >us</td><td >Vermont</td><td >VT</td></tr><tr ><td >state_us_47</td><td >us</td><td >Virginia</td><td >VA</td></tr><tr ><td >state_us_48</td><td >us</td><td >Washington</td><td >WA</td></tr><tr ><td >state_us_49</td><td >us</td><td >West Virginia</td><td >WV</td></tr><tr ><td >state_us_50</td><td >us</td><td >Wisconsin</td><td >WI</td></tr><tr ><td >state_us_51</td><td >us</td><td >Wyoming</td><td >WY</td></tr></tbody></table><p >Для каждой строки (записи):</p><ul ><li ><p >первый столбец - <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> записи для создания или обновления</p></li><li ><p >второй столбец -  <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> объекта страны, на который он ссылается (объекты страны должны быть определены заранее)</p></li><li ><p >третий столбец это значение поля <code >name</code> для <code >res.country.state</code></p></li><li ><p >четвертый столбец это значение поля <code >code</code> для <code >res.country.state</code></p></li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

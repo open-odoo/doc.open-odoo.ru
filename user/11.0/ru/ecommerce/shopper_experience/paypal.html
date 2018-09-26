@@ -1,0 +1,261 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как получать оплаты с PayPal &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" />
+    <link rel="up" title="Онлайн оплата" href="../shopper_experience.html" />
+    <link rel="next" title="Как получать оплату с Authorize.Net" href="authorize.html" />
+    <link rel="prev" title="Как получить оплату с помощью эквайринга" href="payment.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../ecommerce.html">Интернет-магазин</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как получать оплаты с PayPal</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/ecommerce/shopper_experience/paypal.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/ecommerce/shopper_experience/paypal.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/ecommerce/shopper_experience/paypal.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как получать оплаты с PayPal - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#set-up-your-paypal-account" class="ripple internal reference">Настройте свой аккаунт PayPal</a></li><li class="list-group-item"><a href="#set-up-odoo" class="ripple internal reference">Настройка Odoo</a></li><li class="list-group-item"><a href="#go-live" class="ripple internal reference">Запуск</a></li><li class="list-group-item"><a href="#transaction-fees" class="ripple internal reference">Комиссия</a></li><li class="list-group-item"><a href="#test-the-payment-flow" class="ripple internal reference">Проверка работы сервиса</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/ecommerce/shopper_experience/paypal.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-get-paid-with-paypal"><p >PayPal-это простой для настройки способ онлайн-оплаты. Он также единственный без абонентской платы. Мы определенно рекомендую его для любого интернет-магазина.</p></section><section id="set-up-your-paypal-account"><h2 >Настройте свой аккаунт PayPal</h2><ul ><li ><p >Создайте бизнес аккаунт PayPal &lt;<a href="https://www.paypal.com" class="external reference">https://www.paypal.com</a>&gt;`__ или улучшите свой аккаунт до уровня <em >бизнес-аккаунт</em> если у вас базовый аккаунт.</p></li><li ><p >Войдите в систему <a href="https://www.paypal.com" class="external reference">PayPal</a> и открыть настройки Вашего профиля.</p><img src="../../_images/paypal_profile.png" class="img-responsive center-block"></li><li ><p >Теперь войдите в меню <strong >My selling tools</strong>.</p><img src="../../_images/paypal_selling_tools.png" class="img-responsive center-block"></li><li ><p >Начнем с <strong >Website Preferences</strong>.</p></li><li ><p >Включить <strong >Auto Return</strong> и введите <strong >Return URL</strong>: &lt;odoo_instance_url&gt;/shop/confirmation. Убедитесь, что этот адрес использует правильный протокол (http или https).</p><img src="../../_images/paypal_auto_return.png" class="img-responsive center-block"></li><li ><p >Включить <strong >Payment Data Transfer **. При сохранении генерируется **Identity Token</strong>. Вам позже будет предложено ввести его в Odoo.</p><img src="../../_images/paypal_data_transfer.png" class="img-responsive center-block"></li><li ><p >Затем, возвращайтесь в свой профиль, чтобы активировать <strong >Instant Payment Notification (IPN)</strong> в <em >My selling tools</em>.</p><p >Введите <strong >Notification URL</strong>: &lt;odoo_instance_url&gt;/payment/paypal/ipn</p><img src="../../_images/paypal_ipn_setup.png" class="img-responsive center-block"></li><li ><p >Теперь вы должны изменить формат кодировки запроса платежа, отправленного Odoo в Paypal. Для этого вернитесь в <em >My selling tools</em> жмите <strong >PayPal button language encoding</strong> в разделе <em >More Selling Tools</em>.</p><img src="../../_images/paypal_button_encoding.png" class="img-responsive center-block"><p >Затем, нажмите кнопку <em >More Options</em> и установить два формата кодирования по умолчанию, как <strong >UTF-8</strong>.</p><img src="../../_images/paypal_more_options.png" class="img-responsive center-block"><img src="../../_images/paypal_encoding_options.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если вы хотите, чтобы ваши клиенты платили без создания счета в PayPal, <strong >Paypal Account Optional</strong> должен быть включен.</p><img src="../../_images/paypal_account_optional.png" class="img-responsive center-block"></div></li></ul></section><section id="set-up-odoo"><h2 >Настройка Odoo</h2><ul ><li ><p >Откройте форму настройка PayPal в <span class="menuselection">Website или Sales или Accounting ‣ Settings ‣ Payment Acquirers+</span>. Введите свой <strong >Email ID</strong> и <strong >Merchant ID</strong> и выберите <strong >использовать IPN</strong>.</p><img src="../../_images/paypal_credentials.png" class="img-responsive center-block"><p >Они обе в вашем профиле PayPal в разделе <span class="menuselection">My business info</span>.</p></li><li ><p >Введите свой <strong >Identity Token</strong> в Odoo (из опции <em >Auto Return</em>). Для этого откройте <em >настройки</em> и включить <strong >Режим разработчика</strong>.</p><img src="../../_images/paypal_debug.png" class="img-responsive center-block"><p >Затем перейти к <span class="menuselection">Settings ‣ Technical ‣ Parameters ‣ System Parameters</span> и создайте параметр со следующими значениями:</p><ul ><li ><p >Ключ: payment_paypal.pdt_token</p></li><li ><p >Значение: ваш PayPal <em >Identity Token</em></p></li></ul><img src="../../_images/paypal_identity_token.png" class="img-responsive center-block"></li></ul></section><section id="go-live"><h2 >Запуск</h2><p >Ваша конфигурация готова! Вы можете сделать видимыми PayPal в вашем интернет магазине, для этого активировать <strong >Production mode</strong>.</p><img src="../../_images/paypal_live.png" class="img-responsive center-block"></section><section id="transaction-fees"><h2 >Комиссия</h2><p >Вы можете взимать дополнительную плату с клиента для оплаты комиссии PayPal . После перенаправления на PayPal, ваш клиент видит дополнительную сумму, которая прибавляется к сумме заказа.</p><p >Чтобы включить эту функцию, перейдите во вкладку <em >Настройки</em> в форме PayPal в Odoo и выберите <em >Add Extra Fees</em>. Комиссии по умолчанию для США можно увидеть ниже.</p><img src="../../_images/paypal_fees.png" class="img-responsive center-block"><p >Чтобы узнать комиссию для Вашей страны, перейдите на страницу <a href="https://www.paypal.com/webapps/mpp/paypal-fees" class="external reference">Paypal Fees</a>.</p></section><section id="test-the-payment-flow"><h2 >Проверка работы сервиса</h2><p >Вы можете проверить работу системы благодаря Paypal Sandbox.</p><ul ><li ><p >Авторизируйтесь на <a href="https://developer.paypal.com" class="external reference">Paypal Developer Site</a> с вашими учетными данными на PayPal. Это позволит создать две песочницы счетов:</p><ul ><li ><p >Бизнес счет (для использования в качестве продавца, напр. <a href="mailto:pp.merch01-facilitator@example.com" class="external reference">pp.merch01-facilitator@example.com</a>).</p></li><li ><p >Личного счета по умолчанию (для использования в качестве покупателя, например <a href="mailto:pp.merch01-buyer@example.com" class="external reference">pp.merch01-buyer@example.com</a>).</p></li></ul></li><li ><p >Авторизируйтесь в <a href="https://www.sandbox.paypal.com" class="external reference">Paypal Sandbox</a> с учетной записью продавца и следовать тем же инструкциям по настройке.</p></li><li ><p >Введите ваши учетные данные в песочнице в Odoo и убедитесь, что PayPal работает в <em >тест</em> режим. Кроме того, убедитесь, что режим подтверждения PayPal не <em >Authorize &amp; capture the amount, confirm the SO and auto-validate the invoice on acquirer confirmation</em>. В противном случае подтвержденного счет-фактура будет автоматически создаваться при завершении сделки.</p></li><li ><p >Протестируйте транзакции с использованием песочницы Личный счет.</p></li></ul><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="payment.html" class="internal alert-link reference"><span class="doc">Как получить оплату с помощью эквайринга</span></a></li><li ><a href="payment_acquirer.html" class="internal alert-link reference"><span class="doc">Как управлять заказами, оплаченными покупателями</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

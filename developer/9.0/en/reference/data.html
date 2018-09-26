@@ -1,0 +1,330 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Data Files &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="Actions" href="actions.html" />
+    <link rel="prev" title="ORM API" href="orm.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (9.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Data Files</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/ru/reference/data.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/en/reference/data.html">8.0</a></li>
+        
+            <li><a href="/developer/10.0/en/reference/data.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/en/reference/data.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/data_files.jpg');"></span>
+      <div class="container text-center">
+        <h1> Data Files - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#structure" class="ripple internal reference">Structure</a></li><li class="list-group-item"><a href="#core-operations" class="ripple internal reference">Core operations</a><ul ><li class="list-group-item"><a href="#record" class="ripple internal reference"><code >record</code></a><ul ><li class="list-group-item"><a href="#field" class="ripple internal reference"><code >field</code></a></li></ul></li><li class="list-group-item"><a href="#delete" class="ripple internal reference"><code >delete</code></a></li><li class="list-group-item"><a href="#function" class="ripple internal reference"><code >function</code></a></li><li class="list-group-item"><a href="#workflow" class="ripple internal reference"><code >workflow</code></a></li></ul></li><li class="list-group-item"><a href="#shortcuts" class="ripple internal reference">Shortcuts</a><ul ><li class="list-group-item"><a href="#menuitem" class="ripple internal reference"><code >menuitem</code></a></li><li class="list-group-item"><a href="#template" class="ripple internal reference"><code >template</code></a></li><li class="list-group-item"><a href="#report" class="ripple internal reference"><code >report</code></a></li></ul></li><li class="list-group-item"><a href="#csv-data-files" class="ripple internal reference">CSV data files</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/9.0/doc/reference/data.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="data-files"><i id="reference-data"></i><p >Odoo is greatly data-driven, and a big part of modules definition is thus
+the definition of the various records it manages: UI (menus and views),
+security (access rights and access rules), reports and plain data are all
+defined via records.</p></section><section id="structure"><h2 >Structure</h2><p >The main way to define data in Odoo is via XML data files: The broad structure
+of an XML data file is the following:</p><ul ><li >Any number of operation elements within the root element <code >odoo</code></li></ul><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="c">&lt;!-- the root elements of the data file --&gt;</span>
+<span class="nt">&lt;odoo&gt;</span>
+  <span class="nt">&lt;operation/&gt;</span>
+  ...
+<span class="nt">&lt;/odoo&gt;</span>
+</pre></div>
+</div>
+<p >Data files are executed sequentially, operations can only refer to the result
+of operations defined previously</p></section><section id="core-operations"><h2 >Core operations</h2></section><section id="record"><i id="reference-data-record"></i><h3 ><code >record</code></h3><p ><code >record</code> appropriately defines or updates a database record, it has the
+following attributes:</p><dl ><dt ><code >model</code> (required)</dt><dd >name of the model to create (or update)</dd><dt ><code >id</code></dt><dd ><p >the <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a> for this record. It is strongly
+recommended to provide one</p><ul ><li >for record creation, allows subsequent definitions to either modify or
+refer to this record</li><li >for record modification, the record to modify</li></ul></dd><dt ><code >context</code></dt><dd >context to use when creating the record</dd><dt ><code >forcecreate</code></dt><dd ><p >in update mode whether the record should be created if it doesn't exist</p><p >Requires an <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>, defaults to <code >True</code>.</p></dd></dl></section><section id="field"><h4 ><code >field</code></h4><p >Each record can be composed of <code >field</code> tags, defining values to set when
+creating the record. A <code >record</code> with no <code >field</code> will use all default
+values (creation) or do nothing (update).</p><p >A <code >field</code> has a mandatory <code >name</code> attribute, the name of the field to set,
+and various methods to define the value itself:</p><dl ><dt >Nothing</dt><dd >if no value is provided for the field, an implicit <code >False</code> will be set
+on the field. Can be used to clear a field, or avoid using a default value
+for the field.</dd><dt ><code >search</code></dt><dd ><p >for <a href="orm.html#reference-orm-fields-relational" class="internal reference"><span class="std std-ref">relational fields</span></a>, should be
+a <a href="orm.html#reference-orm-domains" class="internal reference"><span class="std std-ref">domain</span></a> on the field's model.</p><p >Will evaluate the domain, search the field's model using it and set the
+search's result as the field's value. Will only use the first result if
+the field is a <a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a></p></dd><dt ><code >ref</code></dt><dd ><p >if a <code >ref</code> attribute is provided, its value must be a valid
+<a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>, which will be looked up and set as the field's value.</p><p >Mostly for <a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a> and
+<a href="orm.html#openerp.fields.Reference" class="internal reference" title="openerp.fields.Reference"><code class="py xref py-class">Reference</code></a> fields</p></dd><dt ><code >type</code></dt><dd ><p >if a <code >type</code> attribute is provided, it is used to interpret and convert
+the field's content. The field's content can be provided through an
+external file using the <code >file</code> attribute, or through the node's body.</p><p >Available types are:</p><dl ><dt ><code >xml</code>, <code >html</code></dt><dd >extracts the <code >field</code>'s children as a single document, evaluates
+any <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> specified with the form <code >%(external_id)s</code>.
+<code >%%</code> can be used to output actual <em >%</em> signs.</dd><dt ><code >file</code></dt><dd >ensures that the field content is a valid file path in the current
+model, saves the pair <code class="samp"><em >module</em>,<em >path</em></code> as the field value</dd><dt ><code >char</code></dt><dd >sets the field content directly as the field's value without
+alterations</dd><dt ><code >base64</code></dt><dd ><a href="http://tools.ietf.org/html/rfc3548.html#section-3" class="external reference">base64</a>-encodes the field's content, useful combined with the <code >file</code>
+<em >attribute</em> to load e.g. image data into attachments</dd><dt ><code >int</code></dt><dd >converts the field's content to an integer and sets it as the field's
+value</dd><dt ><code >float</code></dt><dd >converts the field's content to a float and sets it as the field's
+value</dd><dt ><code >list</code>, <code >tuple</code></dt><dd >should contain any number of <code >value</code> elements with the same
+properties as <code >field</code>, each element resolves to an item of a
+generated tuple or list, and the generated collection is set as the
+field's value</dd></dl></dd><dt ><code >eval</code></dt><dd ><p >for cases where the previous methods are unsuitable, the <code >eval</code>
+attributes simply evaluates whatever Python expression it is provided and
+sets the result as the field's value.</p><p >The evaluation context contains various modules (<code >time</code>, <code >datetime</code>,
+<code >timedelta</code>, <code >relativedelta</code>), a function to resolve <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external
+identifiers</span></a> (<code >ref</code>) and the model object for the current field if
+applicable (<code >obj</code>)</p></dd></dl></section><section id="delete"><h3 ><code >delete</code></h3><p >The <code >delete</code> tag can remove any number of records previously defined. It
+has the following attributes:</p><dl ><dt ><code >model</code> (required)</dt><dd >the model in which a specified record should be deleted</dd><dt ><code >id</code></dt><dd >the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of a record to remove</dd><dt ><code >search</code></dt><dd >a <a href="orm.html#reference-orm-domains" class="internal reference"><span class="std std-ref">domain</span></a> to find records of the model to
+remove</dd></dl><p ><code >id</code> and <code >search</code> are exclusive</p></section><section id="function"><h3 ><code >function</code></h3><p >The <code >function</code> tag calls a method on a model, with provided parameters.
+It has two mandatory parameters <code >model</code> and <code >name</code> specifying respectively
+the model and the name of the method to call.</p><p >Parameters can be provided using <code >eval</code> (should evaluate to a sequence of
+parameters to call the method with) or <code >value</code> elements (see <code >list</code>
+values).</p></section><section id="workflow"><h3 ><code >workflow</code></h3><p >The <code >workflow</code> tag sends a signal to an existing workflow. The workflow
+can be specified via a <code >ref</code> attribute (the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of
+an existing workflow) or a <code >value</code> tag returning the id of a workflow.</p><p >The tag also has two mandatory attributes <code >model</code> (the model linked to the
+workflow) and <code >action</code> (the name of the signal to send to the workflow).</p></section><section id="shortcuts"><h2 >Shortcuts</h2><p >Because some important structural models of Odoo are complex and involved,
+data files provide shorter alternatives to defining them using
+<a href="#reference-data-record" class="internal reference"><span class="std std-ref">record tags</span></a>:</p></section><section id="menuitem"><h3 ><code >menuitem</code></h3><p >Defines an <code >ir.ui.menu</code> record with a number of defaults and fallbacks:</p><dl ><dt >Parent menu</dt><dd ><ul ><li >If a <code >parent</code> attribute is set, it should be the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>
+of an other menu item, used as the new item's parent</li><li >If no <code >parent</code> is provided, tries to interpret the <code >name</code> attribute
+as a <code >/</code>-separated sequence of menu names and find a place in the menu
+hierarchy. In that interpretation, intermediate menus are automatically
+created</li><li >Otherwise the menu is defined as a &quot;top-level&quot; menu item (<em >not</em> a menu
+with no parent)</li></ul></dd><dt >Menu name</dt><dd >If no <code >name</code> attribute is specified, tries to get the menu name from
+a linked action if any. Otherwise uses the record's <code >id</code></dd><dt >Groups</dt><dd >A <code >groups</code> attribute is interpreted as a comma-separated sequence of
+<a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a> for <code >res.groups</code> models. If an
+<a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a> is prefixed with a minus (<code >-</code>), the group
+is <em >removed</em> from the menu's groups</dd><dt ><code >action</code></dt><dd >if specified, the <code >action</code> attribute should be the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>
+of an action to execute when the menu is open</dd><dt ><code >id</code></dt><dd >the menu item's <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a></dd></dl></section><section id="template"><i id="reference-data-template"></i><h3 ><code >template</code></h3><p >Creates a <a href="views.html#reference-views-qweb" class="internal reference"><span class="std std-ref">QWeb view</span></a> requiring only the <code >arch</code>
+section of the view, and allowing a few <em >optional</em> attributes:</p><dl ><dt ><code >id</code></dt><dd >the view's <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a></dd><dt ><code >name</code>, <code >inherit_id</code>, <code >priority</code></dt><dd >same as the corresponding field on <code >ir.ui.view</code> (nb: <code >inherit_id</code>
+should be an <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a>)</dd><dt ><code >primary</code></dt><dd >if set to <code >True</code> and combined with a <code >inherit_id</code>, defines the view
+as a primary</dd><dt ><code >groups</code></dt><dd >comma-separated list of group <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a></dd><dt ><code >page</code></dt><dd >if set to <code >&quot;True&quot;</code>, the template is a website page (linkable to,
+deletable)</dd><dt ><code >optional</code></dt><dd ><code >enabled</code> or <code >disabled</code>, whether the view can be disabled (in the
+website interface) and its default status. If unset, the view is always
+enabled.</dd></dl></section><section id="report"><h3 ><code >report</code></h3><p >Creates a <code >ir.actions.report.xml</code> record with a few default values.</p><p >Mostly just proxies attributes to the corresponding fields on
+<code >ir.actions.report.xml</code>, but also automatically creates the item in the
+<span class="guilabel">More</span> menu of the report's <code >model</code>.</p></section><section id="csv-data-files"><h2 >CSV data files</h2><p >XML data files are flexible and self-descriptive, but very verbose when
+creating a number of simple records of the same model in bulk.</p><p >For this case, data files can also use <a href="http://en.wikipedia.org/wiki/Comma-separated_values" class="external reference">csv</a>, this is often the case for
+<a href="security.html#reference-security-acl" class="internal reference"><span class="std std-ref">access rights</span></a>:</p><ul ><li >the file name is <code class="file"><em >model_name</em>.csv</code></li><li >the first row lists the fields to write, with the special field <code >id</code>
+for <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a> (used for creation or update)</li><li >each row thereafter creates a new record</li></ul><p >Here's the first lines of the data file defining US states
+<code >res.country.state.csv</code></p><div class="highlight-text"><div class="highlight"><pre><span></span>&quot;id&quot;,&quot;country_id:id&quot;,&quot;name&quot;,&quot;code&quot;
+state_au_1,au,&quot;Australian Capital Territory&quot;,&quot;ACT&quot;
+state_au_2,au,&quot;New South Wales&quot;,&quot;NSW&quot;
+state_au_3,au,&quot;Northern Territory&quot;,&quot;NT&quot;
+state_au_4,au,&quot;Queensland&quot;,&quot;QLD&quot;
+state_au_5,au,&quot;South Australia&quot;,&quot;SA&quot;
+state_au_6,au,&quot;Tasmania&quot;,&quot;TAS&quot;
+state_au_7,au,&quot;Victoria&quot;,&quot;VIC&quot;
+state_au_8,au,&quot;Western Australia&quot;,&quot;WA&quot;
+state_us_1,us,&quot;Alabama&quot;,&quot;AL&quot;
+state_us_2,us,&quot;Alaska&quot;,&quot;AK&quot;
+state_us_3,us,&quot;Arizona&quot;,&quot;AZ&quot;
+state_us_4,us,&quot;Arkansas&quot;,&quot;AR&quot;
+state_us_5,us,&quot;California&quot;,&quot;CA&quot;
+state_us_6,us,&quot;Colorado&quot;,&quot;CO&quot;
+</pre></div>
+</div>
+<p >rendered in a more readable format:</p><table class="table table-hover table-striped table-condensed"><thead ><tr ><th >id</th><th >country_id:id</th><th >name</th><th >code</th></tr></thead><tbody ><tr ><td >state_au_1</td><td >au</td><td >Australian Capital Territory</td><td >ACT</td></tr><tr ><td >state_au_2</td><td >au</td><td >New South Wales</td><td >NSW</td></tr><tr ><td >state_au_3</td><td >au</td><td >Northern Territory</td><td >NT</td></tr><tr ><td >state_au_4</td><td >au</td><td >Queensland</td><td >QLD</td></tr><tr ><td >state_au_5</td><td >au</td><td >South Australia</td><td >SA</td></tr><tr ><td >state_au_6</td><td >au</td><td >Tasmania</td><td >TAS</td></tr><tr ><td >state_au_7</td><td >au</td><td >Victoria</td><td >VIC</td></tr><tr ><td >state_au_8</td><td >au</td><td >Western Australia</td><td >WA</td></tr><tr ><td >state_us_1</td><td >us</td><td >Alabama</td><td >AL</td></tr><tr ><td >state_us_2</td><td >us</td><td >Alaska</td><td >AK</td></tr><tr ><td >state_us_3</td><td >us</td><td >Arizona</td><td >AZ</td></tr><tr ><td >state_us_4</td><td >us</td><td >Arkansas</td><td >AR</td></tr><tr ><td >state_us_5</td><td >us</td><td >California</td><td >CA</td></tr><tr ><td >state_us_6</td><td >us</td><td >Colorado</td><td >CO</td></tr><tr ><td >state_us_7</td><td >us</td><td >Connecticut</td><td >CT</td></tr><tr ><td >state_us_8</td><td >us</td><td >Delaware</td><td >DE</td></tr><tr ><td >state_us_9</td><td >us</td><td >District of Columbia</td><td >DC</td></tr><tr ><td >state_us_10</td><td >us</td><td >Florida</td><td >FL</td></tr><tr ><td >state_us_11</td><td >us</td><td >Georgia</td><td >GA</td></tr><tr ><td >state_us_12</td><td >us</td><td >Hawaii</td><td >HI</td></tr><tr ><td >state_us_13</td><td >us</td><td >Idaho</td><td >ID</td></tr><tr ><td >state_us_14</td><td >us</td><td >Illinois</td><td >IL</td></tr><tr ><td >state_us_15</td><td >us</td><td >Indiana</td><td >IN</td></tr><tr ><td >state_us_16</td><td >us</td><td >Iowa</td><td >IA</td></tr><tr ><td >state_us_17</td><td >us</td><td >Kansas</td><td >KS</td></tr><tr ><td >state_us_18</td><td >us</td><td >Kentucky</td><td >KY</td></tr><tr ><td >state_us_19</td><td >us</td><td >Louisiana</td><td >LA</td></tr><tr ><td >state_us_20</td><td >us</td><td >Maine</td><td >ME</td></tr><tr ><td >state_us_21</td><td >us</td><td >Montana</td><td >MT</td></tr><tr ><td >state_us_22</td><td >us</td><td >Nebraska</td><td >NE</td></tr><tr ><td >state_us_23</td><td >us</td><td >Nevada</td><td >NV</td></tr><tr ><td >state_us_24</td><td >us</td><td >New Hampshire</td><td >NH</td></tr><tr ><td >state_us_25</td><td >us</td><td >New Jersey</td><td >NJ</td></tr><tr ><td >state_us_26</td><td >us</td><td >New Mexico</td><td >NM</td></tr><tr ><td >state_us_27</td><td >us</td><td >New York</td><td >NY</td></tr><tr ><td >state_us_28</td><td >us</td><td >North Carolina</td><td >NC</td></tr><tr ><td >state_us_29</td><td >us</td><td >North Dakota</td><td >ND</td></tr><tr ><td >state_us_30</td><td >us</td><td >Ohio</td><td >OH</td></tr><tr ><td >state_us_31</td><td >us</td><td >Oklahoma</td><td >OK</td></tr><tr ><td >state_us_32</td><td >us</td><td >Oregon</td><td >OR</td></tr><tr ><td >state_us_33</td><td >us</td><td >Maryland</td><td >MD</td></tr><tr ><td >state_us_34</td><td >us</td><td >Massachusetts</td><td >MA</td></tr><tr ><td >state_us_35</td><td >us</td><td >Michigan</td><td >MI</td></tr><tr ><td >state_us_36</td><td >us</td><td >Minnesota</td><td >MN</td></tr><tr ><td >state_us_37</td><td >us</td><td >Mississippi</td><td >MS</td></tr><tr ><td >state_us_38</td><td >us</td><td >Missouri</td><td >MO</td></tr><tr ><td >state_us_39</td><td >us</td><td >Pennsylvania</td><td >PA</td></tr><tr ><td >state_us_40</td><td >us</td><td >Rhode Island</td><td >RI</td></tr><tr ><td >state_us_41</td><td >us</td><td >South Carolina</td><td >SC</td></tr><tr ><td >state_us_42</td><td >us</td><td >South Dakota</td><td >SD</td></tr><tr ><td >state_us_43</td><td >us</td><td >Tennessee</td><td >TN</td></tr><tr ><td >state_us_44</td><td >us</td><td >Texas</td><td >TX</td></tr><tr ><td >state_us_45</td><td >us</td><td >Utah</td><td >UT</td></tr><tr ><td >state_us_46</td><td >us</td><td >Vermont</td><td >VT</td></tr><tr ><td >state_us_47</td><td >us</td><td >Virginia</td><td >VA</td></tr><tr ><td >state_us_48</td><td >us</td><td >Washington</td><td >WA</td></tr><tr ><td >state_us_49</td><td >us</td><td >West Virginia</td><td >WV</td></tr><tr ><td >state_us_50</td><td >us</td><td >Wisconsin</td><td >WI</td></tr><tr ><td >state_us_51</td><td >us</td><td >Wyoming</td><td >WY</td></tr></tbody></table><p >For each row (record):</p><ul ><li >the first column is the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of the record to create or
+update</li><li >the second column is the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of the country object to link
+to (country objects must have been defined beforehand)</li><li >the third column is the <code >name</code> field for <code >res.country.state</code></li><li >the fourth column is the <code >code</code> field for <code >res.country.state</code></li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

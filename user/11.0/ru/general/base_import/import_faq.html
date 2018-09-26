@@ -1,0 +1,280 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как импортировать данные в Odoo &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" />
+    <link rel="up" title="Как вносить данные" href="../base_import.html" />
+    <link rel="next" title="Аутентификация" href="../auth.html" />
+    <link rel="prev" title="Как осуществить адаптацию вносимого шаблона" href="adapt_template.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../general.html">Общие сведения</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как импортировать данные в Odoo</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/general/base_import/import_faq.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/general/base_import/import_faq.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/general/base_import/import_faq.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как импортировать данные в Odoo - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#how-to-start" class="ripple internal reference">C чего начать</a></li><li class="list-group-item"><a href="#how-to-adapt-the-template" class="ripple internal reference">Как подготовить шаблон</a></li><li class="list-group-item"><a href="#how-to-import-from-another-application" class="ripple internal reference">Как импортировать данные из другого приложения</a></li><li class="list-group-item"><a href="#i-cannot-find-the-field-i-want-to-map-my-column-to" class="ripple internal reference">Я не могу найти поле, в котором я хочу отобразить свою колонку</a></li><li class="list-group-item"><a href="#where-can-i-change-the-date-import-format" class="ripple internal reference">Где я могу изменить формат даты для импорта?</a></li><li class="list-group-item"><a href="#can-i-import-numbers-with-currency-sign-e-g-32-00" class="ripple internal reference">Могу ли я импортировать числа со знаком валюты (например: $32,00)?</a></li><li class="list-group-item"><a href="#what-can-i-do-when-the-import-preview-table-isn-t-displayed-correctly" class="ripple internal reference">Что делать, если при импорте таблица предварительного просмотра отображается неправильно?</a></li><li class="list-group-item"><a href="#how-can-i-change-the-csv-file-format-options-when-saving-in-my-spreadsheet-application" class="ripple internal reference">Как изменить параметры формата файла CSV при сохранении в приложении для работы с электронной таблицей?</a></li><li class="list-group-item"><a href="#what-s-the-difference-between-database-id-and-external-id" class="ripple internal reference">В чем разница между Database ID и External ID?</a></li><li class="list-group-item"><a href="#what-can-i-do-if-i-have-multiple-matches-for-a-field" class="ripple internal reference">Что делать, если у меня есть несколько совпадений для одного поля?</a></li><li class="list-group-item"><a href="#how-can-i-import-a-many2many-relationship-field-e-g-a-customer-that-has-multiple-tags" class="ripple internal reference">Как импортировать поле many2many (например клиент с несколькими тегами)?</a></li><li class="list-group-item"><a href="#how-can-i-import-a-one2many-relationship-e-g-several-order-lines-of-a-sales-order" class="ripple internal reference">Как я могу импортировать поля one2many (например несколько позиций заказа клиента)?</a></li><li class="list-group-item"><a href="#can-i-import-several-times-the-same-record" class="ripple internal reference">Могу ли я импортировать несколько раз одну и ту же запись?</a></li><li class="list-group-item"><a href="#what-happens-if-i-do-not-provide-a-value-for-a-specific-field" class="ripple internal reference">Что произойдет, если я не предоставил значение для определенного поля?</a></li><li class="list-group-item"><a href="#how-to-export-import-different-tables-from-an-sql-application-to-odoo" class="ripple internal reference">Как экспортировать/импортировать различные таблицы из приложения SQL в Odoo?</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/general/base_import/import_faq.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-import-data-into-odoo"></section><section id="how-to-start"><h2 >C чего начать</h2><p >Вы можете импортировать данные в любой бизнес-объект Odoo, например контакты, товары, банковские выписки, записи в журнале и даже заказы, используя форматы Excel (.xlsx) или CSV (.csv):</p><p >Откройте представление объекта, который вы хотите заполнить, и нажмите <em >Импорт</em>.</p><img src="../../_images/import_button.png" class="img-responsive center-block"><p >Вам предоставляются шаблоны, которые вы легко можете заполнить своими собственными данными. Такие шаблоны можно импортировать одним щелчком мыши; Сопоставление данных уже выполнено.</p></section><section id="how-to-adapt-the-template"><h2 >Как подготовить шаблон</h2><ul ><li ><p >Вы можете добавлять, удалять и сортировать столбцы, для того, чтобы они соответствовали вашей структуре данных.</p></li><li ><p >Мы советуем не удалять <strong >ID</strong> (см. почему в следующем разделе).</p></li><li ><p >Установите уникальный ID для каждой записи путем последовательного переноса каждого из них.</p></li></ul><img src="../../_images/dragdown.gif" class="img-responsive center-block"><ul ><li ><p >Когда вы добавляете новый столбец, Odoo может не отображать его автоматически, если его метка не соответствует какому либо полю в Odoo. Не волнуйтесь! Вы можете сопоставить новые столбцы вручную, когда проверяете импорт. Найдите колонку с данными для соответствующего поля.</p><blockquote ><img src="../../_images/field_list.png" class="img-responsive center-block"></blockquote><p >Затем используйте метку этого поля в своем файле, чтобы он работал как нужно вам при каждом использовании.</p></li></ul></section><section id="how-to-import-from-another-application"><h2 >Как импортировать данные из другого приложения</h2><p >Чтобы воссоздать отношения между разными записями, вы должны использовать уникальный идентификатор из исходного приложения и сопоставить его с столбцом <strong >ID</strong> (External ID) в Odoo. Когда вы импортируете другую запись, которая ссылается на первую, используйте <strong >XXX/ID</strong> (XXX/External ID) для создания уникального идентификатора. Вы также можете найти эту запись, используя ее имя, но это будет проблемой, если хотя бы 2 записи имеют одинаковое имя.</p><p ><strong >ID</strong> также будет использоваться для обновления записей, которые вы уже загрузили, если вам потребуется повторно импортировать измененные данные, поэтому хорошей практикой будет его указание, в тех случаях, когда это возможно.</p></section><section id="i-cannot-find-the-field-i-want-to-map-my-column-to"><h2 >Я не могу найти поле, в котором я хочу отобразить свою колонку</h2><p >Odoo пытается найти при помощи эвристического анализа, основанного на первых десяти строках файлов, тип поля для каждого столбца вашего файла. Например, если у вас есть столбец, содержащий только числа, для вас будут отображаться только те поля, которые имеют тип <em >Integer</em>. Хотя в большинстве случаев это поведение может быть полезно, однако существует вероятность, что-то пойдет не так, или что вы хотите сопоставить свой столбец с полем, который не предлагается по умолчанию.</p><p >Если это произойдет, вам просто нужно проверить опцию <strong >Показывать поля как реляционные (дополнительно)</strong>, тогда вы сможете выбрать из полного списка типов полей для каждого столбца.</p><img src="../../_images/field_list.png" class="img-responsive center-block"></section><section id="where-can-i-change-the-date-import-format"><h2 >Где я могу изменить формат даты для импорта?</h2><p >Odoo может автоматически распознать, является ли тип данных столбца датой и попытается угадать формат числа из набора наиболее используемых временных форматов. Хотя этот процесс может работать для многих простых числовых форматов , всегда может найтись какой-то необычный числовой формат, который не будет распознаваться, а также может возникнуть путаница (пример день и месяц перевернуты), так как трудно правильно угадать, какая часть является днем, а какая из них - месяц в такой дате, как '01-03-2016'</p><p >Чтобы узнать, какой формат даты установила Odoo в вашем файле, вы можете проверить <strong >Формат даты</strong>, который отображается при нажатии на <strong >Параметры</strong> под селектором файлов. Если этот формат неверен, вы можете изменить его по своему усмотрению, используя стандарт <em >ISO 8601</em>, чтобы определить формат.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы импортируете файл excel (.xls, .xlsx), вы можете использовать ячейки даты для хранения дат, поскольку отображение дат в excel отличается от способа хранения. Таким образом, вы будете уверены, что формат даты верен в Odoo независимо от вашего формата отображения даты.</p></div></section><section id="can-i-import-numbers-with-currency-sign-e-g-32-00"><h2 >Могу ли я импортировать числа со знаком валюты (например: $32,00)?</h2><p >Да, мы полностью поддерживаем цифры с круглыми скобками, отрицательным знаком, а также числа со знаком валюты. Odoo также автоматически определяет, формат тысячных разделителей и разделителей дробной части (вы можете изменить их в <strong >опциях</strong>). Если вы используете символ валюты, неизвестный Odoo, то число будет не распознано, в следствии чего произойдет аварийное завершение.</p><p >Примеры поддерживаемых форматов чисел (на примере тридцати двух тысяч):</p><ul ><li >32.000,00</li><li >32000,00</li><li >32,000.00</li><li ><p >-32000,00</p></li><li >(32000.00)</li><li ><p >$ 32 000,00</p></li><li >(32000.00 €)</li></ul><p >Пример, который не будет работать:</p><ul ><li ><p >ABC 32 000,00</p></li><li >$ (32.000,00)</li></ul></section><section id="what-can-i-do-when-the-import-preview-table-isn-t-displayed-correctly"><h2 >Что делать, если при импорте таблица предварительного просмотра отображается неправильно?</h2><p >По умолчанию в предварительном просмотре разделители столбцов формируются запятыми, а разделители текста кавычки. Если ваш файл csv не имеет этих параметров, вы можете изменить параметры формата файла (отображается в разделе «Обзор файла CSV» после выбора файла).</p><p >Обратите внимание, что если ваш CSV-файл имеет табуляцию в качестве разделителя, Odoo не обнаружит разделения. Вам нужно будет изменить параметры формата файла в приложении для работы с электронными таблицами. См. Следующий вопрос.</p></section><section id="how-can-i-change-the-csv-file-format-options-when-saving-in-my-spreadsheet-application"><h2 >Как изменить параметры формата файла CSV при сохранении в приложении для работы с электронной таблицей?</h2><p >Если вы отредактируете и сохраните CSV-файлы в приложениях для электронных таблиц, региональные настройки вашего компьютера будут применены для разделителя колонок и разделителя строк. Мы предлагаем вам использовать OpenOffice или LibreOffice Calc, поскольку они позволят вам изменить все три параметра (в диалоговом окне «Сохранить как»). Установите флажок «Изменить настройки фильтра»&gt; «Сохранить»).</p><p >Microsoft Excel позволит вам изменять только кодировку при сохранении (в диалоговом окне «Сохранить как»&gt; щелкните раскрывающийся список «Инструменты»&gt; вкладка «Кодировка»).</p></section><section id="what-s-the-difference-between-database-id-and-external-id"><h2 >В чем разница между Database ID и External ID?</h2><p >Некоторые поля определяют отношения с другим объектом. Например, страна в записи контакта - это ссылка на запись объекта «Страна». Когда вы хотите импортировать такие поля, Odoo придется воссоздавать ссылки между разными записями. Чтобы помочь вам импортировать такие поля, Odoo предоставляет 3 механизма. Вы должны использовать один и только один механизм для каждого поля, которое вы хотите импортировать.</p><p >Например, чтобы указать страну контакта, Odoo предлагает вам 3 разных поля для импорта:</p><ul ><li ><p >Country: название или код страны</p></li><li ><p >Country/Database ID: уникальный идентификатор Odoo для записи, определяемый столбцом postgresql ID</p></li><li ><p >Country/External ID: идентификатор этой записи, на который ссылается другое приложение (или файл .XML, который его импортировал)</p></li></ul><p >Для страны Бельгия вы можете использовать один из этих трех способов импорта:</p><ul ><li >Country: Belgium</li><li >Country/Database ID: 21</li><li >Country/External ID: base.be</li></ul><p >Исходя из ваших потребностей вы должны использовать один из этих трех способов записи ссылок:</p><ul ><li ><p >Использовать Country. Это самый простой способ, когда ваши данные поступают из CSV файлов , созданных вручную.</p></li><li ><p >Использовать Country/Database ID: Вам вряд ли пригодится такая нотация. В основном ее используют разработчики, поскольку главным преимуществом является отсутствие конфликтов (у вас может быть несколько записей с тем же именем, но у них всегда есть уникальный Database ID)</p></li><li ><p >Использовать Country/External ID: Используйте External ID при импорте данных из стороннего приложения.</p></li></ul><p >Когда вы используете External ID, вы можете импортировать CSV-файлы со столбцом «External ID», чтобы определить внешний идентификатор каждой импортируемой вами записи. Затем вы сможете сделать ссылку на эту запись с такими столбцами, как «Поле/External ID». Следующие два файла CSV дают вам пример для продуктов и их категорий.</p><p ><a href="../../_static/example_files/External_id_3rd_party_application_product_categories.csv" class="external reference">CSV файл для категорий товаров</a>.</p><p ><a href="../../_static/example_files/External_id_3rd_party_application_products.csv" class="external reference">CSV файл для товаров</a>.</p></section><section id="what-can-i-do-if-i-have-multiple-matches-for-a-field"><h2 >Что делать, если у меня есть несколько совпадений для одного поля?</h2><p >Если, например, у вас есть две категории товаров с именем «Продаваемое» (например, «Разное/Продаваемое» и «Другие продукты/Продаваемое»), ваша проверка приостанавливается, но вы все равно можете импортировать свои данные. Тем не менее, мы рекомендуем вам не импортировать данные, потому что все они будут связаны с первой категорией «Продаваемое», указанной в списке «Категория продуктов» («Разное/Продаваемое»). Мы рекомендуем вам изменить одно из значений дубликатов или иерархию категорий продуктов.</p><p >Однако, если вы не хотите изменять конфигурацию категорий продуктов, мы рекомендуем использовать External ID для поля '«Категория»'.</p></section><section id="how-can-i-import-a-many2many-relationship-field-e-g-a-customer-that-has-multiple-tags"><h2 >Как импортировать поле many2many (например клиент с несколькими тегами)?</h2><p >Теги должны быть разделены запятой без какого-либо интервала. Например, если вы хотите, чтобы ваш клиент был связан с обоими тегами «Производитель» и «Продавец», вы должны записать это следующим образом «Производитель,Продавец» в том же столбце вашего CSV-файла.</p><p ><a href="../../_static/example_files/m2m_customers_tags.csv" class="external reference">CSV файл для Производитель,Продавец</a>.</p></section><section id="how-can-i-import-a-one2many-relationship-e-g-several-order-lines-of-a-sales-order"><h2 >Как я могу импортировать поля one2many (например несколько позиций заказа клиента)?</h2><p >Если вы хотите импортировать заказ клиента с несколькими позициями; Для каждой позиции вам нужно зарезервировать определенную строку в файле CSV. Первая позиция будет импортирована в той же строке, что и остальная информация о заказе. Каждая дополнительная позиция потребует строку, которая не имеет никакой информации в полях о заказе. В качестве примера можно привести файл purchase.order_functional_error_line_cant_adpat.CSV файл содержит данные, которые вы можете импортировать на основе демо-данных.</p><p ><a href="../../_static/example_files/purchase.order_functional_error_line_cant_adpat.csv" class="external reference">Файл</a>.</p><p >В следующем файле CSV показано, как импортировать заказы с позициями:</p><p ><a href="../../_static/example_files/o2m_purchase_order_lines.csv" class="external reference">Заказ с позициями</a>.</p><p >Следующий файл CSV показывает, как импортировать клиентов и их контакты:</p><p ><a href="../../_static/example_files/o2m_customers_contacts.csv" class="external reference">Клиенты и их контакты</a>.</p></section><section id="can-i-import-several-times-the-same-record"><h2 >Могу ли я импортировать несколько раз одну и ту же запись?</h2><p >Если вы импортируете файл, содержащий один из столбцов «External ID» или «Database ID» то, записи, которые уже были импортированы, будут обновлены а не созданы заново. Это очень полезно, так как позволяет вам импортировать несколько раз один и тот же файл CSV, сделав некоторые изменения. Odoo будет заботиться о создании или изменении каждой записи в зависимости от того новая она или нет.</p><p >Эта функция позволяет вам использовать инструмент импорта/экспорта Odoo для групповых изменений записей в вашем любимом приложении для электронных таблиц.</p></section><section id="what-happens-if-i-do-not-provide-a-value-for-a-specific-field"><h2 >Что произойдет, если я не предоставил значение для определенного поля?</h2><p >Если вы не установите все поля в CSV-файле, Odoo присвоит значение по умолчанию для каждого не определенного поля. Но если вы установите поля с пустыми значениями в CSV-файле, Odoo установит значение &quot;СВОБОДНО&quot; в поле вместо значения по умолчанию.</p></section><section id="how-to-export-import-different-tables-from-an-sql-application-to-odoo"><h2 >Как экспортировать/импортировать различные таблицы из приложения SQL в Odoo?</h2><p >Если вам нужно импортировать данные из разных таблиц, вам придется воссоздавать отношения между записями, принадлежащими разным таблицам. (например, если вы импортируете компании и их сотрудников, вам придется воссоздать связь между каждым человеком и компанией, в которой они работают).</p><p >Чтобы управлять отношениями между таблицами, вы можете использовать средства «External ID» для Odoo. «External ID» запись является уникальным идентификатором этой записи в другом приложении. Этот «External ID» должен быть уникальным для всех записей всех объектов, поэтому рекомендуется использовать этот «External ID» с именем приложения или таблицы. (Например, 'company_1', 'person_1' вместо '1')</p><p >В качестве примера предположим, что у вас есть база данных SQL с двумя таблицами, которые вы хотите импортировать: компании и сотрудники. Каждый человек принадлежит одной компании, поэтому вам придется воссоздать связь между человеком и компанией, в которой он работает. (Если вы хотите проверить этот пример, вот <a href="../_static/example_files/database_import_test.sql" class="external reference">дамп PostgreSQL базы</a>)</p><p >Сначала мы экспортируем все компании и их «External ID». В PSQL напишите следующую команду:</p><div class="highlight-sh"><div class="highlight"><pre><span></span>&gt; copy <span class="o">(</span><span class="k">select</span> <span class="s1">&#39;company_&#39;</span><span class="o">||</span>id as <span class="s2">&quot;External ID&quot;</span>,company_name as <span class="s2">&quot;Name&quot;</span>,<span class="s1">&#39;True&#39;</span> as <span class="s2">&quot;Is a Company&quot;</span> from companies<span class="o">)</span> TO <span class="s1">&#39;/tmp/company.csv&#39;</span> with CSV HEADER<span class="p">;</span>
+</pre></div>
+</div>
+<p >Эта SQL команда создаст следующий CSV файл:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">External</span> <span class="n">ID</span><span class="p">,</span><span class="n">Name</span><span class="p">,</span><span class="n">Is</span> <span class="n">a</span> <span class="n">Company</span>
+<span class="n">company_1</span><span class="p">,</span><span class="n">Bigees</span><span class="p">,</span><span class="kc">True</span>
+<span class="n">company_2</span><span class="p">,</span><span class="n">Organi</span><span class="p">,</span><span class="kc">True</span>
+<span class="n">company_3</span><span class="p">,</span><span class="n">Boum</span><span class="p">,</span><span class="kc">True</span>
+</pre></div>
+</div>
+<p >Чтобы создать файл CSV для сотрудников, связанных с компаниями, мы будем использовать следующую SQL команду в PSQL:</p><div class="highlight-sh"><div class="highlight"><pre><span></span>&gt; copy <span class="o">(</span><span class="k">select</span> <span class="s1">&#39;person_&#39;</span><span class="o">||</span>id as <span class="s2">&quot;External ID&quot;</span>,person_name as <span class="s2">&quot;Name&quot;</span>,<span class="s1">&#39;False&#39;</span> as <span class="s2">&quot;Is a Company&quot;</span>,<span class="s1">&#39;company_&#39;</span><span class="o">||</span>company_id as <span class="s2">&quot;Related Company/External ID&quot;</span> from persons<span class="o">)</span> TO <span class="s1">&#39;/tmp/person.csv&#39;</span> with CSV
+</pre></div>
+</div>
+<p >Он создаст следующий CSV файл:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">External</span> <span class="n">ID</span><span class="p">,</span><span class="n">Name</span><span class="p">,</span><span class="n">Is</span> <span class="n">a</span> <span class="n">Company</span><span class="p">,</span><span class="n">Related</span> <span class="n">Company</span><span class="o">/</span><span class="n">External</span> <span class="n">ID</span>
+<span class="n">person_1</span><span class="p">,</span><span class="n">Fabien</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="n">company_1</span>
+<span class="n">person_2</span><span class="p">,</span><span class="n">Laurence</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="n">company_1</span>
+<span class="n">person_3</span><span class="p">,</span><span class="n">Eric</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="n">company_2</span>
+<span class="n">person_4</span><span class="p">,</span><span class="n">Ramsy</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="n">company_3</span>
+</pre></div>
+</div>
+<p >Как вы можете видеть в этом файле, Fabien и Laurence работают в компании Bigees (company_1), а Eric работает в компании Organi. Связь между людьми и компаниями осуществляется с использованием External ID компаний. Мы должны были создать префикс «External ID» по имени таблицы, чтобы избежать конфликта идентификаторов между людьми и компаниями (person_1 и company_1, которые имеют один и тот же ID 1 в базе данных).</p><p >Эти два файла готовы для импорта в Odoo без каких-либо изменений. После импорта этих двух файлов CSV у вас будет 4 контакта и 3 компании. (Первые два контакта связаны с первой компанией). Сначала вы должны импортировать компании, а затем людей.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

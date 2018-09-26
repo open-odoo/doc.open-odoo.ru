@@ -1,0 +1,312 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to track costs of human resources with timesheets? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Analytic" href="../analytic.html" />
+    <link rel="next" title="How to track costs of purchases, expenses, subcontracting?" href="purchases_expenses.html" />
+    <link rel="prev" title="Analytic account use cases" href="usage.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to track costs of human resources with timesheets?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/accounting/others/analytic/timesheets.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting/others/analytic/timesheets.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/accounting/others/analytic/timesheets.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to track costs of human resources with timesheets? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#create-an-employee" class="ripple internal reference">Create an employee</a></li><li class="list-group-item"><a href="#issue-a-sales-order" class="ripple internal reference">Issue a Sales Order</a></li><li class="list-group-item"><a href="#fill-in-timesheet" class="ripple internal reference">Fill in timesheet</a></li><li class="list-group-item"><a href="#analytic-accounting" class="ripple internal reference">Analytic accounting</a><ul ><li class="list-group-item"><a href="#without-filters" class="ripple internal reference">Without filters</a></li><li class="list-group-item"><a href="#with-filters" class="ripple internal reference">With filters</a></li></ul></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/accounting/others/analytic/timesheets.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-track-costs-of-human-resources-with-timesheets"><p >Human resource of course has a cost. It is interesting to see how much a
+particular contract costs the company in term of human power in relation
+to the invoiced amounts.</p><p >We will take the following example: Our two employees <strong >Harry Potter</strong> and
+<strong >Cedric Digory</strong> both work on a <strong >Consultancy pack</strong> for our customer
+<strong >Smith&amp;Co</strong>. Harry is paid 18€ p.h. and Cedric's salary is 12€ p.h. We
+would like to track their timesheet costs within the accounting app, and
+compare them with the revenue of the consultancy service.</p></section><section id="configuration"><h2 >Configuration</h2><p >First, install the three applications necessary to use this
+functionality, namely <strong >Accounting</strong>, <strong >Sales</strong> and <strong >Timesheet</strong>. Enter the apps
+module name and install them.</p><img src="../../../_images/timesheets14.png" class="img-responsive center-block"><img src="../../../_images/timesheets05.png" class="img-responsive center-block"><img src="../../../_images/timesheets11.png" class="img-responsive center-block"><p >Next you will need to enable analytical accounting. To do so enter the
+<strong >Accounting app</strong>. Select <span class="menuselection">Configuration ‣ Settings</span> and tick the
+<strong >Analytic accounting</strong> option (see picture below)</p><img src="../../../_images/timesheets06.png" class="img-responsive center-block"><p >Apply your changes.</p></section><section id="create-an-employee"><h3 >Create an employee</h3><p >In order to check the revenue of an employee you need to have one. To
+create an employee enter the <strong >Employee</strong> app. Select <strong >Employees</strong> and
+create a new employee, fill in the name and the basic information.</p><p >On the employee sheet enter the <strong >HR settings</strong> tab. Here you are able to
+specify the <strong >Timesheet Cost</strong> of your employee. In this case Harry has a
+cost of 18 euros / hours. We will thus fill in 18 in this field.</p><img src="../../../_images/timesheets07.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you want the employee to be able to enter timesheets he
+needs to be related to a User.</p></div><p >Repeat the operation to create the Cedric Digory employee. Don't forget
+to specify its related user and <strong >Timesheet Costs</strong>.</p></section><section id="issue-a-sales-order"><h3 >Issue a Sales Order</h3><p >We created two employees called Harry Potter and Cedric Diggory in the
+<strong >Employee</strong> app. Both of them will work on a consultancy contract for our
+customer Smith&amp;Co where they will point their hours on a timesheet.</p><p >We thus need to create a <strong >sales order</strong> with a <strong >service</strong> product invoiced
+<strong >based on time and material</strong> and tracked by timesheets with <strong >hours</strong> as unit
+of measures.</p><img src="../../../_images/timesheets03.png" class="img-responsive center-block"><p >For more information on how to create a sales order based on time and
+material please see: <em >How to invoice based on time and material</em> (Work in Progress).</p><p >We save a Sales Order with the service product <strong >External Consulting</strong>. An
+analytical account will automatically be generated once the <strong >Sales Order</strong>
+is confirmed. Our employees will have to point to that account (in this
+case <strong >SO002-Smith&amp;Co</strong>) in order to be able to invoice their hours (see
+picture below).</p><img src="../../../_images/timesheets10.png" class="img-responsive center-block"></section><section id="fill-in-timesheet"><h3 >Fill in timesheet</h3><p >As an employee linked to a user, Harry can enter the <strong >Timesheet</strong> app and
+specify his timesheets for the contract. Logged on Harry's account we enter the
+<strong >Timesheet</strong> app and enter a detailed line pointing to the <strong >Analytical
+Account</strong> discussed above.</p><p >Harry worked three hours on a SWOT analysis for Smith&amp;Co.</p><img src="../../../_images/timesheets01.png" class="img-responsive center-block"><p >In the meantime, Cedric discussed businesses needs with the customer for
+1 hour and specified it as well in his personal timesheet, pointing as
+well on the <strong >Analytic Account</strong>.</p><p >In the <strong >Sales Order</strong> we notice that the delivered amounts of hours is
+automatically computed (see picture below).</p><img src="../../../_images/timesheets02.png" class="img-responsive center-block"></section><section id="analytic-accounting"><h3 >Analytic accounting</h3><p >Thanks to analytic accounts we are able to have an overview of HR cost
+and revenues. All the revenues and cost of this transactions have been
+registered in the <strong >SO002-Smith&amp;Co</strong> account.</p><p >We can use two methods to analyze this situation.</p></section><section id="without-filters"><h4 >Without filters</h4><p >If we pointed all our costs and revenues of the project on the correct
+analytical account we can easily retrieve the cost and revenues related
+to this analytical account. Enter the <em >Accounting</em> app, select
+<span class="menuselection">Adviser ‣ Analytic Accounts ‣ Open Charts</span>.</p><p >Note : you can specify a period for <strong >Analysis</strong>. If you want to open the
+current situation you should keep the fields empty. We can already note
+the credit and debit balance of the account.</p><img src="../../../_images/timesheets12.png" class="img-responsive center-block"><p >If we click on the account a special button is provided to have the
+details of cost and revenues (see picture below).</p><img src="../../../_images/timesheets13.png" class="img-responsive center-block"><p >Click the button <strong >Cost/Revenue</strong> to have an overview of cost and revenues with the
+corresponding description.</p></section><section id="with-filters"><h4 >With filters</h4><p >We can thus filter this information from the <strong >Analytic Entries</strong>.</p><p >Enter the <strong >Accounting</strong> app, and click on <span class="menuselection">Adviser ‣ Analytic Entries</span>.
+In this menu we have several options to analyse the human resource cost.</p><ol ><li ><p >We filter on the <strong >Analytic account</strong> so we can see the cost and revenues
+of the project. Add a custom <strong >Filter</strong> where the <strong >Analytic Account</strong>
+contains the <strong >Sales Order</strong> number.</p><img src="../../../_images/timesheets04.png" class="img-responsive center-block"><p >In the results we see timesheets activities and invoiced lines with
+the corresponding costs and revenues.</p><img src="../../../_images/timesheets09.png" class="img-responsive center-block"></li><li ><p >We can group the different analytical accounts together and check
+their respective revenues. Simply group by <strong >Analytic account</strong> and
+select the <strong >Graph view</strong> to have a clear overview.</p><img src="../../../_images/timesheets08.png" class="img-responsive center-block"></li></ol></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

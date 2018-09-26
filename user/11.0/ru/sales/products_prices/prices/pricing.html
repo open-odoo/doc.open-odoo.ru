@@ -1,0 +1,267 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как адаптировать свои цены к своим клиентам и применять скидки &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Управление ценообразованием" href="../prices.html" />
+    <link rel="next" title="Как продавать в иностранной валюте" href="currencies.html" />
+    <link rel="prev" title="Управление ценообразованием" href="../prices.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../sales.html">Продажи</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как адаптировать свои цены к своим клиентам и применять скидки</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/sales/products_prices/prices/pricing.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/sales/products_prices/prices/pricing.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/sales/products_prices/prices/pricing.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как адаптировать свои цены к своим клиентам и применять скидки - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#several-prices-per-product" class="ripple internal reference">Несколько цен за продукт</a><ul ><li class="list-group-item"><a href="#prices-per-customer-segment" class="ripple internal reference">Цены согласно сегменту клиента</a></li><li class="list-group-item"><a href="#temporary-prices" class="ripple internal reference">Временные цены</a></li><li class="list-group-item"><a href="#prices-per-minimum-quantity" class="ripple internal reference">Цены за минимальное количество</a></li></ul></li><li class="list-group-item"><a href="#discounts-margins-roundings" class="ripple internal reference">Скидки, поля, округления</a><ul ><li class="list-group-item"><a href="#discounts-with-roundings" class="ripple internal reference">Скидки с округлением</a></li><li class="list-group-item"><a href="#costs-with-markups-retail" class="ripple internal reference">Затраты с надбавками (розничная торговля)</a></li></ul></li><li class="list-group-item"><a href="#prices-per-country" class="ripple internal reference">Цены на страну</a></li><li class="list-group-item"><a href="#compute-and-show-discount-to-customers" class="ripple internal reference">Вычислить и показать скидку% клиентам</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/sales/products_prices/prices/pricing.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-adapt-your-prices-to-your-customers-and-apply-discounts"><p >У Odoo есть мощная прейскурантная функция для поддержки стратегии ценообразования, адаптированной к вашему бизнесу. Прейскурант - это список цен или ценовых правил, которые Odoo ищет для определения предлагаемой цены. Вы можете установить несколько критериев для использования определенной цены: периоды, мин,. проданное количество (соответствует минимальному количеству заказа и получает ценовой разрыв) и т. д. Поскольку прайслисты предлагают только цены, они могут быть отменены пользователями, заполняющими заказы клиентов. Выберите свою стратегию ценообразования: menuselection: [UNKNOWN NODE title_reference].</p><img src="../../../_images/pricing_options.png" class="img-responsive center-block"></section><section id="several-prices-per-product"><h2 >Несколько цен за продукт</h2><p >Чтобы применить несколько цен на продукт, выберите * Разные цены для сегмента клиента * в: menuselection: [UNKNOWN NODE title_reference]. Затем откройте вкладку * Продажи * в форме подробного описания продукта. Вы можете решить следующие стратегии.</p></section><section id="prices-per-customer-segment"><h3 >Цены согласно сегменту клиента</h3><p >Создайте прейскуранты для своих сегментов: например, зарегистрированные, премиальные и т. д.</p><img src="../../../_images/pricing_customer.png" class="img-responsive center-block"><p >Прейскурант по умолчанию, применяемый к любому новому клиенту, является * Public Pricelist (общественный) [UNKNOWN NODE problematic]. Чтобы сегментировать своих клиентов, откройте форму детали клиента и измените * Прейскурант распродажи * на вкладке * Продажи и покупки [UNKNOWN NODE problematic].</p><img src="../../../_images/customer_pricelist.png" class="img-responsive center-block"></section><section id="temporary-prices"><h3 >Временные цены</h3><p >Применить сделки для банковских праздников и т. д. Введите даты начала и даты окончания.</p><img src="../../../_images/pricing_period.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Убедитесь, что в прейскуранте установлены цены по умолчанию за пределами периода сделок. В противном случае у вас могут возникнуть проблемы после периода.</p></div></section><section id="prices-per-minimum-quantity"><h3 >Цены за минимальное количество</h3><img src="../../../_images/pricing_quantity.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Заказ цен не имеет значения. Система является интеллектуальной и применяет первые цены, которые соответствуют дате заказа и / или минимальным количествам.</p></div></section><section id="discounts-margins-roundings"><h2 >Скидки, поля, округления</h2><p >Третий вариант позволяет устанавливать правила изменения цен. Изменения могут относиться к цене на список продуктов / каталогов, себестоимости продукта или к другому прейскуранту. Изменения рассчитываются с помощью скидок или надбавок и могут быть вынуждены укладываться в пол (минимальная маржа) и потолки (максимальная маржа). Цены могут быть округлены до ближайшего цента / доллара или нескольких (или ближайших 5 центов, ближайших 10 долларов).</p><p >После установки перейдите в: menuselection: «Sales -&gt; Configuration -&gt; Pricelists` (или: menuselection:« Адреса веб-сайта -&gt; Каталог -&gt; Прейскуранты », если вы используете электронную коммерцию).</p><img src="../../../_images/pricing_formula.png" class="img-responsive center-block"><p >Каждый прейскурант может быть связан либо с любыми продуктами, либо с внутренней категорией продукта (набором продуктов), либо с конкретным продуктом. Как и во втором варианте, вы можете установить даты и минимальные количества.</p><img src="../../../_images/pricelist_apply.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><ul ><li ><p >И снова система умна. Если для определенного элемента установлено правило, а другое для его категории, Odoo примет правило элемента.</p></li><li ><p >Убедитесь, что хотя бы один элемент списка цен распространяется на все ваши продукты.</p></li></ul></div><p >Существует 3 способа вычисления: фиксировать цену, скидку и формулу.</p><img src="../../../_images/price_computation.png" class="img-responsive center-block"><p >Здесь возможны различные ценовые настройки благодаря формулам.</p></section><section id="discounts-with-roundings"><h3 >Скидки с округлением</h3><p >Например, скидки 20% с ценами, округленными до 9.99.</p><img src="../../../_images/formula_discount.png" class="img-responsive center-block"></section><section id="costs-with-markups-retail"><h3 >Затраты с надбавками (розничная торговля)</h3><p >Например, цена продажи = 2 * стоимость (100% разметка) с минимальной маржой в 5 долларов.</p><img src="../../../_images/formula_cost.png" class="img-responsive center-block"></section><section id="prices-per-country"><h2 >Цены на страну</h2><p >Прейскуранты могут быть заданы по группам стран. Любой новый клиент, зарегистрированный в Odoo, получает прейскурант по умолчанию, то есть первый в списке, соответствующем стране. Если для клиента нет страны, Odoo берет первый прейскурант без какой-либо группы стран.</p><p >Прейскурант по умолчанию можно заменить при создании заказа клиента.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Вы можете изменить последовательность прайс-листов, перетащив их в виде списка.</p></div></section><section id="compute-and-show-discount-to-customers"><h2 >Вычислить и показать скидку% клиентам</h2><p >В случае скидки вы можете указать общедоступную цену и вычисленную скидку% на печатные заказы на продажу и в свой каталог электронной коммерции. Для этого:</p><ul ><li ><p >Проверить * Разрешить скидки по строкам заказа клиента * в: menuselection: [UNKNOWN NODE title_reference].</p></li><li ><p >Примените эту опцию в форме настройки прейскуранта.</p></li></ul><img src="../../../_images/discount_options.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><p >: Документ: [UNKNOWN NODE title_reference]</p></li><li ><p >: Документ: [UNKNOWN NODE title_reference]</p></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

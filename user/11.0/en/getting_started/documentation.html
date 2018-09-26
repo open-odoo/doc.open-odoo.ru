@@ -1,0 +1,384 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Basics of the QuickStart Methodology &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../_static/atom.js"></script>
+    <script type="text/javascript" src="../_static/immutable.js"></script>
+    <script type="text/javascript" src="../_static/react.min.js"></script>
+    <script type="text/javascript" src="../_static/accounts.js"></script>
+    <script type="text/javascript" src="../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../_static/entries.js"></script>
+    <script type="text/javascript" src="../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../_static/misc.js"></script>
+    <script type="text/javascript" src="../_static/inventory.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Practical Information" href="../practical.html" />
+    <link rel="next" title="Odoo.sh" href="../odoo_sh/documentation.html" />
+    <link rel="prev" title="Practical Information" href="../practical.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (11.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Basics of the QuickStart Methodology</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/getting_started/documentation.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/getting_started/documentation.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/getting_started/documentation.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/getting_started.png');"></span>
+      <div class="container text-center">
+        <h1> Basics of the QuickStart Methodology - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#the-spoc-single-point-of-contact-and-the-consultant" class="ripple internal reference">1. The SPoC (<em >Single Point of Contact</em>) and the Consultant</a></li><li class="list-group-item"><a href="#project-scope" class="ripple internal reference">2. Project Scope</a></li><li class="list-group-item"><a href="#managing-expectations" class="ripple internal reference">3. Managing expectations</a></li><li class="list-group-item"><a href="#communication-strategy" class="ripple internal reference">4. Communication Strategy</a></li><li class="list-group-item"><a href="#customizations-and-development" class="ripple internal reference">5. Customizations and Development</a></li><li class="list-group-item"><a href="#testing-and-validation-principles" class="ripple internal reference">6. Testing and Validation principles</a></li><li class="list-group-item"><a href="#data-imports" class="ripple internal reference">7. Data Imports</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/getting_started/documentation.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="basics-of-the-quickstart-methodology"><p >This document summarizes Odoo Online's services, our Success Pack
+implementation methodology, and best practices to get started with our
+product.</p></section><section id="the-spoc-single-point-of-contact-and-the-consultant"><h2 >1. The SPoC (<em >Single Point of Contact</em>) and the Consultant</h2><p >Within the context of your project, it is highly recommended to
+designate and maintain on both sides (your side and ours) <strong >one
+and only single person of contact</strong> who will take charge and assume
+responsibilities regarding the project. He also has to have <strong >the
+authority</strong> in terms of decision making.</p><ul ><li ><strong >The Odoo Consultant ensures the project implementation from A to Z</strong>:
+From the beginning to the end of the project, he ensures the overall
+consistency of the implementation in Odoo and shares his expertise
+in terms of good practices.</li><li ><strong >One and only decision maker on the client side (SPoC)</strong>:
+He is responsible for the business knowledge transmission
+(coordinate key users intervention if necessary) and the consistency
+of the implementation from a business point of view (decision
+making, change management, etc.)</li><li ><strong >Meetings optimization</strong>:
+The Odoo consultant is not involved in the process of decision
+making from a business point of view nor to precise processes and
+company's internal procedures (unless a specific request or an
+exception). Project meetings, who will take place once or twice a
+week, are meant to align on the business needs (SPoC) and to define
+the way those needs will be implemented in Odoo (Consultant).</li><li ><strong >Train the Trainer approach</strong>:
+The Odoo consultant provides functional training to the SPoC so that
+he can pass on this knowledge to his collaborators. In order for
+this approach to be successful, it is necessary that the SPoC is
+also involved in its own rise in skills through self-learning via
+the <a href="http://www.odoo.com/documentation/user/10.0/index.html" class="external reference">Odoo documentation</a>, <a href="https://odoo.thinkific.com/courses/odoo-functional" class="external reference">The elearning platform</a> and the testing of functionalities.</li></ul></section><section id="project-scope"><h2 >2. Project Scope</h2><p >To make sure all the stakeholders involved are always aligned, it is
+necessary to define and to make the project scope evolve as long as the
+project implementation is pursuing.</p><ul ><li ><strong >A clear definition of the initial project scope</strong>:
+A clear definition of the initial needs is crucial to ensure the
+project is running smoothly. Indeed, when all the stakeholders share
+the same vision, the evolution of the needs and the resulting
+decision-making process are more simple and more clear.</li><li ><strong >Phasing the project</strong>:
+Favoring an implementation in several coherent phases allowing
+regular production releases and an evolving takeover of Odoo by the
+end users have demonstrated its effectiveness over time. This
+approach also helps to identify gaps and apply corrective actions
+early in the implementation.</li><li ><strong >Adopting standard features as a priority</strong>:
+Odoo offers a great environment to implement slight improvements
+(customizations) or more important ones (developments).
+Nevertheless, adoption of the standard solution will be preferred as
+often as possible in order to optimize project delivery times and
+provide the user with a long-term stability and fluid scalability of
+his new tool. Ideally, if an improvement of the software should
+still be realized, its implementation will be carried out after an
+experiment of the standard in production.</li></ul><img src="../_images/basic_quickstart01.png" class="img-responsive center-block"></section><section id="managing-expectations"><h2 >3. Managing expectations</h2><p >The gap between the reality of an implementation and the expectations of
+future users is a crucial factor. Three important aspects must be taken
+into account from the beginning of the project:</p><ul ><li ><strong >Align with the project approach</strong>:
+Both a clear division of roles and responsibilities and a clear
+description of the operating modes (validation, problem-solving,
+etc.) are crucial to the success of an Odoo implementation. It is
+therefore strongly advised to take the necessary time at the
+beginning of the project to align with these topics and regularly
+check that this is still the case.</li><li ><strong >Focus on the project success, not on the ideal solution</strong>:
+The main goal of the SPoC and the Consultant is to carry out the
+project entrusted to them in order to provide the most effective
+solution to meet the needs expressed. This goal can sometimes
+conflict with the end user's vision of an ideal solution. In that
+case, the SPoC and the consultant will apply the 80-20 rule: focus
+on 80% of the expressed needs and take out the remaining 20% of the
+most disadvantageous objectives in terms of cost/benefit ratio
+(those proportions can of course change over time). Therefore, it
+will be considered acceptable to integrate a more time-consuming
+manipulation if a global relief is noted.
+Changes in business processes may also be proposed to pursue this
+same objective.</li><li ><strong >Specifications are always EXPLICIT</strong>:
+Gaps between what is expected and what is delivered are often a
+source of conflict in a project. In order to avoid being in this
+delicate situation, we recommend using several types of tools* :</li><li ><strong >The GAP Analysis</strong>: The comparison of the request with the standard
+features proposed by Odoo will make it possible to identify the
+gap to be filled by developments/customizations or changes in
+business processes.</li><li ><a href="https://help.rallydev.com/writing-great-user-story" class="external reference">The User Story</a>:
+This technique clearly separates the responsibilities between the
+SPoC, responsible for explaining the WHAT, the WHY and the WHO,
+and the Consultant who will provide a response to the HOW.</li></ul><img src="../_images/basic_quickstart02.png" class="img-responsive center-block"><ul ><li ><a href="https://en.wikipedia.org/wiki/Proof_of_concept" class="external reference">The Proof of Concept</a>
+A simplified version, a prototype of what is expected to agree on
+the main lines of expected changes.</li><li ><strong >The Mockup</strong>: In the same idea as the Proof of Concept, it will align
+with the changes related to the interface.</li></ul><p >To these tools will be added complete transparency on the possibilities
+and limitations of the software and/or its environment so that all
+project stakeholders have a clear idea of what can be expected/achieved
+in the project. We will, therefore, avoid basing our work on hypotheses
+without verifying its veracity beforehand.</p><p ><em >This list can, of course, be completed by other tools that would more
+adequately meet the realities and needs of your project</em></p></section><section id="communication-strategy"><h2 >4. Communication Strategy</h2><p >The purpose of the QuickStart methodology is to ensure quick ownership
+of the tool for end users. Effective communication is therefore crucial
+to the success of this approach. Its optimization will, therefore, lead
+us to follow those principles:</p><ul ><li ><p ><strong >Sharing the project management documentation</strong>:
+The best way to ensure that all stakeholders in a project have the
+same level of knowledge is to provide direct access to the project's
+tracking document (Project Organizer). This document will contain
+at least a list of tasks to be performed as part of the
+implementation for which the priority level and the manager are
+clearly defined.</p><p >The Project Organizer is a shared project tracking tool that
+allows both detailed tracking of ongoing tasks and the overall
+progress of the project.</p></li><li ><strong >Report essential information</strong>:
+In order to minimize the documentation time to the essentials, we
+will follow the following good practices:</li><li >Meeting minutes will be limited to decisions and validations;</li><li >Project statuses will only be established when an important milestone
+is reached;</li><li >Training sessions on the standard or customized solution will be
+organized.</li></ul></section><section id="customizations-and-development"><h2 >5. Customizations and Development</h2><p >Odoo is a software known for its flexibility and its important evolution
+capacity. However, a significant amount of development contradicts a
+fast and sustainable implementation. This is the reason why it is
+recommended to:</p><ul ><li ><strong >Develop only for a good reason</strong>:
+The decision to develop must always be taken when the cost-benefit
+ratio is positive (saving time on a daily basis, etc.). For example,
+it will be preferable to realize a significant development in order
+to reduce the time of a daily operation, rather than an operation to
+be performed only once a quarter. It is generally accepted that the
+closer the solution is to the standard, the lighter and more fluid
+the migration process, and the lower the maintenance costs for both
+parties. In addition, experience has shown us that 60% of initial
+development requests are dropped after a few weeks of using standard
+Odoo (see &quot;Adopting the standard as a priority&quot;).</li><li ><strong >Replace, without replicate</strong>:
+There is a good reason for the decision to change the management
+software has been made. In this context, the moment of
+implementation is THE right moment to accept and even be a change
+initiator both in terms of how the software will be used and at the
+level of the business processes of the company.</li></ul></section><section id="testing-and-validation-principles"><h2 >6. Testing and Validation principles</h2><p >Whether developments are made or not in the implementation, it is
+crucial to test and validate the correspondence of the solution with the
+operational needs of the company.</p><ul ><li ><strong >Role distribution</strong>:
+In this context, the Consultant will be responsible for delivering a
+solution corresponding to the defined specifications; the SPoC will
+have to test and validate that the solution delivered meets the
+requirements of the operational reality.</li><li ><p ><strong >Change management</strong>:
+When a change needs to be made to the solution, the noted gap is
+caused by:</p><ul ><li ><p >A difference between the specification and the delivered solution - This is a correction for which the Consultant is responsible</p><p ><strong >or</strong></p></li><li >A difference between the specification and the imperatives of
+operational reality - This is a change that is the responsibility of SPoC.</li></ul></li></ul></section><section id="data-imports"><h2 >7. Data Imports</h2><p >Importing the history of transactional data is an important issue and
+must be answered appropriately to allow the project running smoothly.
+Indeed, this task can be time-consuming and, if its priority is not well
+defined, prevent production from happening in time. To do this as soon
+as possible, it will be decided :</p><ul ><li ><strong >Not to import anything</strong>:
+It often happens that after reflection, importing data history is
+not considered necessary, these data being, moreover, kept outside
+Odoo and consolidated for later reporting.</li><li ><strong >To import a limited amount of data before going into production</strong>:
+When the data history relates to information being processed
+(purchase orders, invoices, open projects, for example), the need to
+have this information available from the first day of use in
+production is real. In this case, the import will be made before the
+production launch.</li><li ><strong >To import after production launch</strong>:
+When the data history needs to be integrated with Odoo mainly for
+reporting purposes, it is clear that these can be integrated into
+the software retrospectively. In this case, the production launch of
+the solution will precede the required imports.</li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

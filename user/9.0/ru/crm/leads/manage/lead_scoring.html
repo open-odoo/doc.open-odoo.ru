@@ -1,0 +1,267 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как эффективно вести квалифицировать Лидов? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Управление Лидами" href="../manage.html" />
+    <link rel="next" title="Odoo VOIP" href="../voip.html" />
+    <link rel="prev" title="Автоматизация распределения Лидов конкретным отделам продаж или продавцам" href="automatic_assignation.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../crm.html">CRM</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как эффективно вести квалифицировать Лидов?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/crm/leads/manage/lead_scoring.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/crm/leads/manage/lead_scoring.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/ru/crm/leads/manage/lead_scoring.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/ru/">Пользователю</a></li>
+<li><a href="/developer/9.0/ru/">Разработчику</a></li>
+<li><a href="/developer/9.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как эффективно вести квалифицировать Лидов? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#install-the-lead-scoring-module" class="ripple internal reference">Установите модуль Lead Scoring</a></li><li class="list-group-item"><a href="#create-scoring-rules" class="ripple internal reference">Создание правил квалификации лидов</a></li></ul></li><li class="list-group-item"><a href="#assign-high-scoring-leads-to-your-sales-teams" class="ripple internal reference">Присвоить высокий scoring leads для ваших команд продаж</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/crm/leads/manage/lead_scoring.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-do-efficient-lead-scoring"><p >Модуль Lead Scoring в Odoo позволяет вам оценивать ваши результаты на основе определенных критериев - чем выше значение, тем больше вероятность, что перспектива «готова к продаже». Поэтому лучшие Лиды автоматически сопоставляются с вашими продавцам, поэтому их воронка продаж &quot;не загрязняется&quot; некачественными возможностями.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Lead scoring является важным компонентом эффективной стратегии управления лидогенерацей. Помогая вашим продавцам определить приоритет того или иного Лида, этим вы увеличите общий коэффициент конверсии и эффективность своей команды.</p></div></section><section id="configuration"><h2 >Настройка</h2></section><section id="install-the-lead-scoring-module"><h3 >Установите модуль Lead Scoring</h3><p >Начните с установки модуля <strong >Lead Scoring</strong>.</p><p >После установки модуля вы увидите новое меню <span class="menuselection">Sales ‣ Leads Management ‣ Scoring Rules</span></p><img src="../../../_images/lead_scoring02.png" class="img-responsive center-block"></section><section id="create-scoring-rules"><h3 >Создание правил квалификации лидов</h3><p >Leads scoring позволяет вам назначить положительныt или отрицательные баллы для ваших Лидов на основе любых демографических или поведенческих критериев, которые вы установили (страна или происхождение, посещаемые страницы, тип отрасли, роль и т.д.). Для этого вам сначала нужно создать правила, которые присваивают оценку определенным критериям.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Чтобы присвоить правильный балл вашим различным правилам, вы можете использовать эти два метода:</p><ul ><li ><p >Создайте список признаков, которыми должен обладать идеальный клиент вашей компании. Например, если вы запускаете бизнес в Калифорнии, Лид из Сан-Франциско, должен иметь более высокий балл, чем Лид из Нью-Йорка, т.к. Сан-Франциско - находится ближе.</p></li><li ><p >Проанализируйте данные, чтобы выявить характеристики, которыми обладают ваши закрытые возможности и наиболее важные клиенты.</p></li></ul><p >Обратите внимание, что это не точная наука, поэтому вам потребуется время и обратная связь от ваших торговых команд, чтобы адаптировать и точно настроить свои правила до получения желаемого результата.</p></div><p >В меню <strong >Scoring Rules</strong> выберите <strong >Создать</strong>, чтобы записать свое первое правило.</p><img src="../../../_images/lead_scoring01.png" class="img-responsive center-block"><p >Сначала введите свое правило, затем введите значение и домен (обратитесь к <a href="https://docs.python.org/2/tutorial/" class="external reference">официальной документации python</a> для получения дополнительной информации). Например, если вы хотите назначить 8 баллов всем Лидам из <strong >Бельгии</strong>, вам нужно указать <code >8` как **значение** и ``[['country\_id',=,'Belgium']]</code> как домен.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Вот некоторые критерии, которые вы можете использовать для построения правила подсчета баллов:</p><ul ><li ><p >Страна происхождения : <code >'country_id'</code></p></li><li ><p >Этап цикла продаж: <code >'stage_id'</code></p></li><li ><p >Адрес электронной почты (например, если вы хотите учитывать профессиональные адреса электронной почты): <code >'email_from'</code></p></li><li ><p >Посещенная страница: [UNKNOWN NODE problematic]'score_pageview_ids.url'`</p></li><li ><p >Название маркетинговой кампании: <code >'campaign_id'</code></p></li></ul></div><p >После того, как вы активируете свои правила, Odoo даст значение всем вашим новым входящим Лидам. Это значение можно найти непосредственно в списке Лидов.</p><img src="../../../_images/lead_scoring04.png" class="img-responsive center-block"></section><section id="assign-high-scoring-leads-to-your-sales-teams"><h2 >Присвоить высокий scoring leads для ваших команд продаж</h2><p >Следующим шагом будет автоматическое преобразование ваших лучших Лидов в возможности. Чтобы это сделать, вам нужно решить, какой минимальный балл должен быть передан данной группе продаж. Перейдите в свою <strong >панель управления продажами</strong> и нажмите кнопку <strong >More</strong> в желаемой группе продаж, а затем на <strong >Настройки</strong>. Введите значение в поле <strong >Минимальный балл</strong>.</p><img src="../../../_images/lead_scoring03.png" class="img-responsive center-block"><p >В приведенном выше примере команда <strong >Direct Sales</strong> получит Лидов с минимальным баллом <code >50</code>. Лиды с более низким счетом могут либо остаться на стартовом этапе, либо быть назначены другой команде по продажам, которой установлен другой минимальный балл.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Организуйте встречу между отделами маркетинга и продаж, чтобы согласовать свои цели и какой минимальный балл допускать в отдел продаж.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="automatic_assignation.html" class="internal alert-link reference"><span class="doc">Автоматизация распределения Лидов конкретным отделам продаж или продавцам</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

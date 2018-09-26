@@ -1,0 +1,370 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Установка и настройка &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Odoo VOIP" href="../voip.html" />
+    <link rel="next" title="Отчеты" href="../../reporting.html" />
+    <link rel="prev" title="Odoo VOIP" href="../voip.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../crm.html">CRM</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Установка и настройка</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/crm/leads/voip/setup.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/crm/leads/voip/setup.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/ru/crm/leads/voip/setup.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/ru/">Пользователю</a></li>
+<li><a href="/developer/10.0/ru/">Разработчику</a></li>
+<li><a href="/developer/10.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Установка и настройка - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#installing-asterisk-server" class="ripple internal reference">Установка сервера Asterisk</a><ul ><li class="list-group-item"><a href="#dependencies" class="ripple internal reference">Зависимости</a></li><li class="list-group-item"><a href="#asterisk" class="ripple internal reference">Asterisk</a></li><li class="list-group-item"><a href="#dtls-certificates" class="ripple internal reference">Сертификаты DTLS</a></li></ul></li><li class="list-group-item"><a href="#configure-asterisk-server" class="ripple internal reference">Настройка сервера Asterisk</a></li><li class="list-group-item"><a href="#configure-odoo-voip" class="ripple internal reference">Настройка Odoo VOIP</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/crm/leads/voip/setup.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="installation-and-setup"></section><section id="installing-asterisk-server"><h2 >Установка сервера Asterisk</h2></section><section id="dependencies"><h3 >Зависимости</h3><p >Перед установкой Asterisk вам необходимо установить следующие зависимости:</p><ul ><li >wget</li><li >gcc</li><li >g++</li><li >ncurses-devel</li><li >libxml2-devel</li><li >sqlite-devel</li><li >libsrtp-devel</li><li >libuuid-devel</li><li >openssl-devel</li><li >pkg-config</li></ul><p >Чтобы установить libsrtp, выполните следующие действия:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd /usr/local/src/</span>
+<span class="go">wget http://srtp.sourceforge.net/srtp-1.4.2.tgz</span>
+<span class="go">tar zxvf srtp-1.4.2.tgz</span>
+<span class="go">cd /usr/local/src/srtp</span>
+<span class="go">./configure CFLAGS=-fPIC --prefix=/usr/local/lib</span>
+<span class="go">make &amp;&amp; make install</span>
+</pre></div>
+</div>
+<p >Вам также необходимо установить PJSIP, вы можете загрузить его <a href="http://www.pjsip.org/download.htm" class="external reference">здесь</a>. Как только архив с исходниками будет разархивирован:</p><ul ><li ><p ><strong >Перейдите в каталог с исходниками pjproject:</strong></p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> <span class="nb">cd</span> pjproject
+</pre></div>
+</div>
+<ul ><li ><p ><strong >запустите:</strong></p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ./configure --prefix<span class="o">=</span>/usr --enable-shared --disable-sound --disable-resample --disable-video --disable-opencore-amr <span class="nv">CFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -DNDEBUG&#39;</span>
+</pre></div>
+</div>
+<ul ><li ><p ><strong >Соберите и установите pjproject:</strong></p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> make dep
+<span class="gp">#</span> make
+<span class="gp">#</span> make install
+</pre></div>
+</div>
+<ul ><li ><strong >Update shared library links:</strong></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ldconfig
+</pre></div>
+</div>
+<ul ><li ><p ><strong >Убедитесь, что pjproject установлен:</strong></p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ldconfig -p <span class="p">|</span> grep pj
+</pre></div>
+</div>
+<ul ><li ><p ><strong >Результат должен быть:</strong></p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">libpjsua.so (libc6,x86-64) =&gt; /usr/lib/libpjsua.so</span>
+<span class="go">libpjsip.so (libc6,x86-64) =&gt; /usr/lib/libpjsip.so</span>
+<span class="go">libpjsip-ua.so (libc6,x86-64) =&gt; /usr/lib/libpjsip-ua.so</span>
+<span class="go">libpjsip-simple.so (libc6,x86-64) =&gt; /usr/lib/libpjsip-simple.so</span>
+<span class="go">libpjnath.so (libc6,x86-64) =&gt; /usr/lib/libpjnath.so</span>
+<span class="go">libpjmedia.so (libc6,x86-64) =&gt; /usr/lib/libpjmedia.so</span>
+<span class="go">libpjmedia-videodev.so (libc6,x86-64) =&gt; /usr/lib/libpjmedia-videodev.so</span>
+<span class="go">libpjmedia-codec.so (libc6,x86-64) =&gt; /usr/lib/libpjmedia-codec.so</span>
+<span class="go">libpjmedia-audiodev.so (libc6,x86-64) =&gt; /usr/lib/libpjmedia-audiodev.so</span>
+<span class="go">libpjlib-util.so (libc6,x86-64) =&gt; /usr/lib/libpjlib-util.so</span>
+<span class="go">libpj.so (libc6,x86-64) =&gt; /usr/lib/libpj.so</span>
+</pre></div>
+</div>
+</section><section id="asterisk"><h3 >Asterisk</h3><ul ><li ><p >Чтобы установить Asterisk 13.7.0, вы можете напрямую загрузить источник <a href="http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-13.7.0.tar.gz" class="external reference">здесь</a>.</p></li><li ><p >Разархивируйте Asterisk:</p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">tar zxvf asterisk*</span>
+</pre></div>
+</div>
+<ul ><li ><p >Войдите в каталог Asterisk:</p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd ./asterisk*</span>
+</pre></div>
+</div>
+<ul ><li ><p >Запустите сценарий настройки Asterisk:</p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">./configure --with-pjproject --with-ssl --with-srtp</span>
+</pre></div>
+</div>
+<ul ><li ><p >Запустите инструмент menuselect Asterisk:</p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">make menuselect</span>
+</pre></div>
+</div>
+<ul ><li ><p >В menuselect перейдите к параметру ресурсов и убедитесь, что параметр res_srtp включен. Если рядом с res_srtp есть 3x, это значит, что есть проблема с библиотекой srtp, и вы должны переустановить ее. Сохраните конфигурацию (нажмите <em >x</em>). Вы также должны видеть звезды перед линиями res_pjsip.</p></li><li ><p >Скомпилируйте и установите Asterisk:</p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">make &amp;&amp; make install</span>
+</pre></div>
+</div>
+<ul ><li ><p >Если вам нужны примеры конфигураций, вы можете запустить [UNKNOWN NODE title_reference] для установки образцов конфигураций. Если вам нужно установить сценарий запуска Asterisk, вы можете запустить 'make config'.</p></li></ul></section><section id="dtls-certificates"><h3 >Сертификаты DTLS</h3><ul ><li ><p >После установки сертификатов DTLS.</p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">mkdir /etc/asterisk/keys</span>
+</pre></div>
+</div>
+<ul ><li ><p >Войдите в каталог сценариев Asterisk:</p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd /asterisk*/contrib/scripts</span>
+</pre></div>
+</div>
+<ul ><li ><p >Создайте сертификаты DTLS (замените pbx.mycompany.com на ваш IP-адрес или имя DNS, замените My Super Company на название вашей компании):</p></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">./ast_tls_cert -C pbx.mycompany.com -O &quot;My Super Company&quot; -d /etc/asterisk/keys</span>
+</pre></div>
+</div>
+</section><section id="configure-asterisk-server"><h2 >Настройка сервера Asterisk</h2><p >Для WebRTC многие необходимые настройки ДОЛЖНЫ быть в настройках одноранговых узлов. Глобальные настройки не очень хорошо хранить в peer settings. По умолчанию файлы конфигурации Asterisk находятся в /etc/asterisk/. Начните с редактирования http.conf и убедитесь, что следующие строки раскомментированы:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">;http.conf</span>
+<span class="go">[general]</span>
+<span class="go">enabled=yes</span>
+<span class="go">bindaddr=127.0.0.1 ; Replace this with your IP address</span>
+<span class="go">bindport=8088 ; Replace this with the port you want to listen on</span>
+</pre></div>
+</div>
+<p >Затем отредактируйте файл sip.conf. Для одноранговой сети WebRTC необходимо включить шифрование, avpf и icesupport. В большинстве случаев directmedia следует отключить. Также под клиентом WebRTC транспорт должен быть указан как «ws», чтобы разрешать соединения с веб-сайтами. Все эти строки конфигурации должны находиться под самим peer; Установка этих конфигурационных строк глобально может не работать:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">;sip.conf</span>
+<span class="go">[general]</span>
+<span class="go">realm=127.0.0.1 ; Replace this with your IP address</span>
+<span class="go">udpbindaddr=127.0.0.1 ; Replace this with your IP address</span>
+<span class="go">transport=udp</span>
+
+<span class="go">[1060] ; This will be WebRTC client</span>
+<span class="go">type=friend</span>
+<span class="go">username=1060 ; The Auth user for SIP.js</span>
+<span class="go">host=dynamic ; Allows any host to register</span>
+<span class="go">secret=password ; The SIP Password for SIP.js</span>
+<span class="go">encryption=yes ; Tell Asterisk to use encryption for this peer</span>
+<span class="go">avpf=yes ; Tell Asterisk to use AVPF for this peer</span>
+<span class="go">icesupport=yes ; Tell Asterisk to use ICE for this peer</span>
+<span class="go">context=default ; Tell Asterisk which context to use when this peer is dialing</span>
+<span class="go">directmedia=no ; Asterisk will relay media for this peer</span>
+<span class="go">transport=udp,ws ; Asterisk will allow this peer to register on UDP or WebSockets</span>
+<span class="go">force_avp=yes ; Force Asterisk to use avp. Introduced in Asterisk 11.11</span>
+<span class="go">dtlsenable=yes ; Tell Asterisk to enable DTLS for this peer</span>
+<span class="go">dtlsverify=no ; Tell Asterisk to not verify your DTLS certs</span>
+<span class="go">dtlscertfile=/etc/asterisk/keys/asterisk.pem ; Tell Asterisk where your DTLS cert file is</span>
+<span class="go">dtlsprivatekey=/etc/asterisk/keys/asterisk.pem ; Tell Asterisk where your DTLS private key is</span>
+<span class="go">dtlssetup=actpass ; Tell Asterisk to use actpass SDP parameter when setting up DTLS</span>
+</pre></div>
+</div>
+<p >В файлах sip.conf и rtp.conf вам также необходимо добавить или раскомментировать строки:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">icesupport = true</span>
+<span class="go">stunaddr = stun.l.google.com:19302</span>
+</pre></div>
+</div>
+<p >Наконец, настройте extensions.conf:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">;extensions.conf</span>
+<span class="go">[default]</span>
+<span class="go">exten =&gt; 1060,1,Dial(SIP/1060) ; Dialing 1060 will call the SIP client registered to 1060</span>
+</pre></div>
+</div>
+</section><section id="configure-odoo-voip"><h2 >Настройка Odoo VOIP</h2><p >В Odoo конфигурация должна быть выполнена в настройках пользователя.</p><p >Расширение SIP Login/Browser's Extension - это номер, который вы предварительно настроили в файле sip.conf. В нашем примере 1060. Пароль SIP - пароль, который вы выбрали в файле sip.conf. Расширение телефона вашего офиса не является обязательным, но оно используется, если вы хотите перевести свой вызов с Odoo на внешний телефон, также настроенный в файле sip.conf.</p><p >Конфигурация также должна быть выполнена в настройках продажи под заголовком &quot;PBX Configuration&quot;. Вам нужно указать IP-адрес, указанный вами в файле http.conf, а WebSocket должен быть: ws://127.0.0.1:8088/ws. Часть &quot;127.0.0.1&quot; должна быть такой же, как ранее определенный IP-адрес, а &quot;8088&quot; - это порт, который вы определили в файле http.conf.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

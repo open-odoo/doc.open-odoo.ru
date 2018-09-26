@@ -1,0 +1,408 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600" rel="stylesheet">
+  
+    <title>Развертывание (Deploy) &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '11.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Настройка" href="../setup.html" />
+    <link rel="next" title="Updating an Odoo installation" href="update.html" />
+    <link rel="prev" title="Установка" href="install.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+  <div class="o_main_header_main">
+    <a class="pull-left o_logo" href="/"></a>
+    <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="mdi-navigation-menu"></span>
+    </a>
+    <ul class="o_primary_nav">
+      <li><a href="/">Документация</a></li>
+    </ul>
+  </div>
+  <nav class="navbar o_sub_nav">
+    <div class="container">
+      <div class="navbar-header visible-xs">
+          <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+            Меню
+            <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+          </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="o_sub-menu">
+        <ol class="o_breadcrumb breadcrumb nav navbar-left">
+            
+            
+            
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (11.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Развертывание (Deploy)</a></li>
+
+            
+        </ol>
+
+        <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/11.0/en/setup/deploy.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/setup/deploy.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/setup/deploy.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/setup/deploy.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+<li><a href="/developer/11.0/ru/python3.html">Python 3</a></li>
+          
+
+          
+            <li class="divider"></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/deploying_odoo.jpg');"></span>
+      <div class="container text-center">
+        <h1> Развертывание (Deploy) - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+      <main class="container ">
+        
+        <div class="o_content row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#dbfilter" class="ripple internal reference">dbfilter</a><ul ><li class="list-group-item"><a href="#configuration-samples" class="ripple internal reference">Образцы конфигурации</a></li></ul></li><li class="list-group-item"><a href="#postgresql" class="ripple internal reference">PostgreSQL</a><ul ><li class="list-group-item"><a href="#configuration-sample" class="ripple internal reference">Пример конфигурации</a></li><li class="list-group-item"><a href="#configuring-odoo" class="ripple internal reference">Настройка Odoo</a><ul ><li class="list-group-item"><a href="#id3" class="ripple internal reference">Пример конфигурации</a></li></ul></li><li class="list-group-item"><a href="#ssl-between-odoo-and-postgresql" class="ripple internal reference">SSL Between Odoo and PostgreSQL</a></li></ul></li><li class="list-group-item"><a href="#builtin-server" class="ripple internal reference">Встроенный сервер</a><ul ><li class="list-group-item"><a href="#worker-number-calculation" class="ripple internal reference">Расчет количества worker</a></li><li class="list-group-item"><a href="#memory-size-calculation" class="ripple internal reference">расчет размера необходимого ОЗУ</a></li><li class="list-group-item"><a href="#livechat" class="ripple internal reference">Живой чат</a></li><li class="list-group-item"><a href="#id5" class="ripple internal reference">Пример конфигурации</a></li></ul></li><li class="list-group-item"><a href="#https" class="ripple internal reference">HTTPS</a><ul ><li class="list-group-item"><a href="#id7" class="ripple internal reference">Пример конфигурации</a></li></ul></li><li class="list-group-item"><a href="#odoo-as-a-wsgi-application" class="ripple internal reference">Odoo как приложение WSGI</a><ul ><li class="list-group-item"><a href="#cron-workers" class="ripple internal reference">Задания Cron</a></li><li class="list-group-item"><a href="#id8" class="ripple internal reference">Живой чат</a></li></ul></li><li class="list-group-item"><a href="#serving-static-files" class="ripple internal reference">Хранение статических файлов</a></li><li class="list-group-item"><a href="#security" class="ripple internal reference">Безопасность</a><ul ><li class="list-group-item"><a href="#blocking-brute-force-attacks" class="ripple internal reference">Blocking Brute Force Attacks</a></li><li class="list-group-item"><a href="#database-manager-security" class="ripple internal reference">Безопасность менеджера баз данных</a></li></ul></li><li class="list-group-item"><a href="#supported-browsers" class="ripple internal reference">Поддерживаемые браузеры</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/11.0/doc/setup/deploy.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+		  <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+          <article class="doc-body ">
+            
+            
+            
+  <section id="deploying-odoo"><p >В этом документе описаны основные шаги по настройке Odoo на сервере. Их нужно делать после <a href="install.html#setup-install" class="internal reference"><span class="std std-ref">установки</span></a>. Они обычно не нужны для окружения разработки, которые не видны в интернете.</p><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >Если вы настраиваете публичный сервер, обязательно ознакомьтесь с нашими рекомендациями <a href="#security" class="internal alert-link reference"><span class="std std-ref">Безопасность</span></a>!</p></div></section><section id="dbfilter"><i id="db-filter"></i><h2 >dbfilter</h2><p >Одна система Odoo может запускаться и обслуживать несколько экземпляров базы данных. Каждый из них имеет свои индивидуальные настройки (например установленные модули) в зависимости от базы данных, которая используется в данный момент.</p><p >Это не проблема при работе только с бэкэндом (веб-клиентом) в качестве зарегистрированного пользователя компании: при входе в систему можно выбрать базу данных и Odoo запомнит какую именно.</p><p >Однако это проблема проявляется для не зарегистрированных пользователей (портала, веб-сайта), которые не привязаны к базе данных: Odoo нужно знать, какая база данных должна использоваться для конкретных операций или для получения данных. Если используется одна база данных, то Odoo работает с ней, но если доступно несколько баз данных, то Odoo нуждается в правиле, чтобы узнать, какую из них нужно использовать.</p><p >Для этих целей используется <code class="std xref std-option">--db-filter</code>: он указывает базу данных по умолчанию для системы Odoo, которая должна быть выбрана на основании хоста (домена), который запрашивается. Значение представляет собой <a href="regularexpression" class="external reference">регулярное выражение</a>, включая динамически введенное имя хоста (<code >%h</code>) или поддомен (<code >%d</code>), через который осуществляется обращение к системе Odoo.</p><p >Если Odoo содержит несколько баз данных на сервере, особенно если используется <code >website</code>, он <strong >должен</strong> использовать dbfilter, или некоторые функции не будут работать корректно или вообще не будут использоваться.</p></section><section id="configuration-samples"><h3 >Образцы конфигурации</h3><ul ><li >Show only databases with names beginning with 'mycompany'</li></ul><p >в <code >/etc/odoo/odoo.conf</code> установите:</p><div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[options]</span>
+<span class="na">dbfilter</span> <span class="o">=</span> <span class="s">^mycompany.*$</span>
+</pre></div>
+</div>
+<ul ><li ><p >Показывать только базы данных, соответствующие первому субдомену после <code >www</code>: например, база данных &quot;mycompany&quot; будет отображаться, если входящий запрос был отправлен на <code >www.mycompany.com</code> или <code >mycompany.co.uk</code>, но не для <code >www2.mycompany.com</code> или <code >helpdesk.mycompany.com</code>.</p></li></ul><p >в <code >/etc/odoo/odoo.conf</code> установите:</p><div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[options]</span>
+<span class="na">dbfilter</span> <span class="o">=</span> <span class="s">^%d$</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >Настройка правильной опции: <code >--db-filter &lt;odoo-bin --db-filter&gt;</code> является важной частью обеспечения безопасности вашей установки. После правильной работы и соответствия только одной базе данных для каждого имени хоста настоятельно рекомендуется заблокировать доступ к экранам менеджера баз данных и использовать параметр запуска <code >--no-database-list</code>, чтобы не отображать список ваших баз данных. См. Также <a href="#security" class="internal alert-link reference">security</a>.</p></div></section><section id="postgresql"><h2 >PostgreSQL</h2><p >По умолчанию PostgreSQL разрешает только подключение к UNIX-сокетам и loopback соединениям (из &quot;localhost&quot;, той же машине, на которой установлен сервер PostgreSQL).</p><p >UNIX-сокет удобен, если вы хотите, чтобы Odoo и PostgreSQL выполнялись на одном компьютере, и по умолчанию не задаются адреса компьютеров, но если вы хотите, чтобы Odoo и PostgreSQL выполнялись на разных машинах <a href="#different-machines" class="footnote-ref" id="id1">1</a>, то необходимо <a href="http://www.postgresql.org/docs/9.6/static/runtime-config-connection.html" class="external reference">listen to network interfaces</a> <a href="#remote-socket" class="footnote-ref" id="id2">2</a>, либо:</p><ul ><li >Only accept loopback connections and <a href="http://www.postgresql.org/docs/9.6/static/ssh-tunnels.html" class="external reference">use an SSH tunnel</a> between the
+machine on which Odoo runs and the one on which PostgreSQL runs, then
+configure Odoo to connect to its end of the tunnel</li><li >Accept connections to the machine on which Odoo is installed, possibly
+over ssl (see <a href="http://www.postgresql.org/docs/9.6/static/runtime-config-connection.html" class="external reference">PostgreSQL connection settings</a> for details), then configure
+Odoo to connect over the network</li></ul></section><section id="configuration-sample"><h3 >Пример конфигурации</h3><ul ><li >Allow tcp connection on localhost</li><li >Allow tcp connection from 192.168.1.x network</li></ul><p >в <code >/etc/postgresql/9.5/main/pg_hba.conf</code> пропишите:</p><div class="highlight-text"><div class="highlight"><pre><span></span># IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+host    all             all             192.168.1.0/24          md5
+</pre></div>
+</div>
+<p >в <code >/etc/postgresql/9.5/main/postgresql.conf</code> пропишите:</p><div class="highlight-text"><div class="highlight"><pre><span></span>listen_addresses = &#39;localhost,192.168.1.2&#39;
+port = 5432
+max_connections = 80
+</pre></div>
+</div>
+</section><section id="configuring-odoo"><i id="setup-deploy-odoo"></i><h3 >Настройка Odoo</h3><p >Из коробки Odoo подключается к локальному postgres через сокет UNIX и порт 5432. Эти параметры можно переопределить, используя <a href="../reference/cmdline.html#reference-cmdline-server-database" class="internal reference"><span class="std std-ref">параметры базы данных</span></a>, если Postgres установлен не локально и/или не использует установки по умолчанию.</p><p >При <a href="install.html#setup-install-packaged" class="internal reference"><span class="std std-ref">установке с использовании инсталяторов</span></a> автоматически создаст нового пользователя (<code >odoo</code>) и установит его как пользователя базы данных.</p><ul ><li ><p >Экран управления базами данных защищен паролем, который устанавливается настройкой <code >admin_passwd</code>. Этот параметр можно установить только в файле конфигурации, и он используется перед выполнением изменений базы данных. Он должен быть произвольно сгенерированным значением, чтобы гарантировать, что из вне никто не получит доступ к вашим базам данных.</p></li><li >All database operations use the <a href="../reference/cmdline.html#reference-cmdline-server-database" class="internal reference"><span class="std std-ref">database options</span></a>, including the database management
+screen. For the database management screen to work requires that the PostgreSQL user
+have <code >createdb</code> right.</li><li ><p >Users can always drop databases they own. For the database management screen
+to be completely non-functional, the PostgreSQL user needs to be created with
+<code >no-createdb</code> and the database must be owned by a different PostgreSQL user.</p><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >пользователь PostgreSQL <em >не должен</em> быть суперпользователем</p></div></li></ul></section><section id="id3"><h4 >Пример конфигурации</h4><ul ><li ><p >подключиться к серверу PostgreSQL по адресу 192.168.1.2</p></li><li ><p >порт 5432</p></li><li ><p >используется учетную запись 'odoo'</p></li><li ><p >с 'pwd' в качестве пароля</p></li><li ><p >фильтрация баз данных с именем, начинающимся на 'mycompany'</p></li></ul><p >в <code >/etc/odoo/odoo.conf</code> установите:</p><div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[options]</span>
+<span class="na">admin_passwd</span> <span class="o">=</span> <span class="s">mysupersecretpassword</span>
+<span class="na">db_host</span> <span class="o">=</span> <span class="s">192.168.1.2</span>
+<span class="na">db_port</span> <span class="o">=</span> <span class="s">5432</span>
+<span class="na">db_user</span> <span class="o">=</span> <span class="s">odoo</span>
+<span class="na">db_password</span> <span class="o">=</span> <span class="s">pwd</span>
+<span class="na">dbfilter</span> <span class="o">=</span> <span class="s">^mycompany.*$</span>
+</pre></div>
+</div>
+</section><section id="ssl-between-odoo-and-postgresql"><i id="postgresql-ssl-connect"></i><h3 >SSL Between Odoo and PostgreSQL</h3><p >Since Odoo 11.0, you can enforce ssl connection between Odoo and PostgreSQL.
+in Odoo the db_sslmode control the ssl security of the connection
+with value choosed out of 'disable', 'allow', 'prefer', 'require', 'verify-ca'
+or 'verify-full'</p><p ><a href="https://www.postgresql.org/docs/current/static/libpq-ssl.html" class="external reference">PostgreSQL Doc</a></p></section><section id="builtin-server"><i id="id4"></i><h2 >Встроенный сервер</h2><p >Odoo включает в себя встроенный HTTP-сервер, который использует многопоточность и многопроцессорность.</p><p >Для использования на продакшене рекомендуется использовать многопроцессорность на сервере, поскольку это повышает стабильность, улучшает использование вычислительных ресурсов и может быть лучше контролироваться.</p><ul ><li ><p >Многопроцессорность включается путем настройки <a href="../reference/cmdline.html#cmdoption-odoo-bin--workers" class="internal reference"><code class="std xref std-option">ненулевое число рабочих процессов</code></a>, количество workers должно быть равно количеству ядер процессора (возможно, в некоторых случаях стоит учесть сколько ядер процессора выделено для Cron)</p></li><li ><p >Ограничения Worker настраиваются основываясь на конфигурации оборудования, чтобы избежать исчерпания ресурсов</p></li></ul><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >многопроцессорный режим в настоящее время недоступен в Windows</p></div></section><section id="worker-number-calculation"><h3 >Расчет количества worker</h3><ul ><li ><p >Рассчитывается по формуле: (#CPU * 2) + 1</p></li><li ><p >Cron Workers используют процессор</p></li><li ><p >1 worker ~ 6 конкурентных пользователей</p></li></ul></section><section id="memory-size-calculation"><h3 >расчет размера необходимого ОЗУ</h3><ul ><li ><p >Мы считаем, что 20% запросов - это тяжелые запросы, а 80% - более простые</p></li><li ><p >&quot;Тяжелый&quot; worker, когда все вычисляемые поля хорошо ортимизированы, SQL-запросы хорошо разработаны, ... оценивается примерно в 1Gb ОЗУ</p></li><li ><p >&quot;Более легкий&quot; worker, в том же сценарии, по оценкам, потребляет около 150 МБ ОЗУ</p></li></ul><p >Необходимое кол-во ОЗУ = #worker * ((light_worker_ratio * light_worker_ram_estimation) + (heavy_worker_ratio * heavy_worker_ram_estimation))</p></section><section id="livechat"><h3 >Живой чат</h3><p >При многопроцессорной работе автоматически запускается выделенный LiveChat worker и слушает <code class="std xref std-option">порт longpolling</code>, но клиент не подключается к нему.</p><p >Вместо этого у вас должны быть перенаправленные прокси-запросы, URL которых начинается с <code >/longpolling/</code> на порт longpolling. Остальные запросы должен быть проксирован на <code class="std xref std-option">обычный HTTP порт</code></p><p >To achieve such a thing, you'll need to deploy a reverse proxy in front of Odoo,
+like nginx or apache. When doing so, you'll need to forward some more http Headers
+to Odoo, and activate the proxy_mode in Odoo configuration to have Odoo read those
+headers.</p></section><section id="id5"><h3 >Пример конфигурации</h3><ul ><li ><p >Сервер с 4 процессорами, 8 потоков</p></li><li ><p >60 одновременных пользователей</p></li><li ><p >60 пользователей / 6 = 10 &lt;- теоретическое число worker</p></li><li ><p >(4 * 2) + 1 = 9 &lt;- теоретическое максимальное число worker</p></li><li ><p >Мы будем использовать 8 worker + 1 для cron. Мы также будем использовать систему мониторинга для измерения нагрузки процессора и проверим, составляет ли она от 7 до 7.5.</p></li><li ><p >RAM = 9 * ((0,8 * 150) + (0,2 * 1024)) ~ 3Gb ОЗУ для Odoo</p></li></ul><p >в <code >/etc/odoo/odoo.conf</code>:</p><div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[options]</span>
+<span class="na">limit_memory_hard</span> <span class="o">=</span> <span class="s">1677721600</span>
+<span class="na">limit_memory_soft</span> <span class="o">=</span> <span class="s">629145600</span>
+<span class="na">limit_request</span> <span class="o">=</span> <span class="s">8192</span>
+<span class="na">limit_time_cpu</span> <span class="o">=</span> <span class="s">600</span>
+<span class="na">limit_time_real</span> <span class="o">=</span> <span class="s">1200</span>
+<span class="na">max_cron_threads</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">workers</span> <span class="o">=</span> <span class="s">8</span>
+</pre></div>
+</div>
+</section><section id="https"><i id="https-proxy"></i><h2 >HTTPS</h2><p >Независимо от того, используете ли вы Odoo как веб-сайт, или как веб-клиент, или как веб-сервис, Для безопасной передачи информацию аутентификации нужно использоваться HTTPS[#switching] _. SSL может быть реализован с помощью любого прокси-сервера, но для этого потребуются следующие настройки:</p><ul ><li >Enable Odoo's <a href="../reference/cmdline.html#cmdoption-odoo-bin--proxy-mode" class="internal reference"><code class="std xref std-option">proxy mode</code></a>. This should only be enabled when Odoo is behind a reverse proxy</li><li >Set up the SSL termination proxy (<a href="http://nginx.com/resources/admin-guide/nginx-ssl-termination/" class="external reference">Nginx termination example</a>)</li><li >Set up the proxying itself (<a href="http://nginx.com/resources/admin-guide/reverse-proxy/" class="external reference">Nginx proxying example</a>)</li><li >Your SSL termination proxy should also automatically redirect non-secure
+connections to the secure port</li></ul><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >Если вы используете модуль Point of Sale (Точка продаж) в сочетании с <a href="https://www.odoo.com/page/point-of-sale-hardware#part_2" class="external reference alert-link">POSBox</a>, вы должны отключить HTTPS для маршрута``/pos/web``, чтобы избежать ошибок смешанного содержимого.</p></div></section><section id="id7"><h3 >Пример конфигурации</h3><ul ><li >Redirect http requests to https</li><li >Proxy requests to odoo</li></ul><p >в <code >/etc/odoo/odoo.conf</code> установите:</p><div class="highlight-ini"><div class="highlight"><pre><span></span><span class="na">proxy_mode</span> <span class="o">=</span> <span class="s">True</span>
+</pre></div>
+</div>
+<p >в <code >/etc/nginx/sites-enabled/odoo.conf</code>:</p><div class="highlight-nginx"><div class="highlight"><pre><span></span><span class="c1">#odoo server</span>
+<span class="k">upstream</span> <span class="s">odoo</span> <span class="p">{</span>
+ <span class="kn">server</span> <span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8069</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">upstream</span> <span class="s">odoochat</span> <span class="p">{</span>
+ <span class="kn">server</span> <span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8072</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1"># http -&gt; https</span>
+<span class="k">server</span> <span class="p">{</span>
+   <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+   <span class="kn">server_name</span> <span class="s">odoo.mycompany.com</span><span class="p">;</span>
+   <span class="kn">rewrite</span> <span class="s">^(.*)</span> <span class="s">https://</span><span class="nv">$host$1</span> <span class="s">permanent</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">server</span> <span class="p">{</span>
+ <span class="kn">listen</span> <span class="mi">443</span><span class="p">;</span>
+ <span class="kn">server_name</span> <span class="s">odoo.mycompany.com</span><span class="p">;</span>
+ <span class="kn">proxy_read_timeout</span> <span class="s">720s</span><span class="p">;</span>
+ <span class="kn">proxy_connect_timeout</span> <span class="s">720s</span><span class="p">;</span>
+ <span class="kn">proxy_send_timeout</span> <span class="s">720s</span><span class="p">;</span>
+
+ <span class="c1"># Add Headers for odoo proxy mode</span>
+ <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-Host</span> <span class="nv">$host</span><span class="p">;</span>
+ <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+ <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-Proto</span> <span class="nv">$scheme</span><span class="p">;</span>
+ <span class="kn">proxy_set_header</span> <span class="s">X-Real-IP</span> <span class="nv">$remote_addr</span><span class="p">;</span>
+
+ <span class="c1"># SSL parameters</span>
+ <span class="kn">ssl</span> <span class="no">on</span><span class="p">;</span>
+ <span class="kn">ssl_certificate</span> <span class="s">/etc/ssl/nginx/server.crt</span><span class="p">;</span>
+ <span class="kn">ssl_certificate_key</span> <span class="s">/etc/ssl/nginx/server.key</span><span class="p">;</span>
+ <span class="kn">ssl_session_timeout</span> <span class="mi">30m</span><span class="p">;</span>
+ <span class="kn">ssl_protocols</span> <span class="s">TLSv1</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
+ <span class="kn">ssl_ciphers</span> <span class="s">&#39;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA&#39;</span><span class="p">;</span>
+ <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+
+ <span class="c1"># log</span>
+ <span class="kn">access_log</span> <span class="s">/var/log/nginx/odoo.access.log</span><span class="p">;</span>
+ <span class="kn">error_log</span> <span class="s">/var/log/nginx/odoo.error.log</span><span class="p">;</span>
+
+ <span class="c1"># Redirect longpoll requests to odoo longpolling port</span>
+ <span class="kn">location</span> <span class="s">/longpolling</span> <span class="p">{</span>
+ <span class="kn">proxy_pass</span> <span class="s">http://odoochat</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="c1"># Redirect requests to odoo backend server</span>
+ <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+   <span class="kn">proxy_redirect</span> <span class="no">off</span><span class="p">;</span>
+   <span class="kn">proxy_pass</span> <span class="s">http://odoo</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="c1"># common gzip</span>
+ <span class="kn">gzip_types</span> <span class="s">text/css</span> <span class="s">text/less</span> <span class="s">text/plain</span> <span class="s">text/xml</span> <span class="s">application/xml</span> <span class="s">application/json</span> <span class="s">application/javascript</span><span class="p">;</span>
+ <span class="kn">gzip</span> <span class="no">on</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section><section id="odoo-as-a-wsgi-application"><h2 >Odoo как приложение WSGI</h2><p >Также возможно установить Odoo в качестве стандартного приложения <a href="http://wsgi.readthedocs.org/" class="external reference">WSGI</a>. Odoo предоставляет базу для сценария запуска WSGI - <code >odoo-wsgi.py</code>. Этот скрипт должен быть настроен (возможно, после его копирования из каталога установки), чтобы правильно настроить конфигурацию непосредственно в  <code class="py xref py-mod">odoo.tools.config</code>, а не через командную строку или файл конфигурации.</p><p >Сервер WSGI будет работать для веб-клиента, веб-сайта и API веб-сервиса, но  Odoo не будет контролировать создание workers, он не сможет настроить workers cron или livechat workers</p></section><section id="cron-workers"><h3 >Задания Cron</h3><p >Для выполнения заданий cron при развертывании Odoo в качестве приложения WSGI требуется</p><ul ><li >A classical Odoo (run via <code >odoo-bin</code>)</li><li >Connected to the database in which cron jobs have to be run (via
+<a href="../reference/cmdline.html#cmdoption-odoo-bin-d" class="internal reference"><code class="std xref std-option">odoo-bin -d</code></a>)</li><li >Which should not be exposed to the network. To ensure cron runners are not
+network-accessible, it is possible to disable the built-in HTTP server
+entirely with <a href="../reference/cmdline.html#cmdoption-odoo-bin--no-http" class="internal reference"><code class="std xref std-option">odoo-bin --no-http</code></a> or setting <code >http_enable = False</code>
+in the configuration file</li></ul></section><section id="id8"><h3 >Живой чат</h3><p >Второй проблемной подсистемой при развертывании Odoo, как приложения WSGI, является LiveChat: где большинство HTTP-соединений относительно короткие и быстро освобождают рабочий процесс для следующего запроса, LiveChat требует долговременного подключения для каждого клиента, чтобы внедрять уведомления в режиме реального времени.</p><p >Это противоречит рабочей модели, основанной на процессах, поскольку она свяжет рабочие процессы и предотвращает доступ новых пользователей к системе. Тем не менее, эти долгоживущие соединения делают очень мало и в основном выполняют функцию ожидания уведомлений.</p><p >Решения для поддержки живого чата и уведомлений в приложении WSGI:</p><ul ><li >Deploy a threaded version of Odoo (instread of a process-based preforking
+one) and redirect only requests to URLs starting with <code >/longpolling/</code> to
+that Odoo, this is the simplest and the longpolling URL can double up as
+the cron instance.</li><li >Deploy an evented Odoo via <code >odoo-gevent</code> and proxy requests starting
+with <code >/longpolling/</code> to
+<a href="../reference/cmdline.html#cmdoption-odoo-bin--longpolling-port" class="internal reference"><code class="std xref std-option">the longpolling port</code></a>.</li></ul></section><section id="serving-static-files"><h2 >Хранение статических файлов</h2><p >Для удобства разработки Odoo хранит все статические файлы в своих модулях. Это не идеально с точки зрения производительности. Статические файлы обычно должны обслуживаться HTTP-сервером.</p><p >Статические файлы Odoo живут в папке <code >static/</code> каждого модуля, поэтому статические файлы могут отдаваться веб-сервером путем перехвата всех запросов <code class="samp">/<em >MODULE</em>/static/<em >FILE</em></code> и поиска правильного модуля (и файла) по всем путям хранения аддонов.</p></section><section id="security"><i id="id9"></i><h2 >Безопасность</h2><p >Для начала имейте в виду, что обеспечение безопасности информационной системы - это непрерывный процесс, а не одноразовая акцуия. Уровень безопасности будет равен уровню безопасности самого слабого звена в вашей среде.</p><p >Поэтому, пожалуйста, не принимайте этот раздел как окончательный список мер, которые предотвратят все проблемы безопасности. Он предназначен только для краткого изложения первых важных вещей, которые вы обязательно должны включить в свой план действий в области безопасности. Остальные будут обеспечены лучшими методами безопасности для вашей операционной системы, лучшими практиками с точки зрения пользователей, паролями и управлением доступом и т.д.</p><p >При развертывании публичного сервера, обязательно рассмотрите следующие темы, связанные с безопасностью:</p><ul ><li ><p >Всегда устанавливайте сложный пароль супер-администратора и ограничивайте доступ к страницам управления базой данных сразу же после установки системы. См.:ref:<code >db_manager_security</code>.</p></li><li ><p >Выберите уникальные логины и надежные пароли для всех учетных записей администратора во всех базах данных. Не используйте «admin» в качестве логина. Не используйте эти логины для ежедневных операций, только для управления/управления установкой. <em >Никогда</em> не используйте любые пароли по умолчанию, такие как admin/admin, даже для тестовых/промежуточных баз данных.</p></li><li >Do <strong >not</strong> install demo data on internet-facing servers. Databases with demo data contain
+default logins and passwords that can be used to get into your systems and cause significant
+trouble, even on staging/dev systems.</li><li ><p >Используйте соответствующие фильтры баз данных ( <a href="../reference/cmdline.html#cmdoption-odoo-bin--db-filter" class="internal reference"><code class="std xref std-option">--db-filter</code></a>), чтобы ограничить видимость ваших баз данных в соответствии с именем хоста. См. <a href="#db-filter" class="internal reference"><span class="std std-ref">dbfilter</span></a>. Вы также можете использовать <a href="../reference/cmdline.html#cmdoption-odoo-bin-d" class="internal reference"><code class="std xref std-option">-d</code></a>, чтобы предоставить свой собственный (разделенный запятыми) список доступных баз данных для фильтрации.</p></li><li ><p >Когда ваш <code >db_filter</code> настроен и соответствует только одной базе данных для каждого имени хоста, вы должны установить опцию <code >list_db</code> в <code >False</code>, чтобы скрыть список баз данных (также  это можно сделать параметром командной строки <a href="../reference/cmdline.html#cmdoption-odoo-bin--no-database-list" class="internal reference"><code class="std xref std-option">--no-database-list</code></a>)</p></li><li ><p >Убедитесь, что пользователь PostgreSQL (<a href="../reference/cmdline.html#cmdoption-odoo-bin--db_user" class="internal reference"><code class="std xref std-option">--db_user</code></a>) <em >не является</em> суперпользователем и что ваши базы данных принадлежат другому пользователю. Например, они могут принадлежать суперпользователю <code >postgres</code>, если вы используете выделенный не-привилегированный <code >db_user</code>. См. также : ref:<code >setup/deploy/odoo</code>.</p></li><li ><p >Получайте обновления, регулярно устанавливая последние сборки, либо через GitHub, либо загружая последнюю версию с <a href="https://www.odoo.com/page/download" class="external reference">https://www.odoo.com/page/download</a> или <a href="http://nightly.odoo.com" class="external reference">http://nightly.odoo.com</a></p></li><li ><p >Настройте свой сервер в многопроцессном режиме с соответствующими лимитами, соответствующими вашему типичному использованию (память/процессор/таймауты). См. Также: ref:<code >builtin_server</code>.</p></li><li ><p >Запустите Odoo за веб-сервером с настроенным HTTPS  и действительным сертификатом SSL, чтобы обеспечить шифрование соединений. SSL-сертификаты дешевы, и существует множество бесплатных вариантов. Настройте веб-прокси, чтобы ограничить размер запросов, установить соответствующие тайм-ауты, а затем включить параметр <a href="../reference/cmdline.html#cmdoption-odoo-bin--proxy-mode" class="internal reference"><code class="std xref std-option">proxy mode</code></a>. См. Также <a href="#https-proxy" class="internal reference"><span class="std std-ref">HTTPS</span></a>.</p></li><li >If you need to allow remote SSH access to your servers, make sure to set a strong password
+for <strong >all</strong> accounts, not just <code >root</code>. It is strongly recommended to entirely disable
+password-based authentication, and only allow public key authentication. Also consider
+restricting access via a VPN, allowing only trusted IPs in the firewall, and/or
+running a brute-force detection system such as <code >fail2ban</code> or equivalent.</li><li ><p >Consider installing appropriate rate-limiting on your proxy or firewall, to prevent
+brute-force attacks and denial of service attacks. See also <a href="#login-brute-force" class="internal reference"><span class="std std-ref">Blocking Brute Force Attacks</span></a>
+for specific measures.</p><p >Many network providers provide automatic mitigation for Distributed Denial of
+Service attacks (DDOS), but this is often an optional service, so you should consult
+with them.</p></li><li ><p >По мере возможности размещайте свои демонстрационные/тестовые экземпляры с открытым доступом на машинах, отличных от продакшена. И применяйте на них меры безопасности по максимуму.</p></li><li ><p >Если вы размещаете несколько клиентов, изолируйте данные и файлы клиентов друг от друга с помощью контейнеров или соответствующих методов.</p></li><li ><p >Делайте ежедневные резервные копии ваших баз данных и файлов хранения данных и копируйте их на удаленный сервер архивации, который недоступен с самого сервера.</p></li></ul></section><section id="blocking-brute-force-attacks"><i id="login-brute-force"></i><h3 >Blocking Brute Force Attacks</h3><p >For internet-facing deployments, brute force attacks on user passwords are very common, and this
+threat should not be neglected for Odoo servers. Odoo emits a log entry whenever a login attempt
+is performed, and reports the result: success or failure, along with the target login and source IP.</p><p >The log entries will have the following form.</p><p >Failed login:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2018</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">05</span> <span class="mi">14</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">31</span><span class="p">,</span><span class="mi">506</span> <span class="mi">24849</span> <span class="n">INFO</span> <span class="n">db_name</span> <span class="n">odoo</span><span class="o">.</span><span class="n">addons</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">res_users</span><span class="p">:</span> <span class="n">Login</span> <span class="n">failed</span> <span class="k">for</span> <span class="n">db</span><span class="p">:</span><span class="n">db_name</span> <span class="n">login</span><span class="p">:</span><span class="n">admin</span> <span class="kn">from</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+</pre></div>
+</div>
+<p >Successful login:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2018</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">05</span> <span class="mi">14</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">31</span><span class="p">,</span><span class="mi">506</span> <span class="mi">24849</span> <span class="n">INFO</span> <span class="n">db_name</span> <span class="n">odoo</span><span class="o">.</span><span class="n">addons</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">res_users</span><span class="p">:</span> <span class="n">Login</span> <span class="n">successful</span> <span class="k">for</span> <span class="n">db</span><span class="p">:</span><span class="n">db_name</span> <span class="n">login</span><span class="p">:</span><span class="n">admin</span> <span class="kn">from</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+</pre></div>
+</div>
+<p >These logs can be easily analyzed by an intrusion prevention system such as <code >fail2ban</code>.</p><p >For example, the following fail2ban filter definition should match a
+failed login:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Definition</span><span class="p">]</span>
+<span class="n">failregex</span> <span class="o">=</span> <span class="o">^</span> \<span class="n">d</span><span class="o">+</span> <span class="n">INFO</span> \<span class="n">S</span><span class="o">+</span> \<span class="n">S</span><span class="o">+</span> <span class="n">Login</span> <span class="n">failed</span> <span class="k">for</span> <span class="n">db</span><span class="p">:</span>\<span class="n">S</span><span class="o">+</span> <span class="n">login</span><span class="p">:</span>\<span class="n">S</span><span class="o">+</span> <span class="kn">from</span> <span class="o">&lt;</span><span class="n">HOST</span><span class="o">&gt;</span>
+<span class="n">ignoreregex</span> <span class="o">=</span>
+</pre></div>
+</div>
+<p >This could be used with a jail definition to block the attacking IP on HTTP(S).</p><p >Here is what it could look like for blocking the IP for 15 minutes when
+10 failed login attempts are detected from the same IP within 1 minute:</p><div class="highlight-default"><div class="highlight"><pre><span></span>[odoo-login]
+enabled = true
+port = http,https
+bantime = 900  ; 15 min ban
+maxretry = 10  ; if 10 attempts
+findtime = 60  ; within 1 min  /!\ Should be adjusted with the TZ offset
+logpath = /var/log/odoo.log  ;  set the actual odoo log path here
+</pre></div>
+</div>
+</section><section id="database-manager-security"><i id="db-manager-security"></i><h3 >Безопасность менеджера баз данных</h3><p ><code >admin_passwd</code> мимоходом упоминается в <a href="#setup-deploy-odoo" class="internal reference"><span class="std std-ref">Настройка Odoo</span></a></p><p >Этот параметр используется для всех действий над базами данных (для создания, удаления, сброса или восстановления баз данных).</p><p >If the management screens must not be accessible at all, you should set <code >list_db</code>
+configuration option to <code >False</code>, to block access to all the database selection and
+management screens.</p><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >It is strongly recommended to disable the Database Manager for any internet-facing
+system! It is meant as a development/demo tool, to make it easy to quickly create
+and manage databases. It is not designed for use in production, and may even expose
+dangerous features to attackers. It is also not designed to handle large databases,
+and may trigger memory limits.</p><p >On production systems, database management operations should always be performed by
+the system administrator, including provisioning of new databases and automated backups.</p></div><p >Be sure to setup an appropriate <code >db_name</code> parameter
+(and optionally, <code >db_filter</code> too) so that the system can determine the target database
+for each request, otherwise users will be blocked as they won't be allowed to choose the
+database themselves.</p><p >Если экраны управления не должны быть доступны или должны быть доступны только из выбранного набора компьютеров, используйте функции прокси-сервера для блокировки доступа ко всем адресам, начинающимся с <code >/web/database</code>, за исключением (возможно) <code >/web/database/selector</code>, который отображает экран выбора базы данных.</p><p >Если экран управления базой данных должен быть доступен, параметр <code >admin_passwd` должен быть изменен с ``admin</code> по умолчанию: этот пароль проверяется перед тем, как совершить операцию изменения базы данных.</p><p >Он должен храниться надежно и должен генерироваться случайным образом, например</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -c <span class="s1">&#39;import base64, os; print(base64.b64encode(os.urandom(24)))&#39;</span>
+</pre></div>
+</div>
+<p >этот код выведет 32-символьную псевдослучайную строку.</p></section><section id="supported-browsers"><h2 >Поддерживаемые браузеры</h2><p >Odoo is supported by multiple browsers for each of its versions. No
+distinction is made according to the browser version in order to be
+up-to-date. Odoo is supported on the current browser version. The list
+of the supported browsers is the following:</p><ul ><li >IE11,</li><li >Mozilla Firefox,</li><li >Google Chrome,</li><li >Safari,</li><li >Microsoft Edge</li></ul><div class="footnote" id="different-machines"><span class="footnote-label"><a class="footnote-backref" href="#id1">[1]</a></span> <p >чтобы несколько установок Odoo использовали одну и ту же базу данных PostgreSQL или обеспечивали больше вычислительных ресурсов для обоих программ.</p></div><div class="footnote" id="remote-socket"><span class="footnote-label"><a class="footnote-backref" href="#id2">[2]</a></span> <p >технически такой инструмент, как <a href="http://www.dest-unreach.org/socat/" class="external reference">socat</a>, может использоваться для прокси UNIX-сокетов по сетям, но это в основном для программного обеспечения, которое можно использовать только для UNIX сокетов</p></div><div class="footnote" id="switching"><span class="footnote-label"><a class="footnote-backref" href="#id6">[3]</a></span> <p >или быть доступным только через внутреннюю сеть с коммутацией пакетов, но для этого требуются защищенные коммутаторы, с защитой от <code >ARP spoofing</code> и отключенным Wi-Fi. Даже над защищенными сетями с коммутацией пакетов рекомендуется развертывание по HTTPS, а возможные затраты снижаются, поскольку «самоподписанные» сертификаты легче развертывать в контролируемой среде, чем в Интернете.</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+      <div id="footer" class="container o_not_editable">
+          <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+          <div class="row">
+              <div class="col-xs-12">
+                  <hr/>
+                  <p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                  <hr/>
+                  <p>
+                      <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br/> <br/>
+                      В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="o_footer_bottom o_not_editable">
+          <div class="container">
+              <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+              <div class="social-links pull-right">
+                  <a href="https://www.odoo.com/web/about/facebook">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/twitter">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/linkedin">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:info@odoo.com">
+                      <i class="fa fa-envelope"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

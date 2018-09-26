@@ -1,0 +1,457 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Odoo Guidelines &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="Upgrade API" href="upgrade_api.html" />
+    <link rel="prev" title="Workflows" href="workflows.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Odoo Guidelines</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/reference/guidelines.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/en/reference/guidelines.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/en/reference/guidelines.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/en/reference/guidelines.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/en/">Пользователю</a></li>
+<li><a href="/developer/8.0/en/">Разработчику</a></li>
+<li><a href="/developer/8.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/odoo_guideline.jpg');"></span>
+      <div class="container text-center">
+        <h1> Odoo Guidelines - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#module-structure" class="ripple internal reference">Module structure</a><ul ><li class="list-group-item"><a href="#directories" class="ripple internal reference">Directories</a></li><li class="list-group-item"><a href="#file-naming" class="ripple internal reference">File naming</a></li></ul></li><li class="list-group-item"><a href="#xml-files" class="ripple internal reference">XML files</a><ul ><li class="list-group-item"><a href="#format" class="ripple internal reference">Format</a></li><li class="list-group-item"><a href="#naming-xml-id" class="ripple internal reference">Naming xml_id</a><ul ><li class="list-group-item"><a href="#security-view-and-action" class="ripple internal reference">Security, View and Action</a></li><li class="list-group-item"><a href="#inherited-xml" class="ripple internal reference">Inherited XML</a></li></ul></li></ul></li><li class="list-group-item"><a href="#python" class="ripple internal reference">Python</a><ul ><li class="list-group-item"><a href="#pep8-options" class="ripple internal reference">PEP8 options</a></li><li class="list-group-item"><a href="#imports" class="ripple internal reference">Imports</a></li><li class="list-group-item"><a href="#idioms" class="ripple internal reference">Idioms</a></li><li class="list-group-item"><a href="#symbols" class="ripple internal reference">Symbols</a></li></ul></li><li class="list-group-item"><a href="#javascript-and-css" class="ripple internal reference">Javascript and CSS</a></li><li class="list-group-item"><a href="#git" class="ripple internal reference">Git</a><ul ><li class="list-group-item"><a href="#commit-message" class="ripple internal reference">Commit message</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/guidelines.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="odoo-guidelines"><p >This page introduce the new Odoo Coding Guidelines. These guidelines
+aim to improve the quality of the code (better readability of source,
+...) and  Odoo Apps. Indeed, proper code ought ease maintenance, aid
+debugging, lower complexity and promote reliability.</p></section><section id="module-structure"><h2 >Module structure</h2></section><section id="directories"><h3 >Directories</h3><p >A module is organised in a few directory :</p><ul ><li ><em >data/</em> : demo and data xml</li><li ><em >models/</em> : models definition</li><li ><em >controllers/</em> : contains controllers (http routes).</li><li ><em >views/</em> : contains the views and templates</li><li ><em >static/</em> : contains the web assets, separated into <em >css/, js/, img/, lib/, ...</em></li></ul></section><section id="file-naming"><h3 >File naming</h3><p >For <em >views</em> declarations, split backend views from (frontend)
+templates in 2 differents files.</p><p >For <em >models</em>, split the business logic by sets of models, in each set
+select a main model, this model gives its name to the set. If there is
+only one model, its name is the same as the module name. For
+each set named &lt;main_model&gt; the following files may be created:</p><ul ><li ><code class="file">models/<em >&lt;main_model&gt;</em>.py</code></li><li ><code class="file">models/<em >&lt;inherited_main_model&gt;</em>.py</code></li><li ><code class="file">views/<em >&lt;main_model&gt;</em>_templates.xml</code></li><li ><code class="file">views/<em >&lt;main_model&gt;</em>_views.xml</code></li></ul><p >For instance, <em >sale</em> module introduces <code >sale_order</code> and
+<code >sale_order_line</code> where <code >sale_order</code> is dominant. So the
+<code >&lt;main_model&gt;</code> files will be named <code class="file">models/sale_order.py</code> and
+<code class="file">views/sale_order_views.py</code>.</p><p >For <em >data</em>, split them by purpose : demo or data. The filename will be
+the main_model name, suffixed by <em >_demo.xml</em> or <em >_data.xml</em>.</p><p >For <em >controller</em>, the only file should be named <em >main.py</em>.</p><p >For <em >static files</em>, the name pattern is <em >&lt;module_name&gt;.ext</em> (i.e. :
+static/js/im_chat.js, static/css/im_chat.css, static/xml/im_chat.xml,
+...). Don't link data (image, libraries) outside Odoo : don't use an
+url to an image but copy it in our codebase instead.</p><p >The complete tree should look like</p><div class="highlight-text"><div class="highlight"><pre><span></span>addons/&lt;my_module_name&gt;/
+|-- __init__.py
+|-- __openerp__.py
+|-- controllers/
+|   |-- __init__.py
+|   `-- main.py
+|-- data/
+|   |-- &lt;main_model&gt;_data.xml
+|   `-- &lt;inherited_main_model&gt;_demo.xml
+|-- models/
+|   |-- __init__.py
+|   |-- &lt;main_model&gt;.py
+|   `-- &lt;inherited_main_model&gt;.py
+|-- security/
+|   |-- ir.model.access.csv
+|   `-- &lt;main_model&gt;_security.xml
+|-- static/
+|   |-- img/
+|   |   |-- my_little_kitten.png
+|   |   `-- troll.jpg
+|   |-- lib/
+|   |   `-- external_lib/
+|   `-- src/
+|       |-- js/
+|       |   `-- &lt;my_module_name&gt;.js
+|       |-- css/
+|       |   `-- &lt;my_module_name&gt;.css
+|       |-- less/
+|       |   `-- &lt;my_module_name&gt;.less
+|       `-- xml/
+|           `-- &lt;my_module_name&gt;.xml
+`-- views/
+    |-- &lt;main_model&gt;_templates.xml
+    |-- &lt;main_model&gt;_views.xml
+    |-- &lt;inherited_main_model&gt;_templates.xml
+    `-- &lt;inherited_main_model&gt;_views.xml
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >File names should only contain <code >[a-z0-9_]</code> (lowercase
+alphanumerics and <code >_</code>)</p></div><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Use correct file permissions : folder 755 and file 644.</p></div></section><section id="xml-files"><h2 >XML files</h2></section><section id="format"><h3 >Format</h3><p >When declaring a record in XML,</p><ul ><li >Place <code >id</code> attribute before <code >model</code></li><li >For field declaration, <code >name</code> attribute is first. Then place the
+<em >value</em> either in the <code >field</code> tag, either in the <code >eval</code>
+attribute, and finally other attributes (widget, options, ...)
+ordered by importance.</li><li >Try to group the record by model. In case of dependencies between
+action/menu/views, the convention may not be applicable.</li><li >Use naming convention defined at the next point</li><li >The tag <em >&lt;data&gt;</em> is only used to set not-updatable data with <code >noupdate=1</code></li></ul><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;view_id&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>view.name<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>object_name<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;priority&quot;</span> <span class="na">eval=</span><span class="s">&quot;16&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tree&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;my_field_1&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;my_field_2&quot;</span> <span class="na">string=</span><span class="s">&quot;My Label&quot;</span> <span class="na">widget=</span><span class="s">&quot;statusbar&quot;</span> <span class="na">statusbar_visible=</span><span class="s">&quot;draft,sent,progress,done&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/tree&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+</section><section id="naming-xml-id"><h3 >Naming xml_id</h3></section><section id="security-view-and-action"><h4 >Security, View and Action</h4><p >Use the following pattern :</p><ul ><li >For a menu: <code class="samp"><em >&lt;model_name&gt;</em>_menu</code></li><li >For a view: <code class="samp"><em >&lt;model_name&gt;</em>_view_<em >&lt;view_type&gt;</em></code>, where <em >view_type</em> is
+<code >kanban</code>, <code >form</code>, <code >tree</code>, <code >search</code>, ...</li><li >For an action: the main action respects <code class="samp"><em >&lt;model_name&gt;</em>_action</code>.
+Others are suffixed with <code class="samp">_<em >&lt;detail&gt;</em></code>, where <em >detail</em> is a
+lowercase string briefly explaining the action.
+This is used only if multiple actions are declared for the
+model.</li><li >For a group: <code class="samp"><em >&lt;model_name&gt;</em>_group_<em >&lt;group_name&gt;</em></code> where <em >group_name</em>
+is the name of the group, generally 'user', 'manager', ...</li><li >For a rule: <code class="samp"><em >&lt;model_name&gt;</em>_rule_<em >&lt;concerned_group&gt;</em></code> where
+<em >concerned_group</em> is the short name of the concerned group ('user'
+for the 'model_name_group_user', 'public' for public user, 'company'
+for multi-company rules, ...).</li></ul><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="c">&lt;!-- views and menus --&gt;</span>
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_menu&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.menu&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_view_form&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_view_kanban&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="c">&lt;!-- actions --&gt;</span>
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_action&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.actions.act_window&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_action_child_list&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.actions.act_window&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="c">&lt;!-- security --&gt;</span>
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_group_user&quot;</span> <span class="na">model=</span><span class="s">&quot;res.groups&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_rule_public&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.rule&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_rule_company&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.rule&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >View names use dot notation <code >my.model.view_type</code> or
+<code >my.model.view_type.inherit</code> instead of <em >&quot;This is the form view of
+My Model&quot;</em>.</p></div></section><section id="inherited-xml"><h4 >Inherited XML</h4><p >The naming pattern of inherited view is
+<code class="samp"><em >&lt;base_view&gt;</em>_inherit_<em >&lt;current_module_name&gt;</em></code>. A module may only
+extend a view once.  Suffix the orginal name with
+<code class="samp">_inherit_<em >&lt;current_module_name&gt;</em></code> where <em >current_module_name</em> is the
+technical name of the module extending the view.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;inherited_model_view_form_inherit_my_module&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+</section><section id="python"><h2 >Python</h2></section><section id="pep8-options"><h3 >PEP8 options</h3><p >Using a linter can help show syntax and semantic warnings or errors. Odoo
+source code tries to respect Python standard, but some of them can be ignored.</p><ul ><li >E501: line too long</li><li >E301: expected 1 blank line, found 0</li><li >E302: expected 2 blank lines, found 1</li><li >E126: continuation line over-indented for hanging indent</li><li >E123: closing bracket does not match indentation of opening bracket's line</li><li >E127: continuation line over-indented for visual indent</li><li >E128: continuation line under-indented for visual indent</li><li >E265: block comment should start with '# '</li></ul></section><section id="imports"><h3 >Imports</h3><p >The imports are ordered as</p><ol ><li >External libraries (one per line sorted and split in python stdlib)</li><li >Imports of <code >openerp</code></li><li >Imports from Odoo modules (rarely, and only if necessary)</li></ol><p >Inside these 3 groups, the imported lines are alphabetically sorted.</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># 1 : imports of python lib</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="c1"># 2 :  imports of openerp</span>
+<span class="kn">import</span> <span class="nn">openerp</span>
+<span class="kn">from</span> <span class="nn">openerp</span> <span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">models</span> <span class="c1"># alphabetically ordered</span>
+<span class="kn">from</span> <span class="nn">openerp.tools.safe_eval</span> <span class="kn">import</span> <span class="n">safe_eval</span> <span class="k">as</span> <span class="nb">eval</span>
+<span class="kn">from</span> <span class="nn">openerp.tools.translate</span> <span class="kn">import</span> <span class="n">_</span>
+<span class="c1"># 3 :  imports from odoo modules</span>
+<span class="kn">from</span> <span class="nn">openerp.addons.website.models.website</span> <span class="kn">import</span> <span class="n">slug</span>
+<span class="kn">from</span> <span class="nn">openerp.addons.web.controllers.main</span> <span class="kn">import</span> <span class="n">login_redirect</span>
+</pre></div>
+</div>
+</section><section id="idioms"><h3 >Idioms</h3><ul ><li >Prefer <code >%</code> over <code >.format()</code>, prefer <code >%(varname)</code> instead of position (This is better for translation)</li><li >Try to avoid generators and decorators</li><li >Always favor <em >Readability</em> over <em >conciseness</em> or using the language features or idioms.</li><li >Use list comprehension, dict comprehension, and basic manipulation using <code >map</code>, <code >filter</code>, <code >sum</code>, ... They make the code easier to read.</li><li >The same applies for recordset methods : use <code >filtered</code>, <code >mapped</code>, <code >sorted</code>, ...</li><li >Each python file should have <code ># -*- coding: utf-8 -*-</code> as first line</li><li >Use the <code >UserError</code> defined in <code >openerp.exceptions</code> instead of overriding <code >Warning</code>, or find a more appropriate exception in <em >exceptions.py</em></li><li >Document your code (docstring on methods, simple comments for the tricky part of the code)</li><li >Use meaningful variable/class/method names</li></ul></section><section id="symbols"><h3 >Symbols</h3><ul ><li >Odoo Python Class : use camelcase for code in api v8, underscore lowercase notation for old api.</li></ul><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AccountInvoice</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">account_invoice</span><span class="p">(</span><span class="n">osv</span><span class="o">.</span><span class="n">osv</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul ><li ><dl ><dt >Variable name :</dt><dd ><ul ><li >use camelcase for model variable</li><li >use underscore lowercase notation for common variable.</li><li >since new API works with record or recordset instead of id list, don't suffix variable name with <em >_id</em> or <em >_ids</em> if they not contain id or list of id.</li></ul></dd></dl></li></ul><div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">ResPartner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;res.partner&#39;</span><span class="p">]</span>
+<span class="n">partners</span> <span class="o">=</span> <span class="n">ResPartner</span><span class="o">.</span><span class="n">browse</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+<span class="n">partner_id</span> <span class="o">=</span> <span class="n">partners</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span>
+</pre></div>
+</div>
+<ul ><li ><code >One2Many</code> and <code >Many2Many</code> fields should always have <em >_ids</em> as suffix (example: sale_order_line_ids)</li><li ><code >Many2One</code> fields should have <em >_id</em> as suffix (example : partner_id, user_id, ...)</li><li ><dl ><dt >Method conventions</dt><dd ><ul ><li >Compute Field : the compute method pattern is <em >_compute_&lt;field_name&gt;</em></li><li >Search method : the search method pattern is <em >_search_&lt;field_name&gt;</em></li><li >Default method : the default method pattern is <em >_default_&lt;field_name&gt;</em></li><li >Onchange method : the onchange method pattern is <em >_onchange_&lt;field_name&gt;</em></li><li >Constraint method : the constraint method pattern is <em >_check_&lt;constraint_name&gt;</em></li><li >Action method : an object action method is prefix with <em >action_</em>. Its decorator is <code >@api.multi</code>, but since it use only one record, add <code >self.ensure_one()</code> at the beginning of the method.</li></ul></dd></dl></li><li ><dl ><dt >In a Model attribute order should be</dt><dd ><ol ><li >Private attributes (<code >_name</code>, <code >_description</code>, <code >_inherit</code>, ...)</li><li >Default method and <code >_default_get</code></li><li >Field declarations</li><li >Compute and search methods in the same order as field declaration</li><li >Constrains methods (<code >@api.constrains</code>) and onchange methods (<code >@api.onchange</code>)</li><li >CRUD methods (ORM overrides)</li><li >Action methods</li><li >And finally, other business methods.</li></ol></dd></dl></li></ul><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Event</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="c1"># Private attributes</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;event.event&#39;</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Event&#39;</span>
+
+    <span class="c1"># Default methods</span>
+    <span class="k">def</span> <span class="nf">_default_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="c1"># Fields declaration</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">_default_name</span><span class="p">)</span>
+    <span class="n">seats_reserved</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">oldname</span><span class="o">=</span><span class="s1">&#39;register_current&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Reserved Seats&#39;</span><span class="p">,</span>
+        <span class="n">store</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">compute</span><span class="o">=</span><span class="s1">&#39;_compute_seats&#39;</span><span class="p">)</span>
+    <span class="n">seats_available</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">oldname</span><span class="o">=</span><span class="s1">&#39;register_avail&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Available Seats&#39;</span><span class="p">,</span>
+        <span class="n">store</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">compute</span><span class="o">=</span><span class="s1">&#39;_compute_seats&#39;</span><span class="p">)</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Price&#39;</span><span class="p">)</span>
+
+    <span class="c1"># compute and search fields, in the same order that fields declaration</span>
+    <span class="nd">@api.multi</span>
+    <span class="nd">@api.depends</span><span class="p">(</span><span class="s1">&#39;seats_max&#39;</span><span class="p">,</span> <span class="s1">&#39;registration_ids.state&#39;</span><span class="p">,</span> <span class="s1">&#39;registration_ids.nb_register&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_compute_seats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="c1"># Constraints and onchanges</span>
+    <span class="nd">@api.constrains</span><span class="p">(</span><span class="s1">&#39;seats_max&#39;</span><span class="p">,</span> <span class="s1">&#39;seats_available&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_check_seats_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="nd">@api.onchange</span><span class="p">(</span><span class="s1">&#39;date_begin&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_onchange_date_begin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="c1"># CRUD methods</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="c1"># Action methods</span>
+    <span class="nd">@api.multi</span>
+    <span class="k">def</span> <span class="nf">action_validate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ensure_one</span><span class="p">()</span>
+        <span class="o">...</span>
+
+    <span class="c1"># Business methods</span>
+    <span class="k">def</span> <span class="nf">mail_user_confirm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+</section><section id="javascript-and-css"><h2 >Javascript and CSS</h2><p ><strong >For javascript :</strong></p><ul ><li ><code >use strict;</code> is recommended for all javascript files</li><li >Use a linter (jshint, ...)</li><li >Never add minified Javascript Libraries</li><li >Use camelcase for class declaration</li></ul><p ><strong >For CSS :</strong></p><ul ><li >Prefix all your class with <em >o_&lt;module_name&gt;</em> where <em >module_name</em> is the technical name of the module ('sale', 'im_chat', ...) or the main route reserved by the module (for website module mainly, i.e. : 'o_forum' for website_forum module). The only exception for this rule is the webclient : it simply use <em >o_</em> prefix.</li><li >Avoid using id</li><li >Use bootstrap native class</li><li >Use underscore lowercase notation to name class</li></ul></section><section id="git"><h2 >Git</h2></section><section id="commit-message"><h3 >Commit message</h3><p >Prefix your commit with</p><ul ><li ><strong >[IMP]</strong> for improvements</li><li ><strong >[FIX]</strong> for bug fixes</li><li ><strong >[REF]</strong> for refactoring</li><li ><strong >[ADD]</strong> for adding new resources</li><li ><strong >[REM]</strong> for removing of resources</li><li ><strong >[MERGE]</strong> for merge commits (only for forward/back-port)</li><li ><strong >[CLA]</strong> for signing the Odoo Individual Contributor License</li></ul><p >Then, in the message itself, specify the part of the code impacted by your changes (module name, lib, transversal object, ...) and a description of the changes.</p><ul ><li >Always include a meaningful commit message: it should be self explanatory
+(long enough) including the name of the module that has been changed and the
+reason behind the change. Do not use single words like &quot;bugfix&quot; or
+&quot;improvements&quot;.</li><li >Avoid commits which simultaneously impact multiple modules. Try to
+split into different commits where impacted modules are different
+(It will be helpful if we need to revert a module separately).</li></ul><div class="highlight-text"><div class="highlight"><pre><span></span>[FIX] website, website_mail: remove unused alert div, fixes look of input-group-btn
+
+Bootstrap&#39;s CSS depends on the input-group-btn
+element being the first/last child of its parent.
+This was not the case because of the invisible
+and useless alert.
+
+[IMP] fields: reduce memory footprint of list/set field attributes
+
+[REF] web: add module system to the web client
+
+This commit introduces a new module system for the javascript code.
+Instead of using global ...
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Use the long description to explain the <em >why</em> not the
+<em >what</em>, the <em >what</em> can be seen in the diff</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

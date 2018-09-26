@@ -1,0 +1,300 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Действия &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Представления" href="views.html" />
+    <link rel="prev" title="Файлы с данными" href="data.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Действия</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/en/reference/actions.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/ru/reference/actions.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/actions.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/actions.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/ru/">Пользователю</a></li>
+<li><a href="/developer/8.0/ru/">Разработчику</a></li>
+<li><a href="/developer/8.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/actions.jpg');"></span>
+      <div class="container text-center">
+        <h1> Действия - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#window-actions-ir-actions-act-window" class="ripple internal reference">Действия Окна (Window Actions) (<code >ir.actions.act_window</code>)</a></li><li class="list-group-item"><a href="#url-actions-ir-actions-act-url" class="ripple internal reference">URL действия (<code >ir.actions.act_url</code>)</a></li><li class="list-group-item"><a href="#server-actions-ir-actions-server" class="ripple internal reference">Действия Сервера (<code >ir.actions.server</code>)</a><ul ><li class="list-group-item"><a href="#code" class="ripple internal reference"><code >code</code></a></li><li class="list-group-item"><a href="#object-create" class="ripple internal reference"><code >object_create</code></a></li><li class="list-group-item"><a href="#object-write" class="ripple internal reference"><code >object_write</code></a></li><li class="list-group-item"><a href="#multi" class="ripple internal reference"><code >multi</code></a></li><li class="list-group-item"><a href="#trigger" class="ripple internal reference"><code >trigger</code></a></li><li class="list-group-item"><a href="#client-action" class="ripple internal reference"><code >client_action</code></a></li><li class="list-group-item"><a href="#evaluation-context" class="ripple internal reference">Вычисляемый контекст</a></li></ul></li><li class="list-group-item"><a href="#report-actions-ir-actions-report-xml" class="ripple internal reference">Действия печатных форм  (<code >ir.actions.report.xml</code>)</a></li><li class="list-group-item"><a href="#client-actions-ir-actions-client" class="ripple internal reference">Действия клиента (<code >ir.actions.client</code>)</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/actions.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="actions"><i id="reference-actions"></i><p >Действия определяют поведение системы в ответ на действия пользователя например: авторизация, нажатие кнопки, выбор позиции в списке, и т.д.</p><p >Действия могут храниться в базе данных или возвращаться непосредственно в виде словарей, например, в методах при нажатии кнопок. Все действия имеют два обязательных атрибута:</p><dl ><dt ><code >type</code></dt><dd ><p >Категория текущего действия, определяет, какие поля могут использоваться и как интерпретируется действие</p></dd><dt ><code >name</code></dt><dd ><p >Короткое, удобочитаемое описание действия для отображения в интерфейсе клиента</p></dd></dl><p >Клиент может получить команду на действие в 4-х видах:</p><dl ><dt ><code >False</code></dt><dd ><p >Если какое либо диалоговое окно открыто и пользователь закрыл его</p></dd><dt >A string</dt><dd ><p >если <a href="#reference-actions-client" class="internal reference"><span class="std std-ref">действие клиента</span></a> совпадает, действие клиент интерпритируется как тег действия клиента, в противном случае будет восприниматься как число</p></dd><dt >A number</dt><dd >read the corresponding action record from the database, may be a database
+identifier or an <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a></dd><dt >A dictionary</dt><dd ><p >рассматривается в качестве дескриптора действия клиента, а затем выполняется</p></dd></dl></section><section id="window-actions-ir-actions-act-window"><i id="reference-actions-window"></i><h2 >Действия Окна (Window Actions) (<code >ir.actions.act_window</code>)</h2><p >Наиболее распространенный тип действия, используется для визуализации моделей данных с помощью <a href="views.html#reference-views" class="internal reference"><span class="std std-ref">представлений</span></a>: действия окна определяются набор представлений (или конкретного представления) для модели данных (или конкретного набора записей модели данных).</p><p >Используемые поля:</p><dl ><dt ><code >res_model</code></dt><dd ><p >модель данных, к которой будет применено представление</p></dd><dt ><code >views</code></dt><dd ><p >Список пар <code >(view_id, view_type)</code>. Второй элемент каждой пары является категорией представления (tree, form, graph, ...) , а первый элемент опционально определяет идентификатор базы данных (или <code >False</code>). Если не указан идентификатор, клиент самостоятельно выберет представление по умолчанию для запрашиваемой модели данных (это будет автоматически определено функцией <a href="orm.html#openerp.models.Model.fields_view_get" class="internal reference" title="openerp.models.Model.fields_view_get"><code class="py py-meth xref">fields_view_get()</code></a>). Первый тип в списке будет назначен представлением по умолчанию и будет открываться по умолчанию каждый раз, когда выполняется действие. Каждый тип представлений должен быть указан в данном списке не более одного раза.</p></dd><dt ><code >res_id</code> (опционално)</dt><dd ><p >если базовое представление <code >form</code>, определяет запись, которая будет загружена в форму (в противном случае запись будет создана)</p></dd><dt ><code >search_view_id</code> (опционально)</dt><dd ><p >пара <code >(id, name)</code>, <code >id</code> - идентификатор базы данных для конкретного представления поиска, который будет загружен для действия. По умолчанию выбирает дефолтное представление поиска для модели данных</p></dd><dt ><code >target</code> (опционально)</dt><dd ><p >должны ли представления быть открытыми в области основной рабочей зоны (<code >current</code>) или в диалоговом окне / popup (<code >new</code>). По умолчанию используется <code >current</code>.</p></dd><dt ><code >context</code> (опционально)</dt><dd ><p >дополнительные данные для контекста, передаваемого в представление</p></dd><dt ><code >domain</code> (опционально)</dt><dd ><p >фильтр, который добавляется ко всем поисковым запросам</p></dd><dt ><code >limit</code> (опционально)</dt><dd ><p >Количество записей, отображаемых в списках по умолчанию. По умолчанию 80 в веб-клиенте</p></dd><dt ><code >auto_search</code> (опционально)</dt><dd ><p >будет ли выполняться поиск сразе после загрузки представления по умолчанию. По умолчанию <code >True</code>.</p></dd></dl><p >Например, для открытия клиентов (партнеров с установленным флагом <code >customer</code> в представлении списка и формы:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ir.actions.act_window&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;res_model&quot;</span><span class="p">:</span> <span class="s2">&quot;res.partner&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;views&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;tree&quot;</span><span class="p">],</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;form&quot;</span><span class="p">]],</span>
+    <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="s2">&quot;customer&quot;</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">true</span><span class="p">]],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p >Или, чтобы открыть вид формы конкретного продукта (полученного отдельно) в новом окне:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ir.actions.act_window&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;res_model&quot;</span><span class="p">:</span> <span class="s2">&quot;product.product&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;views&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;form&quot;</span><span class="p">]],</span>
+    <span class="s2">&quot;res_id&quot;</span><span class="p">:</span> <span class="n">a_product_id</span><span class="p">,</span>
+    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;new&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p >Действия окна, хранящиеся в базе данных имеют несколько различных полей, которые игнорируются клиентами, и используются в основном для составления список <code >views</code>:</p><dl ><dt ><code >view_mode</code></dt><dd ><p >список представлений, разделенных запятыми, в виде строки. Все эти типы будут присутствовать в созданном списке <code >представлений</code> (по крайней мере <code >False</code> view_id)</p></dd><dt ><code >view_ids</code></dt><dd ><p >M2M<a href="#notquitem2m" class="footnote-ref" id="id1">1</a> объектов представления, определяет начальное содержание <code >представлений</code></p></dd><dt ><code >view_id</code></dt><dd ><p >конкретное представление добавляется к списку <code >views</code> в случае когда его тип является частью списка <code >view_mode</code> и еще не заполнен одним из видов в <code >view_ids</code></p></dd></dl><p >Это используется в основном когда действия определяются с помощью <a href="data.html#reference-data" class="internal reference"><span class="std std-ref">Файлы с данными</span></a>:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">&quot;ir.actions.act_window&quot;</span> <span class="na">id=</span><span class="s">&quot;test_action&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>A Test Action<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;res_model&quot;</span><span class="nt">&gt;</span>some.model<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;view_mode&quot;</span><span class="nt">&gt;</span>graph<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;view_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;my_specific_view&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p >будет использовано &quot;my_specific_view&quot; представление, даже в том случае если оно не является представлением по умолчанию для даной модели данных.</p><p >Составление последовательности <code >представлений</code> на стороне сервера состоит в следующем:</p><ul ><li ><p >берется каждый <code >(id, type)</code> из <code >view_ids</code> (отсортированный по <code >sequence</code>)</p></li><li ><p >если <code >view_id</code> определен и его тип еще на заполнен, добавляется его <code >(id, type)</code></p></li><li ><p >для каждого незаполненного тип в <code >view_mode</code>, добавляется <code >(False, type)</code></p></li></ul></section><section id="url-actions-ir-actions-act-url"><i id="reference-actions-url"></i><h2 >URL действия (<code >ir.actions.act_url</code>)</h2><p >Позволяет открывать URL (вебсайт/веб страница) через действие Odoo. Могут быть настроены через два поля:</p><dl ><dt ><code >url</code></dt><dd ><p >адрес, который открывается, когда срабатывает действие</p></dd><dt ><code >target</code></dt><dd ><p >открывает адрес в новом окне/вкладке, если установлен параметр <code >new</code>. Заменяет текущую страницу следующей, если <code >self</code>. По умолчанию <code >new</code></p></dd></dl><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ir.actions.act_url&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://odoo.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p >заменит текущее содержимое страницы домашней страницей Odoo.</p></section><section id="server-actions-ir-actions-server"><i id="reference-actions-server"></i><h2 >Действия Сервера (<code >ir.actions.server</code>)</h2><p >Позволяет инициировать запуск сложного серверного кода от любого разрешенного действия. Только два поля имеют отношение к клиентам:</p><dl ><dt ><code >id</code></dt><dd ><p >внутренний идентификатор действия сервера для запуска.</p></dd><dt ><code >context</code> (опционально)</dt><dd ><p >Контекстные данные для использования при выполнении действия сервера</p></dd></dl><p >Записи в базе данных значительно богаче и могут выполнять ряд конкретных или общих действий, основанных на их «состоянии». Некоторые поля (и соответствующие модели поведения) разделяются между состояниями:</p><dl ><dt ><code >model_id</code></dt><dd ><p >Odoo модель данных связанная с действием, делает доступным <a href="#reference-actions-server-context" class="internal reference"><span class="std std-ref">вычисляемый контекст</span></a></p></dd><dt ><code >condition</code> (опционально)</dt><dd ><p >оценивается как код Python, используя <a href="#reference-actions-server-context" class="internal reference"><span class="std std-ref">вычисляемый контекст</span></a> действия сервера. Если <code >False</code>, предотвращает запуск действия. По умолчанию: <code >True</code></p></dd></dl><p >Допустимые типы действий (поле <code >state</code> (состояние)) являются расширяемыми, типы по умолчанию:</p></section><section id="code"><h3 ><code >code</code></h3><p >Стандартное и наиболее гибкое серверное действие, исполняет произвольный Python код с <a href="#reference-actions-server-context" class="internal reference"><span class="std std-ref">вычисляемым контекстом</span></a>. Использует только один определенный тип поля:</p><dl ><dt ><code >code</code></dt><dd ><p >кусок Python кода, который будет выполнен при вызове действия</p></dd></dl><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">&quot;ir.actions.server&quot;</span> <span class="na">id=</span><span class="s">&quot;print_instance&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Res Partner Server Action<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;model_res_partner&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;code&quot;</span><span class="nt">&gt;</span>
+        print self, object
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Сегмент кода может определить переменную вызываемую <code >action</code>, которая будет возвращена клиенту как следующее действие для выполнения:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">&quot;ir.actions.server&quot;</span> <span class="na">id=</span><span class="s">&quot;print_instance&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Res Partner Server Action<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;model_res_partner&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;code&quot;</span><span class="nt">&gt;</span>
+        if object.some_condition():
+            action = {
+                &quot;type&quot;: &quot;ir.actions.act_window&quot;,
+                &quot;view_mode&quot;: &quot;form&quot;,
+                &quot;res_model&quot;: object._name,
+                &quot;res_id&quot;: object.id,
+            }
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p >Будет просить клиента открыть форму для записи, если она удовлетворяет некоторому условию.</p></div><p >Это, как правило, единственный тип записи создаваемый из <a href="data.html#reference-data" class="internal reference"><span class="std std-ref">файлов данных</span></a>, остальные типы не связаны с <a href="#reference-actions-server-multi" class="internal reference"><span class="std std-ref">multi</span></a> и их проще определить из UI в отличии от Python кода , но не из <a href="data.html#reference-data" class="internal reference"><span class="std std-ref">файлов данных</span></a>.</p></section><section id="object-create"><i id="reference-actions-server-object-create"></i><h3 ><code >object_create</code></h3><p >Создает новую запись с нуля (с помощью <a href="orm.html#openerp.models.Model.create" class="internal reference" title="openerp.models.Model.create"><code class="py py-meth xref">create()</code></a>) или копируя уже существующую (с помощью <a href="orm.html#openerp.models.Model.copy" class="internal reference" title="openerp.models.Model.copy"><code class="py py-meth xref">copy()</code></a>)</p><dl ><dt ><code >use_create</code></dt><dd ><p >Политика создания, одна из:</p><dl ><dt ><code >new</code></dt><dd ><p >создает запись в модели данных определенной <code >model_id</code></p></dd><dt ><code >new_other</code></dt><dd ><p >создает запись в модели данных определенной <code >crud_model_id</code></p></dd><dt ><code >copy_current</code></dt><dd ><p >копирует запись, из которой было вызвано действие</p></dd><dt ><code >copy_other</code></dt><dd ><p >копирует другую запись, используя <code >ref_object</code></p></dd></dl></dd><dt ><code >fields_lines</code></dt><dd ><p >Поля для переопределения при создании или копировании записи. <a href="orm.html#openerp.fields.One2many" class="internal reference" title="openerp.fields.One2many"><code class="py xref py-class">One2many</code></a> с полями:</p><dl ><dt ><code >col1</code></dt><dd ><p ><code >ir.model.fields</code> установить в модели данных подразумеваемой <code >use_create</code></p></dd><dt ><code >value</code></dt><dd ><p >значение для поля интерпретируемое через <code >type</code></p></dd><dt ><code >type</code></dt><dd ><p >Если <code >value</code>, то <code >value</code> поля интерпретируется как буквенное значение (возможно преобразованное), если <code >equation</code>, то <code >value</code> поля интерпретируется как Python выражение и проходит соответствующую оценку</p></dd></dl></dd><dt ><code >crud_model_id</code></dt><dd ><p >модель данных в которой будет создана новая запись, если <code >use_create</code> установлено как <code >new_other</code></p></dd><dt ><code >ref_object</code></dt><dd ><p ><a href="orm.html#openerp.fields.Reference" class="internal reference" title="openerp.fields.Reference"><code class="py xref py-class">Reference</code></a> на произвольную запись для копирования, используется если <code >use_create</code> установлено, как <code >copy_other</code></p></dd><dt ><code >link_new_record</code></dt><dd ><p >логический флаг связывающий новую запись с текущей через many2one поле определенное через <code >link_field_id</code>, по умолчанию <code >False</code></p></dd><dt ><code >link_field_id</code></dt><dd ><p >many2one в <code >ir.model.fields</code>, определяет m2o поле текущей записи к которому будут установлены вновь создаваемые записи (модели данных должны совпадать)</p></dd></dl></section><section id="object-write"><h3 ><code >object_write</code></h3><p >То же что и <a href="#reference-actions-server-object-create" class="internal reference"><span class="std std-ref">object_create</span></a>, но изменяет уже существующие записи, вместо создания новых</p><dl ><dt ><code >use_write</code></dt><dd ><p >политика записи, одна из:</p><dl ><dt ><code >current</code></dt><dd ><p >Записать в текущую запись</p></dd><dt ><code >other</code></dt><dd ><p >Записать в другую запись, выбранную с помощью <code >crud_model_id</code> и <code >ref_object</code></p></dd><dt ><code >expression</code></dt><dd ><p >Запись в другую запись, модель которой выбирается с помощью <code >crud_model_id</code> и чей идентификатор выбирается путем оценки <code >write_expression</code></p></dd></dl></dd><dt ><code >write_expression</code></dt><dd ><p >Python выражение возвращающее идентификатор записи или объекта, используется, когда <code >use_write</code> установлено, как <code >expression</code> значение для того, чтобы решить какие записи должны быть изменены</p></dd><dt ><code >fields_lines</code></dt><dd ><p >смотрите <a href="#reference-actions-server-object-create" class="internal reference"><span class="std std-ref">object_create</span></a></p></dd><dt ><code >crud_model_id</code></dt><dd ><p >смотрите <a href="#reference-actions-server-object-create" class="internal reference"><span class="std std-ref">object_create</span></a></p></dd><dt ><code >ref_object</code></dt><dd ><p >смотрите <a href="#reference-actions-server-object-create" class="internal reference"><span class="std std-ref">object_create</span></a></p></dd></dl></section><section id="multi"><i id="reference-actions-server-multi"></i><h3 ><code >multi</code></h3><p >Выполняется несколько действий одно за одним. Действия для выполнения определяются через <code >child_ids</code> m2m. Если суб-действия сами возвращают действия, то последнее будет возвращено клиенту как следующие действие всей последовательности</p></section><section id="trigger"><h3 ><code >trigger</code></h3><p >Подает сигнал бизнес-процессу.</p><dl ><dt ><code >wkf_transition_id</code></dt><dd ><p ><a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a> для <code >workflow.transition</code> как триггер</p></dd><dt ><code >use_relational_model</code></dt><dd ><p >если <code >base</code> (по умолчанию), это триггер для вызова сигнала от имени текущей записи. Если <code >relational</code>, то это триггер для вызова сигнала от имени поля выбранного через <code >wkf_model_id</code> и <code >wkf_field_id</code></p></dd></dl></section><section id="client-action"><h3 ><code >client_action</code></h3><p >Направление для прямого возврата другого действия, определенного с помощью <code >action_id</code>. Просто возвращает это действие клиенту для выполнения.</p></section><section id="evaluation-context"><i id="reference-actions-server-context"></i><h3 >Вычисляемый контекст</h3><p >Ряд ключевых слов, доступных в вычисляемом контексте или окружающих действий сервера:</p><dl ><dt ><code >self</code></dt><dd ><p >Объект модели данных, связанный с действием через <code >model_id</code></p></dd><dt ><code >object</code>, <code >obj</code></dt><dd ><p >Доступно только если <code >active_model</code> и <code >active_id</code> предоставляются (через контекст) иначе <code >None</code>. Актуальная запись выбирается через <code >active_id</code></p></dd><dt ><code >pool</code></dt><dd ><p >текущий реестр базы данных</p></dd><dt ><code >datetime</code>, <code >dateutil</code>, <code >time</code></dt><dd ><p >соответствующие модули Python</p></dd><dt ><code >cr</code></dt><dd ><p >текущий курсор базы данных</p></dd><dt ><code >user</code></dt><dd ><p >запись текущего пользователя</p></dd><dt ><code >context</code></dt><dd ><p >контекст выполнения</p></dd><dt ><code >Warning</code></dt><dd ><p >конструктор для <code >Warning</code> исключений</p></dd></dl></section><section id="report-actions-ir-actions-report-xml"><i id="reference-actions-report"></i><h2 >Действия печатных форм  (<code >ir.actions.report.xml</code>)</h2><p >Подача команды для печати соответствующих форм.</p><dl ><dt ><code >name</code> (обязательно)</dt><dd ><p >Полезен только в качестве мнемоники/описания печатной формы, при поиске в списке форм</p></dd><dt ><code >model</code> (обязательно)</dt><dd ><p >модель данных к которой относится ваша печатная форма</p></dd><dt ><code >report_type</code> (обязательно)</dt><dd ><p >или <code >qweb-pdf</code> для создания PDF файлов печатных форм, или <code >qweb-html</code> для HTML</p></dd><dt ><code >report_name</code></dt><dd ><p >имя печатной формы (которое будет присвоено выданному PDF файлу)</p></dd><dt ><code >groups_id</code></dt><dd ><p ><a href="orm.html#openerp.fields.Many2many" class="internal reference" title="openerp.fields.Many2many"><code class="py xref py-class">Many2many</code></a> поле, в котором находятся ссылки на группы, которым разрешено просматривать/использовать текущую печатную форму.</p></dd><dt ><code >paperformat_id</code></dt><dd ><p ><a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a> поле, в котором находятся ссылки на форматы бумаги, которые вы хотите применить в данной печатной форме (если не указан явно, то формат компании будет использован по умолчанию)</p></dd><dt ><code >attachment_use</code></dt><dd ><p >если установлено <code >True</code>, то печатная форма только однажды сгенерируется при первом использовании, и при следующих вызовах будет браться из сохраненной копии.</p><p >Может использоваться для отчетов, которые должны генерироваться только один раз (например, по юридическим причинам)</p></dd><dt ><code >attachment</code></dt><dd ><p >python выражение, которое определяет имя печатной формы; запись доступна как переменная <code >object</code></p></dd></dl></section><section id="client-actions-ir-actions-client"><i id="reference-actions-client"></i><h2 >Действия клиента (<code >ir.actions.client</code>)</h2><p >Запускает действие, которое реализуется полностью на стороне клиента.</p><dl ><dt ><code >tag</code></dt><dd ><p >идентификатор действия на стороне клиента, произвольная строка, о том как действовать получив ее клиент должен уже знать</p></dd><dt ><code >params</code> (опционально)</dt><dd ><p >словарь Python дополнительных данных для отправки клиенту, наряду с тегом действий клиента</p></dd></dl><div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ir.actions.client&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;pos.ui&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p >говорит клиенту запустить интерфейс POS, сервер вообще не в курсе, как он работает.</p><div class="footnote" id="notquitem2m"><span class="footnote-label"><a class="footnote-backref" href="#id1">[1]</a></span> <p >технически не M2M: добавляет поле последовательности и может состоять только из типа представления без идентификатора представления.</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

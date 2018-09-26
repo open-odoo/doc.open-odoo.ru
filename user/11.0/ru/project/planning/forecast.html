@@ -1,0 +1,261 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как использовать прогнозирование в проектах? &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" />
+    <link rel="up" title="Планирование проектов" href="../planning.html" />
+    <link rel="next" title="Расширенные функции" href="../advanced.html" />
+    <link rel="prev" title="Как планировать и отслеживать распределение людских ресурсов?" href="assignments.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../project.html">Управление проектами</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как использовать прогнозирование в проектах?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/project/planning/forecast.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/project/planning/forecast.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/project/planning/forecast.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как использовать прогнозирование в проектах? - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction-to-forecast" class="ripple internal reference">Введение в прогноз</a></li><li class="list-group-item"><a href="#how-to-configure-the-projects" class="ripple internal reference">Как настроить проекты?</a><ul ><li class="list-group-item"><a href="#configure-the-project-application" class="ripple internal reference">Настройка модуля Управления проектами</a></li><li class="list-group-item"><a href="#configure-a-specific-project" class="ripple internal reference">Настройте конкретный проект.</a></li><li class="list-group-item"><a href="#how-to-create-a-forecast" class="ripple internal reference">Как создать прогноз?</a></li></ul></li><li class="list-group-item"><a href="#what-are-the-difference-between-the-views" class="ripple internal reference">Разница между режимами отображения?</a><ul ><li class="list-group-item"><a href="#by-users-people-management" class="ripple internal reference">В разрезе сотрудников: помогает управлять людьми</a><ul ><li class="list-group-item"><a href="#plan-the-workload" class="ripple internal reference">Планирование рабочей нагрузки</a></li><li class="list-group-item"><a href="#gantt-view-advantages" class="ripple internal reference">Преимущества диаграммы Ганта</a></li></ul></li><li class="list-group-item"><a href="#by-projects-project-management" class="ripple internal reference">В разрезе проектов: эффективное управление проектами</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Преимущества диаграммы Ганта</a></li></ul></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/project/planning/forecast.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-forecast-tasks"></section><section id="introduction-to-forecast"><h2 >Введение в прогноз</h2><p >Планирование и прогнозирование задач - это один из способов управления проектами. В Odoo опция прогнозирование (Forecast) дает доступ к режиму отображение в виде диаграммы Ганта.</p><p >До этого мы разбирали режим просмотра проекта в виде канбан-доски, на которой виден прогресс проекта и связанных с ним задачи.</p><p >С включенной опцией Прогноз (Forecast), в режиме диаграммы Ганта видна общая картина проекта. Это очень удобно, особенно для сложных проектов. Это улучшает взаимодействие членов команды, которая работает над проектом.</p><p >Этот вариант дает огромные преимущества с точки зрения планирования рабочей нагрузки и организации человеческих ресурсов.</p></section><section id="how-to-configure-the-projects"><h2 >Как настроить проекты?</h2></section><section id="configure-the-project-application"><h3 >Настройка модуля Управления проектами</h3><p >Опция <strong >Прогноз (Forecast</strong> позволяет организовать ваши проекты. Это необходимо, когда вам нужно настроить проект с оговоренными сроком сдачи. Поэтому каждой задаче присваивается определенный таймфрейм (количество часов), в котором ваш сотрудник должен ее выполнить!</p><p >Вам нужно активировать опцию <strong >Прогноз (Forecast</strong> для всего модуля Управления проектами:</p><p >Перейдите к <span class="menuselection">Project(Управления проектами) ‣ Configuration (Конфигурация) ‣ Settings (Настройки)</span>. Выберите опцию «Прогноз (Forecast)» и нажмите <strong >Применить</strong>.</p><img src="../../_images/forecast011.png" class="img-responsive center-block"><p >После этого, вам все равно необходимо активировать опцию <strong >Прогноз (Forecast)</strong> специально для каждого проекта, в котором она необходима. (например, если диаграмма Ганта нужна не для всех проектов).</p></section><section id="configure-a-specific-project"><h3 >Настройте конкретный проект.</h3><p >При создании нового проекта выберите параметр «Разрешить прогноз (Allow Forecast)» в настройках проекта.</p><p >Вы увидите параметр <strong >Прогноз (Forecast)</strong>, отображающийся в верхнем меню.</p><img src="../../_images/forecast021.png" class="img-responsive center-block"><p >Если вы добавите опцию «Прогнозирование» в существующем проекте, задачи, для которых не выбран срок завершения, отображаться не будут.</p><p >Задачи проекта не связаны с прогнозом.</p></section><section id="how-to-create-a-forecast"><h3 >Как создать прогноз?</h3><p >Перед созданием проекта с прогнозом перечислите все задачи с предполагаемым временем, которое они должны выполнить. Это поможет вам скоординировать работу.</p><p >Чтобы отобразить проекты в диаграмме Ганта, вам необходимо создать прогноз со страницы задачи. Чтобы создать прогноз, нажмите в верхнем левом углу задачи, <strong >Создать прогноз (Create a Forecast)</strong>.</p><img src="../../_images/forecast031.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Вы также можете создать новый прогноз, просто нажав на пустое место в календаре диаграммы Ганта.</p></div><p >Интерфейс Forecast автоматически заполнит имя проекта и задачи. Вам просто нужно добавить даты и время выполнения задачи.</p><img src="../../_images/forecast041.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Поле «Эффективные часы» появляется только в том случае, если в Odoo установлено приложение <strong >Timesheet</strong>. Этот параметр помогает вам видеть ход выполнения задач.</p><p >Например: когда пользователь заполняет вводит 10 затраченных часов на задачу в проекте, в прогнозе отобразится 10 часов в поле «Эффективные часы».</p></div></section><section id="what-are-the-difference-between-the-views"><h2 >Разница между режимами отображения?</h2><p >В приложении <strong >Управление проектами (Project)</strong> есть два режима отображения диаграммы Ганта в разрезе пользователей и в разрезе проектов.</p></section><section id="by-users-people-management"><h3 >В разрезе сотрудников: помогает управлять людьми</h3><p >Этот параметр отображает диаграмму Ганта сотрудника. Диаграмма Ганта показывает, в каких проектах он участвует. Очень полезно для эффективного распределения человеческих ресурсы.</p><p >С левой стороны, на первом уровне, вы можете увидеть, какие пользователи задействованы. Затем на втором уровне вы видите, к каким проектам они относятся. На третьем вы видите, какие задачи они выполняют.</p><p >Каждая задача представлена ​​цветным прямоугольником. Этот прямоугольник отражает продолжительность задачи в календаре.</p><p >Верхний прямоугольник на первом уровне представляет собой сумму всех задач, скомпилированных с третьего уровня. Если он зеленый, это означает, что общее время, выделяемое этому пользователю, составляет менее 100%. Когда он красный, это означает, что этому пользователю назначено несколько задач, которые составляют более 100% его/ее времени.</p><img src="../../_images/forecast05.png" class="img-responsive center-block"></section><section id="plan-the-workload"><h4 >Планирование рабочей нагрузки</h4><p >При планировании проекта вы должны указать время, которое сотрудник должен потратить на него. 100% означает, что ваш сотрудник должен работать только над этим проектом. У него/нее нет других задач. Таким образом, вы можете выбрать от 1 до 100%, это поможет вашим сотрудникам организовать свое время между различными задачами.</p><p >Сквозной анализ занятости на проектах помогает избежать переработок сотрудников. Например, если у ваш эксперт уже 40% времени запланировано потратить на выполнение одной задачи в одном проекте, то в другом проекте вы можете занять его на 60% рабочего времени.</p><p >В приведенном ниже примере пользователь &quot;Администратор&quot; работает над двумя проектами («IT1367 этап доставки» и «Процесс внедрения 56»). Пользователь затрачивает обоим проектам в общей сложности 110% своего времени. Это слишком много, поэтому Руководитель проекта должен подкорректировать расписания сотрудников. Или же  Руководитель может изменить время сдачи проекта, чтобы это было выполнимо.</p><img src="../../_images/forecast06.png" class="img-responsive center-block"></section><section id="gantt-view-advantages"><h4 >Преимущества диаграммы Ганта</h4><p >Режим диаграммы Ганта в разрезе пользователя поможет вам лучше планировать свои человеческие ресурсы. Вы избегаете путаницы в задачах и назначениях пользователей. Диаграмма Ганта отлично визуализирует проект, что помогает увидеть многие аспекты в назначенных задачах. В случае нестыковок, вы будете знать, что нужно сделать дальше. Этот метод поможет вам лучше понять отношения между задачами.</p><p >Динамический режим диаграммы Ганта в Odoo позволяет:</p><ul ><li ><p >Изменить плановое время и дату завершения, переместив запланированные или завершенные задачи</p></li><li ><p >Быстро создать и спланировать новый проект в диаграмме Ганта</p></li><li ><p >Изменить существующий план проекта</p></li><li ><p >Изменить продолжительность плановое выполнения задачи, расширив или сократив прямоугольник.</p></li></ul></section><section id="by-projects-project-management"><h3 >В разрезе проектов: эффективное управление проектами</h3><p >Диаграмма Ганта - идеальный взгляд на проект, чтобы лучше понять как задачи зависят друг от друга. Это поможет избежать дублирования задач или начать задачу слишком рано (или поздно), если она зависит от другой задачи. Диаграмма Ганта помогает эффективно координировать задачи.</p><p >В этом режиме проекты отображаются на первом уровне иерархии.</p><p >На левой стороне, на первом уровне, вы можете видеть проекты. Затем на втором уровне вы видите, какие пользователи участвуют в проекте. На третьем вы видите, какие задачи они выполняют.</p><p >В этом режиме не отображается загрузка сотрудников. Цвета не используются. (См. Раздел <strong >В разрезе сотрудников</strong>)</p><img src="../../_images/forecast07.png" class="img-responsive center-block"></section><section id="id1"><h4 >Преимущества диаграммы Ганта</h4><p >Динамический режим диаграммы Ганта в Odoo позволяет:</p><ul ><li ><p >Изменить плановое время и дату завершения, переместив запланированные или завершенные задачи</p></li><li ><p >Быстро создать и спланировать новый проект в диаграмме Ганта</p></li><li ><p >Изменить существующий план проекта</p></li><li ><p >Изменить продолжительность плановое выполнения задачи, расширив или сократив прямоугольник.</p></li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

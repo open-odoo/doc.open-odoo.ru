@@ -1,0 +1,298 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to pay several bills at once? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Pay supplier bills" href="../pay.html" />
+    <link rel="next" title="Misc" href="../misc.html" />
+    <link rel="prev" title="Pay by Checks" href="check.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to pay several bills at once?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/accounting/payables/pay/multiple.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting/payables/pay/multiple.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/accounting/payables/pay/multiple.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to pay several bills at once? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#pay-multiple-bills-with-one-payment" class="ripple internal reference">Pay multiple bills with one payment</a><ul ><li class="list-group-item"><a href="#record-several-payments" class="ripple internal reference">Record several payments</a></li><li class="list-group-item"><a href="#pay-supplier-bills-one-after-the-other" class="ripple internal reference">Pay supplier bills, one after the other</a></li><li class="list-group-item"><a href="#pay-several-bills-altogether" class="ripple internal reference">Pay several bills altogether</a></li><li class="list-group-item"><a href="#record-the-payment-reconcile-afterwards" class="ripple internal reference">Record the payment, reconcile afterwards</a></li></ul></li><li class="list-group-item"><a href="#partial-payments-of-several-supplier-bills" class="ripple internal reference">Partial payments of several supplier bills</a><ul ><li class="list-group-item"><a href="#how-to-pay-several-supplier-bills-having-cash-discounts-at-once" class="ripple internal reference">How to pay several supplier bills having cash discounts at once?</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/accounting/payables/pay/multiple.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-pay-several-bills-at-once"><p >Odoo provides a simple and effective way to handle several bills at
+once, with various quick or complex options. With one single process,
+anyone is able to handle bills and payment in just a few clicks.</p></section><section id="pay-multiple-bills-with-one-payment"><h2 >Pay multiple bills with one payment</h2></section><section id="record-several-payments"><h3 >Record several payments</h3><p >In the following example, we will generate some bills. You can control
+the whole process from your accounting dashboard (first screen you get
+when you open the accounting application).</p><img src="../../../_images/multiple01.png" class="img-responsive center-block"><p >To create a bill, open the Dashboard menu and click on <strong >Vendor Bills</strong>.
+In the Vendor Bills window, click on <strong >Create</strong>.</p><img src="../../../_images/multiple02.png" class="img-responsive center-block"><p >Choose the vendor from which you wish to purchase the product, and click
+on Add an item to add one (or more) product(s). Click on <strong >Save</strong> and then
+<strong >Validate</strong>.</p></section><section id="pay-supplier-bills-one-after-the-other"><h3 >Pay supplier bills, one after the other</h3><img src="../../../_images/multiple03.png" class="img-responsive center-block"><p >We will now record a payment for one bill only. Open the bill, then
+click on <strong >Register Payment</strong>. Insert the Payment Method, Date and Amount,
+and click on <strong >Validate</strong>.</p><img src="../../../_images/multiple04.png" class="img-responsive center-block"><p >Once you have validated the payment, the system will automatically
+reconcile the payment with the bill, and set the bill as <strong >Paid</strong>. The
+system will also generate a move from the payment account and reconcile
+it with the expense transaction.</p></section><section id="pay-several-bills-altogether"><h3 >Pay several bills altogether</h3><p >In order to illustrate the process thoroughly, create at least 2 more
+bills following the above standing guide. <strong >Make sure all bills come
+from the same vendor.</strong></p><img src="../../../_images/multiple05.png" class="img-responsive center-block"><p >In the Vendors Bills, select the new bills you have just created by
+checking the box next to each of them. In the Action menu located in the
+middle of the page, click on <strong >Register Payment</strong>.</p><img src="../../../_images/multiple06.png" class="img-responsive center-block"><p >Insert the details of the payment. The system calculated the total
+amount for both bills, but you can modify it freely. Click on <strong >Validate</strong>.</p></section><section id="record-the-payment-reconcile-afterwards"><h3 >Record the payment, reconcile afterwards</h3><p >You can also reconcile a payment with bills after the payment has been
+recorded.</p><p >First, we need to create a payment</p><p >This will handle from <span class="menuselection">Dashboard ‣ Bank journal ‣
+More Option ‣ Send Money</span></p><img src="../../../_images/multiple07.png" class="img-responsive center-block"><p >Creating payment order with check payment method. Selecting related
+Vendor and amount which remain to pay. After filling all details, we
+will confirm the payment order which will generate payment transaction
+with the system.</p><img src="../../../_images/multiple08.png" class="img-responsive center-block"><p >As you can see, bill payment status show what is posted and what is
+remaining to reconcile.</p><p >After receiving bank statement from the bank with payment detail, you
+can reconcile the transaction from the Dashboard. It will automatically
+map the transaction amount.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><p >For more detail on the bank reconciliation process, please read:</p><ul ><li ><a href="../../bank/reconciliation/use_cases.html" class="internal alert-link reference"><span class="doc">Use cases in the bank reconciliation process?</span></a></li></ul></div></section><section id="partial-payments-of-several-supplier-bills"><h2 >Partial payments of several supplier bills</h2></section><section id="how-to-pay-several-supplier-bills-having-cash-discounts-at-once"><h3 >How to pay several supplier bills having cash discounts at once?</h3><p >You already learned how to pay bills in various way but what about
+partial payment? We are taking another example where we will do partial
+payment for various bills.</p><p >We are creating multiple bills and partially pay them through bank
+statements.</p><p >We are adding payment terms which allow some cash discount where vendor
+offer us early payment discount.</p><img src="../../../_images/multiple09.png" class="img-responsive center-block"><p >We are creating the following bills with the assignment of the above
+payment term.</p><img src="../../../_images/multiple10.png" class="img-responsive center-block"><p >We have created the following bills:</p><img src="../../../_images/multiple11.png" class="img-responsive center-block"><p >We will pay the invoices by creating bank statement where we will adjust
+the cash discount our vendor provided under payment terms.</p><img src="../../../_images/multiple12.png" class="img-responsive center-block"><p >Before reconciling this bank statement, we need to create one statement
+model for cash discount.</p><img src="../../../_images/multiple13.png" class="img-responsive center-block"><p >Now we are going back to bank statement and opening reconcile view.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><p >For bank statement reconciliation with model option, see</p><ul ><li ><a href="../../bank/reconciliation/configure.html" class="internal alert-link reference"><span class="doc">Configure model of entries</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

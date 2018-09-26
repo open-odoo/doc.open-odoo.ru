@@ -1,0 +1,326 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to create a Bill of Materials &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Getting Started" href="../getting_started.html" />
+    <link rel="next" title="How to process a manufacturing order" href="manufacturing_order.html" />
+    <link rel="prev" title="Getting Started" href="../getting_started.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../manufacturing.html">Manufacturing</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to create a Bill of Materials</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/manufacturing/overview/getting_started/bill_configuration.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/manufacturing/overview/getting_started/bill_configuration.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/manufacturing/overview/getting_started/bill_configuration.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to create a Bill of Materials - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#setting-up-a-basic-bom" class="ripple internal reference">Setting up a Basic BoM</a></li><li class="list-group-item"><a href="#adding-a-routing-to-a-bom" class="ripple internal reference">Adding a Routing to a BoM</a></li><li class="list-group-item"><a href="#adding-byproducts-to-a-bom" class="ripple internal reference">Adding Byproducts to a BoM</a></li><li class="list-group-item"><a href="#setting-up-a-bom-for-a-product-with-sub-assemblies" class="ripple internal reference">Setting up a BoM for a Product With Sub-Assemblies</a><ul ><li class="list-group-item"><a href="#configure-the-top-level-product-bom" class="ripple internal reference">Configure the Top-Level Product BoM</a></li><li class="list-group-item"><a href="#configure-the-subassembly-product-data" class="ripple internal reference">Configure the Subassembly Product Data</a></li></ul></li><li class="list-group-item"><a href="#using-a-single-bom-to-describe-several-variants-of-a-single-product" class="ripple internal reference">Using a Single BoM to Describe Several Variants of a Single Product</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/manufacturing/overview/getting_started/bill_configuration.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-create-a-bill-of-materials"><p >A bill of materials (BoM) is a document that describes the component
+products, the quantity of each component, and the process required to
+manufacture a product, including a routing and individual steps.</p><p >In Odoo, each product may have multiple BoMs associated with it, but a
+BoM can only be associated with a single product. A single BoM can,
+however, describe multiple variants of the same product.</p></section><section id="setting-up-a-basic-bom"><h2 >Setting up a Basic BoM</h2><p >If you choose to manage your manufacturing operations using manufacturing
+orders only, you will define basic bills of materials without routings.
+For more information about which method of management to use, review the
+<strong >Getting Started</strong> section of the <em >Manufacturing</em> chapter of the
+documentation.</p><p >Before creating your first bill of materials, you will need to create a
+product and at least one component (components are considered products
+in Odoo). You can do so from <span class="menuselection">Master Data ‣ Products</span>, or
+on the fly from the relevant fields on the BoM form. Review the
+Inventory chapter for more information about configuring products. Once
+you have created a product and at least one component, select them from
+the relevant dropdown menus to add them to your bill of materials. A new
+bill of materials can be created from <span class="menuselection">Master Data ‣ Bills of Materials</span>,
+or using the button on the top of the product form.</p><p >Under the <strong >Miscellaneous</strong> tab, you can fill additional fields.
+<strong >Sequence</strong> defines the order in which your BoMs will be selected
+for production orders, with lower numbers having higher priority.
+<strong >Version</strong> allows you to track changes to your BoM over time.</p></section><section id="adding-a-routing-to-a-bom"><h2 >Adding a Routing to a BoM</h2><p >A routing defines a series of operations required to manufacture a
+product and the work center at which each operation is performed. A
+routing may be added to multiple BoMs, though a BoM may only have one
+routing. For more information about configuring routings, review the
+chapter on routings.</p><p >After enabling routings from <span class="menuselection">Configuration ‣ Settings</span>,
+you will be able to add a routing to a bill of materials by selecting a
+routing from the dropdown list or creating one on the fly.</p><p >You may define the work operation or step in which each component is
+consumed using the field, <strong >Consumed in Operation</strong> under the
+<strong >Components</strong> tab. Similarly, you can define the operation at which the
+product will be produced under the <strong >Miscellaneous</strong> tab using the field
+<strong >Produced at Operation</strong>. If this field is left blank, the products
+will be consumed/produced at the final operation in the routing.</p><img src="../../../_images/bill_configuration01.png" class="img-responsive center-block"></section><section id="adding-byproducts-to-a-bom"><h2 >Adding Byproducts to a BoM</h2><p >In Odoo, a byproduct is any product produced by a BoM in addition to the
+primary product.</p><p >To add byproducts to a BoM, you will first need to enable them from
+<span class="menuselection">Configuration ‣ Settings</span>.</p><img src="../../../_images/bill_configuration02.png" class="img-responsive center-block"><p >Once byproducts are enabled, you can add them to your bills of materials
+under the <strong >Byproducts</strong> tab of the bill of materials. You can add
+any product or products as byproducts. Byproducts are produced in the
+same step of the routing as the primary product of the BoM.</p><img src="../../../_images/bill_configuration03.png" class="img-responsive center-block"></section><section id="setting-up-a-bom-for-a-product-with-sub-assemblies"><h2 >Setting up a BoM for a Product With Sub-Assemblies</h2><p >A subassembly is a manufactured product which is intended to be used as
+a component of another manufactured product. You may wish to employ
+sub-assemblies to simplify a complex BoM, to more accurately represent
+your manufacturing flow, or to use the same subassembly in multiple
+BoMs. A BoM that employs subassemblies is often referred to as a
+multi-level BoM.</p><p >Multi-level bills of materials in Odoo are accomplished by creating a
+top-level BoM and subassembly BoMs. Next, the procurement route of the
+subassembly product is defined. This ensures that every time a
+manufacturing order for the top-level product is created, a
+manufacturing order for each subassembly is created as well.</p></section><section id="configure-the-top-level-product-bom"><h3 >Configure the Top-Level Product BoM</h3><p >To configure a multi-level BoM, create the top-level product and its
+BoM. Include any subassemblies in the list of components. Create a BoM
+for each subassembly as you would for any product.</p><img src="../../../_images/bill_configuration04.png" class="img-responsive center-block"></section><section id="configure-the-subassembly-product-data"><h3 >Configure the Subassembly Product Data</h3><p >On the product form of the subassembly, you must select the routes
+<strong >Manufacture</strong> and <strong >Make To Order</strong>. The <strong >Manufacture</strong>
+route takes precedence over the <strong >Buy</strong> route, so selecting the
+latter will have no effect.</p><img src="../../../_images/bill_configuration05.png" class="img-responsive center-block"><p >If you would like to be able to purchase the subassembly in addition to
+manufacturing it, select <strong >Can be Purchased</strong>. All other fields on
+the subassembly product form may be configured according to your
+preference.</p></section><section id="using-a-single-bom-to-describe-several-variants-of-a-single-product"><h2 >Using a Single BoM to Describe Several Variants of a Single Product</h2><p >Odoo allows you to use one bill of materials for multiple variants of
+the same product. Simply enable variants from
+<span class="menuselection">Configuration ‣ Settings</span>.</p><img src="../../../_images/bill_configuration06.png" class="img-responsive center-block"><p >You will then be able to specify which component lines are to be used in
+the manufacture of each product variant. You may specify multiple
+variants for each line. If no variant is specified, the line will be
+used for all variants.</p><p >When defining variant BoMs on a line-item-basis, the <strong >Product
+Variant</strong> field in the main section of the BoM should be left blank.
+This field is used when creating a BoM for one variant of a product
+only.</p><img src="../../../_images/bill_configuration07.png" class="img-responsive center-block"></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to register customer payments by checks? &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Customer Payments" href="../customer_payments.html" />
+    <link rel="next" title="Get paid with SEPA" href="payment_sepa.html" />
+    <link rel="prev" title="How to register credit card payments on invoices?" href="credit_cards.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to register customer payments by checks?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/accounting/receivables/customer_payments/check.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting/receivables/customer_payments/check.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/accounting/receivables/customer_payments/check.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to register customer payments by checks? - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#option-1-undeposited-funds" class="ripple internal reference">Option 1: Undeposited Funds</a><ul ><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#from-check-payments-to-bank-statements" class="ripple internal reference">From check payments to bank statements</a></li></ul></li><li class="list-group-item"><a href="#option-2-one-journal-entry-only" class="ripple internal reference">Option 2: One journal entry only</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">From check payments to bank statements</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/accounting/receivables/customer_payments/check.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-register-customer-payments-by-checks"><p >There are two ways to handle payments received by checks. Odoo support
+both approaches so that you can use the one that better fits your
+habits.</p><ol ><li ><strong >Undeposited Funds:</strong>
+once you receive the check, you record a payment
+by check on the invoice. (using a Check journal and posted on the
+Undeposited Fund account) Then, once the check arrives in your
+bank account, move money from Undeposited Funds to your bank
+account.</li><li ><strong >One journal entry only:</strong>
+once your receive the check, you record a
+payment on your bank, paid by check, without going through the
+<strong >Undeposited Funds</strong>. Once you process your bank statement, you do
+the matching with your bank feed and the check payment, without
+creating a dedicated journal entry.</li></ol><p >We recommend the first approach as it is more accurate (your bank
+account balance is accurate, taking into accounts checks that have not
+been cashed yet). Both approaches require the same effort.</p><p >Even if the first method is cleaner, Odoo support the second approach
+because some accountants are used to it (quickbooks and peachtree
+users).</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You may have a look at the <em >Deposit Ticket feature</em> if you deposit
+several checks to your bank accounts in batch.</p></div></section><section id="option-1-undeposited-funds"><h2 >Option 1: Undeposited Funds</h2></section><section id="configuration"><h3 >Configuration</h3><ul ><li >Create a journal <strong >Checks</strong></li><li >Set <strong >Undeposited Checks</strong> as a defaut credit/debit account</li><li >Set the bank account related to this journal as <strong >Allow Reconciliation</strong></li></ul></section><section id="from-check-payments-to-bank-statements"><h3 >From check payments to bank statements</h3><p >The first way to handle checks is to create a check journal. Thus,
+checks become a payment method in itself and you will record two
+transactions.</p><p >Once you receive a customer check, go to the related invoice and click
+on <strong >Register Payment</strong>. Fill in the information about the payment:</p><ul ><li >Payment method: Check Journal (that you configured with the debit and
+credit default accounts as <strong >Undeposited Funds</strong>)</li><li >Memo: write the Check number</li></ul><img src="../../../_images/check021.png" class="img-responsive center-block"><p >This operation will produce the following journal entry:</p><table class="table"><thead ><tr ><th >Account</th><th >Statement Match</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Account Receivable</td><td ></td><td ></td><td >100.00</td></tr><tr ><td >Undeposited Funds</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><p >The invoice is marked as paid as soon as you record the check.</p><p >Then, once you get the bank statements, you will match this statement
+with the check that is in Undeposited Funds.</p><table class="table"><thead ><tr ><th >Account</th><th >Statement Match</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Undeposited Funds</td><td >X</td><td ></td><td >100.00</td></tr><tr ><td >Bank</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><p >If you use this approach to manage received checks, you get the list of
+checks that have not been cashed in the <strong >Undeposit Funds</strong> account
+(accessible, for example, from the general ledger).</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Both methods will produce the same data in your accounting at the
+end of the process. But, if you have checks that have not been cashed,
+this one is cleaner because those checks have not been reported yet on
+your bank account.</p></div></section><section id="option-2-one-journal-entry-only"><h2 >Option 2: One journal entry only</h2></section><section id="id1"><h3 >Configuration</h3><p >These is nothing to configure if you plan to manage your checks using
+this method.</p></section><section id="id2"><h3 >From check payments to bank statements</h3><p >Once you receive a customer check, go to the related invoice and click
+on <strong >Register Payment</strong>. Fill in the information about the payment:</p><ul ><li ><strong >Payment method:</strong> the bank that will be used for the deposit</li><li >Memo: write the check number</li></ul><img src="../../../_images/check031.png" class="img-responsive center-block"><p >The invoice is marked as paid as soon as you record the check.</p><p >Once you will receive the bank statements, you will do the matching with
+the statement and this actual payment. (technically: point this payment
+and relate it to the statement line)</p><p >With this approach, you will get the following journal entry in your
+books:</p><table class="table"><thead ><tr ><th >Account</th><th >Statement Match</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Account Receivable</td><td >X</td><td ></td><td >100.00</td></tr><tr ><td >Bank</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You may also record the payment directly without going on the
+customer invoice, using the menu <span class="menuselection">Sales ‣ Payments</span>. This method may
+be more convenient if you have a lot of checks to record in a batch but
+you will have to reconcile entries afterwards (matching payments with
+invoices)</p></div><p >If you use this approach to manage received checks, you can use the
+report <strong >Bank Reconciliation Report</strong> to verify which checks have been
+received or paid by the bank. (this report is available from the <strong >More</strong>
+option from the Accounting dashboard on the related bank account).</p><img src="../../../_images/check011.png" class="img-responsive center-block"></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

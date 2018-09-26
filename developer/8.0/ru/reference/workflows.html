@@ -1,0 +1,264 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Бизнес-процессы &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Соглашение об оформлении кода в Odoo" href="guidelines.html" />
+    <link rel="prev" title="Отчеты QWeb" href="reports.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Бизнес-процессы</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/en/reference/workflows.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/ru/reference/workflows.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/workflows.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/workflows.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/ru/">Пользователю</a></li>
+<li><a href="/developer/8.0/ru/">Разработчику</a></li>
+<li><a href="/developer/8.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/installing_odoo.jpg');"></span>
+      <div class="container text-center">
+        <h1> Бизнес-процессы - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#basics" class="ripple internal reference">Основы</a></li><li class="list-group-item"><a href="#activities" class="ripple internal reference">Действия</a><ul ><li class="list-group-item"><a href="#flow-start-and-flow-stop" class="ripple internal reference">Запуск и остановка бизнес-процесса</a></li><li class="list-group-item"><a href="#subflow" class="ripple internal reference">Подпроцесс</a></li><li class="list-group-item"><a href="#sending-a-signal-from-a-subflow" class="ripple internal reference">Отправка сигнала из подпроцесса</a></li><li class="list-group-item"><a href="#server-actions" class="ripple internal reference">Действия сервера</a></li><li class="list-group-item"><a href="#python-action" class="ripple internal reference">Действие с помощью Python</a></li><li class="list-group-item"><a href="#split-mode" class="ripple internal reference">Режим разделения</a></li><li class="list-group-item"><a href="#join-mode" class="ripple internal reference">Режим объединения</a></li><li class="list-group-item"><a href="#kinds" class="ripple internal reference">Виды действий</a></li></ul></li><li class="list-group-item"><a href="#transitions" class="ripple internal reference">Транзакции</a><ul ><li class="list-group-item"><a href="#conditions" class="ripple internal reference">Условия</a></li><li class="list-group-item"><a href="#signals" class="ripple internal reference">Сигналы</a></li><li class="list-group-item"><a href="#triggers" class="ripple internal reference">Триггеры</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/workflows.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="workflows"><i id="reference-workflows"></i><p >В Odoo бизнес-процесс является техническим объектом для управления набором «вещей, которые нужно сделать», связанного с записями модели данных. Бизнес-процесс обеспечивает более высокий уровень организации задач, выполняемых с или над записью.</p><p >В частности, бизнес-процесс представляет собой ориентированный граф, где узлы называются «действиями», а дуги называются «транзакциями».</p><ul ><li ><p >Действия определяют задачи, которые должна выполняться на сервере Odoo, например, изменение состояния некоторых записей или отправка сообщений электронной почты.</p></li><li ><p >Транзакции управляют тем, как бизнес-процесс переходит от одного действия к другому.</p></li></ul><p >В определении бизнес-процесса можно включить условия, сигналы и триггеры к транзакциям, чтобы поведение бизнес-процесса зависело от действий пользователя (таких, как нажатие кнопки), изменений в записях или выполнения произвольного кода Python.</p><p >В целом, система бизнес-процессов Odoo обеспечивает:</p><ul ><li ><p >Описание эволюции записи (документа) с течением времени</p></li><li ><p >Автоматические действия, основанные на различных и гибких условиях</p></li><li ><p >Управление ролями компании и этапы проверки</p></li><li ><p >Управление взаимодействиями между объектами</p></li><li ><p >Визуальное представление состояния документов в течение их жизненного цикла</p></li></ul><p >Например, базовый порядок состояний может складываться в следующий процесс:</p><img src="../_images/order_0.svg" class="img-responsive center-block"><p >Заказы начинаются с состояния <em >Черновик</em>, и могут быть <em >Подтверждены</em> пользователем, а затем либо отправлены клиенту (переход в состояние <em >Закрыто</em>), либо перейти в состояние <em >Отменено</em>, если клиент отменил заказ.</p><p >Компания, использующая Odoo, может захотеть добавить поддержку системы скидок к заказам, где у торгового персонала есть ограниченные полномочия по формированию скидок до 15%, но для предоставления скидок превышающих 15%, требуется подтверждение менеджера. Бизнес-процесс можно изменить онлайн самостоятельно через графический интерфейс, вместо того, чтобы добавить соответствующие шаги путем редактирования файлов Python или XML:</p><img src="../_images/order_1.svg" class="img-responsive center-block"><p >Поскольку действия могут выполнять произвольные операции, <em >Проверка</em> может автоматически отправлять запрос на проверку соответствующему сотруднику.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Необходимо изменить представление заказа, таким образом чтобы добавить кнопку <em >Принять скидку</em> для менеджеров</p></div></section><section id="basics"><h2 >Основы</h2><p >Определение бизнес-процесса с помощью файлов данных является достаточно простым делом: запись &quot;workflow&quot; предоставляется вместе с записями для описания операций и транзакций. Например, ниже приведена простая последовательность из двух действий, определенных в XML файле.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;test_workflow&quot;</span> <span class="na">model=</span><span class="s">&quot;workflow&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>test.workflow<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;osv&quot;</span><span class="nt">&gt;</span>test.workflow.model<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;on_create&quot;</span><span class="nt">&gt;</span>True<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;activity_a&quot;</span> <span class="na">model=</span><span class="s">&quot;workflow.activity&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;wkf_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;test_workflow&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;flow_start&quot;</span><span class="nt">&gt;</span>True<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>a<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;kind&quot;</span><span class="nt">&gt;</span>function<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;action&quot;</span><span class="nt">&gt;</span>print_a()<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;activity_b&quot;</span> <span class="na">model=</span><span class="s">&quot;workflow.activity&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;wkf_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;test_workflow&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;flow_stop&quot;</span><span class="nt">&gt;</span>True<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>b<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;kind&quot;</span><span class="nt">&gt;</span>function<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;action&quot;</span><span class="nt">&gt;</span>print_b()<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;trans_a_b&quot;</span> <span class="na">model=</span><span class="s">&quot;workflow.transition&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;act_from&quot;</span> <span class="na">ref=</span><span class="s">&quot;activity_a&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;act_to&quot;</span> <span class="na">ref=</span><span class="s">&quot;activity_b&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p >Бизнес-процесс всегда определяется для конкретной модели данных (модель данных задается атрибутом <code >osv</code> на модели данных <code >workflow</code>). Для этой модели данных будут вызываться методы, определенные в действиях или транзакциях.</p><p >В приведенном выше примере кода создается бизнес-процесс, называемый &quot;test_workflow&quot;. Он состоит из двух действий, названных «a» и «b», и одной транзакции, изменяющей состояние от «a» к «b».</p><p >Первое действие имеет свой атрибут <code >flow_start</code>, установленный в <code >True</code>, поэтому Odoo знает, с чего начать бизнес-процесс после его инициации. Поскольку <code >on_create</code> имеет значение True в записи бизнес-процесса, для каждой вновь созданной записи создается бизнес-процесс. (В противном случае бизнес-процесс должен быть инициализирован другими способами, например, с помощью кода на Python.)</p><p >Когда бизнес-процесс инициализируется, он начинается с действия &quot;a&quot;. Это действие в данном случае имеет вид <code >функции</code>, что означает, что действие <code >print_a () `` является вызовом метода для модели данных ``test.workflow</code> (как правило <code >cr, uid, ids, context</code> аргументы уже вам переданы).</p><p >Транзакция между &quot;a&quot; и &quot;b&quot; не определяет никаких условий. Это означает, что экземпляр бизнес-процесса немедленно переходит из состояния &quot;a&quot; в состояние &quot;b&quot; после того, как действие &quot;a&quot; было выполнено, и таким же образом выполняется действие &quot;b&quot;.</p></section><section id="activities"><h2 >Действия</h2><p >В то время как транзакции можно рассматривать как управляющие структуры бизнес-процессов, действия это то, где происходит все самое интересное и нужное, от изменения состояний записи до отправки электронной почты.</p><p >Существуют различные виды действий:  <code >Dummy</code>, <code >Function</code>, <code >Subflow</code>, и <code >Stop all</code>, каждое из которых выполняет различные операции в момент своего выполнения. В дополнение к их параметру <code >kind</code>, действия имеют другие свойства, подробно описанные в следующих разделах..</p></section><section id="flow-start-and-flow-stop"><h3 >Запуск и остановка бизнес-процесса</h3><p >Атрибут <code >flow_start</code> имеет булево значение, определяющее, обрабатывается ли действие при инициализации бизнес-процесса. Несколько действий могут иметь свой атрибут <code >flow_start</code>, установленный в <code >True</code>. Когда происходит инициализация бизнес-процесса для записи, Odoo просто обрабатывает их все и затем назначает вес всем своим исходящими транзакциям.</p><p >Атрибут <code >flow_stop</code> имеет булево значение, определяющее, останавливает ли объект экземпляр бизнес-процесса. Экземпляр бизнес-процесса считается завершенным, когда все его действия с атрибутом <code >flow_stop</code>, установленным в <code >True</code>, завершены.</p><p >Для Odoo важно знать, когда экземпляр бизнес-процесса завершен. Бизнес-процесс может иметь действие, которое фактически является другим бизнес-процессом (называемым подпроцессом); Это действие завершается, только тогда,  когда подпроцесс завершен.</p></section><section id="subflow"><h3 >Подпроцесс</h3><p >Действие может внедрить полноценный бизнес-процесс, называемый подпроцессом (бизнес-процесс в который внедряется подпроцесс называется родительским). Бизнес-процесс для инициации определяется атрибутом <code >subflow_id</code>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >В графическом интерфейсе этот атрибут нельзя установить, если только атрибут действия <code >kind</code> не является <code >subflow</code>.</p></div><p >Действие считается завершенным (и его исходящие транзакции готовы к распределению весов), тогда когда подпроцесс завершен (см. выше атрибут <code >flow_stop</code> ).</p></section><section id="sending-a-signal-from-a-subflow"><h3 >Отправка сигнала из подпроцесса</h3><p >Когда бизнес-процесс внедрен в действие (как подпроцесс) бизнес-процесса, подпроцесс может отправить сигнал с помощью своих собственных действий в родительский бизнцес-процесс, указав имя сигнала в атрибуте <code >signal_send</code>. Odoo обрабатывает эти действия, отправляя значение <code >signal_send</code> с префиксом  &quot;subflow.&quot; в экземпляр родительского бизнес-процесса.</p><p >Другими словами, можно реагировать и получать транзакции в родительском бизнес-процессе, поскольку действия выполняются в подпроцессе.</p></section><section id="server-actions"><h3 >Действия сервера</h3><p >Действие может запускать  &quot;Server Action&quot; , указав его идентификатор в атрибуте <code >action_id</code>.</p></section><section id="python-action"><h3 >Действие с помощью Python</h3><p >Действие может выполнять код Python, заданный атрибутом <code >action</code>. Среда для распределения весов такая же, как и в разделе <a href="#conditions" class="internal reference">Conditions</a>.</p></section><section id="split-mode"><h3 >Режим разделения</h3><p >После того, как действие обработано, Odoo определяет вес транзакции, чтобы достичь следующего действия в бизнес-процессе.</p><p >Однако, если у действия есть более одной транзакции, Odoo должна решить, какое действие или действия следует выполнять.</p><img src="../_images/split.svg" class="img-responsive center-block"><p >Этот выбор контролируется атрибутом <code >split_mode</code>:</p><dl ><dt ><code >XOR</code> (по умолчанию)</dt><dd ><p >По умолчанию, Odoo будет использовать первую транзакцию (в порядке определенном в <code >sequence</code>), условие которй выполняется. Все остальные транзакции игнорируются.</p></dd><dt ><code >OR</code></dt><dd ><p >В режиме <code >OR</code> все транзакции с удовлетворенным состоянием выполняются синхронно. Транзакции, которые еще не действительны, будут игнорироваться, даже если они станут действительными позже.</p></dd><dt ><code >AND</code></dt><dd ><p >В режиме `` AND `` Odoo будет ждать, пока не будут действительны <em >все</em> транзакции, а затем выполнит их все синхронно (как в режиме <code >ИЛИ</code>).</p></dd></dl><p >Оба режима <code >OR</code> и <code >AND</code> приведут к действиям в активном состоянии в одном и том же рабочем процессе.</p></section><section id="join-mode"><h3 >Режим объединения</h3><p >Точно так же, как состояния исходящих транзакций могут быть объединены, для того чтобы решить, можно ли их запускать или нет, входящие транзакции могут быть объединены, чтобы решить, можно ли вообще и когда будет можно обрабатывать действие.</p><img src="../_images/join.svg" class="img-responsive center-block"><p >Атрибут <code >join_mode</code> контролирует это поведение:</p><dl ><dt ><code >XOR</code> (по умолчанию)</dt><dd ><p >Любая входящая транзакция активирует действие и запускает его.</p></dd><dt ><code >AND</code></dt><dd ><p >Действие запускается и обрабатывается только один раз когда <em >все</em> входящие транзакции были приняты.</p></dd></dl></section><section id="kinds"><h3 >Виды действий</h3><p >Вид действий определяет тип работы, которую может выполнять действие.</p><dl ><dt >Болванка (<code >dummy</code>, по умолчанию)</dt><dd ><p >Ничего не делает, или вызываеь действие сервера. Часто используется в качестве диспетчера или сборного пункта для транзакций.</p></dd><dt >Функция (<code >function</code>)</dt><dd ><p >Запускает код python, выполняет действие сервера.</p></dd><dt >Остановить все (<code >stopall</code>)</dt><dd ><p >Полностью останавливает экземпляр бизнес-процесса и помечает его как завершенный.</p></dd><dt >Подпроцесс (<code >subflow</code>)</dt><dd ><p >Запускает выполнение другого бизнес-процесса, как только этот бизнес-процесс завершен, действие будет считаться выполненным.</p><p >По умолчанию подпроцесс инициируется для той же записи, что и родительский бизнес-процесс. Это поведение можно изменить, предоставив код Python, который возвращает идентификатор записи (той же модели данных, которой принадлежит подпроцесс). В этом случае внедренный экземпляр подпроцесса будет выполнять действие над этой записью.</p></dd></dl></section><section id="transitions"><h2 >Транзакции</h2><p >Транзакции обеспечивают управляющие структуры для организации бизнес-процесса. Когда действие завершено, движок бизнес-процессов пытается получить транзакции, исходящие от завершенного действия, к следующим. В своей простейшей форме (как в примере выше), они связывают действия последовательно: действия обрабатываются, как только предшествующие им действия завершаются.</p><p >Вместо того чтобы запускать все действия одним махом, можно ожидать выполнения транзакций, выполняя их только при соблюдении некоторых критериев. Критерии - это условния, сигналы и триггеры. Они подробно описаны в следующих разделах.</p></section><section id="conditions"><h3 >Условия</h3><p >Когда дейтсвие завершено, его исходящие транзакции проверяются, чтобы определить, можно ли экземпляру бизнес-процесса выполнить их и перейти к следующим действиям. Когда определяется только условие (т.е. не задан ни сигнал, ни триггер), условие оценивается Odoo, и если оно оценивается как <code >True</code>, экземпляр бизнес-процесса выполняет данную транзакцию. Если условие не выполняется,то оно будет переоцениваться каждый раз при изменении связанной записи или явным вызовом соответствующего метода.</p><p >По умолчанию атрибут <code >condition</code> (то есть, выражение, подлежащее вычислению) - это просто «True», который тривиально вычисляет «True». Обратите внимание, что условие может состоять из нескольких строк; В этом случае значение последней определяет, возможна ли транзакция.</p><p >В среде оценки условий удобно определить несколько символов (в дополнение к тем, что уже есть среде Odoo <code >safe_eval</code>):</p><ul ><li ><p >все имена столбцов модели данных и</p></li><li ><p >все атрибуты просматриваемой записи.</p></li></ul></section><section id="signals"><i id="reference-workflows-signals"></i><h3 >Сигналы</h3><p >Помимо условия, транзакция может указывать имя сигнала. Когда присутствует такое имя сигнала, транзакция не выполняется напрямую, даже если условие оценивается как <code >True</code>. Вместо этого транзакции собираются в блоки, ожидающие пробуждения.</p><p >Чтобы пробудить транзакцию с определенным именем сигнала, сигнал должен быть отправлен в экземпляр бизнес-процесса. Обычный способ отправки сигнала это - кнопка в пользовательском интерфейсе, используя элемент <code >&lt;button /&gt;</code> с именем сигнала в качестве атрибута <code >name</code> для этой кнопки. Как только кнопка нажата, сигнал отправляется в экземпляр бизнес-процесса текущей записи.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Условие по-прежнему проходит оценку, когда сигнал отправляется в экземпляр бизнес-процесса.</p></div></section><section id="triggers"><h3 >Триггеры</h3><p >При условиях, которые оцениваются как <code >False</code>, транзакции не принимаются (и, следовательно, действие, к которой она ведет, не обрабатывается немедленно). Тем не менее, экземпляр бизнес-процесса может получить новые шансы на прогресс с этой транзакцией путем предоставления так называемых триггеров. Идея состоит в том, что когда условие не выполняется, триггеры записываются в базу данных. Позже можно специально пробудить экземпляры бизнес-процессов, которые устанавливают эти триггеры, предлагая им пересмотреть свои условия выполнения транзакций. Этот механизм позволяет с меньшими затратами пробуждать экземпляры бизнес-процессов, перенаправляя только некоторые из них (тех, которые установили триггеры) вместо их всех.</p><p >Триггеры записываются в базу данных как идентификаторы записей (вместе с именем модели данных) и ссылаются на экземпляр бизнес-процесса, ожидающий эти записи. Определение транзакции предоставляет имя модели данных (атрибут <code >trigger_model</code>) и выражение Python (атрибут <code >trigger_expression</code>), которое оценивает список идентификаторов записей в данной модели данных. Любая из этих записей может пробудить экземпляр бизнес-процесса, с которым она связаны.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Триггеры не переустанавливаются при каждой повторной попытке выполнить транзакцию.</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

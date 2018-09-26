@@ -1,0 +1,346 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600" rel="stylesheet">
+  
+    <title>Отчеты QWeb &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '11.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Смесины и полезные классы" href="mixins.html" />
+    <link rel="prev" title="Перевод Модулей" href="translations.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+  <div class="o_main_header_main">
+    <a class="pull-left o_logo" href="/"></a>
+    <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="mdi-navigation-menu"></span>
+    </a>
+    <ul class="o_primary_nav">
+      <li><a href="/">Документация</a></li>
+    </ul>
+  </div>
+  <nav class="navbar o_sub_nav">
+    <div class="container">
+      <div class="navbar-header visible-xs">
+          <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+            Меню
+            <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+          </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="o_sub-menu">
+        <ol class="o_breadcrumb breadcrumb nav navbar-left">
+            
+            
+            
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (11.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Отчеты QWeb</a></li>
+
+            
+        </ol>
+
+        <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/11.0/en/reference/reports.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/reference/reports.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/reference/reports.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/reports.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+<li><a href="/developer/11.0/ru/python3.html">Python 3</a></li>
+          
+
+          
+            <li class="divider"></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/reports.jpg');"></span>
+      <div class="container text-center">
+        <h1> Отчеты QWeb - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+      <main class="container ">
+        
+        <div class="o_content row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#report" class="ripple internal reference">Отчет</a></li><li class="list-group-item"><a href="#report-template" class="ripple internal reference">Шаблон отчета</a><ul ><li class="list-group-item"><a href="#minimal-viable-template" class="ripple internal reference">Минимальный жизнеспособный шаблон</a></li><li class="list-group-item"><a href="#translatable-templates" class="ripple internal reference">Переводимые шаблоны</a></li><li class="list-group-item"><a href="#barcodes" class="ripple internal reference">Штрих-коды</a></li><li class="list-group-item"><a href="#useful-remarks" class="ripple internal reference">Полезные заметки</a></li></ul></li><li class="list-group-item"><a href="#paper-format" class="ripple internal reference">Формат бумаги</a></li><li class="list-group-item"><a href="#custom-reports" class="ripple internal reference">Пользовательские отчеты</a></li><li class="list-group-item"><a href="#reports-are-web-pages" class="ripple internal reference">Отчеты - это веб-страницы</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/11.0/doc/reference/reports.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+		  <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+          <article class="doc-body ">
+            
+            
+            
+  <section id="qweb-reports"><p >Отчеты пишутся в формате HTML / QWeb, как и все обычные представления в Одо. Вы можете использовать обычное: ref: <code >Инструменты потока управления QWeb &lt;reference / qweb&gt;</code>. Сама рендеринг PDF выполняется <a href="http://wkhtmltopdf.org" class="external reference">wkhtmltopdf</a>.</p><p >Если вы хотите создать отчет по определенной модели, вам нужно будет определить это: ref: <code >reference / reports / report</code> и: ref:` reference / reports / templates`, которые он будет использовать. Если вы хотите, вы также можете указать конкретный: ref: <code >reference / reports / paper_formats</code> для этого отчета. Наконец, если вам нужен доступ к более чем вашей модели, вы можете определить класс: ref: <code >reference / reports / custom_reports</code>, который даст вам доступ к большему количеству моделей и записей в шаблоне.</p></section><section id="report"><i id="reference-reports-report"></i><h2 >Отчет</h2><p >Каждый отчет должен быть объявлен с помощью: ref: <code >report action &lt;reference / actions / report&gt;</code>.</p><p >Для простоты для определения отчета доступен сокращенный элемент `` &lt;report&gt; [UNKNOWN NODE problematic], а не настраивать: ref: <code >действие &lt;reference / actions / report&gt;</code> и его окружение вручную. Этот `` &lt;report&gt; `` может принимать следующие атрибуты:</p><dl ><dt ><code >id</code></dt><dd ><p >Сгенерированная запись: term: <code >external id</code></p></dd><dt ><code >name</code> (обязательно)</dt><dd ><p >Полезен только в качестве мнемоники/описания печатной формы, при поиске в списке форм</p></dd><dt ><code >model</code> (обязательно)</dt><dd ><p >модель данных к которой относится ваша печатная форма</p></dd><dt ><code >report_type</code> (обязательно)</dt><dd ><p >или <code >qweb-pdf</code> для создания PDF файлов печатных форм, или <code >qweb-html</code> для HTML</p></dd><dt ><code >report_name</code></dt><dd ><p >имя печатной формы (которое будет присвоено выданному PDF файлу)</p></dd><dt ><code >groups</code></dt><dd ><p >: Класс: поле <code >~ odoo.fields.Many2many</code> для групп, разрешенных для просмотра / использования текущего отчета</p></dd><dt ><code >attachment_use</code></dt><dd ><p >Если установлено значение True, отчет будет сохранен как прикрепление к записи с использованием имени, сгенерированного выражением `` attachment'[UNKNOWN NODE problematic]; Вы можете использовать это, если вам нужно, чтобы ваш отчет генерировался только один раз (по юридическим причинам, например)</p></dd><dt ><code >attachment</code></dt><dd ><p >Выражение python, которое определяет имя отчета; Запись доступна как переменная `` объект``</p></dd><dt ><code >paperformat</code></dt><dd ><p >Внешний идентификатор формата бумаги, который вы хотите использовать (по умолчанию формат бумаги компании, если не указан)</p></dd></dl><p >Пример:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;report</span>
+    <span class="na">id=</span><span class="s">&quot;account_invoices&quot;</span>
+    <span class="na">model=</span><span class="s">&quot;account.invoice&quot;</span>
+    <span class="na">string=</span><span class="s">&quot;Invoices&quot;</span>
+    <span class="na">report_type=</span><span class="s">&quot;qweb-pdf&quot;</span>
+    <span class="na">name=</span><span class="s">&quot;account.report_invoice&quot;</span>
+    <span class="na">file=</span><span class="s">&quot;account.report_invoice&quot;</span>
+    <span class="na">attachment_use=</span><span class="s">&quot;True&quot;</span>
+    <span class="na">attachment=</span><span class="s">&quot;(object.state in (&#39;open&#39;,&#39;paid&#39;)) and</span>
+<span class="s">        (&#39;INV&#39;+(object.number or &#39;&#39;).replace(&#39;/&#39;,&#39;&#39;)+&#39;.pdf&#39;)&quot;</span>
+<span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section><section id="report-template"><i id="reference-reports-templates"></i><h2 >Шаблон отчета</h2></section><section id="minimal-viable-template"><h3 >Минимальный жизнеспособный шаблон</h3><p >Минимальный шаблон будет выглядеть так:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;report_invoice&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;web.html_container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;docs&quot;</span> <span class="na">t-as=</span><span class="s">&quot;o&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;web.external_layout&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h2&gt;</span>Report title<span class="nt">&lt;/h2&gt;</span>
+                    <span class="nt">&lt;p&gt;</span>This object&#39;s name is <span class="nt">&lt;span</span> <span class="na">t-field=</span><span class="s">&quot;o.name&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/t&gt;</span>
+        <span class="nt">&lt;/t&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</pre></div>
+</div>
+<p >Вызов <code >external_layout</code> добавит заголовок и нижний колонтитул по умолчанию в ваш отчет. Тело PDF будет содержимым внутри `` &lt;div class=&quot;page&quot;&gt;``. Шаблон <code >id</code> должен быть именем, указанным в декларации отчета; Например <code >account.report_invoice</code> для вышеупомянутого отчета. Поскольку это шаблон QWeb, вы можете получить доступ ко всем полям объектов `` документов '', полученным с помощью шаблона.</p><p >В отчетах доступны некоторые конкретные переменные, в основном:</p><dl ><dt >Документация</dt><dd ><p >Записи для текущего отчета</p></dd><dt >Номер документа</dt><dd ><p >Список идентификаторов для записей `` docs``</p></dd><dt >`` doc_model``</dt><dd ><p >Модель для записей `` docs``</p></dd><dt >1 раза</dt><dd ><p >Ссылка на: mod: <code >python: time</code> из стандартной библиотеки Python</p></dd><dt ><code >user</code></dt><dd ><p >Запись <code >res.user`</code> для пользователя, печатающего отчет</p></dd><dt >`` Res_company``</dt><dd ><p >Запись текущей компании `` пользователь``</p></dd></dl><p >Если вы хотите получить доступ к другим записям / моделям в шаблоне, вам понадобится: ref: <code >custom report &lt;reference / reports / custom_reports&gt;</code>.</p></section><section id="translatable-templates"><h3 >Переводимые шаблоны</h3><p >Если вы хотите перевести отчеты (например, на язык партнера), вам необходимо определить два шаблона:</p><ul ><li ><p >Основной шаблон отчета</p></li><li ><p >Переводимый документ</p></li></ul><p >Затем вы можете вызвать переводимый документ из вашего основного шаблона с атрибутом `` t-lang``, установленным на код языка (например, `` fr`` или `` en_US``) или в поле записи. Вам также нужно будет повторно просмотреть связанные записи с надлежащим контекстом, если вы используете поля, которые можно переводить (например, названия стран, условия продаж и т. Д.),</p><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >Если в вашем шаблоне отчета не используются поля с переводимыми записями, повторное просмотрение записи на другом языке * не обязательно * и повлияет на производительность.</p></div><p >Например, рассмотрим отчет о заказе на продажу из модуля «Продажа»</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Main template --&gt;</span>
+<span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;report_saleorder&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;web.html_container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;docs&quot;</span> <span class="na">t-as=</span><span class="s">&quot;doc&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;sale.report_saleorder_document&quot;</span> <span class="na">t-lang=</span><span class="s">&quot;doc.partner_id.lang&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/t&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+
+<span class="c">&lt;!-- Translatable template --&gt;</span>
+<span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;report_saleorder_document&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Re-browse of the record with the partner lang --&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;doc&quot;</span> <span class="na">t-value=</span><span class="s">&quot;doc.with_context({&#39;lang&#39;:doc.partner_id.lang})&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;web.external_layout&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;strong</span> <span class="na">t-if=</span><span class="s">&quot;doc.partner_shipping_id == doc.partner_invoice_id&quot;</span><span class="nt">&gt;</span>Invoice and shipping address:<span class="nt">&lt;/strong&gt;</span>
+                    <span class="nt">&lt;strong</span> <span class="na">t-if=</span><span class="s">&quot;doc.partner_shipping_id != doc.partner_invoice_id&quot;</span><span class="nt">&gt;</span>Invoice address:<span class="nt">&lt;/strong&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">t-field=</span><span class="s">&quot;doc.partner_invoice_id&quot;</span> <span class="na">t-options=</span><span class="s">&quot;{&amp;quot;no_marker&amp;quot;: True}&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;...&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</pre></div>
+</div>
+<p >Основной шаблон вызывает переводимый шаблон с параметром `` doc.partner_id.lang`` в качестве параметра `` t-lang``, поэтому он будет отображаться на языке партнера. Таким образом, каждый Заказ на продажу будет напечатан на языке соответствующего клиента. Если вы хотите перевести только тело документа, но оставить верхний и нижний колонтитулы на языке по умолчанию, вы можете вызвать внешний макет отчета следующим образом</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;web.external_layout&quot;</span> <span class="na">t-lang=</span><span class="s">&quot;en_US&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><h3 class="alert-title">Совет</h3><p >Обратите внимание, что это работает только при вызове внешних шаблонов, вы не сможете перевести часть документа, установив атрибут `` t-lang`` на узле xml, кроме `` t-call``. Если вы хотите перевести часть шаблона, вы можете создать внешний шаблон с этим неполным шаблоном и вызвать его из основного с атрибутом `` t-lang``.</p></div></section><section id="barcodes"><h3 >Штрих-коды</h3><p >Barcodes are images returned by a controller and can easily be embedded in
+reports thanks to the QWeb syntax (e.g. see <a href="qweb.html#reference-qweb-attributes" class="internal reference"><span class="std std-ref">Атрибуты</span></a>):</p><div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">t-att-src</span><span class="o">=</span><span class="s">&quot;&#39;/report/barcode/QR/%s&#39; % &#39;My text in qr code&#39;&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</div>
+<p >Дополнительные параметры могут быть переданы как строка запроса</p><div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">t-att-src</span><span class="o">=</span><span class="s">&quot;&#39;/report/barcode/?</span>
+<span class="s">    type=%s&amp;value=%s&amp;width=%s&amp;height=%s&#39;%(&#39;QR&#39;, &#39;text&#39;, 200, 200)&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</div>
+</section><section id="useful-remarks"><h3 >Полезные заметки</h3><ul ><li ><p >Щебетать классы Bootstrap и FontAwesome можно использовать в шаблоне отчета.</p></li><li ><p >Локальный CSS можно поместить непосредственно в шаблон</p></li><li ><p >Глобальный CSS можно вставить в основной макет отчета, унаследовав его шаблон и вставив свой CSS</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;report_saleorder_style&quot;</span> <span class="na">inherit_id=</span><span class="s">&quot;report.style&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xpath</span> <span class="na">expr=</span><span class="s">&quot;.&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t&gt;</span>
+      .example-css-class {
+        background-color: red;
+      }
+    <span class="nt">&lt;/t&gt;</span>
+  <span class="nt">&lt;/xpath&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</pre></div>
+</div>
+</li><li ><p >Если кажется, что в вашем отчете PDF отсутствуют стили, проверьте: ref: <code >эти инструкции &lt;reference / backend / reporting / printed-reports / pdf-without-styles&gt;</code>.</p></li></ul></section><section id="paper-format"><i id="reference-reports-paper-formats"></i><h2 >Формат бумаги</h2><p >Форматы бумаги - это записи `` report.paperformat`` и могут содержать следующие атрибуты:</p><dl ><dt ><code >name</code> (обязательно)</dt><dd ><p >Полезен только в качестве мнемоники/описания печатной формы, при поиске в списке форм</p></dd><dt >Описание</dt><dd ><p >Небольшое описание вашего формата</p></dd><dt ><code >format</code></dt><dd ><p >Либо предопределенный формат (от A0 до A9, от B0 до B10, законный, буква, таблоид, ...) или `` custom``; A4 по умолчанию. Вы не можете использовать нестандартный формат, если вы определяете размеры страницы.</p></dd><dt >DPI.</dt><dd ><p >Выходной ДОИ; 90 по умолчанию</p></dd><dt >`` Margin_top``, <code >margin_bottom`</code>,` margin_left``, <code >margin_right`</code></dt><dd ><p >Размеры полей в мм</p></dd><dt >`` Page_height``, `` page_width``</dt><dd ><p >Размер страницы в мм</p></dd><dt >ориентированной позиции</dt><dd ><p >Пейзаж или Портрет</p></dd><dt >`` Header_line``</dt><dd ><p >Boolean для отображения строки заголовка</p></dd><dt >`` Header_spacing``</dt><dd ><p >Межстрочный интервал в мм</p></dd></dl><p >Пример:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;paperformat_frenchcheck&quot;</span> <span class="na">model=</span><span class="s">&quot;report.paperformat&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>French Bank Check<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;default&quot;</span> <span class="na">eval=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;format&quot;</span><span class="nt">&gt;</span>custom<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;page_height&quot;</span><span class="nt">&gt;</span>80<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;page_width&quot;</span><span class="nt">&gt;</span>175<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;orientation&quot;</span><span class="nt">&gt;</span>Portrait<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;margin_top&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;margin_bottom&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;margin_left&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;margin_right&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;header_line&quot;</span> <span class="na">eval=</span><span class="s">&quot;False&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;header_spacing&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;dpi&quot;</span><span class="nt">&gt;</span>80<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+</section><section id="custom-reports"><i id="reference-reports-custom-reports"></i><h2 >Пользовательские отчеты</h2><p >Модель отчета имеет стандартную функцию `` get_html``, которая ищет модель с именем: samp: <code >report. {Module.report_name}</code>. Если он существует, он будет использовать его для вызова движка QWeb; В противном случае будет использоваться общая функция. Если вы хотите настроить свои отчеты путем включения большего количества вещей в шаблон (например, записи других моделей), вы можете определить эту модель, перезаписать функцию `` render_html`` и передать объекты в словаре `` docargs`` :</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">models</span>
+
+<span class="k">class</span> <span class="nc">ParticularReport</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">AbstractModel</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;report.module.report_name&#39;</span>
+    <span class="nd">@api.model</span>
+    <span class="k">def</span> <span class="nf">render_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docids</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">report_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;report&#39;</span><span class="p">]</span>
+        <span class="n">report</span> <span class="o">=</span> <span class="n">report_obj</span><span class="o">.</span><span class="n">_get_report_from_name</span><span class="p">(</span><span class="s1">&#39;module.report_name&#39;</span><span class="p">)</span>
+        <span class="n">docargs</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;doc_ids&#39;</span><span class="p">:</span> <span class="n">docids</span><span class="p">,</span>
+            <span class="s1">&#39;doc_model&#39;</span><span class="p">:</span> <span class="n">report</span><span class="o">.</span><span class="n">model</span><span class="p">,</span>
+            <span class="s1">&#39;docs&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">report_obj</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;module.report_name&#39;</span><span class="p">,</span> <span class="n">docargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</section><section id="reports-are-web-pages"><h2 >Отчеты - это веб-страницы</h2><p >Отчеты динамически генерируются модулем отчета и могут быть доступны напрямую через URL:</p><p >Например, вы можете получить доступ к отчету о заказе на продажу в режиме html, перейдя в http: // &lt;server-address&gt; /report/html/sale.report_saleorder/38</p><p >Или вы можете получить доступ к PDF-версии по адресу http: // &lt;server-address&gt; /report/pdf/sale.report_saleorder/38</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+      <div id="footer" class="container o_not_editable">
+          <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+          <div class="row">
+              <div class="col-xs-12">
+                  <hr/>
+                  <p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                  <hr/>
+                  <p>
+                      <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br/> <br/>
+                      В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="o_footer_bottom o_not_editable">
+          <div class="container">
+              <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+              <div class="social-links pull-right">
+                  <a href="https://www.odoo.com/web/about/facebook">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/twitter">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/linkedin">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:info@odoo.com">
+                      <i class="fa fa-envelope"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

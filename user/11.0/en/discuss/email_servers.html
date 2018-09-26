@@ -1,0 +1,311 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to use my mail server to send and receive emails in Odoo &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../_static/atom.js"></script>
+    <script type="text/javascript" src="../_static/immutable.js"></script>
+    <script type="text/javascript" src="../_static/react.min.js"></script>
+    <script type="text/javascript" src="../_static/accounts.js"></script>
+    <script type="text/javascript" src="../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../_static/entries.js"></script>
+    <script type="text/javascript" src="../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../_static/misc.js"></script>
+    <script type="text/javascript" src="../_static/inventory.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Discuss" href="../discuss.html" />
+    <link rel="next" title="Purchase" href="../purchase.html" />
+    <link rel="prev" title="How to follow Twitter feed from Odoo" href="mail_twitter.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../discuss.html">Discuss</a></li>
+                
+            
+        
+    
+    <li class="active"><a href="#">How to use my mail server to send and receive emails in Odoo</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/discuss/email_servers.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/discuss/email_servers.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/discuss/email_servers.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to use my mail server to send and receive emails in Odoo - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#how-to-manage-outbound-messages" class="ripple internal reference">How to manage outbound messages</a><ul ><li class="list-group-item"><a href="#can-i-use-an-office-365-server" class="ripple internal reference">Can I use an Office 365 server</a></li><li class="list-group-item"><a href="#how-to-use-a-g-suite-server" class="ripple internal reference">How to use a G Suite server</a></li><li class="list-group-item"><a href="#be-spf-compliant" class="ripple internal reference">Be SPF-compliant</a></li><li class="list-group-item"><a href="#allow-dkim" class="ripple internal reference">Allow DKIM</a></li></ul></li><li class="list-group-item"><a href="#how-to-manage-inbound-messages" class="ripple internal reference">How to manage inbound messages</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/discuss/email_servers.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-use-my-mail-server-to-send-and-receive-emails-in-odoo"><p >This document is mainly dedicated to Odoo on-premise users who don't
+benefit from an out-of-the-box solution to send and receive emails in Odoo,
+unlike <a href="https://www.odoo.com/trial" class="external reference">Odoo Online</a> &amp; <a href="https://www.odoo.sh" class="external reference">Odoo.sh</a>.</p><p >If no one in your company is used to manage email servers, we strongly recommend that
+you opt for those Odoo hosting solutions. Their email system
+works instantly and is monitored by professionals.
+Nevertheless you can still use your own email servers if you want
+to manage your email server's reputation yourself.</p><p >You will find here below some useful
+information on how to integrate your own email solution with Odoo.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Office 365 email servers don't allow easiliy to send external emails
+from hosts like Odoo.
+Refer to the <a href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4" class="external reference alert-link">Microsoft's documentation</a>
+to make it work.</p></div></section><section id="how-to-manage-outbound-messages"><h2 >How to manage outbound messages</h2><p >As a system admin, go to <span class="menuselection">Settings ‣ General Settings</span>
+and check <em >External Email Servers</em>.
+Then, click <em >Outgoing Mail Servers</em> to create one and reference the SMTP data of your email server.
+Once all the information has been filled out, click on <em >Test Connection</em>.</p><p >Here is a typical configuration for a G Suite server.</p><img src="../_images/outgoing_server.png" class="img-responsive center-block"><p >Then set your email domain name in the General Settings.</p></section><section id="can-i-use-an-office-365-server"><h3 >Can I use an Office 365 server</h3><p >You can use an Office 365 server if you run Odoo on-premise.
+Office 365 SMTP relays are not compatible with Odoo Online.</p><p >Please refer to <a href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4" class="external reference">Microsoft's documentation</a>
+to configure a SMTP relay for your Odoo's IP address.</p></section><section id="how-to-use-a-g-suite-server"><h3 >How to use a G Suite server</h3><p >You can use an G Suite server for any Odoo hosting type.
+To do so you need to enable a SMTP relay and to allow <em >Any addresses</em>
+in the <em >Allowed senders</em> section. The configuration steps are explained in
+<a href="https://support.google.com/a/answer/2956491?hl=en" class="external reference">Google documentation</a>.</p></section><section id="be-spf-compliant"><i id="discuss-email-servers-spf-compliant"></i><h3 >Be SPF-compliant</h3><p >In case you use SPF (Sender Policy Framework) to increase the deliverability
+of your outgoing emails, don't forget to authorize Odoo as a sending host in your
+domain name settings. Here is the configuration for Odoo Online:</p><ul ><li >If no TXT record is set for SPF, create one with following definition:
+v=spf1 include:_spf.odoo.com ~all</li><li >In case a SPF TXT record is already set, add &quot;include:_spf.odoo.com&quot;.
+e.g. for a domain name that sends emails via Odoo Online and via G Suite it could be:
+v=spf1 include:_spf.odoo.com include:_spf.google.com ~all</li></ul><p >Find <a href="https://www.mail-tester.com/spf/" class="external reference">here</a> the exact procedure to
+create or modify TXT records in your own domain registrar.</p><p >Your new SPF record can take up to 48 hours to go into effect,
+but this usually happens more quickly.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Adding more than one SPF record for a domain can cause problems
+with mail delivery and spam classification. Instead, we recommend using
+only one SPF record by modifying it to authorize Odoo.</p></div></section><section id="allow-dkim"><h3 >Allow DKIM</h3><p >You should do the same thing if DKIM (Domain Keys Identified Mail)
+is enabled on your email server. In the case of Odoo Online &amp; Odoo.sh,
+you should add a DNS &quot;odoo._domainkey&quot; CNAME record to
+&quot;odoo._domainkey.odoo.com&quot;.
+For example, for &quot;foo.com&quot; they should have a record &quot;odoo._domainkey.foo.com&quot;
+that is a CNAME with the value &quot;odoo._domainkey.odoo.com&quot;.</p></section><section id="how-to-manage-inbound-messages"><h2 >How to manage inbound messages</h2><p >Odoo relies on generic email aliases to fetch incoming messages.</p><ul ><li ><strong >Reply messages</strong> of messages sent from Odoo are routed to their original
+discussion thread (and to the inbox of all its followers) by the
+catchall alias (<strong >catchall@</strong>).</li><li ><strong >Bounced messages</strong> are routed to <strong >bounce@</strong> in order to track them in Odoo.
+This is especially used in <a href="https://www.odoo.com/page/email-marketing" class="external reference">Odoo Email Marketing</a>
+to opt-out invalid recipients.</li><li ><p ><strong >Original messages</strong>: Several business objects have their own alias to
+create new records in Odoo from incoming emails:</p><ul ><li >Sales Channel (to create Leads or Opportunities in <a href="https://www.odoo.com/page/crm" class="external reference">Odoo CRM</a>),</li><li >Support Channel (to create Tickets in <a href="https://www.odoo.com/page/helpdesk" class="external reference">Odoo Helpdesk</a>),</li><li >Projects (to create new Tasks in <a href="https://www.odoo.com/page/project-management" class="external reference">Odoo Project</a>),</li><li >Job Positions (to create Applicants in <a href="https://www.odoo.com/page/recruitment" class="external reference">Odoo Recruitment</a>),</li><li >etc.</li></ul></li></ul><p >Depending on your mail server, there might be several methods to fetch emails.
+The easiest and most recommended method is to manage one email address per Odoo
+alias in your mail server.</p><ul ><li >Create the corresponding email addresses in your mail server
+(catchall@, bounce@, sales@, etc.).</li><li ><p >Set your domain name in the General Settings.</p><img src="../_images/alias_domain.png" class="img-responsive center-block"></li><li >If you use Odoo on-premise, create an <em >Incoming Mail Server</em> in Odoo for each alias.
+You can do it from the General Settings as well. Fill out the form according
+to your email provider’s settings.
+Leave the <em >Actions to Perform on Incoming Mails</em> blank. Once all the
+information has been filled out, click on <em >TEST &amp; CONFIRM</em>.</li></ul><img src="../_images/incoming_server.png" class="img-responsive center-block"><ul ><li >If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming messages
+to Odoo's domain name rather than exclusively use your own email server.
+That way you will receive incoming messages without delay. Indeed, Odoo Online is fetching
+incoming messages of external servers once per hour only.
+You should set redirections for all the email addresses to Odoo's domain name in your
+email server (e.g. <em >catchall@mydomain.ext</em> to <em >catchall@mycompany.odoo.com</em>).</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >All the aliases are customizable in Odoo.
+Object aliases can be edited from their  respective configuration view.
+To edit catchall and bounce aliases, you first need to activate the
+developer mode from the Settings Dashboard.</p><img src="../_images/developer_mode.png" class="img-responsive center-block"><p >Then refresh your screen and go to
+<span class="menuselection">Settings ‣ Technical ‣ Parameters ‣ System Parameters</span>
+to customize the aliases (<em >mail.catchall.alias</em> &amp; * mail.bounce.alias*).</p><img src="../_images/system_parameters.png" class="img-responsive center-block"></div><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >By default inbound messages are fetched every 5 minutes in Odoo on-premise.
+You can change this value in developer mode.
+Go to <span class="menuselection">Settings ‣ Technical ‣ Automation ‣
+Scheduled Actions</span> and look for <em >Mail: Fetchmail Service</em>.</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

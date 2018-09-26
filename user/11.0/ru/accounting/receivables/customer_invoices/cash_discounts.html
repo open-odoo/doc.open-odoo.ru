@@ -1,0 +1,299 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to setup cash discounts? &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Customer Invoices" href="../customer_invoices.html" />
+    <link rel="next" title="Set up cash roundings" href="cash_rounding.html" />
+    <link rel="prev" title="Overview of the invoicing process" href="overview.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to setup cash discounts?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/accounting/receivables/customer_invoices/cash_discounts.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/accounting/receivables/customer_invoices/cash_discounts.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/accounting/receivables/customer_invoices/cash_discounts.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to setup cash discounts? - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#payment-terms" class="ripple internal reference">Payment terms</a></li><li class="list-group-item"><a href="#bank-reconciliation-model" class="ripple internal reference">Bank reconciliation model</a></li></ul></li><li class="list-group-item"><a href="#creating-an-invoice-with-a-cash-discount" class="ripple internal reference">Creating an invoice with a cash discount</a></li><li class="list-group-item"><a href="#payment" class="ripple internal reference">Payment</a><ul ><li class="list-group-item"><a href="#paying-the-invoice-with-a-cash-discount" class="ripple internal reference">Paying the invoice with a cash discount</a></li><li class="list-group-item"><a href="#paying-the-invoice-in-full" class="ripple internal reference">Paying the invoice in full</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/accounting/receivables/customer_invoices/cash_discounts.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-setup-cash-discounts"><p >Cash discounts are an incentive (usually a small percentage) that you
+offer to customers in return for paying a bill owed before the scheduled
+due date. If used properly, cash discounts improve the Days Sales
+Outstanding aspect of a business's cash conversion cycle.</p><p >For example, a typical cash discount would be: you offer a 2% discount
+on an invoice due in 30 days if the customer were to pay within the
+first 5 days of receiving the invoice.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="payment-terms"><h3 >Payment terms</h3><p >In order to manage cash discounts, we will use the payment terms
+concept of Odoo (From the Accounting module, go to <span class="menuselection">Configuration ‣
+Management ‣ Payment terms ‣ Create</span>).</p><p >Let's start with the above example: a 2% discount on an invoice due in
+30 days if the customer were to pay within the first 5 days.</p><p >A typical payment term of 30 days would have only one installment:
+balance in 30 days. But, in order to configure the cash discount, you
+can configure the payment term with two installments:</p><ul ><li >98% within 5 days</li><li >balance within 30 days</li></ul><img src="../../../_images/discount01.png" class="img-responsive center-block"><p >To make it clear that it's not a payment term but a cash discount, don't
+forget to set a clear description that will appear on the invoice:
+Invoice is due within 30 days, but you can benefit from a 2% cash
+discount if you pay within 5 days.</p></section><section id="bank-reconciliation-model"><h3 >Bank reconciliation model</h3><p >In order to speed up the bank reconciliation process, we can create a
+model of entry for all cash discounts. To do that, from the Accounting
+application dashboard, click on the &quot;More&quot; link on the bank and choose
+the option &quot;Reconciliation Models&quot;.</p><img src="../../../_images/discount02.png" class="img-responsive center-block"><p >Create a new model for cash discounts as follow:</p><ul ><li ><strong >Button Label</strong>: Cash Discount</li><li ><strong >Account</strong>: Cash Discount (according to your country)</li><li ><strong >Amount Type</strong>: Percentage</li><li ><strong >Amount</strong>: 100%</li><li ><dl ><dt ><strong >Taxes</strong>: depending on your country, you may put a tax on the cash</dt><dd >discount if taxes have to be deduced</dd></dl></li></ul><img src="../../../_images/discount03.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Even if it's a 2% cash discount, set a 100% amount on the reconciliation model
+as it means 100% of the remaining balance (the 2%). You can use the same
+reconciliation model for all your cash discount. No need to create a model
+per payment term.</p></div></section><section id="creating-an-invoice-with-a-cash-discount"><h2 >Creating an invoice with a cash discount</h2><p >When you create a customer invoice, set the right payment term &quot;30 days,
+2% cash discount&quot; right after having selected the customer.</p><img src="../../../_images/discount04.png" class="img-responsive center-block"><p >Once the invoice is validated, Odoo will automatically split the account
+receivable part of the journal entry with two installments having a
+different due date: 98% within 5 days, 2% within 30 days.</p><img src="../../../_images/discount05.png" class="img-responsive center-block"></section><section id="payment"><h2 >Payment</h2></section><section id="paying-the-invoice-with-a-cash-discount"><h3 >Paying the invoice with a cash discount</h3><p >If the customer pays with a cash discount, when processing the bank
+statement, you will match the payment (98%) with the related line in the
+journal entry.</p><img src="../../../_images/discount06.png" class="img-responsive center-block"><p >As you can see in the above screenshot, when selecting the customer, you
+also see the 2% remaining of 3$. If you want to accept the cash discount
+(if the customer paid within the 5 days), you can click on this line
+with 2%, click on &quot;Open Balance&quot;, and select your &quot;Cash Discount&quot;
+reconciliation model. That way, the invoice is marked as fully paid.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >from now on, matching the remaining 2% has to be done manually. In the future,
+we plan to automate the reconciliation of the 2% if the 98% are paid on time.</p></div></section><section id="paying-the-invoice-in-full"><h3 >Paying the invoice in full</h3><p >If the customer pays the invoice fully, without benefiting from the cash
+discount, you will reconcile the payment (in full) with the two lines
+from the invoice (98% and 2%). Just click on the two lines to match them
+with the payment.</p><img src="../../../_images/discount07.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="overview.html" class="internal alert-link reference"><span class="doc">Overview of the invoicing process</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

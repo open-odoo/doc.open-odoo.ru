@@ -1,0 +1,326 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>From Customer Invoice to Payments Collection &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Process overview" href="../process_overview.html" />
+    <link rel="next" title="From Vendor Bill to Payment" href="supplier_bill.html" />
+    <link rel="prev" title="Process overview" href="../process_overview.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">From Customer Invoice to Payments Collection</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/accounting/overview/process_overview/customer_invoice.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/accounting/overview/process_overview/customer_invoice.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/accounting/overview/process_overview/customer_invoice.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> From Customer Invoice to Payments Collection - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#from-draft-invoice-to-profit-and-loss" class="ripple internal reference">From Draft Invoice to Profit and Loss</a></li><li class="list-group-item"><a href="#invoice-creation" class="ripple internal reference">Invoice creation</a></li><li class="list-group-item"><a href="#draft-invoices" class="ripple internal reference">Draft invoices</a></li><li class="list-group-item"><a href="#open-or-pro-forma-invoices" class="ripple internal reference">Open or Pro-forma invoices</a></li><li class="list-group-item"><a href="#send-the-invoice-to-customer" class="ripple internal reference">Send the invoice to customer</a></li><li class="list-group-item"><a href="#payment" class="ripple internal reference">Payment</a></li><li class="list-group-item"><a href="#receive-a-partial-payment-through-the-bank-statement" class="ripple internal reference">Receive a partial payment through the bank statement</a></li><li class="list-group-item"><a href="#reconcile" class="ripple internal reference">Reconcile</a></li><li class="list-group-item"><a href="#payment-followup" class="ripple internal reference">Payment Followup</a><ul ><li class="list-group-item"><a href="#customer-aging-report" class="ripple internal reference">Customer aging report:</a></li></ul></li><li class="list-group-item"><a href="#profit-and-loss" class="ripple internal reference">Profit and loss</a></li><li class="list-group-item"><a href="#balance-sheet" class="ripple internal reference">Balance sheet</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/accounting/overview/process_overview/customer_invoice.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="from-customer-invoice-to-payments-collection"><p >Odoo supports multiple invoicing and payment workflows, so you can
+choose and use the ones that match your business needs. Whether you want
+to accept a single payment for a single invoice, or process a payment
+spanning multiple invoices and taking discounts for early payments, you
+can do so efficiently and accurately.</p></section><section id="from-draft-invoice-to-profit-and-loss"><h2 >From Draft Invoice to Profit and Loss</h2><p >If we pick up at the end of a typical 'order to cash' scenario, after
+the goods have been shipped, you will: issue an invoice; receive
+payment; deposit that payment at the bank; make sure the Customer
+Invoice is closed; follow up if Customers are late; and finally present
+your Income on the Profit and Loss report and show the decrease in
+Assets on the Balance Sheet report.</p><p >Invoicing in most countries occurs when a contractual obligation is met.
+If you ship a box to a customer, you have met the terms of the contract
+and can bill them. If your supplier sends you a shipment, they have met
+the terms of that contract and can bill you. Therefore, the terms of the
+contract is fulfilled when the box moves to or from the truck. At this
+point, Odoo supports the creation of what is called a Draft Invoice by
+Warehouse staff.</p></section><section id="invoice-creation"><h2 >Invoice creation</h2><p >Draft invoices can be manually generated from other documents such as
+Sales Orders, Purchase Orders,etc. Although you can create a draft
+invoice directly if you would like.</p><p >An invoice must be provided to the customer with the necessary
+information in order for them to pay for the goods and services ordered
+and delivered. It must also include other information needed to pay the
+invoice in a timely and precise manner.</p></section><section id="draft-invoices"><h2 >Draft invoices</h2><p >The system generates invoice which are initially set to the Draft state.
+While these invoices</p><p >remain unvalidated, they have no accounting impact within the system.
+There is nothing to stop users from creating their own draft invoices.</p><p >Let's create a customer invoice with following information:</p><ul ><li >Customer: Agrolait</li><li >Product: iMac</li><li >Quantity: 1</li><li >Unit Price: 100</li><li >Taxes: Tax 15%</li></ul><img src="../../../_images/invoice011.png" class="img-responsive center-block"><img src="../../../_images/invoice021.png" class="img-responsive center-block"><p >The document is composed of three parts:</p><ul ><li >the top of the invoice, with customer information,</li><li >the main body of the invoice, with detailed invoice lines,</li><li >the bottom of the page, with detail about the taxes, and the totals.</li></ul></section><section id="open-or-pro-forma-invoices"><h2 >Open or Pro-forma invoices</h2><p >An invoice will usually include the quantity and price the of goods
+and/or services, the date, any parties involved, the unique invoice
+number, and any tax information.</p><p >&quot;Validate&quot; the invoice when you are ready to approve it. The invoice
+then moves from the Draft state to the Open state.</p><p >When you have validated an invoice, Odoo gives it a unique number from a
+defined, and modifiable, sequence.</p><img src="../../../_images/invoice031.png" class="img-responsive center-block"><p >Accounting entries corresponding to this invoice are automatically
+generated when you validate the invoice. You can see the details by
+clicking on the entry in the Journal Entry field in the &quot;Other Info&quot;
+tab.</p><img src="../../../_images/invoice041.png" class="img-responsive center-block"></section><section id="send-the-invoice-to-customer"><h2 >Send the invoice to customer</h2><p >After validating the customer invoice, you can directly send it to the
+customer via the 'Send by email' functionality.</p><img src="../../../_images/invoice051.png" class="img-responsive center-block"><p >A typical journal entry generated from a validated invoice will look
+like as follows:</p><table class="table"><thead ><tr ><th ><strong >Account</strong></th><th ><strong >Partner</strong></th><th ><strong >Due date</strong></th><th ><strong >Debit</strong></th><th ><strong >Credit</strong></th></tr></thead><tbody ><tr ><td >Accounts Receivable</td><td >Agrolait</td><td >01/07/2015</td><td >115</td><td ></td></tr><tr ><td >Taxes</td><td >Agrolait</td><td ></td><td ></td><td >15</td></tr><tr ><td >Sales</td><td ></td><td ></td><td ></td><td >100</td></tr></tbody></table></section><section id="payment"><h2 >Payment</h2><p >In Odoo, an invoice is considered to be paid when the associated
+accounting entry has been reconciled with the payment entries. If there
+has not been a reconciliation, the invoice will remain in the Open state
+until you have entered the payment.</p><p >A typical journal entry generated from a payment will look like as
+follows:</p><table class="table"><thead ><tr ><th ><strong >Account</strong></th><th ><strong >Partner</strong></th><th ><strong >Due date</strong></th><th ><strong >Debit</strong></th><th ><strong >Credit</strong></th></tr></thead><tbody ><tr ><td >Bank</td><td >Agrolait</td><td ></td><td >115</td><td ></td></tr><tr ><td >Accounts Receivable</td><td >Agrolait</td><td ></td><td ></td><td >115</td></tr></tbody></table></section><section id="receive-a-partial-payment-through-the-bank-statement"><h2 >Receive a partial payment through the bank statement</h2><p >You can manually enter your bank statements in Odoo, or you can import
+them in from a csv file or from several other predefined formats
+according to your accounting localisation.</p><p >Create a bank statement from the accounting dashboard with the related
+journal and enter an amount of $100 .</p><img src="../../../_images/invoice061.png" class="img-responsive center-block"></section><section id="reconcile"><h2 >Reconcile</h2><p >Now let's reconcile!</p><img src="../../../_images/invoice071.png" class="img-responsive center-block"><p >You can now go through every transaction and reconcile them or you can mass reconcile with instructions at the bottom.</p><p >After reconciling the items in the sheet, the related invoice will now
+display &quot;You have outstanding payments for this customer. You can
+reconcile them to pay this invoice. &quot;</p><img src="../../../_images/invoice081.png" class="img-responsive center-block"><img src="../../../_images/invoice091.png" class="img-responsive center-block"><p >Apply the payment. Below, you can see that the payment has been added to
+the invoice.</p><img src="../../../_images/invoice10.png" class="img-responsive center-block"></section><section id="payment-followup"><h2 >Payment Followup</h2><p >There's a growing trend of customers paying bills later and later.
+Therefore, collectors must make every effort to collect money and
+collect it faster.</p><p >Odoo will help you define your follow-up strategy. To remind customers
+to pay their outstanding invoices, you can define different actions
+depending on how severely overdue the customer is. These actions are
+bundled into follow-up levels that are triggered when the due date of an
+invoice has passed a certain number of days. If there are other overdue
+invoices for the same customer, the actions of the most overdue invoice
+will be executed.</p><p >By going to the customer record and diving into the &quot;Overdue Payments&quot;
+you will see the follow-up message and all overdue invoices.</p><img src="../../../_images/invoice11.png" class="img-responsive center-block"><img src="../../../_images/invoice12.png" class="img-responsive center-block"></section><section id="customer-aging-report"><h3 >Customer aging report:</h3><p >The customer aging report will be an additional key tool for the
+collector to understand the customer credit issues, and to prioritize
+their work.</p><p >Use the aging report to determine which customers are overdue and begin
+your collection efforts.</p><img src="../../../_images/invoice13.png" class="img-responsive center-block"></section><section id="profit-and-loss"><h2 >Profit and loss</h2><p >The Profit and Loss statement displays your revenue and expense details.
+Ultimately, this gives you a clear image of your Net Profit and Loss. It
+is sometimes referred to as the &quot;Income Statement&quot; or &quot;Statement of
+Revenues and Expenses.&quot;</p><img src="../../../_images/invoice14.png" class="img-responsive center-block"></section><section id="balance-sheet"><h2 >Balance sheet</h2><p >The balance sheet summarizes the your company's liabilities,
+assets and equity at a specific moment in time.</p><img src="../../../_images/invoice15.png" class="img-responsive center-block"><img src="../../../_images/invoice16.png" class="img-responsive center-block"><p >For example, if you manage your inventory using the perpetual accounting
+method, you should expect a decrease in account &quot;Current Assets&quot; once
+the material has been shipped to the customer.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

@@ -1,0 +1,14 @@
+/developer/                             /developer/11.0/ru      302
+/user/                                  /user/11.0/ru           302
+/docs/*                                 /:splat                 301
+
+/developer/:version/:lang/index.html    /developer/:version/:lang/  301
+developer/11.0/ru/api_integration.html /developer/11.0/ru/webservices/odoo.html 301
+developer/11.0/en/api_integration.html /developer/11.0/en/webservices/odoo.html 301
+
+/developer/8.0/ru/webservices/odoo.html /developer/8.0/ru/api_integration.html 301
+/developer/9.0/ru/webservices/odoo.html /developer/9.0/ru/api_integration.html 301
+/developer/10.0/ru/webservices/odoo.html /developer/10.0/ru/api_integration.html 301
+/developer/8.0/en/webservices/odoo.html /developer/8.0/en/api_integration.html 301
+/developer/9.0/en/webservices/odoo.html /developer/9.0/en/api_integration.html 301
+/developer/10.0/en/webservices/odoo.html /developer/10.0/en/api_integration.html 301

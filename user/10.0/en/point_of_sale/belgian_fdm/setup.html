@@ -1,0 +1,293 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Setting up the Fiscal Data Module with the Odoo POS &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../index.html" />
+    <link rel="up" title="Belgian Fiscal Data Module" href="../belgian_fdm.html" />
+    <link rel="next" title="Project" href="../../project.html" />
+    <link rel="prev" title="Belgian Fiscal Data Module" href="../belgian_fdm.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../point_of_sale.html">Point of Sale</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Setting up the Fiscal Data Module with the Odoo POS</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/point_of_sale/belgian_fdm/setup.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/point_of_sale/belgian_fdm/setup.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/point_of_sale/belgian_fdm/setup.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Setting up the Fiscal Data Module with the Odoo POS - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#required-hardware" class="ripple internal reference">Required hardware</a></li><li class="list-group-item"><a href="#setup" class="ripple internal reference">Setup</a><ul ><li class="list-group-item"><a href="#posbox" class="ripple internal reference">POSBox</a></li><li class="list-group-item"><a href="#odoo" class="ripple internal reference">Odoo</a></li></ul></li><li class="list-group-item"><a href="#certification-on-premise" class="ripple internal reference">Certification &amp; On-premise</a></li><li class="list-group-item"><a href="#restrictions" class="ripple internal reference">Restrictions</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/point_of_sale/belgian_fdm/setup.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="setting-up-the-fiscal-data-module-with-the-odoo-pos"></section><section id="introduction"><h2 >Introduction</h2><p >The Belgian government requires certain businesses to use a
+government-certified device called a <strong >Fiscal Data Module</strong> (also
+known as a <strong >blackbox</strong>). This device works together with the POS
+application and logs certain transactions. On top of that, the used
+POS application must also be certified by the government and must
+adhere to strict standards specified by them. <a href="http://www.systemedecaisseenregistreuse.be/systemes-certifies" class="external reference">Odoo 9 (Enterprise Edition) is a
+certified application</a>. More
+information concerning the Fiscal Data Module can be found on <a href="http://www.systemedecaisseenregistreuse.be/" class="external reference">the
+official website</a>.</p></section><section id="required-hardware"><h2 >Required hardware</h2><ul ><li ><p >A government certified <a href="http://www.systemedecaisseenregistreuse.be/systemes-certifies#FDM%20certifiés" class="external reference">Fiscal Data Module</a>
+per POS, all of them should work, but the Cleancash SC-B is
+recommended, you will also need:</p><ul ><li >Serial null modem cable per FDM (<a href="http://www.startech.com/Cables/Serial-Parallel-PS-2/DB9-DB25/10-ft-Cross-Wired-Serial-Null-Modem-Cable-DB9-FM~SCNM9FM" class="external reference">example</a>)</li><li >Serial-to-USB adapter per FDM (<a href="http://trendnet.com/products/proddetail.asp?prod=265_TU-S9" class="external reference">example</a>)</li></ul></li><li >A registered POSBox per POS configuration</li></ul></section><section id="setup"><h2 >Setup</h2></section><section id="posbox"><h3 >POSBox</h3><p >In order to use a Fiscal Data Module, you will need a registered
+POSBox. These POSBoxes are similar to the regular POSBoxes we sell,
+but they are registered with the Belgian government. This is required
+by law. Attempting to use a Fiscal Data Module on a non-registered
+POSBox will not work. You can verify that the Fiscal Data Module is
+recognized by the POSBox by going to the <em >Hardware status page</em> via
+the POSBox homepage.</p><img src="../../_images/posbox_fdm_hardware_status.png" class="img-responsive center-block"></section><section id="odoo"><h3 >Odoo</h3><p >An Odoo POS app can be given certified POS capabilities by installing
+the <strong >Belgian Registered Cash Register</strong> app (technical name:
+<code >pos_blackbox_be</code>). Because of government restrictions imposed on
+us, this installation cannot be undone. After this, you will have to
+ensure that each POS configuration has a unique registered POSBox
+associated with it (<span class="menuselection">Point of Sale ‣ Configuration
+‣ Point of Sale</span> and ensure Hardware Proxy / POSBox and the serial
+number of your POSBox is set). The first time you open the Point of
+Sale and attempt to do a transaction, you will be asked to input the
+PIN that you received with your VAT signing card.</p><img src="../../_images/vat_signing_card_pin.png" class="img-responsive center-block"></section><section id="certification-on-premise"><h2 >Certification &amp; On-premise</h2><p >The certification granted by the government is restricted to the use on odoo.com
+SaaS instance. The usage of the module from the source or a modified version
+will <strong >not</strong> be certified. For on-premise users, we also support the Fiscal Data
+Module in such installations. The main restriction is that this requires an
+obfuscated version of the <code >pos_blackbox_be</code> module we will provide on request
+for Enterprise customers.</p></section><section id="restrictions"><h2 >Restrictions</h2><p >As mentioned before, in order to get certified the POS application
+must adhere to strict government guidelines. Because of this, a
+certified Odoo POS has some limitations not present in the
+non-certified Odoo POS.</p><ul ><li >Refunding is disabled</li><li >Modifying orderline prices</li><li >Creating/modifying/deleting POS orders</li><li >Selling products without a valid tax</li><li >Multiple Odoo POS configurations per POSBox are not allowed</li><li >Using the POS without a connection to the POSBox (and thus FDM)</li><li >Blacklisted modules: pos_discount, pos_reprint, pos_loyalty</li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

@@ -1,0 +1,370 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Containers &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" />
+    <link rel="up" title="Advanced" href="../advanced.html" />
+    <link rel="next" title="Submodules" href="submodules.html" />
+    <link rel="prev" title="Advanced" href="../advanced.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../documentation.html">Odoo.sh</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Containers</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/odoo_sh/advanced/containers.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/odoo_sh/advanced/containers.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/odoo_sh/advanced/containers.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../../_static/banners/odoo-sh.jpg');"></span>
+      <div class="container text-center">
+        <h1> Containers - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#directory-structure" class="ripple internal reference">Directory structure</a></li><li class="list-group-item"><a href="#database-shell" class="ripple internal reference">Database shell</a></li><li class="list-group-item"><a href="#run-an-odoo-server" class="ripple internal reference">Run an Odoo server</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/odoo_sh/advanced/containers.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="containers"></section><section id="overview"><h2 >Overview</h2><p >Each build is isolated within its own container (Linux namespaced container).</p><p >The base is an Ubuntu 16.04 system, where all of Odoo's required dependencies,
+as well as common useful packages, are installed.</p><p >The Odoo.sh team is open to install any system packages
+as long as they are distributed in the official Ubuntu repositories.
+<a href="https://www.odoo.sh/feedback" class="external reference">Leave us a feedback</a> if you would like a package not yet installed.</p><p >If your project requires additional Python dependencies, or more recent releases,
+you can define a <code class="file">requirements.txt</code> file in the root of your branches listing them.
+The platform will take care to install these dependencies in your containers.
+<a href="https://pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers" class="external reference">The pip requirements specifiers</a>
+documentation can help you write a <code class="file">requirements.txt</code> file.
+To have a concrete example,
+check out the <a href="https://github.com/odoo/odoo/blob/11.0/requirements.txt" class="external reference">requirements.txt file of Odoo</a>.</p><p >The <code class="file">requirements.txt</code> files of submodules are taken into account as well. The platform
+looks for <code class="file">requirements.txt</code> files in each folder containing Odoo modules: Not in the module folder itself,
+but in their parent folder.</p></section><section id="directory-structure"><h2 >Directory structure</h2><p >As the containers are Ubuntu based, their directory structure follows the linux Filesystem Hierarchy Standard.
+<a href="https://help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories" class="external reference">Ubuntu's filesystem tree overview</a>
+explains the main directories.</p><p >Here are the Odoo.sh pertinent directories:</p><div class="highlight-default"><div class="highlight"><pre><span></span>.
+├── home
+│    └── odoo
+│         ├── src
+│         │    ├── odoo                Odoo Community source code
+│         │    │    └── odoo-bin       Odoo server executable
+│         │    ├── enterprise          Odoo Enterprise source code
+│         │    ├── themes              Odoo Themes source code
+│         │    └── user                Your repository branch source code
+│         ├── data
+│         │    ├── filestore           database attachments, as well as the files of binary fields
+│         │    └── sessions            visitors and users sessions
+│         └── logs
+│              ├── install.log         Database installation logs
+│              ├── odoo.log            Running server logs
+│              ├── update.log          Database updates logs
+│              └── pip.log             Python packages installation logs
+└── usr
+     ├── lib
+     │    ├── python2.7
+     │         └── dist-packages       Python 2.7 standard libraries
+     │    ├── python3
+     │         └── dist-packages       Python 3 standard libraries
+     │    └── python3.5
+     │         └── dist-packages       Python 3.5 standard libraries
+     ├── local
+     │    └── lib
+     │         ├── python2.7
+     │         │    └── dist-packages  Python 2.7 third-party libraries
+     │         └── python3.5
+     │              └── dist-packages  Python 3.5 third-party libraries
+     └── usr
+          └── bin
+               ├── python2.7           Python 2.7 executable
+               └── python3.5           Python 3.5 executable
+</pre></div>
+</div>
+<p >Both Python 2.7 and 3.5 are installed in the containers. However:</p><ul ><li >If your project is configured to use Odoo 10.0, the Odoo server runs with Python 2.7.</li><li >If your project is configured to use Odoo 11.0, the Odoo server runs with Python 3.5.</li></ul></section><section id="database-shell"><h2 >Database shell</h2><p >While accessing a container with the shell, you can access the database using <em >psql</em>.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>odoo@odoo-addons-master-1.odoo.sh:~$ psql
+psql <span class="o">(</span><span class="m">9</span>.5.2, server <span class="m">9</span>.5.11<span class="o">)</span>
+SSL connection <span class="o">(</span>protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: <span class="m">256</span>, compression: off<span class="o">)</span>
+Type <span class="s2">&quot;help&quot;</span> <span class="k">for</span> help.
+
+odoo-addons-master-1<span class="o">=</span>&gt;
+</pre></div>
+</div>
+<p ><strong >Be careful !</strong>
+<a href="https://www.postgresql.org/docs/current/static/sql-begin.html" class="external reference">Use transactions</a> (<em >BEGIN...COMMIT/ROLLBACK</em>)
+for every <em >sql</em> statements leading to changes
+(<em >UPDATE</em>, <em >DELETE</em>, <em >ALTER</em>, ...), especially for your production database.</p><p >The transaction mechanism is your safety net in case of mistake.
+You simply have to rollback your changes to revert your database to its previous state.</p><p >For example, it may happen that you forget to set your <em >WHERE</em> condition.</p><div class="highlight-sql"><div class="highlight"><pre><span></span><span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">BEGIN</span><span class="p">;</span>
+<span class="k">BEGIN</span>
+<span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">UPDATE</span> <span class="n">res_users</span> <span class="k">SET</span> <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;***&#39;</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="mi">457</span>
+<span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">ROLLBACK</span><span class="p">;</span>
+<span class="k">ROLLBACK</span>
+</pre></div>
+</div>
+<p >In such a case, you can rollback to revert the unwanted changes that you just mistakenly did, and rewrite the statement:</p><div class="highlight-sql"><div class="highlight"><pre><span></span><span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">BEGIN</span><span class="p">;</span>
+<span class="k">BEGIN</span>
+<span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">UPDATE</span> <span class="n">res_users</span> <span class="k">SET</span> <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;***&#39;</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="mi">1</span>
+<span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">COMMIT</span><span class="p">;</span>
+<span class="k">COMMIT</span>
+</pre></div>
+</div>
+<p >However, do not forget to either commit or rollback your transaction after having done it.
+Open transactions may lock records in your tables
+and your running database may wait for them to be released. It can cause a server to hang indefinitely.</p><p >In addition, when possible, use your staging databases to test your statements first. It gives you an extra safety net.</p></section><section id="run-an-odoo-server"><h2 >Run an Odoo server</h2><p >You can start an Odoo server instance from a container shell. You won't be able to access it from the outside world
+with a browser, but you can for instance:</p><ul ><li >use the Odoo shell,</li></ul><div class="highlight-bash"><div class="highlight"><pre><span></span>$  odoo-bin shell
+&gt;&gt;&gt; <span class="nv">partner</span> <span class="o">=</span> env<span class="o">[</span><span class="s1">&#39;res.partner&#39;</span><span class="o">]</span>.search<span class="o">([(</span><span class="s1">&#39;email&#39;</span>, <span class="s1">&#39;=&#39;</span>, <span class="s1">&#39;asusteK@yourcompany.example.com&#39;</span><span class="o">)]</span>, <span class="nv">limit</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
+&gt;&gt;&gt; partner.name
+<span class="s1">&#39;ASUSTeK&#39;</span>
+&gt;&gt;&gt; partner.name <span class="o">=</span> <span class="s1">&#39;Odoo&#39;</span>
+&gt;&gt;&gt; env<span class="o">[</span><span class="s1">&#39;res.partner&#39;</span><span class="o">]</span>.search<span class="o">([(</span><span class="s1">&#39;email&#39;</span>, <span class="s1">&#39;=&#39;</span>, <span class="s1">&#39;asusteK@yourcompany.example.com&#39;</span><span class="o">)]</span>, <span class="nv">limit</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>.name
+<span class="s1">&#39;Odoo&#39;</span>
+</pre></div>
+</div>
+<ul ><li >install a module,</li></ul><div class="highlight-bash"><div class="highlight"><pre><span></span>$  odoo-bin -i sale --without-demo<span class="o">=</span>all --stop-after-init
+</pre></div>
+</div>
+<ul ><li >update a module,</li></ul><div class="highlight-bash"><div class="highlight"><pre><span></span>$  odoo-bin -u sale --stop-after-init
+</pre></div>
+</div>
+<ul ><li >run the tests for a module,</li></ul><div class="highlight-bash"><div class="highlight"><pre><span></span>$  odoo-bin -i sale --test-enable --log-level<span class="o">=</span><span class="nb">test</span> --stop-after-init
+</pre></div>
+</div>
+<p >In the above commands, the argument:</p><ul ><li ><code >--without-demo=all</code> prevents demo data to be loaded for all modules</li><li ><code >--stop-after-init</code> will immediately shutdown the server instance after it completed the operations you asked.</li></ul><p >More options are available and detailed in the
+<a href="https://www.odoo.com/documentation/11.0/reference/cmdline.html" class="external reference">CLI documentation</a>.</p><p >You can find in the logs (<em >~/logs/odoo.log</em>) the addons path used by Odoo.sh to run your server.
+Look for &quot;<em >odoo: addons paths</em>&quot;:</p><div class="highlight-default"><div class="highlight"><pre><span></span>2018-02-19 10:51:39,267 4 INFO ? odoo: Odoo version 11.0
+2018-02-19 10:51:39,268 4 INFO ? odoo: Using configuration file at /home/odoo/.config/odoo/odoo.conf
+2018-02-19 10:51:39,268 4 INFO ? odoo: addons paths: [&#39;/home/odoo/data/addons/11.0&#39;, &#39;/home/odoo/src/user&#39;, &#39;/home/odoo/src/enterprise&#39;, &#39;/home/odoo/src/themes&#39;, &#39;/home/odoo/src/odoo/addons&#39;, &#39;/home/odoo/src/odoo/odoo/addons&#39;]
+</pre></div>
+</div>
+<p ><strong >Be careful</strong>, especially with your production database.
+Operations that you perform running this Odoo server instance are not isolated:
+Changes will be effective in the database. Always, make your tests in your staging databases.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

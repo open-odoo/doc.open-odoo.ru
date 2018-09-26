@@ -1,0 +1,289 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to unload your shipment to an input location? (2 steps) &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Incoming Shipments" href="../incoming.html" />
+    <link rel="next" title="How to add a quality control step in goods receipt? (3 steps)" href="three_steps.html" />
+    <link rel="prev" title="How to choose the right flow to handle receipts?" href="handle_receipts.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../inventory.html">Inventory</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to unload your shipment to an input location? (2 steps)</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/inventory/management/incoming/two_steps.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/inventory/management/incoming/two_steps.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/inventory/management/incoming/two_steps.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to unload your shipment to an input location? (2 steps) - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#use-advanced-routes" class="ripple internal reference">Use advanced routes</a></li><li class="list-group-item"><a href="#how-to-configure-your-warehouse" class="ripple internal reference">How to configure your warehouse ?</a></li></ul></li><li class="list-group-item"><a href="#how-to-receipt-a-shipment-in-2-steps" class="ripple internal reference">How to receipt a shipment in 2 steps?</a><ul ><li class="list-group-item"><a href="#how-to-process-the-receipt-step" class="ripple internal reference">How to process the Receipt step ?</a></li><li class="list-group-item"><a href="#how-to-to-transfer-the-receipt-to-your-stock" class="ripple internal reference">How to to transfer the receipt to your stock ?</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/inventory/management/incoming/two_steps.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-unload-your-shipment-to-an-input-location-2-steps"></section><section id="overview"><h2 >Overview</h2><p >Odoo uses routes to define exactly how you will handle the different
+receipt steps. The configuration is done at the level of the warehouse.
+By default, the reception is a one step process, but changing the
+configuration can allow to have 2 or even 3 steps.</p><p >The 2 steps flow is the following : You receive the goods in an input
+area then transfer them from input area to your stock. As long as the
+goods are not transferred in your stock, they will not be available for
+further processing.</p><p >This is the case that will be explained in this document.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="use-advanced-routes"><h3 >Use advanced routes</h3><p >To allow management of routes, go to the menu
+<span class="menuselection">Inventory ‣ Configuration ‣ Settings</span></p><img src="../../../_images/two_steps051.png" class="img-responsive center-block"><p >Ensure that the routes option <strong >Advance routing of product using
+rules</strong> is checked, then click on <strong >Apply</strong> to save changes.</p><p >Make sure that <strong >&quot;Manage several locations per warehouse&quot;</strong> is also
+ticked.</p></section><section id="how-to-configure-your-warehouse"><h3 >How to configure your warehouse ?</h3><p >Go to the the menu <span class="menuselection">Inventory ‣ Configuration ‣ Warehouse</span>
+and choose the warehouse where you want to change reception methods.</p><p >By default, warehouses are configured with one step reception (option <strong >Receive
+goods directly into stock</strong>).</p><p >To add the control step, tick <strong >Unload in input location then go to
+stock (2 steps)</strong>.</p><img src="../../../_images/two_steps021.png" class="img-responsive center-block"></section><section id="how-to-receipt-a-shipment-in-2-steps"><h2 >How to receipt a shipment in 2 steps?</h2></section><section id="how-to-process-the-receipt-step"><h3 >How to process the Receipt step ?</h3><ul ><li >In the purchase module, create a <strong >Request for Quotation</strong>, then click on
+the <strong >Confirm order</strong> button. You can see that there is one
+<strong >Shipment</strong> related to purchase order in the <strong >stat button</strong>
+above the purchase order form view. This is the receipt step.</li></ul><img src="../../../_images/two_steps031.png" class="img-responsive center-block"><ul ><li >Go to <strong >Inventory</strong> and click on the <strong ># TO RECEIVE</strong> link on the
+<strong >Receipts</strong> card.</li></ul><img src="../../../_images/two_steps011.png" class="img-responsive center-block"><p >Click on the receipt that you want to process, then click on <strong >Validate</strong> to
+complete the move from the <strong >Vendor</strong> to <strong >WH/Input</strong>.</p><p >This has completed the Receipt Step and the move refered with <strong >WH/IN</strong>.
+The product has been moved from the <strong >Vendor</strong> to the <strong >WH/Input</strong> location,
+which makes the product available for the next step.</p></section><section id="how-to-to-transfer-the-receipt-to-your-stock"><h3 >How to to transfer the receipt to your stock ?</h3><p >Go back to the <strong >Inventory</strong> dashboard. The waiting transfer is now
+ready. Click on the <strong ># TRANSFERS</strong> in the <strong >Internal Transfers</strong> to process
+the quality control.</p><img src="../../../_images/two_steps041.png" class="img-responsive center-block"><p >Click on the picking you want to process. Click on <strong >Validate</strong> to
+complete the move from <strong >WH/Input</strong> to <strong >WH/Stock</strong>.</p><p >This has completed the internal transfer step and the move refered with <strong >WH/INT</strong>.
+The receipt has been moved to your stock.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../delivery/inventory_flow.html" class="internal alert-link reference"><span class="doc">How to choose the right inventory flow to handle delivery orders?</span></a></li><li ><a href="three_steps.html" class="internal alert-link reference"><span class="doc">How to add a quality control step in goods receipt? (3 steps)</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

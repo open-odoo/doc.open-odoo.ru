@@ -1,0 +1,263 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600" rel="stylesheet">
+  
+    <title>JSDoc parser/Sphinx extension for Odoo &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '11.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+  <div class="o_main_header_main">
+    <a class="pull-left o_logo" href="/"></a>
+    <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="mdi-navigation-menu"></span>
+    </a>
+    <ul class="o_primary_nav">
+      <li><a href="/">Документация</a></li>
+    </ul>
+  </div>
+  <nav class="navbar o_sub_nav">
+    <div class="container">
+      <div class="navbar-header visible-xs">
+          <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+            Меню
+            <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+          </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="o_sub-menu">
+        <ol class="o_breadcrumb breadcrumb nav navbar-left">
+            
+            
+            
+
+
+
+
+
+    
+    <li class="active"><a href="#">JSDoc parser/Sphinx extension for Odoo</a></li>
+
+            
+        </ol>
+
+        <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/11.0/en/_extensions/autojsdoc/README.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/_extensions/autojsdoc/README.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/_extensions/autojsdoc/README.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/_extensions/autojsdoc/README.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+<li><a href="/developer/11.0/ru/python3.html">Python 3</a></li>
+          
+
+          
+            <li class="divider"></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../../_static/banners/installing_odoo.jpg');"></span>
+      <div class="container text-center">
+        <h1> JSDoc parser/Sphinx extension for Odoo - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+      <main class="container ">
+        
+        <div class="o_content row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#why" class="ripple internal reference">Why?</a></li><li class="list-group-item"><a href="#what" class="ripple internal reference">What?</a></li><li class="list-group-item"><a href="#how" class="ripple internal reference">How?</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/11.0/doc/_extensions/autojsdoc/README.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+		  <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+          <article class="doc-body ">
+            
+            
+            
+  <section id="jsdoc-parser-sphinx-extension-for-odoo"></section><section id="why"><h2 >Why?</h2><p >Spent about a week trying to coerce &quot;standard&quot; javascript tools (<a href="http://usejsdoc.org" class="external reference">jsdoc</a> with
+the hope of using <a href="https://sphinx-js-howto.readthedocs.io" class="external reference">sphinx-js</a> for integration or <a href="http://documentation.js.org" class="external reference">documentation.js</a>) and
+failed to ever get a sensible result: failed to get any result with the
+current state of the documentation, significant changes/additions/fixes to
+docstrings brought this up to &quot;garbage output&quot; level.</p><p >Bug reports and mailing list posts didn't show any path to improvement on the
+ES5 codebase (if we ever go whole-hog on ES6 modules and classes things could
+be different, in fact most of JSDoc's current effort seem focused on
+ES6/ES2015 features) but both experience and looking at the mailing lists
+told me that spending more time would be wasted.</p><p >Even more so as I was writing visitors/rewriters to generate documentation
+from our existing structure, which broadly speaking is relatively strict, and
+thus</p></section><section id="what"><h2 >What?</h2><p >If it were possible to generate JSDoc annotations from our relatively
+well-defined code structures, it was obviously possible to extract documentary
+information directly from it, hence this Odoo-specific package/extension
+trying to do exactly that.</p><p >This package should eventually provide:</p><ul ><li >a command-line interface which can be invoked via <code >-m autojsdoc</code> (assuming
+your <code >PYTHONPATH</code> can find it) which should allow dumping the parsed AST
+in a convenient-ish form, possibly doing searches through the AST, a
+dependency graph extractor/analysis and a text dumper for the
+documentation.</li><li >a sphinx extension (<code >autojsdoc.sphinx</code>) which can be used to integrate the
+parsed JSDoc information into the Sphinx doc.</li></ul></section><section id="how"><h2 >How?</h2><p >Sphinx-aside, the package relies on 3 libraries:</p><ul ><li ><p ><a href="https://github.com/PiotrDabkowski/pyjsparser" class="external reference">pyjsparser</a>, an Esprima-compliant ES5.1 parser (with bits of ES6 support),
+sadly it does not support comments in its current form so I had to fork it.
+Fed a javascript source file, <a href="https://github.com/PiotrDabkowski/pyjsparser" class="external reference">pyjsparser</a> simply generates a bunch of nested
+dicts representing an Esprima ast, <a href="_https://github.com/benjamn/ast-types/blob/master/def/core.js" class="external reference">ast-types</a> does a reasonably good job of
+describing it once you understand that &quot;bases&quot; are basically just structural
+mixins.</p><p >Because the original does not, this package provides a <code >visitor</code> module
+for <a href="https://github.com/PiotrDabkowski/pyjsparser" class="external reference">pyjsparser</a> ASTs.</p></li><li ><p ><a href="https://github.com/nostrademons/pyjsdoc" class="external reference">pyjsdoc</a>, a one-file &quot;port&quot; of jsdoc, can actually do much of the JS parsing
+(using string munging) but its core semantics don't fit our needs so I'm
+only using it to parse the actual JSDoc content, and the <code >jsdoc</code> module
+contains some replacement classes, extensions &amp; monkey patches for things
+<a href="https://github.com/nostrademons/pyjsdoc" class="external reference">pyjsdoc</a> itself does not support, at the time of this writing:</p><ul ><li >a bug in FunctionDoc.return_val</li><li >a type on FunctionDoc so it's compatible with ParamDoc</li><li >a more reliable comments-parsing function</li><li >a replacement ModuleDoc as the original does not materialise AMD modules</li><li >a ClassDoc extension to support mixins</li><li >two additional CommentDoc extensions for &quot;namespaces&quot; objects (bag of
+attributes without any more information) and mixin objects</li></ul></li><li ><a href="https://pytest.org/" class="external reference">pytest</a> to configure and run the test suite, which you can run by invoking
+<code >pytest doc/_extensions</code> from the project top-level, the tests represent
+both &quot;happy path&quot; things we want to parse and various code patterns which
+tripped the happy path because e.g. they were matched and should not have,
+they were not matched and should have, or they were more complex than the
+happy path had expected</li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+      <div id="footer" class="container o_not_editable">
+          <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+          <div class="row">
+              <div class="col-xs-12">
+                  <hr/>
+                  <p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                  <hr/>
+                  <p>
+                      <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br/> <br/>
+                      В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="o_footer_bottom o_not_editable">
+          <div class="container">
+              <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+              <div class="social-links pull-right">
+                  <a href="https://www.odoo.com/web/about/facebook">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/twitter">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/linkedin">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:info@odoo.com">
+                      <i class="fa fa-envelope"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

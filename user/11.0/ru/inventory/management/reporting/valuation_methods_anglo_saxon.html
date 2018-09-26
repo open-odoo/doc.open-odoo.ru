@@ -1,0 +1,328 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to do an inventory valuation? (Anglo-Saxon Accounting) &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Inventory" href="../../../accounting/others/inventory.html" />
+    <link rel="next" title="Localizations" href="../../../accounting/localizations.html" />
+    <link rel="prev" title="How to do an inventory valuation? (Continental Accounting)" href="valuation_methods_continental.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted has_code_col">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to do an inventory valuation? (Anglo-Saxon Accounting)</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/inventory/management/reporting/valuation_methods_anglo_saxon.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/inventory/management/reporting/valuation_methods_anglo_saxon.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/inventory/management/reporting/valuation_methods_anglo_saxon.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="has_code_col">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to do an inventory valuation? (Anglo-Saxon Accounting) - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container-fluid has_code_col">
+      <main class="container-fluid has_code_col">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#costing-method" class="ripple internal reference">Costing Method</a></li><li class="list-group-item"><a href="#periodic-inventory-valuation" class="ripple internal reference">Periodic Inventory Valuation</a></li><li class="list-group-item"><a href="#perpetual-inventory-valuation" class="ripple internal reference">Perpetual Inventory Valuation</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/inventory/management/reporting/valuation_methods_anglo_saxon.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-do-an-inventory-valuation-anglo-saxon-accounting"><p >Every year your inventory valuation has to be recorded in your
+balance sheet. This implies two main choices:</p><ul ><li >the way you compute the cost of your stored items
+(Standard vs. Average vs. Real Price);</li><li >the way you record the inventory value into your books
+(periodic vs. Perpetual).</li></ul></section><section id="costing-method"><h2 >Costing Method</h2><dl class="doc-aside alternatives"><dt >Standard Price</dt><dd ><table class="table values-table"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$10</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$10</td><td >12</td><td >+4*$10</td><td >$120</td></tr><tr ><td >Deliver 10 Products</td><td >$10</td><td >2</td><td ><div class="line-block"><div class="line">-10*$10</div><div class="line"><br /></div></div></td><td >$20</td></tr><tr ><td >Receive 2 Products at $9</td><td >$10</td><td >4</td><td >+2*$10</td><td >$40</td></tr></tbody></table><p ><strong >Standard Price</strong> means you estimate the cost price based
+on direct materials, direct labor and manufacturing overhead
+at the end of a specific period (usually once a year). You
+enter this cost price in the product form.</p></dd><dt >Average Price</dt><dd ><table class="table values-table"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Deliver 10 Products</td><td >$12</td><td >2</td><td ><div class="line-block"><div class="line">-10*$12</div><div class="line"><br /></div></div></td><td >$24</td></tr><tr ><td >Receive 2 Products at $6</td><td >$9</td><td >4</td><td >+2*$6</td><td >$36</td></tr></tbody></table><p >The <strong >Average Price</strong> method recomputes the cost price as a receipt order
+has been processed, based on prices defined in tied purchase orders:
+FORMULA (see here attached)</p><p >The average cost does not change when products leave the warehouse.</p><p >From an accounting point of view, this method is mainly justified in
+case of huge purchase price variations and is quite unusual due to its
+operational complexity. Your actually need a software like Odoo to
+easily keep this cost up-to-date.</p><p >This method is dedicated to advanced users. It requires well established
+business processes because the order in which you process receipt orders
+matters in the cost computation.</p></dd><dt >FIFO</dt><dd ><table class="table values-table"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Deliver 10 Products</td><td >$16</td><td >2</td><td ><div class="line-block"><div class="line">-8*$10</div><div class="line">-2*$16</div></div></td><td >$32</td></tr><tr ><td >Receive 2 Products at $6</td><td >$11</td><td >4</td><td >+2*$6</td><td >$44</td></tr></tbody></table><p >For <strong >Real Price</strong> (FIFO, LIFO, FEFO, etc), the costing is further
+refined by the removal strategy set on the warehouse location
+or product's internal category. The default strategy is FIFO. With
+such method, your inventory value is computed from the real cost
+of your stored products (cfr. Quantitative Valuation) and not from
+the cost price shown in the product form. Whenever you ship items,
+the cost price is reset to the cost of the last item(s) shipped.
+This cost price is used to value any product not received from a
+purchase order (e.g. inventory adjustments).</p><p >FIFO is advised if you manage all your workflow into Odoo (Sales,
+Purchases, Inventory). It suits any kind of users.</p></dd><dt >LIFO (not accepted in IFRS)</dt><dd ><table class="table values-table"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Deliver 10 Products</td><td >$10</td><td >2</td><td ><div class="line-block"><div class="line">-4*$16</div><div class="line">-6*$10</div></div></td><td >$20</td></tr><tr ><td >Receive 2 Products at $6</td><td >$8</td><td >4</td><td >+2*$6</td><td >$32</td></tr></tbody></table><p >For <strong >Real Price</strong> (FIFO, LIFO, FEFO, etc), the costing is further
+refined by the removal strategy set on the warehouse location
+or product's internal category. The default strategy is FIFO.
+With such method, your inventory value is computed from the
+real cost of your stored products (cfr. Quantitative Valuation)
+and not from the cost price shown in the product form. Whenever
+you ship items, the cost price is reset to the cost of the last
+item(s) shipped. This cost price is used to value any product
+not received from a purchase order (e.g. inventory adjustments).</p><p >LIFO is not permitted outside the United States.</p></dd></dl><p >Odoo allows any method. The default one is <strong >Standard Price</strong>.
+To change it, check <strong >Use a 'Fixed', 'Real' or 'Average' price
+costing method</strong> in Purchase settings. Then set the costing
+method from products' internal categories. Categories show up
+in the Inventory tab of the product form.</p><p >Whatever the method is, Odoo provides a full inventory valuation
+in <span class="menuselection">Inventory ‣ Reports ‣ Inventory Valuation</span>
+(i.e. current quantity in stock * cost price).</p></section><section id="periodic-inventory-valuation"><h2 >Periodic Inventory Valuation</h2><p >In a periodic inventory valuation, goods reception and
+outgoing shipments have no direct impact in the accounting.
+At the end of the month or year, the accountant posts one
+journal entry representing the value of the physical inventory.</p><p >This is the default configuration in Odoo and it works
+out-of-the-box. Check following operations and find out how
+Odoo is managing the accounting postings.</p><dl class="doc-aside alternatives"><dt >Vendor Bill</dt><dd ><table class="table values-table"><thead ><tr ><th ></th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Assets: Inventory</td><td >50</td><td ></td></tr><tr ><td >Assets: Deferred Tax Assets</td><td >4.68</td><td ></td></tr><tr ><td >Liabilities: Accounts Payable</td><td ></td><td >54.68</td></tr></tbody></table><dl ><dt >Конфигурация:</dt><dd ><ul ><li >Purchased Goods: defined on the product or on the internal category of related product
+(Expense Account field)</li><li >Deferred Tax Assets: defined on the tax used on the purchase order line</li><li >Accounts Payable: defined on the vendor related to the bill</li></ul></dd></dl></dd><dt >Goods Receptions</dt><dd >No Journal Entry</dd><dt >Customer Invoice</dt><dd ><table class="table values-table"><thead ><tr ><th ></th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Revenues: Sold Goods</td><td ></td><td >100</td></tr><tr ><td >Liabilities: Deferred Tax Liabilities</td><td ></td><td >9</td></tr><tr ><td >Assets: Accounts Receivable</td><td >109</td><td ></td></tr></tbody></table><dl ><dt >Конфигурация:</dt><dd ><ul ><li >Revenues: defined on the product or on the internal category of related
+product (Income Account field)</li><li >Deferred Tax Liabilities: defined on the tax used on the invoice line</li><li >Accounts Receivable: defined on the customer (Receivable Account)</li></ul></dd></dl><p >The fiscal position used on the invoice may have a rule that replaces the
+Income Account or the tax defined on the product by another one.</p></dd><dt >Customer Shipping</dt><dd >No Journal Entry</dd><dt >Manufacturing Orders</dt><dd >No Journal Entry</dd></dl><hr style="float: none; visibility: hidden; margin: 0;"><p >At the end of the month/year, your company does a physical inventory
+or just relies on the inventory in Odoo to value the stock into your books.</p><p >Then you need to break down the purchase balance into both the inventory and
+the cost of goods sold using the following formula:</p><p >Cost of goods sold (COGS) = Starting inventory value + Purchases – Closing inventory value</p><p >To update the stock valuation in your books, record such an entry:</p><div class="doc-aside"><table class="table values-table"><thead ><tr ><th ></th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Assets: Inventory (closing value)</td><td >X</td><td ></td></tr><tr ><td >Expenses: Cost of Good Sold</td><td >X</td><td ></td></tr><tr ><td >Expenses: Purchased Goods</td><td ></td><td >X</td></tr><tr ><td >Assets: Inventory (starting value)</td><td ></td><td >X</td></tr></tbody></table></div>
+</section><section id="perpetual-inventory-valuation"><h2 >Perpetual Inventory Valuation</h2><p >In a perpetual inventory valuation, goods receptions and
+outgoing shipments are posted in your books in real time.
+The books are therefore always up-to-date. This mode is
+dedicated to expert accountants and advanced users only.
+As opposed to periodic valuation, it requires some extra
+configuration &amp; testing.</p><p >Let's take the case of a reseller.</p><div class="doc-aside valuation-chart-anglo-saxon"></div>
+<hr style="float: none; visibility: hidden; margin: 0;"><div class="doc-aside"><p ><strong >Configuration:</strong></p><ul ><li >Accounts Receivable/Payable: defined on the partner (Accounting tab)</li><li >Deferred Tax Assets/Liabilities: defined on the tax used on the
+invoice line</li><li >Revenues: defined on the product category as a default, or specifically
+to a specific product.</li><li >Expenses: this is where you should set the &quot;Cost of Goods Sold&quot; account.
+Defined on the product category as a default value, or specifically on
+the product form.</li><li >Goods Received Not Purchased: to set as Stock Input Account in product's
+internal category</li><li >Goods Issued Not Invoiced: to set as Stock Output Account in product's
+internal category</li><li >Inventory: to set as Stock Valuation Account in product's internal category</li><li >Price Difference: to set in product's internal category or in product
+form as a specific replacement value</li></ul></div>
+<div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="../../routes/strategies/removal.html" class="internal alert-link reference"><span class="doc">What is a removal strategy (FIFO, LIFO, and FEFO)?</span></a></li><li ><a href="../../../accounting/others/inventory/avg_price_valuation.html" class="internal alert-link reference"><span class="doc">Impact on the average price valuation when returning goods</span></a></li><li ><a href="../../routes/costing/landed_costs.html" class="internal alert-link reference"><span class="doc">How to integrate landed costs in the cost of the product?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

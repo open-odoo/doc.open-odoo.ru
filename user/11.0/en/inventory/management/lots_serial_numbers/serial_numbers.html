@@ -1,0 +1,294 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to work with serial numbers? &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Lots and Serial Numbers" href="../lots_serial_numbers.html" />
+    <link rel="next" title="How to manage lots of identical products?" href="lots.html" />
+    <link rel="prev" title="What&#39;s the difference between lots and serial numbers?" href="differences.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../inventory.html">Inventory</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to work with serial numbers?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/inventory/management/lots_serial_numbers/serial_numbers.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/inventory/management/lots_serial_numbers/serial_numbers.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/inventory/management/lots_serial_numbers/serial_numbers.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to work with serial numbers? - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#setting-up" class="ripple internal reference">Setting up</a><ul ><li class="list-group-item"><a href="#application-configuration" class="ripple internal reference">Application configuration</a></li><li class="list-group-item"><a href="#product-configuration" class="ripple internal reference">Product Configuration</a></li></ul></li><li class="list-group-item"><a href="#manage-serial-numbers" class="ripple internal reference">Manage Serial Numbers</a><ul ><li class="list-group-item"><a href="#transfers" class="ripple internal reference">Transfers</a></li><li class="list-group-item"><a href="#inventory-adjustment" class="ripple internal reference">Inventory adjustment</a></li></ul></li><li class="list-group-item"><a href="#serial-number-traceability" class="ripple internal reference">Serial Number traceability</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/inventory/management/lots_serial_numbers/serial_numbers.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-work-with-serial-numbers"></section><section id="introduction"><h2 >Introduction</h2><p >Serial Number Tracking is used to track products with serial numbers on
+every transactions. You can track the current location of the product
+with serial numbers. When the products are moved from one location to
+another location, the system will automatically identify the current
+location of the product based on last movement of the product. So you
+can get the last location where the products are moved.</p><p >The double-entry management in Odoo enables you to run very advanced
+traceability.</p></section><section id="setting-up"><h2 >Setting up</h2></section><section id="application-configuration"><h3 >Application configuration</h3><p >You need activate the tracking of serial numbers in the settings. In the
+<strong >Inventory</strong> application, go to <span class="menuselection">Configuration ‣ Settings</span>,
+select <strong >Track lots or serial numbers</strong>.</p><img src="../../../_images/serial_numbers01.png" class="img-responsive center-block"><p >Then click on <strong >Apply</strong>.</p></section><section id="product-configuration"><h3 >Product Configuration</h3><p >Finally, you have to configure which products you want to track in lots.</p><p >Go into <span class="menuselection">Inventory Control ‣ Products</span>, and open the product
+of your choice. Click on <strong >Edit</strong>, and in the <strong >Inventory</strong> tab, select <strong >By Unique
+Serial Number</strong>, then click on <strong >Save</strong>.</p><img src="../../../_images/serial_numbers02.png" class="img-responsive center-block"></section><section id="manage-serial-numbers"><h2 >Manage Serial Numbers</h2></section><section id="transfers"><h3 >Transfers</h3><p >In order to process a transfer of a product tracked by serial number,
+you have to input the number(s).
+In order to be able to assign serial numbers to products with tracking features
+enabled you will first need to mark your transfer as to do. Click on the <strong >Mark
+as TODO</strong> button to display the Lot Split icon.</p><p >Click on the serial number icon :</p><img src="../../../_images/serial_numbers03.png" class="img-responsive center-block"><p >A window will pop-up. Click on <strong >Add an item</strong> and fill in the serial
+numbers.</p><img src="../../../_images/serial_numbers04.png" class="img-responsive center-block"><p >If you move products that already have serial numbers assigned, those
+will appear in the list. Just click on the <strong >+</strong> icon to to confirm that you
+are moving those serial numbers.</p><img src="../../../_images/serial_numbers05.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >In the scanner interface, you just have to scan the serial numbers.</p></div></section><section id="inventory-adjustment"><h3 >Inventory adjustment</h3><p >Inventory of a product tracked by serial numbers can be done in 2 ways:</p><ul ><li >Classic inventory by products</li><li >Inventory of a serial number</li></ul><p >When doing a classic inventory, there is a <strong >Serial Number</strong> column. If the
+product has already been assigned with a number, it is already
+pre-filled.</p><p >Click on <strong >Add an item</strong> if the product has not been inventoried yet. You
+can easily create serial numbers, just type in a new number in the
+column.</p><img src="../../../_images/serial_numbers06.png" class="img-responsive center-block"><p >The quantity should be 1 for each line.</p><p >You can also just do the inventory of a serial number. In this case, you
+will have to fill in the serial number. You can also create a new one
+from here. Just type in the number, a window will pop out to link it to
+a product.</p><img src="../../../_images/serial_numbers07.png" class="img-responsive center-block"></section><section id="serial-number-traceability"><h2 >Serial Number traceability</h2><p >The serial number given to these items allow you to keep track of where
+they were received, put in stock, to whom they were sold and where they
+were shipped to.</p><p >To track an item, open the <strong >Inventory</strong> module, and in <span class="menuselection">Inventory
+Control ‣ Serial Numbers/lots</span>, click on the serial number corresponding
+to your search.</p><img src="../../../_images/serial_numbers08.png" class="img-responsive center-block"><p >You can have more details by clicking on the <strong >Traceability</strong> button :</p><img src="../../../_images/serial_numbers09.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="differences.html" class="internal alert-link reference"><span class="doc">What's the difference between lots and serial numbers?</span></a></li><li ><a href="lots.html" class="internal alert-link reference"><span class="doc">How to manage lots of identical products?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

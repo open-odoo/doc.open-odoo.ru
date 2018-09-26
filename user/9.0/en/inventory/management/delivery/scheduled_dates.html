@@ -1,0 +1,313 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How is the scheduled delivery date computed? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Delivery Orders" href="../delivery.html" />
+    <link rel="next" title="How to send products to customers directly from suppliers (drop-shipping)?" href="dropshipping.html" />
+    <link rel="prev" title="How to process delivery orders in three steps (pick + pack + ship)?" href="three_steps.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../inventory.html">Inventory</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How is the scheduled delivery date computed?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/inventory/management/delivery/scheduled_dates.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/inventory/management/delivery/scheduled_dates.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/inventory/management/delivery/scheduled_dates.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How is the scheduled delivery date computed? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuring-lead-times" class="ripple internal reference">Configuring lead times</a><ul ><li class="list-group-item"><a href="#at-a-product-level" class="ripple internal reference">At a product level</a></li><li class="list-group-item"><a href="#at-the-company-level" class="ripple internal reference">At the company level</a></li><li class="list-group-item"><a href="#at-route-level" class="ripple internal reference">At route level</a></li><li class="list-group-item"><a href="#at-sale-order-level" class="ripple internal reference">At sale order level:</a></li></ul></li><li class="list-group-item"><a href="#example" class="ripple internal reference">Example</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/inventory/management/delivery/scheduled_dates.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-is-the-scheduled-delivery-date-computed"><p >Scheduled dates are computed in order to be able to plan deliveries,
+receptions and so on. Depending on the habits of your company Odoo
+automatically generates scheduled dates via the scheduler. The Odoo
+scheduler computes everything per line, whether it's a manufacturing
+order, a delivery order, a sale order, etc. The dates that are computed
+are dependent on the different leads times configured in Odoo.</p></section><section id="configuring-lead-times"><h2 >Configuring lead times</h2><p >Configuring <strong >lead times</strong> is a first essentiel move in order to compute
+scheduled dates. Lead times are the delays (in term of delivery,
+manufacturing, ...) promised to your different partners and/or clients.</p><p >Configuration of the different lead times are made as follows:</p></section><section id="at-a-product-level"><h3 >At a product level</h3><ul ><li ><strong >Supplier lead time</strong>:</li></ul><p >Is the time needed for the supplier to deliver your purchased product.
+To configure the supplier lead time select a product, and go in the
+<strong >Inventory</strong> tab. You will have to add a vendor to your product in order
+to select a supplier lead time.</p><img src="../../../_images/scheduled_dates05.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Do not forget that it is possible to add different vendors and thus
+different delivery lead times depending on the vendor.</p></div><p >Once a vendor is selected, just open its form and fill its <strong >Delivery lead
+time</strong>. In this case security days have no influence, the scheduled
+delivery days will be equal to: <strong >Date</strong> of the purchase order + <strong >Delivery
+Lead Time</strong>.</p><img src="../../../_images/scheduled_dates02.png" class="img-responsive center-block"><ul ><li ><strong >Customer lead time</strong>:</li></ul><p >Customer lead time is the time needed to get your product from your
+store / warehouse to your customer. It can be configured for any
+product. Simply select a product, go into the sales tab and indicate
+your <strong >Customer lead time</strong>.</p><img src="../../../_images/scheduled_dates01.png" class="img-responsive center-block"><ul ><li ><strong >Manufacturing lead time</strong>:</li></ul><p >At the same page it is possible to configure the <strong >Manufacturing Lead
+Time</strong> as well. Manufacturing lead time is the time needed to
+manufacture the product.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Don't forget to tick the manufacturing box in inventory if you
+want to create manufacturing routes.</p></div></section><section id="at-the-company-level"><h3 >At the company level</h3><p >At company level, it is possible to configure <strong >security days</strong> in order
+to cope with eventual delays and to be sure to meet your engagements.
+The idea is to subtract <strong >backup</strong> days from the <strong >computed scheduled date</strong>
+in case of delays.</p><ul ><li ><strong >Sales Safety days</strong>:</li></ul><p >Sales safety days are <strong >back-up</strong> days to ensure you will be able to
+deliver your clients engagements in times. They are margins of errors
+for delivery lead times. Security days are the same logic as the early
+wristwatch, in order to arrive on time. The idea is to subtract the
+numbers of security days from the calculation and thus to compute a
+scheduled date earlier than the one you promised to your client. In that
+way you are sure to be able to keep your commitment.</p><p >To set ut your security dates, go to <span class="menuselection">Settings ‣ General settings</span> and
+click on <strong >Configure your company data</strong>.</p><img src="../../../_images/scheduled_dates04.png" class="img-responsive center-block"><p >Once the menu is open, go in the configuration tab and indicate the
+number of safety days.</p><ul ><li ><strong >Purchase Safety days</strong>:</li></ul><p >Purchase days follow to the same logic than sales security days.</p><p >They are margins of error for vendor lead times. When the system
+generates purchase orders for procuring products, they will be scheduled
+that many days earlier to cope with unexpected vendor delays. Purchase
+lead time can be found in the same menu as the sales safety days</p><img src="../../../_images/scheduled_dates03.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Note that you can also configure a default
+Manufacturing lead time from here.</p></div></section><section id="at-route-level"><h3 >At route level</h3><p >The internal transfers that a product might do due to the movement of
+stocks can also influence the computed date.</p><p >The delays due to internal transfers can be specified in the <strong >inventory</strong>
+app when creating a new push rule in a route.</p><p >Go to the push rules section on a route form to set a delay.</p><img src="../../../_images/scheduled_dates06.png" class="img-responsive center-block"></section><section id="at-sale-order-level"><h3 >At sale order level:</h3><ul ><li ><strong >Requested date</strong>:</li></ul><p >Odoo offers the possibility to select a requested date by the client by
+indicating the date in the other information tab of the sales order.
+If this date is earlier than the theoreticaly computed date odoo will
+automatically display a warning.</p><img src="../../../_images/scheduled_dates07.png" class="img-responsive center-block"></section><section id="example"><h2 >Example</h2><p >As an example, you may sell a car today (January 1st), that is purchased
+on order, and you promise to deliver your customer within 20 days
+(January 20). In such a scenario, the scheduler may trigger the
+following events, based on your configuration:</p><ul ><li >January 19: actual scheduled delivery (1 day of Sales Safety days)</li><li >January 18: receive the product from your supplier (1 day of Purchase
+days)</li><li >January 10: deadline to order at your supplier (9 days of supplier
+delivery lead time)</li><li >January 8: trigger a purchase request to your purchase team, since
+the team need on average 2 days to find the right supplier and
+order.</li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

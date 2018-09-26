@@ -1,0 +1,458 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>API обновления &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="Основные понятия в бизнесе" href="../business.html" />
+    <link rel="prev" title="Соглашение об оформлении кода в Odoo" href="guidelines.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted has_code_col">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">API обновления</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/en/reference/upgrade_api.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/ru/reference/upgrade_api.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/upgrade_api.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/upgrade_api.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/ru/">Пользователю</a></li>
+<li><a href="/developer/8.0/ru/">Разработчику</a></li>
+<li><a href="/developer/8.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="has_code_col">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/upgrade_api.jpg');"></span>
+      <div class="container text-center">
+        <h1> API обновления - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container-fluid has_code_col">
+      <main class="container-fluid has_code_col">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Введение</a></li><li class="list-group-item"><a href="#the-methods" class="ripple internal reference">Методы</a><ul ><li class="list-group-item"><a href="#creating-a-database-upgrade-request" class="ripple internal reference">Создание запроса на обновление базы данных</a><ul ><li class="list-group-item"><a href="#the-create-method" class="ripple internal reference">Метод `` create``</a><ul ><li class="list-group-item"><a href="#failures" class="ripple internal reference">Неисправности?</a></li><li class="list-group-item"><a href="#request" class="ripple internal reference"><code >request</code></a></li><li class="list-group-item"><a href="#sample-script" class="ripple internal reference">Пример скрипта</a></li></ul></li></ul></li><li class="list-group-item"><a href="#uploading-your-database-dump" class="ripple internal reference">Загрузка дампа базы данных</a><ul ><li class="list-group-item"><a href="#the-upload-method" class="ripple internal reference">Метод `` upload``</a></li></ul></li><li class="list-group-item"><a href="#asking-to-process-your-request" class="ripple internal reference">Запрос на обработку вашего запроса</a><ul ><li class="list-group-item"><a href="#the-process-method" class="ripple internal reference">Метод `` process``</a></li></ul></li><li class="list-group-item"><a href="#obtaining-your-request-status" class="ripple internal reference">Получение статуса запроса</a><ul ><li class="list-group-item"><a href="#the-status-method" class="ripple internal reference">Метод `` status``</a></li><li class="list-group-item"><a href="#sample-output" class="ripple internal reference">Пример вывода</a></li></ul></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/upgrade_api.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="upgrade-api"><i id="reference-upgrade-api"></i></section><section id="introduction"><h2 >Введение</h2><p >В этом документе описан API, используемый для обновления базы данных Odoo до более высокой версии.</p><p >Он позволяет обновить базу данных без повторной отправки html-формы на <a href="https://upgrade.odoo.com" class="external reference">https://upgrade.odoo.com</a> Хотя база данных будет следовать тому же процессу, который описан в этой форме.</p><p >Требуемые шаги:</p><ul ><li ><p >Создание запроса</p></li><li ><p >Загрузка дампа базы данных</p></li><li ><p >Запуск процесса обновления</p></li><li ><p >Получение статуса запроса к базе данных</p></li><li ><p >Загрузка обновленного дампа базы данных</p></li></ul></section><section id="the-methods"><h2 >Методы</h2></section><section id="creating-a-database-upgrade-request"><i id="upgrade-api-create-method"></i><h3 >Создание запроса на обновление базы данных</h3><p >Это действие создает запрос базы данных со следующей информацией:</p><ul ><li ><p >Ссылка на ваш контракт</p></li><li ><p >Ваш адрес электронной почты:</p></li><li ><p >Целевую версию (версию Odoo, которую вы хотите обновить)</p></li><li ><p >Цель вашего запроса (тест или производство)</p></li><li ><p >Имя дампа базы данных (обязательное, но чисто информативное)</p></li><li ><p >Необязательно часовой пояс сервера (для версии исходного кода Odoo &lt;6.1)</p></li></ul></section><section id="the-create-method"><h4 >Метод `` create``</h4><section class="code-function"><h6 ><code>https://upgrade.odoo.com/database/v1/create</code></h6><p >Создает запрос на обновление базы данных</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >contract</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно).</li><li ><strong >email</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) ваш адрес электронной почты</li><li ><strong >target</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) версию Odoo, которую вы хотите обновить. Допустимые значения: 6.0, 6.1, 7.0, 8.0</li><li ><strong >aim</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) цель вашего запроса базы данных обновления. Действительные выборы: тест, производство.</li><li ><strong >filename</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) чисто информативное имя для вас файл дампа базы данных</li><li ><strong >timezone</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Необязательно) часовой пояс, используемый вашим сервером. Только для исходной версии Odoo &lt;6.1</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Результат запроса</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body">json dictionary</div></div></div></section><p >Метод * create * возвращает словарь json, содержащий следующие ключи:</p></section><section id="failures"><h5 >Неисправности?</h5><p >Список ошибок.</p><p >Список словарей, каждый из которых содержит информацию об одной конкретной ошибке. Каждый словарь может содержать различные ключи в зависимости от типа ошибки, но вы всегда получите ключи * reason * и * message [UNKNOWN NODE problematic]:</p><ul ><li ><p >`` Reason``: тип ошибки</p></li><li ><p >`` Message``: человеческое приветствие</p></li></ul><p >Некоторые возможные клавиши:</p><ul ><li ><p >`` Code``: неверное значение</p></li><li ><p >`` Значение``: ошибочное значение</p></li><li ><p >`` Expected``: список допустимых значений</p></li></ul><p >См. Пример вывода в сторону.</p><div class="doc-aside content-switcher setup"><ul ><li >JSON</li></ul><div class="tabs"><div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;failures&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;expected&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;6.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;6.1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;7.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;8.0&quot;</span><span class="p">,</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid value \&quot;5.0\&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;TARGET:INVALID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;5.0&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;M123456-abcxyz&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Can not find contract M123456-abcxyz&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;CONTRACT:NOT_FOUND&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></div></section><section id="request"><h5 ><code >request</code></h5><p >Если метод * create * будет успешным, значение, связанное с ключом * request [UNKNOWN NODE problematic], будет словарем, содержащим различную информацию о созданном запросе:</p><p >Наиболее важные клавиши:</p><ul ><li ><p >`` Id``: идентификатор запроса</p></li><li ><p >`` Key``: ваш личный ключ для этого запроса</p></li></ul><p >Эти 2 значения будут запрошены другими способами (загрузка, обработка и статус)</p><p >Другие ключи будут объяснены в разделе, описывающем: ref: [UNKNOWN NODE title_reference].</p></section><section id="sample-script"><h5 >Пример скрипта</h5><p >Вот два примера создания запроса на обновление базы данных с использованием:</p><ul ><li ><p >Один на языке программирования python, используя библиотеку pycurl</p></li><li ><p >Один в языке программирования bash, используя [UNKNOWN NODE title_reference] _ (инструмент для передачи данных с использованием http) и [UNKNOWN NODE title_reference] _ (JSON процессор):</p></li></ul><div class="doc-aside content-switcher setup"><ul ><li >Python</li><li >Bash</li></ul><div class="tabs"><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlencode</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">pycurl</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">CREATE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://upgrade.odoo.com/database/v1/create&quot;</span>
+<span class="n">CONTRACT</span> <span class="o">=</span> <span class="s2">&quot;M123456-abcdef&quot;</span>
+<span class="n">AIM</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+<span class="n">TARGET</span> <span class="o">=</span> <span class="s2">&quot;8.0&quot;</span>
+<span class="n">EMAIL</span> <span class="o">=</span> <span class="s2">&quot;john.doe@example.com&quot;</span>
+<span class="n">FILENAME</span> <span class="o">=</span> <span class="s2">&quot;db_name.dump&quot;</span>
+
+<span class="n">fields</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;aim&#39;</span><span class="p">,</span> <span class="n">AIM</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="n">EMAIL</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">,</span> <span class="n">DB_SOURCE</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;contract&#39;</span><span class="p">,</span> <span class="n">CONTRACT</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">TARGET</span><span class="p">),</span>
+<span class="p">])</span>
+<span class="n">postfields</span> <span class="o">=</span> <span class="n">urlencode</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">pycurl</span><span class="o">.</span><span class="n">Curl</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">pycurl</span><span class="o">.</span><span class="n">URL</span><span class="p">,</span> <span class="n">CREATE_URL</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">POSTFIELDS</span><span class="p">,</span> <span class="n">postfields</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">WRITEFUNCTION</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">write</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span>
+
+<span class="c1"># transform output into a dict:</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
+
+<span class="c1"># get http status:</span>
+<span class="n">http_code</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">getinfo</span><span class="p">(</span><span class="n">pycurl</span><span class="o">.</span><span class="n">HTTP_CODE</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">CONTRACT</span><span class="o">=</span>M123456-abcdef
+<span class="nv">AIM</span><span class="o">=</span><span class="nb">test</span>
+<span class="nv">TARGET</span><span class="o">=</span><span class="m">8</span>.0
+<span class="nv">EMAIL</span><span class="o">=</span>john.doe@example.com
+<span class="nv">FILENAME</span><span class="o">=</span>db_name.dump
+<span class="nv">CREATE_URL</span><span class="o">=</span><span class="s2">&quot;https://upgrade.odoo.com/database/v1/create&quot;</span>
+<span class="nv">URL_PARAMS</span><span class="o">=</span><span class="s2">&quot;contract=</span><span class="si">${</span><span class="nv">CONTRACT</span><span class="si">}</span><span class="s2">&amp;aim=</span><span class="si">${</span><span class="nv">AIM</span><span class="si">}</span><span class="s2">&amp;target=</span><span class="si">${</span><span class="nv">TARGET</span><span class="si">}</span><span class="s2">&amp;email=</span><span class="si">${</span><span class="nv">EMAIL</span><span class="si">}</span><span class="s2">&amp;filename=</span><span class="si">${</span><span class="nv">FILENAME</span><span class="si">}</span><span class="s2">&quot;</span>
+curl -sS <span class="s2">&quot;</span><span class="si">${</span><span class="nv">CREATE_URL</span><span class="si">}</span><span class="s2">?</span><span class="si">${</span><span class="nv">URL_PARAMS</span><span class="si">}</span><span class="s2">&quot;</span> &gt; create_result.json
+
+<span class="c1"># check for failures</span>
+<span class="nv">failures</span><span class="o">=</span><span class="k">$(</span>cat create_result.json <span class="p">|</span> jq -r <span class="s1">&#39;.failures[]&#39;</span><span class="k">)</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$failures</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="nv">$failures</span> <span class="p">|</span> jq -r <span class="s1">&#39;.&#39;</span>
+  <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+</div></div></section><section id="uploading-your-database-dump"><i id="upgrade-api-upload-method"></i><h3 >Загрузка дампа базы данных</h3><p >Это действие загрузит дамп базы данных.</p></section><section id="the-upload-method"><h4 >Метод `` upload``</h4><section class="code-function"><h6 ><code>https://upgrade.odoo.com/database/v1/upload</code></h6><p >Загружает дамп базы данных</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >key</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) ваш личный ключ</li><li ><strong >request</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) ваш идентификатор запроса</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Результат запроса</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body">json dictionary</div></div></div></section><p >Идентификатор запроса и закрытый ключ получают с помощью: ref: [UNKNOWN NODE title_reference]</p><p >Результатом является словарь json, содержащий список `` сбоев``, который должен быть пустым, если все прошло хорошо.</p><div class="doc-aside content-switcher setup"><ul ><li >Python</li><li >Bash</li></ul><div class="tabs"><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pycurl</span>
+<span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlencode</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">UPLOAD_URL</span> <span class="o">=</span> <span class="s2">&quot;https://upgrade.odoo.com/database/v1/upload&quot;</span>
+<span class="n">DUMPFILE</span> <span class="o">=</span> <span class="s2">&quot;openchs.70.cdump&quot;</span>
+
+<span class="n">fields</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">,</span> <span class="s1">&#39;10534&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;Aw7pItGVKFuZ_FOR3U8VFQ==&#39;</span><span class="p">),</span>
+<span class="p">])</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/octet-stream&quot;</span><span class="p">}</span>
+<span class="n">postfields</span> <span class="o">=</span> <span class="n">urlencode</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">pycurl</span><span class="o">.</span><span class="n">Curl</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">pycurl</span><span class="o">.</span><span class="n">URL</span><span class="p">,</span> <span class="n">UPLOAD_URL</span><span class="o">+</span><span class="s2">&quot;?&quot;</span><span class="o">+</span><span class="n">postfields</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">pycurl</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">filesize</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">DUMPFILE</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">pycurl</span><span class="o">.</span><span class="n">POSTFIELDSIZE</span><span class="p">,</span> <span class="n">filesize</span><span class="p">)</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">DUMPFILE</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">pycurl</span><span class="o">.</span><span class="n">READFUNCTION</span><span class="p">,</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span>
+    <span class="n">pycurl</span><span class="o">.</span><span class="n">HTTPHEADER</span><span class="p">,</span>
+    <span class="p">[</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">headers</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">headers</span><span class="p">])</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">UPLOAD_URL</span><span class="o">=</span><span class="s2">&quot;https://upgrade.odoo.com/database/v1/upload&quot;</span>
+<span class="nv">DUMPFILE</span><span class="o">=</span><span class="s2">&quot;openchs.70.cdump&quot;</span>
+<span class="nv">KEY</span><span class="o">=</span><span class="s2">&quot;Aw7pItGVKFuZ_FOR3U8VFQ==&quot;</span>
+<span class="nv">REQUEST_ID</span><span class="o">=</span><span class="s2">&quot;10534&quot;</span>
+<span class="nv">URL_PARAMS</span><span class="o">=</span><span class="s2">&quot;key=</span><span class="si">${</span><span class="nv">KEY</span><span class="si">}</span><span class="s2">&amp;request=</span><span class="si">${</span><span class="nv">REQUEST_ID</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nv">HEADER</span><span class="o">=</span><span class="s2">&quot;Content-Type: application/octet-stream&quot;</span>
+curl -H <span class="nv">$HEADER</span> --data-binary <span class="s2">&quot;@</span><span class="si">${</span><span class="nv">DUMPFILE</span><span class="si">}</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UPLOAD_URL</span><span class="si">}</span><span class="s2">?</span><span class="si">${</span><span class="nv">URL_PARAMS</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div></div></section><section id="asking-to-process-your-request"><i id="upgrade-api-process-method"></i><h3 >Запрос на обработку вашего запроса</h3><p >Это действие просит платформу обновления обработать дамп базы данных.</p></section><section id="the-process-method"><h4 >Метод `` process``</h4><section class="code-function"><h6 ><code>https://upgrade.odoo.com/database/v1/process</code></h6><p >Обработка дампа базы данных</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >key</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) ваш личный ключ</li><li ><strong >request</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) ваш идентификатор запроса</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Результат запроса</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body">json dictionary</div></div></div></section><p >Идентификатор запроса и закрытый ключ получают с помощью: ref: [UNKNOWN NODE title_reference]</p><p >Результатом является словарь json, содержащий список `` сбоев``, который должен быть пустым, если все прошло хорошо.</p><div class="doc-aside content-switcher setup"><ul ><li >Python</li><li >Bash</li></ul><div class="tabs"><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlencode</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">pycurl</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">PROCESS_URL</span> <span class="o">=</span> <span class="s2">&quot;https://upgrade.odoo.com/database/v1/process&quot;</span>
+
+<span class="n">fields</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">,</span> <span class="s1">&#39;10534&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;Aw7pItGVKFuZ_FOR3U8VFQ==&#39;</span><span class="p">),</span>
+<span class="p">])</span>
+<span class="n">postfields</span> <span class="o">=</span> <span class="n">urlencode</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">pycurl</span><span class="o">.</span><span class="n">Curl</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">pycurl</span><span class="o">.</span><span class="n">URL</span><span class="p">,</span> <span class="n">PROCESS_URL</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">POSTFIELDS</span><span class="p">,</span> <span class="n">postfields</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">WRITEFUNCTION</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">write</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span>
+
+<span class="c1"># transform output into a dict:</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
+
+<span class="c1"># get http status:</span>
+<span class="n">http_code</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">getinfo</span><span class="p">(</span><span class="n">pycurl</span><span class="o">.</span><span class="n">HTTP_CODE</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">PROCESS_URL</span><span class="o">=</span><span class="s2">&quot;https://upgrade.odoo.com/database/v1/process&quot;</span>
+<span class="nv">KEY</span><span class="o">=</span><span class="s2">&quot;Aw7pItGVKFuZ_FOR3U8VFQ==&quot;</span>
+<span class="nv">REQUEST_ID</span><span class="o">=</span><span class="s2">&quot;10534&quot;</span>
+<span class="nv">URL_PARAMS</span><span class="o">=</span><span class="s2">&quot;key=</span><span class="si">${</span><span class="nv">KEY</span><span class="si">}</span><span class="s2">&amp;request=</span><span class="si">${</span><span class="nv">REQUEST_ID</span><span class="si">}</span><span class="s2">&quot;</span>
+curl -sS <span class="s2">&quot;</span><span class="si">${</span><span class="nv">PROCESS_URL</span><span class="si">}</span><span class="s2">?</span><span class="si">${</span><span class="nv">URL_PARAMS</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div></div></section><section id="obtaining-your-request-status"><i id="upgrade-api-status-method"></i><h3 >Получение статуса запроса</h3><p >Это действие запрашивает статус вашего запроса на обновление базы данных.</p></section><section id="the-status-method"><h4 >Метод `` status``</h4><section class="code-function"><h6 ><code>https://upgrade.odoo.com/database/v1/status</code></h6><p >Запросить статус запроса на обновление базы данных</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Параметры</div><div class="code-field-body"><ul ><li ><strong >key</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) ваш личный ключ</li><li ><strong >request</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(в Python v2.7)"><code >str</code></a>) -- (Обязательно) ваш идентификатор запроса</li></ul></div></div><div class="code-field"><div class="code-field-name">Результат</div><div class="code-field-body">Результат запроса</div></div><div class="code-field"><div class="code-field-name">Тип результата</div><div class="code-field-body">json dictionary</div></div></div></section><p >Идентификатор запроса и закрытый ключ получают с помощью: ref: [UNKNOWN NODE title_reference]</p><p >Результатом является словарь json, содержащий различную информацию о вашем запросе на обновление базы данных.</p><div class="doc-aside content-switcher setup"><ul ><li >Python</li><li >Bash</li></ul><div class="tabs"><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlencode</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">pycurl</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">STATUS_URL</span> <span class="o">=</span> <span class="s2">&quot;https://upgrade.odoo.com/database/v1/status&quot;</span>
+
+<span class="n">fields</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">,</span> <span class="s1">&#39;10534&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;Aw7pItGVKFuZ_FOR3U8VFQ==&#39;</span><span class="p">),</span>
+<span class="p">])</span>
+<span class="n">postfields</span> <span class="o">=</span> <span class="n">urlencode</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">pycurl</span><span class="o">.</span><span class="n">Curl</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">pycurl</span><span class="o">.</span><span class="n">URL</span><span class="p">,</span> <span class="n">PROCESS_URL</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">POSTFIELDS</span><span class="p">,</span> <span class="n">postfields</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">WRITEFUNCTION</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">write</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span>
+
+<span class="c1"># transform output into a dict:</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">STATUS_URL</span><span class="o">=</span><span class="s2">&quot;https://upgrade.odoo.com/database/v1/status&quot;</span>
+<span class="nv">KEY</span><span class="o">=</span><span class="s2">&quot;Aw7pItGVKFuZ_FOR3U8VFQ==&quot;</span>
+<span class="nv">REQUEST_ID</span><span class="o">=</span><span class="s2">&quot;10534&quot;</span>
+<span class="nv">URL_PARAMS</span><span class="o">=</span><span class="s2">&quot;key=</span><span class="si">${</span><span class="nv">KEY</span><span class="si">}</span><span class="s2">&amp;request=</span><span class="si">${</span><span class="nv">REQUEST_ID</span><span class="si">}</span><span class="s2">&quot;</span>
+curl -sS <span class="s2">&quot;</span><span class="si">${</span><span class="nv">PROCESS_URL</span><span class="si">}</span><span class="s2">?</span><span class="si">${</span><span class="nv">URL_PARAMS</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div></div></section><section id="sample-output"><h4 >Пример вывода</h4><p >Ключ `` request`` содержит различную полезную информацию о вашем запросе:</p><dl ><dt ><code >id</code></dt><dd ><p >Идентификатор запроса</p></dd><dt >Ключ</dt><dd ><p >Ваш личный ключ</p></dd><dt >Эл. адрес</dt><dd ><p >Адрес электронной почты, который вы указали при создании запроса</p></dd><dt ><code >target</code></dt><dd ><p >Целевая версия Odoo, которую вы указали при создании запроса</p></dd><dt >целью</dt><dd ><p >Цель (тест, производство) запроса на обновление базы данных, который вы указали при создании запроса</p></dd><dt ><code >filename</code></dt><dd ><p >Имя файла, которое вы указали при создании запроса.</p></dd><dt >Часовой пояс</dt><dd ><p >Часовой пояс, который вы указали при создании запроса.</p></dd><dt ><code >state</code></dt><dd ><p >Состояние вашего запроса</p></dd><dt >`` issue_stage``</dt><dd ><p >Этап проблемы, которую мы создали на главном сервере Odoo</p></dd><dt >Проблема</dt><dd ><p >Идентификатор проблемы, которую мы создали на главном сервере Odoo</p></dd><dt >`` Status_url``</dt><dd ><p >URL-адрес для доступа к запросу на обновление базы данных html-страницы</p></dd><dt >`` Notes_url``</dt><dd ><p >URL-адрес для получения заметок о обновлении базы данных</p></dd><dt >`` Original_sql_url``</dt><dd ><p >URL-адрес, используемый для получения загруженной (не обновленной) базы данных в виде потока SQL</p></dd><dt >`` Original_dump_url``</dt><dd ><p >URL-адрес, используемый для получения загруженной (не обновленной) базы данных в виде файла архива</p></dd><dt >`` Upgraded_sql_url``</dt><dd ><p >URL-адрес, используемый для получения обновленной базы данных в виде потока SQL</p></dd><dt >`` Upgraded_dump_url``</dt><dd ><p >URL-адрес, используемый для получения обновленной базы данных в виде файла архива</p></dd><dt >`` Modules_url``</dt><dd ><p >URL-адрес, используемый для получения пользовательских модулей</p></dd><dt >Размер файла</dt><dd ><p >Размер файла загруженной базы данных</p></dd><dt >`` database_uuid``</dt><dd ><p >Уникальный идентификатор вашей базы данных</p></dd><dt >`` Created_at``</dt><dd ><p >Дата создания запроса;</p></dd><dt >Приблизительное время:</dt><dd ><p >Оценка времени, необходимого для обновления базы данных</p></dd><dt >`` processed_at``</dt><dd ><p >Время начала обновления базы данных</p></dd><dt >`` Elapsed``</dt><dd ><p >Время, необходимое для обновления базы данных</p></dd><dt >`` Filestore``</dt><dd ><p >Ваши вложения были преобразованы в файл-архив</p></dd><dt >`` Customer_message``</dt><dd ><p >Важное сообщение, связанное с вашим запросом</p></dd><dt >Версия базы данных:</dt><dd ><p >Угаданная версия Одо вашей загруженной (не обновленной) базы данных</p></dd><dt >`` postgresql``</dt><dd ><p >Угаданный Postgresql-версия загруженной (не обновленной) базы данных</p></dd><dt >`` Compressions``</dt><dd ><p >Методы сжатия, используемые вашей загруженной базой данных</p></dd></dl><div class="doc-aside content-switcher setup"><ul ><li >JSON</li></ul><div class="tabs"><div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;failures&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">10534</span><span class="p">,</span>
+    <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Aw7pItGVKFuZ_FOR3U8VFQ==&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;8.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;aim&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;db_name.dump&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;timezone&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;draft&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;issue_stage&quot;</span><span class="p">:</span> <span class="s2">&quot;new&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;issue&quot;</span><span class="p">:</span> <span class="mi">648398</span><span class="p">,</span>
+    <span class="nt">&quot;status_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://upgrade.odoo.com/database/eu1/10534/Aw7pItGVKFuZ_FOR3U8VFQ==/status&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;notes_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://upgrade.odoo.com/database/eu1/10534/Aw7pItGVKFuZ_FOR3U8VFQ==/upgraded/notes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;original_sql_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://upgrade.odoo.com/database/eu1/10534/Aw7pItGVKFuZ_FOR3U8VFQ==/original/sql&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;original_dump_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://upgrade.odoo.com/database/eu1/10534/Aw7pItGVKFuZ_FOR3U8VFQ==/original/archive&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;upgraded_sql_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://upgrade.odoo.com/database/eu1/10534/Aw7pItGVKFuZ_FOR3U8VFQ==/upgraded/sql&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;upgraded_dump_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://upgrade.odoo.com/database/eu1/10534/Aw7pItGVKFuZ_FOR3U8VFQ==/upgraded/archive&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;modules_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://upgrade.odoo.com/database/eu1/10534/Aw7pItGVKFuZ_FOR3U8VFQ==/modules/archive&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;filesize&quot;</span><span class="p">:</span> <span class="s2">&quot;912.99 Kb&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;database_uuid&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-09-09 07:13:49&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;estimated_time&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;processed_at&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;elapsed&quot;</span><span class="p">:</span> <span class="s2">&quot;00:00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;filestore&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;customer_message&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;database_version&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;postgresql&quot;</span><span class="p">:</span> <span class="s2">&quot;9.4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;compressions&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;pgdmp_custom&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sql&quot;</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

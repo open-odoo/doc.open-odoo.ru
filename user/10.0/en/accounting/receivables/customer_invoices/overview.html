@@ -1,0 +1,301 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Overview of the invoicing process &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Customer Invoices" href="../customer_invoices.html" />
+    <link rel="next" title="How to setup cash discounts?" href="cash_discounts.html" />
+    <link rel="prev" title="Customer Invoices" href="../customer_invoices.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Overview of the invoicing process</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/accounting/receivables/customer_invoices/overview.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting/receivables/customer_invoices/overview.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/accounting/receivables/customer_invoices/overview.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Overview of the invoicing process - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#sales" class="ripple internal reference">Sales</a><ul ><li class="list-group-item"><a href="#sales-order-invoice" class="ripple internal reference">Sales Order ‣ Invoice</a></li><li class="list-group-item"><a href="#sales-order-delivery-order-invoice" class="ripple internal reference">Sales Order ‣ Delivery Order ‣ Invoice</a></li><li class="list-group-item"><a href="#ecommerce-order-invoice" class="ripple internal reference">eCommerce Order ‣ Invoice</a></li></ul></li><li class="list-group-item"><a href="#contracts" class="ripple internal reference">Contracts</a><ul ><li class="list-group-item"><a href="#regular-contracts-invoices" class="ripple internal reference">Regular Contracts ‣ Invoices</a></li><li class="list-group-item"><a href="#recurring-contracts-invoices" class="ripple internal reference">Recurring Contracts ‣ Invoices</a></li></ul></li><li class="list-group-item"><a href="#others" class="ripple internal reference">Others</a><ul ><li class="list-group-item"><a href="#creating-an-invoice-manually" class="ripple internal reference">Creating an invoice manually</a></li><li class="list-group-item"><a href="#specific-modules" class="ripple internal reference">Specific modules</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/accounting/receivables/customer_invoices/overview.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="overview-of-the-invoicing-process"><p >Depending on your business and the application you use, there are
+different ways to automate the customer invoice creation in Odoo.
+Usually, draft invoices are created by the system (with information
+coming from other documents like sales order or contracts) and
+accountant just have to validate draft invoices and send the invoices in
+batch (by regular mail or email).</p><p >Depending on your business, you may opt for one of the following way to
+create draft invoices:</p></section><section id="sales"><h2 >Sales</h2></section><section id="sales-order-invoice"><h3 >Sales Order ‣ Invoice</h3><p >In most companies, salespeople create quotations that become sales order
+once they are validated. Then, draft invoices are created based on the
+sales order. You have different options like:</p><ul ><li >Invoice manually: use a button on the sale order to trigger the draft
+invoice</li><li >Invoice before delivery: invoice the full order before triggering the
+delivery order</li><li >Invoice based on delivery order: see next section</li></ul><p >Invoice before delivery is usually used by the eCommerce application
+when the customer pays at the order and we deliver afterwards.
+(pre-paid)</p><p >For most other use cases, it's recommended to invoice manually. It
+allows the salesperson to trigger the invoice on demand with options:
+invoice the whole order, invoice a percentage (advance), invoice some
+lines, invoice a fixed advance.</p><p >This process is good for both services and physical products.</p></section><section id="sales-order-delivery-order-invoice"><h3 >Sales Order ‣ Delivery Order ‣ Invoice</h3><p >Retailers and eCommerce usually invoice based on delivery orders,
+instead of sales order. This approach is suitable for businesses where
+the quantities you deliver may differs from the ordered quantities:
+foods (invoice based on actual Kg).</p><p >This way, if you deliver a partial order, you only invoice for what you
+really delivered. If you do back orders (deliver partially and the rest
+later), the customer will receive two invoices, one for each delivery
+order.</p></section><section id="ecommerce-order-invoice"><h3 >eCommerce Order ‣ Invoice</h3><p >An eCommerce order will also trigger the creation of the order when it
+is fully paid. If you allow paying orders by check or wire transfer,
+Odoo only creates an order and the invoice will be triggered once the
+payment is received.</p></section><section id="contracts"><h2 >Contracts</h2></section><section id="regular-contracts-invoices"><h3 >Regular Contracts ‣ Invoices</h3><p >If you use contracts, you can trigger invoice based on time and material
+spent, expenses or fixed lines of services/products. Every month, the
+salesperson will trigger invoice based on activities on the contract.</p><p >Activities can be:</p><ul ><li >fixed products/services, coming from a sale order linked to this contract</li><li >materials purchased (that you will re-invoiced)</li><li >time and material based on timesheets or purchases (subcontracting)</li><li >expenses like travel and accommodation that you re-invoice to the customer</li></ul><p >You can invoice at the end of the contract or trigger intermediate
+invoices. This approach is used by services companies that invoice
+mostly based on time and material. For services companies that invoice
+on fix price, they use a regular sales order.</p></section><section id="recurring-contracts-invoices"><h3 >Recurring Contracts ‣ Invoices</h3><p >For subscriptions, an invoice is triggered periodically, automatically.
+The frequency of the invoicing and the services/products invoiced are
+defined on the contract.</p></section><section id="others"><h2 >Others</h2></section><section id="creating-an-invoice-manually"><h3 >Creating an invoice manually</h3><p >Users can also create invoices manually without using contracts or a
+sales order. It's a recommended approach if you do not need to manage
+the sales process (quotations), or the delivery of the products or
+services.</p><p >Even if you generate the invoice from a sales order, you may need to
+create invoices manually in exceptional use cases:</p><ul ><li >if you need to create a refund</li><li >If you need to give a discount</li><li >if you need to change an invoice created from a sales order</li><li >if you need to invoice something not related to your core business</li></ul></section><section id="specific-modules"><h3 >Specific modules</h3><p >Some specific modules are also able to generate draft invoices:</p><ul ><li ><strong >membership</strong>: invoice your members every year</li><li ><strong >repairs</strong>: invoice your after-sale services</li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

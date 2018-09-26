@@ -1,0 +1,305 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>What is a removal strategy (FIFO, LIFO, and FEFO)? &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Putaway &amp; Removal Strategies" href="../strategies.html" />
+    <link rel="next" title="Barcodes" href="../../barcode.html" />
+    <link rel="prev" title="What is a putaway strategy?" href="putaway.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../inventory.html">Inventory</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">What is a removal strategy (FIFO, LIFO, and FEFO)?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/inventory/routes/strategies/removal.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/inventory/routes/strategies/removal.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/inventory/routes/strategies/removal.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> What is a removal strategy (FIFO, LIFO, and FEFO)? - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#types-of-removal-strategy" class="ripple internal reference">Types of removal strategy</a><ul ><li class="list-group-item"><a href="#fifo-first-in-first-out" class="ripple internal reference">FIFO ( First In First Out )</a></li><li class="list-group-item"><a href="#lifo-last-in-first-out" class="ripple internal reference">LIFO (Last In First Out)</a></li><li class="list-group-item"><a href="#fefo-first-expiry-first-out" class="ripple internal reference">FEFO ( First Expiry First Out )</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/inventory/routes/strategies/removal.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="what-is-a-removal-strategy-fifo-lifo-and-fefo"></section><section id="overview"><h2 >Overview</h2><p >Removal strategies are usually in picking operations to select the best
+products in order to optimize the distance for the worker, for quality
+control purpose or due to reason of product expiration.</p><p >When a product movement needs to be done, Odoo will find available
+products that can be assigned to shipping. The way Odoo assign these
+products depend on the <strong >removal strategy</strong> that is defined on the <strong >product
+category</strong> or on the <strong >location</strong>.</p></section><section id="configuration"><h2 >Configuration</h2><p >In the <strong >Inventory</strong> application, go to <span class="menuselection">Configuration
+‣ Settings</span>:</p><img src="../../../_images/removal01.png" class="img-responsive center-block"><img src="../../../_images/removal02.png" class="img-responsive center-block"><p >Check <strong >Track lots or serial numbers</strong>, <strong >Manage several location per
+warehouse</strong> and <strong >Advanced routing of products using rules</strong>, then click
+on <strong >Apply</strong>.</p><p >Then, open <span class="menuselection">Configuration ‣ Locations</span>
+and open the location on which you want to apply a removal strategy.</p><img src="../../../_images/removal03.png" class="img-responsive center-block"></section><section id="types-of-removal-strategy"><h2 >Types of removal strategy</h2></section><section id="fifo-first-in-first-out"><h3 >FIFO ( First In First Out )</h3><p >A <strong >First In First Out</strong> strategy implies that the products that were
+stocked first will move out first. Companies should use FIFO method if
+they are selling perishable goods. Companies selling products with
+relatively short demand cycles, such as clothes, also may have to pick
+FIFO to ensure they are not stuck with outdated styles in inventory.</p><p >Go to <span class="menuselection">Inventory ‣ Configuration ‣ Locations</span>,
+open the stock location and set <strong >FIFO</strong> removal strategy.</p><p >Let's take one example of FIFO removal strategy.</p><p >In your warehouse stock (<code >WH/Stock</code>) location, there are <code >3</code> lots of <code >iPod
+32 Gb</code> available.</p><p >You can find details of available inventory in inventory valuation
+report.</p><img src="../../../_images/removal04.png" class="img-responsive center-block"><p >Create one sales order <code >25</code> unit of <code >iPod 32 GB</code> and confirm it.</p><p >You can see in the outgoing shipment product that the <code >Ipod 32
+Gb</code> are assigned with the <strong >oldest</strong> lots, using the FIFO removal
+strategy.</p><img src="../../../_images/removal05.png" class="img-responsive center-block"></section><section id="lifo-last-in-first-out"><h3 >LIFO (Last In First Out)</h3><p >In this warehouse management, the products which are brought in the
+last, moves out the first. LIFO is used in case of products which do not
+have a shelf life.</p><p >Go to <span class="menuselection">Inventory ‣ Configuration ‣ Locations</span>,
+open the stock location and set <strong >LIFO</strong> removal strategy.</p><p >In our example, let's check the current available stock of <code >Ipod 32 Gb</code>
+on <code >WH/Stock</code> location.</p><img src="../../../_images/removal06.png" class="img-responsive center-block"><p >Create a sale order with <code >10</code> units of <code >Ipod 32 Gb</code>.</p><p >You can see in the outgoing shipment product that the <code >Ipod 32
+Gb</code> are assigned with the <strong >newest</strong> lots, using the LIFO removal
+strategy.</p><img src="../../../_images/removal07.png" class="img-responsive center-block"></section><section id="fefo-first-expiry-first-out"><h3 >FEFO ( First Expiry First Out )</h3><p >In FEFO warehouse management, the products are dispatched from the
+warehouse according to their expiration date.</p><p >Go to <span class="menuselection">Inventory ‣ Configuration ‣ Setting</span>.
+Check the option <strong >Define Expiration date on serial numbers</strong>.
+Then click on <strong >Apply</strong> to save changes.</p><img src="../../../_images/removal08.png" class="img-responsive center-block"><p >It will allow you to set <strong >best before date</strong>, <strong >end of life date</strong>, <strong >alert
+date</strong> and <strong >removal date</strong> on the serial number. Go to
+<span class="menuselection">Inventory Control ‣ Serial Numbers/Lots</span>.</p><img src="../../../_images/removal09.png" class="img-responsive center-block"><ul ><li ><strong >Best Before Date</strong>: This is the date on which the goods with this
+serial number start deteriorating, without being dangerous yet.</li><li ><strong >End of Life Date:</strong> This is the date on which the goods with this
+serial number may become dangerous and must not be consumed.</li><li ><strong >Removal Date:</strong> This is the date on which the goods with this
+serial Number should be removed from the stock.</li><li ><strong >Alert Date:</strong> This is the date on which an alert should be notified
+about the goods with this serial number.</li></ul><p >Products will pick first with expiry date (removal date), So you have
+to set removal date on lot/serial numbers.</p><p >To set the removal strategy on location, go to
+<span class="menuselection">Configuration ‣ Locations</span> and choose FEFO.</p><img src="../../../_images/removal10.png" class="img-responsive center-block"><p >Let's take an example, there are <code >3</code> lots of <code >ice cream</code> available in
+<code >WH/Stock</code> location: <code >LOT0001</code>, <code >LOT0002</code>, <code >LOT0003</code> with
+different expiration date.</p><table class="table"><thead ><tr ><th ><strong >Lot / Serial No</strong></th><th ><strong >Product</strong></th><th ><strong >Expiration Date</strong></th></tr></thead><tbody ><tr ><td >LOT0001</td><td >Ice Cream</td><td >08/20/2015</td></tr><tr ><td >LOT0002</td><td >Ice Cream</td><td >08/10/2015</td></tr><tr ><td >LOT0003</td><td >Ice Cream</td><td >08/15/2015</td></tr></tbody></table><p >We will create a sale order with <code >15kg</code> of <code >ice cream</code> and confirm it.</p><p >The outgoing shipment related to sale order will make the move based on
+removal strategy <strong >FEFO</strong>.</p><p >It will take <code >10kg</code> from <code >LOT0002</code> and <code >5kg</code> from <code >LOT0003</code> based on the
+removal dates.</p><img src="../../../_images/removal11.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../../management/reporting/valuation_methods_continental.html" class="internal alert-link reference"><span class="doc">How to do an inventory valuation? (Continental Accounting)</span></a></li><li ><a href="../../management/reporting/valuation_methods_anglo_saxon.html" class="internal alert-link reference"><span class="doc">How to do an inventory valuation? (Anglo-Saxon Accounting)</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

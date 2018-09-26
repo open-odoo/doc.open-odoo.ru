@@ -1,0 +1,265 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Как управлять и взаимодействовать в рамках каждой задачи? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../index.html" />
+    <link rel="up" title="Конфигурация и базовый функционал" href="../configuration.html" />
+    <link rel="next" title="Как учитывать время?" href="time_record.html" />
+    <link rel="prev" title="Как визуализировать задачи проекта?" href="visualization.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../project.html">Управление проектами</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Как управлять и взаимодействовать в рамках каждой задачи?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/project/configuration/collaboration.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/project/configuration/collaboration.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/ru/project/configuration/collaboration.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/ru/">Пользователю</a></li>
+<li><a href="/developer/10.0/ru/">Разработчику</a></li>
+<li><a href="/developer/10.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Как управлять и взаимодействовать в рамках каждой задачи? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#responsibilities" class="ripple internal reference">Отвественный</a></li><li class="list-group-item"><a href="#followers" class="ripple internal reference">Подписчики</a><ul ><li class="list-group-item"><a href="#project-follow-a-project-to-follow-the-pipe" class="ripple internal reference">Проект: подписывайтесь на проект, чтобы получать уведомления о всех процессах проекта</a></li><li class="list-group-item"><a href="#task-follow-a-specific-task" class="ripple internal reference">Задача: подписаться на определенную задачу</a></li><li class="list-group-item"><a href="#choose-which-action-to-follow" class="ripple internal reference">Можно выбрать события, о которых получать уведомления</a></li></ul></li><li class="list-group-item"><a href="#time-management-analytic-accounts" class="ripple internal reference">Управление временем: аналитические счета</a><ul ><li class="list-group-item"><a href="#record-a-timesheet-on-a-project" class="ripple internal reference">Учет затраченного времени на проект:</a></li><li class="list-group-item"><a href="#record-a-timesheet-on-a-task" class="ripple internal reference">Запишите затраченное время на выполнение задачи:</a></li></ul></li><li class="list-group-item"><a href="#document-management-in-tasks" class="ripple internal reference">Управление документами в задачах</a></li><li class="list-group-item"><a href="#collaborate-on-tasks" class="ripple internal reference">Взаимодействие с задачами</a><ul ><li class="list-group-item"><a href="#create-a-task-from-an-email" class="ripple internal reference">Создание задачи из письма электронной почты</a></li><li class="list-group-item"><a href="#the-chatter-status-and-follow-up" class="ripple internal reference">Обсуждение, статус и уведомления.</a></li><li class="list-group-item"><a href="#the-description-of-the-task-the-pad" class="ripple internal reference">Описание задачи, Pad</a></li></ul></li><li class="list-group-item"><a href="#tasks-states" class="ripple internal reference">Состояния задач</a><ul ><li class="list-group-item"><a href="#set-the-state-of-a-task" class="ripple internal reference">Настройте состояние задачи</a></li><li class="list-group-item"><a href="#custom-states" class="ripple internal reference">Пользовательские состояния</a></li></ul></li><li class="list-group-item"><a href="#color-tags" class="ripple internal reference">Цветные теги</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/project/configuration/collaboration.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-manage-collaborate-on-tasks"></section><section id="responsibilities"><h2 >Отвественный</h2><p >В Odoo, вы можете назначить человека, который отвечает за задачу.</p><p >При создании задачи по умолчанию ответственным назначается тот, кто создал ее. Чтобы изменить ответственного, просто наберите имя другого пользователя и выберите из предложенных сотрудников в выпадающем списке.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если нужно добавить нового пользователя «на лету», нажмите «Создать и изменить». Для этого вам нужны права администратора.</p></div></section><section id="followers"><h2 >Подписчики</h2><p >К задаче можно добавить других пользователей как <strong >Подписчиков</strong>. Добавление подписчика означает, что этот человек будет уведомлен о любых изменениях, которые произошли в задаче. Этим вы разрешаете участвовать в обсуждении задаче из вне. Это может быть очень полезным, когда вам нужны советы коллег из других отделов. Вы также можете пригласить клиентов принять участие в обсуждении задаче. Они будут уведомлены по электронной почте о сообщениях в разговоре и смогут принять в нем участие, просто отвечая на почту. Подписчики могут видеть задачу, как и вы, с описанием и обсуждением.</p></section><section id="project-follow-a-project-to-follow-the-pipe"><h3 >Проект: подписывайтесь на проект, чтобы получать уведомления о всех процессах проекта</h3><p >Вы можете подписаться на Проект. В этой ситуации вы будете уведомлены о любых изменениях в проекте: задачи, перешедшие с одного этапа на другой, обсуждения и т.д. Вы получите всю информацию на свой email. Эта функция подходит для менеджера проектов, который должен все время видеть общую картину по проекту.</p></section><section id="task-follow-a-specific-task"><h3 >Задача: подписаться на определенную задачу</h3><p >Подписка на задачу - полезна, когда вы сосредоточены на определенной части проекта. Все уведомления или изменения в этой задаче также отправляются на email.</p></section><section id="choose-which-action-to-follow"><h3 >Можно выбрать события, о которых получать уведомления</h3><p >Вы можете выбрать действия, о которых хотите получать уведомления, щелкнув стрелку вниз на кнопке. (см. ниже)</p><p >По умолчанию вы подписываетесь на обсуждение, но можно получать уведомления о заметках, о создании, блокировки, готовности или изменении задачи.</p><img src="../../_images/manage_collaborate01.png" class="img-responsive center-block"></section><section id="time-management-analytic-accounts"><h2 >Управление временем: аналитические счета</h2><p >Независимо от того, учитываете ли вы потраченное время при оценке будущих проектов или данных для выставления счетов, отслеживание времени в Project Management точно будет не лишним.</p><p >Приложение Odoo Timesheet прекрасно интегрировано с проектом Odoo Project и может помочь вам легко отслеживать затраченное время.</p><p >После установки <strong >Timesheet</strong> параметр учета времени станет доступен в проектах и ​​задачах.</p><p >Чтобы избежать путаницы, Odoo работает с аналитическими счетами. Аналитическая счет - это имя, которое всегда будет ссылкой на конкретный проект или контракт. Каждый раз, когда создается проект, аналитическая учетная запись создается автоматически под тем же именем.</p></section><section id="record-a-timesheet-on-a-project"><h3 >Учет затраченного времени на проект:</h3><p >Нажмите на настройки проекта.</p><img src="../../_images/manage_collaborate02.png" class="img-responsive center-block"><p >Нажмите кнопку Timesheet (Табели) в верхнем меню.</p><img src="../../_images/manage_collaborate03.png" class="img-responsive center-block"><p >Вы увидите табель учета затраченного времени Odoo. Нажмите «Создать», и появится строка с сегодняшней датой и временем. Имя вашего проекта подставляется как аналитический счет. Задача автоматически не подставляется, вы можете добавить ее или нет.</p><img src="../../_images/manage_collaborate04.png" class="img-responsive center-block"><p >Если вы перейдете на страницу Odoo Timesheet, your line will be recorded among your other timesheets.</p></section><section id="record-a-timesheet-on-a-task"><h3 >Запишите затраченное время на выполнение задачи:</h3><p >В рамках задачи доступен учет времени во вкладке Timesheets (Табели).</p><p >В задаче нажмите кнопку «Изменить». Перейдите на вкладку «Timesheet» и нажмите «Добавить элемент».</p><p >Появится строка с названием проекта, подставленного в аналитический счет.</p><p >Вы можете увидеть эти же строки в приложении Odoo Timesheet.</p><img src="../../_images/manage_collaborate05.png" class="img-responsive center-block"><p >После завершения проекта вы получите реальное представление о времени, которое вы потратили на него, выполнив поиск по имени аналитической учетной записи вашего проекта.</p></section><section id="document-management-in-tasks"><h2 >Управление документами в задачах</h2><p >Вы можете управлять документами, связанными с задачами, например, планы,  фотографии и т.д. Изображение иногда более информативно, чем тысяча слов! У вас есть два способа добавить документ к задаче.</p><p >1. You can add an image/document to your task by clicking on the
+Attachment tab on the top of the form.</p><img src="../../_images/manage_collaborate06.png" class="img-responsive center-block"><p >2. You can add an image/document to your task through the Chatter. You
+can log a note/send a message and attach a file to it. Or if someone
+sends an email with an attachment, the document will be automatically
+saved in the task.</p><img src="../../_images/manage_collaborate07.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если у вас есть образ, который поможет понять задачу, вы можете настроить его как картинку фона. Он будет отображаться непосредственно в представлении Канбана.</p></div><img src="../../_images/manage_collaborate08.png" class="img-responsive center-block"></section><section id="collaborate-on-tasks"><h2 >Взаимодействие с задачами</h2><p >Задачи в Управлении проектами Odoo призваны упростить работу в команде. Они помогут вам сэкономить время и ресурсы.</p><p >Идея состоит в том, чтобы оставаться в курсе того, что вас интересует. Вы можете взаимодействовать со своими коллегами, одновременно выполнять одну и ту же задачу, делегировать задачи и обсуждать их.</p></section><section id="create-a-task-from-an-email"><h3 >Создание задачи из письма электронной почты</h3><p >Вы можете настроить адрес электронной почты, связанный с вашим проектом. Когда электронное письмо отправляется на этот адрес, оно автоматически создает задачу на первом этапе проекта, причем все получатели (To / Cc / Bcc) являются подписчиками.</p><p >С Odoo Online почтовый шлюз уже настроен, поэтому каждый проект автоматический получает адрес электронной почты.</p><p >Электронная почта всегда является именем проекта (с &quot;-&quot; вместо пробелов), вы увидите его под названием вашего проекта в панели инструментов проекта.</p><img src="../../_images/manage_collaborate09.png" class="img-responsive center-block"><p >Этот адрес электронной почты создается по умолчанию, его имя можно изменить.</p><p >Алиас адреса электронной почты может быть изменен менеджером проекта.</p><p >Для этого перейдите в Настройки проекта и нажмите вкладку «Электронная почта».</p><p >Вы можете напрямую редактировать свой адрес электронной почты проекта.</p><img src="../../_images/manage_collaborate10.png" class="img-responsive center-block"></section><section id="the-chatter-status-and-follow-up"><h3 >Обсуждение, статус и уведомления.</h3><p >Обсуждение - очень полезный инструмент. Он показывает историю задачи.</p><p >В Обсуждении вы можете видеть, когда задача была создана, когда она переходила с одного этапа на другой и т.д. Любые изменения, внесенные в эту задачу, автоматически регистрируются в Обсуждении. Оно также включает историю взаимодействия между вами и вашим клиентом или коллегами. Все взаимодействия регистрируются, что облегчает руководителю задачи анализ прошлых взаимодействий.</p><p >Вы можете взаимодействовать с подписчиками, будь-то внутренние (ваши коллеги) или внешние (например, клиент) путем записи заметки или важной информации. Кроме того, если вы хотите отправить электронное письмо всем подписчикам этой конкретной задачи, вы можете добавить сообщение. Для обоих этих действий дата и время сохраняются в записи.</p><img src="../../_images/manage_collaborate11.png" class="img-responsive center-block"></section><section id="the-description-of-the-task-the-pad"><h3 >Описание задачи, Pad</h3><p >Odoo позволяет заменить поле описания задачи на заметки Etherpad (<a href="http://etherpad.org" class="external reference">http://etherpad.org</a>), которые можно писать одновременно нескольким пользователям. Текст каждого пользователя имеет свой собственный цвет.</p><p >Чтобы активировать эту опцию, перейдите к <span class="menuselection">Project Settings ‣ Pads</span>, отметьте &quot;Совместный расширенный текст описания задачи (Collaborative rich text on task description)&quot;.</p><img src="../../_images/manage_collaborate12.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если вам нужна только панель, а не страница задачи, вы можете щелкнуть по значку в правом верхнем углу, чтобы перейти в полноэкранный режим. Нажмите на значок <code >&lt;/&gt;</code>, чтобы получить прямой URL-адрес описания задачи: это полезно, если вы хотите отправить его кому-либо, не добавляя этого человека в качестве подписчика.</p></div><img src="../../_images/manage_collaborate13.png" class="img-responsive center-block"></section><section id="tasks-states"><h2 >Состояния задач</h2></section><section id="set-the-state-of-a-task"><h3 >Настройте состояние задачи</h3><p >Статус задачи - это самый простой способ сообщить своим коллегам, когда вы работаете над задачей, если задача готова или она заблокирована.</p><p >Вы можете изменить статус задачи из вида канбан или непосредственно в задаче. Просто нажмите на шарик статуса и выберите:</p><img src="../../_images/manage_collaborate14.png" class="img-responsive center-block"><img src="../../_images/manage_collaborate15.png" class="img-responsive center-block"></section><section id="custom-states"><h3 >Пользовательские состояния</h3><p >Вы можете решить, что означает каждый статус на этапе. На представлении канбана, нажмите на значок шестеренки в верхней части сцены, затем нажмите на редактирование:</p><img src="../../_images/manage_collaborate16.png" class="img-responsive center-block"><p >Рядом с цветным шаром напишите пояснение для состояния.</p><img src="../../_images/manage_collaborate17.png" class="img-responsive center-block"><p >Объяснение будет отображаться вместо стандартного текста:</p><img src="../../_images/manage_collaborate18.png" class="img-responsive center-block"></section><section id="color-tags"><h2 >Цветные теги</h2><p >В каждой задаче вы можете добавить тег. Теги очень полезны для категоризации задач. Это помогает вам выделить задачу из вида Канбана или лучше найти их благодаря фильтрам.</p><p >Если вы всегда работаете с тегом определенного типа, вы можете выделить задачи, содержащие тег, с цветами. Каждый тег может получить определенный цвет, он очень заметен на представлении Канбана.</p><img src="../../_images/manage_collaborate19.png" class="img-responsive center-block"><p >Чтобы он отображался на представлении канбана, вы должны установить цвет в теге непосредственно из задачи:</p><img src="../../_images/manage_collaborate20.png" class="img-responsive center-block"></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

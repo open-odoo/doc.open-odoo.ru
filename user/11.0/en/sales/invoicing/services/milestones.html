@@ -1,0 +1,306 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to invoice milestones of a project? &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Services" href="../services.html" />
+    <link rel="next" title="How to re-invoice expenses to your customers?" href="reinvoice.html" />
+    <link rel="prev" title="Services" href="../services.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../sales.html">Sales</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to invoice milestones of a project?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/sales/invoicing/services/milestones.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/sales/invoicing/services/milestones.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/sales/invoicing/services/milestones.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to invoice milestones of a project? - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-sales-application" class="ripple internal reference">Install the Sales application</a></li><li class="list-group-item"><a href="#create-products" class="ripple internal reference">Create products</a></li></ul></li><li class="list-group-item"><a href="#managing-your-project" class="ripple internal reference">Managing your project</a><ul ><li class="list-group-item"><a href="#quotations-and-sale-orders" class="ripple internal reference">Quotations and sale orders</a></li><li class="list-group-item"><a href="#invoice-milestones" class="ripple internal reference">Invoice milestones</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/sales/invoicing/services/milestones.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-invoice-milestones-of-a-project"><p >There are different kind of service sales: prepaid volume of hours/days
+(e.g. support contract), billing based on time and material (e.g.
+billing consulting hours) or a fixed price contract (e.g. a project).</p><p >In this section, we will have a look at how to invoice milestones of a
+project.</p><p >Milestone invoicing can be used for expensive or large scale projects,
+with each milestone representing a clear sequence of work that will
+incrementally build up to the completion of the contract. For example, a
+marketing agency hired for a new product launch could break down a
+project into the following milestones, each of them considered as one
+service with a fixed price on the sale order :</p><ul ><li >Milestone 1 : Marketing strategy audit - 5 000 euros</li><li >Milestone 2 : Brand Identity - 10 000 euros</li><li >Milestone 3 : Campaign launch &amp; PR - 8 500 euros</li></ul><p >In this case, an invoice will be sent to the customer each time a
+milestone will be successfully reached. That invoicing method is
+comfortable both for the company which is ensured to get a steady cash
+flow throughout the project lifetime and for the client who can monitor
+the project's progress and pay in several times.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You can also use milestones to invoice percentages of the entire
+project. For example, for a million euros project, your company
+might require a 15% upfront payment, 30% at the midpoint and the
+balance at the contract conclusion. In that case, each payment will
+be considered as one milestone.</p></div></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-sales-application"><h3 >Install the Sales application</h3><p >In order to sell services and to send invoices, you need to install the
+<strong >Sales</strong> application, from the <strong >Apps</strong> icon.</p><img src="../../../_images/milestones01.png" class="img-responsive center-block"></section><section id="create-products"><h3 >Create products</h3><p >In Odoo, each milestone of your project is considered as a product. From
+the <strong >Sales</strong> application, use the menu <span class="menuselection">Sales ‣ Products</span>,
+create a new product with the following setup:</p><ul ><li ><strong >Name</strong>: Strategy audit</li><li ><strong >Product Type</strong>: Service</li><li ><strong >Invoicing Policy</strong>: Delivered Quantities, since you will invoice
+your milestone after it has been delivered</li><li ><strong >Track Service</strong>: Manually set quantities on order, as you
+complete each milestone, you will manually update their quantity
+from the <strong >Delivered</strong> tab on your sale order</li></ul><img src="../../../_images/milestones02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Apply the same configuration for the others milestones.</p></div></section><section id="managing-your-project"><h2 >Managing your project</h2></section><section id="quotations-and-sale-orders"><h3 >Quotations and sale orders</h3><p >Now that your milestones (or products) are created, you can create a
+quotation or a sale order with each line corresponding to one milestone.
+For each line, set the <strong >Ordered Quantity</strong> to <code >1</code> as each milestone is
+completed once. Once the quotation is confirmed and transformed into a
+sale order, you will be able to change the delivered quantities when the
+corresponding milestone has been achieved.</p><img src="../../../_images/milestones03.png" class="img-responsive center-block"></section><section id="invoice-milestones"><h3 >Invoice milestones</h3><p >Let's assume that your first milestone (the strategy audit) has been
+successfully delivered and you want to invoice it to your customer. On
+the sale order, click on <strong >Edit</strong> and set the <strong >Delivered Quantity</strong> of the
+related product to <code >1</code>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >As soon as the above modification has been saved, you will notice
+that the color of the line has changed to blue, meaning that the
+service can now be invoiced. In the same time, the invoice status
+of the SO has changed from <strong >Nothing To Invoice</strong> to <strong >To Invoice</strong></p></div><p >Click on <strong >Create invoice</strong> and, in the new window that pops up, select
+<strong >Invoiceable lines</strong> and validate. It will create a new invoice (in draft
+status) with only the <strong >strategy audit</strong> product as invoiceable.</p><img src="../../../_images/milestones04.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >In order to be able to invoice a product, you need to set up the
+<strong >Accounting</strong> application and to configure an accounting journal
+and a chart of account. Click on the following link to learn more:
+<a href="../../../accounting/overview/getting_started/setup.html" class="internal alert-link reference"><span class="doc">How to setup Odoo Accounting?</span></a></p></div><p >Back on your sale order, you will notice that the <strong >Invoiced</strong> column of
+your order line has been updated accordingly and that the <strong >Invoice
+Status</strong> is back to <strong >Nothing to Invoice</strong>.</p><p >Follow the same workflow to invoice your remaining milestones.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="reinvoice.html" class="internal alert-link reference"><span class="doc">How to re-invoice expenses to your customers?</span></a></li><li ><a href="support.html" class="internal alert-link reference"><span class="doc">How to invoice a support contract (prepaid hours)?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

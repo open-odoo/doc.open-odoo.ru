@@ -1,0 +1,312 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600" rel="stylesheet">
+  
+    <title>Profiling Odoo code &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '11.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Учебные пособия" href="../tutorials.html" />
+    <link rel="next" title="Web Services" href="../webservices.html" />
+    <link rel="prev" title="Customizing the web client" href="web.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+  <div class="o_main_header_main">
+    <a class="pull-left o_logo" href="/"></a>
+    <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="mdi-navigation-menu"></span>
+    </a>
+    <ul class="o_primary_nav">
+      <li><a href="/">Документация</a></li>
+    </ul>
+  </div>
+  <nav class="navbar o_sub_nav">
+    <div class="container">
+      <div class="navbar-header visible-xs">
+          <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+            Меню
+            <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+          </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="o_sub-menu">
+        <ol class="o_breadcrumb breadcrumb nav navbar-left">
+            
+            
+            
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (11.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Profiling Odoo code</a></li>
+
+            
+        </ol>
+
+        <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/11.0/en/howtos/profilecode.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/howtos/profilecode.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/howtos/profilecode.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/howtos/profilecode.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+<li><a href="/developer/11.0/ru/python3.html">Python 3</a></li>
+          
+
+          
+            <li class="divider"></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/installing_odoo.jpg');"></span>
+      <div class="container text-center">
+        <h1> Profiling Odoo code - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+      <main class="container ">
+        
+        <div class="o_content row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#graph-a-method" class="ripple internal reference">Graph a method</a></li><li class="list-group-item"><a href="#dump-stack" class="ripple internal reference">Dump stack</a></li><li class="list-group-item"><a href="#tracing-code-execution" class="ripple internal reference">Tracing code execution</a><ul ><li class="list-group-item"><a href="#install-pyflame-and-flamegraph" class="ripple internal reference">Install pyflame and flamegraph</a></li><li class="list-group-item"><a href="#record-executed-code" class="ripple internal reference">Record executed code</a></li></ul></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/11.0/doc/howtos/profilecode.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+		  <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+          <article class="doc-body ">
+            
+            
+            
+  <section id="profiling-odoo-code"><div role="alert" class="alert-warning alert"><h3 class="alert-title">Предупреждение</h3><p >This tutorial requires <a href="../setup/install.html#setup-install" class="internal alert-link reference"><span class="std std-ref">having installed Odoo</span></a>
+and <a href="backend.html" class="internal alert-link reference"><span class="doc">writing Odoo code</span></a></p></div></section><section id="graph-a-method"><h2 >Graph a method</h2><p >Odoo embeds a profiler of code. This embeded profiler output can be used to
+generate a graph of calls triggered by the method, number of queries, percentage
+of time taken in the method itself as well as time taken in method and it's
+sub-called methods.</p><div class="python highlight-default code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo.tools.profiler</span> <span class="k">import</span> <span class="n">profile</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="nd">@profile</span><span class="p">(</span><span class="s1">&#39;/temp/prof.profile&#39;</span><span class="p">)</span>
+<span class="nd">@api</span><span class="o">.</span><span class="n">multi</span>
+<span class="k">def</span> <span class="nf">mymethod</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >This produce a file called /temp/prof.profile</p><p >A tool called <em >gprof2dot</em> will produce a graph with this result:</p><div class="highlight-default code bash"><div class="highlight"><pre><span></span><span class="n">gprof2dot</span> <span class="o">-</span><span class="n">f</span> <span class="n">pstats</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="n">prof</span><span class="o">.</span><span class="n">xdot</span> <span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="n">prof</span><span class="o">.</span><span class="n">profile</span>
+</pre></div>
+</div>
+<p >A tool called <em >xdot</em> will display the resulting graph:</p><div class="highlight-default code bash"><div class="highlight"><pre><span></span><span class="n">xdot</span> <span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="n">prof</span><span class="o">.</span><span class="n">xdot</span>
+</pre></div>
+</div>
+<p >The profiler can be also used without saving data in a file.</p><div class="python highlight-default code"><div class="highlight"><pre><span></span><span class="nd">@profile</span>
+<span class="nd">@api</span><span class="o">.</span><span class="n">model</span>
+<span class="k">def</span> <span class="nf">mymethod</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+</pre></div>
+</div>
+<p >The statistics will be displayed into the logs once the method to be analysed is
+completely reviewed.</p><div class="highlight-default code bash"><div class="highlight"><pre><span></span><span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">28</span> <span class="mi">06</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mi">23</span><span class="p">,</span><span class="mi">196</span> <span class="mi">22878</span> <span class="n">INFO</span> <span class="n">openerp</span> <span class="n">odoo</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">profiler</span><span class="p">:</span>
+<span class="n">calls</span>     <span class="n">queries</span>   <span class="n">ms</span>
+<span class="n">project</span><span class="o">.</span><span class="n">task</span> <span class="o">------------------------</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">odoo</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">odoo</span><span class="o">/</span><span class="n">addons</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">models</span><span class="o">/</span><span class="n">project</span><span class="o">.</span><span class="n">py</span><span class="p">,</span> <span class="mi">638</span>
+
+<span class="mi">1</span>         <span class="mi">0</span>         <span class="mf">0.02</span>          <span class="nd">@profile</span>
+                                  <span class="nd">@api</span><span class="o">.</span><span class="n">model</span>
+                                  <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+                                      <span class="c1"># context: no_log, because subtype already handle this</span>
+<span class="mi">1</span>         <span class="mi">0</span>         <span class="mf">0.01</span>              <span class="n">context</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">context</span><span class="p">,</span> <span class="n">mail_create_nolog</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+                                      <span class="c1"># for default stage</span>
+<span class="mi">1</span>         <span class="mi">0</span>         <span class="mf">0.01</span>              <span class="k">if</span> <span class="n">vals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;project_id&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">context</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;default_project_id&#39;</span><span class="p">):</span>
+                                          <span class="n">context</span><span class="p">[</span><span class="s1">&#39;default_project_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;project_id&#39;</span><span class="p">)</span>
+                                      <span class="c1"># user_id change: update date_assign</span>
+<span class="mi">1</span>         <span class="mi">0</span>         <span class="mf">0.01</span>              <span class="k">if</span> <span class="n">vals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">):</span>
+                                          <span class="n">vals</span><span class="p">[</span><span class="s1">&#39;date_assign&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+                                      <span class="c1"># Stage change: Update date_end if folded stage</span>
+<span class="mi">1</span>         <span class="mi">0</span>         <span class="mf">0.0</span>               <span class="k">if</span> <span class="n">vals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;stage_id&#39;</span><span class="p">):</span>
+                                          <span class="n">vals</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_date_end</span><span class="p">(</span><span class="n">vals</span><span class="p">[</span><span class="s1">&#39;stage_id&#39;</span><span class="p">]))</span>
+<span class="mi">1</span>         <span class="mi">108</span>       <span class="mf">631.8</span>             <span class="n">task</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Task</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_context</span><span class="p">(</span><span class="n">context</span><span class="p">))</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
+<span class="mi">1</span>         <span class="mi">0</span>         <span class="mf">0.01</span>              <span class="k">return</span> <span class="n">task</span>
+
+<span class="n">Total</span><span class="p">:</span>
+<span class="mi">1</span>         <span class="mi">108</span>       <span class="mf">631.85</span>
+</pre></div>
+</div>
+</section><section id="dump-stack"><h2 >Dump stack</h2><p >Sending the SIGQUIT signal to an odoo process (only available on POSIX) makes
+this process output the current stack trace to log, with info level. When an
+odoo process seems stucked, sending this signal to the process permit to know
+what the process is doing, and letting the process continue his job.</p></section><section id="tracing-code-execution"><h2 >Tracing code execution</h2><p >Instead of sending the SIGQUIT signal to an odoo process often enough, to check
+where processes is performing worse than expected, we can use pyflame tool to
+do it for us.</p></section><section id="install-pyflame-and-flamegraph"><h3 >Install pyflame and flamegraph</h3><div class="highlight-default code bash"><div class="highlight"><pre><span></span><span class="c1"># These instructions are given for Debian/Ubuntu distributions</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">autoconf</span> <span class="n">automake</span> <span class="n">autotools</span><span class="o">-</span><span class="n">dev</span> <span class="n">g</span><span class="o">++</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">libtool</span> <span class="n">make</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">uber</span><span class="o">/</span><span class="n">pyflame</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">brendangregg</span><span class="o">/</span><span class="n">FlameGraph</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">pyflame</span>
+<span class="o">./</span><span class="n">autogen</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">configure</span>
+<span class="n">make</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</section><section id="record-executed-code"><h3 >Record executed code</h3><p >As pyflame is installed, we now record the executed code lines with pyflame.
+This tool will record, multiple times a second, the stacktrace of the process.
+Once done, we'll display them as an execution graph.</p><div class="highlight-default code bash"><div class="highlight"><pre><span></span><span class="n">pyflame</span> <span class="o">--</span><span class="n">exclude</span><span class="o">-</span><span class="n">idle</span> <span class="o">-</span><span class="n">s</span> <span class="mi">3600</span> <span class="o">-</span><span class="n">r</span> <span class="mf">0.2</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">PID</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">o</span> <span class="n">test</span><span class="o">.</span><span class="n">flame</span>
+</pre></div>
+</div>
+<p >where &lt;PID&gt; is the process ID of the odoo process you want to graph. This will
+wait until the dead of the process, with a maximum of one hour, and and get 5
+traces a second. With the output of pyflame, we can produce an svg graph with
+the flamegraph tool:</p><div class="highlight-default code bash"><div class="highlight"><pre><span></span><span class="n">flamegraph</span><span class="o">.</span><span class="n">pl</span> <span class="o">./</span><span class="n">test</span><span class="o">.</span><span class="n">flame</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="n">mycode</span><span class="o">.</span><span class="n">svg</span>
+</pre></div>
+</div>
+<img src="../_images/flamegraph.svg" class="img-responsive"></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+      <div id="footer" class="container o_not_editable">
+          <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+          <div class="row">
+              <div class="col-xs-12">
+                  <hr/>
+                  <p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                  <hr/>
+                  <p>
+                      <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br/> <br/>
+                      В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="o_footer_bottom o_not_editable">
+          <div class="container">
+              <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+              <div class="social-links pull-right">
+                  <a href="https://www.odoo.com/web/about/facebook">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/twitter">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/linkedin">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:info@odoo.com">
+                      <i class="fa fa-envelope"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

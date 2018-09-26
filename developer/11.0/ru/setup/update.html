@@ -1,0 +1,299 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600" rel="stylesheet">
+  
+    <title>Updating an Odoo installation &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '11.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Настройка" href="../setup.html" />
+    <link rel="next" title="Развертывание с помощью CDN (сетей доставки контента)" href="cdn.html" />
+    <link rel="prev" title="Развертывание (Deploy)" href="deploy.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+  <div class="o_main_header_main">
+    <a class="pull-left o_logo" href="/"></a>
+    <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="mdi-navigation-menu"></span>
+    </a>
+    <ul class="o_primary_nav">
+      <li><a href="/">Документация</a></li>
+    </ul>
+  </div>
+  <nav class="navbar o_sub_nav">
+    <div class="container">
+      <div class="navbar-header visible-xs">
+          <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+            Меню
+            <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+          </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="o_sub-menu">
+        <ol class="o_breadcrumb breadcrumb nav navbar-left">
+            
+            
+            
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (11.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Updating an Odoo installation</a></li>
+
+            
+        </ol>
+
+        <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/11.0/en/setup/update.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/setup/update.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/setup/update.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/setup/update.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li class="divider"></li>
+          
+
+          
+          
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+<li><a href="/developer/11.0/ru/python3.html">Python 3</a></li>
+          
+
+          
+            <li class="divider"></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/installing_odoo.jpg');"></span>
+      <div class="container text-center">
+        <h1> Updating an Odoo installation - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+      <main class="container ">
+        
+        <div class="o_content row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#in-a-nutshell" class="ripple internal reference">In a nutshell</a></li><li class="list-group-item"><a href="#step-1-download-an-updated-odoo-version" class="ripple internal reference">Step 1: Download an updated Odoo version</a></li><li class="list-group-item"><a href="#step-2-make-a-backup-of-your-database" class="ripple internal reference">Step 2: Make a backup of your database</a></li><li class="list-group-item"><a href="#step-3-install-the-updated-version" class="ripple internal reference">Step 3: Install the updated version</a><ul ><li class="list-group-item"><a href="#packaged-installers" class="ripple internal reference">Packaged Installers</a></li><li class="list-group-item"><a href="#source-install-tarball" class="ripple internal reference">Source Install (Tarball)</a></li><li class="list-group-item"><a href="#source-install-github" class="ripple internal reference">Source Install (Github)</a></li><li class="list-group-item"><a href="#docker" class="ripple internal reference">Docker</a></li></ul></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/11.0/doc/setup/update.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+		  <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+          <article class="doc-body ">
+            
+            
+            
+  <section id="updating-an-odoo-installation"><i id="setup-update"></i></section><section id="introduction"><h2 >Introduction</h2><p >In order to benefit from the latest improvements, security fixes, bug corrections and
+performance boosts, you may need to update your Odoo installation from time to time.</p><p >This guide only applies when are using Odoo on your own hosting infrastructure.
+If you are using one of the Odoo Cloud solutions, updates are automatically performed for you.</p><p >The terminology surrounding software updates is often confusing, so here are some preliminary
+definitions:</p><dl ><dt >Updating (an Odoo installation)</dt><dd >Refers to the process of obtaining the latest revision of the source code for
+your current Odoo Edition. For example, updating your Odoo Enterprise 11.0 to the
+latest revision.
+This does not directly cause any change to the contents of your Odoo database, and
+can be undone by reinstalling the previous revision of the source code.</dd><dt >Upgrading (an Odoo database)</dt><dd >Refers to a complex data processing operation where the structure and contents of your
+database is permanently altered to make it compatible with a new release of Odoo.
+This operation is irreversible and typically accomplished via Odoo's
+<a href="https://upgrade.odoo.com" class="external reference">database upgrade service</a>, when you decide to
+switch to a newer release of Odoo.
+Historically, this process has also been known as a &quot;migration&quot; because it involves moving data
+around inside the database, even though the database may end up at the same physical location
+after the upgrade.</dd></dl><p >This page describes the typical steps needed to <em >update</em> an Odoo installation to the latest
+version. If you'd like more information about upgrading a database, please visit the
+<a href="https://upgrade.odoo.com" class="external reference">Odoo Upgrade page</a> instead.</p></section><section id="in-a-nutshell"><h2 >In a nutshell</h2><p >Updating Odoo is accomplished by simply reinstalling the latest version of your Odoo
+Edition on top of your current installation. This will preserve your data without any alteration,
+as long as you do not uninstall PostgreSQL (the database engine that comes with Odoo).</p><p >The main reference for updating is logically our <a href="install.html#setup-install" class="internal reference"><span class="std std-ref">installation guide</span></a>,
+which explains the common installation methods.</p><p >Updating is also most appropriately accomplished by the person who deployed Odoo initially,
+because the procedure is very similar.</p><div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >We always recommend to download a complete new up-to-date Odoo version, rather than
+manually applying patches, such as the security patches that come with Security
+Advisories.
+The patches are mainly provided for installations that are heavily customized, or for
+technical personnel who prefer to apply minimal changes temporarily while testing a
+complete update.</p></div></section><section id="step-1-download-an-updated-odoo-version"><h2 >Step 1: Download an updated Odoo version</h2><p >The central download page is <a href="https://www.odoo.com/page/download" class="external reference">https://www.odoo.com/page/download</a>. If you see a &quot;Buy&quot; link for the
+Odoo Enterprise download, make sure you are logged into Odoo.com with the same login that is
+linked to your Odoo Enterprise subscription.</p><p >Alternatively, you can use the unique download link that was included with your Odoo Enterprise
+purchase confirmation email.</p><div role="alert" class="alert-info alert"><h3 class="alert-title">Примечание</h3><p >Downloading an updated version is not necessary if you installed via Github (see below)</p></div></section><section id="step-2-make-a-backup-of-your-database"><h2 >Step 2: Make a backup of your database</h2><p >The update procedure is quite safe and should not alter you data. However it's always best to take
+a full database backup before performing any change on your installation, and to store it somewhere
+safe, on a different computer.</p><p >If you have not disabled the database manager screen (see <a href="deploy.html#security" class="internal reference"><span class="std std-ref">here</span></a> why you should), you
+can use it (link at bottom of your database selection screen) to download a backup of your
+database(s). If you disabled it, use the same procedure than for your usual backups.</p></section><section id="step-3-install-the-updated-version"><h2 >Step 3: Install the updated version</h2><p >Choose the method that matches your current installation:</p></section><section id="packaged-installers"><h3 >Packaged Installers</h3><p >If you installed Odoo with an installation package downloaded on our website (the recommended method),
+updating is very simple.
+All you have to do is download the installation package corresponding to your system (see step #1)
+and install it on your server. They are updated daily and include the latest security fixes.
+Usually, you can simply double-click the package to install it on top of the current installation.
+After installing the package, be sure to restart the Odoo service or reboot your server,
+and you're all set.</p></section><section id="source-install-tarball"><h3 >Source Install (Tarball)</h3><p >If you have originally installed Odoo with the &quot;tarball&quot; version (source code archive), you have
+to replace the installation directory with a newer version. First download the latest tarball
+from Odoo.com. They are updated daily and include the latest security fixes (see step #1)
+After downloading the package, extract it to a temporary location on your server.</p><p >You will get a folder labelled with the version of the source code, for example &quot;odoo-11.0+e.20180719&quot;,
+that contains a folder &quot;odoo.egg-info&quot; and the actual source code folder named &quot;odoo&quot; (for Odoo 10
+and later) or &quot;openerp&quot; for older versions.
+You can ignore the odoo.egg-info folder. Locate the folder where your current installation is deployed,
+and replace it with the newer &quot;odoo&quot; or &quot;openerp&quot; folder that was in the archive you just extracted.</p><p >Be sure to match the folder layout, for example the new &quot;addons&quot; folder included in the source code
+should end up exactly at the same path it was before. Next, watch out for any specific configuration
+files that you may have manually copied or modified in the old folder, and copy them over to the
+new folder.
+Finally, restart the Odoo service or reboot the machine, and you are all set.</p></section><section id="source-install-github"><h3 >Source Install (Github)</h3><p >If you have originally installed Odoo with a full Github clone of the official repositories, the
+update procedure requires you to pull the latest source code via git.
+Change into the directory for each repository (the main Odoo repository, and the Enterprise
+repository), and run the following commands:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span>
+<span class="n">git</span> <span class="n">rebase</span> <span class="o">--</span><span class="n">autostash</span>
+</pre></div>
+</div>
+<p >The last command may encounter source code conflicts if you had edited the Odoo source code locally.
+The error message will give you the list of files with conflicts, and you will need to resolve
+the conflicts manually, by editing them and deciding which part of the code to keep.</p><p >Alternatively, if you prefer to simply discard the conflicting changes and restore the official
+version, you can use the following command:</p><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span>
+</pre></div>
+</div>
+<p >Finally, restart the Odoo service or reboot the machine, and you should be done.</p></section><section id="docker"><h3 >Docker</h3><p >Please refer to our <a href="https://hub.docker.com/_/odoo/" class="external reference">Docker image documentation</a> for
+specific update instructions.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+      <div id="footer" class="container o_not_editable">
+          <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+          <div class="row">
+              <div class="col-xs-12">
+                  <hr/>
+                  <p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                  <hr/>
+                  <p>
+                      <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br/> <br/>
+                      В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="o_footer_bottom o_not_editable">
+          <div class="container">
+              <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+              <div class="social-links pull-right">
+                  <a href="https://www.odoo.com/web/about/facebook">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/twitter">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.odoo.com/web/about/linkedin">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:info@odoo.com">
+                      <i class="fa fa-envelope"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

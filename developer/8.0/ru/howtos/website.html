@@ -1,0 +1,780 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Создание веб-сайта &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Учебные пособия" href="../tutorials.html" />
+    <link rel="next" title="Создание модуля" href="backend.html" />
+    <link rel="prev" title="Создание своей темы" href="themes.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Создание веб-сайта</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/en/howtos/website.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/ru/howtos/website.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/howtos/website.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/howtos/website.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/ru/">Пользователю</a></li>
+<li><a href="/developer/8.0/ru/">Разработчику</a></li>
+<li><a href="/developer/8.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/build_a_website.jpg');"></span>
+      <div class="container text-center">
+        <h1> Создание веб-сайта - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#creating-a-basic-module" class="ripple internal reference">Создание базового модуля</a></li><li class="list-group-item"><a href="#a-demonstration-module" class="ripple internal reference">Демонстрационный модуль</a></li><li class="list-group-item"><a href="#to-the-browser" class="ripple internal reference">Что касается браузера</a></li><li class="list-group-item"><a href="#templates" class="ripple internal reference">Шаблоны</a></li><li class="list-group-item"><a href="#storing-data-in-odoo" class="ripple internal reference">Хранение данных в Odoo</a><ul ><li class="list-group-item"><a href="#defining-the-data-model" class="ripple internal reference">Определение модели данных</a></li><li class="list-group-item"><a href="#demonstration-data" class="ripple internal reference">Демонстрационные данные</a></li><li class="list-group-item"><a href="#accessing-the-data" class="ripple internal reference">Доступ к данным</a></li></ul></li><li class="list-group-item"><a href="#website-support" class="ripple internal reference">WYSIWYG инструметы вебсайта</a></li><li class="list-group-item"><a href="#urls-and-routing" class="ripple internal reference">URL-адреса и маршрутизация</a></li><li class="list-group-item"><a href="#field-edition" class="ripple internal reference">Работа с полями</a></li><li class="list-group-item"><a href="#administration-and-erp-integration" class="ripple internal reference">Администрирование и интеграция с ERP</a><ul ><li class="list-group-item"><a href="#a-brief-and-incomplete-introduction-to-the-odoo-administration" class="ripple internal reference">Краткое и неполное введение в администрирование Odoo</a></li><li class="list-group-item"><a href="#editing-in-the-odoo-administration" class="ripple internal reference">Редактирование через систему администрирования Odoo</a></li><li class="list-group-item"><a href="#relations-between-models" class="ripple internal reference">Отношения между моделями данных</a></li><li class="list-group-item"><a href="#discussions-and-notifications" class="ripple internal reference">Обсуждения и уведомления</a></li><li class="list-group-item"><a href="#selling-courses" class="ripple internal reference">Продажа курсов</a></li><li class="list-group-item"><a href="#altering-existing-views" class="ripple internal reference">Изменение существующих представлений</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/howtos/website.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="building-a-website"><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><ul ><li ><p >Данное руководство предполагает <a href="http://docs.python.org/2/tutorial/" class="external reference alert-link">базовые знания Python</a></p></li><li ><p >Это руководство предполагает <a href="../setup/install.html#setup-install" class="internal alert-link reference"><span class="std std-ref">установленный Odoo</span></a></p></li></ul></div></section><section id="creating-a-basic-module"><h2 >Создание базового модуля</h2><p >В Оду задачи выполняются путем создания модулей.</p><p >Модули настраивают поведение Odoo, либо путем добавления нового функционала или изменения уже существующего (в том числе функционала, добавленного другими модулями).</p><p >Параметр командной строки <a href="../reference/cmdline.html#reference-cmdline-scaffold" class="internal reference"><span class="std std-ref">scaffolding</span></a> может создать базовый модуль. Чтобы быстро начать работу, просто вызовите:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ./odoo.py scaffold Academy my-modules
+</pre></div>
+</div>
+<p >Данная инструкция автоматически создаст <em >каталог с модулями</em> <code >my-modules</code> с модулем <code >academy</code> внутри. Каталог может быть уже существующим каталогом модулей, но в этом случае имя модуля должно быть уникальным в пределах данного каталога.</p></section><section id="a-demonstration-module"><h2 >Демонстрационный модуль</h2><p >У нас есть &quot;готовый&quot; модуль подготовленный к установке.</p><p >Для его установки нам не потребуется затратить много усилий:</p><ul ><li ><p >запустите Odoo сервер с параметрами</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ./odoo.py --addons-path addons,my-modules
+</pre></div>
+</div>
+</li><li ><p >перейдите <a href="http://localhost:8069" class="external reference">http://localhost:8069</a></p></li><li ><p >создайте новую базу, включая демонстрационные данные</p></li><li ><p >перейдите <span class="menuselection">Settings ‣ Modules ‣ Local Modules</span></p></li><li ><p >в правом верхнем углу уберите критерий фильтра <em >Installed</em> и введите в поиск <em >academy</em></p></li><li ><p >нажмите кнопку <span class="guilabel">Install</span> в модуле <em >Academy</em></p></li></ul></section><section id="to-the-browser"><h2 >Что касается браузера</h2><p ><a href="../reference/http.html#reference-http-controllers" class="internal reference"><span class="std std-ref">Контроллеры</span></a> интерпретируют запросы браузера и отправляют данные обратно.</p><p >Добавьте простой контроллер и убедитесь, что он описан в файле <code >__init__.py</code> (иначе Odoo не сможет его найти):</p><div class="pq-patch"><em >academy/controllers.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">openerp</span> <span class="kn">import</span> <span class="n">http</span>
+
+<span class="hll"><span class="k">class</span> <span class="nc">Academy</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">Controller</span><span class="p">):</span>
+</span><span class="hll">    <span class="nd">@http.route</span><span class="p">(</span><span class="s1">&#39;/academy/academy/&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">return</span> <span class="s2">&quot;Hello, world&quot;</span>
+</span>
+<span class="c1">#     @http.route(&#39;/academy/academy/objects/&#39;, auth=&#39;public&#39;)</span>
+<span class="c1">#     def list(self, **kw):</span>
+</pre></div>
+</div>
+</div></div><p >Выключите сервер нажав в консоли (<code class="kbd">^C</code>), а затем перезапустите его с параметрами:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ./odoo.py --addons-path addons,my-modules
+</pre></div>
+</div>
+<p >открыв страницу <a href="http://localhost:8069/academy/academy/" class="external reference">http://localhost:8069/academy/academy/</a>, вы увидите &quot;страницу&quot; со следующим содержанием:</p><div ><img src="../_images/helloworld.png" class="img-responsive"></div></section><section id="templates"><h2 >Шаблоны</h2><p >Создание HTML в Python - не самое приятное занятие.</p><p >Классическим решением в данной ситуации будет работа с <a href="http://en.wikipedia.org/wiki/Web_template" class="external reference">templates</a>, псевдо-документы со специальными иструкциями для заполнения и отображения. Odoo позволяет использовать любой шаблонизатор Python, но так же предоставляет и свой собственный <a href="../reference/qweb.html#reference-qweb" class="internal reference"><span class="std std-ref">QWeb</span></a> шаблонизатор, который интегрирован с другими возможностями самой Odoo.</p><p >Создайте шаблон и убедитесь, что файл шаблона зарегистрирован в файле <code >__openerp__.py</code> манифеста, измените контроллер, чтобы использовать наш шаблон:</p><div class="pq-patch"><em >academy/controllers.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Academy</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">Controller</span><span class="p">):</span>
+    <span class="nd">@http.route</span><span class="p">(</span><span class="s1">&#39;/academy/academy/&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+<span class="hll">        <span class="k">return</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;academy.index&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class="hll">            <span class="s1">&#39;teachers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Diana Padilla&quot;</span><span class="p">,</span> <span class="s2">&quot;Jody Caroll&quot;</span><span class="p">,</span> <span class="s2">&quot;Lester Vaughn&quot;</span><span class="p">],</span>
+</span><span class="hll">        <span class="p">})</span>
+</span>
+<span class="c1">#     @http.route(&#39;/academy/academy/objects/&#39;, auth=&#39;public&#39;)</span>
+<span class="c1">#     def list(self, **kw):</span>
+</pre></div>
+</div>
+</div><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;openerp&gt;</span>
+    <span class="nt">&lt;data&gt;</span>
+<span class="hll">        <span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;index&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;title&gt;</span>Academy<span class="nt">&lt;/title&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;teachers&quot;</span> <span class="na">t-as=</span><span class="s">&quot;teacher&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">              <span class="nt">&lt;p&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;teacher&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;/t&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/template&gt;</span>
+</span>        <span class="c">&lt;!-- &lt;template id=&quot;object&quot;&gt; --&gt;</span>
+        <span class="c">&lt;!--   &lt;h1&gt;&lt;t t-esc=&quot;object.display_name&quot;/&gt;&lt;/h1&gt; --&gt;</span>
+        <span class="c">&lt;!--   &lt;dl&gt; --&gt;</span>
+</pre></div>
+</div>
+</div></div><p >Шаблон с помощью инструкции (<code >t-foreach</code>) переберет всех учитилей (предоставленных через template context), и выведет имя каждого учителя отдельным абзацем.</p><p >Наконец перезапустите Odoo и обновите данные модуля (для установки шаблона), перейдя в раздел  <span class="menuselection">Settings ‣ Modules ‣ Local Modules ‣ Academy</span> и нажав <span class="guilabel">Upgrade</span>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >В качестве альтернативы, можно перезапустить Odoo <a href="../reference/cmdline.html#cmdoption-odoo.py-u" class="internal alert-link reference"><code class="std xref std-option">что приведет к единовременному обновлению модулей</code></a>:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> odoo.py --addons-path addons,my-modules -d academy -u academy
+</pre></div>
+</div>
+</div><p >Перейдя по адресу <a href="http://localhost:8069/academy/academy/" class="external reference">http://localhost:8069/academy/academy/</a> вы увидите следующий результат:</p><img src="../_images/basic-list.png" class="img-responsive"></section><section id="storing-data-in-odoo"><h2 >Хранение данных в Odoo</h2><p ><a href="../reference/orm.html#reference-orm-model" class="internal reference"><span class="std std-ref">Модели данных Odoo</span></a> сопоставляются с таблицами базы данных.</p><p >В предыдущем разделе мы просто отображали список строк, статически прописанных в коде Python. Это не позволяет вносить изменения или использовать постоянное хранилище, поэтому мы переместим наши данные в базу данных.</p></section><section id="defining-the-data-model"><h3 >Определение модели данных</h3><p >Определите модель данных учителя и убедитесь, что ее импорт правильно описан в <code >__init__.py</code> таким образом, что она будет правильно загружена:</p><div class="pq-patch"><em >academy/models.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>
+<span class="kn">from</span> <span class="nn">openerp</span> <span class="kn">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">api</span>
+<span class="hll">
+</span><span class="hll"><span class="k">class</span> <span class="nc">Teachers</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;academy.teachers&#39;</span>
+<span class="hll">
+</span>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+</pre></div>
+</div>
+</div></div><p >Затем выполните настройку <a href="../reference/security.html#reference-security-acl" class="internal reference"><span class="std std-ref">basic access control</span></a> для модели данных и добавьте их в манифест:</p><div class="pq-patch"><em >academy/__openerp__.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>
+    <span class="c1"># always loaded</span>
+<span class="hll">    <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[</span>
+</span>        <span class="s1">&#39;security/ir.model.access.csv&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;templates.xml&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="c1"># only loaded in demonstration mode</span>
+</pre></div>
+</div>
+</div><em >academy/security/ir.model.access.csv</em><div class="pq-section"><div class="highlight-guess"><div class="highlight"><pre><span></span>id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+<span class="hll">access_academy_teachers,access_academy_teachers,model_academy_teachers,,1,0,0,0
+</span></pre></div>
+</div>
+</div></div><p >Это просто дает доступ для чтения (<code >perm_read</code>) для всех пользователей (<code >group_id:id</code> остается пустым).</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p ><a href="../reference/data.html#reference-data" class="internal alert-link reference"><span class="std std-ref">Файлы данных</span></a> (XML or CSV) должны быть добавлены в манифест модуля, файлы Python (модели или контроллеры) не должны, но должны быть импортированы из <code >__init__.py</code> (прямо или косвенно)</p></div><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Пользователь суперадминистратор обходит контроль доступа, у него есть доступ ко всем моделям данных, даже если ему не предоставлен доступ</p></div></section><section id="demonstration-data"><h3 >Демонстрационные данные</h3><p >Второй шаг - добавить в систему демонстрационные данные для того, чтобы можно было легко протестировать их. Это делается путем добавления <code >demo</code> <a href="../reference/data.html#reference-data" class="internal reference"><span class="std std-ref">файл с данными</span></a>, который должен быть связан с манифестом:</p><div class="pq-patch"><em >academy/demo.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;openerp&gt;</span>
+    <span class="nt">&lt;data&gt;</span>
+<span class="hll">        <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;padilla&quot;</span> <span class="na">model=</span><span class="s">&quot;academy.teachers&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Diana Padilla<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;carroll&quot;</span> <span class="na">model=</span><span class="s">&quot;academy.teachers&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Jody Carroll<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;vaughn&quot;</span> <span class="na">model=</span><span class="s">&quot;academy.teachers&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Lester Vaughn<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/record&gt;</span>
+</span>    <span class="nt">&lt;/data&gt;</span>
+<span class="nt">&lt;/openerp&gt;</span>
+</pre></div>
+</div>
+</div></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p ><a href="../reference/data.html#reference-data" class="internal alert-link reference"><span class="std std-ref">Файлы с данными</span></a> могут использоваться как для демонстрационных так и не демо-данных. Демонстрационные данные загружаются только в <em >демонстрационном режиме</em> и могут использоваться для тестирования и демонстрации процессов, не-демо-данные всегда загружаются и используются в качестве начальной настройки системы.</p><p >В этом случае мы используем демонстрационные данные, потому что реальный пользователь системы хотел бы внести или импортировать свой собственный список учителей, а данный список полезен только для тестирования.</p></div></section><section id="accessing-the-data"><h3 >Доступ к данным</h3><p >Последний шаг - изменить модель данных и шаблон для использования наших демонстрационных данных:</p><ol ><li ><p >Извлекать записи из базы данных вместо статического списка</p></li><li ><p >поскольку <a href="../reference/orm.html#openerp.models.Model.search" class="internal reference" title="openerp.models.Model.search"><code class="py py-meth xref">search()</code></a> возвращает набор записей, соответствующих фильтру (в данном случае все записи), измените шаблон, чтобы вывести <code >name</code> каждого учителя.</p></li></ol><div class="pq-patch"><em >academy/controllers.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Academy</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">Controller</span><span class="p">):</span>
+    <span class="nd">@http.route</span><span class="p">(</span><span class="s1">&#39;/academy/academy/&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+<span class="hll">        <span class="n">Teachers</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;academy.teachers&#39;</span><span class="p">]</span>
+</span>        <span class="k">return</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;academy.index&#39;</span><span class="p">,</span> <span class="p">{</span>
+<span class="hll">            <span class="s1">&#39;teachers&#39;</span><span class="p">:</span> <span class="n">Teachers</span><span class="o">.</span><span class="n">search</span><span class="p">([])</span>
+</span>        <span class="p">})</span>
+
+<span class="c1">#     @http.route(&#39;/academy/academy/objects/&#39;, auth=&#39;public&#39;)</span>
+</pre></div>
+</div>
+</div><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span>        <span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;index&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;title&gt;</span>Academy<span class="nt">&lt;/title&gt;</span>
+            <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;teachers&quot;</span> <span class="na">t-as=</span><span class="s">&quot;teacher&quot;</span><span class="nt">&gt;</span>
+<span class="hll">                <span class="nt">&lt;p&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;teacher.id&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;teacher.name&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</span>            <span class="nt">&lt;/t&gt;</span>
+        <span class="nt">&lt;/template&gt;</span>
+        <span class="c">&lt;!-- &lt;template id=&quot;object&quot;&gt; --&gt;</span>
+</pre></div>
+</div>
+</div></div><p >Перезапустите сервер и обновите модуль (чтобы обновить манифест и шаблоны и загрузить демонстрационный файл), затем перейдите по адресу <a href="http://localhost:8069/academy/academy/" class="external reference">http://localhost:8069/academy/academy/</a>. Страница должна выглядеть несколько иначе: имена должны просто начинаться с префикса (идентификатор записи в базе данных для учителя).</p></section><section id="website-support"><h2 >WYSIWYG инструметы вебсайта</h2><p >В состав Odoo входит модуль, который является инструментом для созданию веб-сайтов.</p><p >До сих пор мы использовали контроллеры напрямую, но в Odoo 8 была добавлена более глубокая интеграция нескольких сервисов (таких как, стиль по умолчанию, тема) через модуль <code >website</code>.</p><ol ><li ><p >для начала добавим <code >website</code> в зависимости для модуля <code >academy</code></p></li><li ><p >Затем добавьте в контроллер флаг <code >website=True</code> данное действие позволит задействровать новые переменные <a href="../reference/http.html#reference-http-request" class="internal reference"><span class="std std-ref">в теле запроса</span></a> и позволит использовать макет веб-сайта в нашем шаблоне</p></li><li ><p >используйте макет вебсайта <code >website.layout</code> в шаблоне</p></li></ol><div class="pq-patch"><em >academy/__openerp__.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">,</span>
+
+    <span class="c1"># any module necessary for this one to work correctly</span>
+<span class="hll">    <span class="s1">&#39;depends&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;website&#39;</span><span class="p">],</span>
+</span>
+    <span class="c1"># always loaded</span>
+    <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[</span>
+</pre></div>
+</div>
+</div><em >academy/controllers.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">openerp</span> <span class="kn">import</span> <span class="n">http</span>
+
+<span class="k">class</span> <span class="nc">Academy</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">Controller</span><span class="p">):</span>
+<span class="hll">    <span class="nd">@http.route</span><span class="p">(</span><span class="s1">&#39;/academy/academy/&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">,</span> <span class="n">website</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span>    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+        <span class="n">Teachers</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;academy.teachers&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;academy.index&#39;</span><span class="p">,</span> <span class="p">{</span>
+</pre></div>
+</div>
+</div><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;openerp&gt;</span>
+    <span class="nt">&lt;data&gt;</span>
+        <span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;index&quot;</span><span class="nt">&gt;</span>
+<span class="hll">            <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;website.layout&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;</span>Academy<span class="nt">&lt;/t&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                        <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;teachers&quot;</span> <span class="na">t-as=</span><span class="s">&quot;teacher&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                            <span class="nt">&lt;p&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;teacher.id&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;teacher.name&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</span><span class="hll">                        <span class="nt">&lt;/t&gt;</span>
+</span><span class="hll">                    <span class="nt">&lt;/div&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;/div&gt;</span>
+</span>            <span class="nt">&lt;/t&gt;</span>
+        <span class="nt">&lt;/template&gt;</span>
+        <span class="c">&lt;!-- &lt;template id=&quot;object&quot;&gt; --&gt;</span>
+</pre></div>
+</div>
+</div></div><p >После перезапуска сервера при обновлении модуля (для того чтобы обновить манифест и шаблон), зайдя на страницу <a href="http://localhost:8069/academy/academy/" class="external reference">http://localhost:8069/academy/academy/</a> вы уведите более приятную картину. На странице будут отображены логотип, и ряд других встроенных элементов (меню верхнего уровня, футер, …)</p><img src="../_images/layout.png" class="img-responsive"><p >В макете сайта также предусмотрена поддержка WYSIWYG инструментов: нажмите Sign In (в правом верхнем углу), введите учетные данные (<code >admin</code> / <code >admin</code> по умолчанию) затем нажмите <span class="guilabel">Log In</span>.</p><p >Теперь в Odoo есть &quot;пристойный&quot;: интерейс управления. Для начала нажмите на пункт меню Website (левый верхний угол)</p><p >Мы снова на странице веб-сайта, но в качестве администратора, имея доступ к расширенным возможностям, предоставляемые поддержкой модуля <em >website</em>:</p><ul ><li ><p >редактор кода шаблона (<span class="menuselection">Customize ‣ HTML Editor</span>), где вы можете видеть и редактировать все шаблоны, используемые для текущей страницы</p></li><li ><p >кнопка <span class="guilabel">Edit</span> в верхнем левом углу переходит в «режим редактирования», где доступны блоки (сниппеты) и расширенная текстовая версия</p></li><li ><p >ряд других функций, таких как предварительный просмотр для мобильных устройств или <abbr title="поисковая оптимизация">SEO</abbr></p></li></ul></section><section id="urls-and-routing"><h2 >URL-адреса и маршрутизация</h2><p >Методы контроллера ассоциируются с <em >маршрутами</em> через декоратор <a href="../reference/http.html#openerp.http.route" class="internal reference" title="openerp.http.route"><code class="py xref py-func">route()</code></a>, который берет строку маршрута и какое-то количество атрибутов, для настройки его поведения или безопасности.</p><p >Мы видели строку маршрутизации &quot;literal&quot;, которая в точности совпадает с разделом URL, но строка маршрута может также использовать <a href="http://werkzeug.pocoo.org/docs/routing/#rule-format" class="external reference">converter patterns</a>, которые берут совпадающие части URL и делают их доступными, как локальные переменные. Например, мы может создать метод контроллера, который берет часть URL и выводит его:</p><div class="pq-patch"><em >academy/controllers.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>            <span class="s1">&#39;teachers&#39;</span><span class="p">:</span> <span class="n">Teachers</span><span class="o">.</span><span class="n">search</span><span class="p">([])</span>
+        <span class="p">})</span>
+
+<span class="hll">    <span class="nd">@http.route</span><span class="p">(</span><span class="s1">&#39;/academy/&lt;name&gt;/&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">,</span> <span class="n">website</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">def</span> <span class="nf">teacher</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">return</span> <span class="s1">&#39;&lt;h1&gt;{}&lt;/h1&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="c1">#     @http.route(&#39;/academy/academy/objects/&#39;, auth=&#39;public&#39;)</span>
+<span class="c1">#     def list(self, **kw):</span>
+<span class="c1">#         return http.request.render(&#39;academy.listing&#39;, {</span>
+</pre></div>
+</div>
+</div></div><p >Перезапустите Odoo, зайдите по адресу <a href="http://localhost:8069/academy/Alice/" class="external reference">http://localhost:8069/academy/Alice/</a> и <a href="http://localhost:8069/academy/Bob/" class="external reference">http://localhost:8069/academy/Bob/</a> и Вы увидите, чем они различаются.</p><p >Как видно из названия, <a href="http://werkzeug.pocoo.org/docs/routing/#rule-format" class="external reference">converter patterns</a> не просто делают извлечение, они также выполняют <em >проверку</em> и <em >преобразование</em>, поэтому мы можем изменить новый контроллер так, чтобы принимать только целые числа:</p><div class="pq-patch"><em >academy/controllers.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>            <span class="s1">&#39;teachers&#39;</span><span class="p">:</span> <span class="n">Teachers</span><span class="o">.</span><span class="n">search</span><span class="p">([])</span>
+        <span class="p">})</span>
+
+<span class="hll">    <span class="nd">@http.route</span><span class="p">(</span><span class="s1">&#39;/academy/&lt;int:id&gt;/&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">,</span> <span class="n">website</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">def</span> <span class="nf">teacher</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">return</span> <span class="s1">&#39;&lt;h1&gt;{} ({})&lt;/h1&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</span>
+
+<span class="c1">#     @http.route(&#39;/academy/academy/objects/&#39;, auth=&#39;public&#39;)</span>
+</pre></div>
+</div>
+</div></div><p >перезапустите Odoo, зайдите по адресу <a href="http://localhost:8069/academy/2" class="external reference">http://localhost:8069/academy/2</a>, обратите внимание, что старое значение было строкой, а новое было преобразовано в целые числа. Попробуйте обратиться к <a href="http://localhost:8069/academy/Carol/" class="external reference">http://localhost:8069/academy/Carol/</a> и обратите внимание, что страница не найдена: поскольку «Carol» не является целым числом, поэтому маршрут был проигнорирован, и сервер вернул ответ, что маршрут не найден.</p><p >Odoo предоставляет дополнительный преобразователь, называемый <code >model</code>, который предоставляет записи в том случае, когда задан их id. Давайте использовать его для создания общей страницы на которой будут показаны биографии учителей:</p><div class="pq-patch"><em >academy/controllers.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>            <span class="s1">&#39;teachers&#39;</span><span class="p">:</span> <span class="n">Teachers</span><span class="o">.</span><span class="n">search</span><span class="p">([])</span>
+        <span class="p">})</span>
+
+<span class="hll">    <span class="nd">@http.route</span><span class="p">(</span><span class="s1">&#39;/academy/&lt;model(&quot;academy.teachers&quot;):teacher&gt;/&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">,</span> <span class="n">website</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">def</span> <span class="nf">teacher</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">teacher</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">return</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;academy.biography&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class="hll">            <span class="s1">&#39;person&#39;</span><span class="p">:</span> <span class="n">teacher</span>
+</span><span class="hll">        <span class="p">})</span>
+</span>
+
+<span class="c1">#     @http.route(&#39;/academy/academy/objects/&#39;, auth=&#39;public&#39;)</span>
+</pre></div>
+</div>
+</div><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span>                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/t&gt;</span>
+        <span class="nt">&lt;/template&gt;</span>
+<span class="hll">        <span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;biography&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;website.layout&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;</span>Academy<span class="nt">&lt;/t&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                        <span class="nt">&lt;p&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;person.id&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;person.name&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</span><span class="hll">                    <span class="nt">&lt;/div&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;/div&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;/t&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/template&gt;</span>
+</span>        <span class="c">&lt;!-- &lt;template id=&quot;object&quot;&gt; --&gt;</span>
+        <span class="c">&lt;!--   &lt;h1&gt;&lt;t t-esc=&quot;object.display_name&quot;/&gt;&lt;/h1&gt; --&gt;</span>
+        <span class="c">&lt;!--   &lt;dl&gt; --&gt;</span>
+</pre></div>
+</div>
+</div></div><p >Затем измените список модели для ссылки на наш новый контроллер:</p><div class="pq-patch"><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml+django"><div class="highlight"><pre><span></span>                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;teachers&quot;</span> <span class="na">t-as=</span><span class="s">&quot;teacher&quot;</span><span class="nt">&gt;</span>
+<span class="hll">                            <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">t-attf-href=</span><span class="s">&quot;/academy/</span><span class="cp">{{</span> <span class="nv">slug</span><span class="o">(</span><span class="nv">teacher</span><span class="o">)</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                              <span class="nt">&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;teacher.name&quot;</span><span class="nt">/&gt;&lt;/a&gt;</span>
+</span><span class="hll">                            <span class="nt">&lt;/p&gt;</span>
+</span>                        <span class="nt">&lt;/t&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-xml+django"><div class="highlight"><pre><span></span>                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+<span class="hll">                        <span class="nt">&lt;h3&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;person.name&quot;</span><span class="nt">/&gt;&lt;/h3&gt;</span>
+</span>                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div></div><p >Перезапустите Odoo и обновите модуль, после чего вы можете посетить страницу каждого преподавателя. В качестве упражнения попробуйте добавить блоки на страницу учителя, чтобы написать биографию, затем перейти на страницу другого преподавателя и так далее. Вы обнаружите, что ваша биография разделяется между всеми учителями, потому что блоки добавляются к шаблону , а <em >шаблон биографии</em> используется всеми преподавателями, когда одна страница редактируется, все они редактируются одновременно.</p></section><section id="field-edition"><h2 >Работа с полями</h2><p >Данные, относящиеся к конкретной записи, должны быть сохранены в этой записи, поэтому давайте добавим новое поле биографии нашим учителям:</p><div class="pq-patch"><em >academy/models.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;academy.teachers&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+<span class="hll">    <span class="n">biography</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Html</span><span class="p">()</span>
+</span></pre></div>
+</div>
+</div><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml+django"><div class="highlight"><pre><span></span>                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;h3&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;person.name&quot;</span><span class="nt">/&gt;&lt;/h3&gt;</span>
+<span class="hll">                        <span class="nt">&lt;div&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;person.biography&quot;</span><span class="nt">/&gt;&lt;/div&gt;</span>
+</span>                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div></div><p >Перезапустите Odoo и обновите представления, перезагрузите страницу учителя и… поле невидимо, так как оно не ничего содержит.</p><p >Для полей записей шаблоны могут использовать специальную директиву <code >t-field</code>, которая позволяет редактировать содержимое поля прямо из веб-сайта с помощью интерфейсов для конкретных областей. Измените шаблон <em >person</em> так, чтобы можно было задействовать <code >t-field</code>:</p><div class="pq-patch"><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml+django"><div class="highlight"><pre><span></span>                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+<span class="hll">                        <span class="nt">&lt;h3</span> <span class="na">t-field=</span><span class="s">&quot;person.name&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">                        <span class="nt">&lt;div</span> <span class="na">t-field=</span><span class="s">&quot;person.biography&quot;</span><span class="nt">/&gt;</span>
+</span>                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div></div><p >Перезапустите Odoo и обновите модуль, теперь под именем учителя появится поле для ввода и новая зона для блоков в режиме Edit. Содержимое, введенное там, хранится в соответствующем поле <code >biography</code> учителя и, таким образом, является уникальным для этого учителя.</p><p >Имя учителя также доступно для редактирования, и при сохранении изменения видны на странице.</p><p ><code >t-field</code> может также принимать параметры форматирования, которые зависят от конкретного поля. Например, если мы отобразим дату изменения записи учителя:</p><div class="pq-patch"><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml+django"><div class="highlight"><pre><span></span>                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;h3</span> <span class="na">t-field=</span><span class="s">&quot;person.name&quot;</span><span class="nt">/&gt;</span>
+<span class="hll">                        <span class="nt">&lt;p&gt;</span>Last modified: <span class="nt">&lt;i</span> <span class="na">t-field=</span><span class="s">&quot;person.write_date&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</span>                        <span class="nt">&lt;div</span> <span class="na">t-field=</span><span class="s">&quot;person.biography&quot;</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div></div><p >в этом случае дата отображается очень «компьютерным» образом и трудно читается, но мы могли бы запросить версию, понятную человеку:</p><div class="pq-patch"><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml+django"><div class="highlight"><pre><span></span>                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;h3</span> <span class="na">t-field=</span><span class="s">&quot;person.name&quot;</span><span class="nt">/&gt;</span>
+<span class="hll">                        <span class="nt">&lt;p&gt;</span>Last modified: <span class="nt">&lt;i</span> <span class="na">t-field=</span><span class="s">&quot;person.write_date&quot;</span> <span class="na">t-field-options=</span><span class="s">&#39;{&quot;format&quot;: &quot;long&quot;}&#39;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</span>                        <span class="nt">&lt;div</span> <span class="na">t-field=</span><span class="s">&quot;person.biography&quot;</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div></div><p >или альтернативное отображение:</p><div class="pq-patch"><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml+django"><div class="highlight"><pre><span></span>                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;h3</span> <span class="na">t-field=</span><span class="s">&quot;person.name&quot;</span><span class="nt">/&gt;</span>
+<span class="hll">                        <span class="nt">&lt;p&gt;</span>Last modified: <span class="nt">&lt;i</span> <span class="na">t-field=</span><span class="s">&quot;person.write_date&quot;</span> <span class="na">t-field-options=</span><span class="s">&#39;{&quot;widget&quot;: &quot;relative&quot;}&#39;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</span>                        <span class="nt">&lt;div</span> <span class="na">t-field=</span><span class="s">&quot;person.biography&quot;</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div></div></section><section id="administration-and-erp-integration"><h2 >Администрирование и интеграция с ERP</h2></section><section id="a-brief-and-incomplete-introduction-to-the-odoo-administration"><h3 >Краткое и неполное введение в администрирование Odoo</h3><p >Администрирование Odoo было упомянуто в разделе <a href="#website-support" class="internal reference">website support</a>. Мы можем вернуться к нему, используя меню <span class="menuselection">Administrator ‣ Administrator</span> (или <span class="guilabel">Sign In</span> если Вы не авторизованы).</p><p >Концептуальная структура бэкэнда Odoo достаточно проста:</p><ol ><li ><p >сначала находятся пункты меню, дерево (пункты меню могут иметь под-пункты) записей. Пункты меню без ссылок на дочерние элементы…</p></li><li ><p >Действия. Действия имеют разные типы: ссылки, отчеты, код, который должен выполнять Odoo или отображение данных. Действия для отображения данных называются действиями окна, и говорит Odoo отображать данную модель данных в соответствии с набором требуемых представлений...</p></li><li ><p >представление имеет тип, широкий выбор категорий, которым оно соответствует (преставление в виде списка, графика, календаря) и архитектуру, которая настраивает способ отображения модели внутри представления.</p></li></ol></section><section id="editing-in-the-odoo-administration"><h3 >Редактирование через систему администрирования Odoo</h3><p >По умолчанию модель данных Odoo по сути невидима для пользователя. Чтобы сделать её видимой, она должна быть доступна через действие, которое само по себе должно быть доступно, как правило, через пункт меню.</p><p >Давайте создадим меню для нашей модели:</p><div class="pq-patch"><em >academy/__openerp__.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>    <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;security/ir.model.access.csv&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;templates.xml&#39;</span><span class="p">,</span>
+<span class="hll">        <span class="s1">&#39;views.xml&#39;</span><span class="p">,</span>
+</span>    <span class="p">],</span>
+    <span class="c1"># only loaded in demonstration mode</span>
+    <span class="s1">&#39;demo&#39;</span><span class="p">:</span> <span class="p">[</span>
+</pre></div>
+</div>
+</div><em >academy/views.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="hll"><span class="nt">&lt;openerp&gt;</span>
+</span><span class="hll"> <span class="nt">&lt;data&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;action_academy_teachers&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.actions.act_window&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Academy teachers<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;res_model&quot;</span><span class="nt">&gt;</span>academy.teachers<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">
+</span><span class="hll">  <span class="nt">&lt;menuitem</span> <span class="na">sequence=</span><span class="s">&quot;0&quot;</span> <span class="na">id=</span><span class="s">&quot;menu_academy&quot;</span> <span class="na">name=</span><span class="s">&quot;Academy&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;menu_academy_content&quot;</span> <span class="na">parent=</span><span class="s">&quot;menu_academy&quot;</span>
+</span><span class="hll">            <span class="na">name=</span><span class="s">&quot;Academy Content&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;menu_academy_content_teachers&quot;</span>
+</span><span class="hll">            <span class="na">parent=</span><span class="s">&quot;menu_academy_content&quot;</span>
+</span><span class="hll">            <span class="na">action=</span><span class="s">&quot;action_academy_teachers&quot;</span><span class="nt">/&gt;</span>
+</span></pre></div>
+</div>
+</div></div><p >при переходе по адресу <a href="http://localhost:8069/web/" class="external reference">http://localhost:8069/web/</a> в левом верхнем углу должен стать доступен пункт Academy, который выбран по умолчанию, поскольку это первое меню, то в нем будет открыт список учителей. Из представления в виде списка можно <span class="guilabel">Создать &lt;Create&gt;</span> новую запись и система переключит в представление вида Form для конкретной записи.</p><p >Если нет определения того, как представлять записи (<a href="../reference/views.html#reference-views" class="internal reference"><span class="std std-ref">представление</span></a>) Odoo будет автоматически создавать базовый набор представлений на лету. В нашем случае это пока работает для представления в виде списка (отображает только имя учителя), но в представлении вида Form HTML поле``biography`` отображено рядом с полем <code >name</code> и ему мало места. Давайте самостоятельно определим представление вида Form так, чтобы сделать просмотр и редактирование записей учителей более комфортным для пользователя:</p><div class="pq-patch"><em >academy/views.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span>    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Academy teachers<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;res_model&quot;</span><span class="nt">&gt;</span>academy.teachers<span class="nt">&lt;/field&gt;</span>
+  <span class="nt">&lt;/record&gt;</span>
+<span class="hll">
+</span><span class="hll">  <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;academy_teacher_form&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Academy teachers: form<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>academy.teachers<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">      <span class="nt">&lt;form&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;sheet&gt;</span>
+</span><span class="hll">          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;biography&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;biography&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/sheet&gt;</span>
+</span><span class="hll">      <span class="nt">&lt;/form&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;/record&gt;</span>
+</span>
+  <span class="nt">&lt;menuitem</span> <span class="na">sequence=</span><span class="s">&quot;0&quot;</span> <span class="na">id=</span><span class="s">&quot;menu_academy&quot;</span> <span class="na">name=</span><span class="s">&quot;Academy&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;menu_academy_content&quot;</span> <span class="na">parent=</span><span class="s">&quot;menu_academy&quot;</span>
+</pre></div>
+</div>
+</div></div></section><section id="relations-between-models"><h3 >Отношения между моделями данных</h3><p >Мы видели пару &quot;простых&quot; полей, хранящихся непосредственно в записи. Существует <a href="../reference/orm.html#reference-orm-fields-basic" class="internal reference"><span class="std std-ref">некоторое количество простых полей</span></a>. Вторая широкая категория полей это <a href="../reference/orm.html#reference-orm-fields-relational" class="internal reference"><span class="std std-ref">реляционные поля</span></a>. Они нужны для обеспечения связей между записями (в рамках одной модели данных или же между различными моделями данных)</p><p >Для демонстрации давайте создадим модель данных для <em >курса</em>. Каждый курс будет иметь поле``teacher`` ссылающееся на конкретного учителя, но каждые учитель может вести несколько курсов:</p><div class="pq-patch"><em >academy/models.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+<span class="hll">    <span class="n">biography</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Html</span><span class="p">()</span>
+</span><span class="hll">
+</span><span class="hll"><span class="k">class</span> <span class="nc">Courses</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span class="hll">    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;academy.courses&#39;</span>
+</span><span class="hll">
+</span><span class="hll">    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+</span>    <span class="n">teacher_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;academy.teachers&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Teacher&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><em >academy/security/ir.model.access.csv</em><div class="pq-section"><div class="highlight-guess"><div class="highlight"><pre><span></span>id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_academy_teachers,access_academy_teachers,model_academy_teachers,,1,0,0,0
+<span class="hll">access_academy_courses,access_academy_courses,model_academy_courses,,1,0,0,0
+</span></pre></div>
+</div>
+</div></div><p >давайте добавим представления, чтобы мы могли видеть и редактировать запись преподавателя курса:</p><div class="pq-patch"><em >academy/views.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span>      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+  <span class="nt">&lt;/record&gt;</span>
+<span class="hll">
+</span><span class="hll">  <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;action_academy_courses&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.actions.act_window&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Academy courses<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;res_model&quot;</span><span class="nt">&gt;</span>academy.courses<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;academy_course_search&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Academy courses: search<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>academy.courses<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">      <span class="nt">&lt;search&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;teacher_id&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">      <span class="nt">&lt;/search&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;academy_course_list&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Academy courses: list<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>academy.courses<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">      <span class="nt">&lt;tree</span> <span class="na">string=</span><span class="s">&quot;Courses&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;teacher_id&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">      <span class="nt">&lt;/tree&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;academy_course_form&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Academy courses: form<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>academy.courses<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">      <span class="nt">&lt;form&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;sheet&gt;</span>
+</span><span class="hll">          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;teacher_id&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;teacher_id&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/sheet&gt;</span>
+</span><span class="hll">      <span class="nt">&lt;/form&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;/record&gt;</span>
+</span>
+  <span class="nt">&lt;menuitem</span> <span class="na">sequence=</span><span class="s">&quot;0&quot;</span> <span class="na">id=</span><span class="s">&quot;menu_academy&quot;</span> <span class="na">name=</span><span class="s">&quot;Academy&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;menu_academy_content&quot;</span> <span class="na">parent=</span><span class="s">&quot;menu_academy&quot;</span>
+<span class="hll">            <span class="na">name=</span><span class="s">&quot;Academy Content&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;menu_academy_content_courses&quot;</span>
+</span><span class="hll">            <span class="na">parent=</span><span class="s">&quot;menu_academy_content&quot;</span>
+</span>            <span class="na">action=</span><span class="s">&quot;action_academy_courses&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;menu_academy_content_teachers&quot;</span>
+            <span class="na">parent=</span><span class="s">&quot;menu_academy_content&quot;</span>
+</pre></div>
+</div>
+</div></div><p >Также надо дать возможность создавать новые курсы непосредственно со страницы преподавателя или возможность просмотра всех курсвов, которые они ведут, поэтому добавьте <a href="../reference/orm.html#openerp.fields.One2many" class="internal reference" title="openerp.fields.One2many"><code class="py xref py-class">обратную связь</code></a> с моделью данных <em >teachers</em>:</p><div class="pq-patch"><em >academy/models.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+    <span class="n">biography</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Html</span><span class="p">()</span>
+<span class="hll">
+</span><span class="hll">    <span class="n">course_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">One2many</span><span class="p">(</span><span class="s1">&#39;academy.courses&#39;</span><span class="p">,</span> <span class="s1">&#39;teacher_id&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Courses&quot;</span><span class="p">)</span>
+</span>
+<span class="k">class</span> <span class="nc">Courses</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;academy.courses&#39;</span>
+</pre></div>
+</div>
+</div><em >academy/views.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span>    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;form&gt;</span>
+        <span class="nt">&lt;sheet&gt;</span>
+<span class="hll">          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;biography&quot;</span><span class="nt">/&gt;</span>
+<span class="hll">          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;biography&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">
+</span><span class="hll">          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;course_ids&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;tree</span> <span class="na">string=</span><span class="s">&quot;Courses&quot;</span> <span class="na">editable=</span><span class="s">&quot;bottom&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">              <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;/tree&gt;</span>
+</span>          <span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/sheet&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>
+</pre></div>
+</div>
+</div></div></section><section id="discussions-and-notifications"><h3 >Обсуждения и уведомления</h3><p >Odoo предоставляет технические модели данных, которые напрямую не отвечают потребностям бизнеса, но добавляют возможности бизнес-объектам так что, отсутствует необходимость создавать их вручную.</p><p >Одна из них - система <em >Chatter</em>, входящая в систему электронной почты и обмена сообщениями Odoo, она может добавлять уведомления и обсуждения в любую модель данных. Модель данных просто должна иметь <a href="../reference/orm.html#openerp.models.Model._inherit" class="internal reference" title="openerp.models.Model._inherit"><code class="py xref py-attr">_inherit</code></a> <code >mail.thread</code>, и поле <code >message_ids</code> описанное в представлении вида Form, для того чтобы отобразить цепочку сообщений. Цепочки сообщений закрепляются за конкретной записью</p><p >Для нашей академии имеет смысл разрешить обсуждение курсов, например, для обсуждения планирования изменений или дискуссий между учителями и помощниками:</p><div class="pq-patch"><em >academy/models.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>
+<span class="k">class</span> <span class="nc">Courses</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="hll">    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;academy.courses&#39;</span>
+</span>    <span class="n">_inherit</span> <span class="o">=</span> <span class="s1">&#39;mail.thread&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+    <span class="n">teacher_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;academy.teachers&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Teacher&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><em >academy/views.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span>          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;teacher_id&quot;</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;teacher_id&quot;</span><span class="nt">/&gt;</span>
+<span class="hll">        <span class="nt">&lt;/sheet&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_chatter&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;message_follower_ids&quot;</span> <span class="na">widget=</span><span class="s">&quot;mail_followers&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">          <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;message_ids&quot;</span> <span class="na">widget=</span><span class="s">&quot;mail_thread&quot;</span><span class="nt">/&gt;</span>
+</span>        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+</pre></div>
+</div>
+</div></div><p >В нижней части представления вида Form каждого курса теперь есть цепочка сообщений и возможность для пользователей системы оставлять их, так же разрешать уведомления или отменить их по обсуждениям связанных с конкретными курсами.</p></section><section id="selling-courses"><h3 >Продажа курсов</h3><p >Odoo так же предоставляет модели данных для бизнеса, которые позволяют использовать или настраивать систему более детально под ваши бизнес потребности Например модуль <code >website_sale</code> позволяет настроить e-commerce сайт, который будет основан на системе производства внутри самой Odoo. Мы можем легко сделать платные подписки на курсы, объявив наши курсы специальными видами продуктов.</p><p >Вместо прежнего классического наследования это означает замену нашей модели данных course на модель данных <em >product</em>, и уже расширить саму модель данных продуктов (для того, чтобы добавить все что нам необходимо).</p><p >Прежде всего нам нужно добавить зависимость от <code >website_sale</code> чтобы мы получили как сами продукты (через <code >sale</code>) так и интерфейс ecommerce:</p><div class="pq-patch"><em >academy/__openerp__.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">,</span>
+
+    <span class="c1"># any module necessary for this one to work correctly</span>
+<span class="hll">    <span class="s1">&#39;depends&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;website_sale&#39;</span><span class="p">],</span>
+</span>
+    <span class="c1"># always loaded</span>
+    <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[</span>
+</pre></div>
+</div>
+</div></div><p >перезапустите Odoo, обновите наш модуль, теперь доступна секция <span class="guilabel">Shop</span> на веб-сайте, в которой перечислены некоторые предварительно заполненные (с помощью демонстрационных данных) продукты.</p><p >Второй шаг - заменить модель данных <em >courses</em> на `` product.template`` и добавить новую категорию продукта для курсов:</p><div class="pq-patch"><em >academy/__openerp__.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>        <span class="s1">&#39;security/ir.model.access.csv&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;templates.xml&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;views.xml&#39;</span><span class="p">,</span>
+<span class="hll">        <span class="s1">&#39;data.xml&#39;</span><span class="p">,</span>    
+</span>    <span class="p">],</span>
+    <span class="c1"># only loaded in demonstration mode</span>
+    <span class="s1">&#39;demo&#39;</span><span class="p">:</span> <span class="p">[</span>
+</pre></div>
+</div>
+</div><em >academy/data.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="hll"><span class="nt">&lt;openerp&gt;&lt;data&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">&quot;product.public.category&quot;</span> <span class="na">id=</span><span class="s">&quot;category_courses&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Courses<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;parent_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;website_sale.categ_others&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll"><span class="nt">&lt;/data&gt;&lt;/openerp&gt;</span>
+</span></pre></div>
+</div>
+</div><em >academy/demo.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span>        <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;vaughn&quot;</span> <span class="na">model=</span><span class="s">&quot;academy.teachers&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Lester Vaughn<span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/record&gt;</span>
+<span class="hll">
+</span><span class="hll">        <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;course0&quot;</span> <span class="na">model=</span><span class="s">&quot;product.template&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Course 0<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;teacher_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;padilla&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;public_categ_ids&quot;</span> <span class="na">eval=</span><span class="s">&quot;[(4, ref(&#39;academy.category_courses&#39;), False)]&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;website_published&quot;</span><span class="nt">&gt;</span>True<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;list_price&quot;</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="nt">&gt;</span>service<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;course1&quot;</span> <span class="na">model=</span><span class="s">&quot;product.template&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Course 1<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;teacher_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;padilla&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;public_categ_ids&quot;</span> <span class="na">eval=</span><span class="s">&quot;[(4, ref(&#39;academy.category_courses&#39;), False)]&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;website_published&quot;</span><span class="nt">&gt;</span>True<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;list_price&quot;</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="nt">&gt;</span>service<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;course2&quot;</span> <span class="na">model=</span><span class="s">&quot;product.template&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Course 2<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;teacher_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;vaughn&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;public_categ_ids&quot;</span> <span class="na">eval=</span><span class="s">&quot;[(4, ref(&#39;academy.category_courses&#39;), False)]&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;website_published&quot;</span><span class="nt">&gt;</span>True<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;list_price&quot;</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="nt">&gt;</span>service<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/record&gt;</span>
+</span>    <span class="nt">&lt;/data&gt;</span>
+<span class="nt">&lt;/openerp&gt;</span>
+</pre></div>
+</div>
+</div><em >academy/models.py</em><div class="pq-section"><div class="highlight-python"><div class="highlight"><pre><span></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
+    <span class="n">biography</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Html</span><span class="p">()</span>
+
+<span class="hll">    <span class="n">course_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">One2many</span><span class="p">(</span><span class="s1">&#39;product.template&#39;</span><span class="p">,</span> <span class="s1">&#39;teacher_id&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Courses&quot;</span><span class="p">)</span>
+</span>
+<span class="k">class</span> <span class="nc">Courses</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="hll">    <span class="n">_inherit</span> <span class="o">=</span> <span class="s1">&#39;product.template&#39;</span>
+</span>
+    <span class="n">teacher_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;academy.teachers&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Teacher&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><em >academy/security/ir.model.access.csv</em><div class="pq-section"><div class="highlight-guess"><div class="highlight"><pre><span></span>id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+<span class="hll">access_academy_teachers,access_academy_teachers,model_academy_teachers,,1,0,0,0
+</span></pre></div>
+</div>
+</div><em >academy/views.xml</em><div class="pq-section"><div class="highlight-xml"><div class="highlight"><pre><span></span>      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+  <span class="nt">&lt;/record&gt;</span>
+
+  <span class="nt">&lt;menuitem</span> <span class="na">sequence=</span><span class="s">&quot;0&quot;</span> <span class="na">id=</span><span class="s">&quot;menu_academy&quot;</span> <span class="na">name=</span><span class="s">&quot;Academy&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;menu_academy_content&quot;</span> <span class="na">parent=</span><span class="s">&quot;menu_academy&quot;</span>
+            <span class="na">name=</span><span class="s">&quot;Academy Content&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;menu_academy_content_teachers&quot;</span>
+            <span class="na">parent=</span><span class="s">&quot;menu_academy_content&quot;</span>
+</pre></div>
+</div>
+</div></div><p >С помощью этой установки в <span class="guilabel">Shop</span>, теперь доступно несколько курсов , хотя их, возможно, придется поискать.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><ul ><li ><p >при расширении модели данных, она наследует, <a href="../reference/orm.html#openerp.models.Model._inherit" class="internal alert-link reference" title="openerp.models.Model._inherit"><code class="py xref py-attr">inherited</code></a> без предоставления нового <a href="../reference/orm.html#openerp.models.Model._name" class="internal alert-link reference" title="openerp.models.Model._name"><code class="py xref py-attr">_name</code></a></p></li><li ><p ><code >product.template</code> уже использует систему обсуждений, поэтому мы можем удалить ее из нашей раширенной модели данных</p></li><li ><p >мы создаем наши курсы как <em >опубликованные</em> по умолчанию, поэтому их можно будет увидеть без входа в систему</p></li></ul></div></section><section id="altering-existing-views"><h3 >Изменение существующих представлений</h3><p >До сих пор мы вкратце просматривали:</p><ul ><li ><p >создание новых моделей данных</p></li><li ><p >создание новых представлений</p></li><li ><p >создание новых записей</p></li><li ><p >расширение существующих моделей данных</p></li></ul><p >Нам осталось изменить существующие записи и изменить существующие представления. Мы сделаем и то, и другое на страницах <span class="guilabel">Shop</span>.</p><p >Изменение представлений осуществляется путем создания <em >расширений</em> для представлений, которые применяются поверх первоначального представления и изменяют его. Эти изменения представлений могут быть добавлены или удалены без модификации оригинала, что упростит проверку и откат изменений.</p><p >Поскольку наши курсы бесплатны, нет причин показывать их цену на странице магазина, поэтому мы собираемся изменить представление и скрыть цену, если она равно 0. Первая задача - выяснить, какое представление отображает цену, это может быть сделано с помощью <span class="menuselection">Customize ‣ HTML Editor</span> что позволяет нам читать различные шаблоны, участвующие в рендеринге страницы. Просмотрев несколько из них, &quot;Product item&quot; выглядит наиболее вероятным для наших целей.</p><p >Изменение архитектуры представлений осуществляется в 3 этапа:</p><ol ><li ><p >Создать новое представление</p></li><li ><p >Расширить представление которые, мы хотим изменить, установив <code >inherit_id</code> нового представления во внешний идентификатор измененного представления</p></li><li ><p >В описании представления используйте тег <code >xpath</code> tagдля выбора и изменения элементов из измененного представления</p></li></ol><div class="pq-patch"><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml+django"><div class="highlight"><pre><span></span>                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/t&gt;</span>
+        <span class="nt">&lt;/template&gt;</span>
+<span class="hll">
+</span><span class="hll">        <span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;product_item_hide_no_price&quot;</span> <span class="na">inherit_id=</span><span class="s">&quot;website_sale.products_item&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;xpath</span> <span class="na">expr=</span><span class="s">&quot;//div[hasclass(&#39;product_price&#39;)]/b&quot;</span> <span class="na">position=</span><span class="s">&quot;attributes&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">&quot;t-if&quot;</span><span class="nt">&gt;</span>product.price <span class="ni">&amp;gt;</span> 0<span class="nt">&lt;/attribute&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;/xpath&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/template&gt;</span>
+</span><span class="hll">
+</span>        <span class="c">&lt;!-- &lt;template id=&quot;object&quot;&gt; --&gt;</span>
+        <span class="c">&lt;!--   &lt;h1&gt;&lt;t t-esc=&quot;object.display_name&quot;/&gt;&lt;/h1&gt; --&gt;</span>
+        <span class="c">&lt;!--   &lt;dl&gt; --&gt;</span>
+</pre></div>
+</div>
+</div></div><p >Второе, что мы изменим, это сделать боковую панель категорий продуктов видимой по умолчанию: <span class="menuselection">Customize ‣ Product Categories</span> позволяет включать и выключать дерево категорий товаров (используется для фильтрации основного экрана).</p><p >Это делается через <code >customize_show</code> и <code >active</code> полей шаблонов расширений: (например, тот, который мы только что создали) может быть <code >customize_show=True</code>. Эта инструкция позволит отобразить представление в меню <span class="guilabel">Customize</span> с чекбоксом, что позволяет администраторам активировать или убирать их (и таким образом легко кастомизировать свой сайт)</p><p >Нам просто нужно изменить запись <em >Product Categories</em> и установить ее значение по умолчанию <em >active=&quot;True&quot;</em>:</p><div class="pq-patch"><em >academy/templates.xml</em><div class="pq-section"><div class="highlight-xml+django"><div class="highlight"><pre><span></span>            <span class="nt">&lt;/xpath&gt;</span>
+        <span class="nt">&lt;/template&gt;</span>
+
+<span class="hll">        <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;website_sale.products_categories&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;active&quot;</span> <span class="na">eval=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">
+</span>        <span class="c">&lt;!-- &lt;template id=&quot;object&quot;&gt; --&gt;</span>
+        <span class="c">&lt;!--   &lt;h1&gt;&lt;t t-esc=&quot;object.display_name&quot;/&gt;&lt;/h1&gt; --&gt;</span>
+        <span class="c">&lt;!--   &lt;dl&gt; --&gt;</span>
+</pre></div>
+</div>
+</div></div><p >При этом боковая панель <em >Категории продуктов</em> будет автоматически активирована при установке модуля <em >Academy</em>.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

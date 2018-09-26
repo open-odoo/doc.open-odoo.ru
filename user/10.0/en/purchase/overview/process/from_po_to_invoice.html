@@ -1,0 +1,292 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>From purchase order to invoice and receptions &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Process Overview" href="../process.html" />
+    <link rel="next" title="Request for Quotation, Purchase Tender or Purchase Order?" href="difference.html" />
+    <link rel="prev" title="Process Overview" href="../process.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../purchase.html">Purchase</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">From purchase order to invoice and receptions</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/purchase/overview/process/from_po_to_invoice.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/purchase/overview/process/from_po_to_invoice.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/purchase/overview/process/from_po_to_invoice.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> From purchase order to invoice and receptions - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#install-the-purchase-management-application" class="ripple internal reference">Install the Purchase Management application</a></li><li class="list-group-item"><a href="#creating-a-purchase-order" class="ripple internal reference">Creating a Purchase Order</a></li><li class="list-group-item"><a href="#registering-invoice-payments-and-receiving-products" class="ripple internal reference">Registering invoice, payments and receiving products</a><ul ><li class="list-group-item"><a href="#payment-upon-or-after-reception" class="ripple internal reference">Payment upon or after reception</a></li><li class="list-group-item"><a href="#upfront-payment" class="ripple internal reference">Upfront payment</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/purchase/overview/process/from_po_to_invoice.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="from-purchase-order-to-invoice-and-receptions"><p >For most of your everyday purchases, chances are you already know where
+to purchase and at what price. For these cases, a simple Purchase Order
+(PO) will allow you to handle the whole process.</p><p >In Odoo, a purchase order can be created as is, but can also be the
+result of a Request for Quotation or of a Purchase Tender. Therefore,
+every purchase made in Odoo has a PO.</p><p >The PO will generate an invoice, and depending on the contract with your
+supplier, you will be required to pay the invoice before or after
+delivery.</p></section><section id="install-the-purchase-management-application"><h2 >Install the Purchase Management application</h2><p >From the <strong >Apps</strong> application, search and install the
+<strong >Purchase Management</strong> application.</p><img src="../../../_images/from_po_to_invoice01.png" class="img-responsive center-block"></section><section id="creating-a-purchase-order"><h2 >Creating a Purchase Order</h2><p >In the <strong >Purchases</strong> app, open the <strong >Purchase</strong> menu and
+click on <strong >Purchase Orders</strong>.</p><p >In the <strong >Purchase Orders</strong> window, click on <strong >Create</strong>.</p><img src="../../../_images/from_po_to_invoice02.png" class="img-responsive center-block"><p >From the new window, insert the <strong >Vendor</strong> and type in the <strong >Order
+Date</strong>.</p><p >In the <strong >Products</strong> section, click on <strong >Add an item</strong>.</p><img src="../../../_images/from_po_to_invoice03.png" class="img-responsive center-block"><p >Select your product from the list and add a description if necessary.</p><p >The <strong >Scheduled Date</strong> menu corresponds to the expected delivery date.</p><p >Type in the quantity which you wish to purchase, then click on <strong >Save</strong> and
+on <strong >Confirm Order</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you wish to go through the complete flow and create a <strong >Request for
+Quotation</strong> for this order, refer to the document on
+<a href="../../purchases/rfq/create.html" class="internal alert-link reference"><span class="doc">How to create a Request for Quotation?</span></a></p></div><p >As you can see, the status of the PO has switched to <code >Purchase Order</code>.</p><img src="../../../_images/from_po_to_invoice04.png" class="img-responsive center-block"></section><section id="registering-invoice-payments-and-receiving-products"><h2 >Registering invoice, payments and receiving products</h2><p >Depending on the contract you have with your supplier, you can either
+pay for the purchase upon delivery of the goods, or get the goods
+delivered after payment.</p></section><section id="payment-upon-or-after-reception"><h3 >Payment upon or after reception</h3><p >Still from your purchase order, click on <strong >Receive Products</strong>.</p><p >In the next page, check that the number of products received corresponds
+to the number ordered, then manually enter the delivered quantity and
+click on <strong >Validate</strong>.</p><img src="../../../_images/from_po_to_invoice05.png" class="img-responsive center-block"><p >Go back to the PO. In the PO, a <strong >Shipment</strong> and an <strong >Invoice</strong> button have
+appeared.</p><img src="../../../_images/from_po_to_invoice06.png" class="img-responsive center-block"><p >Click on the <strong >Invoices</strong> button, then click on <strong >Validate</strong>.
+The invoice is now registered in the system. Click on <strong >Register Payment</strong>,
+insert the detail of the payment, and click on <strong >Validate</strong>.</p><img src="../../../_images/from_po_to_invoice07.png" class="img-responsive center-block"><p >Your products are now ready for picking and storage, and the invoice is
+marked as paid.</p></section><section id="upfront-payment"><h3 >Upfront payment</h3><p >From the <strong >Purchase Order</strong> page, open the <strong >Invoices</strong> tab, then click on
+<strong >Create</strong>.</p><p >In the next page, click on <strong >Validate</strong>. The invoice is now registered in
+the system. Click on <strong >Register Payment</strong>, insert the detail of the payment,
+and click on <strong >Validate</strong>.</p><img src="../../../_images/from_po_to_invoice08.png" class="img-responsive center-block"><p >Go back to the PO. In the PO, a <strong >Shipment</strong> tab and an <strong >Invoice</strong> tab have
+appeared.</p><img src="../../../_images/from_po_to_invoice09.png" class="img-responsive center-block"><p >Click on <strong >Receive Products</strong>, then in the new page, click on <strong >Validate</strong>.</p><img src="../../../_images/from_po_to_invoice10.png" class="img-responsive center-block"><p >A window will appear, asking if you wish to process every item at once.
+Click on <strong >Apply</strong>.</p><p >Your products are now ready for picking and storage, and the invoice is
+marked as paid.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

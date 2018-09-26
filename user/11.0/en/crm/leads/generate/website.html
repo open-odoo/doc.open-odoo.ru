@@ -1,0 +1,348 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to generate leads from my website? &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Generate leads" href="../generate.html" />
+    <link rel="next" title="Manage leads" href="../manage.html" />
+    <link rel="prev" title="How to generate leads from incoming emails?" href="emails.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../crm.html">CRM</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to generate leads from my website?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/crm/leads/generate/website.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/crm/leads/generate/website.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/crm/leads/generate/website.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to generate leads from my website? - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#activate-the-lead-stage" class="ripple internal reference">Activate the lead stage</a></li><li class="list-group-item"><a href="#from-an-odoo-website" class="ripple internal reference">From an Odoo Website</a><ul ><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#create-a-lead-by-using-the-contact-form-module" class="ripple internal reference">Create a lead by using the Contact Form module</a></li><li class="list-group-item"><a href="#create-a-lead-using-the-form-builder-module" class="ripple internal reference">Create a lead using the Form builder module</a></li></ul></li><li class="list-group-item"><a href="#from-another-cms" class="ripple internal reference">From another CMS</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/crm/leads/generate/website.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-generate-leads-from-my-website"><p >Your website should be your company's first lead generation tool. With
+your website being the central hub of your online marketing campaigns,
+you will naturally drive qualified traffic to feed your pipeline. When a
+prospect lands on your website, your objective is to capture his
+information in order to be able to stay in touch with him and to push
+him further down the sales funnel.</p><p >This is how a typical online lead generation process work :</p><ul ><li >Your website visitor clicks on a call-to action (CTA) from one of
+your marketing materials (e.g. an email newsletter, a social
+media message or a blog post)</li><li >The CTA leads your visitor to a landing page including a form used to
+collect his personal information (e.g. his name, his email
+address, his phone number)</li><li >The visitor submits the form and automatically generates a lead into
+Odoo CRM</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Your calls-to-action, landing pages and forms are the key pieces of the lead
+generation process. With Odoo Website, you can easily create and optimize
+those critical elements without having to code or to use third-party
+applications. Learn more <a href="https://www.odoo.com/page/website-builder" class="external reference alert-link">here</a>.</p></div><p >In Odoo, the Website and CRM modules are fully integrated, meaning that
+you can easily generate leads from various ways through your website.
+However, even if you are hosting your website on another CMS, it is
+still possible to fill Odoo CRM with leads generated from your website.</p></section><section id="activate-the-lead-stage"><h2 >Activate the lead stage</h2><p >By default, the lead stage is not activated in Odoo CRM. Therefore, new
+leads automatically become opportunities. You can easily activate the
+option of adding the lead step. If you want to import your contacts as
+leads rather than opportunities, from the Sales module go to
+<span class="menuselection">Configuration ‣ Settings</span>, select the option <strong >use leads
+if…</strong> as shown below and click on <strong >Apply</strong>.</p><img src="../../../_images/website01.jpg" class="img-responsive center-block"><p >Note that even without activating this step, the information that
+follows is still applicable - the lead generated will land in the
+opportunities dashboard.</p></section><section id="from-an-odoo-website"><h2 >From an Odoo Website</h2><p >Let's assume that you want to get as much information as possible about
+your website visitors. But how could you make sure that every person who
+wants to know more about your company's products and services is
+actually leaving his information somewhere? Thanks to Odoo's integration
+between its CRM and Website modules, you can easily automate your lead
+acquisition process thanks to the <strong >contact form</strong> and the <strong >form builder</strong>
+modules</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >another great way to generate leads from your Odoo Website is by collecting
+your visitors email addresses thanks to the Newsletter or Newsletter Popup
+CTAs. These snippets will create new contacts in your Email Marketing's
+mailing list. Learn more <a href="https://www.odoo.com/page/email-marketing" class="external reference alert-link">here</a>.</p></div></section><section id="configuration"><h3 >Configuration</h3><p >Start by installing the Website builder module. From the main dashboard,
+click on <strong >Apps</strong>, enter &quot;<strong >Website</strong>&quot; in the search bar and click on <strong >Install</strong>.
+You will be automatically redirected to the web interface.</p><img src="../../../_images/website02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >A tutorial popup will appear on your screen if this is the first time you
+use Odoo Website. It will help you get started with the tool and you'll be
+able to use it in minutes. Therefore, we strongly recommend you to use it.</p></div></section><section id="create-a-lead-by-using-the-contact-form-module"><h3 >Create a lead by using the Contact Form module</h3><p >You can effortlessly generate leads via a contact form on your <strong >Contact
+us</strong> page. To do so, you first need to install the Contact Form module.
+It will add a contact form in your <strong >Contact us</strong> page and automatically
+generate a lead from forms submissions.</p><p >To install it, go back to the backend using the square icon on the
+upper-left corner of your screen. Then, click on <strong >Apps</strong>, enter
+&quot;<strong >Contact Form</strong>&quot; in the search bar (don't forget to remove the <strong >Apps</strong> tag
+otherwise you will not see the module appearing) and click on <strong >Install</strong>.</p><img src="../../../_images/website03.png" class="img-responsive center-block"><p >Once the module is installed, the below contact form will be integrated
+to your &quot;Contact us&quot; page. This form is linked to Odoo CRM, meaning that
+all data entered through the form will be captured by the CRM and will
+create a new lead.</p><img src="../../../_images/website04.jpg" class="img-responsive center-block"><p >Every lead created through the contact form is accessible in the Sales
+module, by clicking on <span class="menuselection">Sales ‣ Leads</span>. The name of the lead corresponds
+to the &quot;Subject&quot; field on the contact form and all the other information
+is stored in the corresponding fields within the CRM. As a salesperson,
+you can add additional information, convert the lead into an opportunity
+or even directly mark it as Won or Lost.</p><img src="../../../_images/website05.jpg" class="img-responsive center-block"></section><section id="create-a-lead-using-the-form-builder-module"><h3 >Create a lead using the Form builder module</h3><p >You can create fully-editable custom forms on any landing page on your
+website with the Form Builder snippet. As for the Contact Form module,
+the Form Builder will automatically generate a lead after the visitor
+has completed the form and clicked on the button <strong >Send</strong>.</p><p >From the backend, go to Settings and install the
+&quot;<strong >Website Form Builder</strong>&quot; module (don't forget to remove the <strong >Apps</strong> tag
+otherwise you will not see the modules appearing). Then, back on the
+website, go to your desired landing page and click on Edit to access
+the available snippets. The Form Builder snippet lays under the
+<strong >Feature</strong> section.</p><img src="../../../_images/website06.png" class="img-responsive center-block"><p >As soon as you have dropped the snippet where you want the form to
+appear on your page, a <strong >Form Parameters</strong> window will pop up. From the
+<strong >Action</strong> drop-down list, select <strong >Create a lead</strong> to automatically
+create a lead in Odoo CRM. On the <strong >Thank You</strong> field, select the URL of
+the page you want to redirect your visitor after the form being
+submitted (if you don't add any URL, the message &quot;The form has been
+sent successfully&quot; will confirm the submission).</p><img src="../../../_images/website07.png" class="img-responsive center-block"><p >You can then start creating your custom form. To add new fields, click
+on <strong >Select container block</strong> and then on the blue <strong >Customize</strong> button. 3
+options will appear:</p><img src="../../../_images/website08.png" class="img-responsive center-block"><ul ><li ><strong >Change Form Parameters</strong>: allows you to go back to the Form
+Parameters and change the configuration</li><li ><strong >Add a model field</strong>: allows you to add a field already existing in
+Odoo CRM from a drop-down list. For example, if you select the
+Field <em >Country</em>, the value entered by the lead will appear under
+the <em >Country</em> field in the CRM - even if you change the name of
+the field on the form.</li><li ><strong >Add a custom field</strong>: allows you to add extra fields that don't exist
+by default in Odoo CRM. The values entered will be added under
+&quot;Notes&quot; within the CRM. You can create any field type : checkbox,
+radio button, text, decimal number, etc.</li></ul><p >Any submitted form will create a lead in the backend.</p></section><section id="from-another-cms"><h2 >From another CMS</h2><p >If you use Odoo CRM but not Odoo Website, you can still automate your
+online lead generation process using email gateways by editing the
+&quot;Submit&quot; button of any form and replacing the hyperlink by a mailto
+corresponding to your email alias (learn how to create your sales alias
+<a href="emails.html" class="internal reference"><span class="doc">here</span></a>).</p><p >For example if the alias of your company is
+<strong >salesEMEA@mycompany.com</strong>, add
+<code >mailto:salesEMEA@mycompany.com</code>
+into the regular hyperlink code (CTRL+K) to generate a lead into the
+related sales team in Odoo CRM.</p><img src="../../../_images/website09.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="manual.html" class="internal alert-link reference"><span class="doc">How to create a contact into Odoo CRM?</span></a></li><li ><a href="import.html" class="internal alert-link reference"><span class="doc">How to import contacts to the CRM?</span></a></li><li ><a href="emails.html" class="internal alert-link reference"><span class="doc">How to generate leads from incoming emails?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

@@ -1,0 +1,366 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Branches &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../index.html" />
+    <link rel="up" title="Get started" href="../getting_started.html" />
+    <link rel="next" title="Builds" href="builds.html" />
+    <link rel="prev" title="Create your project" href="create.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../documentation.html">Odoo.sh</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Branches</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/en/odoo_sh/getting_started/branches.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/odoo_sh/getting_started/branches.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/ru/odoo_sh/getting_started/branches.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/ru/">Пользователю</a></li>
+<li><a href="/developer/11.0/ru/">Разработчику</a></li>
+<li><a href="/developer/11.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../../_static/banners/odoo-sh.jpg');"></span>
+      <div class="container text-center">
+        <h1> Branches - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#stages" class="ripple internal reference">Stages</a><ul ><li class="list-group-item"><a href="#production" class="ripple internal reference">Production</a></li><li class="list-group-item"><a href="#staging" class="ripple internal reference">Staging</a></li><li class="list-group-item"><a href="#development" class="ripple internal reference">Development</a></li><li class="list-group-item"><a href="#merging-your-branches" class="ripple internal reference">Merging your branches</a></li></ul></li><li class="list-group-item"><a href="#tabs" class="ripple internal reference">Tabs</a><ul ><li class="list-group-item"><a href="#history" class="ripple internal reference">History</a></li><li class="list-group-item"><a href="#mails" class="ripple internal reference">Mails</a></li><li class="list-group-item"><a href="#shell" class="ripple internal reference">Shell</a></li><li class="list-group-item"><a href="#logs" class="ripple internal reference">Logs</a></li><li class="list-group-item"><a href="#backups" class="ripple internal reference">Backups</a></li><li class="list-group-item"><a href="#settings" class="ripple internal reference">Settings</a></li></ul></li><li class="list-group-item"><a href="#git-commands" class="ripple internal reference">Git commands</a><ul ><li class="list-group-item"><a href="#clone" class="ripple internal reference">Clone</a></li><li class="list-group-item"><a href="#fork" class="ripple internal reference">Fork</a></li><li class="list-group-item"><a href="#merge" class="ripple internal reference">Merge</a></li><li class="list-group-item"><a href="#submodule" class="ripple internal reference">Submodule</a></li><li class="list-group-item"><a href="#delete" class="ripple internal reference">Delete</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/odoo_sh/getting_started/branches.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="branches"></section><section id="overview"><h2 >Overview</h2><p >The branches view gives you an overview of the different branches your repository has.</p><img src="../../_images/interface-branches.png" class="img-responsive center-block"></section><section id="stages"><i id="odoosh-gettingstarted-branches-stages"></i><h2 >Stages</h2><p >Odoo.sh offers three different stages for your branches: production, staging and development.</p><p >You can change the stage of a branch by drag and dropping it on the stage section title.</p><img src="../../_images/interface-branches-stagechange.png" class="img-responsive center-block"></section><section id="production"><i id="stage-production"></i><h3 >Production</h3><p >This is the branch holding the code on which your production database run.
+There can be only one production branch.</p><p >When you push a new commit in this branch,
+your production server is updated with the code of the new revision and is then restarted.</p><p >If your changes require the update of a module, such as a change in a form view,
+and you want it to be performed automatically,
+increase the version number of the module in its manifest (<em >__manifest__.py</em>).
+The platform will then take care to perform the update during which the
+instance will be held temporarily unavailable for maintenance reason.</p><p >This method is equivalent to perform an upgrade of the module through the Apps menu,
+or through the <code class="code">-u</code> switch of
+<a href="https://www.odoo.com/documentation/11.0/reference/cmdline.html" class="external reference">the command line</a>.</p><p >In the case the changes in the commit prevent the server to restart,
+or if the modules update fails,
+the server is automatically reverted to the previous successful code revision and
+the database is roll-backed as it was before the update.
+You still have access to the log of the failed update, so you can troubleshoot it.</p><p >The demo data is not loaded, as it is not meant to be used in a production database.
+The unit tests are not performed, as it would increase the unavailabity time of the production database during the updates.</p><p >Partners using trial projects should be aware their production branch, along with all the staging branches,
+will automatically be set back to the development stage after 15 days.</p></section><section id="staging"><h3 >Staging</h3><p >Staging branches are meant to test your new features using the production data.</p><p >Pushing a new commit in one of these branches will either
+* start a new server, using a duplicate of the production database and the new revision of the branch
+* or update the previous database running on the branch,
+depending on the push behaviour configured in the <a href="#odoosh-gettingstarted-branches-tabs-settings" class="internal reference"><span class="std std-ref">branch's settings</span></a>.</p><p >You can therefore test your latest features using the production data without compromising the actual
+production database with test records.</p><p >The outgoing emails are not sent: They are intercepted by the mailcatcher,
+which provides an interface to preview the emails sent by your database.
+That way, you do not have to worry about sending test emails to your contacts.</p><p >Scheduled actions are disabled. If you want to test them, you have to enable them or trigger their action manually.
+Be careful though: If these actions perform changes on third-party services (FTP servers, email servers, ...)
+used by your production database as well, you might cause unwanted changes in your production.</p><p >The latest database will be kept alive indefinitely, older ones may get garbage collected automatically.
+If you make configuration changes or view changes in these branches, make sure to document them or write them directly
+in the modules of the branch, using XML data files overriding the default configuration or views.</p><p >The unit tests are not performed as, in Odoo, they currently rely on the demo data, which is not loaded in the
+production database. In the future, if Odoo supports to run the unit tests without the demo data,
+Odoo.sh will then consider running the tests on staging databases.</p></section><section id="development"><h3 >Development</h3><p >Development branches create new databases using the demo data to run the unit tests.
+The modules installed and tested by default are the ones included in your branches.
+You can change this list of modules to install in your projects settings.</p><p >When you push a new commit in one of these branches,
+a new server is started, with a database created from scratch and the new revision of the branch.
+The demo data is loaded, and the unit tests are performed.
+This verifies your changes do not break any of the features tested by them.</p><p >Similar to staging branches, the emails are not sent: They are intercepted by the mailcatcher.</p><p >The databases created for development branches are meant to live around three days.
+After that, they can be garbage collected automatically.</p></section><section id="merging-your-branches"><i id="odoosh-gettingstarted-branches-mergingbranches"></i><h3 >Merging your branches</h3><p >You can merge your branches easily by drag and dropping them on each other.</p><img src="../../_images/interface-branches-merge.png" class="img-responsive center-block"><p >When you want to test the changes of your development branches with the production data,
+you can either:</p><ul ><li >merge the development branch into your staging branch, by drag and dropping it onto the desired staging branch,</li><li >drag and dropping the development branch on the staging section title, to make it become a staging branch.</li></ul><p >When your latest changes are ready for production,
+you can drag and drop your staging branch onto your production branch
+to merge and deploy in production your newest features.</p><p >If you are bold enough,
+you can merge your development branches into your production branch as well.
+It just means you skip the validation of your changes with the production data through a staging branch.</p><p >You can merge your development branches into each other, and your staging branches into each other.</p><p >Of course, you can also use <code class="code">git merge</code> directly on your workstation to merge your branches.
+Odoo.sh will be notified when new revisions have been pushed in your branches.</p><p >Merging a staging branch in the production branch only merges the source code: Any configuration changes you made in the
+staging databases are not passed to the production database.</p><p >If you test configuration changes in staging branches, and want them to be applied in the production, you have to either:</p><ul ><li >write the configuration changes in XML data files
+overriding the default configuration or views in your branches,
+and then increase the version of your module in its manifest (<em >__manifest__.py</em>) to trigger the update of the module
+when you merge your staging branch in your production branch.
+This is the best practice for a better scalability of your developments as you will use the Git versioning features
+for all your configuration changes, and therefore have a traceability for your changes.</li><li >pass them manually from your staging to your production database, by copy/pasting them.</li></ul></section><section id="tabs"><i id="odoosh-gettingstarted-branches-tabs"></i><h2 >Tabs</h2></section><section id="history"><h3 >History</h3><p >An overview of your branch history:</p><ul ><li >The messages of the commits and their authors,</li><li >The various events linked to the platform, such as stage changes, database imports, backup restores.</li></ul><img src="../../_images/interface-branches-history.png" class="img-responsive center-block"><p >For each event, a status is displayed in the top right-hand corner.
+It can provide information about the ongoing operation on the database (installation, update, backup import, ...),
+or its result (tests feedback, successful backup import, ...).
+When an operation is successful, you can access the database thanks to the <em >connect</em> button.</p></section><section id="mails"><h3 >Mails</h3><p >This tab contains the mail catcher. It displays an overview of the emails sent by your database.
+The mail catcher is available for your development and
+staging branches as the emails of your production database are really sent instead of being intercepted.</p><a href="../../_images/interface-branches-mails.png" class="internal reference"><img src="../../_images/interface-branches-mails.png" class="img-responsive center-block"></a></section><section id="shell"><h3 >Shell</h3><p >A shell access to your container. You can perform basic linux command (<code class="code">ls</code>, <code class="code">top</code>)
+and open a shell on your database by typing <code class="code">psql</code>.</p><img src="../../_images/interface-branches-shell.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Long running shell instances are not guaranteed. Idle shells can be
+disconnected at anytime in order to free up resources.</p></div></section><section id="logs"><h3 >Logs</h3><p >A viewer to have a look to your server logs.</p><img src="../../_images/interface-branches-logs.png" class="img-responsive center-block"><p >Different logs are available:</p><ul ><li >install.log: The logs of the database installation. In a development branch, the logs of the tests are included.</li><li >pip.log: The logs of the Python dependencies installation.</li><li >odoo.log: The logs of the running server.</li><li >update.log: The logs of the database updates. This is available only for the production database.</li></ul><p >If new lines are added in the logs, they will be displayed automatically.
+If you scroll to the bottom, the browser will scroll automatically each time a new line is added.</p><p >You can pause the logs fetching by clicking on the according button in the upper right corner of the view.
+The fetching is automatically stopped after 5 minutes. You can restart it using the play button.</p></section><section id="backups"><h3 >Backups</h3><p >A list of the backups available for download and restore, the ability to perform a manual backup and to import a
+database.</p><img src="../../_images/interface-branches-backups.png" class="img-responsive center-block"><p >Odoo.sh makes daily backups of the production database. It keeps 7 daily, 4 weekly and 3 monthly backups.
+Each backup includes the database dump, the filestore (attachments, binary fields), logs and sessions.</p><p >Staging and development databases are not backed up.
+You nevertheless have the possibility to restore a backup of the production database in your staging branches, for
+testing purposes, or to manually recover data that has been deleted by accident from the production database.</p><p >The list contains the backups kept on the server your production database is hosted on.
+This server only keeps one month of backups: 7 daily and 4 weekly backups.</p><p >Dedicated backup servers keep the same backups, as well as 3 additional monthly backups.
+To restore or download one of these monthly backups, please <a href="https://www.odoo.com/help" class="external reference">contact us</a>.</p><p >You can make a backup manually before making big changes in your production database in case something goes wrong.
+To avoid abuse, we limit manual backups to 5 per day.</p><p >The <em >import database</em> feature accepts database archives in the format provided by:</p><ul ><li >the standard Odoo databases manager,
+(available for on-premise Odoo servers under <code class="code">/web/database/manager</code>)</li><li >the Odoo online databases manager,</li><li >the Odoo.sh backup download button of this <em >Backups</em> tab,</li><li >the Odoo.sh dump download button in the <a href="builds.html#odoosh-gettingstarted-builds" class="internal reference"><span class="std std-ref">Builds view</span></a>.</li></ul></section><section id="settings"><i id="odoosh-gettingstarted-branches-tabs-settings"></i><h3 >Settings</h3><p >Here you can find a couple of settings that only apply to the currently selected branch.</p><img src="../../_images/interface-branches-settings.png" class="img-responsive center-block"><p ><strong >Mute Branch</strong></p><p >You have the possibility to mute a branch, so that new commits won't trigger builds on Odoo.sh. You can activate this
+should you have branches that are used for other purposes than on Odoo.sh. By default, when creating a project from an
+existing repository, all branches except the default branch are muted.</p><p ><strong >Push Behavior</strong></p><p >You can change the branch's behavior upon receiving a new commit. By default, it will create a new build, but you can
+choose to have it update your previous build same as for your production branch (see the
+<a href="#stage-production" class="internal reference"><span class="std std-ref">Production Stage</span></a>). This is especially useful should the feature you're working on require a
+particular setup or configuration, to avoid having to manually set it up again on every commit.</p><p ><strong >Odoo Version</strong></p><p >For development branches only, you can change the version of Odoo, should you want to test upgraded code or develop
+features while your production database is in the process of being upgraded to a newer version.</p><p >The production branch has no settings. It can't be muted, will always update the existing production database and will
+run on the project's version of Odoo. If you want to upgrade your production to a newer version please refer to the
+<a href="../advanced/upgrade_your_database.html#odoosh-advanced-upgrade-your-database" class="internal reference"><span class="std std-ref">Upgrade section</span></a>.</p></section><section id="git-commands"><h2 >Git commands</h2><p >In the top right-hand corner of the view, different Git commands are available.</p><img src="../../_images/interface-branches-gitcommands.png" class="img-responsive center-block"><p >Each command can be copied in the clipboard to be used in a terminal,
+and some of them can be used directly from Odoo.sh by clicking the <em >run</em> button
+in such case a popup will prompt the user in order to define eventual placeholders
+such as <code >&lt;URL&gt;</code>, <code >&lt;PATH&gt;</code>, ...</p></section><section id="clone"><h3 >Clone</h3><p >Download the Git repository.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git clone --recurse-submodules --branch master git@github.com:odoo/odoo.git
+</pre></div>
+</div>
+<p >Clones the repository <em >odoo/odoo</em>.</p><ul ><li ><code class="code">--recurse-submodules</code>: Downloads the submodules of your repository. Submodules included in the submodules are downloaded as well.</li><li ><code class="code">--branch</code>: checks out a specific branch of the repository, in this case <em >master</em>.</li></ul><p >The <em >run</em> button is not available for this command, as it is meant to be used on your machines.</p></section><section id="fork"><h3 >Fork</h3><p >Create a new branch based on the current branch.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git checkout -b feature-1 master
+</pre></div>
+</div>
+<p >Creates a new branch called <em >feature-1</em> based on the branch <em >master</em>, and then checkouts it.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git push -u origin feature-1
+</pre></div>
+</div>
+<p >Uploads the new branch <em >feature-1</em> on your remote repository.</p></section><section id="merge"><h3 >Merge</h3><p >Merge the current branch in another branch.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git merge staging-1
+</pre></div>
+</div>
+<p >Merges the branch <em >staging-1</em> in the current branch.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git push -u origin master
+</pre></div>
+</div>
+<p >Uploads the changes you just added in the <em >master</em> branch on your remote repository.</p></section><section id="submodule"><h3 >Submodule</h3><p >Add a branch from another repository in your current branch as a <em >submodule</em>.</p><p ><em >Submodules</em> allows you to use modules from other repositories in your project.</p><p >The submodules feature is detailed in the chapter
+<a href="../advanced/submodules.html#odoosh-advanced-submodules" class="internal reference"><span class="std std-ref">Submodules</span></a> of this documentation.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git submodule add -b master &lt;URL&gt; &lt;PATH&gt;
+</pre></div>
+</div>
+<p >Adds the branch <em >master</em> of the repository <em >&lt;URL&gt;</em> as a submodule under the path <em >&lt;PATH&gt;</em> in your current branch.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git commit -a
+</pre></div>
+</div>
+<p >Commits all your current changes.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git push -u origin master
+</pre></div>
+</div>
+<p >Uploads the changes you just added in the <em >master</em> branch on your remote repository.</p></section><section id="delete"><h3 >Delete</h3><p >Delete a branch from your repository.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git push origin :master
+</pre></div>
+</div>
+<p >Deletes the branch in your remote repository.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git branch -D master
+</pre></div>
+</div>
+<p >Deletes the branch in your local copy of the repository.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

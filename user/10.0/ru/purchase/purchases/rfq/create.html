@@ -1,0 +1,289 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to create a Request for Quotation? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Request for Quotations" href="../rfq.html" />
+    <link rel="next" title="How to control supplier bills?" href="bills.html" />
+    <link rel="prev" title="Request for Quotations" href="../rfq.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../purchase.html">Закупки</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to create a Request for Quotation?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/purchase/purchases/rfq/create.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/purchase/purchases/rfq/create.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/ru/purchase/purchases/rfq/create.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/ru/">Пользователю</a></li>
+<li><a href="/developer/10.0/ru/">Разработчику</a></li>
+<li><a href="/developer/10.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to create a Request for Quotation? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#creating-a-request-for-quotation" class="ripple internal reference">Creating a Request for Quotation</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/purchase/purchases/rfq/create.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-create-a-request-for-quotation"><p >A Request for Quotation (RfQ) is used when you plan to purchase some
+products and you would like to receive a quote for those products. In
+Odoo, the Request for Quotation is used to send your list of desired
+products to your supplier. Once your supplier has answered your request,
+you can choose to go ahead with the offer and purchase or to turn down
+the offer.</p><p >For more information on best uses, please read the chapter
+<a href="../../overview/process/difference.html" class="internal reference"><span class="doc">Запрос коммерческого предложения, Тендер или Заказ поставщику?</span></a></p></section><section id="configuration"><h2 >Настройка</h2></section><section id="creating-a-request-for-quotation"><h3 >Creating a Request for Quotation</h3><p >In the Purchases module, open <span class="menuselection">Purchase ‣ Requests for Quotation</span>
+and click on <strong >Create</strong>.</p><img src="../../../_images/image042.png" class="img-responsive center-block"><p >Select your supplier in the <strong >Vendor</strong> menu, or create it on-the-fly by
+clicking on <strong >Create and Edit</strong>. In the <strong >Order Date</strong> field, select
+the date to which you wish to proceed to the actual order.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Receipt</div><div class="code-field-body"><div class="line-block"><div class="line">Incoming Shipments</div></div></div></div><div class="code-field"><div class="code-field-name">Vendor Reference</div><div class="code-field-body"><div class="line-block"><div class="line">Reference of the sales order or bid sent by the vendor. It's used to do the matching when you receive the products as this reference is usually written on the delivery order sent by your vendor.</div></div></div></div><div class="code-field"><div class="code-field-name">Order Date</div><div class="code-field-body"><div class="line-block"><div class="line">Depicts the date where the Quotation should be validated and converted into a purchase order.</div></div></div></div><div class="code-field"><div class="code-field-name">Source Document</div><div class="code-field-body"><div class="line-block"><div class="line">Reference of the document that generated this purchase order request (e.g. a sales order)</div></div></div></div><div class="code-field"><div class="code-field-name">Deliver To</div><div class="code-field-body"><div class="line-block"><div class="line">This will determine operation type of incoming shipment</div></div></div></div><div class="code-field"><div class="code-field-name">Drop Ship Address</div><div class="code-field-body"><div class="line-block"><div class="line">Put an address if you want to deliver directly from the vendor to the customer. Otherwise, keep empty to deliver to your own company.</div></div></div></div><div class="code-field"><div class="code-field-name">Destination Location Type</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used to display the Drop Ship Address</div></div></div></div><div class="code-field"><div class="code-field-name">Incoterm</div><div class="code-field-body"><div class="line-block"><div class="line">International Commercial Terms are a series of predefined commercial terms used in international transactions.</div></div></div></div></div><a href="https://demo.odoo.com?module=purchase.purchase_rfq" class="center-block reference btn-lg btn-primary external btn-block btn">View <em >Request for Quotation</em> in our Online Demonstration</a><p >In <strong >Products</strong>, click on Add an item. Select the product you wish to order
+in the <strong >Product</strong> menu. Specify the <strong >Quantity</strong> by inserting the
+number and selecting the unit of measure. In the <strong >Unit Price</strong> field,
+specify the price you would like to be offered (you can also leave the
+field blank if you don't know what the price should be) , and add the
+expected delivery date in the Scheduled Date field. Click on <strong >Save</strong>, then
+<strong >Print Rfq</strong> or <strong >Send Rfq by email</strong> (make sure an email address is specified
+for this supplier or enter a new one).</p><img src="../../../_images/image081.png" class="img-responsive center-block"><p >After having clicked on <strong >Send</strong>, you will notice that the RFQ's status will
+switch from <strong >Draft</strong> to <strong >RFQ Sent</strong>.</p><img src="../../../_images/image061.png" class="img-responsive center-block"><p >Once your supplier has replied with an offer, update the RfQ by clicking
+on <strong >Edit</strong> to fit the quotation (prices, taxes, expected delivery lead
+time, payment terms, etc.), then click on <strong >Save</strong> to issue a Purchase
+Order.</p><p >To proceed with the order, click on <strong >Confirm Order</strong> to send the order to
+the supplier. The RfQ's status will switch to <strong >Purchase Order</strong>.</p><img src="../../../_images/image111.png" class="img-responsive center-block"><p >The status of the RfQ will change to PURCHASE ORDER. Tabs in the upper
+right corner of the order will show 1 Shipment and 0 Invoice.</p><img src="../../../_images/image10.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><p ><a href="../../overview/process/from_po_to_invoice.html" class="internal alert-link reference"><span class="doc">От формирования заказа поставщику до получения счета и приема товара</span></a></p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

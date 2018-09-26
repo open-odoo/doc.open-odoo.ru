@@ -1,0 +1,551 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>QWeb &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="Javascript" href="javascript.html" />
+    <link rel="prev" title="Web Controllers" href="http.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">QWeb</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/reference/qweb.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/en/reference/qweb.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/en/reference/qweb.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/en/reference/qweb.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/en/">Пользователю</a></li>
+<li><a href="/developer/8.0/en/">Разработчику</a></li>
+<li><a href="/developer/8.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/qweb.jpg');"></span>
+      <div class="container text-center">
+        <h1> QWeb - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#data-output" class="ripple internal reference">data output</a></li><li class="list-group-item"><a href="#conditionals" class="ripple internal reference">conditionals</a></li><li class="list-group-item"><a href="#loops" class="ripple internal reference">loops</a></li><li class="list-group-item"><a href="#attributes" class="ripple internal reference">attributes</a></li><li class="list-group-item"><a href="#setting-variables" class="ripple internal reference">setting variables</a></li><li class="list-group-item"><a href="#calling-sub-templates" class="ripple internal reference">calling sub-templates</a></li><li class="list-group-item"><a href="#python" class="ripple internal reference">Python</a><ul ><li class="list-group-item"><a href="#exclusive-directives" class="ripple internal reference">Exclusive directives</a><ul ><li class="list-group-item"><a href="#asset-bundles" class="ripple internal reference">asset bundles</a></li><li class="list-group-item"><a href="#smart-records-fields-formatting" class="ripple internal reference">&quot;smart records&quot; fields formatting</a></li></ul></li><li class="list-group-item"><a href="#debugging" class="ripple internal reference">debugging</a></li><li class="list-group-item"><a href="#helpers" class="ripple internal reference">Helpers</a><ul ><li class="list-group-item"><a href="#request-based" class="ripple internal reference">Request-based</a></li><li class="list-group-item"><a href="#view-based" class="ripple internal reference">View-based</a></li></ul></li><li class="list-group-item"><a href="#api" class="ripple internal reference">API</a></li></ul></li><li class="list-group-item"><a href="#javascript" class="ripple internal reference">Javascript</a><ul ><li class="list-group-item"><a href="#id3" class="ripple internal reference">Exclusive directives</a><ul ><li class="list-group-item"><a href="#defining-templates" class="ripple internal reference">defining templates</a></li><li class="list-group-item"><a href="#template-inheritance" class="ripple internal reference">template inheritance</a></li></ul></li><li class="list-group-item"><a href="#id4" class="ripple internal reference">debugging</a></li><li class="list-group-item"><a href="#id5" class="ripple internal reference">Helpers</a></li><li class="list-group-item"><a href="#id6" class="ripple internal reference">API</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/qweb.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="qweb"><i id="reference-qweb"></i><p >QWeb is the primary <a href="http://en.wikipedia.org/wiki/Template_processor" class="external reference">templating</a> engine used by Odoo<a href="#othertemplates" class="footnote-ref" id="id1">2</a>. It
+is an XML templating engine<a href="#genshif" class="footnote-ref" id="id2">1</a> and used mostly to generate <a href="http://en.wikipedia.org/wiki/HTML" class="external reference">HTML</a>
+fragments and pages.</p><p >Template directives are specified as XML attributes prefixed with <code >t-</code>,
+for instance <code >t-if</code> for <a href="#reference-qweb-conditionals" class="internal reference"><span class="std std-ref">conditionals</span></a>, with elements
+and other attributes being rendered directly.</p><p >To avoid element rendering, a placeholder element <code >&lt;t&gt;</code> is also available,
+which executes its directive but doesn't generate any output in and of
+itself:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-if=</span><span class="s">&quot;condition&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Test<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+</pre></div>
+</div>
+<p >will result in:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;</span>Test<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p >if <code >condition</code> is true, but:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div</span> <span class="na">t-if=</span><span class="s">&quot;condition&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Test<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p >will result in:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Test<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</section><section id="data-output"><i id="reference-qweb-output"></i><h2 >data output</h2><p >QWeb has a primary output directive which automatically HTML-escape its
+content limiting <a href="http://en.wikipedia.org/wiki/Cross-site_scripting" class="external reference">XSS</a> risks when displaying user-provided content: <code >esc</code>.</p><p ><code >esc</code> takes an expression, evaluates it and prints the content:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;value&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p >rendered with the value <code >value</code> set to <code >42</code> yields:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;</span>42<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p >There is one other output directive <code >raw</code> which behaves the same as
+respectively <code >esc</code> but <em >does not HTML-escape its output</em>. It can be useful
+to display separately constructed markup (e.g. from functions) or already
+sanitized user-provided markup.</p></section><section id="conditionals"><i id="reference-qweb-conditionals"></i><h2 >conditionals</h2><p >QWeb has a conditional directive <code >if</code>, which evaluates an expression given
+as attribute value:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-if=</span><span class="s">&quot;condition&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>ok<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p >The element is rendered if the condition is true:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>ok<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p >but if the condition is false it is removed from the result:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p >The conditional rendering applies to the bearer of the directive, which does
+not have to be <code >&lt;t&gt;</code>:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">t-if=</span><span class="s">&quot;condition&quot;</span><span class="nt">&gt;</span>ok<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p >will give the same results as the previous example.</p></section><section id="loops"><i id="reference-qweb-loops"></i><h2 >loops</h2><p >QWeb has an iteration directive <code >foreach</code> which take an expression returning
+the collection to iterate on, and a second parameter <code >t-as</code> providing the
+name to use for the &quot;current item&quot; of the iteration:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;[1, 2, 3]&quot;</span> <span class="na">t-as=</span><span class="s">&quot;i&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;i&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+</pre></div>
+</div>
+<p >will be rendered as:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;</span>1<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>2<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>3<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p >Like conditions, <code >foreach</code> applies to the element bearing the directive's
+attribute, and</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;p</span> <span class="na">t-foreach=</span><span class="s">&quot;[1, 2, 3]&quot;</span> <span class="na">t-as=</span><span class="s">&quot;i&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;i&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p >is equivalent to the previous example.</p><p ><code >foreach</code> can iterate on an array (the current item will be the current
+value), a mapping (the current item will be the current key) or an integer
+(equivalent to iterating on an array between 0 inclusive and the provided
+integer exclusive).</p><p >In addition to the name passed via <code >t-as</code>, <code >foreach</code> provides a few other
+variables for various data points:</p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p ><code >$as</code> will be replaced by the name passed to <code >t-as</code></p></div><dl ><dt ><code class="samp"><em >$as</em>_all</code></dt><dd >the object being iterated over</dd><dt ><code class="samp"><em >$as</em>_value</code></dt><dd >the current iteration value, identical to <code >$as</code> for lists and integers,
+but for mappings it provides the value (where <code >$as</code> provides the key)</dd><dt ><code class="samp"><em >$as</em>_index</code></dt><dd >the current iteration index (the first item of the iteration has index 0)</dd><dt ><code class="samp"><em >$as</em>_size</code></dt><dd >the size of the collection if it is available</dd><dt ><code class="samp"><em >$as</em>_first</code></dt><dd >whether the current item is the first of the iteration (equivalent to
+<code class="samp"><em >$as</em>_index == 0</code>)</dd><dt ><code class="samp"><em >$as</em>_last</code></dt><dd >whether the current item is the last of the iteration (equivalent to
+<code class="samp"><em >$as</em>_index + 1 == <em >$as</em>_size</code>), requires the iteratee's size be
+available</dd><dt ><code class="samp"><em >$as</em>_parity</code></dt><dd >either <code >&quot;even&quot;</code> or <code >&quot;odd&quot;</code>, the parity of the current iteration round</dd><dt ><code class="samp"><em >$as</em>_even</code></dt><dd >a boolean flag indicating that the current iteration round is on an even
+index</dd><dt ><code class="samp"><em >$as</em>_odd</code></dt><dd >a boolean flag indicating that the current iteration round is on an odd
+index</dd></dl><p >These extra variables provided and all new variables created into the
+<code >foreach</code> are only available in the scope of the``foreach``. If the
+variable exists outside the context of the <code >foreach</code>, the value is copied
+at the end of the foreach into the global context.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;existing_variable&quot;</span> <span class="na">t-value=</span><span class="s">&quot;False&quot;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!-- existing_variable now False --&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">t-foreach=</span><span class="s">&quot;[1, 2, 3]&quot;</span> <span class="na">t-as=</span><span class="s">&quot;i&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;existing_variable&quot;</span> <span class="na">t-value=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;new_variable&quot;</span> <span class="na">t-value=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+    <span class="c">&lt;!-- existing_variable and new_variable now True --&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+
+<span class="c">&lt;!-- existing_variable always True --&gt;</span>
+<span class="c">&lt;!-- new_variable undefined --&gt;</span>
+</pre></div>
+</div>
+</section><section id="attributes"><i id="reference-qweb-attributes"></i><h2 >attributes</h2><p >QWeb can compute attributes on-the-fly and set the result of the computation
+on the output node. This is done via the <code >t-att</code> (attribute) directive which
+exists in 3 different forms:</p><dl ><dt ><code class="samp">t-att-<em >$name</em></code></dt><dd ><p >an attribute called <code >$name</code> is created, the attribute value is evaluated
+and the result is set as the attribute's value:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div</span> <span class="na">t-att-a=</span><span class="s">&quot;42&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p >will be rendered as:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div</span> <span class="na">a=</span><span class="s">&quot;42&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre></div>
+</div>
+</dd><dt ><code class="samp">t-attf-<em >$name</em></code></dt><dd ><p >same as previous, but the parameter is a <a href="../glossary.html#term-format-string" class="internal reference"><span class="std std-term xref">format string</span></a>
+instead of just an expression, often useful to mix literal and non-literal
+string (e.g. classes):</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;[1, 2, 3]&quot;</span> <span class="na">t-as=</span><span class="s">&quot;item&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">t-attf-class=</span><span class="s">&quot;row {{ item_parity }}&quot;</span><span class="nt">&gt;&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;item&quot;</span><span class="nt">/&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+</pre></div>
+</div>
+<p >will be rendered as:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;row even&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;row odd&quot;</span><span class="nt">&gt;</span>2<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;row even&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/li&gt;</span>
+</pre></div>
+</div>
+</dd><dt ><code class="samp">t-att=mapping</code></dt><dd ><p >if the parameter is a mapping, each (key, value) pair generates a new
+attribute and its value:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div</span> <span class="na">t-att=</span><span class="s">&quot;{&#39;a&#39;: 1, &#39;b&#39;: 2}&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p >will be rendered as:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div</span> <span class="na">a=</span><span class="s">&quot;1&quot;</span> <span class="na">b=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre></div>
+</div>
+</dd><dt ><code class="samp">t-att=pair</code></dt><dd ><p >if the parameter is a pair (tuple or array of 2 element), the first
+item of the pair is the name of the attribute and the second item is the
+value:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div</span> <span class="na">t-att=</span><span class="s">&quot;[&#39;a&#39;, &#39;b&#39;]&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p >will be rendered as:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div</span> <span class="na">a=</span><span class="s">&quot;b&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre></div>
+</div>
+</dd></dl></section><section id="setting-variables"><h2 >setting variables</h2><p >QWeb allows creating variables from within the template, to memoize a
+computation (to use it multiple times), give a piece of data a clearer name,
+...</p><p >This is done via the <code >set</code> directive, which takes the name of the variable
+to create. The value to set can be provided in two ways:</p><ul ><li ><p >a <code >t-value</code> attribute containing an expression, and the result of its
+evaluation will be set:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;foo&quot;</span> <span class="na">t-value=</span><span class="s">&quot;2 + 1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;foo&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p >will print <code >3</code></p></li><li ><p >if there is no <code >t-value</code> attribute, the node's body is rendered and set
+as the variable's value:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;foo&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>ok<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;t</span> <span class="na">t-esc=</span><span class="s">&quot;foo&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p >will generate <code >&amp;lt;li&amp;gt;ok&amp;lt;/li&amp;gt;</code> (the content is escaped as we
+used the <code >esc</code> directive)</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >using the result of this operation is a significant use-case for
+the <code >raw</code> directive.</p></div></li></ul></section><section id="calling-sub-templates"><h2 >calling sub-templates</h2><p >QWeb templates can be used for top-level rendering, but they can also be used
+from within another template (to avoid duplication or give names to parts of
+templates) using the <code >t-call</code> directive:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;other-template&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p >This calls the named template with the execution context of the parent, if
+<code >other_template</code> is defined as:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;&lt;t</span> <span class="na">t-value=</span><span class="s">&quot;var&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p >the call above will be rendered as <code >&lt;p/&gt;</code> (no content), but:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;var&quot;</span> <span class="na">t-value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;other-template&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p >will be rendered as <code >&lt;p&gt;1&lt;/p&gt;</code>.</p><p >However this has the problem of being visible from outside the <code >t-call</code>.
+Alternatively, content set in the body of the <code >call</code> directive will be
+evaluated <em >before</em> calling the sub-template, and can alter a local context:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;other-template&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;var&quot;</span> <span class="na">t-value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+<span class="c">&lt;!-- &quot;var&quot; does not exist here --&gt;</span>
+</pre></div>
+</div>
+<p >The body of the <code >call</code> directive can be arbitrarily complex (not just
+<code >set</code> directives), and its rendered form will be available within the called
+template as a magical <code >0</code> variable:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+    This template was called with content:
+    <span class="nt">&lt;t</span> <span class="na">t-raw=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p >being called thus:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;other-template&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;em&gt;</span>content<span class="nt">&lt;/em&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+</pre></div>
+</div>
+<p >will result in:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+    This template was called with content:
+    <span class="nt">&lt;em&gt;</span>content<span class="nt">&lt;/em&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</section><section id="python"><h2 >Python</h2></section><section id="exclusive-directives"><h3 >Exclusive directives</h3></section><section id="asset-bundles"><h4 >asset bundles</h4></section><section id="smart-records-fields-formatting"><h4 >&quot;smart records&quot; fields formatting</h4><p >The <code >t-field</code> directive can only be used when performing field access
+(<code >a.b</code>) on a &quot;smart&quot; record (result of the <code >browse</code> method). It is able
+to automatically format based on field type, and is integrated in the
+website's rich text edition.</p><p ><code >t-field-options</code> can be used to customize fields, the most common option
+is <code >widget</code>, other options are field- or widget-dependent.</p></section><section id="debugging"><h3 >debugging</h3><dl ><dt ><code >t-debug</code></dt><dd ><p >invokes a debugger using PDB's <code >set_trace</code> API. The parameter should
+be the name of a module, on which a <code >set_trace</code> method is called:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-debug=</span><span class="s">&quot;pdb&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p >is equivalent to <code >importlib.import_module(&quot;pdb&quot;).set_trace()</code></p></dd></dl></section><section id="helpers"><h3 >Helpers</h3></section><section id="request-based"><h4 >Request-based</h4><p >Most Python-side uses of QWeb are in controllers (and during HTTP requests),
+in which case templates stored in the database (as
+<a href="views.html#reference-views-qweb" class="internal reference"><span class="std std-ref">views</span></a>) can be trivially rendered by calling
+<a href="http.html#openerp.http.HttpRequest.render" class="internal reference" title="openerp.http.HttpRequest.render"><code class="py py-meth xref">openerp.http.HttpRequest.render()</code></a>:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;my-template&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="s1">&#39;context_value&#39;</span><span class="p">:</span> <span class="mi">42</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p >This automatically creates a <a href="http.html#openerp.http.Response" class="internal reference" title="openerp.http.Response"><code class="py xref py-class">Response</code></a> object which can
+be returned from the controller (or further customized to suit).</p></section><section id="view-based"><h4 >View-based</h4><p >At a deeper level than the previous helper is the <code >render</code> method on
+<code >ir.ui.view</code>:</p><section class="code-method"><h6 id="render"><code>render(<em>cr, uid, id[, values][, engine='ir.qweb][, context]</em>)</code></h6><p >Renders a QWeb view/template by database id or <a href="../glossary.html#term-external-id" class="internal alert-link reference"><span class="std std-term xref">external id</span></a>.
+Templates are automatically loaded from <code >ir.ui.view</code> records.</p><p >Sets up a number of default values in the rendering context:</p><dl ><dt ><code >request</code></dt><dd >the current <a href="http.html#openerp.http.WebRequest" class="internal alert-link reference" title="openerp.http.WebRequest"><code class="py xref py-class">WebRequest</code></a> object, if any</dd><dt ><code >debug</code></dt><dd >whether the current request (if any) is in <code >debug</code> mode</dd><dt ><a href="http://werkzeug.pocoo.org/docs/urls/#werkzeug.urls.url_quote_plus" class="external reference alert-link" title="(in Werkzeug v0.13-dev)"><code class="py xref py-func">quote_plus</code></a></dt><dd >url-encoding utility function</dd><dt ><a href="https://docs.python.org/2/library/json.html#module-json" class="external reference alert-link" title="(in Python v2.7)"><code class="py xref py-mod">json</code></a></dt><dd >the corresponding standard library module</dd><dt ><a href="https://docs.python.org/2/library/time.html#module-time" class="external reference alert-link" title="(in Python v2.7)"><code class="py xref py-mod">time</code></a></dt><dd >the corresponding standard library module</dd><dt ><a href="https://docs.python.org/2/library/datetime.html#module-datetime" class="external reference alert-link" title="(in Python v2.7)"><code class="py xref py-mod">datetime</code></a></dt><dd >the corresponding standard library module</dd><dt ><a href="https://labix.org/python-dateutil#head-ba5ffd4df8111d1b83fc194b97ebecf837add454" class="external reference alert-link">relativedelta</a></dt><dd >see module</dd><dt ><code >keep_query</code></dt><dd >the <code >keep_query</code> helper function</dd></dl><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><ul ><li ><strong >values</strong> -- context values to pass to QWeb for rendering</li><li ><strong >engine</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(in Python v2.7)"><code >str</code></a>) -- name of the Odoo model to use for rendering, can be
+used to expand or customize QWeb locally (by creating
+a &quot;new&quot; qweb based on <code >ir.qweb</code> with alterations)</li></ul></div></div></div></section></section><section id="api"><i id="reference-qweb-javascript"></i><h3 >API</h3><p >It is also possible to use the <code >ir.qweb</code> model directly (and extend it, and
+inherit from it):</p><section class="code-class"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb"><code><em >class </em>openerp.addons.base.ir.ir_qweb.QWeb(<em>pool</em>, <em>cr</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L103" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Base QWeb rendering engine</p><ul ><li >to customize <code >t-field</code> rendering, subclass <code >ir.qweb.field</code> and
+create new models called <code class="samp">ir.qweb.field.<em >widget</em></code></li><li >alternatively, override <a href="#openerp.addons.base.ir.ir_qweb.QWeb.get_converter_for" class="internal alert-link reference" title="openerp.addons.base.ir.ir_qweb.QWeb.get_converter_for"><code class="py py-meth xref">get_converter_for()</code></a> and return an
+arbitrary model to use as field converter</li></ul><p >Beware that if you need extensions or alterations which could be
+incompatible with other subsystems, you should create a local object
+inheriting from <code >ir.qweb</code> and customize that.</p><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb.add_template"><code>add_template(<em>qwebcontext</em>, <em>name</em>, <em>node</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L155" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Add a parsed template in the context. Used to preprocess templates.</p></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb.get_converter_for"><code>get_converter_for(<em>field_type</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L494" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >returns a <a href="orm.html#openerp.models.Model" class="internal alert-link reference" title="openerp.models.Model"><code class="py xref py-class">Model</code></a> used to render a
+<code >t-field</code>.</p><p >By default, tries to get the model named
+<code class="samp">ir.qweb.field.<em >field_type</em></code>, falling back on <code >ir.qweb.field</code>.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><strong >field_type</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(in Python v2.7)"><code >str</code></a>) -- type or widget of field to render</div></div></div></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb.get_template"><code>get_template(<em>name</em>, <em>qwebcontext</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L182" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Tries to fetch the template <code >name</code>, either gets it from the
+context's template cache or loads one with the context's loader (if
+any).</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Raises</div><div class="code-field-body"><strong >QWebTemplateNotFound</strong> -- if the template can not be found or loaded</div></div></div></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb.get_widget_for"><code>get_widget_for(<em>widget</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L505" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >returns a <a href="orm.html#openerp.models.Model" class="internal alert-link reference" title="openerp.models.Model"><code class="py xref py-class">Model</code></a> used to render a
+<code >t-esc</code></p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><strong >widget</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(in Python v2.7)"><code >str</code></a>) -- name of the widget to use, or <code >None</code></div></div></div></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb.load_document"><code>load_document(<em>document</em>, <em>res_id</em>, <em>qwebcontext</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L159" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Loads an XML document and installs any contained template in the engine</p><div class="code-fields"></div></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb.prefixed_methods"><code>prefixed_methods(<em>prefix</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L137" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Extracts all methods prefixed by <code >prefix</code>, and returns a mapping
+of (t-name, method) where the t-name is the method name with prefix
+removed and underscore converted to dashes</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><strong >prefix</strong> (<a href="https://docs.python.org/2/library/functions.html#str" class="external reference alert-link" title="(in Python v2.7)"><code >str</code></a>) -- </div></div><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body">dict</div></div></div></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb.render"><code>render(<em>cr</em>, <em>uid</em>, <em>id_or_xml_id</em>, <em>qwebcontext=None</em>, <em>loader=None</em>, <em>context=None</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L240" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Renders the template specified by the provided template name</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Parameters</div><div class="code-field-body"><ul ><li ><strong >qwebcontext</strong> (dict or <code class="py xref py-class">QWebContext</code> instance) -- context for rendering the template</li><li ><strong >loader</strong> -- if <code >qwebcontext</code> is a dict, loader set into the
+context instantiated for rendering</li></ul></div></div></div></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb.render_tag_call_assets"><code>render_tag_call_assets(<em>element</em>, <em>template_attributes</em>, <em>generated_attributes</em>, <em>qwebcontext</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L449" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >This special 't-call' tag can be used in order to aggregate/minify javascript and css assets</p></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.QWeb.render_tag_field"><code>render_tag_field(<em>element</em>, <em>template_attributes</em>, <em>generated_attributes</em>, <em>qwebcontext</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L473" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >eg: &lt;span t-record=&quot;browse_record(res.partner, 1)&quot; t-field=&quot;phone&quot;&gt;+1 555 555 8069&lt;/span&gt;</p></section></section><section class="code-class"><h6 id="openerp.addons.base.ir.ir_qweb.FieldConverter"><code><em >class </em>openerp.addons.base.ir.ir_qweb.FieldConverter(<em>pool</em>, <em>cr</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L527" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Used to convert a t-field specification into an output HTML field.</p><p ><a href="#openerp.addons.base.ir.ir_qweb.FieldConverter.to_html" class="internal alert-link reference" title="openerp.addons.base.ir.ir_qweb.FieldConverter.to_html"><code class="py py-meth xref">to_html()</code></a> is the entry point of this conversion from QWeb, it:</p><ul ><li >converts the record value to html using <a href="#openerp.addons.base.ir.ir_qweb.FieldConverter.record_to_html" class="internal alert-link reference" title="openerp.addons.base.ir.ir_qweb.FieldConverter.record_to_html"><code class="py py-meth xref">record_to_html()</code></a></li><li >generates the metadata attributes (<code >data-oe-</code>) to set on the root
+result node</li><li >generates the root result node itself through <a href="#openerp.addons.base.ir.ir_qweb.FieldConverter.render_element" class="internal alert-link reference" title="openerp.addons.base.ir.ir_qweb.FieldConverter.render_element"><code class="py py-meth xref">render_element()</code></a></li></ul><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.FieldConverter.attributes"><code>attributes(<em>cr</em>, <em>uid</em>, <em>field_name</em>, <em>record</em>, <em>options</em>, <em>source_element</em>, <em>g_att</em>, <em>t_att</em>, <em>qweb_context</em>, <em>context=None</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L539" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Generates the metadata attributes (prefixed by <code >data-oe-</code> for the
+root node of the field conversion. Attribute values are escaped by the
+parent.</p><p >The default attributes are:</p><ul ><li ><code >model</code>, the name of the record's model</li><li ><code >id</code> the id of the record to which the field belongs</li><li ><code >field</code> the name of the converted field</li><li ><code >type</code> the logical field type (widget, may not match the field's
+<code >type</code>, may not be any Field subclass name)</li><li ><code >translate</code>, a boolean flag (<code >0</code> or <code >1</code>) denoting whether the
+field is translatable</li><li ><code >expression</code>, the original expression</li></ul><div class="code-fields"><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body">iterable of (attribute name, attribute value) pairs.</div></div></div></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.FieldConverter.record_to_html"><code>record_to_html(<em>cr</em>, <em>uid</em>, <em>field_name</em>, <em>record</em>, <em>options=None</em>, <em>context=None</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L579" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Converts the specified field of the browse_record <code >record</code> to HTML</p></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.FieldConverter.render_element"><code>render_element(<em>cr</em>, <em>uid</em>, <em>source_element</em>, <em>t_att</em>, <em>g_att</em>, <em>qweb_context</em>, <em>content</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L629" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Final rendering hook, by default just calls ir.qweb's <code >render_element</code></p></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.FieldConverter.to_html"><code>to_html(<em>cr</em>, <em>uid</em>, <em>field_name</em>, <em>record</em>, <em>options</em>, <em>source_element</em>, <em>t_att</em>, <em>g_att</em>, <em>qweb_context</em>, <em>context=None</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L588" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Converts a <code >t-field</code> to its HTML output. A <code >t-field</code> may be
+extended by a <code >t-field-options</code>, which is a JSON-serialized mapping
+of configuration values.</p><p >A default configuration key is <code >widget</code> which can override the
+field's own <code >_type</code>.</p></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.FieldConverter.user_lang"><code>user_lang(<em>cr</em>, <em>uid</em>, <em>context</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L638" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Fetches the res.lang object corresponding to the language code stored
+in the user's context. Fallbacks to en_US if no lang is present in the
+context <em >or the language code is not valid</em>.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body">res.lang browse_record</div></div></div></section><section class="code-method"><h6 id="openerp.addons.base.ir.ir_qweb.FieldConverter.value_to_html"><code>value_to_html(<em>cr</em>, <em>uid</em>, <em>value</em>, <em>field</em>, <em>options=None</em>, <em>context=None</em>)<a href="https://github.com/odoo/odoo/blob/8.0/8.0/openerp/addons/base/ir/ir_qweb.py#L571" class="external reference alert-link"><span class="viewcode-link">[source]</span></a></code></h6><p >Converts a single value to its HTML version/output</p></section></section></section><section id="javascript"><h2 >Javascript</h2></section><section id="id3"><h3 >Exclusive directives</h3></section><section id="defining-templates"><h4 >defining templates</h4><p >The <code >t-name</code> directive can only be placed at the top-level of a template
+file (direct children to the document root):</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;templates&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-name=</span><span class="s">&quot;template-name&quot;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- template code --&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/templates&gt;</span>
+</pre></div>
+</div>
+<p >It takes no other parameter, but can be used with a <code >&lt;t&gt;</code> element or any
+other. With a <code >&lt;t&gt;</code> element, the <code >&lt;t&gt;</code> should have a single child.</p><p >The template name is an arbitrary string, although when multiple templates
+are related (e.g. called sub-templates) it is customary to use dot-separated
+names to indicate hierarchical relationships.</p></section><section id="template-inheritance"><h4 >template inheritance</h4><p >Template inheritance is used to alter existing templates in-place, e.g. to
+add information to templates created by an other modules.</p><p >Template inheritance is performed via the <code >t-extend</code> directive which takes
+the name of the template to alter as parameter.</p><p >The alteration is then performed with any number of <code >t-jquery</code>
+sub-directives:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-extend=</span><span class="s">&quot;base.template&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-jquery=</span><span class="s">&quot;ul&quot;</span> <span class="na">t-operation=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span>new element<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+</pre></div>
+</div>
+<p >The <code >t-jquery</code> directives takes a <a href="http://api.jquery.com/category/selectors/" class="external reference">CSS selector</a>. This selector is used
+on the extended template to select <em >context nodes</em> to which the specified
+<code >t-operation</code> is applied:</p><dl ><dt ><code >append</code></dt><dd >the node's body is appended at the end of the context node (after the
+context node's last child)</dd><dt ><code >prepend</code></dt><dd >the node's body is prepended to the context node (inserted before the
+context node's first child)</dd><dt ><code >before</code></dt><dd >the node's body is inserted right before the context node</dd><dt ><code >after</code></dt><dd >the node's body is inserted right after the context node</dd><dt ><code >inner</code></dt><dd >the node's body replaces the context node's children</dd><dt ><code >replace</code></dt><dd >the node's body is used to replace the context node itself</dd><dt >No operation</dt><dd ><p >if no <code >t-operation</code> is specified, the template body is interpreted as
+javascript code and executed with the context node as <code >this</code></p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >while much more powerful than other operations, this mode is
+also much harder to debug and maintain, it is recommended to
+avoid it</p></div></dd></dl></section><section id="id4"><h3 >debugging</h3><p >The javascript QWeb implementation provides a few debugging hooks:</p><dl ><dt ><code >t-log</code></dt><dd ><p >takes an expression parameter, evaluates the expression during rendering
+and logs its result with <code >console.log</code>:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;foo&quot;</span> <span class="na">t-value=</span><span class="s">&quot;42&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;t</span> <span class="na">t-log=</span><span class="s">&quot;foo&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p >will print <code >42</code> to the console</p></dd><dt ><code >t-debug</code></dt><dd ><p >triggers a debugger breakpoint during template rendering:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-if=</span><span class="s">&quot;a_test&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-debug=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+</pre></div>
+</div>
+<p >will stop execution if debugging is active (exact condition depend on the
+browser and its development tools)</p></dd><dt ><code >t-js</code></dt><dd ><p >the node's body is javascript code executed during template rendering.
+Takes a <code >context</code> parameter, which is the name under which the rendering
+context will be available in the <code >t-js</code>'s body:</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;t</span> <span class="na">t-set=</span><span class="s">&quot;foo&quot;</span> <span class="na">t-value=</span><span class="s">&quot;42&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;t</span> <span class="na">t-js=</span><span class="s">&quot;ctx&quot;</span><span class="nt">&gt;</span>
+    console.log(&quot;Foo is&quot;, ctx.foo);
+<span class="nt">&lt;/t&gt;</span>
+</pre></div>
+</div>
+</dd></dl></section><section id="id5"><h3 >Helpers</h3><section class="code-attribute"><h6 id="openerp.qweb"><code>openerp.qweb</code></h6><p >An instance of <a href="#QWeb2.Engine" class="internal alert-link reference" title="QWeb2.Engine"><code class="js-class xref js">QWeb2.Engine()</code></a> with all module-defined template
+files loaded, and references to standard helper objects <code >_</code>
+(underscore), <code >_t</code> (translation function) and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" class="external reference alert-link">JSON</a>.</p><p ><a href="#QWeb2.Engine.render" class="internal alert-link reference" title="QWeb2.Engine.render"><code class="js-func xref js">openerp.qweb.render</code></a> can be used to
+easily render basic module templates</p></section></section><section id="id6"><h3 >API</h3><section class="code-class"><h6 id="QWeb2.Engine"><code><em >class </em>QWeb2.Engine()</code></h6><p >The QWeb &quot;renderer&quot;, handles most of QWeb's logic (loading,
+parsing, compiling and rendering templates).</p><p >OpenERP Web instantiates one for the user, and sets it to
+<code >instance.web.qweb</code>. It also loads all the template files of the
+various modules into that QWeb instance.</p><p >A <a href="#QWeb2.Engine" class="internal alert-link reference" title="QWeb2.Engine"><code class="js-class xref js">QWeb2.Engine()</code></a> also serves as a &quot;template namespace&quot;.</p><section class="code-function"><h6 id="QWeb2.Engine.render"><code>QWeb2.Engine.render(<em>template</em>[, <em>context</em>])</code></h6><p >Renders a previously loaded template to a String, using
+<code >context</code> (if provided) to find the variables accessed
+during template rendering (e.g. strings to display).</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Arguments</div><div class="code-field-body"><ul ><li ><strong >template</strong> (<code >String</code>) -- the name of the template to render</li><li ><strong >context</strong> (<code >Object</code>) -- the basic namespace to use for template
+rendering</li></ul></div></div><div class="code-field"><div class="code-field-name">Returns</div><div class="code-field-body">String</div></div></div></section><p >The engine exposes an other method which may be useful in some
+cases (e.g. if you need a separate template namespace with, in
+OpenERP Web, Kanban views get their own <a href="#QWeb2.Engine" class="internal alert-link reference" title="QWeb2.Engine"><code class="js-class xref js">QWeb2.Engine()</code></a>
+instance so their templates don't collide with more general
+&quot;module&quot; templates):</p><section class="code-function"><h6 id="QWeb2.Engine.add_template"><code>QWeb2.Engine.add_template(<em>templates</em>)</code></h6><p >Loads a template file (a collection of templates) in the QWeb
+instance. The templates can be specified as:</p><dl ><dt >An XML string</dt><dd >QWeb will attempt to parse it to an XML document then load
+it.</dd><dt >A URL</dt><dd >QWeb will attempt to download the URL content, then load
+the resulting XML string.</dd><dt >A <code >Document</code> or <code >Node</code></dt><dd >QWeb will traverse the first level of the document (the
+child nodes of the provided root) and load any named
+template or template override.</dd></dl><div class="code-fields"></div></section><p >A <a href="#QWeb2.Engine" class="internal alert-link reference" title="QWeb2.Engine"><code class="js-class xref js">QWeb2.Engine()</code></a> also exposes various attributes for
+behavior customization:</p><section class="code-attribute"><h6 id="QWeb2.Engine.prefix"><code>QWeb2.Engine.prefix</code></h6><p >Prefix used to recognize directives during parsing. A string. By
+default, <code >t</code>.</p></section><section class="code-attribute"><h6 id="QWeb2.Engine.debug"><code>QWeb2.Engine.debug</code></h6><p >Boolean flag putting the engine in &quot;debug mode&quot;. Normally,
+QWeb intercepts any error raised during template execution. In
+debug mode, it leaves all exceptions go through without
+intercepting them.</p></section><section class="code-attribute"><h6 id="QWeb2.Engine.jQuery"><code>QWeb2.Engine.jQuery</code></h6><p >The jQuery instance used during template inheritance processing.
+Defaults to <code >window.jQuery</code>.</p></section><section class="code-attribute"><h6 id="QWeb2.Engine.preprocess_node"><code>QWeb2.Engine.preprocess_node</code></h6><p >A <code >Function</code>. If present, called before compiling each DOM
+node to template code. In OpenERP Web, this is used to
+automatically translate text content and some attributes in
+templates. Defaults to <code >null</code>.</p></section></section><div class="footnote" id="genshif"><span class="footnote-label"><a class="footnote-backref" href="#id2">[1]</a></span> it is similar in that to <a href="http://genshi.edgewall.org" class="external reference">Genshi</a>, although it does not use (and
+has no support for) <a href="http://en.wikipedia.org/wiki/XML_namespace" class="external reference">XML namespaces</a></div><div class="footnote" id="othertemplates"><span class="footnote-label"><a class="footnote-backref" href="#id1">[2]</a></span> although it uses a few others, either for historical
+reasons or because they remain better fits for the
+use case. Odoo 8.0 still depends on <a href="http://jinja.pocoo.org" class="external reference">Jinja</a> and <a href="http://www.makotemplates.org" class="external reference">Mako</a>.</div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

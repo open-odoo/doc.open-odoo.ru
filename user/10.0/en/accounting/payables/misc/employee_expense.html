@@ -1,0 +1,319 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to keep track of employee expenses? &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Misc" href="../misc.html" />
+    <link rel="next" title="Bank &amp; Cash" href="../../bank.html" />
+    <link rel="prev" title="How to forecast future bills to pay?" href="forecast.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How to keep track of employee expenses?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/accounting/payables/misc/employee_expense.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting/payables/misc/employee_expense.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/accounting/payables/misc/employee_expense.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How to keep track of employee expenses? - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#the-expenses-workflow" class="ripple internal reference">The expenses workflow</a><ul ><li class="list-group-item"><a href="#record-a-new-expense" class="ripple internal reference">Record a new expense</a></li><li class="list-group-item"><a href="#validation-by-the-manager" class="ripple internal reference">Validation by the manager</a></li><li class="list-group-item"><a href="#control-by-the-accountant" class="ripple internal reference">Control by the accountant</a></li><li class="list-group-item"><a href="#reinvoice-expenses-to-customers" class="ripple internal reference">Reinvoice expenses to customers</a></li><li class="list-group-item"><a href="#reimburse-the-employee" class="ripple internal reference">Reimburse the employee</a></li></ul></li><li class="list-group-item"><a href="#miscellaneous" class="ripple internal reference">Miscellaneous</a><ul ><li class="list-group-item"><a href="#expenses-that-are-not-reinvoiced-to-customers" class="ripple internal reference">Expenses that are not reinvoiced to customers</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/accounting/payables/misc/employee_expense.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-to-keep-track-of-employee-expenses"><p >Employee expenses are charges incurred on behalf of the company. The
+company then reimburses these expenses to the employee. The receipts
+encountered most frequently are:</p><ul ><li >car travel, reimbursed per unit of distance (mile or kilometer),</li><li >subsistence expenses, reimbursed based on the bill,</li><li >other purchases, such as stationery and books, destined for the
+company but carried out by the employee.</li></ul></section><section id="configuration"><h2 >Configuration</h2><p >To manage expenses, you need to install the <strong >Expense Tracker</strong>
+application from the Apps module.</p><p >You will also need to install the <strong >Sales Management</strong> module in order to
+re-invoice your expenses to your customers.</p><p >Once these applications are installed you can configure the different
+products that represent the types of expenses. To create the firsts
+products, go to the menu <span class="menuselection">Configuration ‣ Expenses Products</span> in the
+<strong >Expenses</strong> application.</p><p >Some examples of products can be:</p><ol ><li ><p ><strong >Travel (car)</strong></p><ul ><li >Product Type: Service</li><li >Invoicing Policy: Invoice based on time and material</li><li >Expense Invoice Policy: At sales price</li><li >Sale Price: 0.32</li><li >Unit of Measure: Km or mile (you will need to enable the <strong >Multiple
+Unit of Measures</strong> option from <span class="menuselection">Sales module ‣ Configuration</span>)</li></ul></li></ol><img src="../../../_images/expense01.png" class="img-responsive center-block"><ol ><li ><p ><strong >Hotel</strong></p><ul ><li >Product Type: Service</li><li >Invoicing Policy: Invoice based on time and material</li><li >Expense Invoice Policy: At cost</li><li >Unit of Measure: Unit</li></ul></li></ol><p >In these examples, the first product will be an expense we reimburse to
+the employee based on the number of km he did with his own car (e.g. to
+visit a customer): 0.32€ / km. The hotel is reimbursed based on the real
+cost of the hotel.</p><p >Be sure that all these products have the checkbox <strong >Can be expensed</strong>
+checked and the invoicing policy set to <strong >Invoice Based on time and
+material</strong>. This invoicing policy means that, if the expense is related
+to a customer project/sale order, Odoo will re-invoice this expense to
+the customer.</p><p >Odoo support two types of expenses:</p><ul ><li >expenses paid by employee with their own money</li><li >expenses paid with a company credit card</li></ul></section><section id="the-expenses-workflow"><h2 >The expenses workflow</h2></section><section id="record-a-new-expense"><h3 >Record a new expense</h3><p >Every employee of the company can register their expenses from
+<span class="menuselection">Expenses application ‣ My Expenses</span>. The workflow for personal
+expenses work that way:</p><ol ><li >an employee record his expense, and submit it to the manager</li><li >the manager approve or refuse the expense</li><li >the accountant post journal entries</li><li >the company reimburse the employee expense (the employee is like a
+vendor, with a payable account)</li><li >if the expense is linked to an analytic account, the company can
+reinvoice the customer</li></ol><p >For every expense, the employee should record at least:</p><ul ><li >a description: that should include the reference of the ticket / bill</li><li >a product: the expense type</li><li >a price (e.g. hotel) or a quantity (e.g. reimburse km if travel with
+his own car)</li></ul><p >Depending of the policy of the company, he might have to attach a scan
+or a photo of the expense. To do that, just a write a message in the
+bottom of the expense with the scan of the bill/ticket in attachment.</p><img src="../../../_images/expense02.png" class="img-responsive center-block"><p >If the expense is linked to a customer project, you should not forget to
+set an analytic account, related to the customer project or sale order
+(you might have to activate analytic accounts in the accounting settings
+to get this feature).</p><p >Once the expense is fully recorded, the employee has to click the button
+<strong >Submit to Manager</strong>. In some companies, employees should submit their
+expenses grouped at the end of the month, or at the end of a business
+trip.</p><p >An employee can submit all his expenses in batch, using the Submit
+Expenses action from the list view of expenses, or the small icons in
+the list view.</p></section><section id="validation-by-the-manager"><h3 >Validation by the manager</h3><p >Managers should receive an email for every expense to be approved (the
+manager of an employee is defined on the employee form). They can use
+the menu <strong >To Approve</strong> to check all expenses that are waiting for
+validation.</p><p >The manager can:</p><ul ><li >discuss on an expense to ask for more information (e.g., if a scan of
+the bill is missing);</li><li >reject an expense;</li><li >approve an expense.</li></ul></section><section id="control-by-the-accountant"><h3 >Control by the accountant</h3><p >Then, all expenses that have been validated by the manager should be
+posted by the accountant. When an expense is posted, the related journal
+entry is created and posted in your accounting.</p><p >If the accountant wants to create only one journal entry for a batch of
+expenses, he can post expenses in batch from the list view of all
+expenses.</p></section><section id="reinvoice-expenses-to-customers"><h3 >Reinvoice expenses to customers</h3><p >If the expense was linked to an analytic account related to a sale
+order, the sale order has a new line related to the expense. This line
+is not invoiced to the customer yet and will be included in the next
+invoice that will be send to the customer (charge travel and
+accommodations on a customer project)</p><p >To invoice the customer, just click on the invoice button on his sale
+order. (or it will be done automatically at the end of the week/month if
+you invoice all your orders in batch)</p></section><section id="reimburse-the-employee"><h3 >Reimburse the employee</h3><p >If the expense was paid with the employee's own money, the company
+should reimburse the employee. In such a case, the employee will appear
+in the aged payable balance until the company reimburse him his
+expenses.</p><p >All you have to do is to create a payment to this employee for the
+amount due.</p></section><section id="miscellaneous"><h2 >Miscellaneous</h2></section><section id="expenses-that-are-not-reinvoiced-to-customers"><h3 >Expenses that are not reinvoiced to customers</h3><p >If some expenses should not be reinvoiced to customers, you have two
+options:</p><ol ><li ><p >if the decision to invoice or not is related to the product, change
+the invoicing policy on the product:</p><ul ><li ><strong >based on time and material</strong>: reinvoice the customer</li><li ><strong >based on sale orders</strong>: do not reinvoice the customer</li></ul></li><li >if you have to make an exception for one invoice that should not be
+reinvoiced to the customer, do not set the related analytic
+account for this invoice.</li></ol><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="forecast.html" class="internal alert-link reference"><span class="doc">How to forecast future bills to pay?</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

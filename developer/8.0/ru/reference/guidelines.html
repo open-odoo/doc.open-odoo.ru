@@ -1,0 +1,417 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Соглашение об оформлении кода в Odoo &mdash; Перевод на русский язык документации Odoo 8.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 8.0" href="../index.html" />
+    <link rel="up" title="Справочные материалы" href="../reference.html" />
+    <link rel="next" title="API обновления" href="upgrade_api.html" />
+    <link rel="prev" title="Бизнес-процессы" href="workflows.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (8.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Соглашение об оформлении кода в Odoo</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/en/reference/guidelines.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        8.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/9.0/ru/reference/guidelines.html">9.0</a></li>
+        
+            <li><a href="/developer/10.0/ru/reference/guidelines.html">10.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/reference/guidelines.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/8.0/ru/">Пользователю</a></li>
+<li><a href="/developer/8.0/ru/">Разработчику</a></li>
+<li><a href="/developer/8.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/8.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/odoo_guideline.jpg');"></span>
+      <div class="container text-center">
+        <h1> Соглашение об оформлении кода в Odoo - Odoo 8.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#module-structure" class="ripple internal reference">Структура модуля</a><ul ><li class="list-group-item"><a href="#directories" class="ripple internal reference">Каталоги</a></li><li class="list-group-item"><a href="#file-naming" class="ripple internal reference">Наименование файлов</a></li></ul></li><li class="list-group-item"><a href="#xml-files" class="ripple internal reference">XML файлы</a><ul ><li class="list-group-item"><a href="#format" class="ripple internal reference">Формат</a></li><li class="list-group-item"><a href="#naming-xml-id" class="ripple internal reference">Формирование имен xml_id</a><ul ><li class="list-group-item"><a href="#security-view-and-action" class="ripple internal reference">Безопасность, Представление и Действие</a></li><li class="list-group-item"><a href="#inherited-xml" class="ripple internal reference">Унаследованный XML-файл</a></li></ul></li></ul></li><li class="list-group-item"><a href="#python" class="ripple internal reference">Python</a><ul ><li class="list-group-item"><a href="#pep8-options" class="ripple internal reference">Параметры PEP8</a></li><li class="list-group-item"><a href="#imports" class="ripple internal reference">Импорт</a></li><li class="list-group-item"><a href="#idioms" class="ripple internal reference">Идиомы</a></li><li class="list-group-item"><a href="#symbols" class="ripple internal reference">Символы</a></li></ul></li><li class="list-group-item"><a href="#javascript-and-css" class="ripple internal reference">Javascript и CSS</a></li><li class="list-group-item"><a href="#git" class="ripple internal reference">Git</a><ul ><li class="list-group-item"><a href="#commit-message" class="ripple internal reference">Коммиты</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/guidelines.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="odoo-guidelines"><p >На этой странице представлены новые правила написания кода в Odoo. Эти рекомендации направлены на улучшение качества кода (улучшение удобочитаемости исходного кода ...) и приложений Odoo. Как правило, правильный код должен облегчить обслуживание, отладку, снизить сложность и повысить надежность.</p></section><section id="module-structure"><h2 >Структура модуля</h2></section><section id="directories"><h3 >Каталоги</h3><p >Модуль организован в виде нескольких каталогов:</p><ul ><li ><p ><em >data/</em> : демо-данные и файлы данных xml</p></li><li ><p ><em >models/</em> : здесь определяются модели данных</p></li><li ><p ><em >controllers/</em> : содержит контроллеры (http маршруты).</p></li><li ><p ><em >views/</em> : содержит представления и шаблоны</p></li><li ><p ><em >static/</em> : содержит веб компоненты, подразделяется на подкаталоги по содержимому <em >css/, js/, img/, lib/, ...</em></p></li></ul></section><section id="file-naming"><h3 >Наименование файлов</h3><p >Для объявления <em >представлений</em> для бэкэнда и фронтэнда, разделите их на два разных файла</p><p >Для <em >моделей данных</em>, разделите бизнес-логику на несколько наборов моделей данных, в каждом наборе выберите основную модель, она даст свое имя набору. Если есть только одна модель данных, то ее имя будет являться именем модуля. Для каждого набора с именем &lt;main_model&gt; могут быть созданы следующие файлы:</p><ul ><li ><code class="file">models/<em >&lt;main_model&gt;</em>.py</code></li><li ><code class="file">models/<em >&lt;inherited_main_model&gt;</em>.py</code></li><li ><code class="file">views/<em >&lt;main_model&gt;</em>_templates.xml</code></li><li ><code class="file">views/<em >&lt;main_model&gt;</em>_views.xml</code></li></ul><p >Например, модуль <em >sale</em> объявляет модели данных <code >sale_order</code> и <code >sale_order_line</code>, где доминирует <code >sale_order</code>. Таким образом, файлы <code >&lt;main_model&gt;</code> будут называться: <code class="file">models/sale_order.py</code> и <code class="file">views/sale_order_views.py</code>.</p><p >Для <em >data</em> разделите их по видам: демо или служебные данные. Имя файла будет именем main_model, с суффиксом <em >_demo.xml</em> или <em >_data.xml</em>.</p><p >Для <em >controller</em> нужно создать единственный файл с именем <em >main.py</em>.</p><p >Для <em >статичных файлов</em>, шаблоны имен будут <em >&lt;module_name&gt;.ext</em> (то есть.: static/js/im_chat.js, static/css/im_chat.css, static/xml/im_chat.xml, ...). Не ссылайтесь на данные (изображения, библиотеки) за пределами Odoo: не используйте ссылки на изображения - копируйте изображения в соотвествующий каталог.</p><p >Полное дерево каталогов должно выглядеть следующим образом:</p><div class="highlight-text"><div class="highlight"><pre><span></span>addons/&lt;my_module_name&gt;/
+|-- __init__.py
+|-- __openerp__.py
+|-- controllers/
+|   |-- __init__.py
+|   `-- main.py
+|-- data/
+|   |-- &lt;main_model&gt;_data.xml
+|   `-- &lt;inherited_main_model&gt;_demo.xml
+|-- models/
+|   |-- __init__.py
+|   |-- &lt;main_model&gt;.py
+|   `-- &lt;inherited_main_model&gt;.py
+|-- security/
+|   |-- ir.model.access.csv
+|   `-- &lt;main_model&gt;_security.xml
+|-- static/
+|   |-- img/
+|   |   |-- my_little_kitten.png
+|   |   `-- troll.jpg
+|   |-- lib/
+|   |   `-- external_lib/
+|   `-- src/
+|       |-- js/
+|       |   `-- &lt;my_module_name&gt;.js
+|       |-- css/
+|       |   `-- &lt;my_module_name&gt;.css
+|       |-- less/
+|       |   `-- &lt;my_module_name&gt;.less
+|       `-- xml/
+|           `-- &lt;my_module_name&gt;.xml
+`-- views/
+    |-- &lt;main_model&gt;_templates.xml
+    |-- &lt;main_model&gt;_views.xml
+    |-- &lt;inherited_main_model&gt;_templates.xml
+    `-- &lt;inherited_main_model&gt;_views.xml
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Имена файлов должны содержать только <code >[a-z0-9_]</code> (строчные буквы, цифры и <code >_</code>)</p></div><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Используйте правильные разрешения для файлов: для каталогов - 755, файлов - 644.</p></div></section><section id="xml-files"><h2 >XML файлы</h2></section><section id="format"><h3 >Формат</h3><p >При объявлении записи в XML,</p><ul ><li ><p >Поставьте атрибут <code >id</code> перед атрибутом <code >model</code></p></li><li ><p >При объявления поля первым ставиться атрибут <code >name</code>. Затем поместите <em >значение</em> поля в тег <code >field</code> затем атрибут <code >eval</code> и, наконец, другие атрибуты (widget, options, ...), следующие в порядке важности.</p></li><li ><p >Попробуйте сгруппировать записи по моделям данных. В случае зависимостей между действием/меню/представлениями соглашение может быть неприменимым.</p></li><li ><p >Использовать соглашение об создании имен, определенное далее</p></li><li ><p >Тег [UNKNOWN NODE problematic]&lt;data&gt; * используется только для установки не-обновляемых данных с помощью параметра <code >noupdate=1</code></p></li></ul><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;view_id&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>view.name<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>object_name<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;priority&quot;</span> <span class="na">eval=</span><span class="s">&quot;16&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;arch&quot;</span> <span class="na">type=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tree&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;my_field_1&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;my_field_2&quot;</span> <span class="na">string=</span><span class="s">&quot;My Label&quot;</span> <span class="na">widget=</span><span class="s">&quot;statusbar&quot;</span> <span class="na">statusbar_visible=</span><span class="s">&quot;draft,sent,progress,done&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/tree&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+</section><section id="naming-xml-id"><h3 >Формирование имен xml_id</h3></section><section id="security-view-and-action"><h4 >Безопасность, Представление и Действие</h4><p >Используйте следующий шаблон:</p><ul ><li ><p >для меню: <code class="samp"><em >&lt;model_name&gt;</em>_menu</code></p></li><li ><p >Для представления: <code class="samp"><em >&lt;model_name&gt;</em>_view_<em >&lt;view_type&gt;</em></code>, где <em >view_type</em> может быть <code >kanban</code>, <code >form</code>, <code >tree</code>, <code >search</code>, ...</p></li><li ><p >Для действия: основное действие соответствует <code class="samp"><em >&lt;model_name&gt;</em>_action</code>. Остальные имеют суффикс <code class="samp">_<em >&lt;detail&gt;</em></code>, где <em >detail</em> запись прописными буквами поясняющая действие. Суффиксы используются только для тех моделей данных, где есть объявление нескольких действий.</p></li><li ><p >Для группы пользователей: <code class="samp"><em >&lt;model_name&gt;</em>_group_<em >&lt;group_name&gt;</em></code> где <em >group_name</em> является именем группы, как правило 'user', 'manager', ...</p></li><li ><p >Для правила безопасности: <code class="samp"><em >&lt;model_name&gt;</em>_rule_<em >&lt;concerned_group&gt;</em></code> где <em >concerned_group</em> короткое имя соответствующей группы ('user' для 'model_name_group_user', 'public' для неавторизованных пользователей, 'company' для систем с множеством компаний, ...).</p></li></ul><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="c">&lt;!-- views and menus --&gt;</span>
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_menu&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.menu&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_view_form&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_view_kanban&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="c">&lt;!-- actions --&gt;</span>
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_action&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.actions.act_window&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_action_child_list&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.actions.act_window&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="c">&lt;!-- security --&gt;</span>
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_group_user&quot;</span> <span class="na">model=</span><span class="s">&quot;res.groups&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_rule_public&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.rule&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+
+<span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_rule_company&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.rule&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Имена представлений используют точечную нотацию <code >my.model.view_type</code> или <code >my.model.view_type.inherit</code> вместо * &quot;This is the form view of My Model&quot; [UNKNOWN NODE problematic].</p></div></section><section id="inherited-xml"><h4 >Унаследованный XML-файл</h4><p >Шаблон для формирования имени расширенного представления <code class="samp"><em >&lt;base_view&gt;</em>_inherit_<em >&lt;current_module_name&gt;</em></code>.Модуль может быть создан исключительно для расширения представления.  Создайте суффикс для оригинального имени <code class="samp">_inherit_<em >&lt;current_module_name&gt;</em></code> где <em >current_module_name</em> техническое имя модуля расширяющего представление.</p><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;inherited_model_view_form_inherit_my_module&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
+    ...
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+</section><section id="python"><h2 >Python</h2></section><section id="pep8-options"><h3 >Параметры PEP8</h3><p >Использование linter может помочь в подсветке синтаксиса, семантических предупреждений или ошибки. Исходный код Odoo пытается уважать стандарты Python, но некоторые из них можно игнорировать.</p><ul ><li ><p >E501: слишком длинная строка</p></li><li ><p >E301: ожидается 1 пустая строка, найдено 0</p></li><li ><p >E302: ожидается 2 пустые строки, найдено 1</p></li><li ><p >E126: строка продолжается надписью для подвешивания отступа</p></li><li ><p >E123: закрывающая скобка не соответствует отступу строки открывающей скобки</p></li><li ><p >E127: строка заходит за отступ для визуализации отступа</p></li><li ><p >E128: строка продолжения под отступом для визуального отступа</p></li><li ><p >E265: комментарий блока должен начинаться с '#'</p></li></ul></section><section id="imports"><h3 >Импорт</h3><p >Порядок импорта библиотек определен следующим образом:</p><ol ><li ><p >Внешние библиотеки (по одной в строке, отсортированные и разделенные в python stdlib)</p></li><li ><p >Импорт <code >openerp</code> библиотек</p></li><li ><p >Импорт из модулей Odoo (редко, и только при необходимости)</p></li></ol><p >Внутри этих 3-х групп строки сортируются по алфавиту.</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># 1 : imports of python lib</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="c1"># 2 :  imports of openerp</span>
+<span class="kn">import</span> <span class="nn">openerp</span>
+<span class="kn">from</span> <span class="nn">openerp</span> <span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">models</span> <span class="c1"># alphabetically ordered</span>
+<span class="kn">from</span> <span class="nn">openerp.tools.safe_eval</span> <span class="kn">import</span> <span class="n">safe_eval</span> <span class="k">as</span> <span class="nb">eval</span>
+<span class="kn">from</span> <span class="nn">openerp.tools.translate</span> <span class="kn">import</span> <span class="n">_</span>
+<span class="c1"># 3 :  imports from odoo modules</span>
+<span class="kn">from</span> <span class="nn">openerp.addons.website.models.website</span> <span class="kn">import</span> <span class="n">slug</span>
+<span class="kn">from</span> <span class="nn">openerp.addons.web.controllers.main</span> <span class="kn">import</span> <span class="n">login_redirect</span>
+</pre></div>
+</div>
+</section><section id="idioms"><h3 >Идиомы</h3><ul ><li ><p >Лучше <code >%</code> чем [UNKNOWN NODE problematic].format () [UNKNOWN NODE problematic], лучше [UNKNOWN NODE problematic]% (varname) `` чем position (Это лучше для перевода)</p></li><li ><p >Старайтесь избегать генераторов и декораторов</p></li><li ><p >Всегда предпочитайте <em >читабельность</em> над <em >лаконичностью</em> или используйте осмысленные названия функций или идиом.</p></li><li ><p >Используйте понимание списков, словарей и базовых манипуляции с помощью <code >map</code>, <code >filter</code>, <code >sum</code>, ... Это делает код более читаемым.</p></li><li ><p >То же касается методов, наборов записей: используйте <code >filtered</code>, <code >mapped</code>, <code >sorted</code>, ...</p></li><li ><p >Файл python должен начинаться со строки <code ># - * - coding: utf-8 - * -</code></p></li><li ><p >Используйте <code >UserError</code>, определенный в <code >openerp.exceptions</code> вместо переопределения <code >Warning</code>, или найдите более подходящее исключение в <em >exceptions.py</em></p></li><li ><p >Документируйте свой код (docstring для методов, простые комментарии для сложной части кода)</p></li><li ><p >Используйте осмысленные имена переменных/классов/методов</p></li></ul></section><section id="symbols"><h3 >Символы</h3><ul ><li ><p >Определение класса Odoo Python: используйте 'camelcase &lt;<a href="https://ru.wikipedia.org/wiki/CamelCase" class="external reference">https://ru.wikipedia.org/wiki/CamelCase</a>&gt;' при написании кода в api v8, подчеркивание и нижний регистр для старой api.</p></li></ul><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AccountInvoice</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">account_invoice</span><span class="p">(</span><span class="n">osv</span><span class="o">.</span><span class="n">osv</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul ><li ><dl ><dt >Имя переменной:</dt><dd ><ul ><li ><p >Используйте camelcase при определении переменных в модели данных</p></li><li ><p >Используйте нижний регистр и подчеркивание при определении обычных переменных.</p></li><li ><p >Так как новый API работает с записью или набором записей вместо списка идентификаторов, не нужно добавлять имя переменной с <em >_id</em> или <em >_ids</em>, если они не содержат id или список id.</p></li></ul></dd></dl></li></ul><div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">ResPartner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;res.partner&#39;</span><span class="p">]</span>
+<span class="n">partners</span> <span class="o">=</span> <span class="n">ResPartner</span><span class="o">.</span><span class="n">browse</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+<span class="n">partner_id</span> <span class="o">=</span> <span class="n">partners</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span>
+</pre></div>
+</div>
+<ul ><li ><p >Поля <code >One2Many</code> и <code >Many2Many</code> всегда должны иметь * _ids * в качестве суффикса (например: sale_order_line_ids)</p></li><li ><p >Поля <code >Many2One</code> должны иметь <em >_id</em> в качестве суффикса (пример: partner_id, user_id, ...)</p></li><li ><dl ><dt >Соглашения о методах</dt><dd ><ul ><li ><p >Compute Field : шаблон метода расчета <em >_compute_&lt;имя_поля&gt;</em></p></li><li ><p >Search method: шаблон метода поиска <em >_search_&lt;field_name&gt;</em></p></li><li ><p >Default method: шаблон метода по умолчанию <em >_default_&lt;field_name&gt;</em></p></li><li ><p >Onchange method: шаблон метода onchange <em >_onchange_&lt;field_name&gt;</em></p></li><li ><p >Constraint method : шаблон метода ограничения <em >_check_&lt;constraint_name&gt;</em></p></li><li ><p >Action method : начинается с префикса <em >action_</em>. Его декоратор <code >@api.multi</code>, но когда используется только одна запись добавьте в начале метода <code >self.ensure_one()</code>.</p></li></ul></dd></dl></li><li ><dl ><dt >В атрибутах модели данных порядок должен быть следующим</dt><dd ><ol ><li ><p >Частные атрибуты (<code >_name</code>, <code >_description</code>, <code >_inherit</code>, ...)</p></li><li ><p >Метод по умолчанию и <code >_default_get</code></p></li><li ><p >Объявления полей</p></li><li ><p >Методы поиска и вычисления. Они должны идти в том же порядке, что и объявление поля</p></li><li ><p >Методы ограничений (<code >@api.constrains</code>) и onchange методы (<code >@api.onchange</code>)</p></li><li ><p >Методы CRUD (переопределения ORM)</p></li><li ><p >Методы действий</p></li><li ><p >И, наконец, другие методы, описывающие бизнес-логику.</p></li></ol></dd></dl></li></ul><div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Event</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="c1"># Private attributes</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;event.event&#39;</span>
+    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Event&#39;</span>
+
+    <span class="c1"># Default methods</span>
+    <span class="k">def</span> <span class="nf">_default_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="c1"># Fields declaration</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">_default_name</span><span class="p">)</span>
+    <span class="n">seats_reserved</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">oldname</span><span class="o">=</span><span class="s1">&#39;register_current&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Reserved Seats&#39;</span><span class="p">,</span>
+        <span class="n">store</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">compute</span><span class="o">=</span><span class="s1">&#39;_compute_seats&#39;</span><span class="p">)</span>
+    <span class="n">seats_available</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">oldname</span><span class="o">=</span><span class="s1">&#39;register_avail&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Available Seats&#39;</span><span class="p">,</span>
+        <span class="n">store</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">compute</span><span class="o">=</span><span class="s1">&#39;_compute_seats&#39;</span><span class="p">)</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Price&#39;</span><span class="p">)</span>
+
+    <span class="c1"># compute and search fields, in the same order that fields declaration</span>
+    <span class="nd">@api.multi</span>
+    <span class="nd">@api.depends</span><span class="p">(</span><span class="s1">&#39;seats_max&#39;</span><span class="p">,</span> <span class="s1">&#39;registration_ids.state&#39;</span><span class="p">,</span> <span class="s1">&#39;registration_ids.nb_register&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_compute_seats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="c1"># Constraints and onchanges</span>
+    <span class="nd">@api.constrains</span><span class="p">(</span><span class="s1">&#39;seats_max&#39;</span><span class="p">,</span> <span class="s1">&#39;seats_available&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_check_seats_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="nd">@api.onchange</span><span class="p">(</span><span class="s1">&#39;date_begin&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_onchange_date_begin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="c1"># CRUD methods</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="c1"># Action methods</span>
+    <span class="nd">@api.multi</span>
+    <span class="k">def</span> <span class="nf">action_validate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ensure_one</span><span class="p">()</span>
+        <span class="o">...</span>
+
+    <span class="c1"># Business methods</span>
+    <span class="k">def</span> <span class="nf">mail_user_confirm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+</section><section id="javascript-and-css"><h2 >Javascript и CSS</h2><p ><strong >Для javascript :</strong></p><ul ><li ><p ><code >use strict;</code> рекомендуется во всех файлах javascript</p></li><li ><p >Используйте linter (jshint, ...)</p></li><li ><p >Никогда не добавляйте минифицированные библиотеки Javascript</p></li><li ><p >Используйте camelcase для объявления класса</p></li></ul><p ><strong >Для CSS :</strong></p><ul ><li ><p >Префикс всех ваших классов <em >o_&lt;module_name&gt;</em> где <em >module_name</em> - техническое имя модуля ('sale', 'im_chat', ...) или основной маршрут, зарезервированный модулем (главным образом для веб-сайта, т.е. : 'o_forum' для модуля website_forum). Единственным исключением для этого правила является веб-клиент: он просто использует префикс <em >o_</em>.</p></li><li ><p >Избегайте использования id</p></li><li ><p >Используйте классы Bootstrap'a</p></li><li ><p >Используйте нижний регистр для обозначения класса</p></li></ul></section><section id="git"><h2 >Git</h2></section><section id="commit-message"><h3 >Коммиты</h3><p >Префикс для вашего коммита</p><ul ><li ><p ><strong >[IMP]</strong> для улучшения (improvement)</p></li><li ><p ><strong >[FIX]</strong> для исправления ошибок</p></li><li ><p ><strong >[REF]</strong> для рефакторинга</p></li><li ><p ><strong >[ADD]</strong> для добавления новых ресурсов</p></li><li ><p ><strong >[REM]</strong> для удаления ресурсов</p></li><li ><p ><strong >[MERGE]</strong> для merge коммитов (только для прямого/обратного портирования)</p></li><li ><p ><strong >[CLA]</strong> для подписи индивидуальной авторской лицензии Odoo</p></li></ul><p >Затем в теле сообщении укажите часть кода, на которую повлияли ваши изменения (имя модуля, библиотека, transversal объект, ...) и описание изменений.</p><ul ><li ><p >Всегда делайте коммит информативным: он должно быть самодостаточным, включать имя модуля, который был изменен, и причину изменения. Не используйте одиночные слова, такие как «исправление» или «улучшения».</p></li><li ><p >Избегайте коммитов, которые одновременно воздействуют на несколько модулей. Попытайтесь их разделить таким образом чтобы модули были независимы друг от друга (будет полезно, если нам нужно будет откатить модуль отдельно).</p></li></ul><div class="highlight-text"><div class="highlight"><pre><span></span>[FIX] website, website_mail: remove unused alert div, fixes look of input-group-btn
+
+Bootstrap&#39;s CSS depends on the input-group-btn
+element being the first/last child of its parent.
+This was not the case because of the invisible
+and useless alert.
+
+[IMP] fields: reduce memory footprint of list/set field attributes
+
+[REF] web: add module system to the web client
+
+This commit introduces a new module system for the javascript code.
+Instead of using global ...
+</pre></div>
+</div>
+<div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Используйте длинное описание, чтобы объяснить <em >почему</em> а не <em >что</em>, <em >что</em> и так можно увидеть в diff</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

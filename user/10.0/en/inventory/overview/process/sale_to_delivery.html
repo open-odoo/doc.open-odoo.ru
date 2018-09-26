@@ -1,0 +1,299 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>From procurement to delivery &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../../../index.html" />
+    <link rel="up" title="Process Overview" href="../process.html" />
+    <link rel="next" title="Settings" href="../../settings.html" />
+    <link rel="prev" title="Process Overview" href="../process.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (10.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../inventory.html">Inventory</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">From procurement to delivery</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/inventory/overview/process/sale_to_delivery.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/inventory/overview/process/sale_to_delivery.html">9.0</a></li>
+        
+            <li><a href="/user/11.0/en/inventory/overview/process/sale_to_delivery.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/en/">Пользователю</a></li>
+<li><a href="/developer/10.0/en/">Разработчику</a></li>
+<li><a href="/developer/10.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> From procurement to delivery - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#how-to-process-a-receipt" class="ripple internal reference">How to process a receipt ?</a><ul ><li class="list-group-item"><a href="#install-purchase-application" class="ripple internal reference">Install Purchase application</a></li><li class="list-group-item"><a href="#make-a-purchase-order" class="ripple internal reference">Make a purchase order</a></li><li class="list-group-item"><a href="#retrieve-the-receipt" class="ripple internal reference">Retrieve the Receipt</a><ul ><li class="list-group-item"><a href="#from-the-purchase-order" class="ripple internal reference">From the purchase order</a></li><li class="list-group-item"><a href="#from-the-inventory-dashboard" class="ripple internal reference">From the Inventory Dashboard</a></li></ul></li><li class="list-group-item"><a href="#process-the-receipt" class="ripple internal reference">Process the Receipt</a></li></ul></li><li class="list-group-item"><a href="#how-to-process-a-delivery-order" class="ripple internal reference">How to process a delivery order ?</a><ul ><li class="list-group-item"><a href="#install-sales-application" class="ripple internal reference">Install Sales application</a></li><li class="list-group-item"><a href="#place-a-sale-order" class="ripple internal reference">Place a sale order</a></li><li class="list-group-item"><a href="#retrieve-the-delivery-order" class="ripple internal reference">Retrieve the Delivery order</a><ul ><li class="list-group-item"><a href="#from-the-sale-order" class="ripple internal reference">From the sale order</a></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">From the Inventory Dashboard</a></li></ul></li><li class="list-group-item"><a href="#process-the-delivery" class="ripple internal reference">Process the delivery</a></li></ul></li><li class="list-group-item"><a href="#advanced-flows" class="ripple internal reference">Advanced flows</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/10.0/inventory/overview/process/sale_to_delivery.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="from-procurement-to-delivery"></section><section id="overview"><h2 >Overview</h2><p >Inventory is the heart of your business. It can be really complicated,
+but with Odoo, doing a receipt or a delivery has never been easier. We
+will show you in this document how easy to do a full process, from the
+receipt to the delivery.</p><p >Odoo inventory is fully integrated with other applications, such as
+<strong >Purchase</strong>, <strong >Sales</strong> or <strong >Inventory</strong>. But is not limited to those processes, it
+is also fully integrated with our <strong >e-Commerce</strong>, <strong >Manufacturing</strong> and <strong >Repairs</strong>
+applications.</p></section><section id="how-to-process-a-receipt"><h2 >How to process a receipt ?</h2></section><section id="install-purchase-application"><h3 >Install Purchase application</h3><p >First, you will need to install the <strong >Purchase Management</strong> application. Go
+to <span class="menuselection">Apps</span> and install it.</p><img src="../../../_images/sale_to_delivery01.png" class="img-responsive center-block"></section><section id="make-a-purchase-order"><h3 >Make a purchase order</h3><p >Go to the <strong >Purchases</strong> applications. The first screen is the <strong >Request for
+Quotation</strong> list. Click on the <strong >Create</strong> button.</p><p >Fill in the <strong >Vendor</strong> information and click on <strong >Add an Item</strong> to add some
+products to your request for quotation.</p><img src="../../../_images/sale_to_delivery02.png" class="img-responsive center-block"><p >Click on <strong >Confirm order</strong> when you are sure about the products, prices
+and quantity.</p></section><section id="retrieve-the-receipt"><h3 >Retrieve the Receipt</h3><p >You can retrieve the receipt order in 2 ways:</p></section><section id="from-the-purchase-order"><h4 >From the purchase order</h4><p >On the top right of your purchase order, you will see a button with the
+related <strong >Receipt</strong>:</p><img src="../../../_images/sale_to_delivery03.png" class="img-responsive center-block"><p >Click on it to see the <strong >Transfer order</strong>.</p></section><section id="from-the-inventory-dashboard"><h4 >From the Inventory Dashboard</h4><p >When opening the <strong >Inventory</strong> application, click on <strong ># to receive</strong> to see
+the list of your deliveries to process.</p><img src="../../../_images/sale_to_delivery04.png" class="img-responsive center-block"><p >In the list, click on the one related to the purchase order:</p><img src="../../../_images/sale_to_delivery05.png" class="img-responsive center-block"></section><section id="process-the-receipt"><h3 >Process the Receipt</h3><img src="../../../_images/sale_to_delivery06.png" class="img-responsive center-block"><p >To process the stock transfer. Simply click on <strong >Validate</strong> to complete
+the transfer. A message will appear asking if you want to process the
+whole order, accept it by clicking on <strong >Apply</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Procurements can be automated. Please read our document
+<a href="../../management/adjustment/min_stock_rule_vs_mto.html" class="internal alert-link reference"><span class="doc">How to choose between minimum stock rule and make to order?</span></a>
+for more information.</p></div></section><section id="how-to-process-a-delivery-order"><h2 >How to process a delivery order ?</h2></section><section id="install-sales-application"><h3 >Install Sales application</h3><p >First, you will need to install the <strong >Sales Management</strong> application. Go to
+<span class="menuselection">Apps</span> and install it.</p><img src="../../../_images/sale_to_delivery07.png" class="img-responsive center-block"></section><section id="place-a-sale-order"><h3 >Place a sale order</h3><p >Go to the <strong >Sales</strong> applications. Click on the <strong >Quotations</strong> button of your
+team.</p><img src="../../../_images/sale_to_delivery08.png" class="img-responsive center-block"><p >You will get the list of all your quotations. Click on the <strong >Create</strong>
+button.</p><p >Fill in the <strong >Customer informations</strong> and click on <strong >Add an Item</strong> to add
+some products to your quotation.</p><img src="../../../_images/sale_to_delivery09.png" class="img-responsive center-block"><p >Click on <strong >Confirm sale</strong> to place the order.</p></section><section id="retrieve-the-delivery-order"><h3 >Retrieve the Delivery order</h3><p >You can retrieve the delivery order in 2 ways:</p></section><section id="from-the-sale-order"><h4 >From the sale order</h4><p >On the top right of your sale order, you will see a button with the
+related <strong >Delivery</strong>:</p><img src="../../../_images/sale_to_delivery10.png" class="img-responsive center-block"><p >Click on it to see the <strong >Transfer order</strong>.</p></section><section id="id1"><h4 >From the Inventory Dashboard</h4><p >When opening the <strong >Inventory</strong> application, click on <strong ># to do</strong> to see the
+list of your receipts to process.</p><img src="../../../_images/sale_to_delivery11.png" class="img-responsive center-block"><p >In the list, click on the one related to the sale order:</p><img src="../../../_images/sale_to_delivery12.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If the product is not in stock, the sale order will be listed as
+<strong >Waiting</strong> on your dashboard.</p></div></section><section id="process-the-delivery"><h3 >Process the delivery</h3><img src="../../../_images/sale_to_delivery12.png" class="img-responsive center-block"><p >To process the stock transfer. Simply click on <strong >Validate</strong> to complete
+the transfer. A message will appear asking if you want to process the
+whole order, accept it by clicking on <strong >Apply</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >E-Commerce orders are processed the same way.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can easily integrate your delivery orders with different
+delivery methods. Please read the document
+<a href="../../shipping/setup/delivery_method.html" class="internal alert-link reference"><span class="doc">How to setup a delivery method?</span></a>.</p></div></section><section id="advanced-flows"><h2 >Advanced flows</h2><p >In this document, the flows that are explained are the most simple ones.
+Odoo also suit for companies having advanced warehouse management.</p><ul ><li >By default, only <strong >receipts</strong> and <strong >deliveries</strong> are configured but you can
+activate the use of multi-locations and multi-warehouses to do
+<strong >internal transfers</strong>.</li><li ><strong >Routes</strong>: you can automate flows with push and pull rules</li><li ><strong >Multi-step</strong> receipts and deliveries can be easily configured for each
+warehouse</li><li >Much more: <strong >Barcode scanning</strong>, <strong >serial numbers</strong>, <strong >lots</strong>, <strong >cross-docking</strong>,
+<strong >dropshipping</strong>, integration with a <strong >third-party</strong> shipper, <strong >putaway</strong> and
+<strong >removal</strong> strategies.... All of it is possible with Odoo.</li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

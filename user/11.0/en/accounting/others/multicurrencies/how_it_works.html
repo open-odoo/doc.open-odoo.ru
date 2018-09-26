@@ -1,0 +1,301 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How is Odoo&#39;s multi-currency working? &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../../../index.html" />
+    <link rel="up" title="Overview" href="../multicurrencies.html" />
+    <link rel="next" title="How to manage invoices &amp; payment in multiple currencies?" href="invoices_payments.html" />
+    <link rel="prev" title="Overview" href="../multicurrencies.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (11.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">How is Odoo's multi-currency working?</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/accounting/others/multicurrencies/how_it_works.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/accounting/others/multicurrencies/how_it_works.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/accounting/others/multicurrencies/how_it_works.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> How is Odoo's multi-currency working? - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#turn-on-multi-currency" class="ripple internal reference">Turn on multi-currency</a></li><li class="list-group-item"><a href="#exchange-rate-journal" class="ripple internal reference">Exchange Rate Journal</a></li><li class="list-group-item"><a href="#view-or-edit-rate-being-used" class="ripple internal reference">View or edit rate being used</a></li><li class="list-group-item"><a href="#live-currency-rate" class="ripple internal reference">Live Currency Rate</a></li><li class="list-group-item"><a href="#configure-your-charts-of-account" class="ripple internal reference">Configure your charts of account</a></li><li class="list-group-item"><a href="#configure-your-journals" class="ripple internal reference">Configure your journals</a></li></ul></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">How is Odoo's multi-currency working?</a><ul ><li class="list-group-item"><a href="#sales-orders-and-invoices" class="ripple internal reference">Sales Orders and Invoices</a></li><li class="list-group-item"><a href="#purchases-orders-and-vendor-bills" class="ripple internal reference">Purchases orders and Vendor Bills</a></li><li class="list-group-item"><a href="#payment-registrations" class="ripple internal reference">Payment Registrations</a></li><li class="list-group-item"><a href="#bank-statements" class="ripple internal reference">Bank Statements</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">Exchange Rate Journal</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/accounting/others/multicurrencies/how_it_works.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="how-is-odoo-s-multi-currency-working"></section><section id="overview"><h2 >Overview</h2><p >Choosing to use the multi-currency option in Odoo will allow you to send
+sales invoices, quotes and purchase orders or receive bills and payments
+in currencies other than your own. With multi-currency, you can also set
+up bank accounts in other currencies and run reports on your foreign
+currency activities.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="turn-on-multi-currency"><h3 >Turn on multi-currency</h3><p >In the accounting module, Go to <span class="menuselection">Configuration ‣ Settings</span> and flag
+<strong >Allow multi currencies</strong>, then click on <strong >Apply</strong>.</p><img src="../../../_images/works01.png" class="img-responsive center-block"></section><section id="exchange-rate-journal"><h3 >Exchange Rate Journal</h3><p >The <strong >Rate Difference Journal</strong> records the differences between the payment
+registration and the expected amount. For example, if a payment is paid
+1 month after the invoice was issued, the exchange rate has probably
+changed. The fluctuation implies some loss or profit that are recorded
+by Odoo.</p><p >You can change it in the settings:</p><img src="../../../_images/works02.png" class="img-responsive center-block"></section><section id="view-or-edit-rate-being-used"><h3 >View or edit rate being used</h3><p >You can manually configure the currency rates in <span class="menuselection">Configuration ‣
+Currencies</span>. Open the currencies you want to use in Odoo and edit it.
+Make sure the currency is active.</p><img src="../../../_images/works03.png" class="img-responsive center-block"><p >Click on <strong >View Rates</strong> to edit it and to see the history :</p><img src="../../../_images/works04.png" class="img-responsive center-block"><p >Click on <strong >Create</strong> to add the rate. Fill in the date and the rate.
+Click on <strong >Save</strong> when you are done.</p><img src="../../../_images/works05.png" class="img-responsive center-block"></section><section id="live-currency-rate"><h3 >Live Currency Rate</h3><p >By default, the currencies need to be updated manually. But you can
+synchronize it with <a href="https://finance.yahoo.com/currency-converter/" class="external reference">Yahoo</a> or
+the <a href="http://www.ecb.europa.eu" class="external reference">European Central Bank</a>. In
+<span class="menuselection">Configuration ‣ Settings</span>, go to the <strong >Live Currency Rate</strong> section.</p><p >Choose the interval : Manually, Daily, Weekly or Monthly. You can always
+force the update by clicking on <strong >Update Now</strong>. Select the provider, and you
+are set !</p><img src="../../../_images/works06.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Only the <strong >active</strong> currencies are updated</p></div></section><section id="configure-your-charts-of-account"><h3 >Configure your charts of account</h3><p >In the accounting application, go to <span class="menuselection">Adviser ‣ Charts of Accounts</span>.
+On each account, you can set a currency. It will force all moves for
+this account to have the account currency.</p><p >If you leave it empty, it means that it can handle all currencies that
+are Active.</p><img src="../../../_images/works07.png" class="img-responsive center-block"></section><section id="configure-your-journals"><h3 >Configure your journals</h3><p >In order to register payments in other currencies, you have to remove
+the currency constraint on the journal. Go to the accounting
+application, Click on <strong >More</strong> on the journal and <strong >Settings</strong>.</p><img src="../../../_images/works08.png" class="img-responsive center-block"><p >Check if the currency field is empty or in the foreign currency in which
+you will register the payments. If a currency is filled in, it means
+that you can register payments only in this currency.</p><img src="../../../_images/works09.png" class="img-responsive center-block"></section><section id="id1"><h2 >How is Odoo's multi-currency working?</h2><p >Now that you are working in a multi-currency environment, all
+accountable items will be linked to a currency, domestic or foreign.</p></section><section id="sales-orders-and-invoices"><h3 >Sales Orders and Invoices</h3><p >You are now able to set a different currency than the company one on
+your sale orders and on your invoices. The currency is set for the whole
+document.</p><img src="../../../_images/works10.png" class="img-responsive center-block"></section><section id="purchases-orders-and-vendor-bills"><h3 >Purchases orders and Vendor Bills</h3><p >You are now able to set a different currency than the company one on
+your purchase orders and on your vendor bills. The currency is set for
+the whole document.</p><img src="../../../_images/works11.png" class="img-responsive center-block"></section><section id="payment-registrations"><h3 >Payment Registrations</h3><p >In the accounting application, go to <strong >Sales &gt; Payments</strong>. Register the
+payment and set the currency.</p><img src="../../../_images/works12.png" class="img-responsive center-block"></section><section id="bank-statements"><h3 >Bank Statements</h3><p >When creating or importing bank statements, the amount is in the company
+currency. But there are now two complementary fields, the amount that
+was actually paid and the currency in which it was paid.</p><img src="../../../_images/works13.png" class="img-responsive center-block"><p >When reconciling it, Odoo will directly match the payment with the right
+Invoice. You will get the invoice price in the invoice currency and the
+amount in your company currency.</p></section><section id="id2"><h3 >Exchange Rate Journal</h3><p >Go to <span class="menuselection">Adviser ‣ Journal Entries</span> and look for the Exchange difference
+journal entries. All the exchange rates differences are recorded in it.</p><img src="../../../_images/works14.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="invoices_payments.html" class="internal alert-link reference"><span class="doc">How to manage invoices &amp; payment in multiple currencies?</span></a></li><li ><a href="exchange.html" class="internal alert-link reference"><span class="doc">Record exchange rates at payments</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

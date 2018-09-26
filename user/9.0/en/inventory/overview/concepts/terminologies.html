@@ -1,0 +1,324 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Terminologies &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Main Concepts" href="../concepts.html" />
+    <link rel="next" title="Getting Started" href="../start.html" />
+    <link rel="prev" title="Double-Entry Inventory Management" href="double-entry.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../inventory.html">Inventory</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Terminologies</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/ru/inventory/overview/concepts/terminologies.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/en/inventory/overview/concepts/terminologies.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/en/inventory/overview/concepts/terminologies.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/en/">Пользователю</a></li>
+<li><a href="/developer/9.0/en/">Разработчику</a></li>
+<li><a href="/developer/9.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Terminologies - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul ></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/inventory/overview/concepts/terminologies.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="terminologies"><ul ><li ><strong >Warehouse</strong>: A warehouse in Odoo is a location where you store
+products. It is either a physical or a virtual warehouse. It
+could be a store or a repository.</li><li ><strong >Location</strong>: Locations are used to structure storage zones within a
+warehouse. In addition to internal locations (your warehouse),
+Odoo has locations for suppliers, customers, inventory loss
+counter-parts, etc.</li><li ><strong >Lots</strong>: Lots are a batch of products identified with a unique
+barcode or serial number. All items of a lot are from the same
+product. (e.g. a set of 24 bottle) Usually, lots come from
+manufacturing order batches or procurements.</li><li ><strong >Serial Number</strong>: A serial number is a unique identifier of a
+specific product. Technically, serial numbers are similar to
+having a lot of 1 unique item.</li><li ><strong >Unit of Measure</strong>: Define how the quantity of products is
+expressed. Meters, Pounds, Pack of 24, Kilograms,… Unit of
+measure of the same category (ex: size) can be converted to each
+others (m, cm, mm) using a fixed ratio.</li><li ><strong >Consumable</strong>: A product for which you do not want to manage the
+inventory level (no quantity on hand or forecasted) but that you
+can receive and deliver. When this product is needed Odoo suppose
+that you always have enough stock.</li><li ><strong >Stockable</strong>: A product for which you want to manage the inventory
+level.</li><li ><strong >Package:</strong> A package contains several products (identified by their
+serial number/lots or not). Example: a box containing knives and
+forks.</li><li ><strong >Procurement</strong>: A procurement is a request for a specific quantity
+of products to a specific location. Procurement are automatically
+triggered by other documents: Sale orders, Minimum Stock Rules,
+and Procurement rules. You can trigger the procurement manually.
+When procurements are triggered automatically, you should always
+pay attention for the exceptions (e.g. a product should be
+purchased from a vendor, but no supplier is defined).</li><li ><strong >Routes</strong>: Routes define paths the product must follow. Routes may
+be applicable or not, depending on the products, sales order
+lines, warehouse,… To fulfill a procurement, the system will
+search for rules belonging to routes that are defined in the
+related product/sale order.</li><li ><strong >Push Rules</strong>: Push rules trigger when products enter a specific
+location. They automatically move the product to a new location.
+Whether a push rule can be used depends on applicable routes.</li><li ><strong >Procurement Rules</strong> or <strong >Pull Rules</strong>: Procurement rules describe
+how procurements on specific locations should be fulfilled e.g.:
+where the product should come from (source location), whether the
+procurement is MTO or MTS,...</li><li ><strong >Procurement Group</strong>: Routes and rules define inventory moves. For
+every rule, a document type is provided: Picking, Packing,
+Delivery Order, Purchase Order,… Moves are grouped within the
+same document type if their procurement group and locations are
+the same.</li><li ><strong >Stock Moves</strong>: Stock moves represent the transit of goods and
+materials between locations.</li><li ><strong >Quantity On Hand</strong>: The quantity of a specific product that is
+currently in a warehouse or location.</li><li ><strong >Forecasted Quantity</strong>: The quantity of products you can sell for a
+specific warehouse or location. It is defined as the Quantity on
+Hand - Future Delivery Orders + Future incoming shipments +
+Future manufactured units.</li><li ><strong >Reordering Rules</strong>: It defines the conditions for Odoo to
+automatically trigger a request for procurement (buying at a
+supplier or launching a manufacturing order). It is triggered
+when the forecasted quantity meets the minimum stock rule.</li><li ><strong >Cross-Dock</strong>: Cross-docking is a practice in the logistics of
+unloading materials from an incoming semi-trailer truck or
+railroad car and loading these materials directly into outbound
+trucks, trailers, or rail cars, with no storage in between. (does
+not go to the stock, directly from incoming to packing zone)</li><li ><strong >Drop-Shipping</strong>: move products from the vendor/manufacturer
+directly to the customer (could be retailer or consumer) without
+going through the usual distribution channels. Products are sent
+directly from the vendor to the customer, without passing through
+your own warehouse.</li><li ><strong >Removal Strategies</strong>: the strategy to use to select which product
+to pick for a specific operation. Example: FIFO, LIFO, FEFO.</li><li ><strong >Putaway Strategies</strong>: the strategy to use to decide in which
+location a specific product should be set when arriving
+somewhere. (example: cables goes in rack 3, storage A)</li><li ><strong >Scrap</strong>: A product that is broken or outdated. Scrapping a product
+removes it from the stock.</li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

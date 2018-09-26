@@ -1,0 +1,328 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Установка &mdash; Перевод на русский язык документации Odoo 10.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 10.0" href="../index.html" />
+    <link rel="up" title="Настройка" href="../setup.html" />
+    <link rel="next" title="Развертывание (Deploy)" href="deploy.html" />
+    <link rel="prev" title="Настройка" href="../setup.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (10.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Установка</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/10.0/en/setup/install.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        10.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/developer/8.0/ru/setup/install.html">8.0</a></li>
+        
+            <li><a href="/developer/9.0/ru/setup/install.html">9.0</a></li>
+        
+            <li><a href="/developer/11.0/ru/setup/install.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/10.0/ru/">Пользователю</a></li>
+<li><a href="/developer/10.0/ru/">Разработчику</a></li>
+<li><a href="/developer/10.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/10.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/installing_odoo.jpg');"></span>
+      <div class="container text-center">
+        <h1> Установка - Odoo 10.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#editions" class="ripple internal reference">Версии Odoo</a></li><li class="list-group-item"><a href="#demo" class="ripple internal reference">Демонстрационная</a></li><li class="list-group-item"><a href="#saas" class="ripple internal reference">SaaS</a></li><li class="list-group-item"><a href="#packaged-installers" class="ripple internal reference">С помощью инсталлятора</a><ul ><li class="list-group-item"><a href="#windows" class="ripple internal reference">Windows</a><ul ><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li></ul></li><li class="list-group-item"><a href="#deb" class="ripple internal reference">Deb</a><ul ><li class="list-group-item"><a href="#community" class="ripple internal reference">Community</a></li><li class="list-group-item"><a href="#enterprise" class="ripple internal reference">Enterprise</a></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">Настройка</a></li></ul></li><li class="list-group-item"><a href="#rpm" class="ripple internal reference">RPM</a><ul ><li class="list-group-item"><a href="#id2" class="ripple internal reference">Community</a></li><li class="list-group-item"><a href="#id3" class="ripple internal reference">Enterprise</a></li><li class="list-group-item"><a href="#id4" class="ripple internal reference">Настройка</a></li></ul></li></ul></li><li class="list-group-item"><a href="#source-install" class="ripple internal reference">Из исходников</a><ul ><li class="list-group-item"><a href="#id5" class="ripple internal reference">Community</a></li><li class="list-group-item"><a href="#id6" class="ripple internal reference">Enterprise</a></li><li class="list-group-item"><a href="#installing-dependencies" class="ripple internal reference">Установка зависимостей</a></li><li class="list-group-item"><a href="#running-odoo" class="ripple internal reference">Запуск Odoo</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/10.0/doc/setup/install.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="installing-odoo"><i id="setup-install"></i><p >Существует несколько способов установить Odoo или вообще не устанавливать его в зависимости от предполагаемого варианта использования.</p><p >В этом документе рассматривается большинство параметров установки.</p><dl ><dt ><a href="#setup-install-demo" class="internal reference"><span class="std std-ref">Демонстрационная</span></a></dt><dd ><p >простейшая установка, которая подходит для ознакомления с Odoo или для экспериментов</p></dd><dt ><a href="#setup-install-saas" class="internal reference"><span class="std std-ref">SaaS</span></a></dt><dd ><p >простой способ для того, чтобы начать пользоваться Odoo. Может использоваться как для тестирования Odoo, так и для использования в вашей компании. Эта установка несколько ограничивает гибкость системы (например нет настраиваемых модулей).</p><p >Может использоваться как для тестирования Odoo, так и для долгосрочного использования.</p></dd><dt ><a href="#setup-install-packaged" class="internal reference"><span class="std std-ref">С помощью инсталлятора</span></a></dt><dd ><p >простой запуск. Обеспечивает большую гибкость при развертывании системы и большем контроле над хранением данных. Обслуживания переносится на пользователя.</p><p >Подходит для тестирования Odoo, разработки модулей и может использоваться для долгосрочного использования при необходимости выполнения дополнительных работ по обслуживанию.</p></dd><dt ><a href="#setup-install-source" class="internal reference"><span class="std std-ref">Из исходников</span></a></dt><dd ><p >более трудоемкая установка, чем <a href="#setup-install-packaged" class="internal reference"><span class="std std-ref">С помощью инсталлятора</span></a>, но она обеспечивает еще большую гибкость: инсталяторы обычно не позволяют запускать нескольким версий Odoo в одной и той же системе и не обеспечивают легкий доступ к самому Odoo.</p><p >Хорошо подходит для разработки модулей, которые можно использовать в качестве базы для развертывания продакшен сервера.</p><p >Исходный код можно получить, загрузив его с сайта odoo.com или используя git. Использование git упрощает обновление, переключается между несколькими версиями (включая текущую версию разработки) или вносит вклад в разработку Odoo.</p></dd><dt ><a href="https://registry.hub.docker.com/_/odoo/" class="external reference">Образ docker</a></dt><dd ><p >если вы обычно используете <a href="https://www.docker.com" class="external reference">docker</a> для разработки или развертывания, доступен официальный образ <a href="https://www.docker.com" class="external reference">docker</a>, см. справку по образу для получения дополнительной информации</p></dd></dl></section><section id="editions"><i id="setup-install-editions"></i><h2 >Версии Odoo</h2><p >Существуют две версии <a href="https://www.odoo.com/pricing#pricing_table_features" class="external reference">Editions</a> Odoo: Community и Enterprise. Использование версии Enterprise возможно на нашей <a href="https://www.odoo.com/page/start" class="external reference">SaaS</a>, исходный код доступен корпоративным клиентам и партнерам. Версия Community доступна всем.</p><p >Если вы уже используете версию Community и хотите перейти на Enterprise, обратитесь к <a href="enterprise.html#setup-enterprise" class="internal reference"><span class="std std-ref">От Community к Enterprise</span></a> (кроме <a href="#setup-install-source" class="internal reference"><span class="std std-ref">Из исходников</span></a>).</p><p >Если вы хотите получить доступ к установщикам/исходному коду Enterprise, вы можете:</p><ul ><li ><p >Перейдите на страницу <a href="https://www.odoo.com/page/download" class="external reference">Download</a> и войдите в систему под учетной записью клиента.</p></li><li ><p >Загрузите исходные коды с GitHub с помощью <a href="http://git-scm.com" class="external reference">git</a> (только для партнеров)</p></li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если у вас нет доступа к нашему репозитарию Enterprise, вы можете запросить его отправку по электронной почте вашему торговому представителю или нашей онлайн-поддержке с вашим номером подписки и именем пользователя GitHub. (доступно только партнерам)</p></div><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Пакеты Enterprise deb и rpm не имеют репозиториев, поэтому автоматическое обновление не будет работать. Для обновления вручную установки потребуется переустановка пакета на последнюю версию.</p></div></section><section id="demo"><i id="setup-install-demo"></i><h2 >Демонстрационная</h2><p >Чтобы просто получить краткое представление об Odoo, доступны экземпляры <a href="https://demo.odoo.com" class="external reference">demo</a>. Они представляют собой установки, которые живут в течение нескольких часов, и могут использоваться без каких-либо обязательств.</p><p >Для экземпляров <a href="https://demo.odoo.com" class="external reference">Demo</a> не требуется локальная установка, а только веб-браузер.</p></section><section id="saas"><i id="setup-install-saas"></i><h2 >SaaS</h2><p ><a href="https://www.odoo.com/page/start" class="external reference">SaaS</a> Odoo предоставляет частные экземпляры и запускается бесплатно. Его можно использовать для тестирования Odoo и выполнения настроек без кода, не устанавливая его локально.</p><p >Как и экземпляры <a href="https://demo.odoo.com" class="external reference">demo</a>, экземпляры <a href="https://www.odoo.com/page/start" class="external reference">SaaS</a> не требуют локальной установки, достаточно веб-браузера.</p></section><section id="packaged-installers"><i id="setup-install-packaged"></i><h2 >С помощью инсталлятора</h2><p >Odoo предоставляет упакованные инсталляторы для Windows, deb-дистрибутивы (Debian, Ubuntu, ...) и RPM-дистрибутивы (Fedora, CentOS, RHEL, ...) для версий Community и Enterprise.</p><p >Эти пакеты автоматически настраивают все зависимости, но могут возникнуть сложности при обновлении.</p><p >Официальные пакеты Community со всеми зависимостями  доступны на нашем <a href="https://nightly.odoo.com/10.0/nightly/" class="external reference">nightly</a>  сервере. Пакеты Communtiy и Enterprise можно загрузить с нашей страницы <a href="https://www.odoo.com/page/download" class="external reference">Download</a> (вы должны войти в систему как клиент или партнер для загрузки пакетов Enterprise).</p></section><section id="windows"><h3 >Windows</h3><ul ><li ><p >Загрузите установщик с нашего <a href="https://nightly.odoo.com/10.0/nightly/" class="external reference">nightly</a> server (только для Community) или установщика Windows со страницы <a href="https://www.odoo.com/page/download" class="external reference">Download</a> (любая версия)</p></li><li ><p >Запустите загруженный файл</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >в Windows 8 вы можете увидеть предупреждение под названием «Windows protected your PC». Нажмите <span class="guilabel">More Info</span> затем <span class="guilabel">Run anyway</span></p></div></li><li ><p >Согласиться на предупреждение <a href="http://en.wikipedia.org/wiki/User_Account_Control" class="external reference">UAC</a></p></li><li ><p >Пройдите все этапы установки</p></li></ul><p >Odoo будет автоматически запущен в конце установки.</p></section><section id="configuration"><h4 >Настройка</h4><p ><a href="../reference/cmdline.html#reference-cmdline-config" class="internal reference"><span class="std std-ref">Файл конфигурации</span></a> можно найти по адресу :file:[UNKNOWN NODE problematic]{%PROGRAMFILES%}\Odoo 10.0-{id}\server\odoo.conf.</p><p >В файле конфигурации можно настроить подключение к удаленному Postgresql, изменить расположение файлов или установить dbfilter.</p><p >Чтобы перезагрузить файл конфигурации, перезапустите службу Odoo с помощью <span class="menuselection">Службы ‣ odoo server</span>.</p></section><section id="deb"><h3 >Deb</h3></section><section id="community"><h4 >Community</h4><p >Чтобы установить Odoo 10.0 Community из дистрибутива на основе Debian, выполните следующие команды от имени root:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> wget -O - https://nightly.odoo.com/odoo.key <span class="p">|</span> apt-key add -
+<span class="gp">#</span> <span class="nb">echo</span> <span class="s2">&quot;deb http://nightly.odoo.com/10.0/nightly/deb/ ./&quot;</span> &gt;&gt; /etc/apt/sources.list.d/odoo.list
+<span class="gp">#</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install odoo
+</pre></div>
+</div>
+<p >Затем вы можете использовать обычную команду <code >apt-get upgrade</code> для обновления вашей установки.</p></section><section id="enterprise"><h4 >Enterprise</h4><p >Для Odoo 10.0 Enterprise получите пакет со страницы <a href="https://www.odoo.com/page/download" class="external reference">Download</a>. Затем вы можете использовать <code >gdebi</code>:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> apt-get install postgresql -y
+<span class="gp">#</span> gdebi &lt;path_to_installation_package&gt;
+</pre></div>
+</div>
+<p >Или <code >dpkg</code> (обрабатывает меньше зависимостей автоматически):</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> apt-get install postgresql -y
+<span class="gp">#</span> dpkg -i &lt;path_to_installation_package&gt; <span class="c1"># this probably fails with missing dependencies</span>
+<span class="gp">#</span> apt-get install -f <span class="c1"># should install the missing dependencies</span>
+<span class="gp">#</span> dpkg -i &lt;path_to_installation_package&gt;
+</pre></div>
+</div>
+<p >Это установит Odoo в качестве службы, создаст нужного пользователя <a href="http://www.postgresql.org" class="external reference">PostgreSQL</a> и автоматически запустит сервер.</p><div role="alert" class="alert-danger alert"><p class="alert-title">Опасно</p><p >для печати отчетов в формате PDF вы должны установить <a href="http://wkhtmltopdf.org" class="external reference alert-link">wkhtmltopdf</a> самостоятельно: версия <a href="http://wkhtmltopdf.org" class="external reference alert-link">wkhtmltopdf</a>, доступная в репозиториях debian, не поддерживает верхние и нижние колонтитулы, поэтому она не может быть установлена ​​автоматически. Рекомендуемая версия - 0.12.1 и доступна на странице загрузки wkhtmltopdf`_ в разделе архива. Поскольку официального релиза Debian Jessie нет, вы можете найти наш раздел <a href="https://nightly.odoo.com/extra/" class="external reference alert-link">extra</a> нашего сервера.</p></div></section><section id="id1"><h4 >Настройка</h4><p ><a href="../reference/cmdline.html#reference-cmdline-config" class="internal reference"><span class="std std-ref">Файл конфигурации</span></a> можно найти по адресу <code class="file">/etc/odoo/odoo.conf</code></p><p >После редактировании файла конфигурации, Odoo необходимо перезапустить с помощью команды <code >service odoo restart</code>:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo service odoo restart
+<span class="go">Restarting odoo: ok</span>
+</pre></div>
+</div>
+</section><section id="rpm"><h3 >RPM</h3><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >с дистрибутивами на основе RHEL (RHEL, CentOS, Scientific Linux), <a href="https://fedoraproject.org/wiki/EPEL" class="external reference alert-link">EPEL</a> должен быть добавлен в репозитории дистрибутива для всех доступных зависимостей Odoo. Для CentOS:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo yum install -y epel-release
+</pre></div>
+</div>
+<p >Для других дистрибутивов основанных на RHEL см. документацию <a href="https://fedoraproject.org/wiki/EPEL" class="external reference alert-link">EPEL</a>.</p></div></section><section id="id2"><h4 >Community</h4><p >Выполните следующие команды для установки Odoo 10.0 Community на свой сервер:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo yum install -y postgresql-server
+<span class="gp">$</span> sudo postgresql-setup initdb
+<span class="gp">$</span> sudo systemctl <span class="nb">enable</span> postgresql
+<span class="gp">$</span> sudo systemctl start postgresql
+<span class="gp">$</span> sudo yum install yum-utils
+<span class="gp">$</span> sudo yum-config-manager --add-repo<span class="o">=</span>https://nightly.odoo.com/10.0/nightly/rpm/odoo.repo
+<span class="gp">$</span> sudo yum install -y odoo
+<span class="gp">$</span> sudo systemctl <span class="nb">enable</span> odoo
+<span class="gp">$</span> sudo systemctl start odoo
+</pre></div>
+</div>
+</section><section id="id3"><h4 >Enterprise</h4><p >Для Odoo 10.0 Enterprise загрузите пакет со страницы <a href="https://www.odoo.com/page/download" class="external reference">Download</a>. Затем выполните:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo yum install -y postgresql-server
+<span class="gp">$</span> sudo postgresql-setup initdb
+<span class="gp">$</span> sudo systemctl <span class="nb">enable</span> postgresql
+<span class="gp">$</span> sudo systemctl start postgresql
+<span class="gp">$</span> sudo yum localinstall odoo_10.0.latest.noarch.rpm
+<span class="gp">$</span> sudo systemctl <span class="nb">enable</span> odoo
+<span class="gp">$</span> sudo systemctl start odoo
+</pre></div>
+</div>
+<div role="alert" class="alert-danger alert"><p class="alert-title">Опасно</p><p >для печати отчетов в формате PDF вы должны установить <a href="http://wkhtmltopdf.org" class="external reference alert-link">wkhtmltopdf</a> самостоятельно: версия <a href="http://wkhtmltopdf.org" class="external reference alert-link">wkhtmltopdf</a>, доступная в репозиториях Fedora/CentOS, не поддерживает верхние и нижние колонтитулы, поэтому она не может быть установлена ​​автоматически. Используйте версию, доступную на <a href="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.1" class="external reference alert-link">the wkhtmltopdf download page</a>.</p></div></section><section id="id4"><h4 >Настройка</h4><p ><a href="../reference/cmdline.html#reference-cmdline-config" class="internal reference"><span class="std std-ref">Файл конфигурации</span></a> можно найти по адресу <code class="file">/etc/odoo/odoo.conf</code></p><p >После редактировании файла конфигурации, Odoo необходимо перезапустить с помощью команды <code >service odoo restart</code>:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo systemctl restart odoo
+</pre></div>
+</div>
+</section><section id="source-install"><i id="setup-install-source"></i><h2 >Из исходников</h2><p >&quot;Установка&quot; из исходников на самом деле заключается в том, чтобы не устанавливать Odoo и запускать ее непосредственно из источника.</p><p >Это может быть более удобным для разработчиков модулей, поскольку исходники Odoo будут расположены так, как вам нужно. Это может быть удобнее чем использование пакетной установки (для изучения исходного кода модулей или для сборки этой документации и ее доступности в автономном режиме).</p><p >запуск и остановка работы Odoo становятся более гибким и очевидными, чем службы, настроенные упакованными установками, и позволяет переопределять параметры, используя <a href="../reference/cmdline.html#reference-cmdline" class="internal reference"><span class="std std-ref">параметры командной строки</span></a> без необходимости редактировать файл конфигурации.</p><p >Наконец, он обеспечивает больший контроль над настройкой системы и позволяет более легко поддерживать (и запускать) несколько версий Odoo на одном компьютере.</p></section><section id="id5"><h3 >Community</h3><p >Есть два способа получить исходный источник zip-архив или git.</p><ul ><li ><p >Odoo zip можно загрузить с нашего <a href="https://nightly.odoo.com/10.0/nightly/" class="external reference">nightly</a> сервера или на странице <a href="https://www.odoo.com/page/download" class="external reference">Download</a>, Для использования распакуйте архив.</p></li><li ><p >git позволяет упростить обновление и упростить переключение между различными версиями Odoo. Это также упрощает сохранение патчей и внесение вкладов в разработку Odoo. Основной недостаток git заключается в том, что он значительно больше, чем zip-архив, поскольку он содержит всю историю проекта Odoo.</p><p >Репозиторий git - <a href="https://github.com/odoo/odoo.git" class="external reference">https://github.com/odoo/odoo.git</a> для версии Community.</p><p >Для его загрузки необходим <a href="http://git-scm.com/download/" class="external reference">git client</a> (который может быть доступен в репозиториях вашего дистрибутива в Linux) и может выполняться с помощью следующей команды:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/odoo/odoo.git
+</pre></div>
+</div>
+</li></ul></section><section id="id6"><h3 >Enterprise</h3><p >Если у вас есть доступ к репозиторию Enterprise (см. <a href="#setup-install-editions" class="internal reference"><span class="std std-ref">Версии Odoo</span></a>, если вы хотите получить доступ), вы можете использовать эту команду для клонирования исходников:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/odoo/enterprise.git
+</pre></div>
+</div>
+<p >Если вы используете <a href="http://git-scm.com" class="external reference">git</a>, вы должны изменить параметр <a href="../reference/cmdline.html#cmdoption-odoo-bin--addons-path" class="internal reference"><code class="std xref std-option">--addons-path</code></a> вашей команды запуска (<code >init.d</code>, настраиваемый скрипт, файл конфигурации и т.д.). Папка модулей Enterprise должна быть подключена <strong >перед</strong> папкой модулей по умолчанию.</p><p >Для примера:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> odoo-bin --addons-path<span class="o">=</span>~/src/custom_modules,~/src/enterprise,~/src/odoo/addons
+</pre></div>
+</div>
+<div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Git-репозиторий Enterprise <strong >не содержит полный исходный код Odoo</strong>. Это всего лишь набор дополнительных модулей. Основной код находиться в версии Community. Запуск версии Enterprise фактически означает запуск Odoo Community с опцией addons-path, в которой прописана папка с установленными модулями версии Enterprise.</p><p >Вам нужно клонировать как репозиторий Community, так и Enterprise, чтобы получить рабочую установку Odoo. Страница <a href="https://www.odoo.com/page/download" class="external reference alert-link">Download</a> содержит весь исходный код, но его не так легко обновлять.</p></div></section><section id="installing-dependencies"><h3 >Установка зависимостей</h3><p >Для установки из исходников нужно вручную установить все зависимости:</p><ul ><li ><p >Python 2.7.</p><ul ><li ><p >на Linux и OS X, включенные по умолчанию</p></li><li ><p >в Windows используйте <a href="https://www.python.org/downloads/windows/" class="external reference">официальный установщик Python 2.7.9</a>.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >выберите «добавить python.exe в Path» во время установки и затем перезагрузитесь, для обновления <code class="std std-envvar xref">PATH</code>.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >если Python уже установлен, убедитесь, что его версия - 2.7, предыдущие версии менее удобны, а версии 3.x несовместимы с Odoo (до 10 версии включительно, в Odoo 11 используется Python 3)</p></div></li></ul></li><li ><p >PostgreSQL, чтобы использовать локальную базу данных</p><p >После установки вам нужно будет создать пользователя postgres: по умолчанию единственным пользователем является <code >postgres</code>, а Odoo запрещает подключение от имени <code >postgres</code>.</p><ul ><li ><p >на Linux, используйте пакет дистрибутива, а затем создайте пользователя postgres, с именем как ваш логин:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo su - postgres -c <span class="s2">&quot;createuser -s </span><span class="nv">$USER</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p >Поскольку учетная запись роли совпадает с вашим unix-пользователем, его можно использовать без пароля.</p></li><li ><p >на OS X, <a href="http://postgresapp.com" class="external reference">postgres.app</a> - это самый простой способ начать работу, а затем создать пользователя postgres, как на Linux</p></li><li ><p >в Windows, используйте <a href="http://www.enterprisedb.com/products-services-training/pgdownload" class="external reference">PostgreSQL for windows</a>, затем</p><ul ><li ><p >добавьте каталог <code >bin</code> PostgreSQL (по умолчанию: <code >C:\Program Files\PostgreSQL\9.4\ bin</code>) в <code class="std std-envvar xref">PATH</code></p></li><li ><p >создайте пользователя postgres с паролем, используя pg admin gui: откройте pgAdminIII, дважды щелкните сервер, чтобы создать соединение, выберите <span class="menuselection">Edit ‣ New Object ‣ New Login Role</span>, введите имя пользователя в <span class="guilabel">Role Name</span> (например, <code >odoo</code>), затем откройте вкладку <span class="guilabel">Definition</span> и введите пароль (например,` [UNKNOWN NODE title_reference]), затем нажмите <span class="guilabel">OK</span>.</p><p >Пользователь и пароль должны быть переданы в Odoo с помощью опций <a href="../reference/cmdline.html#cmdoption-odoo-bin-w" class="internal reference"><code class="std xref std-option">-w</code></a> и <a href="../reference/cmdline.html#cmdoption-odoo-bin-r" class="internal reference"><code class="std xref std-option">-r</code></a> или <a href="../reference/cmdline.html#reference-cmdline-config" class="internal reference"><span class="std std-ref">файла конфигурации</span></a></p></li></ul></li></ul></li><li ><p >Python зависимости перечислены в файле <code class="file">requirements.txt</code>.</p><ul ><li ><p >в Linux зависимости python могут быть установлены с помощью менеджера пакетов системы или с помощью pip.</p><p >Для библиотек, использующих собственный код (Pillow, lxml, greenlet, gevent, psycopg2, ldap), может потребоваться установить инструменты разработки и собственные зависимости до того, как pip сможет самостоятельно установить их. Они доступны в пакетах <code >-dev</code> или <code >-devel</code> для Python, Postgres, libxml2, libxslt, libevent, libsasl2 и libldap2. После их установки сами зависимости Python могут быть установлены:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -r requirements.txt
+</pre></div>
+</div>
+</li><li ><p >на OS X вам нужно будет установить средства командной строки (<code >xcode-select --install</code>), а затем загрузить и установить менеджер пакетов по вашему выбору (<a href="http://brew.sh" class="external reference">homebrew</a>, <a href="https://www.macports.org" class="external reference">macports</a>) для установки зависимостей, отличных от Python. pip можно затем использовать для установки зависимостей Python, как на Linux:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -r requirements.txt
+</pre></div>
+</div>
+</li><li ><p >на Windows вам нужно установить некоторые из зависимостей вручную, настроить файл requirements.txt, а затем запустить pip для установки исправлений.</p><p >Установите <code >psycopg</code> с помощью установщика здесь <a href="http://www.stickpeople.com/projects/python/win-psycopg/" class="external reference">http://www.stickpeople.com/projects/python/win-psycopg/</a></p><p >Затем отредактируйте файл requirements.txt:</p><ul ><li ><p >удалите <code >psycopg2</code>, так как он у вас уже есть.</p></li><li ><p >можете удалить необязательные <code >python-ldap</code>, <code >gevent</code> и <code >psutil</code>, потому что они требуют компиляции.</p></li><li ><p >добавьте <code >pypiwin32</code>, потому что это необходимо для Windows.</p></li></ul><p >Затем используйте pip для установки зависимостей, используя следующую команду из приглашения cmd.exe (замените <code >\YourOdooPath</code> на путь, куда вы загрузили Odoo):</p><div class="highlight-ps1"><div class="highlight"><pre><span></span>C:\&gt; cd \YourOdooPath
+C:\YourOdooPath&gt; C:\Python27\Scripts\pip.exe install -r requirements.txt
+</pre></div>
+</div>
+</li></ul></li><li ><p ><em >Less CSS</em> nodejs</p><ul ><li ><p >в Linux используйте менеджер пакетов вашего дистрибутива для установки nodejs и npm.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >В debian wheezy и Ubuntu 13.10 nodejs нужно установить вручную:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> wget -qO- https://deb.nodesource.com/setup <span class="p">|</span> bash -
+<span class="gp">$</span> apt-get install -y nodejs
+</pre></div>
+</div>
+<p >В более поздних debian (&gt; jessie) и ubuntu (&gt; 14.04) вам может понадобиться добавить символическую ссылку, поскольку пакеты npm вызывают <code >node</code>, а debian вызывает <code >nodejs</code></p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> apt-get install -y npm
+<span class="gp">$</span> sudo ln -s /usr/bin/nodejs /usr/bin/node
+</pre></div>
+</div>
+</div><p >После установки npm, установите less</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo npm install -g less
+</pre></div>
+</div>
+</li><li ><p >на OS X, установите nodejs через ваш предпочтительный менеджер пакетов (<a href="http://brew.sh" class="external reference">homebrew</a>, <a href="https://www.macports.org" class="external reference">macports</a>), а затем установите less:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo npm install -g less
+</pre></div>
+</div>
+</li><li ><p >on Windows, <a href="https://nodejs.org/en/download/" class="external reference">install nodejs</a>, reboot (to
+update the <code class="std std-envvar xref">PATH</code>) and install less:</p><div class="highlight-ps1"><div class="highlight"><pre><span></span>C:\&gt; npm install -g less
+</pre></div>
+</div>
+</li></ul></li></ul></section><section id="running-odoo"><h3 >Запуск Odoo</h3><p >Как только все зависимости будут установлены, Odoo можно запустить, запустив <code >odoo-bin</code>.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Для версии Enterprise вы должны указать папку модулей <code class="file">enterprise</code> при запуске вашего сервера. Вы можете сделать это, указав путь к вашей папке с модулями <code class="file">enterprise</code> в параметре <code >addons-path</code>. Обратите внимание, что папка <code class="file">enterprise</code> должна находиться перед объявлением папки с модулями по умолчанию <code class="file">addons</code> в списке для правильной загрузки модулей.</p></div><p ><a href="../reference/cmdline.html#reference-cmdline" class="internal reference"><span class="std std-ref">Конфигурация</span></a> может быть предоставлена ​​или через <a href="../reference/cmdline.html#reference-cmdline" class="internal reference"><span class="std std-ref">аргументы командной строки</span></a> или через <a href="../reference/cmdline.html#reference-cmdline-config" class="internal reference"><span class="std std-ref">файл конфигурации</span></a>.</p><p >Общие необходимые настройки:</p><ul ><li ><p >PostgreSQL - хост, порт, пользователь и пароль .</p><p >У Odoo нет значений <a href="http://initd.org/psycopg/docs/module.html" class="external reference">psycopg2 по умолчанию</a>: подключение через UNIX сокет на порт 5432 с именем текущего пользователем без пароля. По умолчанию это должно работать на Linux и OS X, но оно <em >не будет работать</em> в Windows, так как в ней нет поддержки UNIX-сокетов.</p></li><li ><p >Путь к папке, в которой хранятся ваши модули.</p></li></ul><p >В Windows типичный способ запуска odoo:</p><div class="highlight-ps1"><div class="highlight"><pre><span></span>C:\YourOdooPath&gt; python odoo-bin -w odoo -r odoo --addons-path=addons,../mymodules --db-filter=mydb$
+</pre></div>
+</div>
+<p >Где <code >odoo</code>, <code >odoo</code> - это логин и пароль postgresql, <code >../ mymodules</code> - каталог с пользовательскими модулями и <code >mydb</code> - база данных для localhost:8069</p><p >В Unix типичный способ запуска Odoo:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ./odoo-bin --addons-path<span class="o">=</span>addons,../mymodules --db-filter<span class="o">=</span>mydb$
+</pre></div>
+</div>
+<p >Где <code >../mymodules</code> - это каталог с пользовательскими модулями и <code >mydb</code> база данных для localhost:8069</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

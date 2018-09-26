@@ -1,0 +1,336 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="Русский">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Using product variants &mdash; Перевод на русский язык документации Odoo 9.0</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 9.0" href="../../../index.html" />
+    <link rel="up" title="Products" href="../products.html" />
+    <link rel="next" title="When should you use packages, units of measure or kits?" href="usage.html" />
+    <link rel="prev" title="How to use different units of measure?" href="uom.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация  (9.0)</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../inventory.html">Управление запасами (Inventory)</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Using product variants</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        Русский
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/inventory/settings/products/variants.html">English</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        9.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/10.0/ru/inventory/settings/products/variants.html">10.0</a></li>
+        
+            <li><a href="/user/11.0/ru/inventory/settings/products/variants.html">11.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/9.0/ru/">Пользователю</a></li>
+<li><a href="/developer/9.0/ru/">Разработчику</a></li>
+<li><a href="/developer/9.0/ru/api_integration.html">API</a></li>
+<li><a href="/developer/9.0/ru/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Using product variants - Odoo 9.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#impact-of-variants" class="ripple internal reference">Impact of variants</a></li><li class="list-group-item"><a href="#should-you-use-variants" class="ripple internal reference">Should you use variants?</a><ul ><li class="list-group-item"><a href="#when-should-you-use-variants" class="ripple internal reference">When should you use variants?</a></li><li class="list-group-item"><a href="#when-should-you-avoid-using-variants" class="ripple internal reference">When should you avoid using variants?</a></li></ul></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Конфигурация</a><ul ><li class="list-group-item"><a href="#activate-the-variant-feature" class="ripple internal reference">Activate the variant feature</a></li><li class="list-group-item"><a href="#creating-products-with-variants" class="ripple internal reference">Creating products with variants</a></li></ul></li><li class="list-group-item"><a href="#managing-product-variants" class="ripple internal reference">Managing Product Variants</a><ul ><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#managing-combination-possibilities" class="ripple internal reference">Managing combination possibilities</a></li><li class="list-group-item"><a href="#setting-a-price-per-variant" class="ripple internal reference">Setting a price per variant</a></li></ul></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/9.0/inventory/settings/products/variants.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="using-product-variants"><p >Product variants are used to manage products having different
+variations, like size, color, etc. It allows managing the product at the
+template level (for all variations) and at the variant level (specific
+attributes).</p><p >As an example, a company selling t-shirts may have the following
+product:</p><ul ><li ><p >B&amp;C T-shirt</p><ul ><li >Sizes: S, M, L, XL, XXL</li><li >Colors: Blue, Red, White, Black</li></ul></li></ul><p >In this example, <strong >B&amp;C T-Shirt</strong> is called the product template and
+<strong >B&amp;C T-Shirt, S, Blue</strong> is a variant. Sizes and color are
+<strong >attributes</strong>.</p><p >The above example has a total of 20 different products (5 sizes x 4
+colors). Each one of these products has its own inventory, sales, etc.</p></section><section id="impact-of-variants"><h2 >Impact of variants</h2><ul ><li ><strong >Barcode</strong>: the code and barcode is associated to a variant, not the
+template. Every variant may have its own barcode / SKU.</li><li ><strong >Price</strong>: every product variant has its own public price that is
+computed based on the template price ($20) with an optional extra
+for every variant (+$3 for color red). However, you can define
+pricelist rules that apply on the template or the variant.</li><li ><strong >Inventory</strong>: the inventory is managed by product variant. You don't
+own t-shirts, you only own &quot;T-shirts, S, Red&quot;, or &quot;T-Shirts, M,
+Blue&quot;. For information purpose, on the product template form, you
+get the inventory that is the sum of every variant. (but the
+actual inventory is computed by variant)</li><li ><strong >Picture</strong>: the picture is related to the variant, every variation
+of a product may have its own primary picture.</li><li ><strong >Other fields</strong>: most of the other fields belongs to the product
+template. If you update them, it updates automatically all the
+variants. (example: Income Account, Taxes)</li></ul></section><section id="should-you-use-variants"><h2 >Should you use variants?</h2></section><section id="when-should-you-use-variants"><h3 >When should you use variants?</h3><p >Using variants has the following impacts:</p><ul ><li ><strong >eCommerce</strong>: in your online shop, the customer will only see
+product templates in the catalog page. Once the visitor click on
+such a product, he will have options to choose amongst the
+variants (colors, sizes, …)</li><li ><strong >Manufacturing</strong>: Using variants allows to define only one bill of
+material for a product template and slight variations for some of
+the variants. Example: instead of creating a Bill of Material for
+&quot;T-shirt, Red, S&quot;, you create a bill of material for &quot;T-shirt&quot;
+and add some lines that are specific to the dimension S, and
+other lines specific to the color Red.</li><li ><strong >Pricing</strong>: The default price of a product is computed using the
+price of the product template and add the optional extra price on
+each dimension of the variant. This way, variant prices are
+easier to maintain since you don't have to set the price for
+every variant. However, it's possible to create pricelist rules
+to fix price per variants too.</li></ul></section><section id="when-should-you-avoid-using-variants"><h3 >When should you avoid using variants?</h3><p >Using variants may add a level of complexity on the way you use Odoo.
+You should consider using variants only if you need it to reduce the
+complexity of managing lots of products that are similars.</p><p >As an example, importing your initial product catalog is more complex if
+you use variants. You can't just import a list of products, you must
+import product templates and all their related variations.</p><p >In addition to that, you should also carefully select the dimensions
+that you manage as separate product templates and those as variants. As
+an example, a company having these products:</p><ul ><li >Quality: T-Shirts, Polos, Shirts</li><li >Color: Red, Blue</li><li >Size: S, M, L, XL</li></ul><p >In such a use case, you could create 1 template with three dimensions of
+variants (Layout, T-Shirts, Polos). But, it's recommended to create two
+different product templates as T-shirts may highly differ from polos or
+shirts and customer expect to see these as two different products in the
+e-Commerce:</p><ul ><li ><p >Product Template: T-shirt</p><ul ><li >Color: Red, Blue</li><li >Size: S, M, L, XL</li></ul></li><li ><p >Product Template: Polos</p><ul ><li >Color: Red, Blue</li><li >Size: S, M, L, XL</li></ul></li></ul></section><section id="configuration"><h2 >Конфигурация</h2></section><section id="activate-the-variant-feature"><h3 >Activate the variant feature</h3><p >Before you can use product variants, you must first activate the product
+variants in the settings. To do so, you must go to the Sales app. In the
+menu <span class="menuselection">Configuration ‣ Settings</span>, locate the <strong >Products Variants</strong> line,
+and tick the option <strong >Products can have several attributes</strong>, then click
+on <strong >Apply</strong>.</p><img src="../../../_images/variant01.png" class="img-responsive center-block"></section><section id="creating-products-with-variants"><h3 >Creating products with variants</h3><p >Once you have activated the variant option, you can add variants to your
+products. To do so, go to the Sales module, <span class="menuselection">Sales ‣ Products</span>.
+It is also accessible from the Purchase and inventory modules.</p><p >Now, click on the product you wish to add variants to.</p><p >In the product page, a new tab called Variants has appeared. The number
+in purple written on top is the number of variants this product
+currently has. To add new variants, click on the tile. In the new
+window, click on <strong >Create</strong>.</p><p >In <strong >Attributes</strong>, click on the rolldown menu and select the type of
+variance you wish to add. If the variant does not yet exist, you can
+create it on the fly by clicking on Create and edit…</p><img src="../../../_images/variant02.png" class="img-responsive center-block"><p >In the Attributes window, the <strong >Value</strong> field is the description of the
+attribute such as Green, Plastic or 32GB. The <strong >Attribute</strong> field is the
+type of variant such as Color, Material or Memory.</p><img src="../../../_images/variant03.png" class="img-responsive center-block"><p >You can add a cost for the variant on the fly by adding it in the
+<strong >Attribute Price Extra</strong> field, or choose to modify it later. Click on
+<strong >Save</strong>.</p><p >You can also add a different barcode and internal reference to the
+variant.</p><p >When you have entered all the specifications of the variant, click on
+<strong >Save</strong>.</p></section><section id="managing-product-variants"><h2 >Managing Product Variants</h2></section><section id="introduction"><h3 >Introduction</h3><p >The examples below are all based on this product template that has two
+variant attributes :</p><ul ><li ><p >T-Shirt B&amp;C</p><ul ><li >Color: Red, Blue, White</li><li >Size: S, M, L, XL, XXL</li></ul></li></ul></section><section id="managing-combination-possibilities"><h3 >Managing combination possibilities</h3><p >By default, with the above product template, you get 15 different
+products (3 colors, 5 sizes). If the XXL size only exists for red and
+blue t-shirts, you can deactivate the white product variant.</p><p >To do this, click on the <strong >Variants</strong> button, select the XXL, White
+T-shirt. From the product form, uncheck the <strong >Active</strong> box of the T-shirt
+White, XXL.</p><img src="../../../_images/variant04.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >That deactivating a product is different than having an inventory of 0.</p></div></section><section id="setting-a-price-per-variant"><h3 >Setting a price per variant</h3><p >You can add a cost over the main price for some of the variants of a
+product.</p><p >Once you have activated the variant option, you can add variants to your
+products. To do so, go to the Sales module, open <span class="menuselection">Sales ‣ Products</span>
+and click on the product you want to modify. Click on the <strong >Variant Prices</strong>
+button to access the list of variant values.</p><img src="../../../_images/variant05.png" class="img-responsive center-block"><p >Click on the variant name you wish to add a value to, to make the 3
+fields editable. In the <strong >Attribute Price Extra</strong> field, add the cost of
+the variant that will be added to the original price.</p><img src="../../../_images/variant06.png" class="img-responsive center-block"><p >When you have entered all the extra values, click on <strong >Save</strong>.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

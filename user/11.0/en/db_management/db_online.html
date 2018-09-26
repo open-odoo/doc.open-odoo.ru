@@ -1,0 +1,294 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Online Database management &mdash; Перевод на русский язык документации Odoo 11.0</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../_static/atom.js"></script>
+    <script type="text/javascript" src="../_static/immutable.js"></script>
+    <script type="text/javascript" src="../_static/react.min.js"></script>
+    <script type="text/javascript" src="../_static/accounts.js"></script>
+    <script type="text/javascript" src="../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../_static/entries.js"></script>
+    <script type="text/javascript" src="../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../_static/misc.js"></script>
+    <script type="text/javascript" src="../_static/inventory.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+    <link rel="top" title="Перевод на русский язык документации Odoo 11.0" href="../index.html" />
+    <link rel="up" title="Practical Information" href="../practical.html" />
+    <link rel="next" title="On-premise Database management" href="db_premise.html" />
+    <link rel="prev" title="Users and Features" href="documentation.html" /> 
+  </head>
+  <body role="document"><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <ul class="o_primary_nav">
+        <li><a href="/">Документация</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Меню
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация  (11.0)</a></li>
+        
+    
+    <li class="active"><a href="#">Online Database management</a></li>
+
+              
+          </ol>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+             
+
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        English
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/11.0/ru/db_management/db_online.html">Русский</a></li>
+        
+    </ul>
+</li>
+
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        11.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/user/9.0/en/db_management/db_online.html">9.0</a></li>
+        
+            <li><a href="/user/10.0/en/db_management/db_online.html">10.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="/user/11.0/en/">Пользователю</a></li>
+<li><a href="/developer/11.0/en/">Разработчику</a></li>
+<li><a href="/developer/11.0/en/api_integration.html">API</a></li>
+<li><a href="/developer/11.0/en/setup/install.html">Установка</a></li>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/db_online.jpg');"></span>
+      <div class="container text-center">
+        <h1> Online Database management - Odoo 11.0 </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#upgrade" class="ripple internal reference">Upgrade</a></li><li class="list-group-item"><a href="#duplicating-a-database" class="ripple internal reference">Duplicating a database</a></li><li class="list-group-item"><a href="#rename-a-database" class="ripple internal reference">Rename a Database</a></li><li class="list-group-item"><a href="#deleting-a-database" class="ripple internal reference">Deleting a Database</a></li></ul>
+              
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/11.0/db_management/db_online.rst" class="gith-link" target="_blank">
+                  Оригинал на GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body ">
+            <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,viber,whatsapp,skype,telegram"></div>
+            
+            
+  <section id="online-database-management"><i id="db-online"></i><p >To manage your databases, access the <a href="https://www.odoo.com/my/databases" class="external reference">database management page</a> (you will have to sign in). Then click
+on the <a href="https://www.odoo.com/my/databases/manage" class="external reference">Manage Your Databases</a>
+button.</p><img src="../_images/databases.png" class="img-responsive center-block"><p >Make sure you are connected as the administrator of the database you
+want to manage - many operations depends on indentifying you remotely to that
+database.</p><p >Several actions are available:</p><img src="../_images/db_buttons.png" class="img-responsive center-block"><ul ><li ><dl ><dt ><a href="#upgrade-button" class="internal reference"><span class="std std-ref">Upgrade</span></a></dt><dd >Upgrade your database to the latest Odoo version to enjoy cutting-edge
+features</dd></dl></li><li ><dl ><dt ><a href="#duplicate-online" class="internal reference"><span class="std std-ref">Duplicate</span></a></dt><dd >Make an exact copy of your database, if you want
+to try out new apps or new flows without compromising
+your daily operations</dd></dl></li><li ><dl ><dt ><a href="#rename-online-database" class="internal reference"><span class="std std-ref">Rename</span></a></dt><dd >Rename your database (and its URL)</dd></dl></li><li ><dl ><dt ><strong >Backup</strong></dt><dd >Download an instant backup of your database; note that we
+back up databases daily according to our Odoo Cloud SLA</dd></dl></li><li ><dl ><dt ><a href="../website/publish/domain_name.html#custom-domain" class="internal reference"><span class="std std-ref">Domains</span></a></dt><dd >Configure custom domains to access your
+database via another URL</dd></dl></li><li ><dl ><dt ><a href="#delete-online-database" class="internal reference"><span class="std std-ref">Delete</span></a></dt><dd >Delete a database instantly</dd></dl></li><li ><dl ><dt >Contact Support</dt><dd >Access our <a href="https://www.odoo.com/help" class="external reference">support page</a>
+with the correct database already selected</dd></dl></li></ul></section><section id="upgrade"><i id="upgrade-button"></i><h2 >Upgrade</h2><p >Make sure to be connected to the database you want to upgrade and access the
+database management page. On the line of the database you want to upgrade, click
+on the &quot;Upgrade&quot; button.</p><img src="../_images/upgrade1.png" class="img-responsive center-block"><p >You have the possibility to choose the target version of the upgrade. By default,
+we select the highest available version available for your database; if you were
+already in the process of testing a migration, we will automatically select the
+version you were already testing (even if we released a more recent version during
+your tests).</p><p >By clicking on the &quot;Test upgrade&quot; button an upgrade request will be generated.
+If our automated system does not encounter any problem, you will receive a
+&quot;Test&quot; version of your upgraded database.</p><img src="../_images/test_upgrade.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If our automatic system detect an issue during the creation of your
+test database, our dedicated team will have to work on it. You will be
+notified by email and the process will take up to 4 weeks.</p></div><p >You will have the possibility to test it for 1 month. Inspect your data (e.g.
+accounting reports, stock valuation, etc.), check that all your usual flows
+work correctly (CRM flow, Sales flow, etc.).</p><p >Once you are ready and that everything is correct in your test migration, you
+can click again on the Upgrade button, and confirm by clicking on Upgrade
+(the button with the little rocket!) to switch your production database to
+the new version.</p><img src="../_images/upgrade.png" class="img-responsive center-block"><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Your database will be taken offline during the upgrade
+(usually between 30min up to several hours for big databases),
+so make sure to plan your migration during non-business hours.</p></div></section><section id="duplicating-a-database"><i id="duplicate-online"></i><h2 >Duplicating a database</h2><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Database duplication, renaming, custom DNS, etc. is not available
+for trial databases on our Online platform. Paid Databases and &quot;One App
+Free&quot; database can duplicate without problem.</p></div><p >In the line of the database you want to duplicate, you will have a few
+buttons. To duplicate your database, just click <strong >Duplicate</strong>. You will
+have to give a name to your duplicate, then click <strong >Duplicate Database</strong>.</p><img src="../_images/db_duplicate.png" class="img-responsive center-block"><div role="alert" class="alert-danger alert"><p class="alert-title">Danger</p><p >If you do not check the &quot;For testing purposes&quot; checkbox when
+duplicating a database, all external communication will remain active:</p><ul ><li >Emails are sent</li><li >Payments are processed (in the e-commerce or Subscriptions apps, for
+example)</li><li >Delivery orders (shipping providers) are sent</li><li >Etc.</li></ul><p >Make sure to check the checkbox &quot;For testing purposes&quot; if you want these
+behaviours to be disabled.</p></div><p >After a few seconds, you will be logged in your duplicated database.
+Notice that the url uses the name you chose for your duplicated
+database.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Duplicate databases expire automatically after 15 days.</p><img src="../_images/dup_expires.png" class="img-responsive center-block"></div></section><section id="rename-a-database"><i id="rename-online-database"></i><h2 >Rename a Database</h2><p >To rename your database, make sure you are connected to the database you want
+to rename, access the <a href="https://www.odoo.com/my/databases" class="external reference">database management page</a>
+and click <strong >Rename</strong>. You will have to give a new name to your database,
+then click <strong >Rename Database</strong>.</p><img src="../_images/rename.png" class="img-responsive center-block"></section><section id="deleting-a-database"><i id="delete-online-database"></i><h2 >Deleting a Database</h2><p >You can only delete databases of which you are the administrator.</p><div role="alert" class="alert-danger alert"><p class="alert-title">Danger</p><p >When you delete your database all the data will be permanently lost.
+The deletion is instant and for all the Users. We advise you to do an
+instant backup of your database before deleting it, since the last automated
+daily backup may be several hours old at that point.</p></div><p >From the <a href="https://www.odoo.com/my/databases" class="external reference">database management page</a>,
+on the line of the database you want to delete, click on the &quot;Delete&quot; button.</p><img src="../_images/delete_button.png" class="img-responsive center-block"><p >Read carefully the warning message that will appear and proceed only if you
+fully understand the implications of deleting a database:</p><img src="../_images/delete_warning.png" class="img-responsive center-block"><p >After a few seconds, the database will be deleted and the page will
+reload automatically.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><ul ><li >If you need to re-use this database name, it will be immediately available.</li><li >It is not possible to delete a database if it is expired or linked
+to a Subscription. In these cases contact
+<a href="https://www.odoo.com/help" class="external reference alert-link">Odoo Support</a></li><li >If you want to delete your Account, please contact
+<a href="https://www.odoo.com/help" class="external reference alert-link">Odoo Support</a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="o_footer_effect">
+            <div id="footer" class="container o_not_editable">
+                <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+						<p>Перевод документации при поддержке <a href="https://www.yartsev.by/" target="_blank">Ярцев и компаньоны</a> и <a href="https://www.udelta.ru" target="_blank">Udelta</a></p>
+                        <hr>
+                        <p>
+                            <small>Odoo - это набор бизнес-приложений с открытым исходным кодом, которые охватывают все потребности вашей компании: CRM, интернет магазин, бухгалтерский учет, складской учет, POS терминал, управление проектами и т.д. <br> <br>
+В то же время полноценное внедрение Odoo может быть очень простым и включать полную интеграцию с вашим предприятием.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_footer_bottom o_not_editable">
+                <div class="container">
+                    <a class="small" href="https://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <div class="social-links pull-right">
+                        <a href="https://www.odoo.com/web/about/facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.odoo.com/web/about/linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@odoo.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44508703 = new Ya.Metrika({ id:44508703, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44508703" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>
